@@ -1,0 +1,338 @@
+{
+  "CropNutrientMetabolismGeneExtraction": {
+    "title": "CropNutrientMetabolismGeneExtraction",
+    "type": "object",
+    "description": "Template: Crop nutrient metabolism gene extraction (v1.0)\n\nGoal: extract key genes (enzymes + regulators) that control the presence/yield/content of final nutritional products in crops.\nArchitecture: Study -> Multiple Genes (each gene contains species info).\nConstraint: Within each gene dictionary, each key's value may be empty, a string, a number, or a list. Do NOT nest lists/dictionaries inside each other.\nField names preserve original CSV capitalization.\nAll optional string fields default to \"NA\".",
+    "$defs": {
+      "NutrientMetabolismGene": {
+        "title": "NutrientMetabolismGene",
+        "type": "object",
+        "description": "Individual gene object for crop nutrient metabolism studies.\n\nCovers enzyme-coding genes (rate-limiting/branch/transport/storage) and regulatory genes (TFs/miRNAs/signaling) that shift flux to final nutrient products.",
+        "properties": {
+          "Gene_Name": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Gene symbol/name used in the paper (e.g., OsNAS2, ZmPSY1, SlGGP1, AtVTE2)."
+          },
+          "Gene_Accession_Number": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Accession/ID (NCBI/Ensembl/Phytozome/Gramene/LOC_*/AT*/locus tag) as reported."
+          },
+          "Species": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Crop species common name (e.g., Rice, Maize, Wheat, Tomato)."
+          },
+          "Species_Latin_Name": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Latin name (e.g., Oryza sativa, Zea mays, Triticum aestivum)."
+          },
+          "Variety": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Cultivar/line used (e.g., Nipponbare, B73)."
+          },
+          "Reference_Genome_Version": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Reference genome assembly/version used for coordinates if reported."
+          },
+          "Chromosome_Position": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Gene genomic interval or coordinate (e.g., Chr1:12345–13579). Exclude variant positions."
+          },
+
+          "Gene_Role_Class": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Controlled vocabulary recommended: Enzyme; Transporter; Storage/Binding; Regulatory_TF; Regulatory_RNA; Signaling; Other."
+          },
+          "Protein_Family_or_Domain": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Protein family/domain (e.g., bHLH TF, SDR, cytochrome P450, MATE transporter)."
+          },
+          "Enzyme_Name_or_Function": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "If enzyme gene: enzyme name or biochemical function (e.g., phytoene synthase; GDP-L-galactose phosphorylase). If regulator: brief function (e.g., activates carotenoid pathway genes)."
+          },
+          "EC_Number": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "EC number if explicitly reported (e.g., 2.5.1.32)."
+          },
+
+          "Final_Nutrient_Product": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "The final nutritional product whose presence/yield/content is the terminal trait (e.g., β-carotene, folate, vitamin E tocopherols, vitamin C ascorbate, lysine, anthocyanins, iron in grain, zinc in endosperm)."
+          },
+          "Final_Nutrient_Product_Class": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Broad nutrient class: Vitamin; Mineral; Amino_Acid; Fatty_Acid; Carotenoid; Polyphenol/Flavonoid; Alkaloid; Fiber/Carbohydrate; Other."
+          },
+          "Nutrient_Trait_Metric": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "What was measured for the final product: content; concentration; yield per plant/area; bioavailability proxy; speciation; stability; retention after processing."
+          },
+          "Quantitative_Nutrient_Change": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Numeric effect size for final nutrient product (e.g., +30%, 2.1-fold, +5.2 µg/g DW)."
+          },
+          "Units_and_Basis": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Units and basis used (e.g., µg/g DW, mg/100g FW, nmol/g, ppm; seed/grain/endosperm)."
+          },
+
+          "Pathway_Name": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Metabolic pathway(s) involved (e.g., carotenoid biosynthesis, folate biosynthesis, Fe homeostasis, ascorbate pathway, amino acid biosynthesis)."
+          },
+          "Metabolic_Step_Type": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Recommended vocabulary: Committed_Step; Rate_Limiting; Branch_Point; Terminal_Step; Recycling/Salvage; Transport; Storage/Sequestration; Regulation."
+          },
+          "Reaction_Substrate": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Primary substrate(s) if reported (free text, comma-separated)."
+          },
+          "Reaction_Product_or_Immediate_Output": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Immediate reaction product(s) or transported species (free text, comma-separated)."
+          },
+          "Key_Intermediate_Metabolites_Affected": {
+            "anyOf": [
+              { "type": "array", "items": { "type": "string" } },
+              { "type": "string" },
+              { "type": "null" }
+            ],
+            "default": "NA",
+            "description": "Intermediate metabolites whose levels change (e.g., GGPP; phytoene; γ-tocopherol; nicotianamine). Use a list of strings if multiple."
+          },
+          "Flux_or_Direction_Change": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "How metabolism is redirected (e.g., increases flux toward β-carotene branch; reduces competing lignin branch; enhances Fe translocation to grain)."
+          },
+
+          "Core_Phenotypic_Effect_on_Nutrient": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Most important conclusion linking gene perturbation/allele to final nutrient product outcome."
+          },
+          "Other_Phenotypic_Effects": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Non-nutrient phenotypes affected (growth/yield/stress/disease/quality)."
+          },
+
+          "Regulatory_Mechanism": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Mechanism: transcriptional activation/repression, phosphorylation, feedback inhibition, protein stability, complex formation, etc."
+          },
+          "Regulatory_Relationships": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Gene network edges in a flat string format: Upstream->Regulation_Type->Downstream, using '->' for activation/promotion, '--|' for inhibition. Separate multiple by ';'. Example: TF1->activates->PSY1; HY5--|represses--|X."
+          },
+          "Interacting_Proteins": {
+            "anyOf": [
+              { "type": "array", "items": { "type": "string" } },
+              { "type": "string" },
+              { "type": "null" }
+            ],
+            "default": "NA",
+            "description": "Experimentally validated interactors (protein/gene IDs). Use list of strings or ';' delimited string."
+          },
+
+          "Subcellular_Localization": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Localization relevant to metabolism (chloroplast/plastid, ER, cytosol, vacuole, mitochondria, apoplast, nucleus). Include method if noted (e.g., GFP)."
+          },
+          "Tissue_or_Organ_of_Nutrient_Accumulation": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Where the final nutrient product is quantified/accumulates: grain endosperm, embryo, leaf, tuber, fruit pericarp, etc."
+          },
+          "Developmental_Stage": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Stage for sampling/phenotype (e.g., milk stage grain, mature seed, breaker fruit)."
+          },
+          "Expression_Pattern": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Tissues/conditions with high expression; include inducible cues (e.g., Fe deficiency, nitrogen supply, light)."
+          },
+
+          "Key_Environment_or_Treatment_Factor": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Environmental/treatment factors influencing nutrient metabolism (e.g., Fe deficiency, sulfate limitation, light intensity, post-harvest storage, cooking/processing)."
+          },
+
+          "Experimental_Materials": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Mutant/line type and background (e.g., CRISPR knockout, OE line, NIL, RNAi)."
+          },
+          "Core_Validation_Method": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Most critical functional validation experiments (e.g., knockout/knockdown/OE; complementation; enzyme assay; feeding labeling; transient expression)."
+          },
+          "Nutrient_Assay_or_Profiling_Method": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "How nutrient/metabolites were measured: HPLC, LC-MS/MS, GC-MS, ICP-MS/ICP-OES (minerals), colorimetric assay, targeted metabolomics, untargeted metabolomics."
+          },
+          "Omics_Data": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Omics types and accessions if reported (RNA-seq, metabolomics, proteomics, GWAS, resequencing)."
+          },
+
+          "Key_Variant_Type": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Variant type if causal allele reported: SNP; Indel; CNV; PAV; Structural_Variant."
+          },
+          "Key_Variant_Site": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Causal variant/haplotype marker as described (e.g., g.123A>T; promoter InDel)."
+          },
+          "Favorable_Allele_or_Haplotype": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Allele/haplotype associated with higher nutrient product content or desired nutrient profile."
+          },
+
+          "Gene_Discovery_or_Cloning_Method": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "How the gene was identified: map-based cloning; GWAS; QTL; candidate; comparative genomics; omics-driven screening; CRISPR screen."
+          },
+          "Genetic_Population": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Population used for association/QTL if any (e.g., RILs, F2, diversity panel)."
+          },
+          "Field_Trials_or_GxE": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Field trial and/or GxE notes relevant to nutrient outcome (location/season; soil nutrient status)."
+          },
+
+          "Breeding_or_Biofortification_Value": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Applied value: marker-assisted selection; biofortification; processing stability; stacking suggestions; trade-offs."
+          },
+
+          "Summary_key_Findings_of_Core_Gene": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Main findings in numbered format: '1. ... 2. ... 3. ...'. Focus on nutrient metabolism causality."
+          },
+          "Notes_or_Other_Important_Info": {
+            "anyOf": [{ "type": "string" }, { "type": "null" }],
+            "default": "NA",
+            "description": "Anything crucial not captured elsewhere (e.g., epistasis, pathway redundancy, processing losses, cultivar specificity)."
+          }
+        }
+      }
+    },
+    "properties": {
+      "Title": {
+        "anyOf": [{ "type": "string" }, { "type": "null" }],
+        "default": "NA",
+        "description": "Full paper title."
+      },
+      "Journal": {
+        "anyOf": [{ "type": "string" }, { "type": "null" }],
+        "default": "NA",
+        "description": "Journal name."
+      },
+      "DOI": {
+        "anyOf": [{ "type": "string" }, { "type": "null" }],
+        "default": "NA",
+        "description": "Pure DOI string, no URL prefix."
+      },
+      "Genes": {
+        "type": "array",
+        "title": "Genes",
+        "description": "List of key gene objects (enzymes/regulators) impacting final nutrient products.",
+        "items": { "$ref": "#/$defs/NutrientMetabolismGene" }
+      }
+    },
+    "example": {
+      "Title": "Engineering carotenoid flux to increase provitamin A content in maize endosperm",
+      "Journal": "Plant Biotechnology Journal",
+      "DOI": "10.XXXX/plantbiotechj.XXXXX",
+      "Genes": [
+        {
+          "Gene_Name": "ZmPSY1",
+          "Gene_Accession_Number": "GRMZM2GXXXXXX",
+          "Species": "Maize",
+          "Species_Latin_Name": "Zea mays",
+          "Variety": "B73",
+          "Reference_Genome_Version": "NA",
+          "Chromosome_Position": "NA",
+          "Gene_Role_Class": "Enzyme",
+          "Protein_Family_or_Domain": "Carotenoid biosynthesis enzyme",
+          "Enzyme_Name_or_Function": "Phytoene synthase",
+          "EC_Number": "NA",
+          "Final_Nutrient_Product": "β-carotene (provitamin A)",
+          "Final_Nutrient_Product_Class": "Carotenoid",
+          "Nutrient_Trait_Metric": "content",
+          "Quantitative_Nutrient_Change": "+2.3-fold",
+          "Units_and_Basis": "µg/g DW (endosperm)",
+          "Pathway_Name": "Carotenoid biosynthesis",
+          "Metabolic_Step_Type": "Committed_Step",
+          "Reaction_Substrate": "GGPP",
+          "Reaction_Product_or_Immediate_Output": "phytoene",
+          "Key_Intermediate_Metabolites_Affected": ["phytoene", "lycopene"],
+          "Flux_or_Direction_Change": "Increases flux into carotenoid backbone synthesis, raising downstream β-carotene.",
+          "Core_Phenotypic_Effect_on_Nutrient": "Overexpression increases β-carotene accumulation in endosperm.",
+          "Other_Phenotypic_Effects": "NA",
+          "Regulatory_Mechanism": "NA",
+          "Regulatory_Relationships": "NA",
+          "Interacting_Proteins": "NA",
+          "Subcellular_Localization": "Plastid",
+          "Tissue_or_Organ_of_Nutrient_Accumulation": "Endosperm",
+          "Developmental_Stage": "Mature seed",
+          "Expression_Pattern": "High in developing endosperm",
+          "Key_Environment_or_Treatment_Factor": "NA",
+          "Experimental_Materials": "Transgenic overexpression lines",
+          "Core_Validation_Method": "Overexpression; targeted metabolite quantification",
+          "Nutrient_Assay_or_Profiling_Method": "HPLC; LC-MS/MS",
+          "Omics_Data": "NA",
+          "Key_Variant_Type": "NA",
+          "Key_Variant_Site": "NA",
+          "Favorable_Allele_or_Haplotype": "NA",
+          "Gene_Discovery_or_Cloning_Method": "Reverse genetics (transgenic engineering)",
+          "Genetic_Population": "NA",
+          "Field_Trials_or_GxE": "NA",
+          "Breeding_or_Biofortification_Value": "Candidate for biofortification; potential for stacking with downstream cyclase/hydroxylase edits.",
+          "Summary_key_Findings_of_Core_Gene": "1. ZmPSY1 enhances committed entry into carotenoid biosynthesis. 2. Overexpression increases provitamin A (β-carotene) in endosperm. 3. Intermediate carotenoids also increase, consistent with higher pathway flux.",
+          "Notes_or_Other_Important_Info": "NA"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,396 @@
+"""
+verify_response.py
+验证 LLM 生成的 JSON 是否忠实于 MD 原文，检测幻觉并自动修正。
+
+流程:
+    1. 读取 MD 原文 + 对应 JSON 输出
+    2. 调用 LLM API 逐基因验证每个字段
+    3. 将 UNSUPPORTED 的字段修正为 "NA"
+    4. 保存修正后的 JSON 和验证报告
+"""
+
+import json
+import os
+import re
+from datetime import datetime
+from openai import OpenAI
+from dotenv import load_dotenv
+from token_tracker import TokenTracker
+
+load_dotenv()
+
+# ─── 配置（优先从环境变量读取，支持 run.sh 统一配置）────────────────────────────
+BASE_DIR = os.getenv("BASE_DIR", "/data/haotianwu/biojson")
+MD_DIR = os.getenv("MD_DIR", os.path.join(BASE_DIR, "md"))
+JSON_DIR = os.getenv("JSON_DIR", os.path.join(BASE_DIR, "json"))
+REPORT_DIR = os.getenv("REPORT_DIR", os.path.join(BASE_DIR, "reports"))
+
+os.makedirs(REPORT_DIR, exist_ok=True)
+
+# ─── LLM 客户端 ─────────────────────────────────────────────────────────────────
+client = OpenAI(
+    api_key=os.getenv("OPENAI_API_KEY"),
+    base_url=os.getenv("OPENAI_BASE_URL"),
+)
+
+MODEL = os.getenv("MODEL", "Vendor2/Claude-4.6-opus")
+
+# ─── Token 用量追踪 ─────────────────────────────────────────────────────────────
+tracker = TokenTracker(model=MODEL)
+
+# ─── 验证 Prompt（参考 configs/nutri_plant.txt Step 3 的验证逻辑）───────────────
+VERIFY_SYSTEM_PROMPT = """\
+You are a rigorous academic verification assistant specializing in plant molecular biology \
+and metabolic biochemistry.
+
+Your task: Given a scientific paper (Markdown) and a set of extracted JSON fields for ONE gene, \
+verify whether EACH field value is faithfully supported by the original paper.
+
+### Verification criteria (from the extraction protocol Step 3):
+1. **Core gene validity** — Was this gene directly tested in the Results section \
+   (knockout/knockdown/OE/CRISPR/enzyme assay), or only mentioned in Intro/Discussion?
+2. **Trait validity** — Is the gene linked to a final nutrient product, not just a generic trait?
+3. **Directionality consistency** — Do intermediate metabolite changes match the final product change?
+4. **Evidence alignment** — Are claims backed by figures/tables in Results, not just Discussion speculation?
+5. **Hallucination check** — Do specific values (numbers, gene names, accession IDs, EC numbers, \
+   species names, etc.) actually appear in the paper?
+
+### For EACH field, respond with:
+- **SUPPORTED**: The value is explicitly stated or directly inferable from the paper.
+- **UNSUPPORTED**: The value CANNOT be found in or inferred from the paper (likely hallucination).
+- **UNCERTAIN**: Partially related content exists, but the exact value is not clearly supported.
+
+### Output format (strict JSON):
+Return a JSON object where keys are field names and values are objects with "verdict" and "reason":
+```json
+{
+  "Gene_Name": {"verdict": "SUPPORTED", "reason": "Gene name ZmPSY1 appears in Abstract and Results"},
+  "EC_Number": {"verdict": "UNSUPPORTED", "reason": "No EC number is mentioned anywhere in the paper"},
+  ...
+}
+```
+
+IMPORTANT:
+- Only verify non-NA fields provided to you.
+- Be strict: if a specific number/ID is not in the paper, mark UNSUPPORTED.
+- Output ONLY the JSON object, no extra text.
+"""
+
+
+def get_file_pairs():
+    """自动配对 md/{name}.md → json/{name}_nutri_plant.json"""
+    pairs = []
+    if not os.path.exists(MD_DIR) or not os.path.exists(JSON_DIR):
+        return pairs
+
+    md_files = sorted([f for f in os.listdir(MD_DIR) if f.endswith(".md")])
+
+    # 测试模式：仅处理指定编号的文件
+    if os.getenv("TEST_MODE") == "1":
+        idx = int(os.getenv("TEST_INDEX", "1")) - 1  # 转为 0-based
+        if 0 <= idx < len(md_files):
+            md_files = [md_files[idx]]
+            print(f"🧪 测试模式: 仅验证第 {idx+1} 个文件 → {md_files[0]}")
+        else:
+            print(f"❌ 编号 {idx+1} 超出范围 (共 {len(md_files)} 个 MD 文件)")
+            return pairs
+
+    for md_file in md_files:
+        stem = os.path.splitext(md_file)[0]
+        json_file = f"{stem}_nutri_plant.json"
+        md_path = os.path.join(MD_DIR, md_file)
+        json_path = os.path.join(JSON_DIR, json_file)
+        if os.path.exists(json_path):
+            pairs.append((md_path, json_path, stem))
+        else:
+            print(f"⚠️  找不到 JSON 对应文件: {json_file}，跳过 {md_file}")
+    return pairs
+
+
+def extract_non_na_fields(gene_dict):
+    """提取基因字典中所有非 NA 的字段"""
+    fields = {}
+    for key, value in gene_dict.items():
+        if value is None:
+            continue
+        if isinstance(value, str) and value.strip().upper() == "NA":
+            continue
+        if isinstance(value, list):
+            # 过滤列表中的 NA
+            filtered = [v for v in value if not (isinstance(v, str) and v.strip().upper() == "NA")]
+            if filtered:
+                fields[key] = filtered
+        else:
+            fields[key] = value
+    return fields
+
+
+def verify_gene_via_api(md_content, gene_data, gene_index):
+    """调用 LLM API 验证单个基因的所有非 NA 字段"""
+    non_na_fields = extract_non_na_fields(gene_data)
+
+    if not non_na_fields:
+        return {}
+
+    gene_name = gene_data.get("Gene_Name", f"Gene_{gene_index}")
+    print(f"  🔍 验证基因 [{gene_index}]: {gene_name} ({len(non_na_fields)} 个字段)...")
+
+    # 构建用户 prompt
+    fields_text = json.dumps(non_na_fields, indent=2, ensure_ascii=False)
+
+    # 截取原文（避免超过 token 限制，保留前 12000 字符）
+    truncated_md = md_content[:12000]
+    if len(md_content) > 12000:
+        truncated_md += "\n\n[... 原文已截断 ...]"
+
+    user_prompt = (
+        f"## 论文原文 (Markdown)\n\n{truncated_md}\n\n"
+        f"---\n\n"
+        f"## 待验证的基因字段 (Gene #{gene_index}: {gene_name})\n\n"
+        f"```json\n{fields_text}\n```\n\n"
+        f"请逐字段验证，返回 JSON 格式的验证结果。"
+    )
+
+    try:
+        response = client.chat.completions.create(
+            model=MODEL,
+            messages=[
+                {"role": "system", "content": VERIFY_SYSTEM_PROMPT},
+                {"role": "user", "content": user_prompt},
+            ],
+            temperature=float(os.getenv("TEMPERATURE", "0")),
+            max_tokens=int(os.getenv("MAX_TOKENS", "8192")),
+        )
+
+        # 记录 Token 用量
+        tracker.add(response, stage="verify", file=gene_name, gene=gene_name)
+
+        raw = response.choices[0].message.content
+
+        # 提取 JSON
+        # 尝试 ```json ... ``` 块
+        code_match = re.search(r"```json\s*(.*?)\s*```", raw, re.DOTALL)
+        if code_match:
+            json_str = code_match.group(1)
+        else:
+            # 尝试直接提取 { ... }
+            brace_match = re.search(r"(\{.*\})", raw, re.DOTALL)
+            json_str = brace_match.group(1) if brace_match else raw
+
+        result = json.loads(json_str)
+        return result
+
+    except json.JSONDecodeError as e:
+        print(f"    ⚠️  JSON 解析失败: {e}")
+        print(f"    原始返回: {raw[:500]}")
+        return {}
+    except Exception as e:
+        print(f"    ❌ API 调用失败: {e}")
+        return {}
+
+
+def apply_corrections(gene_data, verification_result):
+    """根据验证结果修正基因数据，将 UNSUPPORTED 的字段改为 'NA'"""
+    corrections = []
+    corrected_gene = dict(gene_data)
+
+    for field_name, verdict_info in verification_result.items():
+        if not isinstance(verdict_info, dict):
+            continue
+        verdict = verdict_info.get("verdict", "").upper()
+        reason = verdict_info.get("reason", "")
+
+        if verdict == "UNSUPPORTED":
+            old_value = corrected_gene.get(field_name)
+            corrected_gene[field_name] = "NA"
+            corrections.append({
+                "field": field_name,
+                "old_value": old_value,
+                "new_value": "NA",
+                "reason": reason,
+            })
+
+    return corrected_gene, corrections
+
+
+def verify_file(md_path, json_path, stem):
+    """验证一对 md + json 文件"""
+    print(f"\n{'='*60}")
+    print(f"📄 验证文件: {stem}")
+    print(f"   MD:   {md_path}")
+    print(f"   JSON: {json_path}")
+    print(f"{'='*60}")
+
+    # 读取文件
+    with open(md_path, "r", encoding="utf-8") as f:
+        md_content = f.read()
+
+    with open(json_path, "r", encoding="utf-8") as f:
+        json_data = json.load(f)
+
+    # 提取基因列表（兼容不同 JSON 结构）
+    if isinstance(json_data, dict):
+        # 可能是 {"CropNutrientMetabolismGeneExtraction": {"Genes": [...]}}
+        # 或直接 {"Title": ..., "Genes": [...]}
+        if "CropNutrientMetabolismGeneExtraction" in json_data:
+            root = json_data["CropNutrientMetabolismGeneExtraction"]
+        else:
+            root = json_data
+        genes = root.get("Genes", [])
+        top_level_fields = {k: v for k, v in root.items() if k != "Genes"}
+    else:
+        print("  ❌ JSON 格式不符合预期，跳过")
+        return None
+
+    print(f"  📊 论文级字段: {len(top_level_fields)} 个")
+    print(f"  🧬 基因数量: {len(genes)} 个")
+
+    # 验证结果汇总
+    file_report = {
+        "file": stem,
+        "md_path": md_path,
+        "json_path": json_path,
+        "timestamp": datetime.now().isoformat(),
+        "genes": [],
+        "summary": {
+            "total_fields": 0,
+            "supported": 0,
+            "unsupported": 0,
+            "uncertain": 0,
+            "total_corrections": 0,
+        },
+    }
+
+    all_corrected_genes = []
+
+    # 逐基因验证
+    for i, gene in enumerate(genes):
+        gene_name = gene.get("Gene_Name", f"Gene_{i}")
+
+        verification = verify_gene_via_api(md_content, gene, i + 1)
+        corrected_gene, corrections = apply_corrections(gene, verification)
+        all_corrected_genes.append(corrected_gene)
+
+        # 统计
+        gene_stats = {"supported": 0, "unsupported": 0, "uncertain": 0}
+        for field, info in verification.items():
+            if isinstance(info, dict):
+                v = info.get("verdict", "").upper()
+                if v == "SUPPORTED":
+                    gene_stats["supported"] += 1
+                elif v == "UNSUPPORTED":
+                    gene_stats["unsupported"] += 1
+                elif v == "UNCERTAIN":
+                    gene_stats["uncertain"] += 1
+
+        total = gene_stats["supported"] + gene_stats["unsupported"] + gene_stats["uncertain"]
+
+        # 打印基因级别结果
+        print(f"\n  🧬 Gene [{i+1}] {gene_name}:")
+        print(f"     ✅ SUPPORTED:   {gene_stats['supported']}")
+        print(f"     ❓ UNCERTAIN:   {gene_stats['uncertain']}")
+        print(f"     ❌ UNSUPPORTED: {gene_stats['unsupported']}")
+
+        if corrections:
+            print(f"     🔧 已修正 {len(corrections)} 个字段:")
+            for c in corrections:
+                old_val = c["old_value"]
+                if isinstance(old_val, str) and len(old_val) > 60:
+                    old_val = old_val[:60] + "..."
+                print(f"        - {c['field']}: \"{old_val}\" → \"NA\"")
+                print(f"          原因: {c['reason']}")
+
+        # 记录到报告
+        file_report["genes"].append({
+            "gene_index": i + 1,
+            "gene_name": gene_name,
+            "verification": verification,
+            "corrections": corrections,
+            "stats": gene_stats,
+        })
+
+        file_report["summary"]["total_fields"] += total
+        file_report["summary"]["supported"] += gene_stats["supported"]
+        file_report["summary"]["unsupported"] += gene_stats["unsupported"]
+        file_report["summary"]["uncertain"] += gene_stats["uncertain"]
+        file_report["summary"]["total_corrections"] += len(corrections)
+
+    # 保存修正后的 JSON
+    if isinstance(json_data, dict):
+        if "CropNutrientMetabolismGeneExtraction" in json_data:
+            json_data["CropNutrientMetabolismGeneExtraction"]["Genes"] = all_corrected_genes
+        else:
+            json_data["Genes"] = all_corrected_genes
+
+    verified_json_path = os.path.join(JSON_DIR, f"{stem}_nutri_plant_verified.json")
+    with open(verified_json_path, "w", encoding="utf-8") as f:
+        json.dump(json_data, f, indent=2, ensure_ascii=False)
+    print(f"\n  ✅ 修正后的 JSON 已保存: {verified_json_path}")
+
+    # 保存验证报告
+    report_path = os.path.join(REPORT_DIR, f"{stem}_verification.json")
+    with open(report_path, "w", encoding="utf-8") as f:
+        json.dump(file_report, f, indent=2, ensure_ascii=False)
+    print(f"  📋 验证报告已保存: {report_path}")
+
+    return file_report
+
+
+def print_summary(all_reports):
+    """打印所有文件的汇总"""
+    print(f"\n{'='*60}")
+    print(f"📊 总体验证汇总")
+    print(f"{'='*60}")
+
+    total_files = len(all_reports)
+    total_fields = sum(r["summary"]["total_fields"] for r in all_reports)
+    total_supported = sum(r["summary"]["supported"] for r in all_reports)
+    total_unsupported = sum(r["summary"]["unsupported"] for r in all_reports)
+    total_uncertain = sum(r["summary"]["uncertain"] for r in all_reports)
+    total_corrections = sum(r["summary"]["total_corrections"] for r in all_reports)
+
+    print(f"  验证文件数: {total_files}")
+    print(f"  验证字段数: {total_fields}")
+    print(f"  ✅ SUPPORTED:   {total_supported}")
+    print(f"  ❓ UNCERTAIN:   {total_uncertain}")
+    print(f"  ❌ UNSUPPORTED: {total_unsupported}")
+    print(f"  🔧 总修正数:    {total_corrections}")
+
+    if total_fields > 0:
+        accuracy = total_supported / total_fields * 100
+        print(f"  📈 忠实度:      {accuracy:.1f}%")
+
+
+def main():
+    """主函数"""
+    print("🚀 开始验证 JSON 输出的忠实度...\n")
+
+    pairs = get_file_pairs()
+
+    if not pairs:
+        print("❌ 未找到可验证的文件对。")
+        print(f"   请确保 {MD_DIR} 中有 .md 文件，")
+        print(f"   且 {JSON_DIR} 中有对应的 _nutri_plant.json 文件。")
+        return
+
+    print(f"📂 找到 {len(pairs)} 对待验证文件")
+
+    all_reports = []
+    for md_path, json_path, stem in pairs:
+        report = verify_file(md_path, json_path, stem)
+        if report:
+            all_reports.append(report)
+
+    if all_reports:
+        print_summary(all_reports)
+
+    # 打印 Token 用量汇总并保存报告
+    tracker.print_summary()
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    tracker.save_report(os.path.join(REPORT_DIR, f"token_usage_verify_{timestamp}.json"))
+
+    print("\n✅ 验证完成！")
+
+
+if __name__ == "__main__":
+    main()
