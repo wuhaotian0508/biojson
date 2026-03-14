@@ -1,10 +1,10 @@
-import re
 import json
 import os
 from datetime import datetime
 from openai import OpenAI
 from dotenv import load_dotenv
 from token_tracker import TokenTracker
+from text_utils import strip_references
 load_dotenv()
 
 # 1. 初始化客户端
@@ -34,10 +34,64 @@ with open(PROMPT_PATH, 'r', encoding='utf-8') as f:
 
 with open(SCHEMA_PATH, 'r', encoding='utf-8') as f:
     template = json.load(f)
-    # 假设你的 schema 在这个 key 下
     paradigm = template.get("CropNutrientMetabolismGeneExtraction", template)
 
-# 4. 核心提取逻辑
+# 4. 构建 function_calling 的 tool 定义
+# 将基因字段的 schema 转为 function parameters 格式
+GENE_PROPERTIES = {}
+gene_def = paradigm.get("$defs", {}).get("NutrientMetabolismGene", {})
+for field_name, field_schema in gene_def.get("properties", {}).items():
+    # 简化 anyOf 为 string 类型（function_calling 不支持 anyOf）
+    desc = field_schema.get("description", "")
+    if field_name == "Key_Intermediate_Metabolites_Affected" or field_name == "Interacting_Proteins":
+        GENE_PROPERTIES[field_name] = {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": desc
+        }
+    else:
+        GENE_PROPERTIES[field_name] = {
+            "type": "string",
+            "description": desc
+        }
+
+EXTRACT_TOOL = {
+    "type": "function",
+    "function": {
+        "name": "extract_nutrient_genes",
+        "description": "Extract crop nutrient metabolism gene information from a scientific paper. "
+                       "Extract ALL genes that are directly experimentally validated in the Results section. "
+                       "If information is not found, use 'NA'.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "Title": {
+                    "type": "string",
+                    "description": "Full paper title."
+                },
+                "Journal": {
+                    "type": "string",
+                    "description": "Journal name."
+                },
+                "DOI": {
+                    "type": "string",
+                    "description": "Pure DOI string, no URL prefix."
+                },
+                "Genes": {
+                    "type": "array",
+                    "description": "List of key gene objects (enzymes/regulators) impacting final nutrient products.",
+                    "items": {
+                        "type": "object",
+                        "properties": GENE_PROPERTIES
+                    }
+                }
+            },
+            "required": ["Title", "Journal", "DOI", "Genes"]
+        }
+    }
+}
+
+# 5. 核心提取逻辑
 def ai_response(path):
     name = os.path.basename(path)
     filename = os.path.splitext(name)[0]
@@ -45,65 +99,81 @@ def ai_response(path):
     with open(path, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # 增强提示词约束：强制要求不输出解释和思考过程
-    strict_constraint = (
-        "\n\n### STRICT OUTPUT RULES:\n"
-        "1. YOU MUST ONLY output the JSON object.\n"
-        "2. DO NOT include any thinking process, <thinking> tags, or introductory text.\n"
-        "3. WRAP the JSON strictly inside <structured_information> tags.\n"
-        "4. If information is missing, use \"NA\"."
-    )
+    # 去除 References 引用列表，保留后面有用的 section（如 STAR Methods）
+    original_len = len(content)
+    content = strip_references(content)
+    print(f"  📏 文本预处理: {original_len:,} → {len(content):,} 字符 (去除 References 列表节省 {original_len - len(content):,} 字符)")
 
     try:
         response = client.chat.completions.create(
             model=os.getenv("MODEL", "Vendor2/Claude-4.6-opus"),
             messages=[
-                {"role": "system", "content": base_prompt + strict_constraint},
-                {"role": "system", "content": f'JSON Schema:\n```json\n{json.dumps(paradigm, indent=2, ensure_ascii=False)}\n```'},
-                {"role": "user", "content": f'Analyze this literature and fill the JSON schema strictly:\n\n{content}'}
+                {"role": "system", "content": base_prompt},
+                {"role": "user", "content": f'Analyze this literature and extract all nutrient metabolism gene information:\n\n{content}'}
             ],
-            temperature=float(os.getenv("TEMPERATURE", "0")),
+            tools=[EXTRACT_TOOL],
+            tool_choice={"type": "function", "function": {"name": "extract_nutrient_genes"}},
+            temperature=float(os.getenv("TEMPERATURE", "0.7")),
             max_tokens=int(os.getenv("MAX_TOKENS", "18192")),
         )
         
         # 记录 Token 用量
         tracker.add(response, stage="extract", file=name)
         
-        raw_result = response.choices[0].message.content
+        # 从 function_calling 响应中提取 JSON
+        message = response.choices[0].message
         
-        # --- 多重正则提取逻辑 ---
-        # 优先提取 <structured_information> 标签内的内容
-        tag_match = re.search(r'<structured_information>(.*?)</structured_information>', raw_result, re.DOTALL)
-        
-        if tag_match:
-            clean_json = tag_match.group(1).strip()
+        if message.tool_calls and len(message.tool_calls) > 0:
+            # ✅ 成功走 function_calling 路径
+            tool_call = message.tool_calls[0]
+            json_str = tool_call.function.arguments
+            json_data = json.loads(json_str)
+            print(f"  ✅ Function calling 成功提取")
         else:
-            # 备选 1：尝试匹配 Markdown 代码块
-            code_match = re.search(r'```json\s*(.*?)\s*```', raw_result, re.DOTALL)
-            if code_match:
-                clean_json = code_match.group(1).strip()
-            else:
-                # 备选 2：强力提取第一个 { 到最后一个 } 之间的内容
-                brace_match = re.search(r'(\{.*\})', raw_result, re.DOTALL)
-                clean_json = brace_match.group(1).strip() if brace_match else raw_result
+            # Fallback: 如果 API 不支持 function_calling，回退到正则提取
+            print(f"  ⚠️  Function calling 未触发，回退到正则提取")
+            raw_result = message.content or ""
+            json_data = _fallback_extract_json(raw_result, name)
 
-        # --- JSON 校验 ---
-        try:
-            json_data = json.loads(clean_json)
-            final_output = json.dumps(json_data, indent=2, ensure_ascii=False)
-        except json.JSONDecodeError:
-            print(f"Error: {name} 的输出不是合法 JSON，将保存原始清洗结果。")
-            final_output = clean_json
+        final_output = json.dumps(json_data, indent=2, ensure_ascii=False)
 
-        # 5. 保存结果
+        # 保存结果
         output_path = os.path.join(OUTPUT_DIR, f'{filename}_nutri_plant.json')
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(final_output)
         
-        print(f"成功处理: {name} -> {output_path}")
+        print(f"  ✅ 成功处理: {name} -> {output_path}")
 
+    except json.JSONDecodeError as e:
+        print(f"  ❌ JSON 解析失败: {name}: {e}")
     except Exception as e:
-        print(f"处理文件 {name} 时发生错误: {str(e)}")
+        print(f"  ❌ 处理文件 {name} 时发生错误: {str(e)}")
+
+
+def _fallback_extract_json(raw_result, name):
+    """回退方案：从文本中提取 JSON（兼容不支持 function_calling 的情况）"""
+    import re
+    
+    # 优先提取 <structured_information> 标签内的内容
+    tag_match = re.search(r'<structured_information>(.*?)</structured_information>', raw_result, re.DOTALL)
+    if tag_match:
+        clean_json = tag_match.group(1).strip()
+    else:
+        # 备选 1：尝试匹配 Markdown 代码块
+        code_match = re.search(r'```json\s*(.*?)\s*```', raw_result, re.DOTALL)
+        if code_match:
+            clean_json = code_match.group(1).strip()
+        else:
+            # 备选 2：强力提取第一个 { 到最后一个 } 之间的内容
+            brace_match = re.search(r'(\{.*\})', raw_result, re.DOTALL)
+            clean_json = brace_match.group(1).strip() if brace_match else raw_result
+
+    try:
+        return json.loads(clean_json)
+    except json.JSONDecodeError:
+        print(f"  ⚠️  Fallback JSON 解析也失败: {name}")
+        return {"error": "JSON parse failed", "raw": clean_json[:500]}
+
 
 # 6. 遍历执行
 if __name__ == "__main__":

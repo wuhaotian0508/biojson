@@ -1,0 +1,315 @@
+{
+  "file": "MinerU_markdown_mmc10_2031567061837611008",
+  "md_path": "/data/haotianwu/biojson/md/MinerU_markdown_mmc10_2031567061837611008.md",
+  "json_path": "/data/haotianwu/biojson/json/MinerU_markdown_mmc10_2031567061837611008_nutri_plant.json",
+  "timestamp": "2026-03-14T17:03:40.217634",
+  "genes": [
+    {
+      "gene_index": 1,
+      "gene_name": "OsMYB110",
+      "verification": {
+        "": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states transgenic constructs were transferred into ZH11 (Methods section). Expression profiling used Zhenshan 97 and Minghui 63 as stated throughout."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 1,
+        "unsupported": 0,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_index": 2,
+      "gene_name": "OsMYB55",
+      "verification": {
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "OsMYB55 is explicitly mentioned throughout the paper, including in Results and Discussion sections, with overexpression and RNAi experiments."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "UNCERTAIN",
+          "reason": "Correcting previous entry: The paper's Methods section literally lists 'OsMYB55 (LOC_Os01g07120)' but this same accession is used for OsDREB2A elsewhere. This is an internal contradiction in the paper, making the true accession for OsMYB55 uncertain."
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies rice (Oryza sativa), explicitly stated throughout."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Oryza sativa is explicitly stated in the paper."
+        },
+        "Gene_Role_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "OsMYB55 is described as a transcription factor that regulates lignin biosynthetic genes, consistent with Regulatory_TF classification."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'Phylogenetic analysis revealed that the MYB family proteins encoded by OsMYB55 and OsMYB110 belong to the R2R3-type MYBs.'"
+        },
+        "Enzyme_Name_or_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies OsMYB55 as an R2R3-type MYB transcription factor and shows it regulates Os4CL3, Os4CL5, OsPAL6, and OsC4H in the lignin biosynthetic pathway (Supplemental Figure 13A)."
+        },
+        "Pathway_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly links OsMYB55 to the phenylpropanoid/lignin biosynthesis pathway. The text states 'OsMYB55 may control lignin synthesis' and KEGG enrichment shows phenylpropanoid biosynthesis."
+        },
+        "Final_Nutrient_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Lignin content was directly measured in OsMYB55-OX and OsMYB55-RNAi lines (Supplemental Figure 13C)."
+        },
+        "Final_Nutrient_Product_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Lignin is a phenylpropanoid polymer. Classifying it as 'Polyphenol/Flavonoid' is imprecise — lignin is not a flavonoid. It could be considered a polyphenol in a broad sense, but the paper does not classify lignin this way. The paper classifies lignin under the phenylpropanoid pathway."
+        },
+        "Metabolic_Step_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "OsMYB55 is a transcription factor that regulates biosynthetic genes, so 'Regulation' is appropriate."
+        },
+        "Regulatory_Mechanism": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows OsMYB55 activates expression of lignin biosynthetic genes (Os4CL3, Os4CL5, OsPAL6, OsC4H) based on qRT-PCR showing increased expression in OX lines and decreased in RNAi lines."
+        },
+        "Regulatory_Relationships": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'the expression of lignin biosynthesis genes, including Os4CL3, Os4CL5, OsPAL6, and OsC4H, was significantly higher in the MYB55-ox lines, but lower in the MYB55-RNAi lines' (Supplemental Figure 13A), supporting all four activation relationships."
+        },
+        "Key_Intermediate_Metabolites_Affected": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper mentions 'lignin precursors' and 'hydroxycinnamic acids' in the context of the lignin pathway generally and for OsMYB110 specifically, but does not explicitly measure these intermediate metabolites for OsMYB55 transgenic lines. The claim is reasonable by inference from the pathway but not directly demonstrated for OsMYB55."
+        },
+        "Reaction_Product_or_Immediate_Output": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly state that the immediate output of OsMYB55 regulation is 'lignin precursors (monolignols).' This is inferred from the pathway context but not directly measured for OsMYB55."
+        },
+        "Flux_or_Direction_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "OsMYB55-OX increases lignin content (~15%) and RNAi decreases it (~13%), demonstrating bidirectional flux control toward lignin biosynthesis."
+        },
+        "Quantitative_Nutrient_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'OsMYB55-ox leaves contained approximately 15% more lignin and that MYB55-RNAi leaves contained approximately 13% less lignin compared with ZH11 leaves' (Supplemental Figure 13C)."
+        },
+        "Nutrient_Trait_Metric": {
+          "verdict": "SUPPORTED",
+          "reason": "Lignin content was directly measured, consistent with 'content' as the metric."
+        },
+        "Nutrient_Assay_or_Profiling_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supplemental Figure 13 legend states 'Lignin content was measured by the acetyl bromide (AcBr) method (Moreira-Vilar et al., 2014).'"
+        },
+        "Units_and_Basis": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports relative lignin content from leaf tissue, consistent with this field."
+        },
+        "Tissue_or_Organ_of_Nutrient_Accumulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'qRT–PCR analysis of OsMYB55-ox, OsMYB55-RNAi, and WT leaf samples at the two tillers stage' and Supplemental Figure 13C shows 'Lignin content in leaves of 1-month-old plants... 2 tillers stage plants.'"
+        },
+        "Developmental_Stage": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states measurements were taken 'at the two tillers stage.'"
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states transgenic constructs were 'transferred into ZH11' in the Methods section."
+        },
+        "Experimental_Materials": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes OsMYB55-OX and OsMYB55-RNAi transgenic lines with the maize ubiquitin promoter in ZH11 background (Methods and Supplemental Figure 13)."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes overexpression and RNAi transgenic lines, qRT-PCR of target genes (Os4CL3, Os4CL5, OsPAL6, OsC4H), lignin quantification by AcBr method, and pathogen inoculation with Xoo (Supplemental Figures 12 and 13)."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'expression of OsMYB55 and OsMYB110, like that of known lignin biosynthetic genes, was high in multiple tissues, including plumules, radicles, roots, and mature leaves' (Figure 5B)."
+        },
+        "Gene_Discovery_or_Cloning_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes using co-expression network analysis (RMRN) and guilt-by-association with known regulator OsMYB30 as bait to identify OsMYB55."
+        },
+        "Other_Phenotypic_Effects": {
+          "verdict": "SUPPORTED",
+          "reason": "Supplemental Figure 12C and 12D show OsMYB55-OX lines had smaller lesions and RNAi lines had larger lesions after Xoo (PXO99 and PXO341) infection."
+        },
+        "Breeding_or_Biofortification_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper demonstrates bidirectional control of lignin (OX increases ~15%, RNAi decreases ~13%) and corresponding disease resistance changes, supporting potential for improving disease and lodging resistance."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses transcriptome data from CREP (GSE19024), metabolome data (OMIX510), and co-expression network analysis, all explicitly mentioned."
+        },
+        "Summary_key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four summary points are supported by the paper: (1) R2R3-MYB TF identification via RMRN, (2) OX increases lignin ~15%, (3) RNAi decreases lignin ~13%, (4) OX enhances and RNAi reduces Xoo resistance."
+        },
+        "Notes_or_Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The note correctly identifies the accession number confusion in the paper — LOC_Os01g07120 is listed for both OsMYB55 and OsDREB2A in the Methods section. The phylogenetic relationship to OsMYB30 and OsMYB110 is also supported."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 28,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_index": 3,
+      "gene_name": "OsDREB2A",
+      "verification": {
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "OsDREB2A is explicitly named throughout the paper, including in Results and Discussion sections."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'OsDREB2A (LOC_Os01g07120)' explicitly in the Results section."
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is on rice, explicitly stated throughout."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Oryza sativa is explicitly stated in the paper."
+        },
+        "Gene_Role_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "OsDREB2A is described as an AP2/EREBP domain transcription factor that regulates glycerophospholipid metabolism genes. Classifying it as Regulatory_TF is correct."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states OsDREB2A encodes 'an AP2/EREBP domain transcription factor' and belongs to 'the DREB subfamily' based on phylogenetic analysis."
+        },
+        "Enzyme_Name_or_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes OsDREB2A as an AP2/EREBP domain transcription factor of the DREB subfamily that activates glycerophospholipid metabolism genes including OsPLAIVa, OsPLAIIIa, OsPLDα, and OsMHZ11."
+        },
+        "Pathway_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states KEGG analysis revealed molecular functions 'enriched in glycerophospholipid metabolism' and the entire section is titled about glycerophospholipid metabolism regulation."
+        },
+        "Metabolic_Step_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "OsDREB2A is a transcription factor that regulates expression of glycerophospholipid metabolism genes, so 'Regulation' is correct."
+        },
+        "Final_Nutrient_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows OsDREB2A-OX seeds have significantly higher monoacylglycerophospholipids (LPC and LPE). These are the final measured nutrient products."
+        },
+        "Final_Nutrient_Product_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Glycerophospholipids (LPC, LPE) are phospholipids, which are a subclass of lipids. Classifying them as 'Fatty_Acid' is not accurate - they are phospholipids/glycerophospholipids, not fatty acids. However, the paper does classify them under 'lipids' broadly. The classification is imprecise."
+        },
+        "Nutrient_Trait_Metric": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports content changes (most LPC/LPE significantly higher, PC/PE/PS lower in OsDREB2A-OX seeds), consistent with 'content; composition ratio'."
+        },
+        "Quantitative_Nutrient_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'most of the contents of monoacylglycerophospholipids (LPC and LPE) in seeds of the overexpressors were significantly higher and that diacylglycerolphospholipids (PC, PE, and PS) were lower.' It also states OsPLAIVa expression 'increased by about two-fold' with P=3.5E-4."
+        },
+        "Key_Intermediate_Metabolites_Affected": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly mentions PC, PE, PS (decreased) and LPC, LPE (increased) in OsDREB2A-OX seeds. All five metabolite classes are mentioned in the paper."
+        },
+        "Flux_or_Direction_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows increased LPC/LPE and decreased PC/PE/PS in OsDREB2A-OX seeds, and the authors speculate 'OsDREB2A may control glycerophospholipid metabolism by regulating OsPLAIVa' (a phospholipase that degrades diacyl to monoacyl forms). The direction described is consistent."
+        },
+        "Reaction_Product_or_Immediate_Output": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows that OsPLAIVa belongs to the PLA family 'involved in glycerophospholipid degradation' and that LPC/LPE increase while PC/PE/PS decrease, consistent with phospholipase-mediated hydrolysis producing monoacylglycerophospholipids."
+        },
+        "Regulatory_Mechanism": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states DREB subfamily members recognize 'DRE with the A/GCCGAC core motif' and the dual-LUC assay shows OsDREB2A activates promoters of glycerophospholipid metabolism genes, confirming transcriptional activation."
+        },
+        "Regulatory_Relationships": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper demonstrates via dual-LUC assay that OsDREB2A activates OsPLAIVa, OsPLAIIIa, and OsPLDα promoters (Figure 6C). qRT-PCR shows increased expression of OsPLAIVa, OsPLAIIIa, OsPLDα, and OsMHZ11 in OX lines (Figure 6D)."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states OsDREB2A was found in cluster VIII (seeds) and 'was also strongly co-expressed with these glycerophospholipid metabolism genes and co-accumulated with glycerophospholipid metabolites.'"
+        },
+        "Tissue_or_Organ_of_Nutrient_Accumulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states monoacylglycerophospholipids (LPC, LPE) were detected mainly in seeds, and metabolite changes were measured in OsDREB2A-OX seeds. The paper mentions 'endosperm (7, 14, and 21 days after pollination)' as seed samples."
+        },
+        "Developmental_Stage": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states qRT-PCR was performed on 'OsDREB2A-ox transgenic lines and WT seed samples during the pustulation period.'"
+        },
+        "Experimental_Materials": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes generating 'transgenic rice plants overexpressing the gene under the control of the maize ubiquitin promoter' and the Methods section confirms ZH11 as the transformation background."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes all listed methods: overexpression transgenic lines, dual luciferase reporter assay (Figure 6C), qRT-PCR (Figure 6D), metabolite profiling of glycerophospholipids (Figure 6E), and abiotic stress assays with PEG6000 and NaCl (Supplemental Figure 18)."
+        },
+        "Nutrient_Assay_or_Profiling_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes using 'ultrahigh-performance liquid chromatography-tandem mass spectroscopy (UPLC-MS/MS)-based nontargeted method combined with a targeted metabolic profiling method' in the Methods section."
+        },
+        "Gene_Discovery_or_Cloning_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes OsDREB2A identification through 'unbiased screening based on tissue specificity' using the RMRN co-expression network, with OsDREB2A found in cluster VIII (seed-specific)."
+        },
+        "Key_Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes dehydration stress (PEG6000 at 15% and 20%) and salt stress (NaCl at 100 and 200 mM) experiments on OsDREB2A-OX lines (Supplemental Figure 18)."
+        },
+        "Other_Phenotypic_Effects": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'the survival rate of OsDREB2A-ox seedlings was higher than that of ZH11 control seedlings under both PEG6000 and NaCl stress, and growth performance in terms of shoot and root length was also significantly higher.'"
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "ZH11 is confirmed as the transgenic background in the Methods section. Zhenshan 97 and Minghui 63 are the two varieties used for expression profiling throughout the study."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper references transcriptome data from CREP (GSE19024), metabolome data deposited under OMIX510, and co-expression network analysis throughout."
+        },
+        "Breeding_or_Biofortification_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion states this finding 'will likely prove helpful in breeding highly nutritional rice.' The paper also demonstrates abiotic stress tolerance potential."
+        },
+        "Units_and_Basis": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports relative metabolite content in seeds and gene expression fold-change (e.g., OsPLAIVa ~2-fold increase). These are consistent with the stated units."
+        },
+        "Summary_key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All five summary points are directly supported by the paper: (1) RMRN cluster VIII identification, (2) dual-LUC assay results (Figure 6C), (3) qRT-PCR results showing ~2-fold OsPLAIVa increase (Figure 6D), (4) metabolite changes in OX seeds (Figure 6E), (5) enhanced stress tolerance (Supplemental Figure 18)."
+        },
+        "Notes_or_Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states this is a novel finding linking DREB TF to glycerophospholipid metabolism. The mechanism involving OsPLAIVa, OsPLAIIIa, OsMHZ11 as PLA family members involved in glycerophospholipid degradation is explicitly described."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 32,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 66,
+    "supported": 61,
+    "unsupported": 0,
+    "uncertain": 5,
+    "total_corrections": 0
+  }
+}

@@ -26,7 +26,7 @@ export SCHEMA_PATH="${BASE_DIR}/configs/nutri_plant.json"
 # ─── 模型参数 ─────────────────────────────────────────────
 export MODEL="${MODEL:-Vendor2/Claude-4.6-opus}"
 export MAX_TOKENS="${MAX_TOKENS:-18192}"
-export TEMPERATURE="${TEMPERATURE:-0}"
+export TEMPERATURE="${TEMPERATURE:-0.7}"
 
 # ─── 运行模式 ─────────────────────────────────────────────
 MODE="${1:-all}"
