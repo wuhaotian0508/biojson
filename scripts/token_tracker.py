@@ -113,7 +113,7 @@ class TokenTracker:
         os.makedirs(os.path.dirname(path) if os.path.dirname(path) else ".", exist_ok=True)
 
         report = {
-            "timestamp": datetime.now().isoformat(),
+            "timestamp": datetime.now().replace(microsecond=0).isoformat(),
             "model": self.model,
             "calls": self.calls,
             "summary": self.get_summary(),

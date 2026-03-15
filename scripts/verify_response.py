@@ -17,6 +17,7 @@ verify_response.py
 import json
 import os
 import re
+import shutil
 from datetime import datetime
 from openai import OpenAI
 from dotenv import load_dotenv
@@ -28,10 +29,16 @@ load_dotenv()
 # ─── 配置 ────────────────────────────────────────────────────────────────────────
 BASE_DIR = os.getenv("BASE_DIR", "/data/haotianwu/biojson")
 MD_DIR = os.getenv("MD_DIR", os.path.join(BASE_DIR, "md"))
-JSON_DIR = os.getenv("JSON_DIR", os.path.join(BASE_DIR, "json"))
-REPORT_DIR = os.getenv("REPORT_DIR", os.path.join(BASE_DIR, "reports"))
+RAW_EXTRACTIONS_DIR = os.getenv("RAW_EXTRACTIONS_DIR", os.path.join(BASE_DIR, "reports/raw_extractions"))
+FINAL_JSON_DIR = os.getenv("JSON_DIR", os.path.join(BASE_DIR, "json"))
+VERIFICATIONS_DIR = os.getenv("VERIFICATIONS_DIR", os.path.join(BASE_DIR, "reports/verifications"))
+VERIFY_TOKENS_DIR = os.getenv("VERIFY_TOKENS_DIR", os.path.join(BASE_DIR, "reports/verify_tokens"))
+PROCESSED_DIR = os.getenv("PROCESSED_DIR", os.path.join(MD_DIR, "processed"))
 
-os.makedirs(REPORT_DIR, exist_ok=True)
+os.makedirs(FINAL_JSON_DIR, exist_ok=True)
+os.makedirs(VERIFICATIONS_DIR, exist_ok=True)
+os.makedirs(VERIFY_TOKENS_DIR, exist_ok=True)
+os.makedirs(PROCESSED_DIR, exist_ok=True)
 
 client = OpenAI(
     api_key=os.getenv("OPENAI_API_KEY"),
@@ -106,7 +113,7 @@ VERIFY_TOOL = {
 def get_file_pairs():
     """自动配对 md/{name}.md -> json/{name}_nutri_plant.json"""
     pairs = []
-    if not os.path.exists(MD_DIR) or not os.path.exists(JSON_DIR):
+    if not os.path.exists(MD_DIR) or not os.path.exists(RAW_EXTRACTIONS_DIR):
         return pairs
 
     md_files = sorted([f for f in os.listdir(MD_DIR) if f.endswith(".md")])
@@ -124,7 +131,7 @@ def get_file_pairs():
         stem = os.path.splitext(md_file)[0]
         json_file = f"{stem}_nutri_plant.json"
         md_path = os.path.join(MD_DIR, md_file)
-        json_path = os.path.join(JSON_DIR, json_file)
+        json_path = os.path.join(RAW_EXTRACTIONS_DIR, json_file)
         if os.path.exists(json_path):
             pairs.append((md_path, json_path, stem))
         else:
@@ -180,7 +187,6 @@ def verify_gene_via_api(md_content, gene_data, gene_index):
             tools=[VERIFY_TOOL],
             tool_choice={"type": "function", "function": {"name": "verify_gene_fields"}},
             temperature=float(os.getenv("TEMPERATURE", "0")),
-            max_tokens=int(os.getenv("MAX_TOKENS", "8192")),
         )
 
         tracker.add(response, stage="verify", file=gene_name, gene=gene_name)
@@ -260,6 +266,12 @@ def apply_corrections(gene_data, verification_result):
 
 def verify_file(md_path, json_path, stem):
     """验证一对 md + json 文件"""
+    # 增量处理：如果 verified JSON 已存在且未设置 FORCE_RERUN，跳过
+    verified_json_path = os.path.join(FINAL_JSON_DIR, f"{stem}_nutri_plant_verified.json")
+    if os.path.exists(verified_json_path) and os.getenv("FORCE_RERUN") != "1":
+        print(f"\n  ⏭️  已验证，跳过: {stem}  (设置 FORCE_RERUN=1 强制重跑)")
+        return None
+
     print(f"\n{'='*60}")
     print(f"📄 验证文件: {stem}")
     print(f"   MD:   {md_path}")
@@ -283,6 +295,16 @@ def verify_file(md_path, json_path, stem):
         else:
             root = json_data
         genes = root.get("Genes", [])
+        # 防御：LLM 偶发把 Genes 数组序列化为字符串
+        if isinstance(genes, str):
+            print(f"  ⚠️  Genes 字段是字符串而非列表，尝试解析...")
+            try:
+                genes = json.loads(genes)
+                print(f"  ✅ 解析成功: {len(genes)} 个基因")
+            except json.JSONDecodeError as e:
+                print(f"  ❌ Genes 字符串解析失败（可能被截断）: {e}")
+                print(f"  ⏭️  跳过此文件，需要重新提取")
+                return None
         top_level_fields = {k: v for k, v in root.items() if k != "Genes"}
     else:
         print("  ❌ JSON 格式不符合预期，跳过")
@@ -362,15 +384,22 @@ def verify_file(md_path, json_path, stem):
         else:
             json_data["Genes"] = all_corrected_genes
 
-    verified_json_path = os.path.join(JSON_DIR, f"{stem}_nutri_plant_verified.json")
+    verified_json_path = os.path.join(FINAL_JSON_DIR, f"{stem}_nutri_plant_verified.json")
     with open(verified_json_path, "w", encoding="utf-8") as f:
         json.dump(json_data, f, indent=2, ensure_ascii=False)
     print(f"\n  ✅ 修正后的 JSON 已保存: {verified_json_path}")
 
-    report_path = os.path.join(REPORT_DIR, f"{stem}_verification.json")
+    report_path = os.path.join(VERIFICATIONS_DIR, f"{stem}_verification.json")
     with open(report_path, "w", encoding="utf-8") as f:
         json.dump(file_report, f, indent=2, ensure_ascii=False)
     print(f"  📋 验证报告已保存: {report_path}")
+
+    # ─── 移动已处理的 MD 文件到 processed 目录 ─────────────────────────────────
+    if os.path.exists(md_path):
+        md_filename = os.path.basename(md_path)
+        dest = os.path.join(PROCESSED_DIR, md_filename)
+        shutil.move(md_path, dest)
+        print(f"  📦 MD 已移动到: {dest}")
 
     return file_report
 
@@ -409,7 +438,7 @@ def main():
     if not pairs:
         print("❌ 未找到可验证的文件对。")
         print(f"   请确保 {MD_DIR} 中有 .md 文件，")
-        print(f"   且 {JSON_DIR} 中有对应的 _nutri_plant.json 文件。")
+        print(f"   且 {RAW_EXTRACTIONS_DIR} 中有对应的 _nutri_plant.json 文件。")
         return
 
     print(f"📂 找到 {len(pairs)} 对待验证文件")
@@ -425,7 +454,7 @@ def main():
 
     tracker.print_summary()
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    tracker.save_report(os.path.join(REPORT_DIR, f"token_usage_verify_{timestamp}.json"))
+    tracker.save_report(os.path.join(VERIFY_TOKENS_DIR, f"token_usage_verify_{timestamp}.json"))
 
     print("\n✅ 验证完成！")
 

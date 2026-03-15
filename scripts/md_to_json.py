@@ -19,14 +19,14 @@ tracker = TokenTracker(model=os.getenv("MODEL", "Vendor2/Claude-4.6-opus"))
 # 2. 路径配置 (从环境变量读取，run.sh 统一管理)
 BASE_DIR = os.getenv("BASE_DIR", "/data/haotianwu/biojson")
 INPUT_DIR = os.getenv("MD_DIR", os.path.join(BASE_DIR, "md"))
-OUTPUT_DIR = os.getenv("JSON_DIR", os.path.join(BASE_DIR, "json"))
+OUTPUT_DIR = os.getenv("RAW_EXTRACTIONS_DIR", os.path.join(BASE_DIR, "reports/raw_extractions"))
 PROMPT_PATH = os.getenv("PROMPT_PATH", os.path.join(BASE_DIR, "configs/nutri_plant.txt"))
 SCHEMA_PATH = os.getenv("SCHEMA_PATH", os.path.join(BASE_DIR, "configs/nutri_plant.json"))
-REPORT_DIR = os.getenv("REPORT_DIR", os.path.join(BASE_DIR, "reports"))
+EXTRACT_TOKENS_DIR = os.getenv("EXTRACT_TOKENS_DIR", os.path.join(BASE_DIR, "reports/extract_tokens"))
 
 # 确保输出目录存在
 os.makedirs(OUTPUT_DIR, exist_ok=True)
-os.makedirs(REPORT_DIR, exist_ok=True)
+os.makedirs(EXTRACT_TOKENS_DIR, exist_ok=True)
 
 # 3. 读取 Prompt 和 Schema
 with open(PROMPT_PATH, 'r', encoding='utf-8') as f:
@@ -95,7 +95,13 @@ EXTRACT_TOOL = {
 def ai_response(path):
     name = os.path.basename(path)
     filename = os.path.splitext(name)[0]
-    
+
+    # 增量处理：如果输出已存在且未设置 FORCE_RERUN，跳过
+    output_path = os.path.join(OUTPUT_DIR, f'{filename}_nutri_plant.json')
+    if os.path.exists(output_path) and os.getenv("FORCE_RERUN") != "1":
+        print(f"  ⏭️  已存在，跳过: {output_path}  (设置 FORCE_RERUN=1 强制重跑)")
+        return
+
     with open(path, 'r', encoding='utf-8') as f:
         content = f.read()
 
@@ -114,7 +120,6 @@ def ai_response(path):
             tools=[EXTRACT_TOOL],
             tool_choice={"type": "function", "function": {"name": "extract_nutrient_genes"}},
             temperature=float(os.getenv("TEMPERATURE", "0.7")),
-            max_tokens=int(os.getenv("MAX_TOKENS", "18192")),
         )
         
         # 记录 Token 用量
@@ -128,6 +133,13 @@ def ai_response(path):
             tool_call = message.tool_calls[0]
             json_str = tool_call.function.arguments
             json_data = json.loads(json_str)
+            # 防御：LLM 偶发把 Genes 数组序列化为字符串
+            if isinstance(json_data.get("Genes"), str):
+                try:
+                    json_data["Genes"] = json.loads(json_data["Genes"])
+                    print(f"  🔧 自动修复: Genes 从字符串转为列表 ({len(json_data['Genes'])} 个基因)")
+                except json.JSONDecodeError:
+                    print(f"  ⚠️  Genes 是截断的字符串，无法自动修复，需要重新提取")
             print(f"  ✅ Function calling 成功提取")
         else:
             # Fallback: 如果 API 不支持 function_calling，回退到正则提取
@@ -199,4 +211,4 @@ if __name__ == "__main__":
         # 打印 Token 用量汇总并保存报告
         tracker.print_summary()
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        tracker.save_report(os.path.join(REPORT_DIR, f"token_usage_extract_{timestamp}.json"))
+        tracker.save_report(os.path.join(EXTRACT_TOKENS_DIR, f"token_usage_extract_{timestamp}.json"))
