@@ -4,7 +4,7 @@ from datetime import datetime
 from openai import OpenAI
 from dotenv import load_dotenv
 from token_tracker import TokenTracker
-from text_utils import strip_references
+from text_utils import preprocess_md
 load_dotenv()
 
 # 1. 初始化客户端
@@ -19,14 +19,29 @@ tracker = TokenTracker(model=os.getenv("MODEL", "Vendor2/Claude-4.6-opus"))
 # 2. 路径配置 (从环境变量读取，run.sh 统一管理)
 BASE_DIR = os.getenv("BASE_DIR", "/data/haotianwu/biojson")
 INPUT_DIR = os.getenv("MD_DIR", os.path.join(BASE_DIR, "md"))
-OUTPUT_DIR = os.getenv("RAW_EXTRACTIONS_DIR", os.path.join(BASE_DIR, "reports/raw_extractions"))
+REPORTS_DIR = os.getenv("REPORTS_DIR", os.path.join(BASE_DIR, "reports"))
 PROMPT_PATH = os.getenv("PROMPT_PATH", os.path.join(BASE_DIR, "configs/nutri_plant.txt"))
 SCHEMA_PATH = os.getenv("SCHEMA_PATH", os.path.join(BASE_DIR, "configs/nutri_plant.json"))
-EXTRACT_TOKENS_DIR = os.getenv("EXTRACT_TOKENS_DIR", os.path.join(BASE_DIR, "reports/extract_tokens"))
+TOKEN_USAGE_DIR = os.getenv("TOKEN_USAGE_DIR", os.path.join(BASE_DIR, "token-usage"))
 
 # 确保输出目录存在
-os.makedirs(OUTPUT_DIR, exist_ok=True)
-os.makedirs(EXTRACT_TOKENS_DIR, exist_ok=True)
+os.makedirs(REPORTS_DIR, exist_ok=True)
+os.makedirs(TOKEN_USAGE_DIR, exist_ok=True)
+
+
+def stem_to_dirname(stem):
+    """将 MD 文件名 stem 转为 reports 子目录名（GitHub 命名规范）。
+
+    规则:
+      - 去掉 'MinerU_markdown_' 前缀（如果有）
+      - 去掉括号及其内容如 '_(1)'
+      - 下划线转连字符
+    """
+    if stem.startswith("MinerU_markdown_"):
+        stem = stem[len("MinerU_markdown_"):]
+    stem = stem.replace("_(1)", "")
+    stem = stem.replace("_", "-")
+    return stem
 
 # 3. 读取 Prompt 和 Schema
 with open(PROMPT_PATH, 'r', encoding='utf-8') as f:
@@ -91,13 +106,52 @@ EXTRACT_TOOL = {
     }
 }
 
-# 5. 核心提取逻辑
+# 5. 记录提取失败的文件（用于最终汇总）
+failed_files = []
+
+
+def resolve_test_files(files):
+    """根据 TEST_INDEX 环境变量筛选测试文件，支持编号和文件名。"""
+    test_index = os.getenv("TEST_INDEX", "1")
+
+    # 纯数字 → 按编号
+    if test_index.isdigit():
+        idx = int(test_index) - 1  # 转为 0-based
+        if 0 <= idx < len(files):
+            print(f"🧪 测试模式: 仅处理第 {idx + 1} 个文件 → {files[idx]}")
+            return [files[idx]]
+        else:
+            print(f"❌ 编号 {idx + 1} 超出范围 (共 {len(files)} 个文件)")
+            return []
+
+    # 非数字 → 按文件名匹配
+    target = test_index if test_index.endswith(".md") else test_index + ".md"
+    matched = [f for f in files if f == target]
+    if matched:
+        print(f"🧪 测试模式: 按文件名匹配 → {matched[0]}")
+        return matched
+
+    # 模糊匹配：文件名包含关键词
+    matched = [f for f in files if test_index in f]
+    if matched:
+        if len(matched) == 1:
+            print(f"🧪 测试模式: 模糊匹配 → {matched[0]}")
+        else:
+            print(f"🧪 测试模式: 模糊匹配到 {len(matched)} 个文件，取第一个 → {matched[0]}")
+        return [matched[0]]
+
+    print(f"❌ 未找到匹配 '{test_index}' 的文件 (共 {len(files)} 个文件)")
+    return []
+
+
+# 6. 核心提取逻辑
 def ai_response(path):
     name = os.path.basename(path)
     filename = os.path.splitext(name)[0]
 
     # 增量处理：如果输出已存在且未设置 FORCE_RERUN，跳过
-    output_path = os.path.join(OUTPUT_DIR, f'{filename}_nutri_plant.json')
+    paper_dir = os.path.join(REPORTS_DIR, stem_to_dirname(filename))
+    output_path = os.path.join(paper_dir, "extraction.json")
     if os.path.exists(output_path) and os.getenv("FORCE_RERUN") != "1":
         print(f"  ⏭️  已存在，跳过: {output_path}  (设置 FORCE_RERUN=1 强制重跑)")
         return
@@ -105,10 +159,10 @@ def ai_response(path):
     with open(path, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # 去除 References 引用列表，保留后面有用的 section（如 STAR Methods）
+    # 文本预处理：去除图片、引用列表、致谢等无用内容，减少 token 消耗
     original_len = len(content)
-    content = strip_references(content)
-    print(f"  📏 文本预处理: {original_len:,} → {len(content):,} 字符 (去除 References 列表节省 {original_len - len(content):,} 字符)")
+    content = preprocess_md(content)
+    print(f"  📏 文本预处理: {original_len:,} → {len(content):,} 字符 (节省 {original_len - len(content):,} 字符)")
 
     try:
         response = client.chat.completions.create(
@@ -127,8 +181,27 @@ def ai_response(path):
         
         # 从 function_calling 响应中提取 JSON
         message = response.choices[0].message
-        
-        if message.tool_calls and len(message.tool_calls) > 0:
+
+        # 检测 API 返回空内容
+        has_tool_calls = message.tool_calls and len(message.tool_calls) > 0
+        has_content = message.content and message.content.strip()
+        if not has_tool_calls and not has_content:
+            print(f"  ⚠️  API 返回空内容: {name}，跳过此文件")
+            failed_files.append(name)
+            # 记录错误到 reports
+            os.makedirs(paper_dir, exist_ok=True)
+            error_report = {
+                "file": name,
+                "error": "API returned empty response",
+                "timestamp": datetime.now().isoformat(),
+            }
+            error_path = os.path.join(paper_dir, "extraction-error.json")
+            with open(error_path, 'w', encoding='utf-8') as f:
+                json.dump(error_report, f, indent=2, ensure_ascii=False)
+            print(f"  📋 错误已记录: {error_path}")
+            return
+
+        if has_tool_calls:
             # ✅ 成功走 function_calling 路径
             tool_call = message.tool_calls[0]
             json_str = tool_call.function.arguments
@@ -149,8 +222,8 @@ def ai_response(path):
 
         final_output = json.dumps(json_data, indent=2, ensure_ascii=False)
 
-        # 保存结果
-        output_path = os.path.join(OUTPUT_DIR, f'{filename}_nutri_plant.json')
+        # 保存结果到 reports/{paper-dir}/extraction.json
+        os.makedirs(paper_dir, exist_ok=True)
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(final_output)
         
@@ -187,7 +260,7 @@ def _fallback_extract_json(raw_result, name):
         return {"error": "JSON parse failed", "raw": clean_json[:500]}
 
 
-# 6. 遍历执行
+# 7. 遍历执行
 if __name__ == "__main__":
     if not os.path.exists(INPUT_DIR):
         print(f"错误: 输入目录 {INPUT_DIR} 不存在！")
@@ -195,15 +268,9 @@ if __name__ == "__main__":
         files = sorted([f for f in os.listdir(INPUT_DIR) if f.endswith('.md')])
         print(f"找到 {len(files)} 个待处理文件...")
 
-        # 测试模式：仅处理指定编号的文件
+        # 测试模式：支持编号和文件名
         if os.getenv("TEST_MODE") == "1":
-            idx = int(os.getenv("TEST_INDEX", "1")) - 1  # 转为 0-based
-            if 0 <= idx < len(files):
-                files = [files[idx]]
-                print(f"🧪 测试模式: 仅处理第 {idx + 1} 个文件 → {files[0]}")
-            else:
-                print(f"❌ 编号 {idx + 1} 超出范围 (共 {len(files)} 个文件)")
-                files = []
+            files = resolve_test_files(files)
 
         for file in files:
             ai_response(os.path.join(INPUT_DIR, file))
@@ -211,4 +278,13 @@ if __name__ == "__main__":
         # 打印 Token 用量汇总并保存报告
         tracker.print_summary()
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        tracker.save_report(os.path.join(EXTRACT_TOKENS_DIR, f"token_usage_extract_{timestamp}.json"))
+        tracker.save_report(os.path.join(TOKEN_USAGE_DIR, f"extract-{timestamp}.json"))
+
+        # 汇总提醒：API 返回空内容的文件
+        if failed_files:
+            print(f"\n{'='*60}")
+            print(f"⚠️  以下 {len(failed_files)} 个文件 API 返回空内容，需要重跑:")
+            for f in failed_files:
+                print(f"     - {f}")
+            print(f"   提示: FORCE_RERUN=1 bash scripts/run.sh extract")
+            print(f"{'='*60}")

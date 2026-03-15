@@ -22,23 +22,31 @@ from datetime import datetime
 from openai import OpenAI
 from dotenv import load_dotenv
 from token_tracker import TokenTracker
-from text_utils import strip_references
+from text_utils import preprocess_md
 
 load_dotenv()
 
 # ─── 配置 ────────────────────────────────────────────────────────────────────────
 BASE_DIR = os.getenv("BASE_DIR", "/data/haotianwu/biojson")
 MD_DIR = os.getenv("MD_DIR", os.path.join(BASE_DIR, "md"))
-RAW_EXTRACTIONS_DIR = os.getenv("RAW_EXTRACTIONS_DIR", os.path.join(BASE_DIR, "reports/raw_extractions"))
+REPORTS_DIR = os.getenv("REPORTS_DIR", os.path.join(BASE_DIR, "reports"))
 FINAL_JSON_DIR = os.getenv("JSON_DIR", os.path.join(BASE_DIR, "json"))
-VERIFICATIONS_DIR = os.getenv("VERIFICATIONS_DIR", os.path.join(BASE_DIR, "reports/verifications"))
-VERIFY_TOKENS_DIR = os.getenv("VERIFY_TOKENS_DIR", os.path.join(BASE_DIR, "reports/verify_tokens"))
+TOKEN_USAGE_DIR = os.getenv("TOKEN_USAGE_DIR", os.path.join(BASE_DIR, "token-usage"))
 PROCESSED_DIR = os.getenv("PROCESSED_DIR", os.path.join(MD_DIR, "processed"))
 
 os.makedirs(FINAL_JSON_DIR, exist_ok=True)
-os.makedirs(VERIFICATIONS_DIR, exist_ok=True)
-os.makedirs(VERIFY_TOKENS_DIR, exist_ok=True)
+os.makedirs(REPORTS_DIR, exist_ok=True)
+os.makedirs(TOKEN_USAGE_DIR, exist_ok=True)
 os.makedirs(PROCESSED_DIR, exist_ok=True)
+
+
+def stem_to_dirname(stem):
+    """将 MD 文件名 stem 转为 reports 子目录名（GitHub 命名规范）。"""
+    if stem.startswith("MinerU_markdown_"):
+        stem = stem[len("MinerU_markdown_"):]
+    stem = stem.replace("_(1)", "")
+    stem = stem.replace("_", "-")
+    return stem
 
 client = OpenAI(
     api_key=os.getenv("OPENAI_API_KEY"),
@@ -110,32 +118,62 @@ VERIFY_TOOL = {
 }
 
 
+def resolve_test_files(files):
+    """根据 TEST_INDEX 环境变量筛选测试文件，支持编号和文件名。"""
+    test_index = os.getenv("TEST_INDEX", "1")
+
+    # 纯数字 → 按编号
+    if test_index.isdigit():
+        idx = int(test_index) - 1
+        if 0 <= idx < len(files):
+            print(f"  🧪 测试模式: 仅验证第 {idx + 1} 个文件 → {files[idx]}")
+            return [files[idx]]
+        else:
+            print(f"  ❌ 编号 {idx + 1} 超出范围 (共 {len(files)} 个文件)")
+            return []
+
+    # 非数字 → 按文件名匹配
+    target = test_index if test_index.endswith(".md") else test_index + ".md"
+    matched = [f for f in files if f == target]
+    if matched:
+        print(f"  🧪 测试模式: 按文件名匹配 → {matched[0]}")
+        return matched
+
+    # 模糊匹配：文件名包含关键词
+    matched = [f for f in files if test_index in f]
+    if matched:
+        if len(matched) == 1:
+            print(f"  🧪 测试模式: 模糊匹配 → {matched[0]}")
+        else:
+            print(f"  🧪 测试模式: 模糊匹配到 {len(matched)} 个文件，取第一个 → {matched[0]}")
+        return [matched[0]]
+
+    print(f"  ❌ 未找到匹配 '{test_index}' 的文件 (共 {len(files)} 个文件)")
+    return []
+
+
 def get_file_pairs():
-    """自动配对 md/{name}.md -> json/{name}_nutri_plant.json"""
+    """自动配对 md/{name}.md -> reports/{dirname}/extraction.json"""
     pairs = []
-    if not os.path.exists(MD_DIR) or not os.path.exists(RAW_EXTRACTIONS_DIR):
+    if not os.path.exists(MD_DIR) or not os.path.exists(REPORTS_DIR):
         return pairs
 
     md_files = sorted([f for f in os.listdir(MD_DIR) if f.endswith(".md")])
 
     if os.getenv("TEST_MODE") == "1":
-        idx = int(os.getenv("TEST_INDEX", "1")) - 1
-        if 0 <= idx < len(md_files):
-            md_files = [md_files[idx]]
-            print(f"  🧪 测试模式: 仅验证第 {idx+1} 个文件 -> {md_files[0]}")
-        else:
-            print(f"  ❌ 编号 {idx+1} 超出范围 (共 {len(md_files)} 个 MD 文件)")
+        md_files = resolve_test_files(md_files)
+        if not md_files:
             return pairs
 
     for md_file in md_files:
         stem = os.path.splitext(md_file)[0]
-        json_file = f"{stem}_nutri_plant.json"
+        dirname = stem_to_dirname(stem)
         md_path = os.path.join(MD_DIR, md_file)
-        json_path = os.path.join(RAW_EXTRACTIONS_DIR, json_file)
+        json_path = os.path.join(REPORTS_DIR, dirname, "extraction.json")
         if os.path.exists(json_path):
             pairs.append((md_path, json_path, stem))
         else:
-            print(f"  ⚠️  找不到 JSON 对应文件: {json_file}，跳过 {md_file}")
+            print(f"  ⚠️  找不到提取结果: {json_path}，跳过 {md_file}")
     return pairs
 
 
@@ -281,9 +319,9 @@ def verify_file(md_path, json_path, stem):
     with open(md_path, "r", encoding="utf-8") as f:
         md_content = f.read()
 
-    # 去除 References 引用列表，保留后面有用的 section
+    # 文本预处理：去除图片、引用列表、致谢等无用内容，减少 token 消耗
     original_len = len(md_content)
-    md_content = strip_references(md_content)
+    md_content = preprocess_md(md_content)
     print(f"  📏 文本预处理: {original_len:,} -> {len(md_content):,} 字符 (节省 {original_len - len(md_content):,})")
 
     with open(json_path, "r", encoding="utf-8") as f:
@@ -389,7 +427,9 @@ def verify_file(md_path, json_path, stem):
         json.dump(json_data, f, indent=2, ensure_ascii=False)
     print(f"\n  ✅ 修正后的 JSON 已保存: {verified_json_path}")
 
-    report_path = os.path.join(VERIFICATIONS_DIR, f"{stem}_verification.json")
+    paper_dir = os.path.join(REPORTS_DIR, stem_to_dirname(stem))
+    os.makedirs(paper_dir, exist_ok=True)
+    report_path = os.path.join(paper_dir, "verification.json")
     with open(report_path, "w", encoding="utf-8") as f:
         json.dump(file_report, f, indent=2, ensure_ascii=False)
     print(f"  📋 验证报告已保存: {report_path}")
@@ -438,7 +478,7 @@ def main():
     if not pairs:
         print("❌ 未找到可验证的文件对。")
         print(f"   请确保 {MD_DIR} 中有 .md 文件，")
-        print(f"   且 {RAW_EXTRACTIONS_DIR} 中有对应的 _nutri_plant.json 文件。")
+        print(f"   且 {REPORTS_DIR} 中有对应的 extraction.json 文件。")
         return
 
     print(f"📂 找到 {len(pairs)} 对待验证文件")
@@ -454,7 +494,7 @@ def main():
 
     tracker.print_summary()
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    tracker.save_report(os.path.join(VERIFY_TOKENS_DIR, f"token_usage_verify_{timestamp}.json"))
+    tracker.save_report(os.path.join(TOKEN_USAGE_DIR, f"verify-{timestamp}.json"))
 
     print("\n✅ 验证完成！")
 
