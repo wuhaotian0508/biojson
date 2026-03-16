@@ -2,13 +2,2294 @@
   "file": "full",
   "md_path": "/data/haotianwu/biojson/md/full.md",
   "json_path": "/data/haotianwu/biojson/reports/full/extraction.json",
-  "timestamp": "2026-03-15T23:50:59.355802",
-  "genes": [],
+  "timestamp": "2026-03-16T20:13:24.885839",
+  "genes": [
+    {
+      "gene_index": 1,
+      "gene_name": "NRT2.1",
+      "verification": {
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly mentions 'NRT2.1' in the Results section: 'Several NO3− transporter genes were strongly induced, including NRT2.1 and NRT2.2 (At1g08090 and At1g08100, respectively).'"
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states 'NRT2.1 and NRT2.2 (At1g08090 and At1g08100, respectively)', confirming At1g08090 for NRT2.1."
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper is entirely about Arabidopsis, as stated in the title and throughout."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper title and abstract refer to 'Arabidopsis', and full species name Arabidopsis thaliana is the standard species used with Col-0 ecotype. The paper uses 'Arabidopsis' throughout as shorthand for Arabidopsis thaliana."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The Materials and Methods section explicitly states 'Wild-type Col-0 Arabidopsis seedlings (100–120) were grown in sterile liquid culture.'"
+        },
+        "Gene_Role_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes NRT2.1 as a 'NO3− transporter gene' that was 'strongly induced', placing it in the transporter role class."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies NRT2.1 as one of the 'NO3− transporter genes', and it belongs to the NRT2 family. 'Nitrate transporter' is a reasonable characterization."
+        },
+        "Enzyme_Name_or_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper describes NRT2.1 as a nitrate transporter and mentions it alongside NAR2 which 'is required for high-affinity NO3− transport in C. reinhardtii,' with an analogous role suggested for higher plants. However, the paper does not explicitly call NRT2.1 a 'high-affinity nitrate transporter' — it only states the high-affinity context through the NAR2 discussion. The term is well-established in the literature for NRT2 family members but is not directly stated for NRT2.1 in this paper."
+        },
+        "Final_Nutrient_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "NRT2.1 is a transporter for nitrate uptake. The paper focuses on transcriptomic responses to nitrate readdition. NRT2.1 transports nitrate, but 'Nitrate' as a 'final nutrient product' is somewhat misleading — nitrate is a substrate that is further assimilated into amino acids and proteins. The paper shows NRT2.1 is part of the nitrate uptake pathway, but does not describe nitrate itself as the final nutrient product of this gene's action."
+        },
+        "Final_Nutrient_Product_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nitrate (NO3−) is indeed a mineral nutrient/ion. However, the paper frames NRT2.1 within the broader context of nitrogen assimilation leading to amino acids and proteins. Calling nitrate the 'final nutrient product' classified as 'Mineral' is a simplification — nitrate is the transported substrate, not a final product."
+        },
+        "Nutrient_Trait_Metric": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper measures nitrate content in seedlings (Supplemental Fig. 1) and shows nitrate increases after resupply. However, the paper does not directly link NRT2.1 transcript induction to a specific change in nitrate content — NRT2.1 was only measured at the transcript level via arrays, not functionally validated for content changes in this study."
+        },
+        "Quantitative_Nutrient_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'Several NO3− transporter genes were strongly induced, including NRT2.1.' The term 'strongly induced' is directly from the paper, referring to transcript level changes."
+        },
+        "Pathway_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The section heading is 'Rapid Coordinated Induction of Genes for Nitrate Uptake and Assimilation,' and NRT2.1 is discussed within this context."
+        },
+        "Metabolic_Step_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "NRT2.1 is described as a 'NO3− transporter gene,' which is a transport step."
+        },
+        "Reaction_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly state 'extracellular nitrate' as the substrate. It describes NO3− transport but does not specify 'extracellular' — this is inferred from general knowledge about NRT2.1 being a plasma membrane transporter, which is not explicitly stated in this paper."
+        },
+        "Reaction_Product_or_Immediate_Output": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly describe 'cytosolic nitrate' as the product of NRT2.1 transport. This is inferred from general biological knowledge about nitrate transporters, not stated in this paper."
+        },
+        "Key_Intermediate_Metabolites_Affected": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows that nitrate levels changed following resupply (NO3− increased in seedlings within 10 min, reaching >1 μmol g FW−1 after 30 min), and NRT2.1 is directly involved in nitrate transport."
+        },
+        "Flux_or_Direction_Change": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows NRT2.1 transcript is strongly induced, implying increased nitrate uptake capacity. However, this is an inference — the paper does not directly measure NRT2.1-dependent nitrate uptake flux. The paper does show nitrate increases in seedlings after resupply, but this is not directly attributed to NRT2.1 specifically."
+        },
+        "Core_Phenotypic_Effect_on_Nutrient": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows NRT2.1 is strongly induced within the 30-min time point after nitrate readdition to N-starved seedlings, and it is discussed under 'Rapid Coordinated Induction of Genes for Nitrate Uptake and Assimilation,' supporting enhanced nitrate acquisition."
+        },
+        "Regulatory_Mechanism": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper demonstrates transcriptional induction of NRT2.1 by nitrate through ATH1 array data, showing strong induction after NO3− addition."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention 'plasma membrane' localization for NRT2.1. This is general knowledge about NRT2 transporters but is not stated in this paper."
+        },
+        "Tissue_or_Organ_of_Nutrient_Accumulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states 'Whole plants were harvested to provide an overview of all the responses in the seedlings,' confirming whole seedling analysis."
+        },
+        "Developmental_Stage": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'On day 9, all seedlings (+N and −N) had developed cotyledons and first leaves' and nitrate was added on day 9, confirming 9-day-old seedlings."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows NRT2.1 was strongly induced after nitrate addition, consistent with 'Induced by nitrate availability.'"
+        },
+        "Key_Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental design involves 2 days of N deprivation followed by 3 mM KNO3 readdition, exactly matching 'Nitrate resupply after N deprivation.'"
+        },
+        "Experimental_Materials": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods states 'Wild-type Col-0 Arabidopsis seedlings' and the experiment involved N-starved seedlings receiving nitrate."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses Affymetrix ATH1 arrays for transcript profiling, which is the method used to detect NRT2.1 induction."
+        },
+        "Nutrient_Assay_or_Profiling_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The Materials and Methods section states 'NO3−, Glc, Fru, Suc, starch, oxoglutarate, and amino acids were extracted and measured as described by Scheible et al. (1997a, 1997b)' and mentions HPLC for secondary metabolites. The paper also mentions nitrate was measured by HPLC (data not shown)."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses Affymetrix ATH1 microarrays and real-time RT-PCR, which constitute microarray transcriptomics."
+        },
+        "Gene_Discovery_or_Cloning_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "NRT2.1 was not 'discovered' by microarray analysis in this paper — it was already a known gene. The microarray analysis identified its strong induction by nitrate, but this is detection/profiling, not gene discovery or cloning."
+        },
+        "Breeding_or_Biofortification_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not discuss NRT2.1 as a potential target for improving nitrogen use efficiency or any breeding/biofortification application. This is an inference not made in the paper."
+        },
+        "Summary_key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The three summary points are supported: (1) NRT2.1 was strongly induced within 30 min of nitrate readdition; (2) it is part of the NRT2 family of nitrate transporters (high-affinity context is implied via NAR2 discussion); (3) it is part of a coordinated response with other genes like NRT2.2, NIA1, NIA2, NII."
+        },
+        "Notes_or_Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper mentions NRT2.1 alongside NRT2.2 and NRT2.4 (NRT2 family) and discusses it in the context of coordinated induction with nitrate assimilation genes (NIA1, NIA2, NII)."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Plasma membrane",
+          "new_value": "NA",
+          "reason": "The paper does not mention 'plasma membrane' localization for NRT2.1. This is general knowledge about NRT2 transporters but is not stated in this paper."
+        },
+        {
+          "field": "Breeding_or_Biofortification_Value",
+          "old_value": "Potential target for improving nitrogen use efficiency",
+          "new_value": "NA",
+          "reason": "The paper does not discuss NRT2.1 as a potential target for improving nitrogen use efficiency or any breeding/biofortification application. This is an inference not made in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 2,
+        "uncertain": 8
+      }
+    },
+    {
+      "gene_index": 2,
+      "gene_name": "NRT2.2",
+      "verification": {
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly mentions 'NRT2.2' in the Results section: 'Several NO3- transporter genes were strongly induced, including NRT2.1 and NRT2.2 (At1g08090 and At1g08100, respectively).'"
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states 'NRT2.1 and NRT2.2 (At1g08090 and At1g08100, respectively)', confirming At1g08100 for NRT2.2."
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper is entirely about Arabidopsis, as stated in the title and throughout."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper title and text refer to 'Arabidopsis' which is Arabidopsis thaliana. The species is identified throughout the paper."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The Materials and Methods section explicitly states 'Wild-type Col-0 Arabidopsis seedlings (100–120) were grown in sterile liquid culture.'"
+        },
+        "Gene_Role_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes NRT2.2 as a 'NO3- transporter gene' that is 'strongly induced' — clearly a transporter role."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper refers to NRT2.2 as a nitrate transporter gene under the section 'Rapid Coordinated Induction of Genes for Nitrate Uptake and Assimilation.'"
+        },
+        "Enzyme_Name_or_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper describes NRT2.2 as a nitrate transporter but does not explicitly specify it as 'high-affinity.' The paper mentions NAR2 is required for 'high-affinity NO3- transport' in C. reinhardtii, and NRT2.1 is known to be high-affinity, but the paper itself does not explicitly label NRT2.2 as 'high-affinity.'"
+        },
+        "Final_Nutrient_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper studies nitrate uptake as part of nitrogen assimilation leading to amino acids and proteins. NRT2.2 is involved in nitrate transport/uptake, but 'Nitrate' as a final nutrient product is debatable — nitrate is the substrate being transported, not really a final nutrient product. The paper's broader context is about nitrogen nutrition."
+        },
+        "Final_Nutrient_Product_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nitrate is indeed a mineral nutrient, but as noted above, the paper frames nitrogen nutrition more broadly. Calling the final nutrient product class 'Mineral' for a transporter involved in nitrogen assimilation is a simplification."
+        },
+        "Nutrient_Trait_Metric": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper measures nitrate content in seedlings (Supplemental Fig. 1) and shows NO3- increases after resupply, but the gene NRT2.2 was studied at the transcript level, not directly linked to a 'content' metric for nitrate accumulation."
+        },
+        "Quantitative_Nutrient_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states NRT2.2 was 'strongly induced' — this exact language is used: 'Several NO3- transporter genes were strongly induced, including NRT2.1 and NRT2.2.'"
+        },
+        "Pathway_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The section heading is 'Rapid Coordinated Induction of Genes for Nitrate Uptake and Assimilation,' directly supporting this pathway name."
+        },
+        "Metabolic_Step_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "NRT2.2 is described as a NO3- transporter gene, so 'Transport' is the correct metabolic step type."
+        },
+        "Reaction_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly specify 'extracellular nitrate' as the substrate. It describes nitrate transport but doesn't use the term 'extracellular nitrate.' This is a reasonable inference but not explicitly stated."
+        },
+        "Reaction_Product_or_Immediate_Output": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly state 'cytosolic nitrate' as the product of NRT2.2 activity. This is a reasonable biochemical inference but not stated in the paper."
+        },
+        "Key_Intermediate_Metabolites_Affected": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows that NO3- increased in seedlings within 10 min and reached >1 µmol g FW-1 after 30 min of resupply (Supplemental Fig. 1), and NRT2.2 is a nitrate transporter, so nitrate is the key metabolite affected."
+        },
+        "Flux_or_Direction_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "The strong induction of NRT2.2 upon nitrate resupply, described under 'Nitrate Uptake and Assimilation,' directly implies increased nitrate uptake capacity."
+        },
+        "Core_Phenotypic_Effect_on_Nutrient": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes rapid induction of NRT2.2 among the NO3- transporter genes upon nitrate readdition. The 30-min timepoint is explicitly discussed."
+        },
+        "Regulatory_Mechanism": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper demonstrates transcriptional induction by nitrate — NRT2.2 transcript levels increase strongly after NO3- addition, as measured by ATH1 arrays."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention 'plasma membrane' localization for NRT2.2. While this is a reasonable assumption for a nitrate transporter, the paper does not state this."
+        },
+        "Tissue_or_Organ_of_Nutrient_Accumulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states 'Whole plants were harvested to provide an overview of all the responses in the seedlings,' so whole seedlings is accurate."
+        },
+        "Developmental_Stage": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes the experiment on 'day 9' with 9-day-old seedlings (Figure 1 caption: 'Phenology of 9-d-old N-limited and N-replete Arabidopsis seedlings')."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows NRT2.2 is strongly induced after nitrate addition, supporting 'Induced by nitrate availability.'"
+        },
+        "Key_Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental design explicitly involves nitrate resupply (3 mM KNO3) after 2 days of N deprivation."
+        },
+        "Experimental_Materials": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses 'Wild-type Col-0 Arabidopsis seedlings' that were N-starved, as stated in Materials and Methods."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper used ATH1 Affymetrix arrays for transcript profiling, as described throughout the Results and Materials and Methods sections."
+        },
+        "Nutrient_Assay_or_Profiling_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The Materials and Methods section states 'NO3- ... were extracted and measured as described by Scheible et al. (1997a, 1997b)' and mentions HPLC for measurements (the -N medium nitrogen 'was completely exhausted within hours (measured by HPLC)')."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses Affymetrix ATH1 arrays, which is microarray transcriptomics."
+        },
+        "Gene_Discovery_or_Cloning_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "NRT2.2 was identified as nitrate-responsive through the ATH1 microarray analysis in this study."
+        },
+        "Breeding_or_Biofortification_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not discuss NRT2.2 as a 'potential target for improving nitrogen use efficiency' or make any breeding/biofortification claims. This is an extrapolation not found in the paper."
+        },
+        "Summary_key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Point 1 (strongly induced within 30 min) is directly stated. Point 2 (nitrate transport function) is described. Point 3 (part of coordinated response) is supported by the section title and text about coordinate induction of multiple nitrate uptake genes."
+        },
+        "Notes_or_Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper lists NRT2.1 as At1g08090 and NRT2.2 as At1g08100, which are indeed adjacent loci on chromosome 1 (sequential AGI numbers). However, the paper does not explicitly state they are 'adjacent on chromosome 1.' This is inferable from the accession numbers but not directly stated."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Plasma membrane",
+          "new_value": "NA",
+          "reason": "The paper does not mention 'plasma membrane' localization for NRT2.2. While this is a reasonable assumption for a nitrate transporter, the paper does not state this."
+        },
+        {
+          "field": "Breeding_or_Biofortification_Value",
+          "old_value": "Potential target for improving nitrogen use efficiency",
+          "new_value": "NA",
+          "reason": "The paper does not discuss NRT2.2 as a 'potential target for improving nitrogen use efficiency' or make any breeding/biofortification claims. This is an extrapolation not found in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 2,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_index": 3,
+      "gene_name": "NRT2.4",
+      "verification": {
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly mentions 'NRT2.4 (At5g60770)' as one of the nitrate transporter genes strongly induced by nitrate."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states 'NRT2.4 (At5g60770)' in the Results section."
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The entire study is conducted in Arabidopsis, as stated throughout the paper."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper title and text refer to Arabidopsis, and the Materials and Methods section specifies 'Wild-type Col-0 Arabidopsis seedlings', confirming Arabidopsis thaliana."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The Materials and Methods section explicitly states 'Wild-type Col-0 Arabidopsis seedlings'."
+        },
+        "Gene_Role_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "NRT2.4 is described as a nitrate transporter gene, placing it in the 'Transporter' class."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "NRT2.4 is listed among 'NO3- transporter genes' in the section on nitrate uptake and assimilation."
+        },
+        "Enzyme_Name_or_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper describes NRT2.4 as a nitrate transporter gene that was 'strongly induced' alongside NRT2.1 and NRT2.2, which are known high-affinity transporters. However, the paper does not explicitly state that NRT2.4 is a 'high-affinity' nitrate transporter. The mention of NAR2 being required for 'high-affinity NO3- transport' is in reference to the Chlamydomonas system, not specifically attributed to NRT2.4."
+        },
+        "Final_Nutrient_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "NRT2.4 is a transporter gene involved in nitrate uptake. The paper studies transcriptional responses to nitrate but does not directly measure how NRT2.4 expression changes the final nitrate content. 'Nitrate' is the substrate being transported, but the paper does not link NRT2.4 to a final nutrient product per se—this is a transcriptomic study without knockout/overexpression validation for this gene."
+        },
+        "Final_Nutrient_Product_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nitrate could be classified as a mineral nutrient, but the paper does not classify it this way. The classification is reasonable but not explicitly stated."
+        },
+        "Nutrient_Trait_Metric": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper measures nitrate content in seedlings (Supplemental Fig. 1), but does not directly link NRT2.4 expression to nitrate content changes. The gene was only transcriptionally profiled, not functionally validated."
+        },
+        "Quantitative_Nutrient_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states NRT2.4 was 'strongly induced' as part of the group: 'Several NO3- transporter genes were strongly induced, including NRT2.1 and NRT2.2... NRT2.4 (At5g60770).'"
+        },
+        "Pathway_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The section is titled 'Rapid Coordinated Induction of Genes for Nitrate Uptake and Assimilation' and NRT2.4 is discussed within this context."
+        },
+        "Metabolic_Step_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "NRT2.4 is a transporter gene, and the paper discusses it in the context of NO3- transport/uptake."
+        },
+        "Reaction_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "While it is biologically reasonable that a nitrate transporter moves extracellular nitrate, the paper does not specify 'extracellular nitrate' as the substrate for NRT2.4. The paper only describes it as a nitrate transporter gene."
+        },
+        "Reaction_Product_or_Immediate_Output": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly state that NRT2.4 produces 'cytosolic nitrate'. This is a reasonable biological inference but not stated in the paper."
+        },
+        "Key_Intermediate_Metabolites_Affected": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses nitrate uptake and shows nitrate levels increasing in seedlings after NO3- readdition, in the context of transporter gene induction."
+        },
+        "Flux_or_Direction_Change": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows transcriptional induction of NRT2.4, which implies increased nitrate uptake capacity, but does not directly demonstrate increased uptake capacity attributable to NRT2.4 specifically."
+        },
+        "Core_Phenotypic_Effect_on_Nutrient": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states NRT2.4 was strongly induced after nitrate readdition to N-starved seedlings."
+        },
+        "Regulatory_Mechanism": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper demonstrates transcriptional induction of NRT2.4 by nitrate, as shown by ATH1 array data within 30 min of NO3- addition."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention or determine the subcellular localization of NRT2.4. 'Plasma membrane' is a reasonable assumption for a nitrate transporter but is not stated in the paper."
+        },
+        "Tissue_or_Organ_of_Nutrient_Accumulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'Whole plants were harvested to provide an overview of all the responses in the seedlings,' consistent with 'Whole seedlings.'"
+        },
+        "Developmental_Stage": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper specifies that seedlings were harvested on day 9, and Figure 1 describes '9-d-old' seedlings."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows NRT2.4 was strongly induced by nitrate readdition, consistent with 'Induced by nitrate availability.'"
+        },
+        "Key_Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental design involves 2 days of N deprivation followed by 3 mM KNO3 resupply, consistent with 'Nitrate resupply after N deprivation.'"
+        },
+        "Experimental_Materials": {
+          "verdict": "SUPPORTED",
+          "reason": "The Materials and Methods state 'Wild-type Col-0 Arabidopsis seedlings' and the experiment involved N-starved seedlings."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses Affymetrix ATH1 arrays for transcript profiling, which is the method by which NRT2.4 induction was detected."
+        },
+        "Nutrient_Assay_or_Profiling_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The Materials and Methods section states nitrate was measured by HPLC: 'NO3-... were extracted and measured as described by Scheible et al. (1997a, 1997b)' and later mentions 'measured by HPLC.'"
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses Affymetrix ATH1 microarrays, which is microarray transcriptomics."
+        },
+        "Gene_Discovery_or_Cloning_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "NRT2.4 was identified in this study through microarray (ATH1) analysis as a nitrate-responsive gene."
+        },
+        "Breeding_or_Biofortification_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not discuss NRT2.4 as a potential target for improving nitrogen use efficiency or any breeding/biofortification application. This is an inference not stated in the paper."
+        },
+        "Summary_key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "Finding 1 ('Strongly induced by nitrate readdition') is directly supported. Finding 2 ('Contributes to high-affinity nitrate transport system') is not explicitly stated for NRT2.4 in the paper—the high-affinity transport discussion centers on NAR2 and NRT2.1/2.2. NRT2.4 is grouped with them but not specifically called 'high-affinity.'"
+        },
+        "Notes_or_Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "NRT2.4 is clearly a member of the NRT2 family as indicated by its name and its grouping with NRT2.1 and NRT2.2 in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Plasma membrane",
+          "new_value": "NA",
+          "reason": "The paper does not mention or determine the subcellular localization of NRT2.4. 'Plasma membrane' is a reasonable assumption for a nitrate transporter but is not stated in the paper."
+        },
+        {
+          "field": "Breeding_or_Biofortification_Value",
+          "old_value": "Potential target for improving nitrogen use efficiency",
+          "new_value": "NA",
+          "reason": "The paper does not discuss NRT2.4 as a potential target for improving nitrogen use efficiency or any breeding/biofortification application. This is an inference not stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 2,
+        "uncertain": 8
+      }
+    },
+    {
+      "gene_index": 4,
+      "gene_name": "NRT1.1",
+      "verification": {
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly mentions 'NRT1.1 (At1g12110)' in the Results section discussing nitrate transporter genes induced by nitrate."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states 'NRT1.1 (At1g12110)' in the Results section."
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper is entirely about Arabidopsis, stated in the title and throughout."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper title and text refer to Arabidopsis, and the Materials and Methods specifies 'Wild-type Col-0 Arabidopsis seedlings', which is Arabidopsis thaliana."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods explicitly states 'Wild-type Col-0 Arabidopsis seedlings'."
+        },
+        "Gene_Role_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "NRT1.1 is described as a nitrate transporter gene in the context of 'NO3- transporter genes were strongly induced'. Transporter role is clear."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes NRT1.1 in the context of nitrate transporter genes. 'Nitrate transporter' is a reasonable family designation based on the paper's description."
+        },
+        "Enzyme_Name_or_Function": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not describe NRT1.1 as a 'dual-affinity nitrate transporter'. This is known from other literature but is not stated in this paper."
+        },
+        "Final_Nutrient_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links NRT1.1 to nitrate uptake, but 'Nitrate' as a final nutrient product is ambiguous—the paper frames nitrate as a substrate for assimilation into amino acids and proteins, not as a final product itself. However, nitrate content does increase in seedlings after readdition."
+        },
+        "Final_Nutrient_Product_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nitrate is an inorganic ion. Calling it a 'Mineral' is a loose classification. The paper does not classify nitrate as a mineral explicitly."
+        },
+        "Nutrient_Trait_Metric": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper measures nitrate content in seedlings (Supplemental Fig. 1), but this gene was not directly tested for its effect on nitrate content—only its transcript level was measured."
+        },
+        "Quantitative_Nutrient_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states NRT1.1 was induced 'to a weaker extent' compared to NRT2.1 and NRT2.2, supporting 'weakly induced'."
+        },
+        "Pathway_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The section heading is 'Rapid Coordinated Induction of Genes for Nitrate Uptake and Assimilation' and NRT1.1 is discussed in this context."
+        },
+        "Metabolic_Step_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "NRT1.1 is described as a nitrate transporter gene, so 'Transport' is the correct metabolic step type."
+        },
+        "Reaction_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper describes nitrate transport but does not explicitly mention 'extracellular nitrate' as a substrate. The concept is implied but the specific term is not used."
+        },
+        "Reaction_Product_or_Immediate_Output": {
+          "verdict": "UNCERTAIN",
+          "reason": "'Cytosolic nitrate' is a reasonable inference for a nitrate transporter but is not explicitly stated in the paper."
+        },
+        "Key_Intermediate_Metabolites_Affected": {
+          "verdict": "SUPPORTED",
+          "reason": "Nitrate levels in seedlings changed after NO3- readdition, and NRT1.1 is a nitrate transporter, so nitrate is a directly relevant metabolite discussed in the paper."
+        },
+        "Flux_or_Direction_Change": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper describes induction of NRT1.1 transcript in the context of nitrate uptake, implying increased uptake capacity, but does not directly demonstrate that NRT1.1 specifically increases nitrate uptake capacity in this experiment."
+        },
+        "Core_Phenotypic_Effect_on_Nutrient": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states NRT1.1 was weakly induced after nitrate readdition ('to a weaker extent NRT1.1')."
+        },
+        "Regulatory_Mechanism": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows NRT1.1 transcript levels increase after nitrate addition, which constitutes transcriptional induction by nitrate."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention 'plasma membrane' localization for NRT1.1. This is known from other studies but not stated here."
+        },
+        "Tissue_or_Organ_of_Nutrient_Accumulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'Whole plants were harvested to provide an overview of all the responses in the seedlings.'"
+        },
+        "Developmental_Stage": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states seedlings were harvested on day 9, so '9-day-old seedlings' is correct."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows NRT1.1 was induced by nitrate readdition, consistent with 'Induced by nitrate availability'."
+        },
+        "Key_Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental design involves nitrate resupply (3 mM KNO3) after 2 days of N deprivation, matching 'Nitrate resupply after N deprivation'."
+        },
+        "Experimental_Materials": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods confirms 'Wild-type Col-0 Arabidopsis seedlings' and N-starved seedlings were used."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses Affymetrix ATH1 arrays for transcript profiling, as stated throughout."
+        },
+        "Nutrient_Assay_or_Profiling_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The Materials and Methods states nitrate was measured by HPLC: 'NO3- ... were extracted and measured as described by Scheible et al. (1997a, 1997b)' and later mentions HPLC."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses Affymetrix ATH1 microarrays, which is microarray transcriptomics."
+        },
+        "Gene_Discovery_or_Cloning_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "NRT1.1 was already a known gene before this study. The paper identified its response via microarray analysis, but did not 'discover' or 'clone' it. 'Microarray analysis' is the method used to detect its response in this study."
+        },
+        "Breeding_or_Biofortification_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not discuss NRT1.1 as a 'potential target for improving nitrogen use efficiency' or any breeding/biofortification applications."
+        },
+        "Summary_key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "Finding 1 ('Weakly induced by nitrate readdition') is supported by the paper. Finding 2 ('Functions in dual-affinity nitrate transport') is not stated in this paper—this is external knowledge."
+        },
+        "Notes_or_Other_Important_Info": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention 'CHL1' as an alias for NRT1.1. This is known from other literature but not stated in this paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Enzyme_Name_or_Function",
+          "old_value": "Dual-affinity nitrate transporter",
+          "new_value": "NA",
+          "reason": "The paper does not describe NRT1.1 as a 'dual-affinity nitrate transporter'. This is known from other literature but is not stated in this paper."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Plasma membrane",
+          "new_value": "NA",
+          "reason": "The paper does not mention 'plasma membrane' localization for NRT1.1. This is known from other studies but not stated here."
+        },
+        {
+          "field": "Breeding_or_Biofortification_Value",
+          "old_value": "Potential target for improving nitrogen use efficiency",
+          "new_value": "NA",
+          "reason": "The paper does not discuss NRT1.1 as a 'potential target for improving nitrogen use efficiency' or any breeding/biofortification applications."
+        },
+        {
+          "field": "Notes_or_Other_Important_Info",
+          "old_value": "Also known as CHL1",
+          "new_value": "NA",
+          "reason": "The paper does not mention 'CHL1' as an alias for NRT1.1. This is known from other literature but not stated in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 4,
+        "uncertain": 8
+      }
+    },
+    {
+      "gene_index": 5,
+      "gene_name": "NAR2 homolog",
+      "verification": {
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper refers to this gene as a 'homolog of the Chlamydomonas reinhardtii NAR2 gene' (Results section on Nitrate Uptake and Assimilation)."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states 'A homolog (At5g50200; Maathuis et al., 2003) of the Chlamydomonas reinhardtii NAR2 gene was also induced.'"
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The entire study is performed in Arabidopsis, as stated throughout the paper."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper title and text repeatedly refer to Arabidopsis. The Materials and Methods section specifies 'Wild-type Col-0 Arabidopsis seedlings', and Arabidopsis thaliana is the accepted full name."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods explicitly states 'Wild-type Col-0 Arabidopsis seedlings.'"
+        },
+        "Gene_Role_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The gene is described as required for high-affinity nitrate transport, which is a transport function. 'Other' is vague; 'Transporter' might be more appropriate, but 'Other' is not directly contradicted."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies this gene as a NAR2 homolog. No specific protein domain is described beyond this homology designation."
+        },
+        "Enzyme_Name_or_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'NAR2 is required for high-affinity NO3- transport in C. reinhardtii' and 'Our results point to an analogous role in higher plants.'"
+        },
+        "Final_Nutrient_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The gene is involved in nitrate transport/uptake. Nitrate itself is a substrate being transported, not a final nutrient product per se. The paper discusses nitrate uptake and assimilation leading to amino acids and protein synthesis. Calling nitrate the 'final nutrient product' is a simplification; the gene facilitates nitrate uptake rather than producing nitrate as a final product."
+        },
+        "Final_Nutrient_Product_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nitrate is an inorganic ion/mineral nutrient. Classifying it as 'Mineral' is reasonable but the paper does not explicitly classify nitrate this way."
+        },
+        "Nutrient_Trait_Metric": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper measures nitrate levels in seedlings (Supplemental Fig. 1), so 'content' is a reasonable inference, but the gene's direct link to nitrate content is through its role in transport, not a direct measurement of how this gene changes nitrate content."
+        },
+        "Quantitative_Nutrient_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the NAR2 homolog 'was also induced' by nitrate readdition, consistent with the value 'Induced.'"
+        },
+        "Pathway_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is discussed under the section 'Rapid Coordinated Induction of Genes for Nitrate Uptake and Assimilation,' directly supporting this pathway name."
+        },
+        "Metabolic_Step_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "NAR2 is described as required for high-affinity nitrate transport, which is a transport function rather than a regulatory step. 'Transport' would be more accurate than 'Regulation.' However, it could be argued NAR2 regulates the transporter complex."
+        },
+        "Key_Intermediate_Metabolites_Affected": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not directly show that the NAR2 homolog itself affects nitrate levels. Nitrate is the substrate being transported, and its levels change upon resupply, but causality from this specific gene is not demonstrated."
+        },
+        "Flux_or_Direction_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states NAR2 is required for high-affinity nitrate transport and is induced by nitrate, suggesting enhanced nitrate transport. The paper says 'Our results point to an analogous role in higher plants.'"
+        },
+        "Core_Phenotypic_Effect_on_Nutrient": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states the gene was induced by nitrate and that NAR2 is required for high-affinity nitrate transport in C. reinhardtii, with analogous role suggested in higher plants."
+        },
+        "Regulatory_Mechanism": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows this gene's transcript is induced upon nitrate readdition, which constitutes transcriptional induction by nitrate."
+        },
+        "Tissue_or_Organ_of_Nutrient_Accumulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'Whole plants were harvested to provide an overview of all the responses in the seedlings,' supporting 'Whole seedlings.'"
+        },
+        "Developmental_Stage": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes 9-day-old seedlings: 'On day 9, all seedlings (+N and −N) had developed cotyledons and first leaves.'"
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows the NAR2 homolog was induced after nitrate readdition, supporting 'Induced by nitrate availability.'"
+        },
+        "Key_Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental design involves N deprivation followed by nitrate resupply (3 mM KNO3 addition to N-starved seedlings), exactly matching the described treatment."
+        },
+        "Experimental_Materials": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods specifies 'Wild-type Col-0 Arabidopsis seedlings' grown in liquid culture with N-starvation treatment."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses Affymetrix ATH1 arrays for transcript profiling. The NAR2 homolog induction is reported from this array data (Supplemental Fig. 4A is referenced)."
+        },
+        "Nutrient_Assay_or_Profiling_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods states nitrate was measured by HPLC: 'NO3−...were extracted and measured as described by Scheible et al. (1997a, 1997b).' The methods section also mentions HPLC."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses Affymetrix ATH1 microarrays, which is microarray transcriptomics."
+        },
+        "Gene_Discovery_or_Cloning_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The NAR2 homolog was identified through the ATH1 microarray analysis in this study, consistent with 'Microarray analysis.'"
+        },
+        "Breeding_or_Biofortification_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not discuss breeding, biofortification, or nitrogen use efficiency improvement potential for this gene. This is speculative inference not stated in the paper."
+        },
+        "Summary_key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported: (1) The gene was induced by nitrate readdition. (2) It is a homolog of Chlamydomonas NAR2 required for high-affinity nitrate transport. (3) The paper states 'Our results point to an analogous role in higher plants.'"
+        },
+        "Notes_or_Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly claim this is the 'first report' of NAR2 homolog involvement in Arabidopsis nitrate transport. It references Maathuis et al. (2003) for the gene identification. The paper suggests an analogous role but does not claim priority of discovery."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Breeding_or_Biofortification_Value",
+          "old_value": "Potential target for improving nitrogen use efficiency",
+          "new_value": "NA",
+          "reason": "The paper does not discuss breeding, biofortification, or nitrogen use efficiency improvement potential for this gene. This is speculative inference not stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 1,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_index": 6,
+      "gene_name": "NIA1",
+      "verification": {
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly mentions NIA1 in the Results section: 'All genes known to be directly required for NO3− assimilation were also strongly induced, including NIA1, NIA2, and NII (Fig. 3A).'"
+        },
+        "Gene_Accession_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not provide the AGI code At1g77760 for NIA1. While NIA1 is mentioned by name, the specific accession number At1g77760 does not appear anywhere in the paper text. This may be correct from external databases but is not stated in this paper."
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper's title and throughout the text clearly state Arabidopsis as the study organism."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper refers to Arabidopsis, and the full species name Arabidopsis thaliana is implied (standard model organism, Col-0 ecotype used). While the full Latin name isn't explicitly spelled out as 'Arabidopsis thaliana' in the visible text, it is the universally accepted name for this organism."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The Materials and Methods section states: 'Wild-type Col-0 Arabidopsis seedlings (100–120) were grown in sterile liquid culture.'"
+        },
+        "Gene_Role_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "NIA1 encodes nitrate reductase, which is an enzyme. The paper discusses it in the context of NO3− assimilation enzymes."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly state 'nitrate reductase' as a protein family or domain name for NIA1. It refers to NIA1 as being required for NO3− assimilation and references prior work (Scheible et al., 1997a). The assignment is reasonable but not explicitly stated in the paper as a family/domain."
+        },
+        "Enzyme_Name_or_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "NIA1 is well-established as nitrate reductase, and the paper discusses it in the context of NO3− reduction/assimilation. The name 'NIA' stands for nitrate reductase, and the paper groups it with genes 'directly required for NO3− assimilation.'"
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The EC number 1.7.1.1 does not appear anywhere in the paper. This is likely correct biochemical knowledge but is not stated in this publication."
+        },
+        "Final_Nutrient_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses NIA1 in the context of the broader nitrate assimilation pathway leading ultimately to amino acids (Gln, Glu) and protein synthesis. Nitrite is an intermediate product of nitrate reductase, not the 'final nutrient product.' The paper frames the pathway as leading to amino acids and proteins."
+        },
+        "Final_Nutrient_Product_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Nitrite classified as 'Mineral' is problematic. Nitrite is an inorganic ion/intermediate, not typically classified as a mineral in nutritional contexts. Moreover, the paper frames the final products of this pathway as amino acids and proteins, not nitrite."
+        },
+        "Nutrient_Trait_Metric": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper measures transcript levels (gene expression), not nitrite content directly. The term 'content' is vague and could refer to transcript levels, but the paper does not measure nitrite content per se."
+        },
+        "Quantitative_Nutrient_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states: 'All genes known to be directly required for NO3− assimilation were also strongly induced, including NIA1, NIA2, and NII.' The term 'strongly induced' is used in the paper."
+        },
+        "Pathway_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly discusses 'Rapid Coordinated Induction of Genes for Nitrate Uptake and Assimilation' and places NIA1 within nitrate assimilation."
+        },
+        "Metabolic_Step_Type": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not describe NIA1 or nitrate reductase as a 'rate-limiting' step. This is external biochemical knowledge not stated in this paper."
+        },
+        "Reaction_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper mentions that 'Reduction of NO3− and nitrite consumes NADH in the cytosol and reduced Fd in the plastid,' which supports nitrate and NADH as substrates for nitrate reductase. However, this statement is about both NO3− and nitrite reduction collectively, not specifically attributing NADH to NIA1's reaction."
+        },
+        "Reaction_Product_or_Immediate_Output": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nitrite as a product of nitrate reductase is standard biochemistry and consistent with the paper's context (NIA1 for NO3− assimilation, followed by NII for nitrite reduction). However, the paper does not explicitly state 'nitrite' and 'NAD+' as the products of NIA1's reaction."
+        },
+        "Key_Intermediate_Metabolites_Affected": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses nitrate levels extensively (measured, shown in Supplemental Fig. 1) and nitrite is implied through the pathway (NIA genes reduce NO3−, NII reduces nitrite). The paper states NO3− increased in seedlings and discusses its reduction."
+        },
+        "Flux_or_Direction_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes coordinated induction of genes for NO3− uptake and assimilation, including NIA1, indicating increased flux through nitrate reduction. The section heading is 'Rapid Coordinated Induction of Genes for Nitrate Uptake and Assimilation.'"
+        },
+        "Core_Phenotypic_Effect_on_Nutrient": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states NIA1 was strongly induced after nitrate readdition and is a key gene in nitrate assimilation, consistent with this description."
+        },
+        "Regulatory_Mechanism": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper demonstrates transcriptional induction of NIA1 by nitrate through transcript profiling. NIA1 transcript levels increase after NO3− addition, constituting transcriptional induction."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states: 'Reduction of NO3− and nitrite consumes NADH in the cytosol and reduced Fd in the plastid.' Nitrate reductase (NIA1) uses NADH in the cytosol, supporting cytosolic localization."
+        },
+        "Tissue_or_Organ_of_Nutrient_Accumulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states: 'Whole plants were harvested to provide an overview of all the responses in the seedlings.' The analysis was performed on whole seedlings."
+        },
+        "Developmental_Stage": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes experiments on day 9 seedlings: 'On day 9, all seedlings (+N and −N) had developed cotyledons and first leaves.' Hence '9-day-old seedlings' is correct."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows NIA1 is strongly induced by nitrate addition, supporting 'Induced by nitrate availability.'"
+        },
+        "Key_Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental design involves N deprivation followed by 3 mM KNO3 resupply, which matches 'Nitrate resupply after N deprivation.'"
+        },
+        "Experimental_Materials": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses 'Wild-type Col-0 Arabidopsis seedlings' grown in sterile liquid culture, with N-starved seedlings receiving KNO3."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses Affymetrix ATH1 arrays for transcript profiling, which is correctly described as 'Transcript profiling (ATH1 arrays).'"
+        },
+        "Nutrient_Assay_or_Profiling_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper mentions HPLC for measuring NO3− and secondary metabolites in Materials and Methods. However, it does not specifically state HPLC was used for 'nitrite measurement.' Nitrite levels are not explicitly reported in the paper."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses Affymetrix ATH1 microarrays, which is microarray transcriptomics."
+        },
+        "Gene_Discovery_or_Cloning_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "NIA1 was not 'discovered' by microarray analysis in this paper. It was already well-known (referenced as Scheible et al., 1997a; Wang et al., 2003). The microarray confirmed its induction, but it was not a novel discovery."
+        },
+        "Breeding_or_Biofortification_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not discuss NIA1 as a 'potential target for improving nitrogen use efficiency' or any breeding/biofortification applications. This is speculation not found in the paper."
+        },
+        "Summary_key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "1) The paper states NIA1 was strongly induced - within 30 min is supported by the section discussing rapid induction. 2) It catalyzes the first step of NO3− assimilation (NO3− reduction). 3) It is part of a coordinated nitrate response as described in the section heading. All three points are supported."
+        },
+        "Notes_or_Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper mentions 'NIA1, NIA2, and NII,' clearly indicating there are two nitrate reductase genes (NIA1 and NIA2) in Arabidopsis."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Gene_Accession_Number",
+          "old_value": "At1g77760",
+          "new_value": "NA",
+          "reason": "The paper does not provide the AGI code At1g77760 for NIA1. While NIA1 is mentioned by name, the specific accession number At1g77760 does not appear anywhere in the paper text. This may be correct from external databases but is not stated in this paper."
+        },
+        {
+          "field": "EC_Number",
+          "old_value": "1.7.1.1",
+          "new_value": "NA",
+          "reason": "The EC number 1.7.1.1 does not appear anywhere in the paper. This is likely correct biochemical knowledge but is not stated in this publication."
+        },
+        {
+          "field": "Final_Nutrient_Product_Class",
+          "old_value": "Mineral",
+          "new_value": "NA",
+          "reason": "Nitrite classified as 'Mineral' is problematic. Nitrite is an inorganic ion/intermediate, not typically classified as a mineral in nutritional contexts. Moreover, the paper frames the final products of this pathway as amino acids and proteins, not nitrite."
+        },
+        {
+          "field": "Metabolic_Step_Type",
+          "old_value": "Rate_Limiting",
+          "new_value": "NA",
+          "reason": "The paper does not describe NIA1 or nitrate reductase as a 'rate-limiting' step. This is external biochemical knowledge not stated in this paper."
+        },
+        {
+          "field": "Breeding_or_Biofortification_Value",
+          "old_value": "Potential target for improving nitrogen use efficiency",
+          "new_value": "NA",
+          "reason": "The paper does not discuss NIA1 as a 'potential target for improving nitrogen use efficiency' or any breeding/biofortification applications. This is speculation not found in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 5,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_index": 7,
+      "gene_name": "NIA2",
+      "verification": {
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly mentions 'NIA1, NIA2, and NII' as genes strongly induced by nitrate (Fig. 3A section)."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly provide the AGI code At1g37130 for NIA2. While At1g37130 is the known AGI for NIA2 in Arabidopsis, the paper itself does not state this accession number. The paper mentions AGI codes for many genes but not specifically for NIA2."
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper is explicitly about Arabidopsis, stated in the title and throughout."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper's title and methods section refer to 'Arabidopsis' and the Materials and Methods section specifies 'Wild-type Col-0 Arabidopsis seedlings'."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods explicitly states 'Wild-type Col-0 Arabidopsis seedlings'."
+        },
+        "Gene_Role_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "NIA2 encodes nitrate reductase, which is an enzyme. The paper discusses it in the context of nitrate assimilation enzymes."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper describes NIA2 as involved in nitrate reduction and refers to 'NIA1, NIA2, and NII' in context of NO3- assimilation, but does not explicitly state 'Nitrate reductase' as a protein family/domain name. It is widely known but not explicitly stated as a family in this paper."
+        },
+        "Enzyme_Name_or_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses NIA genes in the context of nitrate reduction/assimilation. NIA stands for Nitrate Reductase (NR), and the section heading 'Rapid Coordinated Induction of Genes for Nitrate Uptake and Assimilation' and text 'All genes known to be directly required for NO3- assimilation were also strongly induced, including NIA1, NIA2, and NII' confirms the function."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The EC number 1.7.1.1 does not appear anywhere in the paper. This is external biochemical knowledge, not stated in the paper. Additionally, the standard EC number for NADH-nitrate reductase is EC 1.7.1.1 (or sometimes 1.6.6.1), but regardless, no EC number is provided in the paper."
+        },
+        "Final_Nutrient_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nitrite is the immediate product of nitrate reductase, but the paper focuses on the downstream products of nitrogen assimilation (amino acids like Gln, Glu) as the final nutrient products. Nitrite is an intermediate, not a 'final nutrient product.' The paper does not describe nitrite as a final nutrient product."
+        },
+        "Final_Nutrient_Product_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Nitrite classified as 'Mineral' is problematic. Nitrite is not a mineral nutrient product. Moreover, the paper does not classify nitrite in this way. The paper's focus is on nitrogen assimilation leading to amino acids and proteins."
+        },
+        "Nutrient_Trait_Metric": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper measures transcript levels (expression), not nitrite content per se. While metabolite measurements were done for amino acids, organic acids, and nitrate, 'nitrite content' as a trait metric is not explicitly discussed."
+        },
+        "Quantitative_Nutrient_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'All genes known to be directly required for NO3- assimilation were also strongly induced, including NIA1, NIA2, and NII.' 'Strongly induced' is directly supported."
+        },
+        "Pathway_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly discusses 'Nitrate Uptake and Assimilation' as a pathway, and NIA2 is listed under the section 'Rapid Coordinated Induction of Genes for Nitrate Uptake and Assimilation.'"
+        },
+        "Metabolic_Step_Type": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not describe NIA2 as catalyzing a 'rate-limiting' step. While nitrate reductase is sometimes considered rate-limiting in nitrogen assimilation in the broader literature, this specific claim is not made in this paper."
+        },
+        "Reaction_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper mentions that 'Reduction of NO3- and nitrite consumes NADH in the cytosol and reduced Fd in the plastid.' This supports nitrate and NADH as substrates for nitrate reductase indirectly, but the paper does not explicitly list the substrates of NIA2 specifically."
+        },
+        "Reaction_Product_or_Immediate_Output": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper mentions NII (nitrite reductase) separately from NIA1/NIA2, implying NIA produces nitrite which NII then reduces. But 'Nitrite, NAD+' as explicit reaction products is not stated in the paper."
+        },
+        "Key_Intermediate_Metabolites_Affected": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses nitrate levels in seedlings (measured by HPLC) and the assimilation pathway involving nitrate → nitrite → ammonium. These are affected metabolites in the pathway where NIA2 functions."
+        },
+        "Flux_or_Direction_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes coordinated induction of genes for nitrate assimilation including NIA2, which increases nitrate reduction. The paper states strong induction of NIA2 after nitrate readdition, consistent with increased nitrate reduction flux."
+        },
+        "Core_Phenotypic_Effect_on_Nutrient": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper confirms NIA2 is strongly induced after nitrate readdition and is described as a key gene required for NO3- assimilation."
+        },
+        "Regulatory_Mechanism": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper demonstrates transcriptional induction of NIA2 by nitrate, showing it is strongly induced within 30 min of nitrate readdition, consistent with transcriptional regulation."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states 'Reduction of NO3- and nitrite consumes NADH in the cytosol,' which implies cytosolic localization for nitrate reductase. However, the paper does not explicitly state that NIA2 is localized to the cytosol."
+        },
+        "Tissue_or_Organ_of_Nutrient_Accumulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'Whole plants were harvested to provide an overview of all the responses in the seedlings,' confirming whole seedling analysis."
+        },
+        "Developmental_Stage": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states harvesting on day 9 and references '9-d-old N-limited and N-replete Arabidopsis seedlings' in Figure 1."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper confirms NIA2 is strongly induced by nitrate availability/readdition."
+        },
+        "Key_Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental design involves N deprivation for 2 days followed by 3 mM KNO3 resupply, which is exactly 'Nitrate resupply after N deprivation.'"
+        },
+        "Experimental_Materials": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods states 'Wild-type Col-0 Arabidopsis seedlings' grown in sterile liquid culture with N starvation treatment."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses Affymetrix ATH1 arrays for transcript profiling as its primary method, explicitly stated throughout."
+        },
+        "Nutrient_Assay_or_Profiling_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper mentions HPLC for nitrate measurement in the Materials and Methods ('NO3-... were extracted and measured as described by Scheible et al. (1997a, 1997b)'), but does not specifically mention HPLC for nitrite measurement. Nitrite is not explicitly measured in this paper."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper is fundamentally a transcriptomics study using Affymetrix ATH1 microarrays, confirmed throughout."
+        },
+        "Gene_Discovery_or_Cloning_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "NIA2 was identified/confirmed as nitrate-responsive through microarray analysis in this study, consistent with 'Microarray analysis' as the discovery method in this context."
+        },
+        "Breeding_or_Biofortification_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not discuss NIA2 as a 'potential target for improving nitrogen use efficiency' or any breeding/biofortification application. This is an inference not made in the paper."
+        },
+        "Summary_key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "1. 'Strongly induced within 30 min' is supported by the text stating all NO3- assimilation genes including NIA2 were strongly induced. 2. NIA2 catalyzes nitrate reduction (first step of assimilation) is consistent with the paper. 3. Part of coordinated nitrate response is explicitly described in the Results section."
+        },
+        "Notes_or_Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper lists 'NIA1, NIA2, and NII' as the genes required for NO3- assimilation, confirming there are two NIA (nitrate reductase) genes in Arabidopsis."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.7.1.1",
+          "new_value": "NA",
+          "reason": "The EC number 1.7.1.1 does not appear anywhere in the paper. This is external biochemical knowledge, not stated in the paper. Additionally, the standard EC number for NADH-nitrate reductase is EC 1.7.1.1 (or sometimes 1.6.6.1), but regardless, no EC number is provided in the paper."
+        },
+        {
+          "field": "Final_Nutrient_Product_Class",
+          "old_value": "Mineral",
+          "new_value": "NA",
+          "reason": "Nitrite classified as 'Mineral' is problematic. Nitrite is not a mineral nutrient product. Moreover, the paper does not classify nitrite in this way. The paper's focus is on nitrogen assimilation leading to amino acids and proteins."
+        },
+        {
+          "field": "Metabolic_Step_Type",
+          "old_value": "Rate_Limiting",
+          "new_value": "NA",
+          "reason": "The paper does not describe NIA2 as catalyzing a 'rate-limiting' step. While nitrate reductase is sometimes considered rate-limiting in nitrogen assimilation in the broader literature, this specific claim is not made in this paper."
+        },
+        {
+          "field": "Breeding_or_Biofortification_Value",
+          "old_value": "Potential target for improving nitrogen use efficiency",
+          "new_value": "NA",
+          "reason": "The paper does not discuss NIA2 as a 'potential target for improving nitrogen use efficiency' or any breeding/biofortification application. This is an inference not made in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 4,
+        "uncertain": 8
+      }
+    },
+    {
+      "gene_index": 8,
+      "gene_name": "NII",
+      "verification": {
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly mentions 'NII' as one of the genes strongly induced by nitrate: 'All genes known to be directly required for NO3− assimilation were also strongly induced, including NIA1, NIA2, and NII (Fig. 3A).'"
+        },
+        "Gene_Accession_Number": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly state the accession number At2g15620 for NII. While At2g15620 is the known AGI code for NII/NIR1 in Arabidopsis, the paper itself does not provide this specific identifier for NII."
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper is about Arabidopsis, and NII is studied in this organism."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper title and throughout refers to Arabidopsis, and the Materials and Methods section specifies 'Wild-type Col-0 Arabidopsis' seedlings, which is Arabidopsis thaliana."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The Materials and Methods section explicitly states 'Wild-type Col-0 Arabidopsis seedlings.'"
+        },
+        "Gene_Role_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "NII encodes nitrite reductase, an enzyme in the nitrate assimilation pathway. The paper discusses it in the context of NO3− assimilation enzymes."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly describe the protein family or domain of NII. 'Nitrite reductase' is the enzyme name/function, but the paper doesn't discuss protein domain classification."
+        },
+        "Enzyme_Name_or_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "NII is known as nitrite reductase in the nitrate assimilation pathway. The paper discusses NII in the context of NO3− assimilation, and the section heading mentions 'Nitrate Uptake and Assimilation.' The paper states nitrite reduction consumes reduced Fd in the plastid."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention the EC number 1.7.7.1 anywhere. This is external knowledge not present in the paper."
+        },
+        "Final_Nutrient_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly state that ammonium is the final product of NII activity. While the paper discusses the pathway from NO3− to Gln and Glu (the 'two first amino acids produced after assimilation of NO3−'), the direct product of NII (ammonium) is not explicitly linked as a 'final nutrient product.' The paper's focus is on nitrogen assimilation broadly, not ammonium accumulation as a nutrient."
+        },
+        "Final_Nutrient_Product_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Ammonium is not described as a 'Mineral' nutrient product in the paper. The paper focuses on nitrogen assimilation leading to amino acids and protein synthesis, not mineral accumulation."
+        },
+        "Nutrient_Trait_Metric": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper measures transcript levels of NII, not ammonium content. The term 'content' as a nutrient trait metric for ammonium is not directly supported."
+        },
+        "Quantitative_Nutrient_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'All genes known to be directly required for NO3− assimilation were also strongly induced, including NIA1, NIA2, and NII.' The term 'strongly induced' is explicitly used."
+        },
+        "Pathway_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper section is titled 'Rapid Coordinated Induction of Genes for Nitrate Uptake and Assimilation' and NII is discussed as part of the nitrate assimilation pathway."
+        },
+        "Metabolic_Step_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not characterize NII as the 'terminal step' of nitrate assimilation. While NII catalyzes the second reduction step (nitrite to ammonium), the paper indicates that ammonium is further incorporated into amino acids via GS/GOGAT, so NII is not truly the terminal step of the full assimilation pathway."
+        },
+        "Reaction_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'Reduction of NO3− and nitrite consumes NADH in the cytosol and reduced Fd in the plastid.' This supports that nitrite and reduced ferredoxin are substrates for the NII reaction."
+        },
+        "Reaction_Product_or_Immediate_Output": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly state that ammonium and oxidized ferredoxin are the products of NII. While this is biochemically correct, the paper only implies it by discussing the overall pathway from NO3− to Gln/Glu."
+        },
+        "Key_Intermediate_Metabolites_Affected": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nitrite is mentioned as a substrate in the context of reduction. Ammonium is discussed in the context of ammonium transport genes, but the paper does not specifically measure or report changes in nitrite or ammonium levels as 'key intermediate metabolites affected' by NII induction."
+        },
+        "Flux_or_Direction_Change": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper demonstrates transcriptional induction of NII, which implies increased flux through nitrite reduction. However, the paper does not directly measure flux through this reaction. It notes transcript changes 'before primary metabolites changed significantly.'"
+        },
+        "Core_Phenotypic_Effect_on_Nutrient": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states NII is 'strongly induced' after nitrate readdition and is 'directly required for NO3− assimilation.' This supports the claim of strong induction completing nitrate assimilation."
+        },
+        "Regulatory_Mechanism": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper demonstrates that NII transcript levels increase upon NO3− addition, which constitutes transcriptional induction by nitrate. The entire section describes 'Rapid Coordinated Induction of Genes for Nitrate Uptake and Assimilation.'"
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'Reduction of NO3− and nitrite consumes NADH in the cytosol and reduced Fd in the plastid,' indicating that nitrite reduction (NII's function) occurs in the plastid."
+        },
+        "Tissue_or_Organ_of_Nutrient_Accumulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states 'Whole plants were harvested to provide an overview of all the responses in the seedlings.' The experiment analyzed whole seedlings."
+        },
+        "Developmental_Stage": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states seedlings were grown for 7 days, then shifted for 2 days, with harvest on day 9. The figure legend confirms '9-d-old' seedlings."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly shows NII is induced by nitrate availability - 'strongly induced' after NO3− readdition."
+        },
+        "Key_Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental design involves N deprivation followed by 3 mM KNO3 resupply, which is exactly 'nitrate resupply after N deprivation.'"
+        },
+        "Experimental_Materials": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses 'Wild-type Col-0 Arabidopsis seedlings' that were N-starved and then resupplied with nitrate."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses Affymetrix ATH1 arrays for transcript profiling, which is exactly what is stated."
+        },
+        "Nutrient_Assay_or_Profiling_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper mentions HPLC for metabolite measurements (NO3−, amino acids, secondary metabolites) but does not specifically state that HPLC was used to measure nitrite or ammonium. The Materials and Methods says 'NO3−, Glc, Fru, Suc, starch, oxoglutarate, and amino acids were extracted and measured as described by Scheible et al. (1997a, 1997b).' Nitrite and ammonium measurements are not explicitly described."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses Affymetrix ATH1 microarray transcriptomics and real-time RT-PCR for transcription factors."
+        },
+        "Gene_Discovery_or_Cloning_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "NII was not 'discovered' by microarray analysis in this paper. The paper states NII was already known: 'All genes known to be directly required for NO3− assimilation were also strongly induced, including NIA1, NIA2, and NII.' The microarray confirmed its induction rather than discovering it."
+        },
+        "Breeding_or_Biofortification_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not discuss NII as a potential target for improving nitrogen use efficiency or any breeding/biofortification application."
+        },
+        "Summary_key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "Point 1 ('Strongly induced within 30 min') is supported by the paper. Point 2 ('Catalyzes nitrite reduction to ammonium') is implied but not explicitly stated. Point 3 ('Essential for complete nitrate assimilation') - the paper says NII is 'directly required for NO3− assimilation' which supports this. However, the paper does not present NII as a core gene with dedicated experimental validation (e.g., knockout); it is one of many genes identified in a transcriptomic screen."
+        },
+        "Notes_or_Other_Important_Info": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not refer to NII as 'NIR1' anywhere. The alias 'NIR1 (nitrite reductase)' is not mentioned in this paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.7.7.1",
+          "new_value": "NA",
+          "reason": "The paper does not mention the EC number 1.7.7.1 anywhere. This is external knowledge not present in the paper."
+        },
+        {
+          "field": "Final_Nutrient_Product_Class",
+          "old_value": "Mineral",
+          "new_value": "NA",
+          "reason": "Ammonium is not described as a 'Mineral' nutrient product in the paper. The paper focuses on nitrogen assimilation leading to amino acids and protein synthesis, not mineral accumulation."
+        },
+        {
+          "field": "Breeding_or_Biofortification_Value",
+          "old_value": "Potential target for improving nitrogen use efficiency",
+          "new_value": "NA",
+          "reason": "The paper does not discuss NII as a potential target for improving nitrogen use efficiency or any breeding/biofortification application."
+        },
+        {
+          "field": "Notes_or_Other_Important_Info",
+          "old_value": "Also known as NIR1 (nitrite reductase)",
+          "new_value": "NA",
+          "reason": "The paper does not refer to NII as 'NIR1' anywhere. The alias 'NIR1 (nitrite reductase)' is not mentioned in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 4,
+        "uncertain": 11
+      }
+    },
+    {
+      "gene_index": 9,
+      "gene_name": "GDH3",
+      "verification": {
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly mentions 'A specific isoform of Glu dehydrogenase (GDH3) was repressed.'"
+        },
+        "Gene_Accession_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not provide an AGI accession number for GDH3. 'At3g03910' does not appear anywhere in the paper text. This appears to be external knowledge, not from the paper."
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper is about Arabidopsis, as stated throughout."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper title and text consistently refer to Arabidopsis (thaliana is implied and standard for this model organism, and the paper uses 'Arabidopsis' throughout)."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods states 'Wild-type Col-0 Arabidopsis seedlings.'"
+        },
+        "Gene_Role_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "GDH3 is described as an isoform of Glu dehydrogenase, which is an enzyme."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes GDH3 as 'a specific isoform of Glu dehydrogenase,' identifying the protein family."
+        },
+        "Enzyme_Name_or_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies GDH3 as 'Glu dehydrogenase.'"
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The EC number '1.4.1.2-4' does not appear anywhere in the paper. This is external biochemical knowledge."
+        },
+        "Final_Nutrient_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses GDH3 in the context of amino acid catabolism and ammonium recycling. The connection to glutamate as a 'final nutrient product' is indirect — the paper discusses Glu levels increasing after nitrate addition, but GDH3 is repressed (reducing catabolism), so the link to glutamate as a final product is inferential rather than directly stated."
+        },
+        "Final_Nutrient_Product_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Depends on the Final_Nutrient_Product assignment. Glutamate is indeed an amino acid, but the paper does not explicitly frame GDH3's role in terms of producing glutamate as a final nutrient product."
+        },
+        "Nutrient_Trait_Metric": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper measures amino acid levels and transcript levels but does not specifically measure glutamate content as a direct output of GDH3 manipulation."
+        },
+        "Quantitative_Nutrient_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GDH3 'was repressed' by nitrate addition."
+        },
+        "Pathway_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "GDH3 is discussed in the section on amino acid metabolism, specifically under 'Coordinated Induction of Synthesis and Repression of Breakdown of Amino Acids and Nucleotides.'"
+        },
+        "Metabolic_Step_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states GDH3 is 'implicated in the recycling of ammonium during amino acid catabolism,' directly supporting 'Catabolism.'"
+        },
+        "Reaction_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specify the reaction substrates (Glutamate, NAD(P)+) for GDH3. These are from general biochemical knowledge."
+        },
+        "Reaction_Product_or_Immediate_Output": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specify the reaction products (2-oxoglutarate, ammonium, NAD(P)H) for GDH3. These are from general biochemical knowledge."
+        },
+        "Key_Intermediate_Metabolites_Affected": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses changes in Glu and 2-oxoglutarate levels in the context of nitrate assimilation broadly, but does not directly attribute changes in these metabolites to GDH3 specifically."
+        },
+        "Flux_or_Direction_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GDH3 was repressed and implicated in 'recycling of ammonium during amino acid catabolism,' consistent with reduced glutamate catabolism during nitrate assimilation."
+        },
+        "Core_Phenotypic_Effect_on_Nutrient": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GDH3 'was repressed' and is 'implicated in the recycling of ammonium during amino acid catabolism.' This matches the extracted field."
+        },
+        "Regulatory_Mechanism": {
+          "verdict": "SUPPORTED",
+          "reason": "GDH3 transcript was repressed after nitrate addition, as detected by transcript profiling, supporting transcriptional repression by nitrate."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention mitochondrial localization for GDH3. This is external biochemical knowledge."
+        },
+        "Tissue_or_Organ_of_Nutrient_Accumulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'Whole plants were harvested to provide an overview of all the responses in the seedlings.'"
+        },
+        "Developmental_Stage": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes harvesting on day 9, and Figure 1 shows '9-d-old' seedlings."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GDH3 'was repressed' after nitrate addition, consistent with 'Repressed by nitrate availability.'"
+        },
+        "Key_Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental design involves nitrate resupply (3 mM KNO3) to N-deprived seedlings, matching this field."
+        },
+        "Experimental_Materials": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses 'Wild-type Col-0' seedlings that were N-starved before nitrate resupply."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses Affymetrix ATH1 arrays for transcript profiling, which is how GDH3 repression was detected."
+        },
+        "Nutrient_Assay_or_Profiling_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes amino acid measurement by HPLC-based methods (Scheible et al., 1997a, 1997b references) and discusses amino acid levels."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "ATH1 arrays constitute microarray transcriptomics, as used in this study."
+        },
+        "Gene_Discovery_or_Cloning_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "GDH3 was identified as nitrate-responsive through the microarray analysis in this study."
+        },
+        "Breeding_or_Biofortification_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not discuss GDH3 as a potential target for modulating nitrogen remobilization or any breeding/biofortification application."
+        },
+        "Summary_key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Points 1 and 2 are directly stated in the paper. Point 3 is supported by the statement that 'This isoform is normally expressed at very low levels and is not induced by sugar deprivation, which induces the other two members of the GDH family,' implying opposite/different regulation from other family members."
+        },
+        "Notes_or_Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states: 'This isoform is normally expressed at very low levels and is not induced by sugar deprivation, which induces the other two members of the GDH family.'"
+        }
+      },
+      "corrections": [
+        {
+          "field": "Gene_Accession_Number",
+          "old_value": "At3g03910",
+          "new_value": "NA",
+          "reason": "The paper does not provide an AGI accession number for GDH3. 'At3g03910' does not appear anywhere in the paper text. This appears to be external knowledge, not from the paper."
+        },
+        {
+          "field": "EC_Number",
+          "old_value": "1.4.1.2-4",
+          "new_value": "NA",
+          "reason": "The EC number '1.4.1.2-4' does not appear anywhere in the paper. This is external biochemical knowledge."
+        },
+        {
+          "field": "Reaction_Substrate",
+          "old_value": "Glutamate, NAD(P)+",
+          "new_value": "NA",
+          "reason": "The paper does not specify the reaction substrates (Glutamate, NAD(P)+) for GDH3. These are from general biochemical knowledge."
+        },
+        {
+          "field": "Reaction_Product_or_Immediate_Output",
+          "old_value": "2-oxoglutarate, ammonium, NAD(P)H",
+          "new_value": "NA",
+          "reason": "The paper does not specify the reaction products (2-oxoglutarate, ammonium, NAD(P)H) for GDH3. These are from general biochemical knowledge."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Mitochondria",
+          "new_value": "NA",
+          "reason": "The paper does not mention mitochondrial localization for GDH3. This is external biochemical knowledge."
+        },
+        {
+          "field": "Breeding_or_Biofortification_Value",
+          "old_value": "Potential target for modulating nitrogen remobilization",
+          "new_value": "NA",
+          "reason": "The paper does not discuss GDH3 as a potential target for modulating nitrogen remobilization or any breeding/biofortification application."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 6,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_index": 10,
+      "gene_name": "IPT3",
+      "verification": {
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "IPT3 is explicitly named in both the Introduction and Results sections (Hormone Synthesis and Sensing): 'Several genes involved in cytokinin synthesis, including IPT3...were induced within 30 min.'"
+        },
+        "Gene_Accession_Number": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not provide the AGI code At3g63110 for IPT3 anywhere in the text. While At3g63110 is the known accession for IPT3 in Arabidopsis, this specific identifier is not stated in the paper itself."
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper is entirely about Arabidopsis, as stated in the title and throughout."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is not explicitly written as the full binomial in the paper (the paper uses 'Arabidopsis'), but the Materials and Methods section refers to 'Col-0 Arabidopsis seedlings' and the context clearly indicates Arabidopsis thaliana."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods states: 'Wild-type Col-0 Arabidopsis seedlings (100–120) were grown in sterile liquid culture.'"
+        },
+        "Gene_Role_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes IPT3 as involved in cytokinin synthesis, consistent with an enzyme role. The Introduction says 'NO3⁻ induction of IPT3 in the roots leads to increased synthesis and export of cytokinins.'"
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly mention 'Isopentenyltransferase' as a protein family or domain. IPT3 is only described as being 'involved in cytokinin synthesis.' The isopentenyltransferase classification is external knowledge not stated in this paper."
+        },
+        "Enzyme_Name_or_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes IPT3 as a gene 'involved in cytokinin synthesis,' which supports this annotation."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "EC number 2.5.1.27 is not mentioned anywhere in the paper. This is external biochemical knowledge not present in the text."
+        },
+        "Final_Nutrient_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states IPT3 leads to 'increased synthesis and export of cytokinins to the shoot.' Cytokinins are hormones, not nutrients per se. The paper discusses IPT3 in the context of hormone synthesis and sensing, not nutrient accumulation."
+        },
+        "Final_Nutrient_Product_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Cytokinins are plant hormones. Classifying them as 'Other' nutrient product is a reasonable catch-all but the paper frames cytokinins as hormones involved in signaling, not as nutrient products."
+        },
+        "Nutrient_Trait_Metric": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not measure cytokinin content directly. It only reports transcript induction of IPT3. The claim of 'content' as a metric is not directly supported by measurements in this paper."
+        },
+        "Quantitative_Nutrient_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states IPT3 was 'induced within 30 min' of nitrate addition. The term 'Induced' accurately reflects the transcriptional response reported."
+        },
+        "Pathway_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states IPT3 is involved in 'cytokinin synthesis,' supporting the pathway name 'Cytokinin biosynthesis.'"
+        },
+        "Metabolic_Step_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not describe IPT3 as catalyzing a 'committed step' in cytokinin biosynthesis. While this is biochemically accurate from external knowledge, it is not stated in this paper."
+        },
+        "Reaction_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention DMAPP, AMP, or ADP as substrates for IPT3. These are from external biochemical knowledge not present in this paper."
+        },
+        "Reaction_Product_or_Immediate_Output": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention 'Isopentenyl-AMP/ADP' or any specific reaction product of IPT3. This is external biochemical detail not found in the paper."
+        },
+        "Key_Intermediate_Metabolites_Affected": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention 'cytokinin precursors' as metabolites affected. No metabolite measurements related to the cytokinin pathway are reported."
+        },
+        "Flux_or_Direction_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "The Introduction states: 'NO3⁻ induction of IPT3 in the roots leads to increased synthesis and export of cytokinins to the shoot,' supporting increased cytokinin synthesis in response to nitrate."
+        },
+        "Core_Phenotypic_Effect_on_Nutrient": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results section confirms IPT3 was 'induced within 30 min' of NO3⁻ addition. The Introduction states this 'leads to increased synthesis and export of cytokinins to the shoot.' Both claims are present in the paper."
+        },
+        "Other_Phenotypic_Effects": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper mentions shoot-root allocation in the context of nitrogen effects generally (Introduction) but does not directly link IPT3 specifically to 'shoot-root allocation, growth regulation' in this study's results."
+        },
+        "Regulatory_Mechanism": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows IPT3 transcript was induced within 30 min of nitrate addition (Results, Hormone Synthesis and Sensing), supporting transcriptional induction by nitrate."
+        },
+        "Tissue_or_Organ_of_Nutrient_Accumulation": {
+          "verdict": "UNCERTAIN",
+          "reason": "The Introduction cites Sakakibara et al. (1998) stating 'NO3⁻ induction of IPT3 in the roots leads to increased synthesis and export of cytokinins to the shoot,' but this paper itself harvested whole seedlings and did not perform tissue-specific analysis for IPT3."
+        },
+        "Developmental_Stage": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods describes seedlings grown for 7 days then shifted for 2 more days, harvested on day 9. '9-day-old seedlings' is accurate."
+        },
+        "Expression_Pattern": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper reports IPT3 induction by nitrate at the whole-seedling level. The Introduction references IPT3 induction 'in the roots' citing Sakakibara et al. (1998), but this paper did not perform organ-specific expression analysis for IPT3."
+        },
+        "Key_Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental design involves 2-day N deprivation followed by 3 mM KNO3 resupply, matching 'Nitrate resupply after N deprivation.'"
+        },
+        "Experimental_Materials": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods confirms 'Wild-type Col-0 Arabidopsis seedlings' were used, and the experiment involved N-starved seedlings."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper used Affymetrix ATH1 arrays (transcript profiling) as the primary method, as stated throughout."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses Affymetrix ATH1 microarray transcriptomics and RT-PCR for transcription factors."
+        },
+        "Gene_Discovery_or_Cloning_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "IPT3 was not discovered in this study. The paper cites Sakakibara et al. (1998) for prior knowledge of IPT3's role. The microarray analysis confirmed its induction but did not discover or clone the gene."
+        },
+        "Breeding_or_Biofortification_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not discuss breeding or biofortification potential for IPT3. This is speculative inference not stated in the paper."
+        },
+        "Summary_key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are supported: (1) IPT3 was induced within 30 min per Results section; (2) it is described as involved in cytokinin synthesis; (3) the Introduction links nitrate-induced IPT3 to cytokinin-mediated growth regulation."
+        },
+        "Notes_or_Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The Introduction cites Sakakibara et al. (1998) for the prior implication of IPT3 in nitrate-induced cytokinin synthesis, supporting 'previously implicated.'"
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.5.1.27",
+          "new_value": "NA",
+          "reason": "EC number 2.5.1.27 is not mentioned anywhere in the paper. This is external biochemical knowledge not present in the text."
+        },
+        {
+          "field": "Reaction_Substrate",
+          "old_value": "DMAPP, AMP/ADP",
+          "new_value": "NA",
+          "reason": "The paper does not mention DMAPP, AMP, or ADP as substrates for IPT3. These are from external biochemical knowledge not present in this paper."
+        },
+        {
+          "field": "Reaction_Product_or_Immediate_Output",
+          "old_value": "Isopentenyl-AMP/ADP",
+          "new_value": "NA",
+          "reason": "The paper does not mention 'Isopentenyl-AMP/ADP' or any specific reaction product of IPT3. This is external biochemical detail not found in the paper."
+        },
+        {
+          "field": "Key_Intermediate_Metabolites_Affected",
+          "old_value": [
+            "Cytokinin precursors"
+          ],
+          "new_value": "NA",
+          "reason": "The paper does not mention 'cytokinin precursors' as metabolites affected. No metabolite measurements related to the cytokinin pathway are reported."
+        }
+      ],
+      "stats": {
+        "supported": 18,
+        "unsupported": 4,
+        "uncertain": 11
+      }
+    },
+    {
+      "gene_index": 11,
+      "gene_name": "MYB75/PAP1",
+      "verification": {
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly mentions 'MYB75 (At1g56650; PAP1)' in the Transcriptional Regulators section."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states 'MYB75 (At1g56650; PAP1)' and Table I lists At1g56650 with gene name PAP1."
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper is entirely about Arabidopsis, as stated in the title and throughout."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper title and text refer to 'Arabidopsis' which is Arabidopsis thaliana. The species is identified throughout."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods states 'Wild-type Col-0 Arabidopsis seedlings'."
+        },
+        "Gene_Role_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB75/PAP1 is classified as a transcription factor (MYB family) in the paper's Transcriptional Regulators section and Table I."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Table I lists PAP1 under TF Family 'MYB'. The text discusses it as a member of the MYB gene family."
+        },
+        "Enzyme_Name_or_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'Genetic studies suggest PAP1 and PAP2 are involved in anthocyanin and flavonoid biosynthesis (Borevitz et al., 2000)' and that they 'directly act on CHS and genes further downstream in the flavonoid pathway'."
+        },
+        "Final_Nutrient_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links PAP1 to anthocyanin and flavonoid biosynthesis, and measures flavonoid/phenylpropanoid metabolites. However, these are secondary metabolites, not nutrients per se. The paper does measure changes in these metabolites (Fig. 5), but PAP1 was not directly knocked out/overexpressed to prove it causes specific metabolite changes in this study."
+        },
+        "Final_Nutrient_Product_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Anthocyanins and flavonoids are indeed polyphenols/flavonoids, which is consistent with the paper's description. However, the paper does not use the term 'Polyphenol/Flavonoid' as a class designation, and the direct causal link from PAP1 to final product changes is inferred, not experimentally demonstrated in this paper."
+        },
+        "Nutrient_Trait_Metric": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper measures metabolite content (Fig. 5) and transcript levels (Table I), but the link between PAP1 transcript repression and metabolite content changes is correlative, not directly demonstrated via gene manipulation in this study."
+        },
+        "Quantitative_Nutrient_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states PAP1 and PAP2 'transcript levels that plummeted 3 h after NO3− readdition to N-deprived seedlings, being reduced up to 50-fold in N-replete seedlings.' Table I shows PAP1 -N vs +N RT-PCR ratio of 27.89 and ATH1 ratio of 8.10. The 'up to 50-fold' refers to PAP2 (155.92-fold), but the text groups them together. The 'strongly repressed' characterization is accurate for PAP1."
+        },
+        "Pathway_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper has a dedicated section 'Coordinated Repression of the Shikimate Pathway, and Phenylpropanoid and Flavonoid Metabolism' and links PAP1 to these pathways."
+        },
+        "Metabolic_Step_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PAP1 is a transcription factor that regulates the pathway, not an enzyme catalyzing a metabolic step. The paper describes it as directly acting on CHS and downstream flavonoid genes, consistent with a regulatory role."
+        },
+        "Key_Intermediate_Metabolites_Affected": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper describes changes in flavonoid and phenylpropanoid metabolites (rutin, ferulic acid, etc. in Fig. 5) in response to nitrate, and links PAP1 to anthocyanin and flavonoid biosynthesis. However, the paper does not directly demonstrate that PAP1 repression causes changes in these specific metabolites - the link is correlative/inferred from the literature (Borevitz et al., 2000)."
+        },
+        "Flux_or_Direction_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes coordinated repression of flavonoid/phenylpropanoid biosynthesis genes by nitrate, and PAP1 repression is presented as contributing to this. The statement 'They could contribute to the changes in expression of genes in phenylpropanoid and flavonoid biosynthesis' supports this direction."
+        },
+        "Core_Phenotypic_Effect_on_Nutrient": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows PAP1 is strongly repressed by nitrate and that flavonoid/anthocyanin metabolites decrease. But the causal link between PAP1 repression and metabolite decrease is suggested ('They could contribute to the changes') but not directly proven in this study. The word 'could' indicates speculation."
+        },
+        "Other_Phenotypic_Effects": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses PAP1 in the context of secondary metabolism broadly, and N-starved seedlings show 'accumulation of anthocyanins in the leaves' which is reversed by nitrate."
+        },
+        "Regulatory_Mechanism": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows PAP1 transcript levels are strongly reduced by nitrate addition/N-replete conditions, demonstrating transcriptional repression in response to nitrate."
+        },
+        "Regulatory_Relationships": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states PAP1 and PAP2 'are believed to directly act on CHS and genes further downstream in the flavonoid pathway (B. Weisshaar, personal communication).' This supports PAP1->activates->CHS and PAP1->activates->flavonoid pathway genes."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly state the subcellular localization of PAP1. While transcription factors are generally nuclear-localized, this specific information is not provided in the paper."
+        },
+        "Tissue_or_Organ_of_Nutrient_Accumulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'Whole plants were harvested to provide an overview of all the responses in the seedlings.' The analysis was done on whole seedlings."
+        },
+        "Developmental_Stage": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes experiments on day 9 seedlings: 'On day 9, all seedlings (+N and −N) had developed cotyledons and first leaves (Fig. 1).' Figure 1 caption says '9-d-old... Arabidopsis seedlings.'"
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "Table I shows PAP1 is strongly repressed in N-replete conditions (RT-PCR ratio 27.89 for -N vs +N, meaning higher in -N). The text confirms 'transcript levels that plummeted 3 h after NO3− readdition... being reduced up to 50-fold in N-replete seedlings.'"
+        },
+        "Key_Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental design involves nitrate resupply (3 mM KNO3) to N-deprived seedlings, as described in the Results section and Materials and Methods."
+        },
+        "Experimental_Materials": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods confirms 'Wild-type Col-0 Arabidopsis seedlings' and the experiment compares N-starved seedlings with N-resupplied and N-replete seedlings."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses both ATH1 arrays and real-time RT-PCR. Table I shows data from both platforms for PAP1. The text states 'A new real-time RT-PCR platform... was used to confirm the results from the ATH1 arrays.'"
+        },
+        "Nutrient_Assay_or_Profiling_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes HPLC measurement of secondary metabolites (Materials and Methods: 'secondary metabolites as described by Henkes et al. (2001) with slight modifications of the HPLC gradients'), and Figure 5 shows flavonoid/phenylpropanoid metabolite levels."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly uses Affymetrix ATH1 microarray (transcriptomics) and real-time RT-PCR for transcript profiling."
+        },
+        "Gene_Discovery_or_Cloning_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "PAP1 was identified as nitrogen-responsive through the microarray (ATH1) analysis in this study, confirmed by RT-PCR. The paper also references prior genetic studies (Borevitz et al., 2000)."
+        },
+        "Breeding_or_Biofortification_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly discuss breeding or biofortification applications for PAP1. This is an inference/extrapolation not stated in the paper."
+        },
+        "Summary_key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Point 1: Table I shows up to 27.89-fold (RT-PCR) or 8.10-fold (ATH1) change for -N vs +N; the text mentions 'up to 50-fold' for PAP1/PAP2 combined. Point 2: The paper states PAP1 is involved in anthocyanin and flavonoid biosynthesis. Point 3: PAP1 repression is discussed in context of coordinated phenylpropanoid metabolism repression by nitrate. All three points are supported."
+        },
+        "Notes_or_Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states 'MYB75 (At1g56650; PAP1)' and references Borevitz et al. (2000) which named PAP1 (Production of Anthocyanin Pigment 1). The alias is directly from the paper."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 26,
+        "unsupported": 0,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_index": 12,
+      "gene_name": "MYB90/PAP2",
+      "verification": {
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly mentions 'MYB90 (At1g66390; PAP2)' in the Transcriptional Regulators section."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states 'MYB90 (At1g66390; PAP2)' in the text."
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper is entirely about Arabidopsis, and the title states 'Arabidopsis in Response to Nitrogen'."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper title and methods reference Arabidopsis. The full Latin name Arabidopsis thaliana is a standard inference, though not explicitly written out in the provided text. However, Col-0 is the standard A. thaliana ecotype, making this a safe inference."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods explicitly states 'Wild-type Col-0 Arabidopsis seedlings'."
+        },
+        "Gene_Role_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB90/PAP2 is discussed under 'Transcriptional Regulators' and is a member of the MYB transcription factor family per the paper and Table I."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Table I lists PAP2 (At1g66390) under the 'MYB' TF family. The paper discusses it as one of the MYB family members."
+        },
+        "Enzyme_Name_or_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'Genetic studies suggest PAP1 and PAP2 are involved in anthocyanin and flavonoid biosynthesis (Borevitz et al., 2000)' and that they 'directly act on CHS and genes further downstream in the flavonoid pathway'."
+        },
+        "Final_Nutrient_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links PAP1/PAP2 to anthocyanin and flavonoid biosynthesis and shows metabolite data for flavonoids/phenylpropanoids. However, MYB90/PAP2 was not directly tested via knockout/OE in this paper—it was only profiled transcriptionally. The link to anthocyanins/flavonoids as final products is stated but based on prior genetic studies (Borevitz et al., 2000), not direct experimental validation in this paper."
+        },
+        "Final_Nutrient_Product_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Anthocyanins and flavonoids are indeed polyphenols/flavonoids, and the paper discusses them in this context. However, the term 'Polyphenol/Flavonoid' as a class is not explicitly used in the paper—the paper uses 'phenylpropanoid and flavonoid metabolism'. The classification is reasonable but not directly stated."
+        },
+        "Nutrient_Trait_Metric": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper measures metabolite levels (content) of flavonoids and phenylpropanoids (Figure 5), and transcript levels of PAP2."
+        },
+        "Quantitative_Nutrient_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states PAP2 transcript levels were 'reduced up to 50-fold in N-replete seedlings' and Table I shows a ratio of 155.92 for -N vs +N by RT-PCR. The phrase 'up to 50-fold' for repression is directly stated."
+        },
+        "Pathway_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper has a section titled 'Coordinated Repression of the Shikimate Pathway, and Phenylpropanoid and Flavonoid Metabolism' and explicitly links PAP1/PAP2 to changes in phenylpropanoid and flavonoid biosynthesis."
+        },
+        "Metabolic_Step_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PAP2 is a transcription factor regulating the pathway, not an enzyme catalyzing a metabolic step. 'Regulation' is appropriate and consistent with the paper's description."
+        },
+        "Key_Intermediate_Metabolites_Affected": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows that anthocyanins accumulate in N-starved seedlings and that flavonoid/phenylpropanoid metabolites decrease after NO3- addition (Figure 5). PAP1/PAP2 are implicated as contributors. However, the paper does not directly demonstrate that PAP2 specifically causes changes in these metabolites—it only correlates PAP2 repression with pathway gene repression. Anthocyanins and flavonoids are final products rather than 'intermediate' metabolites."
+        },
+        "Flux_or_Direction_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states PAP1/PAP2 'could contribute to the changes in expression of genes in phenylpropanoid and flavonoid biosynthesis seen in Figure 2, B and C,' and these pathways show coordinated repression after NO3- addition."
+        },
+        "Core_Phenotypic_Effect_on_Nutrient": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows PAP2 is strongly repressed by nitrate and that flavonoid/anthocyanin pathway genes are coordinately repressed. The paper suggests PAP2 'could contribute to' these changes but uses cautious language. The direct causal link is suggested but not proven in this paper."
+        },
+        "Other_Phenotypic_Effects": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses PAP2 in the context of secondary metabolism broadly, and its repression is part of a wider reprogramming of secondary metabolism."
+        },
+        "Regulatory_Mechanism": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows PAP2 transcript levels decrease dramatically after nitrate addition (Table I, Figure 7), demonstrating transcriptional repression by nitrate."
+        },
+        "Regulatory_Relationships": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states PAP1 and PAP2 'are believed to directly act on CHS and genes further downstream in the flavonoid pathway (B. Weisshaar, personal communication).' This supports PAP2->activates->CHS and PAP2->activates->flavonoid pathway genes."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly state nuclear localization for PAP2. While transcription factors are generally nuclear, this specific localization is not mentioned in the paper."
+        },
+        "Tissue_or_Organ_of_Nutrient_Accumulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'Whole plants were harvested to provide an overview of all the responses in the seedlings.' PAP2 expression was measured in whole seedlings."
+        },
+        "Developmental_Stage": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states seedlings were harvested on day 9, and Figure 1 shows '9-d-old' seedlings."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows PAP2 transcript levels 'plummeted 3 h after NO3- readdition' and were 'reduced up to 50-fold in N-replete seedlings,' confirming repression by nitrate availability."
+        },
+        "Key_Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental design involves nitrate resupply (3 mM KNO3) to N-deprived seedlings, explicitly described in the paper."
+        },
+        "Experimental_Materials": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses 'Wild-type Col-0 Arabidopsis seedlings' grown in liquid culture, with N-starved seedlings as a key condition."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses ATH1 arrays and real-time RT-PCR to measure PAP2 expression. Table I shows both ATH1 and RT-PCR data for At1g66390."
+        },
+        "Nutrient_Assay_or_Profiling_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes HPLC measurement of secondary metabolites including flavonoids in Materials and Methods: 'secondary metabolites as described by Henkes et al. (2001) with slight modifications of the HPLC gradients.' Figure 5 shows these metabolite data."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly uses Affymetrix ATH1 microarray transcriptomics and real-time RT-PCR, both of which are described and used for PAP2."
+        },
+        "Gene_Discovery_or_Cloning_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "PAP2 was not discovered or cloned in this paper. It was previously known from genetic studies (Borevitz et al., 2000). The microarray analysis identified it as nitrate-responsive, but calling this 'gene discovery' is a stretch."
+        },
+        "Breeding_or_Biofortification_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not discuss any breeding or biofortification applications for PAP2. This is an inference not supported by the paper text."
+        },
+        "Summary_key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are supported: (1) Table I shows up to ~156-fold repression by RT-PCR in N-replete conditions (paper says 'up to 50-fold' based on ATH1); (2) paper states PAP2 is involved in anthocyanin and flavonoid biosynthesis; (3) PAP1 and PAP2 are discussed together as coordinately repressed and contributing to phenylpropanoid metabolism changes."
+        },
+        "Notes_or_Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to the gene as 'MYB90 (At1g66390; PAP2)' confirming it is also known as PAP2 (Production of Anthocyanin Pigment 2). The full expansion 'Production of Anthocyanin Pigment 2' is not in the paper but is the established meaning of PAP2 referenced via Borevitz et al. (2000)."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 26,
+        "unsupported": 0,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_index": 13,
+      "gene_name": "At1g13300",
+      "verification": {
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "At1g13300 is explicitly mentioned multiple times in the paper, including in Table I, Figure 7 text, and the discussion of GARP-like TF genes."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "At1g13300 is the AGI code used throughout the paper (Table I, text) as the gene identifier."
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper is entirely about Arabidopsis, and At1g13300 is an Arabidopsis gene identifier."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper title and text explicitly refer to Arabidopsis. The full Latin name Arabidopsis thaliana is standard for Col-0, though the paper mostly uses 'Arabidopsis'."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The Materials and Methods section explicitly states 'Wild-type Col-0 Arabidopsis seedlings'."
+        },
+        "Gene_Role_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "At1g13300 is listed in Table I as a transcription factor gene, classified in the MYB TF family. The paper discusses it as a potential transcriptional regulator."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Table I classifies At1g13300 in the 'MYB' TF family. The text describes it as a member of the 'G2-like (MYB-like) GARP family' (Riechmann, 2002). So 'GARP (MYB-like) transcription factor' is supported."
+        },
+        "Enzyme_Name_or_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper describes At1g13300 as a nitrate-responsive transcription factor but does not explicitly call it a 'nitrate-responsive transcriptional regulator.' Its function is not characterized in the paper; it is only identified as strongly induced by nitrate. The label is a reasonable inference but not an explicit statement in the paper."
+        },
+        "Final_Nutrient_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not link At1g13300 to any specific final nutrient product. It is identified only as a nitrate-responsive TF gene. No downstream metabolite targets are specified for this gene."
+        },
+        "Final_Nutrient_Product_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No final nutrient product is attributed to At1g13300 in the paper, so there is no basis to assign a product class."
+        },
+        "Nutrient_Trait_Metric": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not associate At1g13300 with any specific nutrient content trait. Only transcript levels of this gene itself were measured."
+        },
+        "Quantitative_Nutrient_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "Table I shows At1g13300 with an RT-PCR ratio of 53.05 for N 30' versus -N condition. The text also states these genes 'are induced by >50-fold...after 30 min NO3- addition (Table I).'"
+        },
+        "Pathway_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not assign At1g13300 to a specific 'Nitrogen metabolism regulation' pathway. It is identified as nitrate-responsive and belongs to the GARP family involved in phosphorus metabolism and other processes. 'Nitrogen metabolism regulation' is an inference, not explicitly stated."
+        },
+        "Metabolic_Step_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "At1g13300 is a transcription factor, so 'Regulation' is an appropriate and supported classification."
+        },
+        "Key_Intermediate_Metabolites_Affected": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not identify any specific metabolites affected by At1g13300. No functional characterization (knockout, overexpression) was performed."
+        },
+        "Flux_or_Direction_Change": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper provides no evidence that At1g13300 'regulates nitrogen-responsive genes.' It was only identified as a nitrate-responsive TF; no downstream targets are described."
+        },
+        "Core_Phenotypic_Effect_on_Nutrient": {
+          "verdict": "SUPPORTED",
+          "reason": "Table I shows a 53.05-fold induction by RT-PCR at 30 min after nitrate addition. The text confirms '>50-fold' induction after 30 min NO3- addition."
+        },
+        "Other_Phenotypic_Effects": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states At1g13300 'displays root-specific expression' (Czechowski et al., 2004; Table I footnote e)."
+        },
+        "Regulatory_Mechanism": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene's transcript is strongly induced by nitrate addition, which constitutes transcriptional induction by nitrate."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly state the subcellular localization of At1g13300. While transcription factors are generally assumed to be nuclear, this is not stated in the paper."
+        },
+        "Tissue_or_Organ_of_Nutrient_Accumulation": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states root-specific expression for this gene, and whole seedlings were analyzed. However, 'nutrient accumulation' in roots is not directly stated — the paper measured transcript levels, not nutrient accumulation in specific organs for this gene."
+        },
+        "Developmental_Stage": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states seedlings were grown for 7 days, shifted to -N for 2 days, and harvested/treated on day 9. So '9-day-old seedlings' is correct."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states At1g13300 has root-specific expression and is strongly induced by nitrate (53-fold by RT-PCR, 18.51-fold on ATH1 at 30 min)."
+        },
+        "Key_Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental design is nitrate (3 mM KNO3) resupply after 2 days of N deprivation, exactly as described."
+        },
+        "Experimental_Materials": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses wild-type Col-0 Arabidopsis seedlings, including N-starved seedlings for the nitrate resupply experiments."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Table I explicitly shows data from both ATH1 arrays and RT-PCR for At1g13300. The text confirms both platforms were used."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper used Affymetrix ATH1 microarray transcriptomics and real-time RT-PCR, both of which measured At1g13300."
+        },
+        "Gene_Discovery_or_Cloning_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "At1g13300 was identified through the combined microarray and RT-PCR analysis as described in the paper."
+        },
+        "Breeding_or_Biofortification_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not describe At1g13300 as a 'potential master regulator of nitrogen responses.' It is identified as one of many nitrate-responsive TF genes. No breeding or biofortification value is discussed."
+        },
+        "Summary_key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The three findings are all supported: (1) 53-fold induction by RT-PCR within 30 min of nitrate addition (Table I), (2) root-specific expression (stated in text), (3) GARP family member — the paper discusses GARP family involvement in phosphorus metabolism and other processes."
+        },
+        "Notes_or_Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states At1g13300 has a segmental duplicate At3g25790, and that 'this pair arose by segmental chromosome duplication' with preserved expression patterns regarding NO3- induction and organ specificity."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Final_Nutrient_Product",
+          "old_value": "Multiple nitrogen-related metabolites",
+          "new_value": "NA",
+          "reason": "The paper does not link At1g13300 to any specific final nutrient product. It is identified only as a nitrate-responsive TF gene. No downstream metabolite targets are specified for this gene."
+        },
+        {
+          "field": "Final_Nutrient_Product_Class",
+          "old_value": "Other",
+          "new_value": "NA",
+          "reason": "No final nutrient product is attributed to At1g13300 in the paper, so there is no basis to assign a product class."
+        },
+        {
+          "field": "Nutrient_Trait_Metric",
+          "old_value": "content",
+          "new_value": "NA",
+          "reason": "The paper does not associate At1g13300 with any specific nutrient content trait. Only transcript levels of this gene itself were measured."
+        },
+        {
+          "field": "Key_Intermediate_Metabolites_Affected",
+          "old_value": [
+            "Multiple nitrogen metabolites"
+          ],
+          "new_value": "NA",
+          "reason": "The paper does not identify any specific metabolites affected by At1g13300. No functional characterization (knockout, overexpression) was performed."
+        },
+        {
+          "field": "Flux_or_Direction_Change",
+          "old_value": "Regulates nitrogen-responsive genes",
+          "new_value": "NA",
+          "reason": "The paper provides no evidence that At1g13300 'regulates nitrogen-responsive genes.' It was only identified as a nitrate-responsive TF; no downstream targets are described."
+        },
+        {
+          "field": "Breeding_or_Biofortification_Value",
+          "old_value": "Potential master regulator of nitrogen responses",
+          "new_value": "NA",
+          "reason": "The paper does not describe At1g13300 as a 'potential master regulator of nitrogen responses.' It is identified as one of many nitrate-responsive TF genes. No breeding or biofortification value is discussed."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 6,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_index": 14,
+      "gene_name": "At3g25790",
+      "verification": {
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "At3g25790 is explicitly mentioned multiple times in the paper, including in Table I and in the text discussing GARP-like TF genes."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "At3g25790 is the AGI code used throughout the paper (Table I, Figure 7 discussion, and text)."
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper is explicitly about Arabidopsis, stated in title and throughout."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper title and text explicitly refer to Arabidopsis, and the Materials and Methods specify 'Wild-type Col-0 Arabidopsis', which is Arabidopsis thaliana."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods explicitly states 'Wild-type Col-0 Arabidopsis seedlings'."
+        },
+        "Gene_Role_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "At3g25790 is listed in Table I as a transcription factor (TF) gene, classified under MYB-like family. The paper discusses it as a potential regulatory/transcriptional regulator."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Table I lists At3g25790 under the 'MYB-like' TF family. The text explicitly refers to At1g13300 and At3g25790 as 'root-specific GARP-like (MYB-like) TF genes'. So 'GARP (MYB-like) transcription factor' is supported."
+        },
+        "Enzyme_Name_or_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper identifies At3g25790 as a nitrate-responsive transcription factor but does not explicitly call it a 'nitrate-responsive transcriptional regulator'. It is described as a TF gene induced by nitrate. The exact functional name is not stated; the description is a reasonable inference but not an explicit label from the paper."
+        },
+        "Final_Nutrient_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not link At3g25790 to any specific final nutrient product. It is identified as a nitrate-responsive TF but no downstream metabolic products are specified for this gene. 'Multiple nitrogen-related metabolites' is speculative."
+        },
+        "Final_Nutrient_Product_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "No specific nutrient product class is attributed to this gene in the paper. The gene is identified only as a nitrate-responsive TF without demonstrated effects on specific nutrient products."
+        },
+        "Nutrient_Trait_Metric": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper reports transcript level changes for this gene, not nutrient content changes. 'Content' as a trait metric is not directly applicable to what was measured for this gene."
+        },
+        "Quantitative_Nutrient_Change": {
+          "verdict": "SUPPORTED",
+          "reason": "Table I shows At3g25790 with an RT-PCR value of 457.35 for 'N 30' versus -N', confirming the 457-fold induction by RT-PCR."
+        },
+        "Pathway_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly assign At3g25790 to a pathway called 'Nitrogen metabolism regulation'. It is identified as a nitrate-responsive TF, but no specific pathway name is given."
+        },
+        "Metabolic_Step_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "As a transcription factor, At3g25790 plays a regulatory role. The paper identifies it among regulatory/transcriptional regulator genes."
+        },
+        "Key_Intermediate_Metabolites_Affected": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not identify any specific metabolites affected by At3g25790. No functional characterization linking this TF to specific metabolite changes is provided."
+        },
+        "Flux_or_Direction_Change": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state that At3g25790 'regulates nitrogen-responsive genes'. It is identified as a nitrate-responsive TF itself, but no downstream target genes or regulatory functions are demonstrated."
+        },
+        "Core_Phenotypic_Effect_on_Nutrient": {
+          "verdict": "SUPPORTED",
+          "reason": "Table I confirms 457.35-fold induction by RT-PCR at 30 min after nitrate addition. The text also states these genes 'are induced by >50- and >400-fold in the RT-PCR screen after 30 min NO3- addition', with >400-fold referring to At3g25790."
+        },
+        "Other_Phenotypic_Effects": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states At3g25790 displays 'root-specific expression' (text discussing GARP-like TFs and Table I footnote e)."
+        },
+        "Regulatory_Mechanism": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper demonstrates that At3g25790 transcript levels increase dramatically after nitrate addition, showing transcriptional induction by nitrate."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly state the subcellular localization of At3g25790. 'Nucleus' is a reasonable inference for a transcription factor but is not stated in the paper."
+        },
+        "Tissue_or_Organ_of_Nutrient_Accumulation": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states root-specific expression for At3g25790, and experiments used whole seedlings. However, 'nutrient accumulation' in roots/whole seedlings is not what the paper describes - it describes transcript expression patterns, not nutrient accumulation."
+        },
+        "Developmental_Stage": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states seedlings were grown for 7 days then shifted for 2 days, with harvest on day 9. '9-day-old seedlings' is correct."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states At3g25790 has root-specific expression and is strongly induced by nitrate (457-fold by RT-PCR, 5.34-fold by ATH1)."
+        },
+        "Key_Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental design involved N deprivation followed by 3 mM KNO3 resupply, which is exactly 'nitrate resupply after N deprivation'."
+        },
+        "Experimental_Materials": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods confirms 'Wild-type Col-0 Arabidopsis seedlings' and the experiment involved N-starved seedlings."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper used both ATH1 Affymetrix arrays and real-time RT-PCR for transcript profiling. Table I shows data from both platforms for At3g25790."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly uses Affymetrix ATH1 microarray transcriptomics and real-time RT-PCR, both confirmed in Table I for this gene."
+        },
+        "Gene_Discovery_or_Cloning_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "At3g25790 was identified through the combination of microarray (ATH1) and RT-PCR analysis as described in the paper."
+        },
+        "Breeding_or_Biofortification_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not describe At3g25790 as a 'potential master regulator of nitrogen responses'. It is one of many nitrate-responsive TFs identified. No breeding or biofortification value is discussed."
+        },
+        "Summary_key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are supported: (1) 457-fold induction by RT-PCR within 30 min (Table I: 457.35); (2) root-specific expression (text and Table I footnote e); (3) segmental duplicate of At1g13300 with conserved nitrate response (text explicitly states this, and Table I shows At3g25790's Duplication column is blank but At1g13300 lists At3g25790 as its duplicate)."
+        },
+        "Notes_or_Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states At1g13300 and At3g25790 are root-specific GARP-like TF genes related by segmental duplication. At3g25790 shows >400-fold induction (457.35) versus At1g13300's >50-fold (53.05), confirming it shows even stronger induction. Note: Table I actually lists At1g13300 with duplication partner At3g25790, and At3g25790's duplication column appears blank in Table I, but the text clearly identifies them as a duplicated pair."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Key_Intermediate_Metabolites_Affected",
+          "old_value": [
+            "Multiple nitrogen metabolites"
+          ],
+          "new_value": "NA",
+          "reason": "The paper does not identify any specific metabolites affected by At3g25790. No functional characterization linking this TF to specific metabolite changes is provided."
+        },
+        {
+          "field": "Flux_or_Direction_Change",
+          "old_value": "Regulates nitrogen-responsive genes",
+          "new_value": "NA",
+          "reason": "The paper does not state that At3g25790 'regulates nitrogen-responsive genes'. It is identified as a nitrate-responsive TF itself, but no downstream target genes or regulatory functions are demonstrated."
+        },
+        {
+          "field": "Breeding_or_Biofortification_Value",
+          "old_value": "Potential master regulator of nitrogen responses",
+          "new_value": "NA",
+          "reason": "The paper does not describe At3g25790 as a 'potential master regulator of nitrogen responses'. It is one of many nitrate-responsive TFs identified. No breeding or biofortification value is discussed."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 3,
+        "uncertain": 7
+      }
+    }
+  ],
   "summary": {
-    "total_fields": 0,
-    "supported": 0,
-    "unsupported": 0,
-    "uncertain": 0,
-    "total_corrections": 0
+    "total_fields": 459,
+    "supported": 312,
+    "unsupported": 43,
+    "uncertain": 104,
+    "total_corrections": 43
   }
 }

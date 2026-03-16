@@ -32,6 +32,11 @@ export SCHEMA_PATH="${BASE_DIR}/configs/nutri_plant.json"
 export MODEL="${MODEL:-Vendor2/Claude-4.6-opus}"
 export TEMPERATURE="${TEMPERATURE:-0.7}"
 
+# ─── Fallback 模型（当主 API 因危险词被拦截时自动切换）────
+export FALLBACK_API_KEY="${FALLBACK_API_KEY:-sk-XiAOfJ6FqbU6tsGO9JfW7Q}"
+export FALLBACK_BASE_URL="${FALLBACK_BASE_URL:-https://ai-gateway-internal.dp.tech/v1}"
+export FALLBACK_MODEL="${FALLBACK_MODEL:-volcengine/deepseek-v3-2-251201}"
+
 # ─── 运行模式 ─────────────────────────────────────────────
 MODE="${1:-all}"
 TEST_INDEX="${2:-1}"

@@ -53,6 +53,16 @@ client = OpenAI(
     base_url=os.getenv("OPENAI_BASE_URL"),
 )
 
+# Fallback 客户端（DeepSeek）：当主 API 因危险词被拦截时自动切换
+fallback_client = None
+FALLBACK_MODEL = os.getenv("FALLBACK_MODEL", "")
+if os.getenv("FALLBACK_API_KEY") and os.getenv("FALLBACK_BASE_URL"):
+    fallback_client = OpenAI(
+        api_key=os.getenv("FALLBACK_API_KEY"),
+        base_url=os.getenv("FALLBACK_BASE_URL"),
+    )
+    print(f"🔄 验证 Fallback 已配置: {FALLBACK_MODEL}")
+
 MODEL = os.getenv("MODEL", "Vendor2/Claude-4.6-opus")
 tracker = TokenTracker(model=MODEL)
 
@@ -194,30 +204,11 @@ def extract_non_na_fields(gene_dict):
     return fields
 
 
-def verify_gene_via_api(md_content, gene_data, gene_index):
-    """调用 LLM API (function_calling) 验证单个基因的所有非 NA 字段"""
-    non_na_fields = extract_non_na_fields(gene_data)
-
-    if not non_na_fields:
-        return {}
-
-    gene_name = gene_data.get("Gene_Name", f"Gene_{gene_index}")
-    print(f"  🔍 验证基因 [{gene_index}]: {gene_name} ({len(non_na_fields)} 个字段)...")
-
-    fields_text = json.dumps(non_na_fields, indent=2, ensure_ascii=False)
-
-    # ✅ 不再截断，发送完整预处理后的论文全文
-    user_prompt = (
-        f"## 论文原文 (Markdown)\n\n{md_content}\n\n"
-        f"---\n\n"
-        f"## 待验证的基因字段 (Gene #{gene_index}: {gene_name})\n\n"
-        f"```json\n{fields_text}\n```\n\n"
-        f"请逐字段验证，对每个字段给出 SUPPORTED/UNSUPPORTED/UNCERTAIN 判定和理由。"
-    )
-
+def _call_verify_api(api_client, model_name, user_prompt, gene_name):
+    """调用指定 API 客户端进行验证，返回 (result_dict, success) 元组。"""
     try:
-        response = client.chat.completions.create(
-            model=MODEL,
+        response = api_client.chat.completions.create(
+            model=model_name,
             messages=[
                 {"role": "system", "content": VERIFY_SYSTEM_PROMPT},
                 {"role": "user", "content": user_prompt},
@@ -231,13 +222,18 @@ def verify_gene_via_api(md_content, gene_data, gene_index):
 
         message = response.choices[0].message
 
-        if message.tool_calls and len(message.tool_calls) > 0:
-            # ✅ Function calling 成功
+        has_tool_calls = message.tool_calls and len(message.tool_calls) > 0
+        has_content = message.content and message.content.strip()
+
+        if not has_tool_calls and not has_content:
+            print(f"    ⚠️  [{model_name}] API 返回空内容")
+            return {}, False
+
+        if has_tool_calls:
             tool_call = message.tool_calls[0]
             args = json.loads(tool_call.function.arguments)
             field_verdicts = args.get("field_verdicts", [])
 
-            # 转为 {field_name: {verdict, reason}} 格式（兼容原有代码）
             result = {}
             for item in field_verdicts:
                 fname = item.get("field_name", "")
@@ -245,20 +241,54 @@ def verify_gene_via_api(md_content, gene_data, gene_index):
                     "verdict": item.get("verdict", "UNCERTAIN"),
                     "reason": item.get("reason", "")
                 }
-            print(f"    ✅ Function calling 验证成功 ({len(result)} 个字段)")
-            return result
+            print(f"    ✅ [{model_name}] Function calling 验证成功 ({len(result)} 个字段)")
+            return result, True
         else:
-            # Fallback: 正则提取
-            print(f"    ⚠️  Function calling 未触发，回退到正则提取")
+            print(f"    ⚠️  [{model_name}] Function calling 未触发，回退到正则提取")
             raw = message.content or ""
-            return _fallback_parse_verification(raw)
+            result = _fallback_parse_verification(raw)
+            return result, bool(result)
 
     except json.JSONDecodeError as e:
-        print(f"    ⚠️  JSON 解析失败: {e}")
-        return {}
+        print(f"    ⚠️  [{model_name}] JSON 解析失败: {e}")
+        return {}, False
     except Exception as e:
-        print(f"    ❌ API 调用失败: {e}")
+        print(f"    ❌ [{model_name}] API 调用失败: {e}")
+        return {}, False
+
+
+def verify_gene_via_api(md_content, gene_data, gene_index):
+    """调用 LLM API (function_calling) 验证单个基因的所有非 NA 字段，支持 fallback"""
+    non_na_fields = extract_non_na_fields(gene_data)
+
+    if not non_na_fields:
         return {}
+
+    gene_name = gene_data.get("Gene_Name", f"Gene_{gene_index}")
+    print(f"  🔍 验证基因 [{gene_index}]: {gene_name} ({len(non_na_fields)} 个字段)...")
+
+    fields_text = json.dumps(non_na_fields, indent=2, ensure_ascii=False)
+
+    user_prompt = (
+        f"## 论文原文 (Markdown)\n\n{md_content}\n\n"
+        f"---\n\n"
+        f"## 待验证的基因字段 (Gene #{gene_index}: {gene_name})\n\n"
+        f"```json\n{fields_text}\n```\n\n"
+        f"请逐字段验证，对每个字段给出 SUPPORTED/UNSUPPORTED/UNCERTAIN 判定和理由。"
+    )
+
+    # ── 第一次尝试：主 API ─────────────────────────────────────────────────
+    result, success = _call_verify_api(client, MODEL, user_prompt, gene_name)
+
+    # ── Fallback：如果主 API 失败且 DeepSeek fallback 可用 ─────────────────
+    if not success and fallback_client:
+        print(f"    🔄 主 API 验证失败，切换到 Fallback ({FALLBACK_MODEL})...")
+        result, success = _call_verify_api(fallback_client, FALLBACK_MODEL, user_prompt, gene_name)
+
+    if not success:
+        print(f"    ⚠️  所有 API 均验证失败: {gene_name}")
+
+    return result
 
 
 def _fallback_parse_verification(raw):

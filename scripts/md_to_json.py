@@ -13,6 +13,16 @@ client = OpenAI(
     base_url=os.getenv("OPENAI_BASE_URL")  # 确保加上了 /v1
 )
 
+# Fallback 客户端（DeepSeek）：当主 API 因危险词被拦截时自动切换
+fallback_client = None
+FALLBACK_MODEL = os.getenv("FALLBACK_MODEL", "")
+if os.getenv("FALLBACK_API_KEY") and os.getenv("FALLBACK_BASE_URL"):
+    fallback_client = OpenAI(
+        api_key=os.getenv("FALLBACK_API_KEY"),
+        base_url=os.getenv("FALLBACK_BASE_URL"),
+    )
+    print(f"🔄 Fallback 已配置: {FALLBACK_MODEL}")
+
 # Token 用量追踪
 tracker = TokenTracker(model=os.getenv("MODEL", "Vendor2/Claude-4.6-opus"))
 
@@ -145,6 +155,153 @@ def resolve_test_files(files):
 
 
 # 6. 核心提取逻辑
+
+def _repair_truncated_json(json_str):
+    """尝试修复被截断的 JSON 字符串。
+    
+    策略：
+      1. 找到最后一个完整的 '}' 对象结尾
+      2. 补全缺失的 ']' 和 '}'
+    """
+    # 先尝试直接解析
+    try:
+        return json.loads(json_str), False
+    except json.JSONDecodeError:
+        pass
+
+    # 找到最后一个完整的基因对象（以 '}' 结尾）
+    # 从后往前找最后一个 '}'
+    last_brace = json_str.rfind('}')
+    if last_brace == -1:
+        return None, True
+
+    # 截取到最后一个 '}' 并尝试补全
+    truncated = json_str[:last_brace + 1]
+
+    # 计算缺失的括号
+    open_braces = truncated.count('{') - truncated.count('}')
+    open_brackets = truncated.count('[') - truncated.count(']')
+
+    # 补全
+    repair = truncated + ']' * open_brackets + '}' * open_braces
+
+    try:
+        data = json.loads(repair)
+        return data, True
+    except json.JSONDecodeError:
+        # 更激进的修复：找到 "Genes": [ 后的最后一个完整 },
+        # 然后截断并补全
+        genes_pos = json_str.find('"Genes"')
+        if genes_pos == -1:
+            return None, True
+
+        # 从 Genes 数组开始，找每个 }, 的位置
+        bracket_pos = json_str.find('[', genes_pos)
+        if bracket_pos == -1:
+            return None, True
+
+        # 找最后一个 "}, " 或 "}," 模式（完整基因对象之间的分隔）
+        import re
+        # 匹配基因对象的结尾 }，后面跟 , 或空白
+        endings = list(re.finditer(r'\}\s*,', json_str[bracket_pos:]))
+        if not endings:
+            return None, True
+
+        last_complete = bracket_pos + endings[-1].end() - 1  # 指向 ','
+        # 截取到最后一个完整对象，去掉尾部的逗号
+        partial = json_str[:last_complete].rstrip(',').rstrip()
+
+        # 计算缺失的括号并补全
+        open_braces2 = partial.count('{') - partial.count('}')
+        open_brackets2 = partial.count('[') - partial.count(']')
+        repair2 = partial + '}' * max(0, open_braces2)  # 先补 }
+        # 重新计算
+        open_brackets2 = repair2.count('[') - repair2.count(']')
+        repair2 = repair2 + ']' * max(0, open_brackets2)
+        open_braces3 = repair2.count('{') - repair2.count('}')
+        repair2 = repair2 + '}' * max(0, open_braces3)
+
+        try:
+            data = json.loads(repair2)
+            return data, True
+        except json.JSONDecodeError:
+            return None, True
+
+
+def _call_extract_api(api_client, model, content, name):
+    """调用指定的 API 客户端进行提取，返回 (json_data, success) 元组。
+    
+    success 含义:
+      - True:  成功提取到有 Genes 的结果
+      - False: API 返回空内容 / 没有 Genes / 异常
+    """
+    try:
+        response = api_client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": base_prompt},
+                {"role": "user", "content": f'Analyze this literature and extract all nutrient metabolism gene information:\n\n{content}'}
+            ],
+            tools=[EXTRACT_TOOL],
+            tool_choice={"type": "function", "function": {"name": "extract_nutrient_genes"}},
+            temperature=float(os.getenv("TEMPERATURE", "0.7")),
+            max_tokens=16384,
+        )
+
+        # 记录 Token 用量
+        tracker.add(response, stage="extract", file=name)
+
+        message = response.choices[0].message
+
+        has_tool_calls = message.tool_calls and len(message.tool_calls) > 0
+        has_content = message.content and message.content.strip()
+
+        if not has_tool_calls and not has_content:
+            print(f"  ⚠️  [{model}] API 返回空内容: {name}")
+            return None, False
+
+        if has_tool_calls:
+            tool_call = message.tool_calls[0]
+            json_str = tool_call.function.arguments
+
+            # 尝试解析 JSON，如果截断则自动修复
+            json_data, was_repaired = _repair_truncated_json(json_str)
+            if json_data is None:
+                print(f"  ❌ [{model}] JSON 无法解析也无法修复: {name}")
+                return None, False
+            if was_repaired:
+                genes_count = len(json_data.get("Genes", []))
+                print(f"  🔧 [{model}] 截断 JSON 已自动修复 (抢救到 {genes_count} 个基因)")
+
+            # 防御：LLM 偶发把 Genes 数组序列化为字符串
+            if isinstance(json_data.get("Genes"), str):
+                try:
+                    json_data["Genes"] = json.loads(json_data["Genes"])
+                    print(f"  🔧 自动修复: Genes 从字符串转为列表 ({len(json_data['Genes'])} 个基因)")
+                except json.JSONDecodeError:
+                    print(f"  ⚠️  Genes 是截断的字符串，无法自动修复")
+            print(f"  ✅ [{model}] Function calling 成功提取")
+        else:
+            print(f"  ⚠️  [{model}] Function calling 未触发，回退到正则提取")
+            raw_result = message.content or ""
+            json_data = _fallback_extract_json(raw_result, name)
+
+        # 检查是否有有效的 Genes
+        genes = json_data.get("Genes", [])
+        if isinstance(genes, list) and len(genes) == 0:
+            print(f"  ⚠️  [{model}] 提取结果中 Genes 为空列表")
+            return json_data, False
+
+        return json_data, True
+
+    except json.JSONDecodeError as e:
+        print(f"  ❌ [{model}] JSON 解析失败: {name}: {e}")
+        return None, False
+    except Exception as e:
+        print(f"  ❌ [{model}] 处理文件 {name} 时发生错误: {str(e)}")
+        return None, False
+
+
 def ai_response(path):
     name = os.path.basename(path)
     filename = os.path.splitext(name)[0]
@@ -164,75 +321,41 @@ def ai_response(path):
     content = preprocess_md(content)
     print(f"  📏 文本预处理: {original_len:,} → {len(content):,} 字符 (节省 {original_len - len(content):,} 字符)")
 
-    try:
-        response = client.chat.completions.create(
-            model=os.getenv("MODEL", "Vendor2/Claude-4.6-opus"),
-            messages=[
-                {"role": "system", "content": base_prompt},
-                {"role": "user", "content": f'Analyze this literature and extract all nutrient metabolism gene information:\n\n{content}'}
-            ],
-            tools=[EXTRACT_TOOL],
-            tool_choice={"type": "function", "function": {"name": "extract_nutrient_genes"}},
-            temperature=float(os.getenv("TEMPERATURE", "0.7")),
-        )
-        
-        # 记录 Token 用量
-        tracker.add(response, stage="extract", file=name)
-        
-        # 从 function_calling 响应中提取 JSON
-        message = response.choices[0].message
+    primary_model = os.getenv("MODEL", "Vendor2/Claude-4.6-opus")
 
-        # 检测 API 返回空内容
-        has_tool_calls = message.tool_calls and len(message.tool_calls) > 0
-        has_content = message.content and message.content.strip()
-        if not has_tool_calls and not has_content:
-            print(f"  ⚠️  API 返回空内容: {name}，跳过此文件")
-            failed_files.append(name)
-            # 记录错误到 reports
-            os.makedirs(paper_dir, exist_ok=True)
-            error_report = {
-                "file": name,
-                "error": "API returned empty response",
-                "timestamp": datetime.now().isoformat(),
-            }
-            error_path = os.path.join(paper_dir, "extraction-error.json")
-            with open(error_path, 'w', encoding='utf-8') as f:
-                json.dump(error_report, f, indent=2, ensure_ascii=False)
-            print(f"  📋 错误已记录: {error_path}")
-            return
+    # ── 第一次尝试：主 API ─────────────────────────────────────────────────
+    print(f"  🔵 使用主 API ({primary_model}) 提取...")
+    json_data, success = _call_extract_api(client, primary_model, content, name)
 
-        if has_tool_calls:
-            # ✅ 成功走 function_calling 路径
-            tool_call = message.tool_calls[0]
-            json_str = tool_call.function.arguments
-            json_data = json.loads(json_str)
-            # 防御：LLM 偶发把 Genes 数组序列化为字符串
-            if isinstance(json_data.get("Genes"), str):
-                try:
-                    json_data["Genes"] = json.loads(json_data["Genes"])
-                    print(f"  🔧 自动修复: Genes 从字符串转为列表 ({len(json_data['Genes'])} 个基因)")
-                except json.JSONDecodeError:
-                    print(f"  ⚠️  Genes 是截断的字符串，无法自动修复，需要重新提取")
-            print(f"  ✅ Function calling 成功提取")
-        else:
-            # Fallback: 如果 API 不支持 function_calling，回退到正则提取
-            print(f"  ⚠️  Function calling 未触发，回退到正则提取")
-            raw_result = message.content or ""
-            json_data = _fallback_extract_json(raw_result, name)
+    # ── Fallback：如果主 API 失败且 DeepSeek fallback 可用 ─────────────────
+    if not success and fallback_client:
+        print(f"  🔄 主 API 失败，自动切换到 Fallback ({FALLBACK_MODEL})...")
+        json_data, success = _call_extract_api(fallback_client, FALLBACK_MODEL, content, name)
 
-        final_output = json.dumps(json_data, indent=2, ensure_ascii=False)
-
-        # 保存结果到 reports/{paper-dir}/extraction.json
+    # ── 处理最终结果 ──────────────────────────────────────────────────────
+    if not success or json_data is None:
+        print(f"  ⚠️  所有 API 均失败: {name}")
+        failed_files.append(name)
         os.makedirs(paper_dir, exist_ok=True)
-        with open(output_path, 'w', encoding='utf-8') as f:
-            f.write(final_output)
-        
-        print(f"  ✅ 成功处理: {name} -> {output_path}")
+        error_report = {
+            "file": name,
+            "error": "All APIs failed (empty response or no Genes)",
+            "timestamp": datetime.now().isoformat(),
+        }
+        error_path = os.path.join(paper_dir, "extraction-error.json")
+        with open(error_path, 'w', encoding='utf-8') as f:
+            json.dump(error_report, f, indent=2, ensure_ascii=False)
+        print(f"  📋 错误已记录: {error_path}")
+        return
 
-    except json.JSONDecodeError as e:
-        print(f"  ❌ JSON 解析失败: {name}: {e}")
-    except Exception as e:
-        print(f"  ❌ 处理文件 {name} 时发生错误: {str(e)}")
+    final_output = json.dumps(json_data, indent=2, ensure_ascii=False)
+
+    # 保存结果到 reports/{paper-dir}/extraction.json
+    os.makedirs(paper_dir, exist_ok=True)
+    with open(output_path, 'w', encoding='utf-8') as f:
+        f.write(final_output)
+
+    print(f"  ✅ 成功处理: {name} -> {output_path}")
 
 
 def _fallback_extract_json(raw_result, name):
