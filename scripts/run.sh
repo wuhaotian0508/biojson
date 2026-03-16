@@ -18,6 +18,13 @@
 
 # ─── 基础路径 ─────────────────────────────────────────────
 export BASE_DIR="/data/haotianwu/biojson"
+
+# ─── 加载 .env 敏感配置（API Key 等，不上传 GitHub）──────
+if [ -f "${BASE_DIR}/.env" ]; then
+  set -a
+  source "${BASE_DIR}/.env"
+  set +a
+fi
 export MD_DIR="${BASE_DIR}/md"
 export JSON_DIR="${BASE_DIR}/json"
 export REPORTS_DIR="${BASE_DIR}/reports"
@@ -33,9 +40,10 @@ export MODEL="${MODEL:-Vendor2/Claude-4.6-opus}"
 export TEMPERATURE="${TEMPERATURE:-0.7}"
 
 # ─── Fallback 模型（当主 API 因危险词被拦截时自动切换）────
-export FALLBACK_API_KEY="${FALLBACK_API_KEY:-sk-XiAOfJ6FqbU6tsGO9JfW7Q}"
-export FALLBACK_BASE_URL="${FALLBACK_BASE_URL:-https://ai-gateway-internal.dp.tech/v1}"
-export FALLBACK_MODEL="${FALLBACK_MODEL:-volcengine/deepseek-v3-2-251201}"
+# 密钥从 .env 读取，不硬编码（防止泄露到 GitHub）
+export FALLBACK_API_KEY="${FALLBACK_API_KEY:-}"
+export FALLBACK_BASE_URL="${FALLBACK_BASE_URL:-}"
+export FALLBACK_MODEL="${FALLBACK_MODEL:-}"
 
 # ─── 运行模式 ─────────────────────────────────────────────
 MODE="${1:-all}"
