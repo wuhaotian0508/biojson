@@ -12,6 +12,7 @@
 #   bash scripts/run.sh test 3       # 测试模式: 仅处理第 3 个文件
 #   bash scripts/run.sh test new     # 测试模式: 按文件名匹配（可省略 .md）
 #   bash scripts/run.sh rerun        # 强制全部重跑（忽略已有结果）
+#   bash scripts/run.sh rollback plcell  # 回退指定文件（删除 JSON，移回 MD）
 #   FORCE_RERUN=1 bash scripts/run.sh extract  # 强制重跑提取
 #
 # ═══════════════════════════════════════════════════════════
@@ -32,8 +33,8 @@ export TOKEN_USAGE_DIR="${BASE_DIR}/token-usage"
 export PROCESSED_DIR="${MD_DIR}/processed"
 
 # ─── 配置文件 ─────────────────────────────────────────────
-export PROMPT_PATH="${BASE_DIR}/configs/nutri_plant.txt"
-export SCHEMA_PATH="${BASE_DIR}/configs/nutri_plant.json"
+export PROMPT_PATH="${BASE_DIR}/configs/nutri_gene_prompt_v2.txt"
+export SCHEMA_PATH="${BASE_DIR}/configs/nutri_gene_schema_v2.json"
 
 # ─── 模型参数 ─────────────────────────────────────────────
 export MODEL="${MODEL:-Vendor2/Claude-4.6-opus}"
@@ -62,6 +63,9 @@ if [ "$MODE" = "test" ]; then
     echo "   测试文件: ${TEST_INDEX}"
   fi
 fi
+if [ "$MODE" = "rollback" ]; then
+  echo "   回退目标: ${TEST_INDEX}"
+fi
 if [ "${FORCE_RERUN}" = "1" ]; then
 echo "   ⚡ 强制重跑: 忽略已有结果"
 else
@@ -89,6 +93,10 @@ case $MODE in
     export FORCE_RERUN=1
     python scripts/md_to_json.py && python scripts/verify_response.py
     ;;
+  rollback)
+    export ROLLBACK_TARGET="${TEST_INDEX}"
+    python scripts/rollback.py
+    ;;
   *)
     echo "❌ 未知模式: ${MODE}"
     echo ""
@@ -101,6 +109,7 @@ case $MODE in
     echo "  test 3       测试模式，处理第 3 个文件"
     echo "  test new     测试模式，按文件名匹配（可省略 .md）"
     echo "  rerun        强制全部重跑（忽略已有结果）"
+    echo "  rollback X   回退指定文件（删除 JSON，MD 移回）"
     exit 1
     ;;
 esac

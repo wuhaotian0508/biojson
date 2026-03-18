@@ -30,8 +30,8 @@ tracker = TokenTracker(model=os.getenv("MODEL", "Vendor2/Claude-4.6-opus"))
 BASE_DIR = os.getenv("BASE_DIR", "/data/haotianwu/biojson")
 INPUT_DIR = os.getenv("MD_DIR", os.path.join(BASE_DIR, "md"))
 REPORTS_DIR = os.getenv("REPORTS_DIR", os.path.join(BASE_DIR, "reports"))
-PROMPT_PATH = os.getenv("PROMPT_PATH", os.path.join(BASE_DIR, "configs/nutri_plant.txt"))
-SCHEMA_PATH = os.getenv("SCHEMA_PATH", os.path.join(BASE_DIR, "configs/nutri_plant.json"))
+PROMPT_PATH = os.getenv("PROMPT_PATH", os.path.join(BASE_DIR, "configs/nutri_gene_prompt_v2.txt"))
+SCHEMA_PATH = os.getenv("SCHEMA_PATH", os.path.join(BASE_DIR, "configs/nutri_gene_schema_v2.json"))
 TOKEN_USAGE_DIR = os.getenv("TOKEN_USAGE_DIR", os.path.join(BASE_DIR, "token-usage"))
 
 # 确保输出目录存在
