@@ -1,394 +1,95 @@
 {
   "file": "MinerU_markdown_plcell_v31_5_937_2031566954798968832",
   "md_path": "/data/haotianwu/biojson/md/MinerU_markdown_plcell_v31_5_937_2031566954798968832.md",
-  "json_path": "/data/haotianwu/biojson/reports/raw_extractions/MinerU_markdown_plcell_v31_5_937_2031566954798968832_nutri_plant.json",
-  "timestamp": "2026-03-15T17:36:21.569539",
+  "json_path": "/data/haotianwu/biojson/reports/plcell-v31-5-937-2031566954798968832/extraction.json",
+  "timestamp": "2026-03-18T21:49:29.755092",
   "genes": [
     {
       "gene_index": 1,
-      "gene_name": "Bx10-12 (BX10, BX11, BX12)",
+      "gene_name": "Bx10/Bx11/Bx12",
       "verification": {
-        "Gene_Name": {
+        "": {
           "verdict": "SUPPORTED",
-          "reason": "The paper explicitly mentions 'Bx10–12' (e.g., Figure 9B caption, and Discussion: 'the paralogous BX10, BX11, and BX12 genes'). The name 'Bx10-12 (BX10, BX11, BX12)' is consistent with the paper."
-        },
-        "Gene_ID": {
-          "verdict": "SUPPORTED",
-          "reason": "The Discussion states: 'The QTL hotspot on Chromosome 1 (Figure 8) represents a 110-kb region containing the paralogous BX10, BX11, and BX12 genes.' This matches the extracted field exactly."
-        },
-        "Species": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper is explicitly about maize (Zea mays), stated throughout the paper including the title and abstract."
-        },
-        "Pathway": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper repeatedly discusses benzoxazinoid biosynthesis, and Bx10-12 are described as benzoxazinoid biosynthetic genes (e.g., 'known benzoxazinoid biosynthesis genes' in the abstract, and 'Bx10–12 on chromosome 1 for HDMBOA-Glc' in Results)."
-        },
-        "Biosynthesis_Catabolism_Transport_Regulation": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper describes BX10, BX11, BX12 as 'O-methyltransferases that catalyze the biosynthesis of HDMBOA-Glc' (Discussion). They are biosynthetic enzymes."
-        },
-        "Gene_Category": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper describes these as O-methyltransferases catalyzing HDMBOA-Glc biosynthesis. Calling them 'Key enzyme gene / Branch-flux controller' is an interpretation not explicitly stated in the paper. They are clearly enzyme genes, but the 'branch-flux controller' designation is not used in the paper."
-        },
-        "Metabolic_Role": {
-          "verdict": "SUPPORTED",
-          "reason": "The Discussion explicitly states: 'O-methyltransferases that catalyze the biosynthesis of HDMBOA-Glc' and they are referenced as known biosynthetic genes (Meihls et al., 2013; Handrick et al., 2016). The role description of catalyzing HDMBOA-Glc from DIMBOA-Glc is consistent with the paper's description."
-        },
-        "Final_Nutrient_Product": {
-          "verdict": "UNCERTAIN",
-          "reason": "HDMBOA-Glc and related benzoxazinoids are specialized/defensive metabolites, not 'nutrient products' per se. The paper identifies HDMBOA-Glc as the metabolite whose abundance is mapped, and its full chemical name is correctly stated. However, benzoxazinoids are defensive metabolites, not nutritional compounds. The term 'Final_Nutrient_Product' may be a misnomer for this context, but the metabolite identification itself is accurate."
-        },
-        "Intermediate_Metabolites": {
-          "verdict": "SUPPORTED",
-          "reason": "The Discussion states: 'Mass features mapped to this locus include HDMBOA-Glc, DIMBOA, and other benzoxazinoid compounds.' DIMBOA-Glc is also mentioned as the substrate for methylation by these enzymes (implied by O-methyltransferase function converting DIMBOA-Glc to HDMBOA-Glc). The listing of DIMBOA-Glc, DIMBOA, and other benzoxazinoid compounds is supported."
-        },
-        "Tissue_Stage": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper explicitly states tissue collection from 'tips and bases of the emerging third leaves of maize inbred lines' (Introduction/Results). The GWAS was performed on both tissue types, and the Bx10-12 QTL hotspot on chromosome 1 was found 'in both leaf tips and leaf bases' (Figure 8, Results)."
-        },
-        "Perturbation_Type": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper uses GWAS mapping across 282 maize inbred lines with natural allelic variation. Haplotype inference using biallelic haplotypes and nearest-neighbor cladograms is described in the Results (Figure 9C) and Methods sections. The field accurately describes the perturbation approach."
-        },
-        "Evidence_Type": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper confirms GWAS mapping with 29 million SNPs (Methods: 'GWAS was performed for each metabolite using 29 million SNPs'). The most significantly associated SNPs being in LD with Bx10-12 is stated in Results: 'with the most significantly associated SNPs being in linkage disequilibrium (LD) with the respective biosynthetic genes.' Haplotype-based additive effect analysis is shown in Figure 9C."
-        },
-        "Evidence_Level": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper states this is a genetic association confirmed by GWAS that validates known QTL from prior studies: 'GWAS with both metabolites confirmed known QTL-containing biosynthetic genes: ...Bx10–12 on chromosome 1 for HDMBOA-Glc (Figure 9B; Meihls et al., 2013).' The references to Meihls et al. (2013) and Handrick et al. (2016) as prior functional validation are present in the paper."
-        },
-        "Effect_Direction": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper shows differential HDMBOA-Glc accumulation by haplotype (Figure 9C, additive effect), and the locus is described as a metabolite QTL hotspot on chromosome 1 'in both leaf tips and leaf bases' (Figure 8). The Discussion confirms 'Mass features mapped to this locus include HDMBOA-Glc, DIMBOA, and other benzoxazinoid compounds.'"
-        },
-        "Quantitative_Effect": {
-          "verdict": "SUPPORTED",
-          "reason": "The additive effect with chromosome 9 locus on HDMBOA-Glc content is shown in Figure 9C with statistical testing (P<0.05, ANOVA followed by Tukey's HSD). Tropical lines accumulating significantly more HDMBOA-Glc and less DIMBOA-Glc is shown in Figure 4 (P<0.05, ANOVA). Both claims are directly supported by the paper."
-        },
-        "Causal_Chain": {
-          "verdict": "SUPPORTED",
-          "reason": "The causal chain described is consistent with the paper: Bx10-12 are O-methyltransferases on chromosome 1, they catalyze methylation of DIMBOA-Glc to produce HDMBOA-Glc, natural allelic variation leads to differential accumulation across the diversity panel (Figure 9B), and this locus is the metabolite QTL hotspot on chromosome 1 in both tissues (Figure 8). All elements are found in the paper."
+          "reason": "The paper analyzed both seedling leaf tips and leaf bases throughout, and the Bx10-12 QTL hotspot on chromosome 1 was found 'in both leaf tips and leaf bases (Figure 8).'"
         }
       },
       "corrections": [],
       "stats": {
-        "supported": 14,
+        "supported": 1,
         "unsupported": 0,
-        "uncertain": 2
+        "uncertain": 0
       }
     },
     {
       "gene_index": 2,
       "gene_name": "Bx13",
       "verification": {
-        "Gene_Name": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper explicitly mentions 'Bx13 on chromosome 2 for DIM₂BOA-Glc (Figure 9A; Handrick et al., 2016)' in the Results section."
-        },
-        "Gene_ID": {
+        "": {
           "verdict": "UNCERTAIN",
-          "reason": "The paper states Bx13 is on chromosome 2 but does not provide a specific gene model ID (e.g., GRMZM2G...) for Bx13. 'Chromosome 2 locus' is vague but not contradicted. No accession number for Bx13 is listed in the Accession Numbers section."
-        },
-        "Species": {
-          "verdict": "SUPPORTED",
-          "reason": "Zea mays is explicitly stated throughout the paper as the study organism."
-        },
-        "Gene_Category": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper refers to Bx13 as a 'known biosynthetic gene' in the context of benzoxazinoid biosynthesis, supporting its classification as a key enzyme gene."
-        },
-        "Biosynthesis_Catabolism_Transport_Regulation": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper explicitly refers to Bx13 as a 'known benzoxazinoid biosynthesis gene' and lists it under 'known QTL-containing biosynthetic genes.'"
-        },
-        "Pathway": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper discusses Bx13 in the context of benzoxazinoid biosynthesis, and the Introduction references benzoxazinoid biosynthetic pathways (Zhou et al., 2018)."
-        },
-        "Final_Nutrient_Product": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper explicitly states GWAS confirmed 'Bx13 on chromosome 2 for DIM₂BOA-Glc' and provides the full chemical name '2-(2,4-dihydroxy-7,8-dimethoxy-1,4-benzoxazin-3-one)-β-D-glucopyranose.' Both the abbreviation and full name match."
-        },
-        "Metabolic_Role": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper confirms Bx13 as a known biosynthetic gene associated with DIM₂BOA-Glc variation. However, the claim that it 'catalyzes biosynthesis of DIM2BOA-Glc' is not explicitly stated in this paper — the paper only says it is a known biosynthetic gene and cites Handrick et al. (2016) for prior characterization. The specific enzymatic function of Bx13 is not described in this paper."
-        },
-        "Effect_Direction": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper states 'GWAS with both metabolites confirmed known QTL-containing biosynthetic genes: Bx13 on chromosome 2 for DIM₂BOA-Glc... with the most significantly associated SNPs being in linkage disequilibrium (LD) with the respective biosynthetic genes.'"
-        },
-        "Evidence_Type": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper explicitly describes GWAS mapping confirming the known biosynthetic gene Bx13 with reference to Handrick et al. (2016) and Figure 9A."
-        },
-        "Evidence_Level": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper uses GWAS to confirm a previously known QTL/gene (Handrick et al., 2016), which constitutes genetic association confirming prior functional validation."
-        },
-        "Perturbation_Type": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper uses GWAS with the Goodman Diversity Panel (282 inbred lines) representing natural allelic variation to map metabolite abundance, confirming known QTL. No knockout or transgenic perturbation was performed for Bx13."
-        },
-        "Causal_Chain": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper shows that natural allelic variation at Bx13 on chromosome 2 is associated with DIM₂BOA-Glc accumulation variation, as demonstrated in the GWAS Manhattan plot (Figure 9A)."
-        },
-        "Quantitative_Effect": {
-          "verdict": "SUPPORTED",
-          "reason": "No specific quantitative effect size is reported for Bx13 in the paper; the Manhattan plot (Figure 9A) shows association strength but no numeric effect size. 'NA' is an appropriate designation."
-        },
-        "Tissue_Stage": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper collected seedling leaf tips and bases from the third leaf. GWAS was performed separately for each tissue type (1,320 mass features from leaf bases, 2,554 from leaf tips). However, Figure 9A's caption does not specify which tissue type the DIM₂BOA-Glc GWAS result is from. The extraction states 'both tissue types' were used for GWAS, but it is not explicitly confirmed that Bx13 was significant in both tissues for DIM₂BOA-Glc."
+          "reason": "The GWAS was performed on mass features from both leaf tips and leaf bases. The paper does not specify that the Bx13-DIM₂BOA-Glc association was found exclusively in leaf tips. Figure 9A shows the GWAS result but the caption does not restrict it to leaf tips only."
         }
       },
       "corrections": [],
       "stats": {
-        "supported": 12,
+        "supported": 0,
         "unsupported": 0,
-        "uncertain": 3
+        "uncertain": 1
       }
     },
     {
       "gene_index": 3,
       "gene_name": "GRMZM2G108309",
       "verification": {
-        "Gene_ID": {
-          "verdict": "SUPPORTED",
-          "reason": "GRMZM2G108309 is explicitly mentioned in the paper multiple times (Results section on chromosome 9 locus, Accession Numbers section: NC_024467.2 (128358117..128362499)/GRMZM2G108309)."
-        },
-        "Gene_Name": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper refers to this gene by its gene model ID GRMZM2G108309 throughout. No other common name is given, so using the gene model ID as the name is appropriate."
-        },
-        "Species": {
-          "verdict": "SUPPORTED",
-          "reason": "The entire study is conducted on Zea mays (maize), explicitly stated throughout the paper."
-        },
-        "Gene_Category": {
+        "": {
           "verdict": "UNCERTAIN",
-          "reason": "The paper describes GRMZM2G108309 as encoding a 'predicted protein phosphatase 2C family protein,' not a transcription factor. Calling it a 'Regulatory TF/signaling gene' is partially correct (it is a signaling/regulatory gene), but the 'TF' part is inaccurate — protein phosphatase 2C is a signaling protein, not a transcription factor."
-        },
-        "Biosynthesis_Catabolism_Transport_Regulation": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper identifies this as a regulatory locus affecting HDMBOA-Glc accumulation. The Discussion explicitly calls it a 'HDMBOA-Glc regulatory locus on chromosome 9.' Classifying it as 'Regulation' is appropriate."
-        },
-        "Pathway": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper maps this locus in the context of benzoxazinoid metabolism, specifically HDMBOA-Glc accumulation. The gene is discussed alongside known benzoxazinoid biosynthetic genes (Bx10-12). Describing it as 'Benzoxazinoid biosynthesis pathway (regulatory)' is consistent with the paper."
-        },
-        "Metabolic_Role": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper states: 'The 25-kb LD block on chromosome 9 contained the region immediately 3′ of GRMZM2G108309, a gene model encoding a predicted protein phosphatase 2C family protein.' It is described as a newly identified locus affecting HDMBOA-Glc accumulation. This matches the extracted field."
-        },
-        "Final_Nutrient_Product": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper explicitly links GRMZM2G108309 to HDMBOA-Glc (2-(2-hydroxy-4,7-dimethoxy-1,4-benzoxazin-3-one)-β-D-glucopyranose) abundance through GWAS mapping, haplotype analysis, and expression-metabolite correlation."
-        },
-        "Perturbation_Type": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper uses GWAS mapping of natural variation, haplotype-based segregation analysis (biallelic haplotypes inferred from SNPs, Figure 9C-D), and comparison of 20 highest vs 20 lowest expression lines (Figure 9E). No knockout/transgenic experiments were performed for this gene. The description accurately reflects the methods used."
-        },
-        "Effect_Direction": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper states a significant difference in HDMBOA-Glc between the 20 highest and 20 lowest GRMZM2G108309 expression lines (Figure 9E, P<0.05). However, the paper does NOT explicitly state the direction (i.e., that higher expression = higher HDMBOA-Glc). Furthermore, the paper notes that 'correlation analysis with the entire inbred line population showed no significant relationship between gene expression level and benzoxazinoid content' (Supplemental Figure 5B), making the directional claim uncertain. The additive effect with Bx10-12 is supported (Figure 9C)."
-        },
-        "Quantitative_Effect": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper reports: (1) significant difference in HDMBOA-Glc between 20 highest and lowest expression lines (P<0.05, two-tailed t-test, Figure 9E); (2) significant expression difference between haplotypes (P<0.005, two-tailed t-test, Figure 9D); (3) additive effect with chromosome 1 locus (Figure 9C, ANOVA followed by Tukey's HSD). All these statistical claims are explicitly stated in the paper."
-        },
-        "Evidence_Type": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper describes GWAS discovery on chromosome 9, haplotype segregation analysis, gene expression-metabolite correlation for extreme lines (Figures 9D, 9E), and explicitly notes that 'correlation analysis with the entire inbred line population showed no significant relationship between gene expression level and benzoxazinoid content' (Supplemental Figure 5B). All elements of this field are accurately captured."
-        },
-        "Evidence_Level": {
-          "verdict": "SUPPORTED",
-          "reason": "The evidence is indeed based on genetic association and expression-metabolite correlation (partial, as full-population correlation is not significant). No direct genetic perturbation (knockout/transgenic) was performed for this gene. The paper's 'Next steps' section explicitly states 'further functional validation studies, such as experiments with genetic knockouts, are required.' The characterization as weaker than direct genetic perturbation is accurate."
-        },
-        "Tissue_Stage": {
-          "verdict": "SUPPORTED",
-          "reason": "The GWAS was performed on seedling leaf tips and bases. The HDMBOA-Glc GWAS results shown in Figure 9 are from leaf tips (the paper discusses leaf tip data for benzoxazinoids including Figure 4 showing leaf tip data). The tissue is the third leaf at seedling stage, consistent with the methods section."
-        },
-        "Causal_Chain": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper describes: (1) a novel locus on chromosome 9 with GRMZM2G108309 encoding protein phosphatase 2C; (2) haplotypic variation affecting gene expression (Figure 9D); (3) differential HDMBOA-Glc accumulation (Figure 9E); (4) additive effect with Bx10-12 on chromosome 1 (Figure 9C). All elements of the causal chain are present in the paper. However, it should be noted the paper says the LD block is 'immediately 3′ of GRMZM2G108309' rather than 'containing' it, but the gene is clearly the candidate at this locus."
+          "reason": "The GWAS results for HDMBOA-Glc shown in Figure 9 appear to be from leaf tips based on the context (Figure 4 shows HDMBOA-Glc data from leaf tips). However, the paper also states the chromosome 1 hotspot is found 'in both leaf tips and leaf bases' (Figure 8). The paper does not explicitly restrict GRMZM2G108309's association to leaf tips only. The claim of exclusive 'seedling leaf tips' specificity is not clearly supported — it may also be relevant in leaf bases."
         }
       },
       "corrections": [],
       "stats": {
-        "supported": 13,
+        "supported": 0,
         "unsupported": 0,
-        "uncertain": 2
+        "uncertain": 1
       }
     },
     {
       "gene_index": 4,
       "gene_name": "GRMZM2G063909",
       "verification": {
-        "Gene_ID": {
+        "": {
           "verdict": "SUPPORTED",
-          "reason": "GRMZM2G063909 is explicitly mentioned multiple times in the paper, including in Figures 11D-F, the Discussion, the Methods (genotyping of RILs), and the Accession Numbers section (NC_024462.2 (238977913..238988971)/GRMZM2G063909)."
-        },
-        "Gene_Name": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper refers to this gene by its gene model ID GRMZM2G063909 throughout. No other common name is given in the paper, so using the gene model ID as the name is appropriate."
-        },
-        "Species": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper explicitly studies maize (Zea mays) and GRMZM2G063909 is a maize gene from the B73 reference genome."
-        },
-        "Gene_Category": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper describes GRMZM2G063909 as 'annotated as an ortholog of Arabidopsis and rice citrate synthase genes' and links coding sequence variation to isomeric variation in metabolites. Calling it a 'Key enzyme gene / Branch-flux controller' is a reasonable interpretation but these exact terms are not used in the paper. The gene is presented as a biosynthetic candidate controlling isomer formation, which partially supports this categorization."
-        },
-        "Pathway": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper discusses 'phenylpropanoid hydroxycitric acid esters' and their biosynthesis extensively. While the paper doesn't use the exact phrase 'phenylpropanoid hydroxycitric acid ester biosynthesis' as a named pathway, the gene is directly mapped to the isomeric variation in these compounds, making this a faithful description of the pathway context."
-        },
-        "Biosynthesis_Catabolism_Transport_Regulation": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper states GRMZM2G063909 is a citrate synthase-like gene and that 'structural variation in the encoded enzyme is more likely to be responsible for the observed metabolic differences.' The Discussion says 'Coding-sequence variation in the identified citrate synthase-like gene (GRMZM2G063909)... likely leads to the formation of multiple isomers.' This is consistent with a biosynthetic role."
-        },
-        "Metabolic_Role": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper states GRMZM2G063909 is 'annotated as an ortholog of Arabidopsis and rice citrate synthase genes,' that 'structural variation in the encoded enzyme is more likely to be responsible for the observed metabolic differences,' and that expression was not significantly different between alleles (Figure 11F). All elements of this field are directly supported."
-        },
-        "Final_Nutrient_Product": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper identifies these as 'phenylpropanoid hydroxycitric acid esters' including 'ester conjugates of coumaric acid, caffeic acid, and ferulic acid with 2-hydroxycitric acid.' The specific names (coumaroyl hydroxycitric acid, caffeoyl hydroxycitric acid, feruloyl hydroxycitric acid) are used in the paper (Figures 12C-E). However, calling these 'nutrient products' is questionable — the paper discusses them as specialized metabolites potentially involved in defense, not as nutrients. The metabolite identification itself is supported, but the 'nutrient' framing is not."
-        },
-        "Intermediate_Metabolites": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper identifies the final products as conjugates of 2-hydroxycitric acid with coumaric acid, caffeic acid, and ferulic acid. However, the paper does not explicitly discuss intermediate metabolites in the biosynthetic pathway of these esters. The listed intermediates are essentially restating the structural components of the final products rather than describing pathway intermediates that were measured."
-        },
-        "Effect_Direction": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper states: 'B73 tissues did not contain any of the less polar phenylpropanoid hydroxycitric acid esters' (temperate = more polar isomers), while 'Ki11 and CML247 encode the tropical maize isomers' (less polar). The paper also states 'heterozygous lines showed intermediate phenotypes, producing both isomers, but in lesser abundance than either homozygote.' The identification of the more polar isomers as 2-O-acylated derivatives is stated in the paper: 'We identified the more polar phenylpropanoid hydroxycitric acid esters as the 2-O-acylated derivatives of hydroxycitric acid.'"
-        },
-        "Causal_Chain": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper supports each element: coding sequence variation (all linked SNPs in coding region, no expression difference → structural variation), chromosome 4 location, production of different isomers (Figures 11, 12), correspondence to QTL hotspot on chromosome 4 (Figure 8), and the tropical vs. temperate allele distinction. The paper explicitly states 'structural variation in the encoded enzyme is more likely to be responsible for the observed metabolic differences.'"
-        },
-        "Perturbation_Type": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper describes GWAS mapping (Figure 11C-D) and independent validation with near-isogenic lines from B73×Ki11 and B73×CML247 RIL families (Figure 12, Methods section on 'Genotyping of Maize RILs'). These are explicitly described in the Results section."
-        },
-        "Quantitative_Effect": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper states 'MS assays showed perfect cosegregation between the genotypic markers and the two classes of phenylpropanoid hydroxycitric acid esters (Supplemental Figure 7),' 'heterozygous lines showed intermediate phenotypes, producing both isomers, but in lesser abundance than either homozygote' (Figures 12C-E), and no significant difference in gene expression between alleles (Figure 11F). All quantitative claims are directly supported."
-        },
-        "Evidence_Type": {
-          "verdict": "SUPPORTED",
-          "reason": "All listed evidence types are present in the paper: GWAS mapping to a single 10-kb LD block on chromosome 4 (Figure 11C-D states 'the most strongly associated SNP markers were located within a 10-kb LD block on Chromosome 4'), cosegregation validation in NILs from two RIL families (Figure 12), all linked SNPs in coding region ('consistent with all linked SNPs being in the coding region'), no expression difference (Figure 11F), and NMR structural confirmation (Figure 10C, Supplemental Figure 6)."
-        },
-        "Evidence_Level": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper provides GWAS mapping plus independent validation through cosegregation in NILs derived from two RIL families (B73×Ki11 and B73×CML247). This constitutes strong genetic association evidence with independent validation, as described in the extraction."
-        },
-        "Tissue_Stage": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper explicitly states tissue collection from 'seedling leaf tips and leaf bases' of the 'third leaf' that had 'visibly emerged from the whorl.' The GWAS results for this gene are shown for both tissue types."
+          "reason": "The paper analyzes both tissue types. GWAS was performed in both leaf tips and bases. The metabolites were detected in both tissues, and Figure 11A shows distribution in both. Figure 11F compares expression in both tissue types."
         }
       },
       "corrections": [],
       "stats": {
-        "supported": 13,
+        "supported": 1,
         "unsupported": 0,
-        "uncertain": 3
+        "uncertain": 0
       }
     },
     {
       "gene_index": 5,
-      "gene_name": "Chalcone synthases (GRMZM2G422750 and GRMZM2G380650)",
+      "gene_name": "Chalcone synthase genes (GRMZM2G422750, GRMZM2G380650)",
       "verification": {
-        "Gene_Name": {
+        "": {
           "verdict": "SUPPORTED",
-          "reason": "The paper explicitly mentions 'the two most strongly expressed chalcone synthase genes (GRMZM2G422750 and GRMZM2G380650)' in the Results section discussing Figure 3B."
-        },
-        "Gene_ID": {
-          "verdict": "SUPPORTED",
-          "reason": "Both GRMZM2G422750 and GRMZM2G380650 are explicitly named in the paper text and listed in the Accession Numbers section with their genomic coordinates."
-        },
-        "Species": {
-          "verdict": "SUPPORTED",
-          "reason": "The entire study is about Zea mays (maize), explicitly stated throughout the paper."
-        },
-        "Gene_Category": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper describes chalcone synthase as 'the enzyme catalyzing the first committing step in flavonoid biosynthesis,' which is consistent with 'Key enzyme gene.'"
-        },
-        "Pathway": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper explicitly discusses flavonoid biosynthesis in the context of these chalcone synthase genes, stating they catalyze 'the first committing step in flavonoid biosynthesis.'"
-        },
-        "Metabolic_Role": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper states 'five maize genes that encode chalcone synthases, the enzyme catalyzing the first committing step in flavonoid biosynthesis,' directly supporting the described metabolic role."
-        },
-        "Biosynthesis_Catabolism_Transport_Regulation": {
-          "verdict": "SUPPORTED",
-          "reason": "Chalcone synthase catalyzes the first committed step in flavonoid biosynthesis, so 'Biosynthesis' is correct."
-        },
-        "Tissue_Stage": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper explicitly compares leaf tips and leaf bases of the emerging third leaf of seedlings, and Figure 3B shows expression comparison between these two tissue types."
-        },
-        "Perturbation_Type": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper does not perform any direct genetic perturbation (knockout/overexpression) of these genes. The evidence is a transcriptomic comparison between tissue types using published data (Kremling et al., 2018), as correctly stated."
-        },
-        "Effect_Direction": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper states the two chalcone synthase genes 'are expressed at a significantly higher level in the leaf tips than in the leaf bases' (Figure 3B), and flavonoid UV peaks 'were completely absent in leaf base samples and were only found in the more developmentally advanced leaf tips' (Figure 3A)."
-        },
-        "Quantitative_Effect": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper states the two genes are 'expressed at a significantly higher level in the leaf tips than in the leaf bases in the GWAS panel' with '*FDR<0.05' by Student's t-tests (Figure 3B). Figure 3A shows flavonoid peaks completely absent in leaf base chromatograms."
-        },
-        "Final_Nutrient_Product": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper discusses 'flavonoids' and 'flavonoid-like' metabolites detected in leaf tips. However, flavonoids are described as specialized/defensive metabolites in this paper, not specifically as 'nutrient products.' The term 'nutrient product' is not used in the paper for flavonoids, though flavonoids can have nutritional relevance."
-        },
-        "Intermediate_Metabolites": {
-          "verdict": "UNSUPPORTED",
-          "reason": "The paper does not mention 'chalcone' or 'naringenin chalcone' as an intermediate metabolite of these chalcone synthase genes. While naringenin is mentioned as a commonly occurring fragment in MS/MS analysis (Figure 3C), 'naringenin chalcone' as an intermediate product of chalcone synthase is general biochemical knowledge not stated in this paper."
-        },
-        "Evidence_Type": {
-          "verdict": "SUPPORTED",
-          "reason": "The evidence is correctly described: transcript-metabolite correlation across tissues using Kremling et al. (2018) transcriptomic data and UV chromatogram analysis, as shown in Figures 3A and 3B."
-        },
-        "Evidence_Level": {
-          "verdict": "SUPPORTED",
-          "reason": "Correctly characterized as weaker evidence with no direct genetic perturbation. The paper itself states in the 'Next steps' section that 'further functional validation studies, such as experiments with genetic knockouts, are required to demonstrate the causal relationships.'"
-        },
-        "Causal_Chain": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper supports this causal chain: higher chalcone synthase expression in leaf tips (Figure 3B) correlates with flavonoid presence in tips and absence in bases (Figure 3A). The figures cited (3A, 3B) are correct."
+          "reason": "The paper states: 'the two most strongly expressed chalcone synthase genes (GRMZM2G422750 and GRMZM2G380650) are expressed at a significantly higher level in the leaf tips than in the leaf bases' (Figure 3B)."
         }
       },
-      "corrections": [
-        {
-          "field": "Intermediate_Metabolites",
-          "old_value": "Chalcone (naringenin chalcone)",
-          "new_value": "NA",
-          "reason": "The paper does not mention 'chalcone' or 'naringenin chalcone' as an intermediate metabolite of these chalcone synthase genes. While naringenin is mentioned as a commonly occurring fragment in MS/MS analysis (Figure 3C), 'naringenin chalcone' as an intermediate product of chalcone synthase is general biochemical knowledge not stated in this paper."
-        }
-      ],
+      "corrections": [],
       "stats": {
-        "supported": 14,
-        "unsupported": 1,
-        "uncertain": 1
+        "supported": 1,
+        "unsupported": 0,
+        "uncertain": 0
       }
     }
   ],
   "summary": {
-    "total_fields": 78,
-    "supported": 66,
-    "unsupported": 1,
-    "uncertain": 11,
-    "total_corrections": 1
+    "total_fields": 5,
+    "supported": 3,
+    "unsupported": 0,
+    "uncertain": 2,
+    "total_corrections": 0
   }
 }
