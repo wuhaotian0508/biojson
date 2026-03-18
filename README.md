@@ -8,7 +8,7 @@
 
 ### 提取管道（Pipeline）
 
-- **MD → JSON 结构化提取**：使用 LLM Function Calling 按预定义 JSON Schema，从文献中提取作物营养代谢关键基因的详细信息（基因名、物种、代谢通路、表型效应、实验方法等 40+ 字段）
+- **MD → JSON 结构化提取**：使用 LLM Function Calling 按预定义 JSON Schema，从文献中提取作物营养代谢关键基因的详细信息。v2 支持 **4 种提取模板**（Common / Pathway / Regulation / Multiple），LLM 自动识别基因功能类别并选择对应模板，Pathway 基因额外提取酶活性和通路定位字段，Regulation 基因额外提取调控机制和靶基因字段
 - **幻觉验证与自动修正**：调用 LLM 逐基因、逐字段验证提取结果是否有原文支持，将不支持的字段（UNSUPPORTED）自动修正为 `"NA"`
 - **文本预处理**：自动去除论文中的图片、URL、引用列表、致谢等无用内容，减少 Token 消耗
 - **增量处理**：自动跳过已处理的文件，支持 `FORCE_RERUN=1` 强制重跑
@@ -30,8 +30,9 @@
 ```
 biojson/
 ├── configs/                    # 配置文件
-│   ├── nutri_plant.txt         #   提取 Prompt（指导 LLM 如何阅读文献、识别核心基因）
-│   └── nutri_plant.json        #   JSON Schema（定义输出结构和字段说明）
+│   ├── nutri_gene_prompt_v2.txt      #   提取 Prompt v2（基因分类 + 模板选择）
+│   ├── nutri_gene_schema_v2.json     #   JSON Schema v2（4 种基因提取模板）
+│   └── nutri_gene_schema_base_v2.json #  基础 Schema（公共字段定义）
 ├── md/                         # 输入：Markdown 格式的科学文献
 │   └── processed/              #   验证完成后自动移入的已处理文献
 ├── json/                       # 输出：验证修正后的最终 JSON
@@ -170,18 +171,31 @@ FORCE_RERUN=1 bash scripts/run.sh extract
 
 ## ⚙️ 配置说明
 
-### Prompt (`configs/nutri_plant.txt`)
+### Prompt v2 (`configs/nutri_gene_prompt_v2.txt`)
 
 指导 LLM 进行三步操作：
-1. **代谢感知阅读**：深入阅读文献，定义营养性状目标，识别代谢通路和核心基因（严格限定为有直接实验干预的基因）
-2. **结构化提取**：按 Schema 通过 Function Calling 提取核心基因的详细信息，遵循「最终营养产物必须关联」「通路步骤锚定」「方向性必须明确」等原则
-3. **验证审核**：检查核心基因有效性、性状有效性、方向一致性和证据对齐
+1. **文献分析 & 核心基因识别**（使用 thinking 工具）：深入阅读文献，判断论文研究的是合成通路还是调控网络，识别核心基因并**分类**为 Pathway（通路酶基因）、Regulation（调控基因）或 Common（通用基因）
+2. **结构化信息提取**：根据 Step 1 的分类结果，调用对应模板的 Function Calling 进行提取，遵循「聚焦核心基因」「忠实原文」「标准标识符补充」原则
+3. **验证自检**（使用 thinking 工具）：LLM 自我审查提取结果的准确性，发现错误时调用工具修正
 
-### JSON Schema (`configs/nutri_plant.json`)
+### JSON Schema v2 (`configs/nutri_gene_schema_v2.json`)
 
-定义了 `CropNutrientMetabolismGeneExtraction` 模板，包含：
-- **论文级字段**：Title、Journal、DOI
-- **基因级字段（40+ 个）**：涵盖基因基本信息、代谢角色、通路定位、表型效应、调控机制、实验证据、变异信息、育种价值等
+定义了 **4 种基因提取模板**，根据论文中基因的功能类别自动选择：
+
+| 模板 | 适用场景 | 基因字段 |
+|------|---------|---------|
+| `CommonGeneExtraction` | 通用基因（非通路酶、非调控） | ~30 个公共字段 |
+| `PathwayGeneExtraction` | 代谢通路酶基因 | 公共字段 + 14 个酶/通路专属字段（EC_Number、Catalyzed_Reaction、Biosynthetic_Pathway 等） |
+| `RegulationGeneExtraction` | 转录因子/调控基因 | 公共字段 + 14 个调控专属字段（Regulator_Type、Regulation_Mode、Primary_Regulatory_Targets 等） |
+| `MultipleGeneExtraction` | 混合类别（同一篇论文含多种类型基因） | 3 个数组：Common_Genes / Pathway_Genes / Regulation_Genes |
+
+**公共字段（~30 个）** 涵盖：物种信息、基因基本信息、代谢产物、表型效应、实验方法、组学数据、遗传变异、育种价值等。
+
+**模板选择逻辑**：
+- 论文中所有核心基因都是通路酶 → `PathwayGeneExtraction`
+- 论文中所有核心基因都是调控因子 → `RegulationGeneExtraction`
+- 论文中所有核心基因都不属于以上两类 → `CommonGeneExtraction`
+- 论文中有混合类别的基因 → `MultipleGeneExtraction`
 
 ### 文本预处理 (`scripts/text_utils.py`)
 
