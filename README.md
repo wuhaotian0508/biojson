@@ -1,10 +1,12 @@
 # BioJSON
 
-基于 LLM 的植物营养代谢基因文献结构化提取管道（Pipeline）。
+基于 LLM 的植物营养代谢基因文献结构化提取管道（Pipeline）+ Web 标注平台。
 
-从科学文献（Markdown 格式）中自动提取关键基因信息为结构化 JSON，并通过 LLM 二次验证消除幻觉（Hallucination），确保提取结果忠实于原文。
+从科学文献（Markdown 格式）中自动提取关键基因信息为结构化 JSON，并通过 LLM 二次验证消除幻觉（Hallucination），确保提取结果忠实于原文。提供 Web 可视化界面，供专家在线审核和标注提取结果。
 
 ## ✨ 功能特性
+
+### 提取管道（Pipeline）
 
 - **MD → JSON 结构化提取**：使用 LLM Function Calling 按预定义 JSON Schema，从文献中提取作物营养代谢关键基因的详细信息（基因名、物种、代谢通路、表型效应、实验方法等 40+ 字段）
 - **幻觉验证与自动修正**：调用 LLM 逐基因、逐字段验证提取结果是否有原文支持，将不支持的字段（UNSUPPORTED）自动修正为 `"NA"`
@@ -13,6 +15,15 @@
 - **Fallback 机制**：当主 API 因内容审查被拦截时，自动切换到备用 API
 - **截断 JSON 自动修复**：当 LLM 输出被截断时，自动修复不完整的 JSON 结构
 - **Token 用量追踪**：记录每次 API 调用的 Token 消耗（输入/输出/合计），生成 JSON 格式的用量报告
+
+### Web 标注平台
+
+- **论文列表视图**：展示所有已导入论文，包含标题、期刊、基因数量、验证状态统计
+- **论文详情页**：左右分栏布局——左侧展示 Markdown 原文，右侧展示基因提取结果
+- **基因卡片**：按 11 个类别分组展示 40+ 个字段，每个字段显示提取值和 AI 自动验证结果
+- **专家标注系统**：支持对每个字段进行「✅ 正确 / ❌ 错误 / ✏️ 修改」标注，可填写评论和修正值
+- **验证进度条**：可视化展示每篇论文的验证覆盖率（支持/不确定/不支持）
+- **技术栈**：Next.js 15 + Supabase + TailwindCSS，支持 Vercel 一键部署
 
 ## 📁 项目结构
 
@@ -34,7 +45,23 @@ biojson/
 │   ├── md_to_json.py           #   Step 1: MD → JSON 结构化提取
 │   ├── verify_response.py      #   Step 2: JSON 幻觉验证与修正
 │   ├── text_utils.py           #   文本预处理工具（去图片/URL/引用/致谢）
-│   └── token_tracker.py        #   Token 用量追踪模块
+│   ├── token_tracker.py        #   Token 用量追踪模块
+│   └── import_to_supabase.py   #   数据导入 Supabase 脚本
+├── web/                        # Web 标注平台（Next.js 15）
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── layout.tsx      #     全局布局 + 导航栏
+│   │   │   ├── page.tsx        #     首页：论文列表
+│   │   │   └── papers/
+│   │   │       └── [slug]/
+│   │   │           ├── page.tsx        # 论文详情页（服务端）
+│   │   │           └── PaperDetail.tsx # 详情交互组件（客户端）
+│   │   └── lib/
+│   │       ├── supabase.ts     #     Supabase 客户端
+│   │       └── types.ts        #     TypeScript 类型定义
+│   └── .env.local.example      #     前端环境变量模板
+├── database/
+│   └── schema.sql              # 数据库建表 SQL（含 RLS 策略）
 ├── .env                        # 环境变量（API Key 等，不提交到 Git）
 ├── .env.example                # 环境变量模板
 └── .gitignore
@@ -255,3 +282,104 @@ FORCE_RERUN=1 bash scripts/run.sh extract
 - **按编号**：`bash scripts/run.sh test 3` — 处理第 3 个文件
 - **按文件名**：`bash scripts/run.sh test new.md` — 精确匹配
 - **按关键词**：`bash scripts/run.sh test mmc3` — 模糊匹配文件名中包含 `mmc3` 的文件
+
+## 🌐 Web 标注平台
+
+### 架构概览
+
+```
+┌─────────────────────────────────────────────────────┐
+│                    Vercel (前端)                      │
+│  Next.js 15 App Router + TailwindCSS                │
+│                                                     │
+│  / ─────────────── 论文列表（SSR + ISR 60s）         │
+│  /papers/[slug] ── 论文详情 + 基因卡片 + 标注        │
+└────────────────────────┬────────────────────────────┘
+                         │ Supabase JS Client
+                         ▼
+┌─────────────────────────────────────────────────────┐
+│                  Supabase (后端)                      │
+│                                                     │
+│  papers ──── 论文 (MD原文 + JSON + 验证报告)         │
+│  genes ───── 基因 (展平的字段数据 + AI验证结果)      │
+│  annotations  专家标注 (逐字段 correct/incorrect)    │
+│                                                     │
+│  RLS 策略：匿名可读，认证用户可标注                   │
+└─────────────────────────────────────────────────────┘
+```
+
+### 部署步骤
+
+#### 1. 创建 Supabase 项目
+
+1. 访问 [supabase.com](https://supabase.com) 创建免费项目
+2. 进入 **SQL Editor**，粘贴并执行 `database/schema.sql`
+3. 在 **Settings → API** 中获取 `Project URL` 和 `anon public key`
+
+#### 2. 导入数据到 Supabase
+
+```bash
+# 安装 Python Supabase SDK
+pip install supabase python-dotenv
+
+# 在 .env 中添加（注意使用 service_role key，非 anon key）
+# SUPABASE_URL=https://your-project.supabase.co
+# SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+
+# 运行导入脚本
+python scripts/import_to_supabase.py
+```
+
+#### 3. 配置 Web 前端
+
+```bash
+cd web
+
+# 创建环境变量
+cp .env.local.example .env.local
+
+# 编辑 .env.local，填入 Supabase URL 和 anon key
+# NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+# NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+```
+
+#### 4. 本地开发
+
+```bash
+cd web
+npm run dev
+# 访问 http://localhost:3000
+```
+
+#### 5. 部署到 Vercel
+
+```bash
+# 方式一：通过 Vercel CLI
+cd web
+npx vercel
+
+# 方式二：通过 GitHub
+# 将项目推送到 GitHub，然后在 vercel.com 导入仓库
+# Root Directory 设置为 "web"
+```
+
+在 Vercel Dashboard 中配置环境变量：
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+
+### 页面说明
+
+| 页面 | 路径 | 功能 |
+|------|------|------|
+| 论文列表 | `/` | 展示所有论文，显示标题、期刊、基因数、验证进度条 |
+| 论文详情 | `/papers/{slug}` | 左栏 Markdown 原文 + 右栏基因卡片（含标注功能） |
+
+### 标注操作
+
+在论文详情页，每个基因字段旁有「标注」按钮，点击后可以：
+
+1. **✅ 正确** — 确认 AI 提取结果正确
+2. **❌ 错误** — 标记该字段提取有误
+3. **✏️ 修改** — 提供修正值，替换错误的提取结果
+
+每条标注可附加评论说明理由。
