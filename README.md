@@ -46,7 +46,8 @@ biojson/
 │   ├── verify_response.py      #   Step 2: JSON 幻觉验证与修正
 │   ├── text_utils.py           #   文本预处理工具（去图片/URL/引用/致谢）
 │   ├── token_tracker.py        #   Token 用量追踪模块
-│   └── import_to_supabase.py   #   数据导入 Supabase 脚本
+│   ├── import_to_supabase.py   #   数据导入 Supabase 脚本
+│   └── dev.sh                  #   本地开发一键启动脚本（端口检测+自动打开浏览器）
 ├── web/                        # Web 标注平台（Next.js 15）
 │   ├── src/
 │   │   ├── app/
@@ -346,6 +347,16 @@ cp .env.local.example .env.local
 #### 4. 本地开发
 
 ```bash
+# 方式一：一键启动脚本（推荐，自动检测端口、等待就绪、打开浏览器）
+bash scripts/dev.sh
+
+# 指定端口
+bash scripts/dev.sh --port 3001
+
+# 强制 kill 占用端口的进程后启动
+bash scripts/dev.sh --kill
+
+# 方式二：手动启动
 cd web
 npm run dev
 # 访问 http://localhost:3000
