@@ -179,7 +179,14 @@ export interface VerificationReport {
   }
 }
 
-// 基因字段分组（用于 UI 展示）
+// 基因类别定义（v2 schema 支持 Pathway_Genes / Regulation_Genes / Common_Genes）
+export const GENE_CATEGORIES = [
+  { key: 'Pathway_Genes', label: 'Pathway Genes' },
+  { key: 'Regulation_Genes', label: 'Regulation Genes' },
+  { key: 'Common_Genes', label: 'Common Genes' },
+] as const
+
+// 基因字段分组（用于 UI 展示）- 通用字段
 export const GENE_FIELD_GROUPS: { label: string; fields: string[] }[] = [
   {
     label: '基本信息',
