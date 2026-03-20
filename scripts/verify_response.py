@@ -362,18 +362,45 @@ def verify_file(md_path, json_path, stem):
             root = json_data["CropNutrientMetabolismGeneExtraction"]
         else:
             root = json_data
-        genes = root.get("Genes", [])
-        # 防御：LLM 偶发把 Genes 数组序列化为字符串
-        if isinstance(genes, str):
-            print(f"  ⚠️  Genes 字段是字符串而非列表，尝试解析...")
-            try:
-                genes = json.loads(genes)
-                print(f"  ✅ 解析成功: {len(genes)} 个基因")
-            except json.JSONDecodeError as e:
-                print(f"  ❌ Genes 字符串解析失败（可能被截断）: {e}")
-                print(f"  ⏭️  跳过此文件，需要重新提取")
-                return None
-        top_level_fields = {k: v for k, v in root.items() if k != "Genes"}
+
+        # ── 适配新版三数组结构 和 旧版 Genes 单数组结构 ──
+        GENE_ARRAY_KEYS = ("Common_Genes", "Pathway_Genes", "Regulation_Genes")
+        has_multi = any(root.get(k) is not None for k in GENE_ARRAY_KEYS)
+
+        if has_multi:
+            # 新版三数组：收集所有基因，记录来源分组
+            genes = []
+            gene_source_map = []  # 记录每个基因属于哪个数组
+            for arr_key in GENE_ARRAY_KEYS:
+                arr = root.get(arr_key, [])
+                if isinstance(arr, str):
+                    try:
+                        arr = json.loads(arr)
+                    except json.JSONDecodeError:
+                        arr = []
+                if isinstance(arr, list):
+                    for g in arr:
+                        genes.append(g)
+                        gene_source_map.append(arr_key)
+            top_level_fields = {k: v for k, v in root.items() if k not in GENE_ARRAY_KEYS}
+            print(f"  📊 三数组模式: Common={len(root.get('Common_Genes', []))}, "
+                  f"Pathway={len(root.get('Pathway_Genes', []))}, "
+                  f"Regulation={len(root.get('Regulation_Genes', []))}")
+        else:
+            # 旧版单数组
+            genes = root.get("Genes", [])
+            gene_source_map = ["Genes"] * len(genes) if isinstance(genes, list) else []
+            if isinstance(genes, str):
+                print(f"  ⚠️  Genes 字段是字符串而非列表，尝试解析...")
+                try:
+                    genes = json.loads(genes)
+                    gene_source_map = ["Genes"] * len(genes)
+                    print(f"  ✅ 解析成功: {len(genes)} 个基因")
+                except json.JSONDecodeError as e:
+                    print(f"  ❌ Genes 字符串解析失败（可能被截断）: {e}")
+                    print(f"  ⏭️  跳过此文件，需要重新提取")
+                    return None
+            top_level_fields = {k: v for k, v in root.items() if k != "Genes"}
     else:
         print("  ❌ JSON 格式不符合预期，跳过")
         return None
@@ -446,11 +473,23 @@ def verify_file(md_path, json_path, stem):
         file_report["summary"]["uncertain"] += gene_stats["uncertain"]
         file_report["summary"]["total_corrections"] += len(corrections)
 
+    # ── 将修正后的基因写回原结构 ──
     if isinstance(json_data, dict):
         if "CropNutrientMetabolismGeneExtraction" in json_data:
-            json_data["CropNutrientMetabolismGeneExtraction"]["Genes"] = all_corrected_genes
+            target = json_data["CropNutrientMetabolismGeneExtraction"]
         else:
-            json_data["Genes"] = all_corrected_genes
+            target = json_data
+
+        if has_multi:
+            # 新版三数组：按 gene_source_map 分回各自数组
+            rebuilt = {k: [] for k in GENE_ARRAY_KEYS}
+            for corrected, src_key in zip(all_corrected_genes, gene_source_map):
+                rebuilt[src_key].append(corrected)
+            for arr_key in GENE_ARRAY_KEYS:
+                target[arr_key] = rebuilt[arr_key]
+        else:
+            # 旧版单数组
+            target["Genes"] = all_corrected_genes
 
     verified_json_path = os.path.join(FINAL_JSON_DIR, f"{stem}_nutri_plant_verified.json")
     with open(verified_json_path, "w", encoding="utf-8") as f:

@@ -58,35 +58,48 @@ with open(PROMPT_PATH, 'r', encoding='utf-8') as f:
     base_prompt = f.read()
 
 with open(SCHEMA_PATH, 'r', encoding='utf-8') as f:
-    template = json.load(f)
-    paradigm = template.get("CropNutrientMetabolismGeneExtraction", template)
+    schema_all = json.load(f)
 
 # 4. 构建 function_calling 的 tool 定义
-# 将基因字段的 schema 转为 function parameters 格式
-GENE_PROPERTIES = {}
-gene_def = paradigm.get("$defs", {}).get("NutrientMetabolismGene", {})
-for field_name, field_schema in gene_def.get("properties", {}).items():
-    # 简化 anyOf 为 string 类型（function_calling 不支持 anyOf）
-    desc = field_schema.get("description", "")
-    if field_name == "Key_Intermediate_Metabolites_Affected" or field_name == "Interacting_Proteins":
-        GENE_PROPERTIES[field_name] = {
-            "type": "array",
-            "items": {"type": "string"},
-            "description": desc
-        }
-    else:
-        GENE_PROPERTIES[field_name] = {
+# 使用 MultipleGeneExtraction 模板：三类基因各自独立数组
+# ── 辅助函数：将 schema 中某个 Gene 定义的 properties 转为 function calling 格式 ──
+
+
+def _schema_props_to_fc(gene_def):
+    """将 nutri_gene_schema_v2.json 中一个 Gene 类型的 properties 转为
+    function calling 兼容格式（anyOf → string，保留 description）。"""
+    fc_props = {}
+    for field_name, field_schema in gene_def.get("properties", {}).items():
+        desc = field_schema.get("description", "")
+        fc_props[field_name] = {
             "type": "string",
             "description": desc
         }
+    return fc_props
+
+
+# 从 MultipleGeneExtraction.$defs 中读取三种基因类型的字段
+multi_defs = schema_all.get("MultipleGeneExtraction", {}).get("$defs", {})
+COMMON_GENE_PROPS = _schema_props_to_fc(multi_defs.get("CommonGene", {}))
+PATHWAY_GENE_PROPS = _schema_props_to_fc(multi_defs.get("PathwayGene", {}))
+REGULATION_GENE_PROPS = _schema_props_to_fc(multi_defs.get("RegulationGene", {}))
+
+print(f"📋 Schema 字段数: Common={len(COMMON_GENE_PROPS)}, "
+      f"Pathway={len(PATHWAY_GENE_PROPS)}, Regulation={len(REGULATION_GENE_PROPS)}")
 
 EXTRACT_TOOL = {
     "type": "function",
     "function": {
         "name": "extract_nutrient_genes",
-        "description": "Extract crop nutrient metabolism gene information from a scientific paper. "
-                       "Extract ALL genes that are directly experimentally validated in the Results section. "
-                       "If information is not found, use 'NA'.",
+        "description": (
+            "Extract crop nutrient metabolism gene information from a scientific paper. "
+            "Classify each core gene into one of three categories and place it in the corresponding array:\n"
+            "- Common_Genes: genes that are neither pathway enzymes nor regulators (e.g., general functional genes)\n"
+            "- Pathway_Genes: genes encoding enzymes in biosynthetic/metabolic pathways (e.g., CHS, F3H, PSY, DAHPS)\n"
+            "- Regulation_Genes: genes encoding transcription factors, signaling proteins, or other regulators (e.g., MYB12, Del, Ros1, SPL)\n"
+            "Extract ALL genes that are directly experimentally validated in the Results section. "
+            "If information is not found, use 'NA'."
+        ),
         "parameters": {
             "type": "object",
             "properties": {
@@ -102,16 +115,32 @@ EXTRACT_TOOL = {
                     "type": "string",
                     "description": "Pure DOI string, no URL prefix."
                 },
-                "Genes": {
+                "Common_Genes": {
                     "type": "array",
-                    "description": "List of key gene objects (enzymes/regulators) impacting final nutrient products.",
+                    "description": "Genes that do not clearly belong to pathway enzymes or regulators.",
                     "items": {
                         "type": "object",
-                        "properties": GENE_PROPERTIES
+                        "properties": COMMON_GENE_PROPS
+                    }
+                },
+                "Pathway_Genes": {
+                    "type": "array",
+                    "description": "Genes encoding enzymes in biosynthetic or metabolic pathways.",
+                    "items": {
+                        "type": "object",
+                        "properties": PATHWAY_GENE_PROPS
+                    }
+                },
+                "Regulation_Genes": {
+                    "type": "array",
+                    "description": "Genes encoding transcription factors, signaling proteins, or regulatory factors.",
+                    "items": {
+                        "type": "object",
+                        "properties": REGULATION_GENE_PROPS
                     }
                 }
             },
-            "required": ["Title", "Journal", "DOI", "Genes"]
+            "required": ["Title", "Journal", "DOI", "Common_Genes", "Pathway_Genes", "Regulation_Genes"]
         }
     }
 }
@@ -228,6 +257,16 @@ def _repair_truncated_json(json_str):
             return None, True
 
 
+def _count_all_genes(json_data):
+    """统计三数组（或旧格式 Genes）中的基因总数。"""
+    total = 0
+    for key in ("Common_Genes", "Pathway_Genes", "Regulation_Genes", "Genes"):
+        arr = json_data.get(key, [])
+        if isinstance(arr, list):
+            total += len(arr)
+    return total
+
+
 def _call_extract_api(api_client, model, content, name):
     """调用指定的 API 客户端进行提取，返回 (json_data, success) 元组。
     
@@ -270,27 +309,35 @@ def _call_extract_api(api_client, model, content, name):
                 print(f"  ❌ [{model}] JSON 无法解析也无法修复: {name}")
                 return None, False
             if was_repaired:
-                genes_count = len(json_data.get("Genes", []))
-                print(f"  🔧 [{model}] 截断 JSON 已自动修复 (抢救到 {genes_count} 个基因)")
+                total_genes = _count_all_genes(json_data)
+                print(f"  🔧 [{model}] 截断 JSON 已自动修复 (抢救到 {total_genes} 个基因)")
 
-            # 防御：LLM 偶发把 Genes 数组序列化为字符串
-            if isinstance(json_data.get("Genes"), str):
-                try:
-                    json_data["Genes"] = json.loads(json_data["Genes"])
-                    print(f"  🔧 自动修复: Genes 从字符串转为列表 ({len(json_data['Genes'])} 个基因)")
-                except json.JSONDecodeError:
-                    print(f"  ⚠️  Genes 是截断的字符串，无法自动修复")
+            # 防御：LLM 偶发把数组序列化为字符串
+            for arr_key in ("Common_Genes", "Pathway_Genes", "Regulation_Genes", "Genes"):
+                if isinstance(json_data.get(arr_key), str):
+                    try:
+                        json_data[arr_key] = json.loads(json_data[arr_key])
+                        print(f"  🔧 自动修复: {arr_key} 从字符串转为列表 ({len(json_data[arr_key])} 个基因)")
+                    except json.JSONDecodeError:
+                        print(f"  ⚠️  {arr_key} 是截断的字符串，无法自动修复")
             print(f"  ✅ [{model}] Function calling 成功提取")
         else:
             print(f"  ⚠️  [{model}] Function calling 未触发，回退到正则提取")
             raw_result = message.content or ""
             json_data = _fallback_extract_json(raw_result, name)
 
-        # 检查是否有有效的 Genes
-        genes = json_data.get("Genes", [])
-        if isinstance(genes, list) and len(genes) == 0:
-            print(f"  ⚠️  [{model}] 提取结果中 Genes 为空列表")
+        # 检查是否有有效的基因（三数组或旧格式兼容）
+        total = _count_all_genes(json_data)
+        if total == 0:
+            print(f"  ⚠️  [{model}] 提取结果中所有基因数组均为空")
             return json_data, False
+
+        # 打印分类统计
+        c = len(json_data.get("Common_Genes", []))
+        p = len(json_data.get("Pathway_Genes", []))
+        r = len(json_data.get("Regulation_Genes", []))
+        if c + p + r > 0:
+            print(f"  📊 基因分类: Common={c}, Pathway={p}, Regulation={r}, 总计={c+p+r}")
 
         return json_data, True
 
