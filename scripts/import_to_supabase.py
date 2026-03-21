@@ -97,10 +97,34 @@ def extract_meta(data: dict):
     }
 
 
-def extract_genes(data: dict) -> list:
-    """提取基因列表"""
+def extract_genes_with_info(data: dict) -> list[tuple[dict, str, int]]:
+    """提取基因列表，兼容旧/新两种 JSON 结构。
+
+    返回: [(gene_data, category, index_in_source), ...]
+    - 旧格式: Genes
+    - 新格式: Common_Genes / Pathway_Genes / Regulation_Genes
+    """
     inner = data.get("CropNutrientMetabolismGeneExtraction", data)
-    return inner.get("Genes", [])
+
+    # 旧格式
+    genes = inner.get("Genes")
+    if isinstance(genes, list):
+        return [
+            (gene_data, "Genes", idx)
+            for idx, gene_data in enumerate(genes)
+            if isinstance(gene_data, dict)
+        ]
+
+    # 新格式
+    all_genes: list[tuple[dict, str, int]] = []
+    for category in ("Common_Genes", "Pathway_Genes", "Regulation_Genes"):
+        arr = inner.get(category, [])
+        if isinstance(arr, list):
+            for idx, gene_data in enumerate(arr):
+                if isinstance(gene_data, dict):
+                    all_genes.append((gene_data, category, idx))
+
+    return all_genes
 
 
 def import_paper(pair: dict):
@@ -112,7 +136,7 @@ def import_paper(pair: dict):
     json_data = json.loads(pair["json_file"].read_text(encoding="utf-8"))
 
     meta = extract_meta(json_data)
-    genes_data = extract_genes(json_data)
+    all_genes_with_info = extract_genes_with_info(json_data)
 
     # 读取验证报告
     verification_report = None
@@ -134,7 +158,7 @@ def import_paper(pair: dict):
             "title": meta["title"],
             "journal": meta["journal"],
             "doi": meta["doi"],
-            "gene_count": len(genes_data),
+            "gene_count": len(all_genes_with_info),
         }).eq("id", paper_id).execute()
 
         # 删除旧基因重新插入
@@ -149,7 +173,7 @@ def import_paper(pair: dict):
             "title": meta["title"],
             "journal": meta["journal"],
             "doi": meta["doi"],
-            "gene_count": len(genes_data),
+            "gene_count": len(all_genes_with_info),
             "status": "pending",
         }).execute()
         paper_id = result.data[0]["id"]
@@ -158,22 +182,31 @@ def import_paper(pair: dict):
     # 插入基因
     vr_genes = {}
     if verification_report and "genes" in verification_report:
-        for vg in verification_report["genes"]:
-            vr_genes[vg.get("gene_index", -1)] = vg
+        for idx, vg in enumerate(verification_report["genes"]):
+            report_index = vg.get("gene_index")
+            if isinstance(report_index, int):
+                vr_genes[report_index] = vg
+            else:
+                # 新格式 verification.json 通常没有 gene_index，按顺序对齐
+                vr_genes[idx] = vg
 
-    for idx, gene_data in enumerate(genes_data):
+    for idx, (gene_data, category, index_in_source) in enumerate(all_genes_with_info):
         vg = vr_genes.get(idx, {})
+        gene_payload = dict(gene_data)
+        gene_payload["_gene_category"] = category
+        gene_payload["_source_index"] = index_in_source
+
         gene_row = {
             "paper_id": paper_id,
             "gene_index": idx,
             "gene_name": gene_data.get("Gene_Name"),
-            "gene_data": gene_data,
+            "gene_data": gene_payload,
             "auto_verification": vg.get("verification"),
             "auto_stats": vg.get("stats"),
         }
         supabase.table("genes").insert(gene_row).execute()
 
-    print(f"  🧬 导入 {len(genes_data)} 个基因")
+    print(f"  🧬 导入 {len(all_genes_with_info)} 个基因")
 
 
 def main():

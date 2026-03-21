@@ -86,6 +86,9 @@ export default async function HomePage() {
         <p className="text-[var(--muted-foreground)]">
           共 {papers.length} 篇论文 · 点击查看详情和标注
         </p>
+        <p className="text-sm text-[var(--muted-foreground)] mt-2">
+          当前列表按导入时间倒序排列；已额外显示 slug，方便区分新旧数据。
+        </p>
       </div>
 
       {papers.length === 0 ? (
@@ -113,6 +116,21 @@ export default async function HomePage() {
                       {paper.doi && (
                         <span className="truncate max-w-[200px]">DOI: {paper.doi}</span>
                       )}
+                    </div>
+                    <div className="mt-2 flex flex-wrap items-center gap-2 text-xs">
+                      <span className="inline-flex items-center rounded px-2 py-0.5 bg-[var(--muted)] text-[var(--muted-foreground)] font-mono break-all">
+                        slug: {paper.slug}
+                      </span>
+                      <span
+                        className={`inline-flex items-center rounded px-2 py-0.5 ${paper.slug.startsWith('mineru_') || paper.slug === 'full' || paper.slug === 'full-1' || paper.slug === 'new'
+                          ? 'bg-orange-100 text-orange-800'
+                          : 'bg-green-100 text-green-800'
+                        }`}
+                      >
+                        {paper.slug.startsWith('mineru_') || paper.slug === 'full' || paper.slug === 'full-1' || paper.slug === 'new'
+                          ? '旧数据'
+                          : '新导入数据'}
+                      </span>
                     </div>
                   </div>
                   <StatusBadge status={paper.status} />
