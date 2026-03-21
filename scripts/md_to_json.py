@@ -1,11 +1,13 @@
 """
-md_to_json.py  (v2 — 拆分 tool 架构)
+md_to_json.py  (v4 — 硬编码 2 步 API 调用)
 
-提取模块：给 LLM 提供 4 个 tools（classify + 3×extract），
-一次 API 调用完成基因分类 + 详细字段提取。
+提取模块：通过 load_skill() 从 SKILL.md 加载 tools，
+代码硬编码调用顺序：
+  API Call #1: classify_genes  → 得到 gene_dict
+  API Call #2: extract_*_genes → 得到详细字段
 
 对外暴露:
-    extract_paper(md_path) -> (extraction_dict, gene_dict)
+    extract_paper(md_path, registry=None) -> (extraction_dict, gene_dict)
     供 pipeline.py 调用。
 
 也可独立运行:
@@ -14,12 +16,13 @@ md_to_json.py  (v2 — 拆分 tool 架构)
 
 import json
 import os
-import re
+import sys
 from datetime import datetime
 from openai import OpenAI
 from dotenv import load_dotenv
 from token_tracker import TokenTracker
 from text_utils import preprocess_md
+from tool_registry import load_skill, load_skill_list
 
 load_dotenv()
 
@@ -45,8 +48,9 @@ BASE_DIR = os.getenv("BASE_DIR", "/data/haotianwu/biojson")
 INPUT_DIR = os.getenv("MD_DIR", os.path.join(BASE_DIR, "md"))
 REPORTS_DIR = os.getenv("REPORTS_DIR", os.path.join(BASE_DIR, "reports"))
 PROMPT_PATH = os.getenv("PROMPT_PATH", os.path.join(BASE_DIR, "configs/nutri_gene_prompt_v2.txt"))
-SCHEMA_PATH = os.getenv("SCHEMA_PATH", os.path.join(BASE_DIR, "configs/nutri_gene_schema_v2.json"))
 TOKEN_USAGE_DIR = os.getenv("TOKEN_USAGE_DIR", os.path.join(BASE_DIR, "token-usage"))
+SKILLS_DIR = os.path.join(BASE_DIR, "skills")
+EXTRACTION_SKILL_DIR = os.path.join(SKILLS_DIR, "biojson-extraction")
 
 os.makedirs(REPORTS_DIR, exist_ok=True)
 os.makedirs(TOKEN_USAGE_DIR, exist_ok=True)
@@ -61,340 +65,220 @@ def stem_to_dirname(stem):
     return stem
 
 
-# ─── 读取 Prompt 和 Schema ───────────────────────────────────────────────────────
+# ─── 读取 Prompt ─────────────────────────────────────────────────────────────────
 with open(PROMPT_PATH, 'r', encoding='utf-8') as f:
     base_prompt = f.read()
 
-with open(SCHEMA_PATH, 'r', encoding='utf-8') as f:
-    schema_all = json.load(f)
+
+# ─── 启动时打印技能列表 ──────────────────────────────────────────────────────────
+def _print_skill_list():
+    """扫描并打印所有可用技能。"""
+    skills = load_skill_list(SKILLS_DIR)
+    if skills:
+        print(f"📦 发现 {len(skills)} 个技能:")
+        for s in skills:
+            print(f"   - {s['name']} v{s.get('version', '?')}: {s.get('description', '')[:60]}...")
+            tools = s.get("tools", [])
+            if tools:
+                print(f"     tools: {', '.join(t['name'] for t in tools)}")
+    else:
+        print("⚠️  未发现任何技能")
+
+_print_skill_list()
 
 
-# ─── 辅助：schema → function calling 格式 ────────────────────────────────────────
+# ─── 加载提取技能（只取提取相关的 4 个 tools） ────────────────────────────────────
+def _load_extraction_registry():
+    """从 SKILL.md 加载技能，只保留提取阶段的 4 个 tools。"""
+    full_registry = load_skill(EXTRACTION_SKILL_DIR, schema_base_dir=BASE_DIR)
 
-def _schema_props_to_fc(gene_def):
-    """将 nutri_gene_schema_v2.json 中一个 Gene 类型的 properties 转为
-    function calling 兼容格式（anyOf → string，保留 description）。"""
-    fc_props = {}
-    for field_name, field_schema in gene_def.get("properties", {}).items():
-        desc = field_schema.get("description", "")
-        fc_props[field_name] = {"type": "string", "description": desc}
-    return fc_props
+    # 过滤：只保留提取相关的 tools（排除 verify_all_genes）
+    EXTRACT_TOOL_NAMES = {"classify_genes", "extract_common_genes", "extract_pathway_genes", "extract_regulation_genes"}
 
+    from tool_registry import ToolRegistry
+    extract_registry = ToolRegistry()
+    for name, tool_info in full_registry._tools.items():
+        if name in EXTRACT_TOOL_NAMES:
+            extract_registry.register(name, tool_info["schema"], tool_info["handler"])
 
-# 从各自独立的 Extraction 定义中读取字段
-_common_defs = schema_all.get("CommonGeneExtraction", {}).get("$defs", {})
-_pathway_defs = schema_all.get("PathwayGeneExtraction", {}).get("$defs", {})
-_regulation_defs = schema_all.get("RegulationGeneExtraction", {}).get("$defs", {})
-
-COMMON_GENE_PROPS = _schema_props_to_fc(_common_defs.get("CommonGene", {}))
-PATHWAY_GENE_PROPS = _schema_props_to_fc(_pathway_defs.get("PathwayGene", {}))
-REGULATION_GENE_PROPS = _schema_props_to_fc(_regulation_defs.get("RegulationGene", {}))
-
-print(f"📋 Schema 字段数: Common={len(COMMON_GENE_PROPS)}, "
-      f"Pathway={len(PATHWAY_GENE_PROPS)}, Regulation={len(REGULATION_GENE_PROPS)}")
-
-
-# ═══════════════════════════════════════════════════════════════════════════════════
-#  4 个 Tools 定义
-# ═══════════════════════════════════════════════════════════════════════════════════
-
-CLASSIFY_TOOL = {
-    "type": "function",
-    "function": {
-        "name": "classify_genes",
-        "description": (
-            "Identify ALL core genes from the paper's Results section and classify each into one of three categories:\n"
-            "- Common: genes that are neither pathway enzymes nor regulators (e.g., general functional genes)\n"
-            "- Pathway: genes encoding enzymes in biosynthetic/metabolic pathways (e.g., CHS, F3H, PSY, DAHPS)\n"
-            "- Regulation: genes encoding transcription factors, signaling proteins, or other regulators (e.g., MYB12, Del, Ros1, SPL)\n"
-            "Only include genes that are directly experimentally validated in the Results section."
-        ),
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "Title": {"type": "string", "description": "Full paper title."},
-                "Journal": {"type": "string", "description": "Journal name."},
-                "DOI": {"type": "string", "description": "Pure DOI string, no URL prefix."},
-                "genes": {
-                    "type": "array",
-                    "description": "List of all core genes identified from the paper.",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "Gene_Name": {"type": "string", "description": "Gene name or symbol."},
-                            "category": {
-                                "type": "string",
-                                "enum": ["Common", "Pathway", "Regulation"],
-                                "description": "Gene category."
-                            },
-                            "reason": {"type": "string", "description": "Brief reason for classification."}
-                        },
-                        "required": ["Gene_Name", "category"]
-                    }
-                }
-            },
-            "required": ["Title", "Journal", "DOI", "genes"]
-        }
-    }
-}
-
-EXTRACT_COMMON_TOOL = {
-    "type": "function",
-    "function": {
-        "name": "extract_common_genes",
-        "description": (
-            "Extract detailed field information for Common genes (genes that are neither pathway enzymes nor regulators). "
-            "Only call this tool if classify_genes identified Common genes. "
-            "If information is not found, use 'NA'."
-        ),
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "genes": {
-                    "type": "array",
-                    "description": "Detailed information for each Common gene.",
-                    "items": {"type": "object", "properties": COMMON_GENE_PROPS}
-                }
-            },
-            "required": ["genes"]
-        }
-    }
-}
-
-EXTRACT_PATHWAY_TOOL = {
-    "type": "function",
-    "function": {
-        "name": "extract_pathway_genes",
-        "description": (
-            "Extract detailed field information for Pathway genes (genes encoding enzymes in biosynthetic/metabolic pathways). "
-            "Only call this tool if classify_genes identified Pathway genes. "
-            "If information is not found, use 'NA'."
-        ),
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "genes": {
-                    "type": "array",
-                    "description": "Detailed information for each Pathway gene.",
-                    "items": {"type": "object", "properties": PATHWAY_GENE_PROPS}
-                }
-            },
-            "required": ["genes"]
-        }
-    }
-}
-
-EXTRACT_REGULATION_TOOL = {
-    "type": "function",
-    "function": {
-        "name": "extract_regulation_genes",
-        "description": (
-            "Extract detailed field information for Regulation genes (transcription factors, signaling proteins, regulators). "
-            "Only call this tool if classify_genes identified Regulation genes. "
-            "If information is not found, use 'NA'."
-        ),
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "genes": {
-                    "type": "array",
-                    "description": "Detailed information for each Regulation gene.",
-                    "items": {"type": "object", "properties": REGULATION_GENE_PROPS}
-                }
-            },
-            "required": ["genes"]
-        }
-    }
-}
-
-ALL_EXTRACT_TOOLS = [CLASSIFY_TOOL, EXTRACT_COMMON_TOOL, EXTRACT_PATHWAY_TOOL, EXTRACT_REGULATION_TOOL]
-
-# tool name → array key 映射
-_TOOL_TO_ARRAY_KEY = {
-    "extract_common_genes": "Common_Genes",
-    "extract_pathway_genes": "Pathway_Genes",
-    "extract_regulation_genes": "Regulation_Genes",
-}
+    return extract_registry
 
 
 # ═══════════════════════════════════════════════════════════════════════════════════
-#  核心提取逻辑
+#  核心提取逻辑：硬编码 2 步 API 调用
 # ═══════════════════════════════════════════════════════════════════════════════════
+
+# 分类名 → extract tool 名的映射
+CAT_TO_TOOL = {
+    "Common":     "extract_common_genes",
+    "Pathway":    "extract_pathway_genes",
+    "Regulation": "extract_regulation_genes",
+}
 
 failed_files = []
 
 
-def _repair_truncated_json(json_str):
-    """尝试修复被截断的 JSON 字符串。"""
-    try:
-        return json.loads(json_str), False
-    except json.JSONDecodeError:
-        pass
+def _call_extract_api(api_client, model, content, name, registry,
+                      classify_client=None, classify_model=None):
+    """硬编码 2 步 API 调用进行基因提取。
 
-    last_brace = json_str.rfind('}')
-    if last_brace == -1:
-        return None, True
+    API Call #1: classify_genes  → 得到 gene_dict
+    API Call #2: extract_*_genes → 得到详细字段（根据 classify 结果决定调哪些）
 
-    truncated = json_str[:last_brace + 1]
-    open_braces = truncated.count('{') - truncated.count('}')
-    open_brackets = truncated.count('[') - truncated.count(']')
-    repair = truncated + ']' * open_brackets + '}' * open_braces
+    Args:
+        api_client: extract 阶段使用的 API 客户端
+        model: extract 阶段使用的模型
+        content: 论文文本
+        name: 文件名（用于 tracker）
+        registry: ToolRegistry 实例
+        classify_client: classify 阶段使用的 API 客户端（默认同 api_client）
+        classify_model: classify 阶段使用的模型（默认同 model）
 
-    try:
-        data = json.loads(repair)
-        return data, True
-    except json.JSONDecodeError:
-        # 更激进的修复
-        endings = list(re.finditer(r'\}\s*,', json_str))
-        if not endings:
-            return None, True
-        last_complete = endings[-1].end() - 1
-        partial = json_str[:last_complete].rstrip(',').rstrip()
-        ob = partial.count('{') - partial.count('}')
-        repair2 = partial + '}' * max(0, ob)
-        ob2 = repair2.count('[') - repair2.count(']')
-        repair2 = repair2 + ']' * max(0, ob2)
-        ob3 = repair2.count('{') - repair2.count('}')
-        repair2 = repair2 + '}' * max(0, ob3)
-        try:
-            return json.loads(repair2), True
-        except json.JSONDecodeError:
-            return None, True
-
-
-def _safe_parse_tool_args(json_str, tool_name):
-    """安全解析 tool call 的 arguments，支持截断修复。"""
-    data, was_repaired = _repair_truncated_json(json_str)
-    if data is None:
-        print(f"  ❌ [{tool_name}] JSON 无法解析也无法修复")
-        return None
-    if was_repaired:
-        print(f"  🔧 [{tool_name}] 截断 JSON 已自动修复")
-    return data
-
-
-def _fix_string_genes(data, key="genes"):
-    """防御：LLM 偶发把数组序列化为字符串。"""
-    arr = data.get(key)
-    if isinstance(arr, str):
-        try:
-            data[key] = json.loads(arr)
-            print(f"  🔧 自动修复: {key} 从字符串转为列表 ({len(data[key])} 个)")
-        except json.JSONDecodeError:
-            print(f"  ⚠️  {key} 是截断的字符串，无法自动修复")
-    return data
-
-
-def _call_extract_api(api_client, model, content, name):
-    """调用 API 进行提取（4 个 tools），返回 (extraction_dict, gene_dict, success)。
-
-    extraction_dict: {"Title":..., "Common_Genes":[...], "Pathway_Genes":[...], "Regulation_Genes":[...]}
-    gene_dict: {"CHS": "Pathway", "MYB12": "Regulation", ...}
+    返回 (extraction_dict, gene_dict, success)。
     """
-    try:
-        response = api_client.chat.completions.create(
-            model=model,
-            messages=[
-                {"role": "system", "content": base_prompt},
-                {"role": "user", "content": (
-                    "Analyze this literature and extract all nutrient metabolism gene information.\n\n"
-                    "IMPORTANT: You have 4 tools available. You MUST:\n"
-                    "1. First call classify_genes to identify and classify all core genes.\n"
-                    "2. Then call the appropriate extract_*_genes tools based on the categories found.\n"
-                    "   - If there are Pathway genes, call extract_pathway_genes\n"
-                    "   - If there are Regulation genes, call extract_regulation_genes\n"
-                    "   - If there are Common genes, call extract_common_genes\n"
-                    "3. Call ALL relevant extract tools in a single response (parallel tool calls).\n\n"
-                    f"Paper content:\n\n{content}"
-                )}
-            ],
-            tools=ALL_EXTRACT_TOOLS,
-            tool_choice="auto",
-            temperature=float(os.getenv("TEMPERATURE", "0.7")),
-            max_tokens=16384,
+    api_kwargs = dict(
+        temperature=float(os.getenv("TEMPERATURE", "0.7")),
+        max_tokens=16384,
+    )
+
+    # classify 默认用主 API
+    if classify_client is None:
+        classify_client = api_client
+    if classify_model is None:
+        classify_model = model
+
+    # ── 构建初始 messages（两步共用同一对话历史） ──
+    messages = [
+        {"role": "system", "content": base_prompt},
+        {"role": "user", "content": (
+            "Analyze this literature and extract all nutrient metabolism gene information.\n\n"
+            "Step 1: First classify all core genes from the Results section.\n"
+            "Step 2: Then extract detailed fields for each gene category.\n\n"
+            f"Paper content:\n\n{content}"
+        )}
+    ]
+
+    # ══════════════════════════════════════════════════════════════════════════
+    #  API Call #1: classify_genes（强制调用，优先用主 API）
+    # ══════════════════════════════════════════════════════════════════════════
+    print(f"    🔵 API Call #1: classify_genes (主 API: {classify_model})...")
+    classify_args, success = registry.call_tool(
+        client=classify_client,
+        model=classify_model,
+        messages=messages,
+        tool_name="classify_genes",
+        tracker=tracker,
+        stage="extract",
+        file_name=name,
+        **api_kwargs,
+    )
+
+    # classify 失败时走 fallback
+    if (not success or classify_args is None) and fallback_client and classify_client is not fallback_client:
+        print(f"    🔄 classify 失败，切换到 Fallback ({FALLBACK_MODEL})...")
+        # 重建 messages（classify 的 fallback 重新开始）
+        messages = [
+            {"role": "system", "content": base_prompt},
+            {"role": "user", "content": (
+                "Analyze this literature and extract all nutrient metabolism gene information.\n\n"
+                "Step 1: First classify all core genes from the Results section.\n"
+                "Step 2: Then extract detailed fields for each gene category.\n\n"
+                f"Paper content:\n\n{content}"
+            )}
+        ]
+        classify_args, success = registry.call_tool(
+            client=fallback_client,
+            model=FALLBACK_MODEL,
+            messages=messages,
+            tool_name="classify_genes",
+            tracker=tracker,
+            stage="extract",
+            file_name=name,
+            **api_kwargs,
         )
 
-        tracker.add(response, stage="extract", file=name)
-        message = response.choices[0].message
-
-        if not message.tool_calls or len(message.tool_calls) == 0:
-            print(f"  ⚠️  [{model}] 未触发任何 tool call: {name}")
-            return None, None, False
-
-        # 解析所有 tool calls
-        classify_result = None
-        extraction = {"Common_Genes": [], "Pathway_Genes": [], "Regulation_Genes": []}
-        gene_dict = {}
-
-        for tc in message.tool_calls:
-            fn_name = tc.function.name
-            data = _safe_parse_tool_args(tc.function.arguments, fn_name)
-            if data is None:
-                continue
-
-            if fn_name == "classify_genes":
-                classify_result = data
-                # 构建 gene_dict
-                genes_list = data.get("genes", [])
-                if isinstance(genes_list, str):
-                    try:
-                        genes_list = json.loads(genes_list)
-                    except json.JSONDecodeError:
-                        genes_list = []
-                for g in genes_list:
-                    gname = g.get("Gene_Name", "")
-                    cat = g.get("category", "Common")
-                    if gname:
-                        gene_dict[gname] = cat
-                print(f"  ✅ [{model}] classify_genes: {len(gene_dict)} 个基因")
-
-            elif fn_name in _TOOL_TO_ARRAY_KEY:
-                arr_key = _TOOL_TO_ARRAY_KEY[fn_name]
-                data = _fix_string_genes(data, "genes")
-                genes_arr = data.get("genes", [])
-                if isinstance(genes_arr, list):
-                    extraction[arr_key] = genes_arr
-                    print(f"  ✅ [{model}] {fn_name}: {len(genes_arr)} 个基因")
-                else:
-                    print(f"  ⚠️  [{model}] {fn_name}: genes 不是列表")
-
-            else:
-                print(f"  ⚠️  [{model}] 未知 tool: {fn_name}")
-
-        # 合并论文级元数据
-        if classify_result:
-            extraction["Title"] = classify_result.get("Title", "NA")
-            extraction["Journal"] = classify_result.get("Journal", "NA")
-            extraction["DOI"] = classify_result.get("DOI", "NA")
-
-        # 统计
-        c = len(extraction.get("Common_Genes", []))
-        p = len(extraction.get("Pathway_Genes", []))
-        r = len(extraction.get("Regulation_Genes", []))
-        total = c + p + r
-
-        if total == 0:
-            print(f"  ⚠️  [{model}] 提取结果中所有基因数组均为空")
-            return extraction, gene_dict, False
-
-        print(f"  📊 基因提取: Common={c}, Pathway={p}, Regulation={r}, 总计={total}")
-        return extraction, gene_dict, True
-
-    except Exception as e:
-        print(f"  ❌ [{model}] 处理文件 {name} 时发生错误: {str(e)}")
+    if not success or classify_args is None:
+        print(f"    ❌ classify_genes 全部失败")
         return None, None, False
 
+    gene_dict = registry.state.get("gene_dict", {})
+    print(f"    📋 分类结果: {len(gene_dict)} 个基因 — {gene_dict}")
 
-def extract_paper(md_path):
+    if not gene_dict:
+        print(f"    ⚠️  [{model}] classify 返回空基因列表")
+        return registry.state.get("extraction", {}), {}, False
+
+    # ══════════════════════════════════════════════════════════════════════════
+    #  API Call #2: extract_*_genes（根据分类硬编码决定调哪些）
+    # ══════════════════════════════════════════════════════════════════════════
+    needed_categories = set(gene_dict.values())
+    extract_tools = []
+    for cat in needed_categories:
+        tool_name = CAT_TO_TOOL.get(cat)
+        if tool_name:
+            extract_tools.append(tool_name)
+
+    if not extract_tools:
+        print(f"    ⚠️  没有需要调用的 extract tools")
+        return registry.state.get("extraction", {}), gene_dict, False
+
+    print(f"    🔵 API Call #2: {', '.join(extract_tools)}...")
+
+    # 在 messages 中追加一条引导消息，告诉 LLM 现在需要提取详细字段
+    category_gene_map = {}
+    for gname, cat in gene_dict.items():
+        category_gene_map.setdefault(cat, []).append(gname)
+
+    guide_parts = ["Now extract detailed field information for each gene category:"]
+    for cat, genes in category_gene_map.items():
+        guide_parts.append(f"- {cat}: {', '.join(genes)}")
+    guide_parts.append("\nCall the appropriate extract_*_genes tools with all required fields.")
+
+    messages.append({"role": "user", "content": "\n".join(guide_parts)})
+
+    results, success = registry.call_tools(
+        client=api_client,
+        model=model,
+        messages=messages,
+        tool_names=extract_tools,
+        tracker=tracker,
+        stage="extract",
+        file_name=name,
+        **api_kwargs,
+    )
+
+    if not success:
+        print(f"    ⚠️  [{model}] extract tools 调用失败")
+        return registry.state.get("extraction", {}), gene_dict, False
+
+    extraction = registry.state.get("extraction", {})
+
+    # 统计
+    c = len(extraction.get("Common_Genes", []))
+    p = len(extraction.get("Pathway_Genes", []))
+    r = len(extraction.get("Regulation_Genes", []))
+    total = c + p + r
+
+    tools_called = [tc.tool_name for tc in registry.call_log]
+    print(f"    📊 Tool calls: {' → '.join(tools_called)}")
+    print(f"    📊 基因提取: Common={c}, Pathway={p}, Regulation={r}, 总计={total}")
+
+    if total == 0:
+        print(f"    ⚠️  [{model}] 提取结果中所有基因数组均为空")
+        return extraction, gene_dict, False
+
+    return extraction, gene_dict, True
+
+
+def extract_paper(md_path, registry=None):
     """提取单篇论文的基因信息。
 
     Args:
         md_path: MD 文件路径
+        registry: 可选的 ToolRegistry 实例（不传则自动加载）
 
     Returns:
         (extraction_dict, gene_dict) 或 (None, None) 如果失败
-        extraction_dict: {"Title":..., "Common_Genes":[...], "Pathway_Genes":[...], "Regulation_Genes":[...]}
-        gene_dict: {"CHS": "Pathway", "MYB12": "Regulation", ...}
     """
     name = os.path.basename(md_path)
     filename = os.path.splitext(name)[0]
@@ -404,7 +288,6 @@ def extract_paper(md_path):
     output_path = os.path.join(paper_dir, "extraction.json")
     if os.path.exists(output_path) and os.getenv("FORCE_RERUN") != "1":
         print(f"  ⏭️  已存在，跳过: {output_path}  (设置 FORCE_RERUN=1 强制重跑)")
-        # 从已有文件恢复
         with open(output_path, 'r', encoding='utf-8') as f:
             extraction = json.load(f)
         gene_dict_path = os.path.join(paper_dir, "gene_dict.json")
@@ -413,7 +296,6 @@ def extract_paper(md_path):
             with open(gene_dict_path, 'r', encoding='utf-8') as f:
                 gene_dict = json.load(f)
         else:
-            # 从 extraction 重建 gene_dict
             for arr_key, cat in [("Common_Genes", "Common"), ("Pathway_Genes", "Pathway"), ("Regulation_Genes", "Regulation")]:
                 for g in extraction.get(arr_key, []):
                     if isinstance(g, dict):
@@ -429,16 +311,27 @@ def extract_paper(md_path):
     content = preprocess_md(content)
     print(f"  📏 文本预处理: {original_len:,} → {len(content):,} 字符 (节省 {original_len - len(content):,} 字符)")
 
+    # 加载 registry（如果外部没传入）
+    if registry is None:
+        registry = _load_extraction_registry()
+
     primary_model = os.getenv("MODEL", "Vendor2/Claude-4.6-opus")
 
-    # 第一次尝试：主 API
+    # 第一次尝试：主 API（classify 和 extract 都用主 API）
     print(f"  🔵 使用主 API ({primary_model}) 提取...")
-    extraction, gene_dict, success = _call_extract_api(client, primary_model, content, name)
+    extraction, gene_dict, success = _call_extract_api(
+        client, primary_model, content, name, registry,
+        classify_client=client, classify_model=primary_model,
+    )
 
-    # Fallback
+    # Fallback：整体失败才走 fallback
     if not success and fallback_client:
         print(f"  🔄 主 API 失败，自动切换到 Fallback ({FALLBACK_MODEL})...")
-        extraction, gene_dict, success = _call_extract_api(fallback_client, FALLBACK_MODEL, content, name)
+        registry_fallback = _load_extraction_registry()
+        extraction, gene_dict, success = _call_extract_api(
+            fallback_client, FALLBACK_MODEL, content, name, registry_fallback,
+            classify_client=fallback_client, classify_model=FALLBACK_MODEL,
+        )
 
     if not success or extraction is None:
         print(f"  ⚠️  所有 API 均失败: {name}")
@@ -459,7 +352,6 @@ def extract_paper(md_path):
         json.dump(extraction, f, indent=2, ensure_ascii=False)
     print(f"  ✅ 提取结果已保存: {output_path}")
 
-    # 保存 gene_dict（备份，供断点恢复）
     if gene_dict:
         gene_dict_path = os.path.join(paper_dir, "gene_dict.json")
         with open(gene_dict_path, 'w', encoding='utf-8') as f:
@@ -470,7 +362,7 @@ def extract_paper(md_path):
 
 
 # ═══════════════════════════════════════════════════════════════════════════════════
-#  旧版兼容入口 ai_response()（供旧的 run.sh extract 模式使用）
+#  旧版兼容入口
 # ═══════════════════════════════════════════════════════════════════════════════════
 
 def ai_response(path):
@@ -511,6 +403,9 @@ if __name__ == "__main__":
 
         if os.getenv("TEST_MODE") == "1":
             files = resolve_test_files(files)
+
+        # 加载一次 registry，所有文件共享
+        registry = _load_extraction_registry()
 
         for file in files:
             ai_response(os.path.join(INPUT_DIR, file))

@@ -1,9 +1,12 @@
 """
 pipeline.py — 流水线协调器
 
-每篇论文只需 2 次 API 调用：
-  1. 提取（md_to_json.extract_paper）：classify + extract
-  2. 验证（verify_response.verify_paper）：verify_all_genes
+每篇论文 3 次硬编码 API 调用：
+  API #1: classify_genes     → 读取 MD，分类基因，构建 gene_dict
+  API #2: extract_*_genes    → 根据分类提取详细字段
+  API #3: verify_all_genes   → 验证所有字段的忠实度
+
+代码控制每步调哪个 tool（不依赖 LLM 自由选择）。
 
 用法：
     python scripts/pipeline.py          # 全量处理
@@ -31,7 +34,10 @@ TOKEN_USAGE_DIR = os.getenv("TOKEN_USAGE_DIR", os.path.join(BASE_DIR, "token-usa
 
 def main():
     print("═" * 60)
-    print("🚀 BioJSON Pipeline v2 — 2 次 API 调用/篇")
+    print("🚀 BioJSON Pipeline v3 — 3 次硬编码 API 调用/篇")
+    print("   API #1: classify_genes → 分类")
+    print("   API #2: extract_*_genes → 提取详细字段")
+    print("   API #3: verify_all_genes → 验证忠实度")
     print("═" * 60)
 
     if not os.path.exists(MD_DIR):
@@ -56,8 +62,8 @@ def main():
         print(f"📄 [{i}/{len(files)}] {filename}")
         print(f"{'━' * 60}")
 
-        # ── 第 1 次 API：提取 ──
-        print(f"\n  🔷 第 1 步：提取基因...")
+        # ── API #1 + #2：分类 + 提取 ──
+        print(f"\n  🔷 API #1 + #2：分类 + 提取基因...")
         extraction, gene_dict = extract_paper(md_path)
 
         if extraction is None:
@@ -70,8 +76,8 @@ def main():
         )
         print(f"  📊 提取到 {total_genes} 个基因, 分类: {gene_dict}")
 
-        # ── 第 2 次 API：验证 ──
-        print(f"\n  🔷 第 2 步：验证基因...")
+        # ── API #3：验证 ──
+        print(f"\n  🔷 API #3：验证基因...")
         report = verify_paper(md_path, extraction, gene_dict, stem)
 
         if report:
