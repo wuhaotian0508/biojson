@@ -4,6 +4,7 @@ import { createContext, useContext, useState, useEffect, type ReactNode } from '
 
 interface UserContextType {
   username: string | null
+  isLoaded: boolean
   setUsername: (name: string | null) => void
   login: (name: string) => void
   logout: () => void
@@ -11,6 +12,7 @@ interface UserContextType {
 
 const UserContext = createContext<UserContextType>({
   username: null,
+  isLoaded: false,
   setUsername: () => {},
   login: () => {},
   logout: () => {},
@@ -18,10 +20,12 @@ const UserContext = createContext<UserContextType>({
 
 export function UserProvider({ children }: { children: ReactNode }) {
   const [username, setUsername] = useState<string | null>(null)
+  const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
     const saved = localStorage.getItem('biojson_username')
     if (saved) setUsername(saved)
+    setIsLoaded(true)
   }, [])
 
   function login(name: string) {
@@ -35,7 +39,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
   }
 
   return (
-    <UserContext.Provider value={{ username, setUsername, login, logout }}>
+    <UserContext.Provider value={{ username, isLoaded, setUsername, login, logout }}>
       {children}
     </UserContext.Provider>
   )

@@ -1,10 +1,11 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { useUser } from '@/lib/UserContext'
 
 export default function Header() {
-  const { username, login, logout } = useUser()
+  const { username, isLoaded, login, logout } = useUser()
   const [inputName, setInputName] = useState('')
   const [showInput, setShowInput] = useState(false)
 
@@ -20,15 +21,17 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[var(--background)]/80 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
-        <a href="/" className="flex items-center gap-2 font-bold text-lg no-underline">
+        <Link href="/" className="flex items-center gap-2 font-bold text-lg no-underline">
           <span>🧬</span>
           <span>BioJSON</span>
-        </a>
+        </Link>
         <div className="flex items-center gap-4">
           <nav className="flex items-center gap-4 text-sm text-[var(--muted-foreground)]">
-            <a href="/" className="hover:text-[var(--foreground)] no-underline">论文列表</a>
+            <Link href="/" className="hover:text-[var(--foreground)] no-underline">论文列表</Link>
           </nav>
-          {username ? (
+          {!isLoaded ? (
+            <span className="text-sm text-[var(--muted-foreground)]">加载中...</span>
+          ) : username ? (
             <div className="flex items-center gap-2 text-sm">
               <span className="px-2 py-1 rounded bg-[var(--muted)] border border-[var(--border)]">
                 User: <strong>{username}</strong>

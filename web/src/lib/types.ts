@@ -67,10 +67,11 @@ export interface Annotation {
   id: string
   gene_id: string
   field_name: string
-  expert_verdict: 'correct' | 'incorrect' | 'modified'
+  expert_verdict: 'good' | 'medium' | 'poor' | 'unrated' | 'should_extract' | 'should_not_extract' | 'correct' | 'incorrect' | 'modified'
   corrected_value: string | null
   comment: string | null
   annotator_id: string | null
+  annotator_name: string | null
   created_at: string
   updated_at: string
 }
@@ -89,53 +90,65 @@ export interface ExtractionJSON {
   }
 }
 
-// 单个基因的字段（40+ 个字段）
+// 单个基因的字段（v2 schema - 45 个字段，与 nutri_fields_v2.xlsx 一致）
 export interface GeneData {
+  // ── 通用 - 物种相关 ──
+  'Species_Common Name'?: string
+  Species_Latin_Name?: string
+  Variety_or_Cultivar?: string
+  // ── 通用 - 基因相关 ──
   Gene_Name?: string
   Gene_Accession_Number?: string
-  Species?: string
-  Species_Latin_Name?: string
-  Variety?: string
+  Protein_Family_or_Domain?: string
   Reference_Genome_Version?: string
   Chromosome_Position?: string
-  Gene_Role_Class?: string
-  Protein_Family_or_Domain?: string
-  Enzyme_Name_or_Function?: string
-  EC_Number?: string
-  Final_Nutrient_Product?: string
-  Final_Nutrient_Product_Class?: string
-  Nutrient_Trait_Metric?: string
-  Quantitative_Nutrient_Change?: string
-  Units_and_Basis?: string
-  Pathway_Name?: string
-  Metabolic_Step_Type?: string
-  Reaction_Substrate?: string
-  Reaction_Product_or_Immediate_Output?: string
-  Key_Intermediate_Metabolites_Affected?: string[] | string
-  Flux_or_Direction_Change?: string
-  Core_Phenotypic_Effect_on_Nutrient?: string
+  // ── 通用 - 终产物相关 ──
+  Target_Metabolite_Product?: string
+  Target_Metabolite_Class?: string
+  Target_Product_Level_or_Property?: string
+  Tissue_or_Organ_of_Metabolite_Assessment?: string
+  Developmental_or_Physiological_Context?: string
+  // ── 通用 - 代谢表型相关 ──
+  Core_Phenotypic_Effect?: string
+  Effect_Direction_on_Target_Product?: string
+  Quantitative_Phenotypic_Alterations?: string
   Other_Phenotypic_Effects?: string
-  Regulatory_Mechanism?: string
-  Regulatory_Relationships?: string
-  Interacting_Proteins?: string[] | string
-  Subcellular_Localization?: string
-  Tissue_or_Organ_of_Nutrient_Accumulation?: string
-  Developmental_Stage?: string
-  Expression_Pattern?: string
-  Key_Environment_or_Treatment_Factor?: string
-  Experimental_Materials?: string
+  // ── 通用 - 研究方法相关 ──
   Core_Validation_Method?: string
-  Nutrient_Assay_or_Profiling_Method?: string
+  Metabolite_Assay_Method?: string
+  Gene_Discovery_or_Cloning_Method?: string
   Omics_Data?: string
+  // ── 通用 - 群体相关 ──
+  Genetic_Population?: string
+  QTL_or_Locus_Name?: string
   Key_Variant_Type?: string
   Key_Variant_Site?: string
-  Favorable_Allele_or_Haplotype?: string
-  Gene_Discovery_or_Cloning_Method?: string
-  Genetic_Population?: string
-  Field_Trials_or_GxE?: string
-  Breeding_or_Biofortification_Value?: string
-  Summary_key_Findings_of_Core_Gene?: string
+  Favorable_Allele?: string
+  // ── 通用 - 应用相关 ──
+  Key_Environment_or_Treatment_Factor?: string
+  Field_Trials?: string
+  Breeding_Application_Value?: string
+  Potential_Tradeoffs?: string
+  // ── 通用 - 其它 ──
   Notes_or_Other_Important_Info?: string
+  // ── 合成特异 - 酶催化相关 ──
+  Enzyme_Name?: string
+  EC_Number?: string
+  Catalyzed_Reaction_Description?: string
+  Primary_Substrate?: string
+  Primary_Product?: string
+  Evidence_for_Enzymatic_Function?: string
+  // ── 合成特异 - 途径位置相关 ──
+  Biosynthetic_Pathway?: string
+  Metabolic_Step_Position?: string
+  Pathway_Branch_or_Subpathway?: string
+  Evidence_for_Pathway_Position?: string
+  // ── 合成特异 - 终产物影响相关 ──
+  End_Product_Connection_Type?: string
+  Directness_of_Effect_on_Target_Product?: string
+  Rate_Limiting_or_Key_Control_Step?: string
+  // ── 合成特异 - 互作相关 ──
+  Cofactor_or_Coenzyme_Requirement?: string
   [key: string]: string | string[] | undefined
 }
 
@@ -186,122 +199,206 @@ export const GENE_CATEGORIES = [
   { key: 'Common_Genes', label: 'Common Genes' },
 ] as const
 
-// 基因字段分组（用于 UI 展示）- 通用字段
+// ── 字段顺序（与 nutri_fields_v2.xlsx 完全一致）──────────────
+export const FIELD_ORDER: string[] = [
+  // 通用 - 物种相关
+  'Species_Common Name',
+  'Species_Latin_Name',
+  'Variety_or_Cultivar',
+  // 通用 - 基因相关
+  'Gene_Name',
+  'Gene_Accession_Number',
+  'Protein_Family_or_Domain',
+  'Reference_Genome_Version',
+  'Chromosome_Position',
+  // 通用 - 终产物相关
+  'Target_Metabolite_Product',
+  'Target_Metabolite_Class',
+  'Target_Product_Level_or_Property',
+  'Tissue_or_Organ_of_Metabolite_Assessment',
+  'Developmental_or_Physiological_Context',
+  // 通用 - 代谢表型相关
+  'Core_Phenotypic_Effect',
+  'Effect_Direction_on_Target_Product',
+  'Quantitative_Phenotypic_Alterations',
+  'Other_Phenotypic_Effects',
+  // 通用 - 研究方法相关
+  'Core_Validation_Method',
+  'Metabolite_Assay_Method',
+  'Gene_Discovery_or_Cloning_Method',
+  'Omics_Data',
+  // 通用 - 群体相关
+  'Genetic_Population',
+  'QTL_or_Locus_Name',
+  'Key_Variant_Type',
+  'Key_Variant_Site',
+  'Favorable_Allele',
+  // 通用 - 应用相关
+  'Key_Environment_or_Treatment_Factor',
+  'Field_Trials',
+  'Breeding_Application_Value',
+  'Potential_Tradeoffs',
+  // 通用 - 其它
+  'Notes_or_Other_Important_Info',
+  // 合成特异 - 酶催化相关
+  'Enzyme_Name',
+  'EC_Number',
+  'Catalyzed_Reaction_Description',
+  'Primary_Substrate',
+  'Primary_Product',
+  'Evidence_for_Enzymatic_Function',
+  // 合成特异 - 途径位置相关
+  'Biosynthetic_Pathway',
+  'Metabolic_Step_Position',
+  'Pathway_Branch_or_Subpathway',
+  'Evidence_for_Pathway_Position',
+  // 合成特异 - 终产物影响相关
+  'End_Product_Connection_Type',
+  'Directness_of_Effect_on_Target_Product',
+  'Rate_Limiting_or_Key_Control_Step',
+  // 合成特异 - 互作相关
+  'Cofactor_or_Coenzyme_Requirement',
+]
+
+// 基因字段分组（用于 UI 展示）- 与 nutri_fields_v2.xlsx 分组一致
 export const GENE_FIELD_GROUPS: { label: string; fields: string[] }[] = [
   {
-    label: '基本信息',
+    label: '物种相关',
     fields: [
-      'Gene_Name', 'Gene_Accession_Number', 'Species', 'Species_Latin_Name',
-      'Variety', 'Reference_Genome_Version', 'Chromosome_Position',
+      'Species_Common Name', 'Species_Latin_Name', 'Variety_or_Cultivar',
     ],
   },
   {
-    label: '功能角色',
+    label: '基因相关',
     fields: [
-      'Gene_Role_Class', 'Protein_Family_or_Domain', 'Enzyme_Name_or_Function', 'EC_Number',
+      'Gene_Name', 'Gene_Accession_Number', 'Protein_Family_or_Domain',
+      'Reference_Genome_Version', 'Chromosome_Position',
     ],
   },
   {
-    label: '营养产物',
+    label: '终产物相关',
     fields: [
-      'Final_Nutrient_Product', 'Final_Nutrient_Product_Class', 'Nutrient_Trait_Metric',
-      'Quantitative_Nutrient_Change', 'Units_and_Basis',
+      'Target_Metabolite_Product', 'Target_Metabolite_Class',
+      'Target_Product_Level_or_Property', 'Tissue_or_Organ_of_Metabolite_Assessment',
+      'Developmental_or_Physiological_Context',
     ],
   },
   {
-    label: '代谢通路',
+    label: '代谢表型相关',
     fields: [
-      'Pathway_Name', 'Metabolic_Step_Type', 'Reaction_Substrate',
-      'Reaction_Product_or_Immediate_Output', 'Key_Intermediate_Metabolites_Affected',
-      'Flux_or_Direction_Change',
+      'Core_Phenotypic_Effect', 'Effect_Direction_on_Target_Product',
+      'Quantitative_Phenotypic_Alterations', 'Other_Phenotypic_Effects',
     ],
   },
   {
-    label: '表型效应',
-    fields: ['Core_Phenotypic_Effect_on_Nutrient', 'Other_Phenotypic_Effects'],
-  },
-  {
-    label: '调控机制',
-    fields: ['Regulatory_Mechanism', 'Regulatory_Relationships', 'Interacting_Proteins'],
-  },
-  {
-    label: '定位与表达',
+    label: '研究方法相关',
     fields: [
-      'Subcellular_Localization', 'Tissue_or_Organ_of_Nutrient_Accumulation',
-      'Developmental_Stage', 'Expression_Pattern', 'Key_Environment_or_Treatment_Factor',
+      'Core_Validation_Method', 'Metabolite_Assay_Method',
+      'Gene_Discovery_or_Cloning_Method', 'Omics_Data',
     ],
   },
   {
-    label: '实验验证',
+    label: '群体相关',
     fields: [
-      'Experimental_Materials', 'Core_Validation_Method',
-      'Nutrient_Assay_or_Profiling_Method', 'Omics_Data',
+      'Genetic_Population', 'QTL_or_Locus_Name',
+      'Key_Variant_Type', 'Key_Variant_Site', 'Favorable_Allele',
     ],
   },
   {
-    label: '变异信息',
+    label: '应用相关',
     fields: [
-      'Key_Variant_Type', 'Key_Variant_Site', 'Favorable_Allele_or_Haplotype',
+      'Key_Environment_or_Treatment_Factor', 'Field_Trials',
+      'Breeding_Application_Value', 'Potential_Tradeoffs',
     ],
   },
   {
-    label: '遗传与育种',
+    label: '其它',
+    fields: ['Notes_or_Other_Important_Info'],
+  },
+  {
+    label: '酶催化相关（合成特异）',
     fields: [
-      'Gene_Discovery_or_Cloning_Method', 'Genetic_Population',
-      'Field_Trials_or_GxE', 'Breeding_or_Biofortification_Value',
+      'Enzyme_Name', 'EC_Number', 'Catalyzed_Reaction_Description',
+      'Primary_Substrate', 'Primary_Product', 'Evidence_for_Enzymatic_Function',
     ],
   },
   {
-    label: '总结',
-    fields: ['Summary_key_Findings_of_Core_Gene', 'Notes_or_Other_Important_Info'],
+    label: '途径位置相关（合成特异）',
+    fields: [
+      'Biosynthetic_Pathway', 'Metabolic_Step_Position',
+      'Pathway_Branch_or_Subpathway', 'Evidence_for_Pathway_Position',
+    ],
+  },
+  {
+    label: '终产物影响相关（合成特异）',
+    fields: [
+      'End_Product_Connection_Type', 'Directness_of_Effect_on_Target_Product',
+      'Rate_Limiting_or_Key_Control_Step',
+    ],
+  },
+  {
+    label: '互作相关（合成特异）',
+    fields: ['Cofactor_or_Coenzyme_Requirement'],
   },
 ]
 
-// 字段中文名映射
+// 字段中文名映射（与 nutri_fields_v2.xlsx 一致）
 export const FIELD_LABELS: Record<string, string> = {
+  // 通用 - 物种相关
+  'Species_Common Name': '物种通用名',
+  Species_Latin_Name: '物种拉丁名',
+  Variety_or_Cultivar: '品种/栽培种',
+  // 通用 - 基因相关
   Gene_Name: '基因名称',
   Gene_Accession_Number: '基因登录号',
-  Species: '物种',
-  Species_Latin_Name: '物种拉丁名',
-  Variety: '品种',
+  Protein_Family_or_Domain: '蛋白家族/结构域',
   Reference_Genome_Version: '参考基因组版本',
   Chromosome_Position: '染色体位置',
-  Gene_Role_Class: '基因角色',
-  Protein_Family_or_Domain: '蛋白家族/结构域',
-  Enzyme_Name_or_Function: '酶名/功能',
-  EC_Number: 'EC 编号',
-  Final_Nutrient_Product: '最终营养产物',
-  Final_Nutrient_Product_Class: '营养产物类别',
-  Nutrient_Trait_Metric: '营养性状度量',
-  Quantitative_Nutrient_Change: '定量变化',
-  Units_and_Basis: '单位/基准',
-  Pathway_Name: '通路名称',
-  Metabolic_Step_Type: '代谢步骤类型',
-  Reaction_Substrate: '反应底物',
-  Reaction_Product_or_Immediate_Output: '反应产物',
-  Key_Intermediate_Metabolites_Affected: '关键中间代谢物',
-  Flux_or_Direction_Change: '通量/方向变化',
-  Core_Phenotypic_Effect_on_Nutrient: '核心表型效应',
+  // 通用 - 终产物相关
+  Target_Metabolite_Product: '目标代谢产物',
+  Target_Metabolite_Class: '目标代谢产物类别',
+  Target_Product_Level_or_Property: '目标产物水平/性质',
+  Tissue_or_Organ_of_Metabolite_Assessment: '代谢评估组织/器官',
+  Developmental_or_Physiological_Context: '发育/生理背景',
+  // 通用 - 代谢表型相关
+  Core_Phenotypic_Effect: '核心表型效应',
+  Effect_Direction_on_Target_Product: '对目标产物的效应方向',
+  Quantitative_Phenotypic_Alterations: '定量表型变化',
   Other_Phenotypic_Effects: '其他表型效应',
-  Regulatory_Mechanism: '调控机制',
-  Regulatory_Relationships: '调控关系',
-  Interacting_Proteins: '互作蛋白',
-  Subcellular_Localization: '亚细胞定位',
-  Tissue_or_Organ_of_Nutrient_Accumulation: '营养积累组织',
-  Developmental_Stage: '发育阶段',
-  Expression_Pattern: '表达模式',
-  Key_Environment_or_Treatment_Factor: '环境/处理因素',
-  Experimental_Materials: '实验材料',
+  // 通用 - 研究方法相关
   Core_Validation_Method: '核心验证方法',
-  Nutrient_Assay_or_Profiling_Method: '营养分析方法',
+  Metabolite_Assay_Method: '代谢物分析方法',
+  Gene_Discovery_or_Cloning_Method: '基因发现/克隆方法',
   Omics_Data: '组学数据',
+  // 通用 - 群体相关
+  Genetic_Population: '遗传群体',
+  QTL_or_Locus_Name: 'QTL/位点名称',
   Key_Variant_Type: '变异类型',
   Key_Variant_Site: '变异位点',
-  Favorable_Allele_or_Haplotype: '有利等位基因/单倍型',
-  Gene_Discovery_or_Cloning_Method: '基因发现/克隆方法',
-  Genetic_Population: '遗传群体',
-  Field_Trials_or_GxE: '田间试验/GxE',
-  Breeding_or_Biofortification_Value: '育种/生物强化价值',
-  Summary_key_Findings_of_Core_Gene: '核心发现总结',
-  Notes_or_Other_Important_Info: '备注',
+  Favorable_Allele: '有利等位基因',
+  // 通用 - 应用相关
+  Key_Environment_or_Treatment_Factor: '环境/处理因素',
+  Field_Trials: '田间试验',
+  Breeding_Application_Value: '育种应用价值',
+  Potential_Tradeoffs: '潜在权衡',
+  // 通用 - 其它
+  Notes_or_Other_Important_Info: '备注/其他重要信息',
+  // 合成特异 - 酶催化相关
+  Enzyme_Name: '酶名称',
+  EC_Number: 'EC 编号',
+  Catalyzed_Reaction_Description: '催化反应描述',
+  Primary_Substrate: '主要底物',
+  Primary_Product: '主要产物',
+  Evidence_for_Enzymatic_Function: '酶功能证据',
+  // 合成特异 - 途径位置相关
+  Biosynthetic_Pathway: '生物合成途径',
+  Metabolic_Step_Position: '代谢步骤位置',
+  Pathway_Branch_or_Subpathway: '途径分支/子途径',
+  Evidence_for_Pathway_Position: '途径位置证据',
+  // 合成特异 - 终产物影响相关
+  End_Product_Connection_Type: '终产物关联类型',
+  Directness_of_Effect_on_Target_Product: '对目标产物效应的直接性',
+  Rate_Limiting_or_Key_Control_Step: '限速/关键控制步骤',
+  // 合成特异 - 互作相关
+  Cofactor_or_Coenzyme_Requirement: '辅因子/辅酶需求',
 }

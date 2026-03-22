@@ -1,8 +1,11 @@
 # BioJSON
 
-基于 LLM 的植物营养代谢基因文献结构化提取管道（Pipeline）+ Web 标注平台。
+BioJSON 是一个面向**植物营养代谢基因文献**的结构化处理项目，包含两部分：
 
-从科学文献（Markdown 格式）中自动提取关键基因信息为结构化 JSON，并通过 LLM 二次验证消除幻觉（Hallucination），确保提取结果忠实于原文。提供 Web 可视化界面，供专家在线审核和标注提取结果。
+1. **LLM 提取与验证管道（Pipeline）**：从 Markdown 论文中抽取关键基因信息，生成结构化 JSON，并对字段进行二次验证与自动修正。
+2. **Web 标注平台**：将论文原文、抽取结果和验证状态可视化，方便研究人员进行人工审核与修订。
+
+项目目标是把分散在论文中的基因、代谢产物、调控关系、实验方法和育种价值等信息沉淀为可复用的数据资产，同时尽可能降低 LLM 幻觉带来的误差。
 
 ## ✨ 功能特性
 
@@ -25,6 +28,13 @@
 - **验证进度条**：可视化展示每篇论文的验证覆盖率（支持/不确定/不支持）
 - **技术栈**：Next.js 15 + Supabase + TailwindCSS，支持 Vercel 一键部署
 
+## 🎯 适用场景
+
+- 从植物营养/代谢工程论文中批量抽取核心基因信息
+- 为知识库、数据库或下游分析任务生成结构化 JSON 数据
+- 对 LLM 抽取结果进行字段级验证，降低幻觉风险
+- 通过 Web 界面完成专家审核、纠错和补标
+
 ## 📁 项目结构
 
 ```
@@ -36,7 +46,7 @@ biojson/
 ├── md/                         # 输入：Markdown 格式的科学文献
 │   └── processed/              #   验证完成后自动移入的已处理文献
 ├── json/                       # 输出：验证修正后的最终 JSON
-├── reports/                    # 提取结果 + 验证报告（按论文分子目录）
+├── reports/                    # 提取结果 + 验证报告（按论文分目录）
 │   └── {paper-dir}/
 │       ├── extraction.json     #   LLM 提取的原始 JSON
 │       └── verification.json   #   逐字段验证报告
@@ -69,16 +79,23 @@ biojson/
 └── .gitignore
 ```
 
+> 根目录 `README.md` 是项目总览文档；`web/README.md` 目前仍是 Next.js 默认模板，建议以后按前端子项目单独维护。
+
 ## 🚀 快速开始
 
-### 1. 环境准备
+### 1. 安装 Python 依赖
 
 ```bash
-# 安装依赖
 pip install openai python-dotenv
 ```
 
-### 2. 配置 API Key
+如果要导入 Supabase，可额外安装：
+
+```bash
+pip install supabase
+```
+
+### 2. 配置环境变量
 
 复制环境变量模板并填入实际值：
 
@@ -89,34 +106,69 @@ cp .env.example .env
 编辑 `.env` 文件：
 
 ```env
-# 主 API
+# 主 API（Pipeline 必需）
 OPENAI_API_KEY=your-api-key-here
 OPENAI_BASE_URL=https://api.gpugeek.com/v1
 MODEL=Vendor2/Claude-4.6-opus
 
-# Fallback API（可选，当主 API 因内容审查被拦截时自动切换）
+# Fallback API（可选）
 FALLBACK_API_KEY=your-fallback-key-here
-FALLBACK_BASE_URL=https://your-fallback-url/v1
+FALLBACK_BASE_URL=https://ai-gateway-internal.dp.tech/v1
 FALLBACK_MODEL=volcengine/deepseek-v3-2-251201
+
+# Supabase（导入数据到数据库时使用）
+SUPABASE_URL=https://your-project.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key-here
+
+# Web 前端公开环境变量（部署前端时使用）
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key-here
 ```
 
 ### 3. 放置文献
 
 将 Markdown 格式的科学文献放入 `md/` 目录。
 
-### 4. 运行
+### 4. 运行推荐流水线
+
+#### 推荐模式：新流水线（`pipeline`）
 
 ```bash
-# 默认模式：提取 + 验证（全量处理所有文献）
+# 默认模式，推荐：提取 + 验证
 bash scripts/run.sh
 
-# 仅提取 MD → JSON
+# 等价写法
+bash scripts/run.sh pipeline
+
+# 测试模式：仅处理第 1 个文件
+bash scripts/run.sh pipeline-test
+
+# 测试模式：仅处理第 3 个文件
+bash scripts/run.sh pipeline-test 3
+
+# 测试模式：按文件名或关键词匹配
+bash scripts/run.sh pipeline-test new
+
+# 强制重跑推荐流水线
+bash scripts/run.sh rerun
+
+# 或显式设置 FORCE_RERUN
+FORCE_RERUN=1 bash scripts/run.sh pipeline
+```
+
+#### 兼容模式：旧脚本入口
+
+```bash
+# 仅提取 MD → JSON（旧模式）
 bash scripts/run.sh extract
 
-# 仅验证已有的 JSON
+# 仅验证已有 JSON（旧模式）
 bash scripts/run.sh verify
 
-# 测试模式：仅处理第 1 个文件（提取 + 验证）
+# 提取 + 验证（旧模式）
+bash scripts/run.sh all
+
+# 测试模式（旧流程）：仅处理第 1 个文件
 bash scripts/run.sh test
 
 # 测试模式：仅处理第 3 个文件
@@ -124,13 +176,39 @@ bash scripts/run.sh test 3
 
 # 测试模式：按文件名模糊匹配
 bash scripts/run.sh test new
-
-# 强制全部重跑（忽略已有结果）
-bash scripts/run.sh rerun
-
-# 强制重跑提取（仅提取阶段）
-FORCE_RERUN=1 bash scripts/run.sh extract
 ```
+
+#### 回退单篇文献
+
+```bash
+# 删除对应产物，并把文献移回待处理目录
+bash scripts/run.sh rollback plcell
+```
+
+## 🧭 推荐使用路径
+
+根据你的目标，可以按以下三条路径上手：
+
+### 路径 A：只跑抽取与验证管道
+
+1. 配置 `.env`
+2. 把论文 Markdown 放进 `md/`
+3. 运行 `bash scripts/run.sh pipeline`
+4. 查看 `json/`、`reports/` 和 `token-usage/`
+
+### 路径 B：将结果导入 Supabase
+
+1. 先完成 Pipeline 输出
+2. 在 Supabase 中执行 `database/schema.sql`
+3. 在 `.env` 中补全 `SUPABASE_URL` 与 `SUPABASE_SERVICE_ROLE_KEY`
+4. 运行 `python scripts/import_to_supabase.py`
+
+### 路径 C：启动 Web 标注平台
+
+1. 完成 Supabase 建表与数据导入
+2. 在 `web/.env.local` 中配置前端环境变量
+3. 启动前端开发服务（推荐 `bash scripts/dev.sh`）
+4. 在浏览器中进入论文列表与详情页进行审核
 
 ## 📖 工作流程
 
@@ -217,6 +295,10 @@ FORCE_RERUN=1 bash scripts/run.sh extract
 | `FALLBACK_API_KEY` | - | 备用 API Key（可选） |
 | `FALLBACK_BASE_URL` | - | 备用 API Base URL（可选） |
 | `FALLBACK_MODEL` | - | 备用模型名称（可选） |
+| `SUPABASE_URL` | - | Supabase 项目地址（导入数据时必需） |
+| `SUPABASE_SERVICE_ROLE_KEY` | - | Supabase service role key（导入数据时必需） |
+| `NEXT_PUBLIC_SUPABASE_URL` | - | 前端使用的 Supabase URL |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | - | 前端使用的 Supabase anon key |
 | `FORCE_RERUN` | - | 设为 `1` 强制重跑，忽略已有结果 |
 | `TEST_MODE` | - | 设为 `1` 启用测试模式 |
 | `TEST_INDEX` | `1` | 测试模式下处理的文件（编号或文件名） |
@@ -298,6 +380,16 @@ FORCE_RERUN=1 bash scripts/run.sh extract
 - **按文件名**：`bash scripts/run.sh test new.md` — 精确匹配
 - **按关键词**：`bash scripts/run.sh test mmc3` — 模糊匹配文件名中包含 `mmc3` 的文件
 
+### 回退机制
+
+如果某篇论文已经提取/验证，但你希望重新回到待处理状态，可以使用：
+
+```bash
+bash scripts/run.sh rollback <关键词或文件名>
+```
+
+该命令会删除相关输出，并把对应 Markdown 文件移回可处理位置，适合手工修复后重新跑流程。
+
 ## 🌐 Web 标注平台
 
 ### 架构概览
@@ -372,9 +464,18 @@ bash scripts/dev.sh --kill
 
 # 方式二：手动启动
 cd web
+npm install
 npm run dev
 # 访问 http://localhost:3000
 ```
+
+`bash scripts/dev.sh` 会自动：
+
+- 检查 Node.js / npm 环境
+- 检查并安装 `web/node_modules`
+- 校验 `web/.env.local` 是否存在
+- 处理端口冲突（切换端口或配合 `--kill` 释放端口）
+- 等待前端服务就绪并自动打开浏览器
 
 #### 5. 部署到 Vercel
 
@@ -408,3 +509,9 @@ npx vercel
 3. **✏️ 修改** — 提供修正值，替换错误的提取结果
 
 每条标注可附加评论说明理由。
+
+## 📝 维护建议
+
+- 新增或调整脚本模式时，同步更新 `scripts/run.sh` 注释和本 README
+- 新增字段或模板时，同步更新 `configs/` 说明与示例输出
+- 若计划长期维护前端，建议单独整理 `web/README.md`，避免与根 README 信息重复或过时

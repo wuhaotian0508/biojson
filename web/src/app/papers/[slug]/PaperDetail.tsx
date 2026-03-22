@@ -1,10 +1,10 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect, useMemo } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import type { Paper, Gene, Annotation, FieldVerdict, GeneData, VerificationReport } from '@/lib/types'
-import { GENE_FIELD_GROUPS, FIELD_LABELS } from '@/lib/types'
+import { FIELD_LABELS, FIELD_ORDER } from '@/lib/types'
 import { supabase } from '@/lib/supabase'
 import { useUser } from '@/lib/UserContext'
 
@@ -12,6 +12,24 @@ interface Props {
   paper: Paper
   genes: Gene[]
   annotations: Annotation[]
+}
+
+function getAnnotationOwnerLabel(annotation?: Annotation) {
+  if (!annotation) return null
+  return annotation.annotator_name || annotation.annotator_id || '未知用户'
+}
+
+function getUserAnnotation(annotations: Annotation[], fieldName: string, username: string | null) {
+  if (annotations.length === 0) return undefined
+  if (username) {
+    const matched = annotations.find((a) => a.field_name === fieldName && a.annotator_name === username)
+    if (matched) return matched
+  }
+  return annotations.find((a) => a.field_name === fieldName)
+}
+
+function getOtherAnnotations(annotations: Annotation[], fieldName: string, username: string | null) {
+  return annotations.filter((a) => a.field_name === fieldName && (!username || a.annotator_name !== username))
 }
 
 // ─── 验证徽章 ──────────────────────────────────────────────
@@ -55,39 +73,63 @@ function ExpandableText({ text, maxLen = 120, className = '' }: { text: string; 
   )
 }
 
-// ─── 三按钮标注组（✅ ❌ ➖）──────────────────────────────
-function VerdictButtons({
-  currentVerdict,
-  onSelect,
+// ─── 基因级别下拉框（应该提取 / 不应该提取 / 尚未评分）────────
+function GeneVerdictSelect({
+  value,
+  onChange,
   disabled,
 }: {
-  currentVerdict?: string
-  onSelect: (v: 'correct' | 'incorrect' | 'missing') => void
+  value: string
+  onChange: (v: string) => void
   disabled?: boolean
 }) {
-  const buttons = [
-    { v: 'correct' as const, label: '✅', title: '正确' },
-    { v: 'incorrect' as const, label: '❌', title: '错误' },
-    { v: 'missing' as const, label: '➖', title: '缺失/不适用' },
-  ]
+  const colorMap: Record<string, string> = {
+    unrated: 'border-gray-300 bg-gray-50 text-gray-500',
+    should_extract: 'border-green-400 bg-green-50 text-green-700',
+    should_not_extract: 'border-red-400 bg-red-50 text-red-700',
+  }
   return (
-    <span className="inline-flex gap-0.5">
-      {buttons.map((b) => (
-        <button
-          key={b.v}
-          onClick={() => onSelect(b.v)}
-          disabled={disabled}
-          title={b.title}
-          className={`w-6 h-6 text-xs rounded cursor-pointer border transition-colors ${
-            currentVerdict === b.v
-              ? 'border-[var(--primary)] bg-[var(--primary)] text-white'
-              : 'border-[var(--border)] hover:bg-[var(--muted)]'
-          } disabled:opacity-50`}
-        >
-          {b.label}
-        </button>
-      ))}
-    </span>
+    <select
+      value={value}
+      onChange={(e) => onChange(e.target.value)}
+      disabled={disabled}
+      className={`text-xs px-2 py-1 rounded border cursor-pointer disabled:opacity-50 ${colorMap[value] || colorMap.unrated}`}
+    >
+      <option value="unrated">尚未评分</option>
+      <option value="should_extract">应该提取</option>
+      <option value="should_not_extract">不应该提取</option>
+    </select>
+  )
+}
+
+// ─── 字段级别下拉框（好 / 中 / 差 / 尚未评分）────────────────
+function FieldVerdictSelect({
+  value,
+  onChange,
+  disabled,
+}: {
+  value: string
+  onChange: (v: string) => void
+  disabled?: boolean
+}) {
+  const colorMap: Record<string, string> = {
+    unrated: 'border-gray-300 bg-gray-50 text-gray-500',
+    good: 'border-green-400 bg-green-50 text-green-700',
+    medium: 'border-yellow-400 bg-yellow-50 text-yellow-700',
+    poor: 'border-red-400 bg-red-50 text-red-700',
+  }
+  return (
+    <select
+      value={value}
+      onChange={(e) => onChange(e.target.value)}
+      disabled={disabled}
+      className={`text-xs px-2 py-1 rounded border cursor-pointer disabled:opacity-50 ${colorMap[value] || colorMap.unrated}`}
+    >
+      <option value="unrated">尚未评分</option>
+      <option value="good">好</option>
+      <option value="medium">中</option>
+      <option value="poor">差</option>
+    </select>
   )
 }
 
@@ -113,9 +155,9 @@ function MetadataRow({
     <div className="py-3 border-b border-[var(--border)] last:border-b-0">
       <div className="flex items-center gap-2 mb-1">
         <span className="font-semibold text-sm min-w-[70px]">{label}</span>
-        <VerdictButtons
-          currentVerdict={annotation?.verdict}
-          onSelect={(v) => onSave(fieldName, v, comment)}
+        <FieldVerdictSelect
+          value={annotation?.verdict || 'unrated'}
+          onChange={(v) => onSave(fieldName, v, comment)}
           disabled={disabled}
         />
       </div>
@@ -142,6 +184,7 @@ function FieldRow({
   value,
   autoVerdict,
   annotation,
+  otherAnnotations,
   geneId,
   onAnnotationChange,
   username,
@@ -150,33 +193,37 @@ function FieldRow({
   value: string | string[] | undefined
   autoVerdict?: FieldVerdict
   annotation?: Annotation
+  otherAnnotations?: Annotation[]
   geneId: string
   onAnnotationChange: () => void
   username: string | null
 }) {
-  const [showForm, setShowForm] = useState(false)
   const [comment, setComment] = useState(annotation?.comment || '')
   const [correctedValue, setCorrectedValue] = useState(annotation?.corrected_value || '')
   const [saving, setSaving] = useState(false)
+  const [fieldVerdict, setFieldVerdict] = useState<string>(annotation?.expert_verdict || 'unrated')
 
-  const displayValue = Array.isArray(value) ? value.join(', ') : (value || 'NA')
-  const isNA = displayValue === 'NA' || displayValue.trim() === ''
+  const raw = Array.isArray(value) ? value.join(', ') : (value ?? '')
+  const displayValue = String(raw)
+  const isNA = !displayValue || displayValue.trim() === '' || displayValue === 'NA'
   const label = FIELD_LABELS[fieldName] || fieldName
 
-  async function saveAnnotation(verdict: 'correct' | 'incorrect' | 'modified') {
+  async function saveAnnotation(verdict: string) {
     if (!username) {
       alert('请先登录再标注')
       return
     }
+    if (verdict === 'unrated') return
     setSaving(true)
     try {
       const payload = {
         gene_id: geneId,
         field_name: fieldName,
         expert_verdict: verdict,
-        corrected_value: verdict === 'modified' ? correctedValue : null,
+        corrected_value: correctedValue || null,
         comment: comment || null,
         annotator_id: null,
+        annotator_name: username,
       }
 
       if (annotation) {
@@ -187,7 +234,6 @@ function FieldRow({
         await supabase.from('annotations').insert(payload)
       }
       onAnnotationChange()
-      setShowForm(false)
     } catch (e) {
       console.error('Save annotation failed:', e)
     } finally {
@@ -195,9 +241,14 @@ function FieldRow({
     }
   }
 
+  function handleVerdictChange(v: string) {
+    setFieldVerdict(v)
+    saveAnnotation(v)
+  }
+
   return (
     <div className={`py-2 px-3 border-b border-[var(--border)] last:border-b-0`}>
-      {/* 字段名 + 值 */}
+      {/* 字段名 + 值 + 评分下拉框 */}
       <div className="flex items-start gap-2 mb-1">
         <span className="text-xs font-medium text-[var(--muted-foreground)] min-w-[100px] shrink-0 pt-0.5">
           {label}
@@ -205,18 +256,21 @@ function FieldRow({
         <span className={`text-sm flex-1 break-words ${isNA ? 'text-[var(--muted-foreground)] italic' : ''}`}>
           {displayValue}
         </span>
+        <FieldVerdictSelect
+          value={fieldVerdict}
+          onChange={handleVerdictChange}
+          disabled={!username || saving}
+        />
       </div>
 
-      {/* 自动验证 + 专家标注 */}
+      {/* 自动验证 + 其他标注人信息 */}
       <div className="flex items-center gap-2 ml-[100px] flex-wrap">
         {autoVerdict && <VerdictBadge verdict={autoVerdict.verdict} />}
-        {annotation && <AnnotationBadge verdict={annotation.expert_verdict} />}
-        <button
-          onClick={() => setShowForm(!showForm)}
-          className="text-xs text-[var(--primary)] hover:underline cursor-pointer"
-        >
-          {annotation ? '修改标注' : '标注'}
-        </button>
+        {annotation && (
+          <span className="text-xs text-[var(--muted-foreground)]">
+            当前标注人：{getAnnotationOwnerLabel(annotation)}
+          </span>
+        )}
       </div>
 
       {/* 自动验证理由 */}
@@ -226,53 +280,40 @@ function FieldRow({
         </p>
       )}
 
-      {/* 标注表单 */}
-      {showForm && (
-        <div className="ml-[100px] mt-2 p-3 bg-[var(--muted)] rounded-lg space-y-2">
-          <textarea
-            value={comment}
-            onChange={(e) => setComment(e.target.value)}
-            placeholder="评论/理由（可选）"
-            className="w-full text-sm p-2 rounded border border-[var(--border)] bg-[var(--background)] resize-none"
-            rows={2}
-          />
-          <input
-            value={correctedValue}
-            onChange={(e) => setCorrectedValue(e.target.value)}
-            placeholder="修正值（仅当选择「修改」时填写）"
-            className="w-full text-sm p-2 rounded border border-[var(--border)] bg-[var(--background)]"
-          />
-          <div className="flex gap-2">
-            <button
-              onClick={() => saveAnnotation('correct')}
-              disabled={saving}
-              className="px-3 py-1 text-xs rounded bg-green-600 text-white hover:bg-green-700 disabled:opacity-50 cursor-pointer"
+      {!!otherAnnotations?.length && (
+        <div className="ml-[100px] mt-1 flex flex-wrap gap-1.5">
+          {otherAnnotations.map((item) => (
+            <span
+              key={item.id}
+              className="text-xs px-2 py-0.5 rounded bg-[var(--muted)] text-[var(--muted-foreground)] border border-[var(--border)]"
+              title={item.comment || undefined}
             >
-              ✅ 正确
-            </button>
-            <button
-              onClick={() => saveAnnotation('incorrect')}
-              disabled={saving}
-              className="px-3 py-1 text-xs rounded bg-red-600 text-white hover:bg-red-700 disabled:opacity-50 cursor-pointer"
-            >
-              ❌ 错误
-            </button>
-            <button
-              onClick={() => saveAnnotation('modified')}
-              disabled={saving || !correctedValue}
-              className="px-3 py-1 text-xs rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 cursor-pointer"
-            >
-              ✏️ 修改
-            </button>
-            <button
-              onClick={() => setShowForm(false)}
-              className="px-3 py-1 text-xs rounded bg-[var(--muted)] border border-[var(--border)] hover:bg-[var(--border)] cursor-pointer"
-            >
-              取消
-            </button>
-          </div>
+              {getAnnotationOwnerLabel(item)}：{item.expert_verdict}
+            </span>
+          ))}
         </div>
       )}
+
+      {/* 评论 + 修正值（始终可见） */}
+      <div className="ml-[100px] mt-1.5 space-y-1">
+        <textarea
+          value={comment}
+          onChange={(e) => setComment(e.target.value)}
+          onBlur={() => { if (fieldVerdict !== 'unrated') saveAnnotation(fieldVerdict) }}
+          placeholder="评论/理由（可选）"
+          className="w-full text-xs p-1.5 rounded border border-[var(--border)] bg-[var(--background)] resize-none"
+          rows={1}
+          disabled={!username}
+        />
+        <input
+          value={correctedValue}
+          onChange={(e) => setCorrectedValue(e.target.value)}
+          onBlur={() => { if (fieldVerdict !== 'unrated') saveAnnotation(fieldVerdict) }}
+          placeholder="修正值（可选）"
+          className="w-full text-xs p-1.5 rounded border border-[var(--border)] bg-[var(--background)]"
+          disabled={!username}
+        />
+      </div>
     </div>
   )
 }
@@ -293,12 +334,18 @@ function GeneCard({
 }) {
   const [expanded, setExpanded] = useState(true)
   const [geneVerdict, setGeneVerdict] = useState<string | undefined>(undefined)
-  const geneData = gene.gene_data as GeneData
+  const geneData = ((gene?.gene_data || {}) as GeneData)
   const autoVerification = (gene.auto_verification || {}) as Record<string, FieldVerdict>
   const stats = gene.auto_stats as { supported: number; unsupported: number; uncertain: number } | null
 
-  // 收集所有 gene_data 中的字段
-  const allFields = Object.keys(geneData)
+  // 按 FIELD_ORDER 排序字段，未在 FIELD_ORDER 中的字段追加到末尾
+  const dataKeys = new Set(Object.keys(geneData))
+  const orderedFields = FIELD_ORDER.filter((f) => dataKeys.has(f))
+  // 追加 FIELD_ORDER 中没有但 geneData 中存在的字段
+  for (const k of dataKeys) {
+    if (!orderedFields.includes(k)) orderedFields.push(k)
+  }
+  const allFields = orderedFields
 
   return (
     <div className="border border-[var(--border)] rounded-lg overflow-hidden mb-4">
@@ -312,10 +359,10 @@ function GeneCard({
             🧬 {gene.gene_name || `Gene ${gene.gene_index}`}
             <span className="text-[var(--muted-foreground)] ml-2">{expanded ? '▼' : '▶'}</span>
           </button>
-          {/* 基因整体级别标注 ✅ ❌ ➖ */}
-          <VerdictButtons
-            currentVerdict={geneVerdict}
-            onSelect={(v) => setGeneVerdict(v)}
+          {/* 基因整体级别标注下拉框 */}
+          <GeneVerdictSelect
+            value={geneVerdict || 'unrated'}
+            onChange={(v) => setGeneVerdict(v)}
             disabled={!username}
           />
           {stats && (
@@ -342,61 +389,30 @@ function GeneCard({
         </div>
       )}
 
-      {/* 字段列表 */}
+      {/* 字段列表（平铺，不分组） */}
       {expanded && (
         <div>
-          {GENE_FIELD_GROUPS.map((group) => {
-            const visibleFields = group.fields.filter((f) => {
-              return allFields.includes(f) || geneData[f] !== undefined
-            })
-            if (visibleFields.length === 0) return null
-
+          {allFields.map((fieldName) => {
+            const val = geneData[fieldName]
+            const strVal = String(Array.isArray(val) ? val.join(', ') : (val ?? ''))
+            // 跳过空值字段
+            if (!strVal || strVal.trim() === '' || strVal === 'NA') return null
+            const currentAnnotation = getUserAnnotation(annotations, fieldName, username)
+            const others = getOtherAnnotations(annotations, fieldName, username)
             return (
-              <div key={group.label}>
-                <div className="px-4 py-1.5 bg-[var(--muted)] text-xs font-semibold text-[var(--muted-foreground)] uppercase tracking-wide border-t border-[var(--border)]">
-                  {group.label}
-                </div>
-                {visibleFields.map((fieldName) => (
-                  <FieldRow
-                    key={fieldName}
-                    fieldName={fieldName}
-                    value={geneData[fieldName]}
-                    autoVerdict={autoVerification[fieldName]}
-                    annotation={annotations.find((a) => a.field_name === fieldName)}
-                    geneId={gene.id}
-                    onAnnotationChange={onAnnotationChange}
-                    username={username}
-                  />
-                ))}
-              </div>
+              <FieldRow
+                key={fieldName}
+                fieldName={fieldName}
+                value={val}
+                autoVerdict={autoVerification[fieldName]}
+                annotation={currentAnnotation}
+                otherAnnotations={others}
+                geneId={gene.id}
+                onAnnotationChange={onAnnotationChange}
+                username={username}
+              />
             )
           })}
-
-          {/* 显示不在预定义分组中的额外字段 */}
-          {(() => {
-            const groupedFields = new Set(GENE_FIELD_GROUPS.flatMap((g) => g.fields))
-            const extraFields = allFields.filter((f) => !groupedFields.has(f))
-            if (extraFields.length === 0) return null
-            return (
-              <div>
-                <div className="px-4 py-1.5 bg-[var(--muted)] text-xs font-semibold text-[var(--muted-foreground)] uppercase tracking-wide border-t border-[var(--border)]">
-                  其他字段
-                </div>
-                {extraFields.map((fieldName) => (
-                  <FieldRow
-                    key={fieldName}
-                    fieldName={fieldName}
-                    value={geneData[fieldName]}
-                    autoVerdict={autoVerification[fieldName]}
-                    annotation={annotations.find((a) => a.field_name === fieldName)}
-                    geneId={gene.id}
-                    onAnnotationChange={onAnnotationChange}
-                    username={username}
-                  />
-                ))}
-              </div>
-            )
-          })()}
         </div>
       )}
     </div>
@@ -496,7 +512,7 @@ function GeneCategoriesSection({
 export default function PaperDetail({ paper, genes, annotations: initialAnnotations }: Props) {
   const { username } = useUser()
   const [annotations, setAnnotations] = useState(initialAnnotations)
-  const [activeGeneIdx, setActiveGeneIdx] = useState(0)
+  const [activeGeneId, setActiveGeneId] = useState<string | null>(genes[0]?.id ?? null)
   const [saving, setSaving] = useState(false)
   const [saveMessage, setSaveMessage] = useState('')
 
@@ -520,6 +536,27 @@ export default function PaperDetail({ paper, genes, annotations: initialAnnotati
       }
     }
   }
+
+  useEffect(() => {
+    if (genes.length === 0) {
+      setActiveGeneId(null)
+      return
+    }
+    const activeExists = activeGeneId && genes.some((gene) => gene.id === activeGeneId)
+    if (!activeExists) {
+      setActiveGeneId(genes[0].id)
+    }
+  }, [activeGeneId, genes])
+
+  const activeGene = useMemo(() => {
+    if (genes.length === 0) return null
+    return genes.find((gene) => gene.id === activeGeneId) || genes[0]
+  }, [activeGeneId, genes])
+
+  const activeGeneAnnotations = useMemo(() => {
+    if (!activeGene) return []
+    return annotations.filter((a) => a.gene_id === activeGene.id)
+  }, [activeGene, annotations])
 
   // 刷新标注
   const refreshAnnotations = useCallback(async () => {
@@ -647,12 +684,12 @@ export default function PaperDetail({ paper, genes, annotations: initialAnnotati
           {/* 基因切换标签 */}
           {genes.length > 1 && (
             <div className="flex gap-1 mb-4 overflow-x-auto pb-1">
-              {genes.map((gene, idx) => (
+              {genes.map((gene) => (
                 <button
                   key={gene.id}
-                  onClick={() => setActiveGeneIdx(idx)}
+                  onClick={() => setActiveGeneId(gene.id)}
                   className={`px-3 py-1.5 text-sm rounded-full whitespace-nowrap cursor-pointer transition-colors ${
-                    idx === activeGeneIdx
+                    gene.id === activeGene?.id
                       ? 'bg-[var(--primary)] text-[var(--primary-foreground)]'
                       : 'bg-[var(--muted)] text-[var(--muted-foreground)] hover:bg-[var(--border)]'
                   }`}
@@ -668,14 +705,18 @@ export default function PaperDetail({ paper, genes, annotations: initialAnnotati
               <p className="text-4xl mb-4">🔬</p>
               <p>此论文暂无提取的基因数据</p>
             </div>
-          ) : (
+          ) : activeGene ? (
             <GeneCard
-              gene={genes[activeGeneIdx]}
-              geneVerification={geneVerifications[genes[activeGeneIdx].gene_index] || geneVerifications[genes[activeGeneIdx].gene_index + 1]}
-              annotations={annotations.filter((a) => a.gene_id === genes[activeGeneIdx].id)}
+              gene={activeGene}
+              geneVerification={geneVerifications[activeGene.gene_index] || geneVerifications[activeGene.gene_index + 1]}
+              annotations={activeGeneAnnotations}
               onAnnotationChange={refreshAnnotations}
               username={username}
             />
+          ) : (
+            <div className="text-center py-16 text-[var(--muted-foreground)]">
+              <p>当前基因信息不可用，请重新选择。</p>
+            </div>
           )}
         </div>
       </div>

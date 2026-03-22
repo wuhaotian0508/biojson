@@ -46,15 +46,27 @@ CREATE TABLE IF NOT EXISTS annotations (
   corrected_value TEXT,
   comment TEXT,
   annotator_id UUID REFERENCES auth.users(id),
+  annotator_name TEXT,
   created_at TIMESTAMPTZ DEFAULT now(),
   updated_at TIMESTAMPTZ DEFAULT now(),
-  UNIQUE(gene_id, field_name, annotator_id)
+  UNIQUE(gene_id, field_name, annotator_name)
 );
+
+ALTER TABLE annotations
+  ADD COLUMN IF NOT EXISTS annotator_name TEXT;
+
+ALTER TABLE annotations
+  DROP CONSTRAINT IF EXISTS annotations_gene_id_field_name_annotator_id_key;
+
+ALTER TABLE annotations
+  ADD CONSTRAINT annotations_gene_id_field_name_annotator_name_key
+  UNIQUE (gene_id, field_name, annotator_name);
 
 -- 4. 索引
 CREATE INDEX IF NOT EXISTS idx_genes_paper_id ON genes(paper_id);
 CREATE INDEX IF NOT EXISTS idx_annotations_gene_id ON annotations(gene_id);
 CREATE INDEX IF NOT EXISTS idx_annotations_annotator_id ON annotations(annotator_id);
+CREATE INDEX IF NOT EXISTS idx_annotations_annotator_name ON annotations(annotator_name);
 CREATE INDEX IF NOT EXISTS idx_papers_slug ON papers(slug);
 
 -- 5. RLS (Row Level Security) 策略
@@ -78,18 +90,21 @@ CREATE POLICY "genes_update" ON genes FOR UPDATE TO service_role USING (true);
 CREATE POLICY "annotations_read" ON annotations FOR SELECT TO authenticated USING (true);
 -- annotations: 认证用户可插入自己的标注
 CREATE POLICY "annotations_insert" ON annotations FOR INSERT TO authenticated
-  WITH CHECK (auth.uid() = annotator_id);
+  WITH CHECK (true);
 -- annotations: 认证用户可更新自己的标注
 CREATE POLICY "annotations_update" ON annotations FOR UPDATE TO authenticated
-  USING (auth.uid() = annotator_id);
+  USING (true);
 -- annotations: 认证用户可删除自己的标注
 CREATE POLICY "annotations_delete" ON annotations FOR DELETE TO authenticated
-  USING (auth.uid() = annotator_id);
+  USING (true);
 
 -- 6. 允许匿名用户也可以读取（方便开发/演示，正式环境可去掉）
 CREATE POLICY "papers_anon_read" ON papers FOR SELECT TO anon USING (true);
 CREATE POLICY "genes_anon_read" ON genes FOR SELECT TO anon USING (true);
 CREATE POLICY "annotations_anon_read" ON annotations FOR SELECT TO anon USING (true);
+CREATE POLICY "annotations_anon_insert" ON annotations FOR INSERT TO anon WITH CHECK (true);
+CREATE POLICY "annotations_anon_update" ON annotations FOR UPDATE TO anon USING (true);
+CREATE POLICY "annotations_anon_delete" ON annotations FOR DELETE TO anon USING (true);
 
 -- 7. updated_at 自动更新触发器
 CREATE OR REPLACE FUNCTION update_updated_at()
