@@ -401,7 +401,7 @@ function GeneCard({
             const others = getOtherAnnotations(annotations, fieldName, username)
             return (
               <FieldRow
-                key={fieldName}
+                key={`${gene.id}-${fieldName}`}
                 fieldName={fieldName}
                 value={val}
                 autoVerdict={autoVerification[fieldName]}
@@ -707,6 +707,7 @@ export default function PaperDetail({ paper, genes, annotations: initialAnnotati
             </div>
           ) : activeGene ? (
             <GeneCard
+              key={activeGene.id}
               gene={activeGene}
               geneVerification={geneVerifications[activeGene.gene_index] || geneVerifications[activeGene.gene_index + 1]}
               annotations={activeGeneAnnotations}
