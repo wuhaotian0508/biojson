@@ -33,21 +33,32 @@ FALLBACK_MODEL = os.getenv("FALLBACK_MODEL", "")
 MAX_WORKERS = int(os.getenv("MAX_WORKERS", "10"))
 
 
+_primary_client = None
+_fallback_client = None
+_fallback_resolved = False
+
+
 def get_openai_client():
-    """Create the primary OpenAI-compatible client."""
-    return OpenAI(
-        api_key=os.getenv("OPENAI_API_KEY"),
-        base_url=os.getenv("OPENAI_BASE_URL"),
-    )
+    """Return the primary OpenAI-compatible client (cached)."""
+    global _primary_client
+    if _primary_client is None:
+        _primary_client = OpenAI(
+            api_key=os.getenv("OPENAI_API_KEY"),
+            base_url=os.getenv("OPENAI_BASE_URL"),
+        )
+    return _primary_client
 
 
 def get_fallback_client():
-    """Create the fallback client, or None if not configured."""
-    key = os.getenv("FALLBACK_API_KEY")
-    url = os.getenv("FALLBACK_BASE_URL")
-    if key and url:
-        return OpenAI(api_key=key, base_url=url)
-    return None
+    """Return the fallback client (cached), or None if not configured."""
+    global _fallback_client, _fallback_resolved
+    if not _fallback_resolved:
+        key = os.getenv("FALLBACK_API_KEY")
+        url = os.getenv("FALLBACK_BASE_URL")
+        if key and url:
+            _fallback_client = OpenAI(api_key=key, base_url=url)
+        _fallback_resolved = True
+    return _fallback_client
 
 
 def ensure_dirs():

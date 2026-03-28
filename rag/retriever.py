@@ -1,25 +1,24 @@
 """基于Jina API的向量检索模块"""
-import json
 import pickle
 import requests
 import numpy as np
 from pathlib import Path
-from typing import List, Dict, Tuple, Optional
-from dataclasses import asdict
+from typing import List, Tuple, Optional
 
 from data_loader import GeneChunk, process_all_data
 from config import (
     JINA_API_KEY, JINA_EMBEDDING_URL, JINA_RERANK_URL,
     EMBEDDING_MODEL, RERANK_MODEL,
-    TOP_K_RETRIEVAL, TOP_K_RERANK, DATA_DIR, INDEX_DIR
+    TOP_K_RETRIEVAL, TOP_K_RERANK, DATA_DIR, INDEX_DIR, require_setting
 )
 
 class JinaRetriever:
     """使用Jina API进行向量检索"""
 
     def __init__(self, index_path: Optional[Path] = None):
+        api_key = require_setting("JINA_API_KEY", JINA_API_KEY)
         self.headers = {
-            "Authorization": f"Bearer {JINA_API_KEY}",
+            "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json"
         }
         self.chunks: List[GeneChunk] = []
@@ -39,7 +38,7 @@ class JinaRetriever:
                 "task": "retrieval.passage"  # 用于文档检索
             }
 
-            resp = requests.post(JINA_EMBEDDING_URL, json=payload, headers=self.headers)
+            resp = requests.post(JINA_EMBEDDING_URL, json=payload, headers=self.headers, timeout=60)
             resp.raise_for_status()
 
             data = resp.json()
@@ -57,7 +56,7 @@ class JinaRetriever:
             "input": [query],
             "task": "retrieval.query"  # 用于查询
         }
-        resp = requests.post(JINA_EMBEDDING_URL, json=payload, headers=self.headers)
+        resp = requests.post(JINA_EMBEDDING_URL, json=payload, headers=self.headers, timeout=60)
         resp.raise_for_status()
         return np.array(resp.json()["data"][0]["embedding"])
 
@@ -122,7 +121,7 @@ class JinaRetriever:
             "top_n": top_k
         }
 
-        resp = requests.post(JINA_RERANK_URL, json=payload, headers=self.headers)
+        resp = requests.post(JINA_RERANK_URL, json=payload, headers=self.headers, timeout=60)
         resp.raise_for_status()
 
         results = resp.json()["results"]

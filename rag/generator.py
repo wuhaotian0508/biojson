@@ -1,5 +1,5 @@
 """基于检索结果的LLM生成模块 - 带来源标注"""
-from typing import List, Tuple, Dict, Any
+from typing import List, Tuple, Dict
 from openai import OpenAI
 
 from data_loader import GeneChunk

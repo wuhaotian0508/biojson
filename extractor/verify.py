@@ -1,14 +1,10 @@
 """
 verify.py — Gene verification with inline FC + dynamic batching.
 
-Replaces: scripts/verify_response.py + skills/handlers.py (verify part)
-
 Dynamic batching strategy (per 10 genes):
     < 10 genes  → 1 batch
     10-19 genes → 2 batches
     20-29 genes → 3 batches
-
-No RAG in verification stage (extraction already used it).
 """
 
 import json
@@ -22,12 +18,14 @@ from .config import (
     MODEL, FALLBACK_MODEL, OUTPUT_DIR, REPORTS_DIR, PROCESSED_DIR,
     get_openai_client, get_fallback_client,
 )
-from .text_utils import preprocess_md
+from .text_utils import preprocess_md_for_llm
 from .token_tracker import TokenTracker
-from .extract import stem_to_dirname, _safe_parse_json, _message_to_dict
+from .utils import (
+    GENE_ARRAY_KEYS, ensure_list, safe_parse_json, stem_to_dirname,
+)
 
 
-# ─── Verify FC schema (inline) ───────────────────────────────────────────────
+# ─── Verify FC schema (inline) ──────────────────────────────────────────────
 
 VERIFY_SCHEMA = {
     "type": "function",
@@ -91,7 +89,7 @@ Be strict: if a specific number/ID is not in the paper, mark UNSUPPORTED.
 Call the verify_all_genes function with your verification results for ALL genes at once."""
 
 
-# ─── Helper functions ─────────────────────────────────────────────────────────
+# ─── Helper functions ────────────────────────────────────────────────────────
 
 def _extract_non_na_fields(gene_dict: dict) -> dict:
     """Extract all non-NA fields from a gene dict."""
@@ -155,13 +153,7 @@ def _apply_corrections(gene_data: dict, field_verdicts_list: list) -> Tuple[dict
 
 
 def _compute_batches(total_genes: int) -> List[Tuple[int, int]]:
-    """Dynamic batching: returns list of (start, end) tuples.
-
-    < 10 genes  → 1 batch
-    10-19 genes → 2 batches
-    20-29 genes → 3 batches
-    ...  num_batches = (total_genes // 10) + 1
-    """
+    """Dynamic batching: returns list of (start, end) tuples."""
     if total_genes < 10:
         return [(0, total_genes)]
 
@@ -174,27 +166,16 @@ def _compute_batches(total_genes: int) -> List[Tuple[int, int]]:
     return batches
 
 
-# ─── Inline handler ───────────────────────────────────────────────────────────
-
 def _handle_verify_all(arguments: dict) -> list:
     """Process verify_all_genes result → gene_verdicts list."""
-    gene_verdicts = arguments.get("gene_verdicts", [])
-    if isinstance(gene_verdicts, str):
-        try:
-            gene_verdicts = json.loads(gene_verdicts)
-        except json.JSONDecodeError:
-            gene_verdicts = []
-    return gene_verdicts
+    return ensure_list(arguments.get("gene_verdicts", []))
 
 
-# ─── Core verify API call ─────────────────────────────────────────────────────
+# ─── Core verify API call ────────────────────────────────────────────────────
 
 def _call_verify_api(api_client, model_name: str, user_prompt: str,
                      file_name: str, tracker: TokenTracker):
-    """Single batch verify API call.
-
-    Returns (gene_verdicts_list, success).
-    """
+    """Single batch verify API call. Returns (gene_verdicts_list, success)."""
     messages = [
         {"role": "system", "content": VERIFY_SYSTEM_PROMPT},
         {"role": "user", "content": user_prompt},
@@ -222,7 +203,7 @@ def _call_verify_api(api_client, model_name: str, user_prompt: str,
         return [], False
 
     tc = msg.tool_calls[0]
-    parsed = _safe_parse_json(tc.function.arguments, "verify")
+    parsed = safe_parse_json(tc.function.arguments, "verify")
     if parsed is None:
         return [], False
 
@@ -237,74 +218,36 @@ def _call_verify_api(api_client, model_name: str, user_prompt: str,
     return gene_verdicts, True
 
 
-# ═══════════════════════════════════════════════════════════════════════════════
-#  Public API
+# ═════════════════════════════════════════════════════���═════════════════════════
+#  verify_paper sub-functions
 # ═══════════════════════════════════════════════════════════════════════════════
 
-def verify_paper(
-    md_path,
-    extraction_dict: dict,
-    gene_dict: dict,
-    stem: str,
-    tracker: TokenTracker,
-) -> Optional[dict]:
-    """Verify all genes in a paper with dynamic batching.
-
-    Args:
-        md_path: path to the markdown file
-        extraction_dict: extraction result dict
-        gene_dict: gene classification dict
-        stem: filename stem
-        tracker: TokenTracker instance
+def _collect_genes_for_verification(extraction_dict: dict) -> list:
+    """Collect all genes with category and position info.
 
     Returns:
-        verification_report dict or None
+        list of (gene_data, category, arr_key, index_in_array) tuples
     """
-    md_path = Path(md_path)
+    all_genes = []
+    for arr_key, cat in GENE_ARRAY_KEYS:
+        arr = ensure_list(extraction_dict.get(arr_key, []))
+        for idx, g in enumerate(arr):
+            if isinstance(g, dict):
+                all_genes.append((g, cat, arr_key, idx))
+    return all_genes
 
-    verified_json_path = OUTPUT_DIR / f"{stem}_nutri_plant_verified.json"
-    if verified_json_path.exists() and os.getenv("FORCE_RERUN") != "1":
-        print(f"\n  ⏭️  Already verified, skip: {stem}  (set FORCE_RERUN=1 to re-run)")
-        return None
 
-    print(f"\n{'=' * 60}")
-    print(f"📄 Verifying: {stem}")
-    print(f"{'=' * 60}")
-
-    with open(md_path, "r", encoding="utf-8") as f:
-        md_content = f.read()
-
-    original_len = len(md_content)
-    md_content = preprocess_md(md_content)
-    print(f"  📏 Preprocessing: {original_len:,} → {len(md_content):,} chars (saved {original_len - len(md_content):,})")
-
-    # Collect all genes with source info
-    GENE_ARRAY_KEYS = ("Common_Genes", "Pathway_Genes", "Regulation_Genes")
-    CAT_MAP = {"Common_Genes": "Common", "Pathway_Genes": "Pathway", "Regulation_Genes": "Regulation"}
-
-    all_genes_with_info = []
-    for arr_key in GENE_ARRAY_KEYS:
-        arr = extraction_dict.get(arr_key, [])
-        if isinstance(arr, str):
-            try:
-                arr = json.loads(arr)
-            except json.JSONDecodeError:
-                arr = []
-        if isinstance(arr, list):
-            for idx, g in enumerate(arr):
-                if isinstance(g, dict):
-                    cat = CAT_MAP.get(arr_key, "Common")
-                    all_genes_with_info.append((g, cat, arr_key, idx))
-
-    if not all_genes_with_info:
-        print("  ⚠️  No genes to verify")
-        return None
-
+def _run_batch_verification(
+    md_content: str,
+    all_genes_with_info: list,
+    stem: str,
+    tracker: TokenTracker,
+) -> list:
+    """Run batched verification API calls. Returns aggregated gene_verdicts."""
     total_genes = len(all_genes_with_info)
     batches = _compute_batches(total_genes)
     print(f"  🧬 Genes to verify: {total_genes}, batches: {len(batches)}")
 
-    # Batch verification
     client = get_openai_client()
     fallback_client = get_fallback_client()
     all_gene_verdicts = []
@@ -336,13 +279,24 @@ def verify_paper(
 
         all_gene_verdicts.extend(batch_verdicts)
 
-    if not all_gene_verdicts:
-        print(f"    ⚠️  All batches failed: {stem}")
-        return None
-
-    if batch_failed:
+    if batch_failed and all_gene_verdicts:
         print(f"  ⚠️  Some batches failed, processing available results")
 
+    return all_gene_verdicts
+
+
+def _build_verification_report(
+    extraction_dict: dict,
+    all_genes_with_info: list,
+    all_gene_verdicts: list,
+    stem: str,
+    md_path: Path,
+) -> Tuple[dict, dict]:
+    """Build verification report and apply corrections.
+
+    Returns:
+        (file_report, verified_data)
+    """
     # Match verdicts to genes by name
     verdict_by_name = {}
     for gv in all_gene_verdicts:
@@ -350,7 +304,6 @@ def verify_paper(
         if gname:
             verdict_by_name[gname] = gv.get("field_verdicts", [])
 
-    # Apply corrections and build report
     file_report = {
         "file": stem,
         "md_path": str(md_path),
@@ -365,13 +318,9 @@ def verify_paper(
         },
     }
 
-    corrected_arrays = {k: list(extraction_dict.get(k, [])) for k in GENE_ARRAY_KEYS}
-    for k in GENE_ARRAY_KEYS:
-        if isinstance(corrected_arrays[k], str):
-            try:
-                corrected_arrays[k] = json.loads(corrected_arrays[k])
-            except json.JSONDecodeError:
-                corrected_arrays[k] = []
+    corrected_arrays = {}
+    for arr_key, _ in GENE_ARRAY_KEYS:
+        corrected_arrays[arr_key] = list(ensure_list(extraction_dict.get(arr_key, [])))
 
     for gene_data, cat, arr_key, idx_in_arr in all_genes_with_info:
         gene_name = gene_data.get("Gene_Name", "Unknown")
@@ -427,11 +376,23 @@ def verify_paper(
         file_report["summary"]["uncertain"] += gene_stats["uncertain"]
         file_report["summary"]["total_corrections"] += len(corrections)
 
-    # Write corrected verified JSON
+    # Build verified data
     verified_data = dict(extraction_dict)
-    for arr_key in GENE_ARRAY_KEYS:
+    for arr_key, _ in GENE_ARRAY_KEYS:
         verified_data[arr_key] = corrected_arrays[arr_key]
 
+    return file_report, verified_data
+
+
+def _save_verification_results(
+    verified_data: dict,
+    file_report: dict,
+    stem: str,
+    md_path: Path,
+):
+    """Write verified JSON, report, and move processed MD."""
+    # Write corrected verified JSON
+    verified_json_path = OUTPUT_DIR / f"{stem}_nutri_plant_verified.json"
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     with open(verified_json_path, "w", encoding="utf-8") as f:
         json.dump(verified_data, f, indent=2, ensure_ascii=False)
@@ -451,5 +412,62 @@ def verify_paper(
         dest = PROCESSED_DIR / md_path.name
         shutil.move(str(md_path), str(dest))
         print(f"  📦 MD moved to: {dest}")
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+#  Public API
+# ═══════════════════════════════════════════════════════════════════════════════
+
+def verify_paper(
+    md_path,
+    extraction_dict: dict,
+    stem: str,
+    tracker: TokenTracker,
+) -> Optional[dict]:
+    """Verify all genes in a paper with dynamic batching.
+
+    Orchestrates: collect → batch verify → build report → save.
+
+    Returns:
+        verification_report dict, skipped sentinel, or None on failure
+    """
+    md_path = Path(md_path)
+
+    # Incremental: skip if already verified
+    verified_json_path = OUTPUT_DIR / f"{stem}_nutri_plant_verified.json"
+    if verified_json_path.exists() and os.getenv("FORCE_RERUN") != "1":
+        print(f"\n  ⏭️  Already verified, skip: {stem}  (set FORCE_RERUN=1 to re-run)")
+        return {"status": "skipped", "report": None}
+
+    print(f"\n{'=' * 60}")
+    print(f"📄 Verifying: {stem}")
+    print(f"{'=' * 60}")
+
+    # Read and preprocess
+    with open(md_path, "r", encoding="utf-8") as f:
+        md_content = f.read()
+    original_len = len(md_content)
+    md_content = preprocess_md_for_llm(md_content, tracker=tracker)
+    print(f"  📏 Preprocessing: {original_len:,} → {len(md_content):,} chars (saved {original_len - len(md_content):,})")
+
+    # 1. Collect genes
+    all_genes_with_info = _collect_genes_for_verification(extraction_dict)
+    if not all_genes_with_info:
+        print("  ⚠️  No genes to verify")
+        return None
+
+    # 2. Batch verification
+    all_gene_verdicts = _run_batch_verification(md_content, all_genes_with_info, stem, tracker)
+    if not all_gene_verdicts:
+        print(f"    ⚠️  All batches failed: {stem}")
+        return None
+
+    # 3. Build report + apply corrections
+    file_report, verified_data = _build_verification_report(
+        extraction_dict, all_genes_with_info, all_gene_verdicts, stem, md_path,
+    )
+
+    # 4. Save results
+    _save_verification_results(verified_data, file_report, stem, md_path)
 
     return file_report

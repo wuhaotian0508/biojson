@@ -16,7 +16,6 @@ Usage:
 
 import argparse
 import os
-import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
@@ -26,8 +25,23 @@ from .config import (
     ensure_dirs,
 )
 from .extract import extract_paper
+from .utils import GENE_ARRAY_KEY_NAMES
 from .verify import verify_paper
 from .token_tracker import TokenTracker
+
+
+def collect_paper_result(filename: str, result: dict, all_reports: list,
+                         failed_files: list, skipped_files: list):
+    """Collect a paper result into the correct bucket."""
+    status = result.get("status", "failed")
+    if status == "processed":
+        report = result.get("report")
+        if report:
+            all_reports.append(report)
+    elif status == "skipped":
+        skipped_files.append(filename)
+    else:
+        failed_files.append(filename)
 
 
 def resolve_test_files(files: list, test_index: str) -> list:
@@ -52,6 +66,20 @@ def resolve_test_files(files: list, test_index: str) -> list:
     return []
 
 
+def _print_paper_result(stem: str, result: dict):
+    """Print a single paper's result summary (shared by sequential and parallel)."""
+    status = result.get("status")
+    if status == "processed":
+        report_data = result["report"]
+        s = report_data["summary"]
+        if s["total_fields"] > 0:
+            print(f"  📈 {stem}: fidelity {s['supported']}/{s['total_fields']} "
+                  f"({s['supported'] / s['total_fields'] * 100:.0f}%) | "
+                  f"corrections {s['total_corrections']}")
+    elif status == "skipped":
+        print(f"  ⏭️  {stem}: skipped")
+
+
 def process_one_paper(md_path: Path, stem: str, tracker: TokenTracker):
     """Process a single paper: extract + verify. Thread-safe."""
     try:
@@ -59,22 +87,26 @@ def process_one_paper(md_path: Path, stem: str, tracker: TokenTracker):
 
         if extraction is None:
             print(f"  ❌ Extraction failed, skip verify: {stem}")
-            return None
+            return {"status": "failed", "report": None}
 
         total_genes = sum(
             len(extraction.get(k, []))
-            for k in ("Common_Genes", "Pathway_Genes", "Regulation_Genes")
+            for k in GENE_ARRAY_KEY_NAMES
         )
         print(f"  📊 Extracted {total_genes} genes, dict: {gene_dict}")
 
-        report = verify_paper(md_path, extraction, gene_dict, stem, tracker)
-        return report
+        report = verify_paper(md_path, extraction, stem, tracker)
+        if report is None:
+            return {"status": "failed", "report": None}
+        if report.get("status") == "skipped":
+            return report
+        return {"status": "processed", "report": report}
 
     except Exception as e:
         print(f"  ❌ Error processing {stem}: {e}")
         import traceback
         traceback.print_exc()
-        return None
+        return {"status": "failed", "report": None}
 
 
 def print_verify_summary(all_reports: list):
@@ -145,6 +177,7 @@ def main():
     tracker = TokenTracker(model=MODEL)
     all_reports = []
     failed_files = []
+    skipped_files = []
 
     # ── Sequential or parallel processing ─────────────────────────────────────
     workers = args.workers
@@ -158,16 +191,9 @@ def main():
             print(f"📄 [{i}/{len(files)}] {filename}")
             print(f"{'━' * 60}")
 
-            report = process_one_paper(md_path, stem, tracker)
-            if report:
-                all_reports.append(report)
-                s = report["summary"]
-                if s["total_fields"] > 0:
-                    print(f"\n  📈 {stem}: fidelity {s['supported']}/{s['total_fields']} "
-                          f"({s['supported'] / s['total_fields'] * 100:.0f}%) | "
-                          f"corrections {s['total_corrections']}")
-            elif report is None:
-                failed_files.append(filename)
+            result = process_one_paper(md_path, stem, tracker)
+            collect_paper_result(filename, result, all_reports, failed_files, skipped_files)
+            _print_paper_result(stem, result)
     else:
         # Parallel
         print(f"\n🔄 Processing {len(files)} papers with {workers} workers...\n")
@@ -183,16 +209,9 @@ def main():
             for future in as_completed(future_to_file):
                 filename = future_to_file[future]
                 try:
-                    report = future.result()
-                    if report:
-                        all_reports.append(report)
-                        s = report["summary"]
-                        stem = Path(filename).stem
-                        if s["total_fields"] > 0:
-                            print(f"  📈 {stem}: fidelity {s['supported']}/{s['total_fields']} "
-                                  f"({s['supported'] / s['total_fields'] * 100:.0f}%)")
-                    else:
-                        failed_files.append(filename)
+                    result = future.result()
+                    collect_paper_result(filename, result, all_reports, failed_files, skipped_files)
+                    _print_paper_result(Path(filename).stem, result)
                 except Exception as e:
                     print(f"  ❌ {filename}: {e}")
                     failed_files.append(filename)
@@ -209,6 +228,8 @@ def main():
     if failed_files:
         print(f"\n⚠️  {len(failed_files)} files failed: {failed_files}")
         print(f"   Tip: FORCE_RERUN=1 bash extractor/run.sh pipeline")
+    if skipped_files:
+        print(f"\n⏭️  {len(skipped_files)} files skipped: {skipped_files}")
 
     print(f"\n✅ Pipeline done! Processed {len(files)}, verified {len(all_reports)}")
 
