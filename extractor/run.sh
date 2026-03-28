@@ -9,7 +9,6 @@
 #   bash extractor/run.sh pipeline-test       # test: first file
 #   bash extractor/run.sh pipeline-test 3     # test: 3rd file
 #   bash extractor/run.sh pipeline-test name  # test: match filename
-#   bash extractor/run.sh build-index         # build RAG index
 #   bash extractor/run.sh rerun               # force re-run all
 #   FORCE_RERUN=1 bash extractor/run.sh       # force re-run
 #
@@ -18,7 +17,9 @@
 set -euo pipefail
 
 # ─── Base paths ──────────────────────────────────────────
-export BASE_DIR="${BASE_DIR:-/data/haotianwu/biojson}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DEFAULT_BASE_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
+export BASE_DIR="${BASE_DIR:-${DEFAULT_BASE_DIR}}"
 EXTRACTOR_DIR="${BASE_DIR}/extractor"
 
 # ─── Load .env ───────────────────────────────────────────
@@ -48,11 +49,6 @@ export FALLBACK_API_KEY="${FALLBACK_API_KEY:-}"
 export FALLBACK_BASE_URL="${FALLBACK_BASE_URL:-}"
 export FALLBACK_MODEL="${FALLBACK_MODEL:-}"
 
-# ─── RAG ─────────────────────────────────────────────────
-export RAG_ENABLED="${RAG_ENABLED:-1}"
-export RAG_TOP_K="${RAG_TOP_K:-2}"
-export RAG_DATA_DIR="${RAG_DATA_DIR:-${BASE_DIR}/data}"
-
 # ─── Concurrency ─────────────────────────────────────────
 export MAX_WORKERS="${MAX_WORKERS:-3}"
 
@@ -67,7 +63,6 @@ echo "   Model:    ${MODEL}"
 echo "   Input:    ${MD_DIR}"
 echo "   Output:   ${JSON_DIR}"
 echo "   Workers:  ${MAX_WORKERS}"
-echo "   RAG:      ${RAG_ENABLED}"
 if [ "$MODE" = "pipeline-test" ]; then
   echo "   Test:     ${TEST_INDEX}"
 fi
@@ -83,9 +78,6 @@ case $MODE in
   pipeline-test)
     python -m extractor.pipeline --test "${TEST_INDEX}"
     ;;
-  build-index)
-    python -m extractor.pipeline --build-index
-    ;;
   rerun)
     export FORCE_RERUN=1
     python -m extractor.pipeline
@@ -98,7 +90,6 @@ case $MODE in
     echo "  pipeline          Full pipeline (default)"
     echo "  pipeline-test     Test mode, process 1 file"
     echo "  pipeline-test 3   Test mode, 3rd file"
-    echo "  build-index       Build RAG vector index"
     echo "  rerun             Force re-run all files"
     exit 1
     ;;
