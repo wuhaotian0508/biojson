@@ -17,7 +17,7 @@ class TokenTracker:
     def __init__(self, model="unknown"):
         self.model = model
         self.calls = []
-        self._lock = threading.Lock()
+        self._lock = threading.RLock()
 
     def add(self, response, stage="unknown", file=""):
         """Record token usage from an API response (thread-safe)."""
@@ -88,10 +88,11 @@ class TokenTracker:
         os.makedirs(os.path.dirname(path) if os.path.dirname(path) else ".", exist_ok=True)
 
         with self._lock:
+            calls = list(self.calls)
             report = {
                 "timestamp": datetime.now().replace(microsecond=0).isoformat(),
                 "model": self.model,
-                "calls": list(self.calls),
+                "calls": calls,
                 "summary": self.get_summary(),
             }
 
