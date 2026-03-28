@@ -1,0 +1,31 @@
+{
+  "eval_id": 3,
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Every method in TokenTracker has a corresponding .py file (7 methods: __init__, add, _aggregate, get_summary, print_summary, save_report, merge)",
+      "passed": true,
+      "evidence": "All 7 files present in examples/token_tracker/: TokenTracker___init__.py, TokenTracker_add.py, TokenTracker__aggregate.py, TokenTracker_get_summary.py, TokenTracker_print_summary.py, TokenTracker_save_report.py, TokenTracker_merge.py"
+    },
+    {
+      "text": "Every generated .py file runs successfully with `python <file>` (exit code 0)",
+      "passed": true,
+      "evidence": "All 7 files executed with exit code 0. Each produced correct output demonstrating the method's behavior (e.g., TokenTracker_save_report.py saves a JSON report to a temp file and cleans up, TokenTracker_merge.py merges two trackers and verifies counts)."
+    },
+    {
+      "text": "Files follow ClassName_method_name.py naming (e.g., TokenTracker_add.py)",
+      "passed": true,
+      "evidence": "All files follow the ClassName_method_name.py convention: TokenTracker___init__.py, TokenTracker_add.py, TokenTracker__aggregate.py, TokenTracker_get_summary.py, TokenTracker_print_summary.py, TokenTracker_save_report.py, TokenTracker_merge.py"
+    },
+    {
+      "text": "Each file properly instantiates the TokenTracker class with realistic data before calling the method",
+      "passed": true,
+      "evidence": "Every file creates a TokenTracker instance with a model name (e.g., 'claude-sonnet-4-20250514') and populates it with mock API responses via tracker.add() before demonstrating the target method. For example, TokenTracker_get_summary.py adds 5 responses across 3 stages before calling get_summary(); TokenTracker_merge.py creates separate worker trackers with responses before merging."
+    },
+    {
+      "text": "Sample data uses realistic API response objects (with usage.prompt_tokens etc.) rather than trivial placeholders",
+      "passed": true,
+      "evidence": "All files define _MockUsage and _MockResponse classes that simulate OpenAI-compatible API responses with .usage.prompt_tokens, .usage.completion_tokens, and .usage.total_tokens. Token counts are realistic (e.g., prompt_tokens=4200, completion_tokens=1500, total_tokens=5700 for an extract stage; prompt_tokens=2100, completion_tokens=480 for a verify stage). File names reference real papers like 'Mol_Plant_2016_Yang.md' and 'Science_2003_Xie.md'. Pipeline stages use realistic names ('extract', 'verify', 'classify')."
+    }
+  ]
+}

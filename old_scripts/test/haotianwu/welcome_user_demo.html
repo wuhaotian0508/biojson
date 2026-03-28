@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WelcomeUser Demo</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+        background: linear-gradient(135deg, #f5f7ff, #eefaf4);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .card {
+        width: min(520px, 92vw);
+        background: #ffffff;
+        border-radius: 18px;
+        padding: 32px;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e8ecf3;
+      }
+
+      .tag {
+        display: inline-block;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: #eef2ff;
+        color: #4338ca;
+        font-size: 13px;
+        margin-bottom: 14px;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: 32px;
+        color: #111827;
+      }
+
+      p {
+        margin: 0;
+        font-size: 18px;
+        color: #4b5563;
+        line-height: 1.7;
+      }
+
+      code {
+        display: block;
+        margin-top: 22px;
+        padding: 14px;
+        border-radius: 12px;
+        background: #0f172a;
+        color: #e2e8f0;
+        font-size: 13px;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="tag">WelcomeUser 运行效果示例</div>
+      <h1>欢迎回来, 小王!</h1>
+      <p>你今年 18 岁了。</p>
+
+      <code>
+interface UserProps {
+  name: string;
+  age: number;
+}
+
+&lt;WelcomeUser name="小王" age={18} /&gt;
+      </code>
+    </div>
+  </body>
+  </html>

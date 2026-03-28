@@ -1,0 +1,275 @@
+/* CSS：样式表 - 让页面变漂亮 */
+
+/* ===== 基础样式 ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== 容器布局 ===== */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ===== 头部样式 ===== */
+.header {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+.header input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.header button {
+    padding: 8px 16px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.header button:hover {
+    background: #1d4ed8;
+}
+
+/* ===== 消息提示 ===== */
+.message {
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.message.error {
+    background: #fee;
+    color: #c33;
+    border: 1px solid #fcc;
+    display: block;
+}
+
+.message.success {
+    background: #efe;
+    color: #3c3;
+    border: 1px solid #cfc;
+    display: block;
+}
+
+/* ===== 论文卡片 ===== */
+.papers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.paper-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.paper-card:hover {
+    border-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(37,99,235,0.2);
+}
+
+.paper-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+
+.paper-meta {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.paper-stats {
+    display: flex;
+    gap: 16px;
+    font-size: 14px;
+}
+
+.stat-badge {
+    background: #f0f0f0;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+}
+
+/* ===== 加载和空状态 ===== */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 18px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+}
+
+.empty-state p {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.hint {
+    font-size: 14px !important;
+    color: #bbb !important;
+}
+
+/* ===== 详情面板 ===== */
+.detail-panel {
+    position: fixed;
+    top: 0;
+    right: -500px;
+    width: 500px;
+    height: 100vh;
+    background: white;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.2);
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.detail-panel.show {
+    right: 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.panel-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+#detailContent {
+    padding: 20px;
+}
+
+/* ===== 标注样式 ===== */
+.annotation-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.annotation-row {
+    margin-bottom: 16px;
+}
+
+.annotation-label {
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #444;
+}
+
+.annotation-value {
+    padding: 8px 12px;
+    background: #f9f9f9;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+select.annotation-select {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+}
+
+select.annotation-select.good {
+    background: #d1fae5;
+    border-color: #86efac;
+}
+
+select.annotation-select.medium {
+    background: #fef3c7;
+    border-color: #fcd34d;
+}
+
+select.annotation-select.poor {
+    background: #fee;
+    border-color: #fca5a5;
+}
+
+.save-btn {
+    width: 100%;
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.save-btn:hover {
+    background: #1d4ed8;
+}
+
+.save-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}

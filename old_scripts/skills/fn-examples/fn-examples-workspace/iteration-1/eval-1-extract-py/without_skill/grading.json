@@ -1,0 +1,36 @@
+{
+  "eval_id": 1,
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "completeness: Every function in extract.py has a corresponding .py file (strict 1:1 mapping, no functions skipped). There are 15 functions.",
+      "passed": false,
+      "evidence": "There are 16 files (example_01 through example_16), but example_16_category_map.py covers the CATEGORY_MAP and CAT_TO_TOOL constants, which are NOT functions. All 15 functions do have corresponding files (examples 01-15), so every function is covered, but the mapping is not strict 1:1 because there is an extra file for a non-function entity. The 16th file is extraneous relative to the 15 functions."
+    },
+    {
+      "text": "runnable: Every generated .py file runs successfully with `python <file>` (exit code 0).",
+      "passed": true,
+      "evidence": "All 16 files executed with exit code 0. Each produced output demonstrating the function or constant behavior. Files for complex functions (_call_extract_api, extract_paper) used walkthrough-style demonstrations rather than actually defining and calling the function, but they still ran without errors."
+    },
+    {
+      "text": "directory_structure: Files are organized as examples/extract/<func_name>.py (for with_skill only; without_skill may differ).",
+      "passed": true,
+      "evidence": "Files are in outputs/ directory with naming pattern example_NN_<description>.py (e.g., example_01_schema_props_to_fc.py). This is a reasonable alternative structure for the without_skill configuration. The assertion notes 'without_skill may differ'."
+    },
+    {
+      "text": "dependencies_inlined: Functions that depend on other same-file functions have those dependencies copied inline (not imported from the original module).",
+      "passed": true,
+      "evidence": "Verified dependency inlining: example_04_build_extract_all_schema.py inlines _schema_props_to_fc (line 21). example_06_handle_classify.py inlines CATEGORY_MAP (line 24). example_12_load_extract_schemas.py inlines _schema_props_to_fc, _build_classify_schema, and _build_extract_schema. example_13_load_extract_all_schema.py inlines _schema_props_to_fc and _build_extract_all_schema. For example_14 and example_15, these are walkthrough-style (they don't define the actual function), so the dependency question is moot -- but they do inline relevant helpers like stem_to_dirname where needed. No file imports from the original extractor module."
+    },
+    {
+      "text": "meaningful_inputs: Sample inputs use realistic domain data (gene schemas, paper metadata), not placeholder values.",
+      "passed": true,
+      "evidence": "Sample inputs use real gene names (CHS, CHI, SlMYB12, Del, Ros1, PAL, F3H, FLS, DFR, ANS), real paper titles ('Metabolic engineering of anthocyanin biosynthesis in tomato', 'Overexpression of petunia chalcone isomerase in tomato'), real DOIs (10.1038/nbt1260, 10.1038/nbt0901-470), real journal names, realistic enzyme names (Chalcone synthase, Chalcone isomerase, Flavanone 3-hydroxylase), and schema structures matching the actual domain."
+    },
+    {
+      "text": "has_docstring: Each file has a docstring at the top explaining what the function does.",
+      "passed": true,
+      "evidence": "All 16 files begin with a triple-quoted docstring that includes: the filename, 'Demonstrates: <function_name>', and a 'Purpose:' section explaining the function's behavior. Examples: example_05 describes _handle_extract_all as processing 'the raw arguments returned by the extract_all_genes tool call', example_14 describes _call_extract_api as 'the core single-step extraction function'."
+    }
+  ]
+}
