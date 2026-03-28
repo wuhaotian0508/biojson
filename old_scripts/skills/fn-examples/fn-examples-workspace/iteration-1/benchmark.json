@@ -1,0 +1,174 @@
+{
+  "metadata": {
+    "skill_name": "fn-examples",
+    "skill_path": "/data/haotianwu/biojson/skills/fn-examples",
+    "executor_model": "claude-opus-4-6",
+    "timestamp": "2026-03-28T03:00:00Z",
+    "evals_run": [1, 2, 3],
+    "runs_per_configuration": 1
+  },
+
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "extract-py-functions",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 349.0,
+        "tokens": 74963,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Every function in extract.py has a corresponding .py file (strict 1:1 mapping, 15 functions)", "passed": true, "evidence": "All 15 files present"},
+        {"text": "Every generated .py file runs successfully (exit code 0)", "passed": true, "evidence": "All 15 files ran with exit code 0"},
+        {"text": "Files organized as examples/extract/<func_name>.py", "passed": true, "evidence": "Correct directory structure"},
+        {"text": "Dependencies inlined (not imported from original module)", "passed": true, "evidence": "Dependencies copied inline in all files"},
+        {"text": "Sample inputs use realistic domain data", "passed": true, "evidence": "Real gene names, paper titles, DOIs used"},
+        {"text": "Each file has a docstring explaining the function", "passed": true, "evidence": "All files have module-level docstrings"}
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "extract-py-functions",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.83,
+        "passed": 5,
+        "failed": 1,
+        "total": 6,
+        "time_seconds": 312.1,
+        "tokens": 65985,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Every function in extract.py has a corresponding .py file (strict 1:1 mapping, 15 functions)", "passed": false, "evidence": "16 files generated — extra file for CATEGORY_MAP constant, not strict 1:1"},
+        {"text": "Every generated .py file runs successfully (exit code 0)", "passed": true, "evidence": "All 16 files ran with exit code 0"},
+        {"text": "Files organized as examples/extract/<func_name>.py", "passed": true, "evidence": "Alternative naming pattern used (example_NN_name.py)"},
+        {"text": "Dependencies inlined (not imported from original module)", "passed": true, "evidence": "Dependencies copied inline"},
+        {"text": "Sample inputs use realistic domain data", "passed": true, "evidence": "Real gene names, paper titles, DOIs used"},
+        {"text": "Each file has a docstring explaining the function", "passed": true, "evidence": "All files have module-level docstrings"}
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "text-utils-py-functions",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 218.3,
+        "tokens": 51311,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Every function in text_utils.py has a corresponding .py file (9 functions)", "passed": true, "evidence": "All 9 files present"},
+        {"text": "Every generated .py file runs successfully (exit code 0)", "passed": true, "evidence": "All 9 files ran with exit code 0"},
+        {"text": "_classify_headings_with_llm.py uses mock instead of real API calls", "passed": true, "evidence": "Uses unittest.mock with MagicMock/patch"},
+        {"text": "Sample inputs use realistic scientific paper markdown content", "passed": true, "evidence": "Real gene names, pathway descriptions, section headings"},
+        {"text": "Each file has a docstring explaining the function", "passed": true, "evidence": "All files have module-level docstrings"}
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "text-utils-py-functions",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": null,
+        "tokens": null,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Every function in text_utils.py has a corresponding .py file (9 functions)", "passed": true, "evidence": "All 9 files present"},
+        {"text": "Every generated .py file runs successfully (exit code 0)", "passed": true, "evidence": "All 9 files ran with exit code 0"},
+        {"text": "_classify_headings_with_llm.py uses mock instead of real API calls", "passed": true, "evidence": "Uses unittest.mock with patch/MagicMock"},
+        {"text": "Sample inputs use realistic scientific paper markdown content", "passed": true, "evidence": "Real gene names, pathway data used"},
+        {"text": "Each file has a docstring explaining the function", "passed": true, "evidence": "All files have module-level docstrings"}
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "token-tracker-class-methods",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 448.6,
+        "tokens": 45074,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Every method in TokenTracker has a corresponding .py file (7 methods)", "passed": true, "evidence": "All 7 files present"},
+        {"text": "Every generated .py file runs successfully (exit code 0)", "passed": true, "evidence": "All 7 files ran with exit code 0"},
+        {"text": "Files follow ClassName_method_name.py naming", "passed": true, "evidence": "All files follow TokenTracker_method.py convention"},
+        {"text": "Each file properly instantiates TokenTracker with realistic data", "passed": true, "evidence": "All files create TokenTracker with model names and populate with mock responses"},
+        {"text": "Sample data uses realistic API response objects", "passed": true, "evidence": "MockUsage/MockResponse with realistic token counts and stage names"}
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "token-tracker-class-methods",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.8,
+        "passed": 4,
+        "failed": 1,
+        "total": 5,
+        "time_seconds": 472.1,
+        "tokens": 39314,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Every method in TokenTracker has a corresponding .py file (7 methods)", "passed": true, "evidence": "All 7 files present"},
+        {"text": "Every generated .py file runs successfully (exit code 0)", "passed": true, "evidence": "All 7 files ran with exit code 0"},
+        {"text": "Files follow ClassName_method_name.py naming", "passed": false, "evidence": "Files use example_method.py naming instead of TokenTracker_method.py"},
+        {"text": "Each file properly instantiates TokenTracker with realistic data", "passed": true, "evidence": "All files instantiate TokenTracker with model names"},
+        {"text": "Sample data uses realistic API response objects", "passed": true, "evidence": "MockUsage/MockResponse with realistic token counts"}
+      ]
+    }
+  ],
+
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 338.6, "stddev": 94.6, "min": 218.3, "max": 448.6},
+      "tokens": {"mean": 57116, "stddev": 12845, "min": 45074, "max": 74963}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.88, "stddev": 0.09, "min": 0.80, "max": 1.0},
+      "time_seconds": {"mean": 392.1, "stddev": 80.0, "min": 312.1, "max": 472.1},
+      "tokens": {"mean": 52650, "stddev": 13336, "min": 39314, "max": 65985}
+    },
+    "delta": {
+      "pass_rate": "+0.12",
+      "time_seconds": "-53.5",
+      "tokens": "+4466"
+    }
+  },
+
+  "notes": [
+    "with_skill achieved 100% pass rate across all 3 evals (16/16 assertions passed)",
+    "without_skill scored 88% (14/16) — failed naming_convention for token_tracker and completeness for extract.py",
+    "Key skill advantages: consistent directory structure (examples/<module>/<func>.py), correct ClassName_method.py naming for class methods, strict 1:1 function-to-file mapping",
+    "The 'runnable' and 'meaningful_inputs' assertions pass 100% in both configurations — non-discriminating",
+    "with_skill is actually faster on average (339s vs 392s) despite using slightly more tokens (57K vs 53K), suggesting more focused execution",
+    "Bonus finding: both configurations independently discovered a deadlock bug in TokenTracker.save_report (Lock vs RLock issue)"
+  ]
+}

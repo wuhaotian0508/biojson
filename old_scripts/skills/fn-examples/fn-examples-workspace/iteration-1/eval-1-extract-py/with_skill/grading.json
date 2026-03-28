@@ -1,0 +1,36 @@
+{
+  "eval_id": 1,
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "completeness: Every function in extract.py has a corresponding .py file (strict 1:1 mapping, no functions skipped). There are 15 functions.",
+      "passed": true,
+      "evidence": "All 15 functions have corresponding files: _schema_props_to_fc.py, _build_extract_schema.py, _build_classify_schema.py, _build_extract_all_schema.py, _load_prompt.py, _load_extract_schemas.py, _load_extract_all_schema.py, _handle_extract_all.py, _handle_classify.py, _handle_extract.py, _safe_parse_json.py, _message_to_dict.py, stem_to_dirname.py, _call_extract_api.py, extract_paper.py. Exactly 15 files, one per function."
+    },
+    {
+      "text": "runnable: Every generated .py file runs successfully with `python <file>` (exit code 0).",
+      "passed": true,
+      "evidence": "All 15 files executed with exit code 0. Each produced meaningful output demonstrating the function's behavior. Files requiring external dependencies (API calls, file I/O, module imports) used mock objects, temp files, or inline stubs to run standalone."
+    },
+    {
+      "text": "directory_structure: Files are organized as examples/extract/<func_name>.py (for with_skill only).",
+      "passed": true,
+      "evidence": "All files are located at outputs/examples/extract/<func_name>.py. The directory structure matches the expected pattern exactly."
+    },
+    {
+      "text": "dependencies_inlined: Functions that depend on other same-file functions have those dependencies copied inline (not imported from the original module).",
+      "passed": true,
+      "evidence": "Verified multiple files with dependencies: _build_extract_all_schema.py inlines _schema_props_to_fc (line 19). _call_extract_api.py inlines _safe_parse_json (line 26), _handle_extract_all (line 48), and TokenTracker (line 77). _handle_classify.py inlines CATEGORY_MAP (line 20). _load_extract_schemas.py inlines _schema_props_to_fc and _build_classify_schema and _build_extract_schema. _load_extract_all_schema.py inlines _schema_props_to_fc and _build_extract_all_schema. extract_paper.py inlines all needed dependencies including mock clients and helper functions. No imports from the original extractor module."
+    },
+    {
+      "text": "meaningful_inputs: Sample inputs use realistic domain data (gene schemas, paper metadata), not placeholder values.",
+      "passed": true,
+      "evidence": "Sample inputs use real gene names (SlCHI1, PhCHI, SlMYB12, Del, Ros1, SlDFR, SlANS), real paper titles ('Enrichment of tomato fruit with health-promoting anthocyanins...', 'Overexpression of petunia chalcone isomerase...'), real DOIs (10.1038/nbt1506, 10.1038/nbt0901-470), real journal names (Nature Biotechnology, Nature Communications, Molecular Plant), real pathway names (flavonoid biosynthesis, carotenoid biosynthesis), and realistic schema structures matching the actual nutri_gene_schema format."
+    },
+    {
+      "text": "has_docstring: Each file has a docstring at the top explaining what the function does.",
+      "passed": true,
+      "evidence": "All 15 files begin with a triple-quoted docstring. Each docstring includes the function name, a description of what it does, the source line reference in extract.py, and a usage line. Examples: _build_classify_schema.py starts with 'Build the classify_genes OpenAI function-calling schema', _call_extract_api.py starts with 'Single-step API extraction using the extract_all_genes tool', extract_paper.py starts with 'Extract gene information from a single paper markdown file'."
+    }
+  ]
+}

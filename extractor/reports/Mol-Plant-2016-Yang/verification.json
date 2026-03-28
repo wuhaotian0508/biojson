@@ -1,0 +1,1908 @@
+{
+  "file": "Mol_Plant_2016_Yang",
+  "md_path": "/data/haotianwu/biojson/extractor/input/Mol_Plant_2016_Yang.md",
+  "timestamp": "2026-03-28T11:51:57.796234",
+  "genes": [
+    {
+      "gene_name": "4CL3",
+      "category": "Pathway",
+      "verification": {
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is explicitly on maize genes and uses maize lines B73 and B73×Mo17 F1."
+        },
+        "Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper consistently says maize but the Latin binomial 'Zea mays' is not shown in the provided text."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Promoter fragments and assays were from maize."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Maize is clear, but 'Zea mays' is not explicitly visible in the provided text."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state B73 genomic DNA was used for promoter cloning and B73×Mo17 F1 etiolated seedlings were used for protoplast assays."
+        },
+        "Origin_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Promoter fragments were cloned from the maize B73 inbred line / B73 genomic DNA."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "4CL3 is treated as a phenolic-pathway gene within the network for phenolic compounds."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper frames the network as covering general phenylpropanoids, lignins, and flavonoids."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "4CL is listed in Figure 1 under the general phenylpropanoid part of the pathway, and 4CL3 is later described as an early step in the general phenylpropanoid pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "4CL3 is described as encoding an early step in the general phenylpropanoid pathway, i.e. the core phenylpropanoid branch."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1 defines 4CL as 4-coumarate CoA ligase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for 4CL3 is provided in the paper text."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme name 4-coumarate CoA ligase directly supports 4-coumarate as substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "From the enzyme designation 4-coumarate CoA ligase, formation of 4-coumaroyl-CoA is directly inferable."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a faithful biochemical paraphrase of the 4CL step shown in the phenylpropanoid pathway schematic."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls 4CL3 an early step in the general phenylpropanoid pathway."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "As an early general phenylpropanoid step, 4CL3 supplies precursors feeding downstream lignin/flavonoid branches, consistent with Figure 1 and text."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "4CL3 promoter was used as a Y1H bait and the gene is discussed in the integrated Y1H/ChIP-seq network analysis."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports 4CL3 as a key early step, but does not explicitly call it rate-limiting."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "4CL3 is highlighted as an early phenylpropanoid gene and a 4CL3-centered subnetwork is discussed, showing extensive TF targeting."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract and discussion link phenolic compounds to plant-environment interactions and specialized/structural metabolism."
+        },
+        "Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "A native upstream promoter fragment was used as Y1H bait, and the text refers to p4CL3::Luc / 4CL3-centered analyses; 4CL3 promoter was also assayed in ChIP contexts."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify protoplast assays from etiolated B73×Mo17 F1 seedling leaves with dark incubation."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper used CAGE to define TSSs when available and integrated published ChIP-seq and RNA-seq information."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are consistent with the Results: 4CL3 was among 54 baits, is an early general phenylpropanoid gene, and a 4CL3-centered subnetwork with FFLs involving KN1/P1/FEA4 is described."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The discussion generally mentions value for rational metabolic engineering, but this specific application statement for 4CL3 with pleiotropy caution is not explicitly tested."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed focuses on promoter regulation/network edges rather than direct enzymatic characterization of 4CL3."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "6.2.1.12",
+          "new_value": "NA",
+          "reason": "No EC number for 4CL3 is provided in the paper text."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "COMT1",
+      "category": "Pathway",
+      "verification": {
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is on maize."
+        },
+        "Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Maize is explicit, but 'Zea mays' is not shown in the provided text."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "COMT1 promoter and assays are from maize."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Latin name not explicitly present in the provided text."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "B73 genomic DNA was used for promoter cloning and B73×Mo17 F1 seedlings for protoplast assays."
+        },
+        "Origin_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Promoter fragments were cloned from B73 genomic DNA."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "COMT1 is positioned in the lignin branch of maize phenolic metabolism."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly places COMT1 in lignin biosynthesis within the broader phenylpropanoid network."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1 includes COMT in the lignin part of the pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "COMT1 is described as one of the late lignin branch pathway enzymes controlling G- to S-lignin conversion, consistent with monolignol biosynthesis."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1 defines COMT as caffeic acid O-methyltransferase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "COMT is named caffeic acid O-methyltransferase, but the detailed substrate wording 'caffeic acid/caffeoyl derivatives' is not explicitly provided for COMT1 in the Results."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links COMT1 to conversion between G- and S-lignin but does not explicitly state 'ferulic acid/feruloyl derivatives' as product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "A general lignin-pathway role is supported, but this precise biochemical wording is not stated in the paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes COMT1 as a late lignin branch pathway enzyme."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The text states COMT1 controls the conversion between G- and S-lignin, supporting a role in lignin branch composition."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "COMT1 promoter was used in Y1H, some TF-COMT1 interactions were validated by ChIP-qPCR, and COMT1 was included in integrated ChIP-seq analyses."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports COMT1 as an important control point for lignin composition, but does not explicitly call it rate-limiting."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "COMT1 is highlighted as heavily targeted and as controlling G- to S-lignin conversion."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Lignin is a structural cell wall polymer; the paper discusses lignin/secondary wall regulation, making cell wall accumulation directly inferable."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Phenolic/lignin functions in structure and environment interaction are discussed in the paper."
+        },
+        "Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "COMT1 promoter was used as a Y1H bait and repeatedly discussed as a promoter recognized by multiple TFs."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "ChIP validation was performed in protoplasts from etiolated seedling leaves."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "CAGE, published ChIP-seq, and RNA-seq integration are all described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The three points are all directly supported: COMT1 had 161 TFs, is a late lignin enzyme for G/S conversion, and COMT1-centered subnetworks with activators/repressors and FFLs are discussed."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "General engineering relevance for altered lignin is discussed, but this exact gene-specific application statement is not directly tested."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states COMT1 is encoded by brown midrib3 (bm3) and notes COMT1 was screened more deeply than some promoters."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.1.1.68",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 1,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_name": "MYB65",
+      "category": "Regulation",
+      "verification": {
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB65 is a maize TF studied in this maize network paper."
+        },
+        "Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Maize is clear, but 'Zea mays' is not explicitly shown in the provided text."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The TF is from maize and tested in maize protoplasts."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Latin binomial is not explicitly shown in the provided text."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses B73-derived constructs and B73×Mo17 F1 seedlings for protoplast assays."
+        },
+        "Origin_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Promoter cloning used B73 genomic DNA; the study context supports B73 as origin for cloned regulatory sequences."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB65 is linked to regulation of phenylpropanoid/phenolic biosynthesis genes."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The network spans phenylpropanoid, lignin, and flavonoid genes, and MYB65 binds many of these promoters."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB65 is described as a TF and one of two R2R3-MYBs among the top highly connected factors."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB65 is explicitly one of the R2R3-MYBs."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB65 activated PAL4::Luc in maize protoplasts, indicating transcriptional activation."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links MYB65 to phenylpropanoid biosynthesis gene expression."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly lists PAL1, PAL3, PAL4, PAL5, PAL6, PAL8, and PAL9 among the 13 MYB65-recognized regulatory sequences."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Activation of PAL4 is directly shown, and the paper anticipates activation of phenylpropanoid target genes based on orthology and confirms activator function."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB65 was examined by Y1H, ChIP-qPCR, and transient transactivation assay."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support MYB65 as a positive regulator of maize phenylpropanoid pathway genes."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is a strong multi-target activator candidate, but 'major' influence on product accumulation was not directly measured."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "As a TF it is expected to act in the nucleus, but explicit localization data are not reported."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "UNCERTAIN",
+          "reason": "The integrated GRN contains feed-forward loops, but MYB65 is not specifically shown in a feed-forward loop in the text provided."
+        },
+        "Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "p35S::MYB65-GFP was used in protoplast assays."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient assays were performed in maize protoplasts from etiolated B73×Mo17 F1 seedlings."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "CAGE and ChIP-based validations/integrations are described; broader integration with public ChIP-seq/RNA-seq is part of the paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings are directly stated in Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper generally discusses engineering value of TF knowledge, but this MYB65-specific application statement is inferential."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Broad metabolic/developmental effects were not directly tested; this is faithful to the paper's scope."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly states MYB65 is the ortholog of Arabidopsis AtMYB58 and AtMYB63."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 20,
+        "unsupported": 0,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "MYB100",
+      "category": "Regulation",
+      "verification": {
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB100 is a maize TF assayed in maize protoplasts."
+        },
+        "Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The Latin name is not explicitly shown in the provided text."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The TF is part of the maize TFome and tested in maize."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Latin name not explicitly provided."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "B73×Mo17 F1 seedlings were used for protoplast assays; MYB100 ChIP was done in this system."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB100 is examined for binding to promoters of phenolic pathway genes."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Targets include HCT6 and COMT1 (lignin branch) and 4CL3 (general phenylpropanoid), fitting the broader phenolic classes."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB100 is a transcription factor from the TFome."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The name MYB100 directly indicates a MYB family TF, and the paper uses that nomenclature."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper only demonstrates promoter association/binding for MYB100, not activation or repression."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB100 binds promoters of phenolic biosynthesis genes, supporting a role in phenolic gene regulation."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "HCT6 and COMT1 were positive in Y1H and ChIP; 4CL3 was negative in Y1H but positive by ChIP."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes that MYB100 binds HCT6 and COMT1 in Y1H/ChIP and associates with 4CL3 by ChIP."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB100 is explicitly used as an example of Y1H and ChIP-qPCR validation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "As phrased, it only claims candidate regulatory role via promoter binding, which is supported."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The statement is cautious and matches the paper: MYB100 is a network regulator candidate, not functionally established as a master regulator."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "No direct localization experiment for MYB100 is described."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly proposes possible indirect recruitment/tethering in vivo to explain Y1H-ChIP discrepancies such as MYB100 on 4CL3."
+        },
+        "Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "p35S::GFP-MYB100 was used in ChIP experiments."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "ChIP was performed in maize protoplasts from etiolated seedlings."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "ChIP-qPCR data are explicitly presented for MYB100."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three points are directly supported by Figure 2 and Table 1."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The cautious wording 'potential... but direct metabolic consequences were not established' is consistent with the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB100 is indeed presented mainly as a validation example rather than as a fully characterized regulator."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 21,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "LBD35",
+      "category": "Regulation",
+      "verification": {
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "LBD35 is a maize TF in the maize TFome/network."
+        },
+        "Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Latin species name is not explicitly shown in the provided text."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "LBD35 is a maize TF assayed in the maize study."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Not explicitly shown."
+        },
+        "Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "B73 is used for promoter cloning, but a specific variety for the LBD35 coding sequence is not stated."
+        },
+        "Origin_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not specifically assign B73 as the source accession for LBD35 ORF."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "LBD35 is linked to regulation of phenolic biosynthesis genes."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Its targets span phenylpropanoid/flavonoid pathways within the phenolic network."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "LBD35 is a transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "LBD35 is explicitly identified as an LBD/LOB domain family member."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The evidence is promoter recognition in Y1H."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says LBD35 recognized promoters in both the phenylpropanoid and flavonoid pathways, suggesting coordinated expression."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly states LBD35 recognized 24 gene promoters."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says LBD35 recognized promoters in both phenylpropanoid and flavonoid pathways."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "LBD35 is supported by Y1H network screening."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies LBD35 as the highest-connectivity TF in this network, making it a high-connectivity candidate regulator."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "Being a hub is supported, but being 'one of the strongest' in terms of decisive effect on product accumulation was not directly shown."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "No localization data are reported."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "UNCERTAIN",
+          "reason": "Feed-forward loops are described for integrated subnetworks, but LBD35 is not specifically placed in them in the text."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary statements are directly supported by the Results and connectivity analysis."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "General engineering relevance is inferable, but this specific statement is not directly tested."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not report physiological validation or tradeoffs for LBD35."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states functions of LBD35 and LBD20 or their orthologs remain unknown."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 15,
+        "unsupported": 0,
+        "uncertain": 8
+      }
+    },
+    {
+      "gene_name": "LBD24",
+      "category": "Regulation",
+      "verification": {
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "LBD24 is a maize TF in the network."
+        },
+        "Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Latin species name not explicitly shown."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study concerns maize TFs and LBD24 is among them."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Not explicitly shown."
+        },
+        "Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "A specific variety for the LBD24 ORF is not stated."
+        },
+        "Origin_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Not specifically stated for the TF clone."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "LBD24 is connected to regulation of phenolic pathway genes."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Targets span phenylpropanoid/flavonoid pathways within the broader phenolic network."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "LBD24 is a TF."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "LBD24 is explicitly an LBD family member."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The evidence is promoter binding/recognition in Y1H."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states LBD24 recognized promoters in both the phenylpropanoid and flavonoid pathways."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly says LBD24 recognized 23 gene promoters."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Recognition across phenylpropanoid and flavonoid pathways is directly stated."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Y1H network screening identified these interactions."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "LBD24 is one of the highest-connectivity candidate regulators in the phenolic network."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "Hub status is supported, but effect on metabolite output is not directly measured."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "No localization data are reported."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements are directly supported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is plausible but not directly evaluated."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Unknown tradeoffs are consistent with absence of physiological validation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states AtLBD16 corresponds to the ortholog of LBD24 and functions as a transcriptional activator in lateral root formation."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 15,
+        "unsupported": 0,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_name": "LBD20",
+      "category": "Regulation",
+      "verification": {
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "LBD20 is a maize TF in this network."
+        },
+        "Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Latin name not explicitly shown."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The TF is from maize in the maize TFome context."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Not explicitly shown."
+        },
+        "Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "No specific variety is given for the LBD20 ORF clone."
+        },
+        "Origin_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Not specifically stated."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "LBD20 is linked to regulation of phenolic biosynthesis genes."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Its targets are in phenylpropanoid/flavonoid pathways within the phenolic network."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "LBD20 is a TF."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "LBD20 is explicitly an LBD family member."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Promoter binding/recognition in Y1H is the evidence."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states LBD20 recognized promoters in both phenylpropanoid and flavonoid pathways."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly says LBD20 recognized 18 gene promoters."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Recognition across phenylpropanoid and flavonoid pathways is directly stated."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These results derive from Y1H network screening."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "LBD20 is identified as a hub-like candidate regulator due to high outgoing connectivity."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "Hub status is supported, but decisive metabolic effect is not measured."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "No localization experiment is reported."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are explicitly supported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential engineering use is inferential, not experimentally assessed."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Tradeoffs were not determined in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says functions of LBD20 or its orthologs remain unknown."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 15,
+        "unsupported": 0,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_name": "DOF28",
+      "category": "Regulation",
+      "verification": {
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "DOF28 is a maize TF in the maize network."
+        },
+        "Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Latin species name not explicitly shown."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The TF is part of the maize AD-TF library."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Not explicitly shown."
+        },
+        "Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Specific accession for the DOF28 ORF is not given."
+        },
+        "Origin_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Not specifically stated."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "DOF28 is linked to regulation of phenolic pathway genes."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says DOF28 recognizes promoters in phenylpropanoid, lignin, and flavonoid branches."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "DOF28 is a TF."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "DOF28 is explicitly described as a DOF family member; DOF stands for DNA-binding One Zinc Finger."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The evidence is promoter binding/recognition."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly states DOF28 recognizes 15 promoters corresponding to phenylpropanoid, lignin, and flavonoid branches."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states DOF28 recognizes 15 gene promoters."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Recognition across all three branches is directly stated."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "DOF28 was found by Y1H and included in Table 1 ChIP validations for selected targets."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "As phrased, this is supported as a broad candidate regulator across multiple phenolic branches."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "Hub candidate status is supported, but decisive influence on products was not functionally established."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "No localization data are reported."
+        },
+        "Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The study used GFP-DOF28 in ChIP validation experiments for selected interactions."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "ChIP validations were in protoplasts from etiolated seedlings."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "ChIP-qPCR data for DOF28-selected interactions are included in Table 1/Results."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by Results and Table 1."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential utility is plausible but not directly evaluated."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not report tradeoffs for DOF28."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed notes DOF family functional diversity and does not measure direct metabolic outputs for DOF28."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 18,
+        "unsupported": 0,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_name": "CPP8",
+      "category": "Regulation",
+      "verification": {
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CPP8 is a maize TF in this study."
+        },
+        "Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Latin species name not explicitly shown."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The TF is from maize in the maize AD-TF library context."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Not explicitly shown."
+        },
+        "Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "No specific accession is given for the CPP8 ORF."
+        },
+        "Origin_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Not specifically stated."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CPP8 is linked to regulation of phenolic biosynthesis genes."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "CPP8 is said to bind promoters across all branches of the phenolic pathway."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CPP8 is a transcription factor family member in the study."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CPP8 is explicitly described as a CPP family member."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The evidence is promoter recognition in Y1H."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says CPP8 binds 13 promoters across all branches of the phenolic pathway."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly gives 13 promoters for CPP8."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Recognition across all branches is directly stated."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "CPP8 support comes from Y1H network screening."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This cautious claim as a candidate broad regulator is consistent with the data."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "High-connectivity candidate is supported, but decisive product influence is not directly shown."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "No localization data are reported."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary statements are directly supported by the Results text."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable inference but not directly assessed experimentally."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Tradeoffs were not determined in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes CPPs have received significantly less attention and are understudied in plants."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 15,
+        "unsupported": 0,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_name": "NLP9",
+      "category": "Regulation",
+      "verification": {
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies maize phenolic metabolism throughout."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Maize refers to Zea mays in this paper context."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The TFs and promoters are from maize."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Origin species is maize, i.e. Zea mays."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Promoter fragments were cloned from maize B73 inbred line; B73 is the principal genotype used for genomic material."
+        },
+        "Origin_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "B73 genomic DNA was used for promoter cloning."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The network concerns maize phenolic metabolism and phenolic biosynthesis broadly."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The study explicitly covers general phenylpropanoids, lignins, and flavonoids."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "NLPs are discussed as TF family members, and NLP9 is treated as a transcription factor in the Y1H screen."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies NLPs as NIN-Like Protein family members."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "NLP9 was identified by Y1H as recognizing promoters, i.e. promoter binding."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states NLP9 recognizes 13 promoters across all branches and suggests a link between phenolic biosynthesis and N cellular status."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states that NLP9 recognizes 13 promoters."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "It explicitly says the 13 promoters correspond to all branches of phenolic biosynthesis."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "NLP9 is described from the Y1H analysis/screen, not from independent ChIP validation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says NLP9 suggests a hitherto unrecognized link between phenolic biosynthesis and N cellular status."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is interpretive wording; the paper identifies NLP9 as a broad candidate regulator but does not use this exact phrase or test product outcomes."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization experiment or explicit nuclear localization statement for NLP9 is provided."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states NLPs are main regulators of the primary nitrate response, but this is family-level background, not directly tested for NLP9 here."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nitrogen status is only inferred from NLP family biology; no nitrogen treatment/context was experimentally tested for NLP9."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points match the Results: NLP9 recognized 13 promoters across all branches and was presented among highly connected TFs, suggesting a link to nitrogen status."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible application inference, but not stated specifically for NLP9 in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "No tradeoffs were tested; this accurately reflects absence of testing."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper inconsistently lists NLP14 in one top-TF sentence but later describes NLP9 as the 13-promoter binder, so noting likely inconsistency is faithful."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No localization experiment or explicit nuclear localization statement for NLP9 is provided."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "bZIP63",
+      "category": "Regulation",
+      "verification": {
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is in maize."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Maize corresponds to Zea mays."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The TF collection and promoters are maize-derived."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Origin species is maize, Zea mays."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "B73 is the maize inbred used for promoter cloning and much of the study material."
+        },
+        "Origin_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Promoters were cloned from B73 genomic DNA."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is linked in this paper to regulation of phenolic metabolism broadly."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper addresses phenylpropanoid, lignin, and flavonoid branches."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "bZIP63 is a transcription factor in the bZIP family."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly discusses bZIP family members and names bZIP63."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "bZIP63 was identified as recognizing regulatory regions/promoters in Y1H."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states bZIP63 recognized genes across all branches of the phenolic pathway."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says bZIP63 recognized the regulatory regions of 12 genes."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "It explicitly states these genes span all branches of the phenolic pathway."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "bZIP63 is reported from Y1H screening results."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Describing it as a candidate broad regulator is consistent with its high connectivity across pathway branches, though not directly phenotypically tested."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper identifies bZIP63 as a highly connected candidate regulator, but does not test decisive influence on metabolite products."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No direct localization data or explicit statement for bZIP63 localization is given."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These summary points match the Results sentence describing bZIP63 recognizing 12 genes across all branches and being one of the most connected TFs."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "General engineering potential is plausible but not specifically stated for bZIP63."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Tradeoffs for bZIP63 were not addressed in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper inconsistently lists bZIP13 in one sentence but later details bZIP63 as the 12-promoter binder; this note matches the text."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No direct localization data or explicit statement for bZIP63 localization is given."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "C3H42",
+      "category": "Regulation",
+      "verification": {
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is in maize."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Maize corresponds to Zea mays."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The TF and promoters are maize-derived."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Origin species is maize, Zea mays."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "B73 was used for promoter cloning."
+        },
+        "Origin_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Promoters were amplified from B73 genomic DNA."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "C3H42 is linked to regulation of phenolic pathway genes broadly."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The targets span phenylpropanoid, lignin, and flavonoid branches."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "C3H42 is described as a transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies it as a CCCH zinc finger (C3H) family member."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "It was shown by Y1H to bind promoters."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states C3H42 binds general phenylpropanoid, lignin, and flavonoid gene promoters."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The exact listed targets PAL9, 4CL3, ALDH1, ALDH5, COMT1, F5H1, HCT6, HCT10, FLS1, and C2 are explicitly enumerated in the Results."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says C3H42 binds promoters from three pathway sectors."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "C3H42 is reported from the Y1H screen."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "As a candidate integrator of multiple phenolic branches, this reflects the broad promoter-binding profile shown in Results."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "Hub-regulator wording is interpretive; no direct metabolite/product effect was tested for C3H42."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization experiment or explicit nuclear localization statement for C3H42 is given."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by the Results description of C3H42 and its listed targets."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential engineering utility is not specifically discussed for C3H42."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Tradeoffs were not investigated in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses C3H family members as often involved in stress and developmental regulation, so possible pleiotropy is a fair reflection of background context."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No localization experiment or explicit nuclear localization statement for C3H42 is given."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "MBF1.3",
+      "category": "Regulation",
+      "verification": {
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The work is in maize."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Maize corresponds to Zea mays."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MBF1.3 and the promoters are maize-derived."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Origin species is maize, Zea mays."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "B73 was used for promoter cloning, and B73 × Mo17 F1 hybrid seedlings were used for protoplast assays as stated in Methods."
+        },
+        "Origin_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The original promoter source was B73."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "MBF1.3 is linked to regulation of phenolic biosynthesis genes broadly."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The study covers phenylpropanoid/flavonoid/lignin branches."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly discusses MBF1 both as co-activator family and notes direct DNA binding/transcriptional regulator behavior in plants; the mixed designation matches the text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "MBF1 family is explicitly discussed."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents MBF1.3 as recognizing promoters in Y1H and discusses co-activation/direct DNA binding ambiguity."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "MBF1.3 is described as recognizing phenolic biosynthesis gene promoters."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "Bz2 and PAL5 are explicitly named as MBF1.3 targets, along with a total of 10 promoters."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states MBF1.3 recognizes 10 phenolic biosynthesis gene promoters."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Two MBF1.3 interactions were validated by ChIP after identification by Y1H."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This reflects the paper's evidence that MBF1.3 binds phenolic gene promoters and may act as regulator/co-regulator."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not test product-level effects or establish decisiveness for phenolic output."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No direct localization data for MBF1.3 are reported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "TBP bridging is described as known family biology from other systems, not directly shown for maize MBF1.3 in this study."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states MBF1 family members are known as transcriptional co-activators bridging TBP and specific TFs, while also discussing possible direct DNA binding."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "ChIP validation used maize protoplasts from etiolated B73 × Mo17 F1 seedlings, matching this field."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "ChIP-qPCR data were generated for MBF1.3 targets."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by Results and Discussion."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable inference but not specifically claimed for MBF1.3."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not test tradeoffs for MBF1.3."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly notes that MBF1 blurs the TF versus co-regulator distinction."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No direct localization data for MBF1.3 are reported."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "LBD4",
+      "category": "Regulation",
+      "verification": {
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is in maize, though the assays for this interaction were in yeast."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Maize corresponds to Zea mays."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The TFs are maize TFs from the AD-TFome collection."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Origin species is maize, Zea mays."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Bz1 and A1 are anthocyanin biosynthesis genes; the paper explicitly discusses anthocyanin biosynthesis in this context."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanin belongs to the flavonoid branch addressed in the study."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "LBD4 is an LBD transcription factor in the TF library."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "LBD refers to LOB domain family in the paper."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents LBD4 as acting cooperatively in combinatorial transcriptional activation in yeast."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The target promoters Bz1 and A1 are anthocyanin biosynthesis genes."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes LBD4/NAC37 effects on Bz1 and A1 promoters."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states LBD4 and NAC37 together are required for Bz1 activation, LBD4 alone activates A1, and NAC37 impairs A1 activation by LBD4."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These findings come from directed yeast cooperation tests and Y2H physical interaction assays."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows promoter-level regulation in yeast, but not direct anthocyanin phenotype changes in planta."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is illustrative of combinatorial control, but no product-level decisiveness was tested."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization experiment or explicit nuclear localization statement for LBD4 is given."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Y2H identified physical interaction between LBD4 and NAC37."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports a functional interacting TF pair with NAC37."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These assays were performed in yeast/selective medium conditions."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly stated in Results/Discussion."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The general idea is reasonable, but the paper does not specifically frame LBD4 as an engineering target."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Promoter-dependent antagonism/cooperation is directly shown and could complicate manipulation; this is grounded in the reported A1/Bz1 differences."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed presents LBD4 mainly as an example of combinatorial regulation, not as a major hub."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No localization experiment or explicit nuclear localization statement for LBD4 is given."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "NAC37",
+      "category": "Regulation",
+      "verification": {
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is in maize, with cooperative assays in yeast."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Maize corresponds to Zea mays."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NAC37 is from the maize TFome."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Origin species is maize, Zea mays."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "NAC37 is linked here to Bz1 and A1, both anthocyanin biosynthesis genes."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanin is part of flavonoid metabolism."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "NAC37 is a NAC transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "NAC37 is explicitly named as a NAC family TF."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results describe combinatorial activation/modulation in yeast with LBD4."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The regulated promoters are anthocyanin biosynthesis genes."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "Bz1 is directly activated with LBD4 and A1 is modulated in combination with LBD4."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states NAC37 is required with LBD4 for Bz1 activation and impairs LBD4 activation of A1."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These findings come from directed Y1H cooperation tests and Y2H assays."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The study does not show in planta anthocyanin phenotypes for NAC37, only yeast promoter assays."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "No direct metabolite or pigment phenotype was tested."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization experiment or explicit nuclear localization statement for NAC37 is provided."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Y2H showed physical interaction with LBD4."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports NAC37 as part of a functional TF pair with LBD4."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The evidence is from yeast assay conditions."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings match the Results and Discussion."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not specifically propose NAC37 for engineering, though the inference is reasonable."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Promoter-specific inhibitory effects are directly shown by reduced A1 activation in presence of NAC37."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says whether these TFs function similarly in maize anthocyanin pigment formation remains to be determined."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No localization experiment or explicit nuclear localization statement for NAC37 is provided."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "ZHD14",
+      "category": "Regulation",
+      "verification": {
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The TF is a maize TF tested in yeast assays within the maize GRN study."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Maize corresponds to Zea mays."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ZHD14 comes from the maize TFome library."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Origin species is maize, Zea mays."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Bz1 is an anthocyanin biosynthesis gene, so the connection is to anthocyanin."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanin is a flavonoid."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "ZHD14 is treated as a transcription factor in the TF library."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is explicitly named ZHD14, and this family label appears in the Results figure/discussion of TF pairs."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows combinatorial transcriptional activation with EREB12 on the Bz1 promoter in yeast."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Bz1 is part of anthocyanin biosynthesis."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "Bz1 is explicitly the promoter discussed for ZHD14 and EREB12 cooperation."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states growth/activation occurred only when both ZHD14 and EREB12 were present."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Directed Y1H cooperation assay and Y2H physical interaction assay were used."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "Only promoter activation in yeast was shown, not anthocyanin phenotype in plants."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "No direct product-level effect was measured."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization data or explicit nuclear localization statement is given for ZHD14."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports physical interaction between ZHD14 and EREB12 in Y2H."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly presented as an interacting TF pair with EREB12."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The cooperation was tested under yeast assay conditions."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each summary point is directly supported by the Results and Figure 5."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This engineering implication is inferential, not explicitly stated for ZHD14."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that single-gene action may fail without partner context, as ZHD14 alone was insufficient."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed highlights this pair as an advantage uniquely revealed by the transformation-based Y1H strategy."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No localization data or explicit nuclear localization statement is given for ZHD14."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "EREB12",
+      "category": "Regulation",
+      "verification": {
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "EREB12 is a maize TF assayed in the maize GRN study."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Maize corresponds to Zea mays."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "EREB12 comes from the maize TFome."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Origin species is maize, Zea mays."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "EREB12 is connected here to Bz1, an anthocyanin biosynthesis gene."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanin is part of flavonoid metabolism."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "EREB12 is a transcription factor in the study's TF collection."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "EREB12 naming supports ERF/EREB family assignment, and the paper uses EREB nomenclature."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows combinatorial transcriptional activation with ZHD14 on Bz1 in yeast."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Bz1 is part of anthocyanin biosynthesis."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "Bz1 is explicitly the promoter for the EREB12/ZHD14 cooperation example."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states EREB12 works cooperatively with ZHD14 to activate Bz1."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Directed Y1H cooperation assays and Y2H assays were used."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "Only yeast promoter activation was shown, not anthocyanin phenotype in maize."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "No direct product-level effect was tested."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization experiment or explicit nuclear localization statement for EREB12 is reported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Y2H validated physical interaction with ZHD14."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports EREB12 as part of an interacting TF pair with ZHD14."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant evidence comes from yeast assay conditions."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by Figure 5 and associated text."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable inference but not explicitly proposed for EREB12 by the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Context dependence/need for partner TF is directly supported by the yeast cooperation results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses this pair as a mechanistic example of TF cooperation."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No localization experiment or explicit nuclear localization statement for EREB12 is reported."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 405,
+    "supported": 316,
+    "unsupported": 10,
+    "uncertain": 79,
+    "total_corrections": 10
+  }
+}

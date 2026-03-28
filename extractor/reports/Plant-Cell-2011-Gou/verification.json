@@ -1,0 +1,1001 @@
+{
+  "file": "Plant_Cell_2011_Gou",
+  "md_path": "/data/haotianwu/biojson/extractor/input/Plant_Cell_2011_Gou.md",
+  "timestamp": "2026-03-28T11:58:07.979885",
+  "genes": [
+    {
+      "gene_name": "miR156",
+      "category": "Common",
+      "verification": {
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism is Arabidopsis; Methods specify Arabidopsis thaliana plants."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated throughout and in Methods as Arabidopsis thaliana."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The miR156 constructs and phenotypes were tested in Arabidopsis."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly the species used."
+        },
+        "Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Both Col-0 and Ws backgrounds were used in the paper; miR156 transgenics are referenced from prior work, but this field as a single value Col-0 is not clearly established for miR156 generally in the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly show increased anthocyanins and altered flavonols, primarily kaempferol derivatives, in Pro35S:MIR156 and Pro35S:MIM156 stems."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins and flavonols are explicitly described as flavonoids."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanin/purple pigment was described at the stem-rosette junction, hypocotyl-cotyledon junction, and stems; flavonols were measured from stems."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "These compounds are secondary metabolites and pigmentation is clear, but explicit defense function is discussed only as a hypothesis in Discussion, not directly demonstrated in Results."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show increased miR156 activity promotes anthocyanin accumulation and reduced miR156 activity increases flavonols and reduces anthocyanin via SPL regulation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all present in Results: Pro35S:MIR156, Pro35S:MIM156, anthocyanin measurement, LC-MS, and qRT-PCR."
+        },
+        "Expression_Pattern": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states in Discussion that miR156 levels decline during development and high miR156 is inferred where SPL is low, but miR156 expression itself was not directly measured in Results here."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The ~4-fold anthocyanin increase, strong reduction in Pro35S:MIM156, and indirect action through SPL targets are all supported by Results and framing of the paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify growth at 23°C in long days."
+        },
+        "Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Construct names Pro35S:MIR156 and Pro35S:MIM156 explicitly indicate 35S promoter usage."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "miR156 is a microRNA; this is directly consistent with the paper's description of miR156-targeted SPL genes."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "miR156 targets SPL3/SPL9/SPL10/SPL15 family members genetically/regulatorily, but direct physical 'interacting proteins' are not shown and SPL10 is implicated by overexpression phenotype rather than direct miR156 interaction assay in this paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The shift toward flavonols versus anthocyanins is supported, and developmental phase-change effects are well established in the paper background/discussion for the miR156-SPL module."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "LC-MS metabolite profiling and qRT-PCR were directly performed."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "miR156 is not protein-coding and is presented as acting upstream of SPL family targets."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 16,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "DFR",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Accession Numbers section lists DFR as At5g42800."
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "DFR was studied in Arabidopsis."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the study species."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene analyzed is from Arabidopsis."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Most work appears in Col-0-related materials, but the paper also uses Ws in some SPL mutant comparisons; DFR itself is not assigned a unique variety in the paper."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "DFR is the standard abbreviation for dihydroflavonol 4-reductase and is used in the flavonoid pathway context in Figure 1A and text."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for DFR is provided anywhere in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This detailed family/domain description does not appear in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "DFR is explicitly discussed as an anthocyanin biosynthetic gene in the flavonoid pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "DFR is placed in the anthocyanin biosynthetic branch from common dihydroflavonol precursors."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses substrate competition between DFR and FLS at the branch point."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Dihydroflavonols are stated as common precursors and dihydrokaempferol is specifically discussed in the model."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "Leucoanthocyanidins are not explicitly named in this paper text."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The enzymatic reduction of dihydroflavonols to leucoanthocyanidins is standard biology but not explicitly described in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "DFR is presented as directing flux toward anthocyanin production."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "DFR is directly linked to anthocyanin accumulation throughout the Results."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are flavonoids in this study."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pigmentation is evident, but defense-related function is not experimentally shown in Results."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanin accumulation is described at stem-rosette junction, hypocotyl-cotyledon junction, and stems."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "DFR expression tracks anthocyanin accumulation inversely with SPL, and the paper explicitly connects SPL9 repression of DFR to lower anthocyanin and more flavonol flux."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed assays were performed and directly used for DFR: qRT-PCR, ProDFR:GUS, DEX/CHX induction, and ChIP-qPCR."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "DFR is shown highest in basal stem, lowest in apical stem, with promoter activity strongest at stem-rosette junction."
+        },
+        "Expression_Pattern_of_Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 4A shows highest DFR transcript in basal stem region."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization for DFR is reported in the paper."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports DFR as an important branch-control point via substrate competition, but does not explicitly call it rate-limiting."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings are directly supported by Figures 3 to 5 and text."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Long-day growth is in Methods, and DEX plus CHX treatment in ProSPL9:rSPL9-GR seedlings is explicitly described."
+        },
+        "Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Native DFR promoter and mutated GTAC-box version were used in GUS reporters."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports regulation of the DFR promoter by SPL9 and the PAP1/TT8/TTG1 complex, but DFR itself is not a protein interacting with them; these are promoter/regulatory associations rather than protein-protein interactions of DFR."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR, GUS reporter data, and ChIP-qPCR were used for DFR."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential manipulation of anthocyanin/flavonol content is suggested generally, but this specific engineering claim about stacking and blocking SPL9 repression is not directly stated."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly discusses substrate competition between FLS and DFR affecting anthocyanin versus flavonol accumulation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 5E shows GTAC mutation did not alter promoter pattern, supporting indirect recruitment of SPL9 to DFR promoter."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.1.1.219",
+          "new_value": "NA",
+          "reason": "No EC number for DFR is provided anywhere in the paper."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "NADPH-dependent oxidoreductase of the short-chain dehydrogenase/reductase-related dihydroflavonol 4-reductase family",
+          "new_value": "NA",
+          "reason": "This detailed family/domain description does not appear in the paper."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "No subcellular localization for DFR is reported in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 3,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_name": "FLS1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Accession Numbers lists FLS1 as At5g208640 in the paper text provided."
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "FLS1 was examined in Arabidopsis."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the study species."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene discussed is from Arabidopsis."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper uses multiple backgrounds and does not assign FLS1 to a single variety in the Results."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "FLS1 is discussed as a flavonol synthase-encoding gene and the major one among FLS1-6."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This domain/family annotation is not stated in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "FLS1 is discussed in the flavonoid/flavonol branch."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "FLS1 is presented as part of the flavonol branch competing with anthocyanin biosynthesis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly frames FLS versus DFR as substrate competition at a branch point."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Dihydroflavonols are described as common precursors for flavonol synthase and DFR; dihydrokaempferol is specifically named in the model."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states increased conversion of dihydrokaempferol to kaempferol by FLS."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact desaturation chemistry is not described in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "FLS is described as competing with the anthocyanin branch, directing flux to flavonols."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Kaempferol derivatives are the measured flavonols in stems."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Flavonols are flavonoids in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Protection-related function is not directly tested in Results."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Flavonol measurements were made from stems."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show FLS1 transcript changed little, while flavonol changes are interpreted through reduced competition from DFR rather than strong FLS1 regulation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR, LC-MS profiling, and inducible SPL9 assay showing FLS1 unaffected are all in Results."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization data for FLS1 are given."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports branch-competition role, and does not claim rate-limiting; this wording matches the evidence."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three points reflect Results and cited interpretation in the paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Long-day growth and DEX plus CHX treatment are specified."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "LC-MS and qRT-PCR were used."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This specific application suggestion is not directly stated in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Tradeoff between flavonol and anthocyanin branches due to substrate competition is explicitly discussed."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed emphasizes flux competition between FLS and DFR rather than direct SPL9 regulation of FLS1."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.20.6",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "2-oxoglutarate/Fe(II)-dependent oxygenase",
+          "new_value": "NA",
+          "reason": "This domain/family annotation is not stated in the paper."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "No localization data for FLS1 are given."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 3,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "SPL9",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Accession Numbers lists SPL9 as At2g42200."
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SPL9 was studied in Arabidopsis."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The SPL9 gene analyzed is from Arabidopsis."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the source species used."
+        },
+        "Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Most functional analyses seem in Col-0-related backgrounds, but the paper includes mixed backgrounds and does not explicitly assign SPL9 analyses exclusively to Col-0."
+        },
+        "Origin_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Not explicitly stated for SPL9 as a single value."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The title and text identify SPL9 as a miR156-targeted SPL transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "SPL genes are identified as SQUAMOSA PROMOTER BINDING PROTEIN-LIKE; SBP DNA-binding motif is implied by family designation, though 'SBP domain' wording is not explicit."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nuclear transcription-factor function is implicit, but localization was not directly assayed in this paper."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "SPL9 is shown to repress anthocyanin biosynthesis and alter flavonoid branch flux."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support repression via destabilization of the MYB-bHLH-WD40 complex and indirect recruitment to DFR promoter."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "ANS, DFR, F3'H, and UGT75C1 all showed corresponding expression changes with SPL activity; DFR direct association is shown."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows repression of anthocyanin biosynthetic gene expression and consequent shift toward flavonols."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SPL9 affects anthocyanins and flavonols/kaempferol derivatives in stems."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These metabolites are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pigmentation is clear; defense-related wording is not directly demonstrated in Results."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "These sites are explicitly described for anthocyanin and stems for flavonol analyses."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Overexpression of SPL9 decreases anthocyanin accumulation, and increased SPL activity shifts toward flavonols."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are directly used for SPL9 in the paper."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 4A shows SPL9 higher apically and lower basally, opposite DFR; Discussion states SPL rises during development as miR156 declines."
+        },
+        "Expression_Pattern_of_Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "This is exactly what Figure 4A shows in Arabidopsis stems."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "miR156 targeting and developmental progression/floral transition are central to the paper."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The field carefully says possible/ discussed but not established; this matches the paper."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly shows SPL9 interferes with the PAP1/TT8/TTG1 MYB-bHLH-WD40 complex."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct interactions with PAP1 and MYB113 are shown by yeast two-hybrid and PAP1 interaction validated further."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "SPL9 is presented as a major negative regulator linking developmental transition to anthocyanin suppression and flavonol redistribution."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Long-day 23°C growth, DEX treatment, and N. benthamiana transient assays are all stated."
+        },
+        "Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "These promoter contexts are explicitly used in constructs described in Results/Methods."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "LC-MS, qRT-PCR, and ChIP-qPCR are all included."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper suggests SPLs are potential targets for manipulation of anthocyanin and flavonol content, but the detailed editing strategy and preserving developmental timing are not directly stated."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The discussion explicitly notes many developmental roles of SPLs, supporting pleiotropic tradeoffs."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by overexpression, DFR repression/ChIP, and PAP1-TT8 competition assays."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutation of GTAC motifs failing to alter reporter pattern is directly shown and interpreted as indirect recruitment."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 29,
+        "unsupported": 0,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "PAP1",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Accession Numbers lists PAP1 as At1g56650."
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PAP1 was studied in Arabidopsis."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The PAP1 gene tested is from Arabidopsis."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the source species."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper specifically discusses absence of a pap1 mutant in the Columbia-0 background and uses pap1-migs in Col-0."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PAP1 is described as a MYB protein of the PAP1/PAP2/MYB113/MYB114 group; discussion of R2R3 domain supports R2R3-MYB."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The R2R3 domain of PAP1 is explicitly discussed in binding assays."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No direct subcellular localization for PAP1 is reported in this paper."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "PAP1 is part of the activator complex controlling anthocyanin biosynthetic gene expression."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly places PAP1 in the MYB-bHLH-WD40 transcriptional activation complex."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "DFR and other anthocyanin biosynthetic genes are identified as controlled by this complex."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "PAP1 with TT8 and TTG1 promotes anthocyanin gene expression."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PAP1 is directly linked to anthocyanin accumulation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pigmentation is apparent, but defense-related function is not directly tested."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanin at stem-rosette and hypocotyl-cotyledon junctions is specifically affected by pap1-migs."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "pap1-migs suppresses the high-anthocyanin Pro35S:MIR156 phenotype, showing PAP1 is required."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods were indeed used for PAP1."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 3B shows PAP1 transcript moderately increased in Pro35S:MIR156 and not dramatically changed in Pro35S:MIM156."
+        },
+        "Expression_Pattern_of_Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Same as above; measured in Arabidopsis stems."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "SPL9 interference at the protein level is directly shown; possible positive feedback is discussed."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The field notes that positive feedback is suggested but not proven, matching the Discussion."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "PAP1 is directly presented as MYB component of the PAP1/TT8/TTG1 complex."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct interactions with TT8 and SPL9 are shown."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "PAP1 is required for anthocyanin accumulation and is the target of SPL9-mediated interference."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Long-day growth and N. benthamiana transient assays are described."
+        },
+        "Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "35S promoters are used in transient constructs, but 'PAP1-MIGS construct context' is not a promoter statement clearly supported as written."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR and protein interaction assays including yeast two-hybrid, luciferase complementation, and coIP were used."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This specific biofortification framing is not directly stated in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Substrate competition and pathway flux tradeoff between anthocyanins and flavonols are discussed."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by genetics and interaction assays."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states a true pap1 mutant in Col-0 was unavailable and MIGS knockdown was used instead."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No direct subcellular localization for PAP1 is reported in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 29,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "TT8",
+      "category": "Regulation",
+      "verification": {
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TT8 was studied in Arabidopsis."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the study species."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The TT8 gene analyzed is from Arabidopsis."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "tt8-1 was analyzed in Col-0-related materials; the paper specifically refers to pap1-migs in Col-0 and tt8-1 from NASC, though accession background is not deeply elaborated."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "TT8 is explicitly described as a bHLH protein of the TT8/GL3/EGL3 group."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "bHLH family assignment is directly stated."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization assay for TT8 is provided."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "TT8 is part of the activator complex for anthocyanin biosynthetic gene expression."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "It functions in transcriptional activation as part of the MYB-bHLH-WD40 complex."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The complex positively regulates DFR and other anthocyanin biosynthetic genes."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "This is directly described."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "TT8 contributes to anthocyanin accumulation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Defense-related function is not directly tested."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Effects are described in inflorescences and seedling/stem junction tissues."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "tt8-1 reduced anthocyanin accumulation in Pro35S:MIR156 and TT8 is part of the disrupted activation complex."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "tt8-1 genetics, yeast two-hybrid, and luciferase interaction/competition assays were used."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 3B shows TT8 not dramatically changed in Pro35S:MIM156 and moderately increased in Pro35S:MIR156."
+        },
+        "Expression_Pattern_of_Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Measured in Arabidopsis stems in this study."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "TT8 complex formation with PAP1 and TTG1 and antagonism by SPL9 are supported."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states TT8 expression is controlled by a positive feedback loop."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "TT8 is explicitly in the PAP1/TT8/TTG1 complex."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct PAP1 interaction is shown; TTG1 is part of the same complex; SPL9 competes for PAP1 binding rather than binding TT8 directly, and the field wording acknowledges antagonism rather than direct interaction."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states TT8 is functionally redundant with GL3/EGL3, so important but partially redundant is accurate."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Long-day growth and N. benthamiana transient assays are stated."
+        },
+        "Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "35S promoter was used in transient interaction assays."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR and protein interaction assays were used."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This specific engineering suggestion is not directly stated."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Broader epidermal roles/context dependence are plausible but not directly demonstrated for TT8 in this paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by the Results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states TT8 is functionally redundant with GL3 and EGL3, so single mutation only partially suppressed anthocyanin accumulation."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No localization assay for TT8 is provided."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "TTG1",
+      "category": "Regulation",
+      "verification": {
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TTG1 was analyzed in Arabidopsis."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene tested is from Arabidopsis."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the source species."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "ttg1-1 was used in Arabidopsis Col-0-related experiments, though exact accession of mutant is not elaborated beyond NASC source."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "TTG1 is explicitly described as the WD40 protein in the MYB-bHLH-WD40 complex."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "WD40 protein designation is stated."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization data for TTG1 are shown in the paper."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "TTG1 is required for anthocyanin biosynthetic gene activation as part of the complex."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Its role as complex WD40 component/scaffold is directly described conceptually."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The complex regulates DFR and other anthocyanin biosynthetic genes."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "TTG1 is required for activation through MYB-bHLH-WD40 complexes."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "TTG1 is required for anthocyanin accumulation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Defense-related function is not experimentally shown."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports effects in inflorescences and relevant junction tissues."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "ttg1-1 suppresses anthocyanin accumulation in Pro35S:MIR156 plants."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Genetic suppression with ttg1-1 is directly shown."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "TTG1 is described as assembling with PAP1/PAP2-type MYBs and TT8/GL3/EGL3 bHLHs."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "TTG1 is explicitly the WD40 component of the MYB-bHLH-WD40 complex."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states TTG1 is part of complexes with PAP1/PAP2/MYB113 and TT8, and in trichome development with GL1 and GL3/EGL3, but direct interaction tests for all listed pairs were not performed in this paper."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Genetic evidence supports TTG1 as essential for anthocyanin-promoting complex activity."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Long-day growth conditions are stated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Genetic interaction/suppression analysis is indeed the relevant dataset used here."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This application-oriented statement is not directly made in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes TTG1 loss abolishes both trichome initiation and anthocyanin accumulation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points are supported by genetic suppression and the described role of TTG1 in the activator complex."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not show direct TTG1-SPL9 interaction, but TTG1 is genetically required for the phenotype."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No subcellular localization data for TTG1 are shown in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 211,
+    "supported": 173,
+    "unsupported": 9,
+    "uncertain": 29,
+    "total_corrections": 9
+  }
+}

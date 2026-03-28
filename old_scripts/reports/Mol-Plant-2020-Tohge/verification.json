@@ -1,0 +1,292 @@
+{
+  "file": "Mol_Plant_2020_Tohge",
+  "md_path": "/data/haotianwu/biojson/md/Mol_Plant_2020_Tohge.md",
+  "timestamp": "2026-03-27T00:09:56.509736",
+  "genes": [
+    {
+      "gene_name": "Solyc10g083440",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly lists Fd3GlcT as Solyc10g083440 in Table 1 and throughout the validation section."
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is on tomato genes; Solyc identifiers are tomato genes and the gene is cloned from S. lycopersicum."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states the gene/cDNA was from S. lycopersicum and tomato species are discussed as Solanum lycopersicum."
+        },
+        "Gene_Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state full-length cDNA of Solyc10g083440 from S. lycopersicum was cloned."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Species survey used LYCO/M82 in Results; VIGS used MicroTom; Arabidopsis Col-0/f3gt were used for heterologous expression. The combined wording is faithful to multiple sections."
+        },
+        "Reference_Genome_Version": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 is labeled ITAG3.0, and Methods mention ortholog assignment using ITAG Release 3.2 and conversion to ITAG identifiers."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All four listed approaches are described: recombinant assay, Arabidopsis overexpression, tomato VIGS suppression, and transient overexpression with LC-MS readout."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is annotated as Fd3GlcT / flavonoid-3-O-glucosyltransferase in Table 1 and validated as 3-O-glucosyltransferase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies it as SlUGT78D-a / SlUGT78D1-a and discusses conserved PSPG sites of UDP-glycosyltransferases."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given for Solyc10g083440 in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly places the gene in flavonoid/polyphenol biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is specifically assigned to the flavonol glycosylation 3-O-glucosylation step."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes this as a flavonoid decoration/glycosylation step after aglycone formation."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The recombinant assay explicitly used quercetin; broader wording 'likely other flavonol aglycones' is consistent with its described role in flavonol 3-O-glucosylation though not directly tested in vitro here beyond quercetin."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states increased/decreased flavonol-3Glc-related compounds and annotates the gene as flavonoid 3-O-glucosyltransferase."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly supported by annotation, recombinant assay with UDP-glucose, and metabolite changes in overexpression/VIGS lines."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper's pathway places 3-O-glucosides as direct products and precursors of more decorated flavonol glycosides."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The refined pathway and metabolite profiling include quercetin/kaempferol/isorhamnetin glycosides downstream of this step."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These products are flavonoids/flavonols, explicitly discussed throughout."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly states tomato polyphenolics/flavonoids have health-beneficial effects and roles in UV, cold, drought, disease, and pest tolerance."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results describe flavonol glycosides in fruit peel/pericarp, leaves, and stems with tissue/species dependence."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state silencing lowered flavonol-3-O-glucosides and transient overexpression increased them; Arabidopsis overexpression increased flavonol-3Glc-related compounds."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is reasonable to call it a key decoration step, but the paper does not directly establish 'key control step'; it only supports that it functions in this branch and does not claim rate-limiting behavior."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports sequencing across LYCO, PIMP, NEOR, HABR, and PENN and states PSPG sites are highly conserved; association with flavonol-accumulating tissues/species is consistent with expression analyses and pathway inference."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Fruit ripening comparisons, tomato agroinfiltration/VIGS, and Arabidopsis heterologous expression are all described."
+        },
+        "Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state CaMV 35S promoter for Arabidopsis overexpression; endogenous promoter is not provided."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The study includes LC-MS, GC-MS, TOM2 microarray, and public RNA-seq datasets from Koenig et al. and Bolger et al.; no accession numbers are given in the main text."
+        },
+        "Breeding_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly frames identified genes as targets/foundation for metabolomics-assisted breeding and metabolic engineering of polyphenolics."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The aliases SlUGT78D-a / SlUGT78D1-a and prior annotation as anthocyanin 3-O-glucosyltransferase are explicitly mentioned; conserved PSPG sequence across species is also described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point is supported: candidate identification, in vitro activity, Arabidopsis increase, tomato VIGS decrease and transient overexpression increase, and conclusion that it promotes flavonol glycoside biosynthesis."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "EC 2.4.1.-",
+          "new_value": "NA",
+          "reason": "No EC number is given for Solyc10g083440 in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "Solyc10g079350",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 lists F7GlcT as Solyc10g079350, and the VIGS Methods include Solyc10g079350."
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a tomato gene from Solanum lycopersicum."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is from tomato, Solanum lycopersicum."
+        },
+        "Gene_Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The candidate gene is annotated in tomato and used in tomato VIGS/transient assays."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "MicroTom is explicitly used for VIGS fruit assays; expression inference across accessions including HABR and PENN is described from metabolomics/RNA-seq analyses."
+        },
+        "Reference_Genome_Version": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 uses ITAG3.0 and Methods mention ITAG Release 3.2."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "VIGS suppression is clearly described, and transient overexpression is mentioned in Results. However, the paper does not show a strong functional validation; phylogenetic/in silico analyses are supporting evidence, but calling this a core validation method overstates conclusiveness."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper annotates F7GlcT / flavonoid-7-O-glucosyltransferase as a candidate for Solyc10g079350."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is described as SlUGT73B-a, a candidate UGT; PSPG motif conservation is discussed generally for UGTs."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is placed in the flavonoid/polyphenol biosynthetic pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is specifically proposed for the flavonol/flavonoid 7-O-glycosylation branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses it as a downstream decoration step producing flavonol-7-O-glucosides from already glycosylated flavonol scaffolds."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact substrate is not biochemically demonstrated; only a general role in 7-O-glucosylation of flavonoids/flavonols is proposed."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Flavonoid/flavonol 7-O-glucosides and compounds such as Q3Glc6''Rha7Glc are the proposed products in the pathway and discussed in relation to this gene."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly proposes this candidate as a flavonoid-7-O-glucosyltransferase, i.e. transferring glucose to the 7-O position, though still tentatively."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The proposed role is to generate downstream decorated flavonol glycosides."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Flavonol 7-O-glucosylated glycosides are the metabolite class linked to this candidate gene."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are flavonoids/flavonols."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses flavonoids/polyphenolics generally as contributors to nutritional quality and stress protection; this is applicable at class level though not specific to 7-O-glucosides."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state flavonol-7-O-glucosides were not detected in PENN fruits and leaves, implying species- and tissue-dependent occurrence in leaves and fruits."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports only a tentative positive role and explicitly notes weak effect/relatively low Q3Glc6''Rha7Glc upon transient overexpression and need for further characterization, matching this field's cautious wording."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper treats it as a candidate decoration step, but does not establish it as a key control or rate-limiting step."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper predicts absence/non-expression in PENN from missing flavonol-7-O-glucosides and notes candidate expression in HABR seedlings/leaves from in silico data."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Fruit ripening comparisons and tomato fruit agroinfiltration/VIGS are described."
+        },
+        "Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "No promoter is specified for this candidate; stating endogenous promoter NA is consistent with the paper."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "LC-MS, TOM2 microarray, and public RNA-seq are all used in the study; no accession numbers are given in the text."
+        },
+        "Breeding_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion broadly states genes driving diversification of polyphenol synthesis could be used in metabolomics-assisted breeding, but for this specific gene stronger validation is needed; the field reflects that caution."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says this gene did not cluster in a distinct F7GT subclade / sequence not similar to other F7GT clades and that catalytic assignment remains tentative."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary accurately reflects the paper's cautious conclusions: proposed candidate based on metabolomics/expression/phylogeny, PENN absence inference, weak transient effect, and need for further characterization."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "EC 2.4.1.-",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 60,
+    "supported": 54,
+    "unsupported": 2,
+    "uncertain": 4,
+    "total_corrections": 2
+  }
+}

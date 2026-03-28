@@ -1,0 +1,37 @@
+{
+  "eval_id": 1,
+  "eval_name": "extract-py-functions",
+  "prompt": "给 extractor/extract.py 里面每一个函数都写一个独立可运行的样例文件",
+  "assertions": [
+    {
+      "id": "completeness",
+      "text": "Every function in extract.py has a corresponding .py file (strict 1:1 mapping, no functions skipped)",
+      "type": "programmatic"
+    },
+    {
+      "id": "runnable",
+      "text": "Every generated .py file runs successfully with `python <file>` (exit code 0)",
+      "type": "programmatic"
+    },
+    {
+      "id": "directory_structure",
+      "text": "Files are organized as examples/extract/<func_name>.py",
+      "type": "programmatic"
+    },
+    {
+      "id": "dependencies_inlined",
+      "text": "Functions that depend on other same-file functions (e.g., _build_extract_schema depends on _schema_props_to_fc) have those dependencies copied inline",
+      "type": "manual"
+    },
+    {
+      "id": "meaningful_inputs",
+      "text": "Sample inputs use realistic domain data (gene schemas, paper metadata), not placeholder values like 'foo' or 'test'",
+      "type": "manual"
+    },
+    {
+      "id": "has_docstring",
+      "text": "Each file has a docstring at the top explaining what the function does",
+      "type": "programmatic"
+    }
+  ]
+}

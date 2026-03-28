@@ -1,0 +1,9 @@
+{
+  "dangerouslySkipPermissions": true,
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(PGPASSWORD=ZZTt3wapv0D8lNBO psql -h db.vqcfjnwyxvayygxtaons.supabase.co -U postgres -d postgres -c \"\n-- 检查 Realtime publication 是否存在\nSELECT pubname FROM pg_publication WHERE pubname = 'supabase_realtime';\n\")"
+    ]
+  }
+}

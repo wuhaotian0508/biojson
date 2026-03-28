@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supabase 查询练习</title>
+
+    <!-- CSS 样式单独放在 .css 文件里，用 link 标签引入 -->
+    <link rel="stylesheet" href="supabase-demo.css">
+</head>
+<body>
+    <h1>📄 Supabase 论文查询练习你好</h1>
+    <p>点击按钮，从 Supabase 数据库查询论文列表。</p>
+
+    <button onclick="fetchPapers()">🔍 查询论文列表</button>
+
+    <!-- 状态提示 -->
+    <div id="status"></div>
+
+    <!-- 查询结果渲染在这里 -->
+    <div id="result"></div>
+
+    <!-- 1. 先加载 Supabase 库（从 CDN） -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- 2. 再加载我们的查询逻辑 -->
+    <script src="supabase-demo.js"></script>
+</body>
+</html>

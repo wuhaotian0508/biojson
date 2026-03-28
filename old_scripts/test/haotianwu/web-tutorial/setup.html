@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配置向导 - Supabase 连接设置</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 500px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 { color: #333; margin-bottom: 10px; }
+        .subtitle { color: #666; margin-bottom: 30px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; font-weight: 600; margin-bottom: 8px; color: #444; }
+        input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+        input:focus { outline: none; border-color: #667eea; }
+        .hint {
+            font-size: 12px;
+            color: #888;
+            margin-top: 6px;
+        }
+        .code {
+            background: #f5f5f5;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        button:hover { transform: translateY(-2px); }
+        .success { color: #10b981; text-align: center; margin-top: 20px; }
+        .error { color: #ef4444; text-align: center; margin-top: 20px; }
+        .link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .link a { color: #667eea; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🔧 配置向导</h1>
+        <p class="subtitle">设置 Supabase 连接信息</p>
+
+        <form id="configForm">
+            <div class="form-group">
+                <label>Supabase URL</label>
+                <input type="text" id="url" placeholder="https://xxxxx.supabase.co" required>
+                <div class="hint">在 Supabase 控制台的 Settings → API 中找到</div>
+            </div>
+
+            <div class="form-group">
+                <label>anon public Key</label>
+                <input type="text" id="key" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6..." required>
+                <div class="hint">使用 <span class="code">anon public</span> key，不是 service key</div>
+            </div>
+
+            <button type="submit">保存配置</button>
+        </form>
+
+        <div id="message"></div>
+
+        <div class="link">
+            <a href="index.html" style="display: none;" id="goLink">→ 进入主页</a>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('configForm');
+        const urlInput = document.getElementById('url');
+        const keyInput = document.getElementById('key');
+        const message = document.getElementById('message');
+        const goLink = document.getElementById('goLink');
+
+        // 加载已保存的配置
+        const savedUrl = localStorage.getItem('SUPABASE_URL');
+        const savedKey = localStorage.getItem('SUPABASE_KEY');
+        if (savedUrl) urlInput.value = savedUrl;
+        if (savedKey) keyInput.value = savedKey;
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const url = urlInput.value.trim();
+            const key = keyInput.value.trim();
+
+            if (!url || !key) {
+                message.innerHTML = '<div class="error">请填写完整信息</div>';
+                return;
+            }
+
+            // 保存到 localStorage
+            localStorage.setItem('SUPABASE_URL', url);
+            localStorage.setItem('SUPABASE_KEY', key);
+
+            message.innerHTML = '<div class="success">✅ 配置已保存！</div>';
+            goLink.style.display = 'block';
+
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

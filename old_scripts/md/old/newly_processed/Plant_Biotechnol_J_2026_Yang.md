@@ -1,0 +1,890 @@
+RESEARCH ARTICLE OPEN ACCESS 
+
+# GmMYB4 Positively Regulates Isoflavone Biosynthesis via the GmMAPK6-GmMYB4-MBW Module in Soybean
+
+Changyun Yang<sup>1</sup> | Peipei Zhang<sup>1,2,3</sup> | Pingbo Jiang<sup>1</sup> | Yingying Song<sup>1</sup> | Junyu Wang<sup>1</sup> | Wenyan Hou<sup>1</sup> | Zhongyi Yang<sup>1</sup> | Wei Zhao<sup>1</sup> | Yixiang Pu<sup>1</sup> | Shanshan Chu<sup>4</sup> | Jiao Wang<sup>1</sup> | Hao Cheng<sup>1</sup> | Deyue Yu<sup>1</sup> 
+
+$^{1}$ State Key Laboratory of Crop Genetics & Germplasm Enhancement, National Center for Soybean Improvement, Nanjing Agricultural University, Nanjing, China | $^{2}$ Yazhouwan National Laboratory, Sanya, China | $^{3}$ Zhejiang Lab, Hangzhou, China | $^{4}$ Collaborative Innovation Center of Henan Grain Crops, Henan Agricultural University, Zhengzhou, China 
+
+Correspondence: Hao Cheng (jenny21star@njau.edu.cn) | Deyue Yu (dyyu@njau.edu.cn) 
+
+Received: 25 February 2025 | Revised: 12 July 2025 | Accepted: 6 October 2025 
+
+Funding: This study was supported by Zhejiang Provincial Natural Science Foundation (LY24C130003), Horizon 2020 of European Union (727312), National Natural Science Foundation of China (32472177) and National Key Research and Development Program of China (2021YFF1001204 and 2023YFD1200600). 
+
+Keywords: GmMAPK6 | GmMYB4 | isoflavones | MYB-bHLH-WD repeat protein complexes | soybean 
+
+# ABSTRACT
+
+Isoflavones, a class of bioactive compounds predominantly found in leguminous plants, are largely responsible for their beneficial effects on human health. Although MYB transcription factors (TFs) are known to be crucial regulators of isoflavone biosynthesis in soybean, the precise mechanisms underlying their regulatory functions remain poorly understood. Here, we identified GmMYB4 as a key positive regulator of isoflavone accumulation through a genome-wide association study and functional characterisation. GmMYB4 interacts with bHLH TFs within the MYB-bHLH-WD repeat protein (MBW) complex, modulating the assembly of the complex and regulating the expression of downstream targets, including GmIFS2 and GmANS3, which are involved in the biosynthesis of isoflavone and anthocyanin, respectively. These two pathways compete for common precursors, representing competitive metabolic branches. Furthermore, GmMAPK6 promotes isoflavone accumulation by positively regulating the expression of GmMYB4 and genes in the isoflavone biosynthesis pathway. Importantly, GmMAPK6 phosphorylates the 39th serine residue of GmMYB4. These findings reveal a GmMAPK6-GmMYB4-MBW regulatory module as a critical mechanism for the fine-tuning of isoflavone biosynthesis, offering novel insights and potential strategies for the development of high-quality soybean varieties. 
+
+# 1 | Introduction
+
+Soybean [Glycine max (L.) Merr] is a nutrient-dense crop that provides high-quality protein, dietary fibre, fatty acids, oil, essential amino acids, vitamins and minerals (Chen and Chen 2021). The widespread consumption of soybean and soybean-derived foods, particularly in Asia, is attributed to their nutritional benefits and the presence of bioactive isoflavones. Isoflavones have received significant attention due to their diverse biological activities, including 
+
+antioxidant, anti-inflammatory and endocrine-modulating properties, which contribute to combating various pathological processes, demonstrating potential in the prevention and treatment of chronic diseases such as cancer, cardiovascular diseases and diabetes (Ahmed et al. 2020; Sharifi-Rad et al. 2021). However, in infant nutrition applications, stringent regulation of isoflavone levels in soybean flour is essential due to potential health concerns (Rieu et al. 2006). Consequently, elucidating the biosynthetic pathways and regulatory mechanisms of soybean isoflavones is critical for 
+
+developing breeding strategies to optimise their content for specific applications. 
+
+In soybean, the three core isoflavone aglycones are daidzein, genistein and glycitein (Chu et al. 2017). The biosynthesis of isoflavone, a distinctive metabolic feature in leguminous plants, occurs through a specialised branch of the phenylpropanoid pathway that is uniquely developed in this taxonomic group. Phenylalanine serves as a primary precursor in the phenylpropanoid pathway. The biosynthesis of isoflavones comprises three primary stages (Figure S1). The first stage involves the conversion of phenylalanine to $p$ -coumaroyl-CoA through sequential reactions catalysed by phenylalanine ammonia-lyase (PAL), cinnamic acid-4-hydroxylase (C4H) and 4-coumaroyl-CoA ligase (4CL). In the second stage, $p$ -coumaroyl-CoA is catalysed by chalcone synthase (CHS), chalcone reductase (CHR) and chalcone isomerase (CHI) to produce liquiritigenin and naringenin. Subsequently, liquiritigenin is further catalysed by isoflavone synthase (IFS) to produce daidzein and glycitein (Dastmalchi et al. 2016; Yu et al. 2003). Naringin is a common substrate in the biosynthesis of isoflavones and anthocyanins. IFS converts naringin into genistein, whereas flavanone 3-hydroxylase (F3H), dihydroflavonol 4-reductase (DFR) and anthocyanidin synthase (ANS) convert naringin into anthocyanins (Pandey et al. 2014; Dong and Lin 2021). 
+
+MYB transcription factors (TFs), which act as effective regulators of isoflavone biosynthesis (Han et al. 2017), regulate isoflavone synthesis by modulating the expression of key genes in the phenylpropanoid pathway (Zhao et al. 2017; Bian et al. 2018; Anguraj Vadivel et al. 2021). MYB TFs can bind to the promoters of genes in the isoflavone metabolic pathway, thereby regulating their expression levels and ultimately determining isoflavone content (Li 2017). Additionally, MYB TFs participate in the formation of MYB-bHLH-WD repeat protein (MBW) complexes with bHLH TFs and WD repeat proteins to regulate the expression of target genes (Xu et al. 2015). MBW complexes play pivotal roles in the biosynthesis of multiple secondary metabolites including anthocyanins, proanthocyanidins (PAs) and isoflavones (Baudry et al. 2004; Gonzalez et al. 2008; Li 2017). For example, in Medicago truncatula, the MYB TF MtPAR forms an MBW complex with bHLH TF MtTT8 and WD repeat protein MtTTG1, directly repressing MtIFS2 transcription and inhibiting isoflavone production (Li, Dong, et al. 2016). Moreover, MYB TFs can modulate flavonoid metabolism by interfering with MBW complex formation. In Arabidopsis, MYB4 interacts with TT8 (TRANSPARENT TESTA 8)/GL3 (GLABRA3)/EGL3 (ENHANCER OF GLABRA3) and TTG1 (TRANSPARENT TESTA GLABRA1) to interfere with the formation of the MBW complex, inhibiting anthocyanins and PAs biosynthesis (Wang et al. 2020). Despite these findings in model plants, the specific regulatory functions of MYB TFs in soybean isoflavone biosynthesis are still not fully elucidated. Further in-depth investigation is essential to comprehensively understand their roles in this important metabolic pathway. 
+
+To precisely regulate isoflavone content for diverse nutritional requirements, it is essential to identify key regulatory factors and elucidate the molecular mechanisms regulating isoflavone biosynthesis. In this study, we identified a core TF, GmMYB4, which regulates isoflavone biosynthesis via a genome-wide association study (GWAS). Furthermore, our research elucidated the molecular mechanisms underlying GmMYB4-mediated regulation and 
+
+provided valuable genetic resources for improving soybean quality. We discovered a novel isoflavone regulatory network in soybean, GmMAPK6-GmMYB4-MBW, with GmMYB4 as its central regulator. These findings advance our understanding of the regulation of isoflavone biosynthesis and provide a foundation for molecular breeding strategies targeting isoflavone content optimisation. 
+
+# 2 Results
+
+# 2.1 | Identification of SNPs and a Candidate Gene Regulating Isoflavone Biosynthesis
+
+To identify the key gene(s) regulating the isoflavone content in soybean, data on the total isoflavone content (TIC), genistein class content (GEC), daidzein class content (DAC) and glycitein class content (GLC) of 219 soybean accessions were collected in three different environments (2014, 2015 and 2018 in Nanjing) for a GWAS. The DAC, GEC and GLC represent the sum of the following four components: malonyl glycosides, acetyl glucosides, $\beta$ -glycosides and aglycones (Zhang et al. 2024). The results revealed a stable and significant genomic region on chromosome 11 that was significantly $[- \mathrm{Log}_{10}(p) \geq 6.73]$ associated with the GLC across all three environments, and this genomic region is hereafter referred to as $qGlc11$ (Figure 1a-f). To uncover the underlying causal gene, we focused on 231 significant SNPs clustered on chromosome 11 that were repeatedly identified in both 2015 and 2018 (Table S1), covering an approximately $117.8\mathrm{kb}$ region from the 8,153,622 to 8,271,446 bp positions. 
+
+Within qGlc11, 12 genes were annotated, and significant SNPs were identified in the mRNA sequences of 7 genes (Table S2). Among these, Glyma.11g107100, a member of the R2R3-MYB family, encodes a protein homologous to Arabidopsis MYB4. MYB4 orthologues have been shown to regulate flavonoid biosynthesis in Arabidopsis (Wang et al. 2020), mulberry fruit (Li et al. 2020) and turnip (Zhang et al. 2014). Therefore, we hypothesised that Glyma.11g107100 might play a role in regulating isoflavone content in soybean and selected it as a high-confidence candidate gene for the qGlc11 locus. Glyma.11g107100 was subsequently renamed GmMYB4 (Figure S2a). Based on SNPs from the $5^{\prime}$ untranslated region (UTR) to the $3^{\prime}$ UTR of GmMYB4, the 219 soybean accessions were classified according to three major haplotypes of GmMYB4, namely, GmMYB4 $^{H1}$ , GmMYB4 $^{H2}$ and GmMYB4 $^{H3}$ (Figure 2a). Among these haplotypes, GmMYB4 $^{H1}$ was a favourable haplotype. Compared with those carrying GmMYB4 $^{H2}$ , accessions carrying GmMYB4 $^{H1}$ had a significantly higher GLC in the three environments (Figure 2b). 
+
+Reverse transcription quantitative PCR (RT-qPCR) analysis revealed that GmMYB4 was expressed across all the examined tissues, including roots, stems, leaves, flowers, pods and seeds, with peak levels in flowers (Figure 2c; Figure S2b). The subcellular localisation results showed that GmMYB4 was localised in the nucleus (Figure 2d). Preliminary functional validation of the gene was conducted using a soybean hairy root transformation experiment (Figure S3). Compared to the empty vector control, the relative expression level of GmMYB4 exhibited an approximately 3-fold increase in GmMYB4 overexpression transgenic hairy roots (Figure 2e). Notably, TIC, GEC, DAC and GLC were significantly elevated in GmMYB4 overexpression 
+
+
+a
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/65bfe6c6458067743157d251a1eda0e533d15dbf530692a8851ddf10775cee2b.jpg)
+
+
+
+b
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/56e4cb8f76efce5320ec976839eaf677dd6cf3c1e8bf02eada70f2f2d208ffaa.jpg)
+
+
+
+C
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/163436bd25bfe24148e70b39977e2ec3822e5af26917589657fd8c038a376ba7.jpg)
+
+
+
+d
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/5ac166e8e2d83721a373602e8cc25ec5fe34ae4b8c6ec2060a76878680ac2628.jpg)
+
+
+
+e
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/dec35a1bcf2f1ff33d676d8b8460e0d6b14699dcde1e5cdbddc691f827c146f6.jpg)
+
+
+
+f
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/6513fc724ef7eecb45f671753e81744ddd75a69271f83c950e53c4823dd8ede2.jpg)
+
+
+
+FIGURE 1 | Identification and analysis of loci associated with the GLC in soybean. Manhattan plots (a, c, e) and quantile-quantile plots (b, d, f) for a genome-wide association study (GWAS) conducted on a natural soybean population consisting of 219 accessions across three environments. Chr, chromosome. The red and black dotted horizontal lines represent the significance threshold $[- \mathrm{Log}_{10}(p) \geq 6.73]$ and the suggestive significance threshold $[- \mathrm{Log}_{10}(p) \geq 5.73]$ , respectively.
+
+
+transgenic hairy roots, showing average increases of $156\%$ , $86\%$ , $154\%$ and $249\%$ , respectively, relative to the empty vector control (Figure 2f). Conversely, the GmMYB4 transcript level was reduced by approximately $60\%$ in RNA interference (RNAi) hairy roots compared to the empty vector (Figure 2g). Correspondingly, TIC, GEC, DAC and GLC were decreased by $40\%$ , $31\%$ , $41\%$ and $42\%$ , respectively, in GmMYB4 RNAi roots compared to the empty vector (Figure 2h). These findings collectively indicate that GmMYB4 may serve as a pivotal candidate gene in the regulation of isoflavone content in soybean. 
+
+# 2.2 | GmMYB4 Positively Regulates Isoflavone Biosynthesis
+
+To further validate the function of GmMYB4, four independent transgenic lines were utilised for phenotypic identification 
+
+including two GmMYB4 overexpression lines (OE-1, OE-6) (Figure S4) and two homozygous frameshifted gmmyb4 knockout mutants (ko-1, ko-2) (Figure S5). Quantitative analysis confirmed that GmMYB4 was significantly upregulated, with an increase ranging from 2.91- to 6.87-fold in the GmMYB4 overexpression lines compared to the wild-type (WT) lines. Conversely, GmMYB4 expression was significantly downregulated by $68\% -71\%$ in the gmmyb4 mutants compared to the WT lines (Figure S6). In the GmMYB4 overexpression lines, the isoflavone content, including TIC, GEC, DAC and GLC, exhibited significant increases. Specifically, in R2-stage leaves (full blossom stage), the average increases were $22\% -24\%$ $29\% -30\%$ $52\% -53\%$ and $15\% -16\%$ , respectively, while in R8-stage seeds (full maturity stage), the increases ranged from $17\% -32\%$ $18\% -36\%$ $8\% -23\%$ and $42\% -44\%$ (Figure 3a,b). In contrast, the gmmyb4 mutants showed significant reductions in isoflavone content. In leaves, TIC, GEC and DAC decreased by an average of $16\% -21\%$ 
+
+
+a
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/69856ef14c5be652a581d12d8cdedfb68d50d997cf87468babed4f539f8af7dd.jpg)
+
+
+
+b
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/a0d4cf91559a5e863588548b9258a09437e31fa972dfa1f98717c09ebfa253d5.jpg)
+
+
+
+C
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/eba8a7d95037d09fec4f01f434fd3dc7d65b3d7be24a30ca56c3410460ef5dce.jpg)
+
+
+
+d
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/4605d3ae30c9ef5163d830c75ed2c267cee724c8d22e97fa52593bdd3913ae75.jpg)
+
+
+
+e
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/0870365bc25755f8f512165762577c1ddd5cd7b39920f317469582273021f75f.jpg)
+
+
+
+f
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/6a5634a98812d84f18d746fc5b1bd30ccedb06b6bed370f8bf336a661d4b74c2.jpg)
+
+
+
+g
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/552268cd55fee5a8b1827680824b4a3951fce4a2e49a4400ca67a51413e0c0d7.jpg)
+
+
+
+h
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/add9095f9bdb1d6d4d8c30c1da6c7f3838bd6941a4da46418474cdd6514bb5a8.jpg)
+
+
+
+FIGURE 2 | Haplotype analysis and preliminary functional verification of GmMYB4. (a) Summary of the three main haplotypes $(GmMYB4^{H1}, GmMYB4^{H2}, GmMYB4^{H3})$ for the candidate gene $GmMYB4$ . 'n' denotes the number of varieties that exhibit each respective haplotype. (b) Differential analysis of the GLC among the three $GmMYB4$ haplotypes for the years 2014, 2015 and 2018 in Nanjing. $p$ values were obtained via two-sided Student's $t$ tests. $p$ values were derived from a two-sided Student's $t$ test. GLC, glycinein class content. (c) Tissue-specific expression patterns of $GmMYB4$ in materials with extreme isoflavone content were determined by reverse transcription quantitative PCR (RT-qPCR) ( $n = 3$ biologically independent samples). (d) Subcellular localisation of the GmMYB4-GFP fusion protein in leaf mesophyll cells of $N.$ benthamiana. GFP, green fluorescent protein; NLS-mCherry, nuclear localisation signal-tagged mCherry; Merged, combined channels; scale bars, $50\mu \mathrm{m}$ . (e) Relative expression levels of $GmMYB4$ in soybean hairy roots transformed with the $GmMYB4$ overexpression vector (OE-GmMYB4) or empty overexpression vector (OE-EV). $p$ values were derived from a two-sided Student's $t$ test. (f) Isoflavone content in soybean hairy roots transformed with the $GmMYB4$ overexpression vector (OE-GmMYB4) or an empty overexpression vector (OE-EV). DAC, daidzein class content; GEC, genistein class content; GLC, glycitein class content; TIC, total isoflavone content. $\mu \mathrm{g} / \mathrm{g}$ : The number of micrograms of isoflavone per gram of dried tissue sample. $P$ values were derived from a two-sided Student's $t$ test ( $^{**}p < 0.01$ , $^{***}p < 0.001$ and $^{****}p < 0.0001$ ). (g) Relative expression levels of $GmMYB4$ in soybean hairy roots transformed with the $GmMYB4$ RNA interference vector (RNAi-GmMYB4) or the empty RNA interference vector (RNAi-EV). $p$ values were derived from a two-sided Student's $t$ test. (h) Isoflavone content in soybean hairy roots transformed with the $GmMYB4$ RNA interference vector (RNAi-GmMYB4) or the empty RNA interference vector (RNAi-EV). $\mu \mathrm{g} / \mathrm{g}$ : The number of micrograms of isoflavone per gram of dried tissue sample. $p$ values were derived from a two-sided Student's $t$ test ( $^{*}p < 0.05$ and $^{**}p < 0.01$ ). The data presented in (e-h) are expressed as the mean $\pm$ standard error of the mean (SEM). (e-h) $n = 5$ biologically independent samples.
+
+
+$40\% - 50\%$ and $36\% - 38\%$ , respectively, while in mature seeds, the reductions were of $15\% - 20\%$ , $16\% - 19\%$ , and $22\% - 26\%$ , respectively (Figure 3a,b). These results suggest that GmMYB4 has a positive effect on the regulation of isoflavone content. 
+
+A paleotetraploid plant, the soybean genome harbours a highly homologous gene (Glyma.12g032200) of GmMYB4. We 
+
+constructed double-gene knockout mutants and determined the isoflavone content in leaves. The results showed that the TIC, GEC, DAC and GLC in two independent mutant lines were decreased by $79 - 80\%$ $49\%$ $1.8\% -21\%$ and $97\%$ on average compared with the wild type, respectively (Figure S7). Among them, the significant reduction of GLC by $97\%$ was particularly prominent. Compared with the GmMYB4 mutant lines, the 
+
+double-knockout mutants exhibited more significant phenotypic differences, indicating that the presence of homologous genes triggers functional compensation effects. 
+
+To gain insight into the biological processes downstream of GmMYB4, a comprehensive genome-wide transcriptomic expression profiling analysis was performed using samples from 
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/fa6dbb8a0cb5aae9a44855332adb63b28044a6570c0615ebb523fb9c8de179ec.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/beaa094039bd928613c3ecb64a4062fa2ebe06539feb46d8010e505268987a3c.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/048c51cac1a4f1671611e16ec5cd4e091b3f3174d2e67e042b432077873750e0.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/dccb74b6ab839e9b15bb6577416e10619933294fc930578d9b4e4c7ab855b2ed.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/0b7c7b176562646361d6bce38e2aeb2c0a655167f085508fcf47a71827c7eded.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/f1067b8939cfe5815ff991a2a229c16e633e607534333f2b7d6630aa27bd6e16.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/3f94846bec476f8bdeffd3b438815f7dcad176f108622794ed74d81042b08d09.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/93ded3a9feb793a5ec766b1a55af0060290d683bfc764402b77e8fa0616503be.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/1c808a806fd4afd6ba184343ea2eea02d6e2341455d8ad608095dafc8dcf1ea8.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/ffa170097b5cb31e365922ac413d65e83c9d436c7f70d744ebfe2e29755a5ec7.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/df4ad9c50b4a89d9c9451aab370989d2b60ea0540a77ec4b846caf2cd2a4d541.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/18d775fc0f0a975d4065ee434a0b4e849cda3a19d07d98c929290b50093996b4.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/b9fa3d77c5f623c7726150f6f648988c50385c0dd359183708819b13d427cbb0.jpg)
+
+
+
+FIGURE 3 | Legend on next page.
+
+
+FIGURE 3 | GmMYB4 regulates isoflavone content and the expression levels of genes involved in the phenylpropanoid pathway. (a) Isoflavone content of R2 stage leaves (full blossom stage) from the WT, GmMYB4 overexpression lines and gmmyb4 mutant lines. DAC, daidzein class content; GEC, genistein class content; GLC, Glycinein class content; TIC, total isoflavone content. $\mu \mathrm{g} / \mathrm{g}$ : The number of micrograms of isoflavone per gram of dried tissue sample. Different letters denote significant differences ( $p < 0.05$ ) according to Duncan's multiple range test ( $n = 6$ biologically independent samples). (b) Isoflavone content of R8-stage seeds (full maturity stage) from the WT, GmMYB4 overexpression lines and gmmyb4 mutant lines. $\mu \mathrm{g} / \mathrm{g}$ : The number of micrograms of isoflavone per gram of dried tissue sample. Different letters denote significant differences ( $p < 0.05$ ) according to Duncan's multiple range test ( $n = 5$ biologically independent samples). (c, d) Top 20 enriched metabolic pathways among the differentially expressed genes (DEGs) identified via RNA-seq analysis of leaves from the WT, GmMYB4 overexpression (c) and gmmyb4 mutant (d) lines at the V3 stage. The data in a-j are expressed as the mean $\pm$ SEM. (e-l) Relative expression levels of genes involved in the phenylpropanoid pathway in leaves from the WT, GmMYB4 overexpression lines and gmmyb4 mutant lines at the V3 stage. Different letters denote significant differences ( $p < 0.05$ ) according to Duncan's multiple range test ( $n = 3$ biologically independent samples). (m) Heatmap of the expression levels of DEGs involved in the phenylpropanoid pathway. 
+
+WT, OE-6 and ko-2 lines. Genes exhibiting significant changes (|log2-fold change| $\geq 1$ and FDR $\leq 0.05$ ) in expression levels were selected for further analysis. A total of 3598 differentially expressed genes (DEGs) were identified between OE-6 and WT lines. Kyoto Encyclopedia of Genes and Genomes (KEGG) enrichment analysis indicated that these genes were significantly enriched in pathways related to metabolic pathways, biosynthesis of secondary metabolites, phenylpropanoid metabolism, flavonoid metabolism and isoflavonoid metabolism (Figure 3c; Table S3). Similarly, 1755 DEGs were identified between ko-2 and WT, with significantly enrichment in pathways associated with the biosynthesis of secondary metabolites, metabolic pathways and flavonoid metabolism (Figure 3d; Table S4). These results suggest that GmMYB4 plays a pivotal role in regulating metabolic pathways, particularly those involved in flavonoid and isoflavonoid biosynthesis. 
+
+RT-qPCR analysis was performed to validate the expression patterns of key DEGs identified in the RNA-seq data. The results demonstrated that, compared to the WT, seven key genes involved in isoflavone biosynthesis (GmPAL1.3, GmC4H, GmCHS8, GmCHR1, GmCHI1, GmIFS2 and GmIFS1) were significantly upregulated in the GmMYB4 overexpression lines and significantly downregulated in the gmmyb4 mutants (Figure 3e–k). Furthermore, compared with the WT, the GmIFS2 overexpression lines presented a significant increase in TIC in R2-stage leaves (1.41–1.52-fold) and in R8-stage seeds (1.36–1.77-fold) (Figure S8). This indicates that the upregulation of GmIFS2 expression promotes isoflavone accumulation. Conversely, GmANS3, which competes with isoflavone biosynthesis, displayed an opposite expression trend (Figure 3l). Notably, the anthocyanin content was significantly decreased by an average of $23\%$ in the leaves of the GmMYB4 overexpression lines, while it was increased by an average of $10\% - 19\%$ in the leaves of the gmmyb4 mutants (Figure S9). These results were consistent with the RNA-seq results (Figure 3m), suggesting that GmMYB4 regulates the expression levels of genes involved in isoflavone biosynthesis pathways as well as the isoflavone content, while simultaneously suppressing anthocyanin metabolic pathways. 
+
+# 2.3 | GmMYB4 Is Also a Regulator of the Flavonoid Metabolic Pathway
+
+To elucidate the molecular mechanisms underlying GmMYB4-mediated regulation, a DNA affinity purification sequencing (DAP-seq) analysis was performed (Bartlett et al. 2017). The 
+
+primary binding motif for GmMYB4, referred to as Motif1 ( $E$ -value $= 4.7\mathrm{e}$ -117), comprises a highly conserved 8bp sequence ( $5^{\prime}$ -CACCTAAC- $3^{\prime}$ ) that is present in a repeated configuration (Figure 4a). To validate the reliability of the DAP-seq results, electrophoretic mobility shift assays (EMSAs) were conducted. The assays demonstrated that GmMYB4 bound to Motif1, as indicated by a marked reduction in binding signals when cold probe competitors were present (Figure 4b). 
+
+To better understand the transcriptional regulation function of GmMYB4, a comprehensive analysis combining DAP-seq and RNA-seq datasets identified 1477 genes as its potential direct targets (Figure 4c). KEGG pathway enrichment analysis revealed that these genes were enriched in flavonoid biosynthesis (Figure 4d; Table S5) including genes encoding chalcone synthase, flavanone 3-hydroxylase and flavanol synthase. To validate the omics results, the content of flavonoids and proanthocyanidins in GmMYB4 transgenic lines was determined. Compared to the WT, the GmMYB4 overexpression lines showed significant increases of $33\% - 36\%$ in flavonoids content and $39\% - 56\%$ in proanthocyanidins content in seeds, while the gmmyb4 mutant lines exhibited decreases of $26\% - 29\%$ in flavonoids content and $20\% - 21\%$ in proanthocyanidins content in seeds (Figure S10). These findings collectively illustrate that GmMYB4 acts as a pivotal transcriptional regulator controlling flavonoid and proanthocyanidin biosynthesis and accumulation in soybean. 
+
+# 2.4 | GmMYB4 Interferes With the Interactions Between the bHLH and MYB Members of MBW Complexes That Regulate Isoflavone Biosynthesis
+
+The above results demonstrate that GmMYB4 is an important gene that regulates isoflavone content. To elucidate the molecular mechanism of isoflavone biosynthesis regulation by GmMYB4, the promoters of 10 key DEGs involved in the isoflavone metabolism pathway (GmANS3, GmOMT5, Gm4CL, GmIFS2, GmANR2, GmF3H1, GmUGT, GmPAL1.3, GmC4H, GmCHS8) were subsequently cloned to explore whether GmMYB4 directly targets these genes. However, yeast one-hybrid (Y1H) assays indicated that GmMYB4 could not bind to the promoters of these 10 genes (Figure S11), suggesting an indirect regulatory mechanism through other regulatory factors. 
+
+Sequence analysis revealed that GmMYB4 contains a bHLH TF-binding motif in the R3 domain (Zimmermann et al. 2004; 
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/e26e0e2453f1fa72094c1d33f345a6ab668e7ad30083c354a9917b7264ef47c6.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/1d2d430d938fc98a852232f61ce43c04c9fded11645bc25cea773d2932332d55.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/5ddc7bfeb7d54e2a1525a50a2a7272adfaf4fafcfe43446f27aac015fc2021e1.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/00555d4f41e38a4ac337b7828626dca975997c07b2393746c5e0a267a94933d3.jpg)
+
+
+
+FIGURE 4 | Genome-wide analysis of GmMYB4 binding sites and target genes via DAP-seq and RNA-seq. (a) Potential binding motifs of GmMYB4 identified via DAP-seq analysis. (b) An electrophoretic mobility shift assay (EMSA) was used to verify the interaction between GmMYB4 and Motif1. (c) Venn diagram for combined analysis of GmMYB4 DAP-seq data and differentially expressed genes (DEGs) from the RNA-seq data of the WT and GmMYB4 overexpression lines. (d) A combined analysis of the GmMYB4 DAP-seq data and the DEGs from the RNA-seq data for leaves of the WT and GmMYB4 overexpression lines revealed the top 20 enriched KEGG pathways.
+
+
+Xu et al. 2014) and a conserved ethylene-responsive element binding factor-associated amphiphilic repression (EAR) motif (Yin et al. 2021) (Figure S12). In Arabidopsis, MYB4 interacts with the bHLH TFs TT8, GL3 and EGL3, disrupting the formation of the MBW complexes and attenuating their transcriptional activation, thereby inhibiting the synthesis of anthocyanins and PAs (Wang et al. 2020). 
+
+To investigate the molecular mechanism through which GmMYB4 regulates isoflavone content by influencing MBW complexes, key genes in soybean, including MYB TF (GmMYB115), bHLH TFs (GmTT8, GmGL3, GmEGL3) and WD repeat protein (GmTTG1), were cloned. Firefly luciferase complementation imaging (LCI) (Figure 5a-c), bimolecular fluorescence complementation (BiFC) (Figure 5d) and yeast two-hybrid (Y2H) (Figure 5e) assays confirmed that GmMYB4 interacted with bHLH TFs (GmTT8, GmGL3 and GmEGL3). A previous study has shown that GmMYB115 forms MBW complexes with GmTT8 and GmTTG1 (Li 2017). Notably, in Arabidopsis, the TT2-TT8 complex can bind promoters independently of TTG1, and TTG1 does not significantly affect the binding ability of the TT2-TT8 complex to target gene promoters (Baudry et al. 2004). Therefore, we focused on investigating whether 
+
+GmMYB4 disrupts the formation of the GmMYB115-GmTT8 complex. BiFC (Figure 5f) and LCI (Figure 5g) assays demonstrated that GmMYB4 significantly inhibits the formation of the GmMYB115-GmTT8 complex by competing with GmMYB115 for binding to GmTT8. 
+
+To evaluate the regulatory role of the GmMYB115-GmTT8 complex in isoflavone biosynthesis, it was essential to identify its downstream target genes. Y1H assays were conducted to assess the binding affinity of the complex to the promoters of 10 key genes (GmANS3, GmOMT5, Gm4CL, GmIFS2, GmANR2, GmF3H1, GmUGT, GmPAL1.3, GmC4H, GmCHS8). While GmMYB115 alone showed weak interactions with these promoters, the addition of GmTT8 significantly enhanced binding (Figure 5h). These results demonstrate that the GmMYB115-GmTT8 complex directly binds to promoters of genes involved in phenylpropanoid, isoflavone and anthocyanin biosynthesis, highlighting its regulatory role in these pathways. 
+
+To elucidate the mechanism by which GmMYB4 regulates isoflavone biosynthesis, transient expression assays were performed using GmIFS2pro::LUC and GmANS3pro::LUC reporters. The dual-luciferase (Dual-LUC) reporter assays suggested 
+
+
+a
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/2c6bc7d46d7ef298a2dcb07cace5892493d9275d505e99303b949a0c3dfd23b4.jpg)
+
+
+
+b
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/1afbad6bdc1768587764b0d2ae2232004104cd7044a1712ec7932562d177ad25.jpg)
+
+
+
+C
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/0bdd71716476d146e70591a17483885478f7ae9646f5aff7dfc1b50f83ba00d7.jpg)
+
+
+
+d
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/a2d56c26f689bdb01f3fdd4a46ed798e74a82aa22d34e804f789e0519f510f0a.jpg)
+
+
+
+e
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/34ae1b3a8731158d866d65765f724ac7b19421a667e7542c0e65c849f9e6e51f.jpg)
+
+
+
+f
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/6d8ce297f9ee3807a01f987129839b1a4fa4cab3b81d66e71749c4585f510a55.jpg)
+
+
+
+g
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/1a9273c113440280f192bc3fe95a675de66ebcbcdbc63b3456157bcc0eec8e25.jpg)
+
+
+
+i
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/c3ed058c0e40e08a7e6585dff5ea98dcc724cb871a4f79c5e45397a8182e28b8.jpg)
+
+
+
+h
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/939d545fd4334db41a4a5ca00098919c032283503621310b3b2abc7fd6f568be.jpg)
+
+
+
+j
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/1cdbf3f3054250aaf7aaec5a978cdd23d1d97af203096e338806d5bb8524175f.jpg)
+
+
+
+FIGURE 5 | Legend on next page.
+
+
+FIGURE 5 | GmMYB4 interacts with bHLHs to disrupt the assembly of the MBW complex. (a-c) A luciferase complementation assay revealed interactions between GmMYB4 and GmbHLHs (GmTT8, GmGL3 and GmEGL3). cLUC + nLUC, GmMYB4-cLUC + nLUC, cLUC + GmTT8-nLUC, cLUC + GmGL3-nLUC and cLUC + GmEGL3-nLUC were used as controls. (d) Bimolecular fluorescence complementation (BiFC) assays revealed the interactions of GmMYB4 with GmbHLHs (GmTT8, GmGL3 and GmEGL3). YFP, yellow fluorescent protein. GmMYB4 was fused to the C-terminal fragment of YFP to produce GmMYB4-YFPc. GmTT8, GmGL3 and GmEGL3 were each fused to the N-terminal fragment of YFP to produce GmTT8-YFPn, GmGL3-YFPn and GmEGL3-YFPn, respectively. YFP, yellow fluorescent protein; Bright, bright field; Merged, combined channels; Scale bars, $20\mu \mathrm{m}$ for the experimental group and $50\mu \mathrm{m}$ for the control group. (e) Yeast two-hybrid (Y2H) assay showing the interaction of GmMYB4 with GmTT8, GmGL3 and GmEGL3. The transformed yeast cells were subsequently grown on synthetic defined (SD) medium: -Trp-Leu-Ade-His/X-α-Gal. ADT7 + BD53 represents the positive control; ADT7 + BDlam represents the negative control. BD, pGBKT7 vector; AD, pGADT7 vector. (f) Bimolecular fluorescence complementation (BiFC) assays demonstrated that GmMYB4 disrupted the interaction between GmMYB115 and GmTT8. Scale bars, $20\mu \mathrm{m}$ for the experimental group and $50\mu \mathrm{m}$ for the control group. (g) The results of the luciferase complementation assay indicated that GmMYB4 interfered with the interaction between GmMYB115 and GmTT8. (h) The yeast one-hybrid (Y1H) assay results revealed that the GmMYB115-GmTT8 complex binds to the promoters of GmANS3, GmOMT5, Gm4CL, GmIFS2, GmANR2, GmF3H1, GmUGT, GmPAL1.3, GmC4H and GmCHS8. Yeast transformants were spotted onto SD/-Leu/-Ura SD/-Trp/-Ura and SD/-Trp/-Leu/-Ura media supplemented with X-Gal. AD, pGADT7 vector; SD, synthetic dropout. EV, empty vector. (i,j) A dual-luciferase assay conducted in N. benthamiana leaves confirmed that GmMYB4 regulated the expression levels of the GmIFS2 and GmANS3 genes, which are downstream of the GmMYB115-GmTT8 MBW complex. Different letters denoted significant differences ( $p < 0.05$ ) according to Duncan's multiple range test. The data in figures i and j were presented as the mean ± SEM ( $n = 3$ biologically independent samples). 
+
+that overexpression of the MBW complex (GmMYB115-GmTT8-GmTTG1) significantly suppressed GmIFS2pro::LUC reporter activity in $N.$ benthamiana leaves (Figure 5i). However, this suppression was markedly alleviated upon the introduction of GmMYB4. Conversely, overexpression of the MBW complex strongly activated GmANS3pro::LUC reporter activity, but this activation was significantly reduced with the addition of GmMYB4 (Figure 5j). These findings indicated that GmMYB4 disrupts the formation of the MBW complex, indirectly regulating the transcription of genes involved in isoflavone and anthocyanin biosynthesis. Therefore, GmMYB4 could play a crucial role in regulating the balance of isoflavone and anthocyanin metabolism. 
+
+# 2.5 | GmMAPK6 Regulates Isoflavone Biosynthesis via Phosphorylation and Transcriptional Activation of GmMYB4 in Soybean
+
+To elucidate the molecular regulatory mechanism of GmMYB4, this study employed protein-protein interaction (PPI) network analysis to identify its potential interacting proteins. Bioinformatics prediction using the STRING database (https:// cn(string-db.org/) suggested potential interactions between GmMYB4 and two candidate proteins, GmMAPK6 and GmMAPKK2. Previous studies have demonstrated that MAPK cascade components serve as key regulators in isoflavone biosynthesis (Wu et al. 2020). The predicted interactions between these proteins require further experimental validation. 
+
+To explore the relationship between GmMAPK6 and GmMYB4, a series of experiments were conducted. BiFC and coimmunoprecipitation(Co-IP)assays confirmed a physical interaction between GmMAPK6 and GmMYB4 (Figure 6a,b). Based on previous studies showing that Arabidopsis MPK3, MPK4, MPK6 and tobacco MAPKK2 point mutants (MPK3 $^{\text{D193G}}$ , E197A, MPK4 $^{\text{D198G}}$ , E202A, MPK6 $^{\text{D218G}}$ , E222A and MAPKK2 $^{\text{T227D}}$ , S233D) exhibit constitutive activity while retaining substrate specificity (Berriri et al. 2012; Li, Wang, et al. 2016; Ren et al. 2002), we generated analogous mutations in soybean MPK proteins to create constitutively active mutants CA-GmMPK6 $^{\text{D214G}}$ , E218A (CA-GmMAPK6) 
+
+and GmMAPKK2 $^{\mathrm{T220D}}$ , $\mathrm{T226D}$ (CA-GmMAPKK2). Y2H assays demonstrated that CA-GmMAPK6 (Berriri et al. 2012) and CA-GmMAPKK2 (Ren et al. 2002) interacted with GmMYB4 (Figure 6c). Given that MAPKs regulate biological processes, including secondary metabolite biosynthesis, by phosphorylating transcription factors and other target proteins (Zhang and Zhang 2022; Gai et al. 2019), we investigated whether GmMAPK6 phosphorylates GmMYB4. Liquid chromatography-tandem mass spectrometry (LC-MS/MS) analysis of kinase reactions revealed phosphorylation at the 39th serine residue within the R2 domain of GmMYB4 when incubated with CA-GmMAPK6 (Figure S13; Table S6). When incubation was carried out in the absence of CA-GmMAPK6, no phosphorylation of GmMYB4 was detected (Table S7). These results demonstrate that GmMAPK6 phosphorylates GmMYB4, suggesting a regulatory role in isoflavone biosynthesis. 
+
+Initially, soybean hairy root transformation experiments were performed. The results showed that compared to the empty vector control, the overexpression of both GmMAPK6 and GmMAPKK2 in soybean hairy roots significantly increased the isoflavone content (Figure 6d; Figure S14a). This result preliminarily reveals the crucial role of GmMAPK6 and GmMAPKK2 in the regulation of isoflavone accumulation. 
+
+Transcriptional analysis was performed to further elucidate the intrinsic mechanism by which GmMAPK6 and GmMAPKK2 affect isoflavone accumulation. The results demonstrated that overexpression of GmMAPK6 significantly upregulated the expression levels of GmMYB4 and several key isoflavone biosynthetic genes including GmPAL1.3, Gm4CL, GmCHI1, GmCHR1, GmIFS2 and GmIFS1 (Figure 6e-n). Meanwhile, the expression of the anthocyanin synthase gene GmANS3 was significantly downregulated in GmMAPK6 hairy roots (Figure 6o). Notably, this trend in gene expression changes was highly consistent with that observed in GmMYB4 overexpression lines, further confirming the important role of GmMYB4 in regulating isoflavone content and suggesting a potential close relationship between GmMAPK6 and GmMYB4. However, overexpression of GmMAPKK2 only exert significant effects on the expression of Gm4CL, GmCHS8 and GmANS3 (Figure S14b-l). 
+
+Integrating the above experimental results, we propose a mechanism by which GmMAPK6 regulates isoflavone biosynthesis: First, GmMAPK6 can upregulate the expression of GmMYB4, thereby transcriptionally activating isoflavone 
+
+biosynthesis genes and promoting isoflavone biosynthesis. Second, GmMAPK6 achieves post-translational regulation of GmMYB4 through phosphorylation modification, which may alter the protein interaction ability or transcriptional activation 
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/7af42dffda1f98649708096f1c3e497a1c2601a2b8242bc440ae0e3c8175a5fa.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/7378905e2e63434fb07dbf398b6e6dd5cde346f6ddb94fee44e2dc06a8c56772.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/ac8f5a95a305cf0bbaa622dbd4ebff3fce816095d047dc6093e6200a140d6806.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/25735953811c985466a4604c39bd3e8cb124ee71350c73d47928663011cb06f5.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/6f9df72c915a12f39b138a43e1dae0b128c0db5e0388927d09553567ae66dfcd.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/ec681c6126ee9f8cc36738763363d9e2599baf0b8aa3d6c13c6505fabfd0b9f7.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/db4c93f510e1111f248d88da3ba8ff844fa8aa34ad2857beb102a288fa0cde24.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/7ebf8a1c195a5a8c7294130aefd276d8909fb70c2088f811fc7685896bf83241.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/98b6a6dd9571e20005fea5dded06cea94d8940cc8da107b35ceb9ac6bb487e9e.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/7a5ed5498425c0a4b287fe1b8284e4b0ff0718a3da2a5ead7acd941e96160cf5.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/1073807dd760f89504f590565fc58818ee49051fa90af45bd9bd51e7286a941e.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/0170caffb201167bd1a071f5d44862dd62df6f51b9d7a38725b0a3a625486d21.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/6d7bb21891284c6d4fe751b41a5cbce3b2ac239895058bd3d1d1770642953300.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/a8a328652d20e56d0b1dfe97c69c76a5979bc1f92691c1477891f25002da0f2b.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/1e34583ecd2f07824eb157995c08e20aa5af196156781306d4ef2bccdcaee652.jpg)
+
+
+
+FIGURE 6 | Legend on next page.
+
+
+FIGURE 6 | GmMAPK6 increases isoflavone content, upregulates the expression of $GmMYB4$ and isoflavone biosynthetic genes, and phosphorylates GmMYB4. (a) Bimolecular fluorescence complementation (BiFC) assays revealed that GmMAPK6 and GmMAPKK2 can interact with GmMYB4. YFP, yellow fluorescent protein; Bright, bright field; Merged, combined channels; Scale bars, $20\mu \mathrm{m}$ for the experimental group and $50\mu \mathrm{m}$ for the control group. (b) Coimmunoprecipitation (Co-IP) assays demonstrated that GmMYB4 interacted with GmMAPK6 and GmMAPKK2. The experiment was performed in $N.$ benthamiana leaves transiently expressing the indicated constructs, with three replicates producing similar results. IP, immunoprecipitation. (c) The yeast two-hybrid (Y2H) assay confirmed that GmMYB4 interacted with CA-GmMAPK6 and CA-GmMAPKK2. ADT7 + BD53 represents the positive control; ADT7 + BDlam represents the negative control; CA, constitutively active. Each transformation was performed in triplicate, with consistent results. (d) Isoflavone content in soybean hairy roots transformed with the GmMAPK6 and overexpression vector (OE-GmMAPK6) or an empty overexpression vector (OE-EV). $\mu \mathrm{g} / \mathrm{g}$ : The number of micrograms of isoflavone per gram of dried tissue sample. $p$ values were generated from two-sided Student's $t$ tests ( $n = 3$ biologically independent samples). (e-o) Relative expression levels of isoflavone pathway genes in soybean hairy roots transformed with the GmMAPK6 overexpression vector (OE-GmMAPK6) or an empty overexpression vector (OE-EV). $p$ values were generated from two-sided Student's $t$ tests. Data in d-o were presented as the mean $\pm$ SEM ( $n = 3$ biologically independent samples). 
+
+ability of GmMYB4, thereby regulating isoflavone biosynthesis. This newly revealed regulatory module successfully establishes a molecular link between MAPK signalling and the transcriptional regulation of soybean isoflavone biosynthesis, providing a critical theoretical basis for a deeper understanding of the regulatory mechanisms of isoflavone biosynthesis. 
+
+# 3 | Discussion
+
+Soybean serves as a crucial dietary source of isoflavones, bioactive compounds with substantial implications for human health, making the precise modulation of isoflavone content in soybean cultivars an essential objective for both nutritional and agricultural research. As a complex quantitative trait controlled by multiple genes, isoflavone biosynthesis has been the focus of extensive genetic studies. Previous studies have identified several genes via GWAS, including the R2R3-MYB transcription factor GmMYB29 and the P450 family gene GmGLY1, both of which were shown to be involved in regulating isoflavone content (Chu et al. 2017; Zhang et al. 2024). Recently, by integrating bulk segregant analysis sequencing (BSA-seq) and GWAS, a novel R2R3-MYB family gene, GmMYB77, was discovered, and this gene inhibits isoflavone accumulation (Liu et al. 2024). Research has uncovered the molecular network of GmUGT88A1, which coordinately regulates soybean resistance to soybean cyst nematode (SCN; Heterodera glycines), isoflavone content and grain weight (Jiang et al. 2025). Soybean isoflavones have received extensive attention due to their important roles in both plants and animals. Therefore, it is essential to explore the molecular networks and mechanisms regulating isoflavone biosynthesis. 
+
+In this study, we identified the qGlc11 locus via GWAS; this locus is associated with GLC and corresponds to a region on chromosome 11 (8147595-8315102bp) previously identified via a GWAS as linked to malonylglycitin in soybean (Azam et al. 2023). Similar to its Arabidopsis ortholog (Wang et al. 2020), GmMYB4 interacts with bHLH TFs, disrupting MBW complex formation and thereby modulating the expression of downstream genes. This regulatory mechanism aligns with observations in other plant systems, such as mulberry fruit (Li et al. 2020), suggesting evolutionary conservation of MYB4 function in flavonoid metabolism. This discovery supplements the list of known MYB transcription factors involved in soybean isoflavone biosynthesis, which previously included GmMYB176, GmMYBJ3, GmMYB58, GmMYB205 and 
+
+GmMYB133 (Yi et al. 2010; Zhao et al. 2017; Han et al. 2017; Bian et al. 2018). The identification and functional exploration of GmMYB4 have enhanced our understanding of the complex regulatory mechanisms mediated by MYB TFs in soybean isoflavone biosynthesis, marking substantial progress in revealing regulatory mechanisms. 
+
+The dynamic assembly of MBW complexes has been suggested to play a crucial role in the precise regulation of flavonoid biosynthesis. MYBL2 has been shown to interact with MBW components to modulate flavonoid biosynthetic gene expression (Dubos et al. 2008). The interaction between MBW complexes and MYB TFs facilitates fine-tuned regulation of flavonoid biosynthesis (Albert et al. 2014). In this study, we conducted a comprehensive investigation into the function of GmMYB4 in the regulation of isoflavone biosynthesis and its underlying molecular mechanisms. GmMYB4 positively regulates isoflavone biosynthesis by interacting with bHLH TFs (GmTT8) within the MBW complex (Figure 5a-e), disrupting its formation (Figure 5f-g). The MBW complex binds to the promoters of key genes in the isoflavone and anthocyanin biosynthesis pathways, modulating their expression (Figure 5h-j). Furthermore, GmMYB4 competes with GmMYB115 for interaction with bHLH TFs, likely due to amino acid variations $(\mathrm{R} / \mathrm{K})$ in their bHLH binding motifs, which alter their affinity for bHLH TFs (Figure S15). This competitive interaction reflects observations in other bHLH TFs, where single amino acid changes influence complex formation (Zhang et al. 2019). 
+
+MAPK cascades are evolutionarily conserved signalling modules that play diverse roles in plant secondary metabolism. FvMAPK3 negatively regulates anthocyanin accumulation in strawberry fruit (Mao et al. 2022). GmMPK1 has been identified as a positive regulator of isoflavone content in soybean (Wu et al. 2020). Gai et al. (2019) suggested that MAPKs may upregulate genes involved in the biosynthesis of the isoflavone phytoalexins formonetin (FO) and calycosin (CA) through the transmission of signals to specific TFs. However, the precise molecular mechanisms underlying MAPK-mediated regulation of isoflavone biosynthesis have remained elusive. Our study provides novel insights into this regulatory network by demonstrating that GmMAPK6 phosphorylates GmMYB4 at the 39th residue (serine) (Figure S13; Table S6), establishing a direct link between MAPK signalling and the regulation of isoflavone biosynthesis. Overexpression of GmMAPK6 increases the expression levels of GmMYB4 and key enzyme-encoding 
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-19/4de37ad3-a4f8-41e0-9eea-65795d4859b1/56956eaea2f7869864d177a621f75a054601f9a302f9b8bd9830ae0156b84a6a.jpg)
+
+
+
+FIGURE 7 | Illustration of a proposed model for the roles of GmMAPK6-GmMYB4-MBW in regulating isoflavone content in soybean. MYB TFs form MYB-bHLH-WD repeat protein (MBW) complexes with bHLH TFs and WD repeat proteins to regulate the expression of target genes. The MBW complex promotes the transcription of $GmANS$ , which is involved in anthocyanin biosynthesis, but inhibits the transcription of $GmIFS$ , which is involved in isoflavone biosynthesis. GmMAPK6 interacts with and phosphorylates GmMYB4, positively regulating its activity and expression levels. GmMYB4 interacts with a bHLH TF (GmTT8) in the MBW (GmMYB115-GmTT8-GmTTG1) complex, disrupting the formation of the MBW complex. This disruption alleviates the inhibition of $GmIFS$ transcription and reduces the activation of $GmANS$ transcription by the MBW complex. 2, not verified; 4CL, 4-coumarate-CoA ligase; ANS, anthocyanin synthase; C4H, cinnamic acid 4-hydroxylase; CHI, chalcone isomerase; CHR, chalcone reductase; CHS, chalcone synthase; DFR, dihydroflavonol 4-reductase; F3H, flavanone 3-hydroxylase; F6H, flavonoid-6-hydroxylase; IFS, isoflavone synthase; PAL, phenylalanine ammonia lyase.
+
+
+genes in the isoflavone biosynthesis pathway, promoting isoflavone accumulation (Figure 6d–o). These findings not only elucidate the biological function of GmMAPK6 in isoflavone biosynthesis but also identify GmMYB4 as a key transcription factor receiving signals from the MAPK cascade. Future investigations will focus on the in vivo validation of phosphorylation between GmMAPK6 and GmMYB4 as well as the confirmation of GmMYB4 phosphorylation sites. 
+
+In summary, our study identified GmMYB4 as a key TF regulating isoflavone biosynthesis in soybean. We proposed a novel regulatory module, GmMAPK6-GmMYB4-MBW (Figure 7), which integrates upstream signalling and downstream metabolic regulation. GmMYB4 influences isoflavone content by disrupting the formation of the MBW complex, thereby differentially regulating the expression levels of GmIFS2 and GmANS3, leading to an imbalance in isoflavone and anthocyanin metabolism. Furthermore, GmMAPK6 interacts with and phosphorylates GmMYB4, positively regulating the expression of GmMYB4 and multiple genes associated with isoflavone biosynthesis, thereby increasing the isoflavone content. The identification of the GmMAPK6-GmMYB4-MBW module in soybean provides new insights into the regulatory network of isoflavone biosynthesis and offers potential targets for metabolic engineering to optimise isoflavone production in soybean. 
+
+# 4 | Materials and Methods
+
+# 4.1 | Plant Material and Growth Conditions
+
+For the GWAS, a natural population comprising 219 soybean accessions was grown under natural conditions in Nanjing $(32^{\circ}12^{\prime}$ N, $118^{\circ}37^{\prime}$ E) in 2014, 2015 and 2018 in China. All seeds were provided by the National Center for Soybean Improvement at Nanjing Agricultural University. For each environment, the field design adhered to previously reported methods (Chu et al. 2017). 
+
+The WT cultivar 'Jack', GmMYB4 overexpression lines, and gmmyb4 mutants were cultivated under a 14h light/10h dark cycle in a walk-in artificial climate chamber, maintaining a relative humidity of $60\%$ $(\pm 10\%)$ , a constant temperature of $25^{\circ}\mathrm{C}$ and an average photon flux of $300\mu \mathrm{mol}\mathrm{m}^{-2}\mathrm{s}^{-1}$ . A natural population comprising 219 accessions was cultivated in the field. N. benthamiana plants were grown in incubators under a 12h light/12h dark cycle. 
+
+# 4.2 | Isoflavone Extraction and Determination of Isoflavone Content
+
+The isoflavone content was determined via a slightly modified version of the protocol previously described by Chu et al. (2017). 
+
+Transgenic hairy roots were harvested, immediately blanched at $105^{\circ}\mathrm{C}$ for $30\mathrm{min}$ , and then dried at $55^{\circ}\mathrm{C}$ in a forced-air drying oven until reaching a constant weight. For leaf samples, during the R2 growth stage (full blossom stage) of soybean plants, healthy V3-V5 trifoliolate leaves were carefully collected. These leaves were also blanched at $105^{\circ}\mathrm{C}$ for $30\mathrm{min}$ and subsequently dried at $55^{\circ}\mathrm{C}$ to a constant weight. Dry seeds harvested at the R8 stage were dried at $28^{\circ}\mathrm{C}$ to constant weight. Both leaves and seeds were ground with a grinder, passed through a 50-mesh sieve, and the powder collected. First, $0.05\mathrm{g}$ of powder was weighed into $2.0\mathrm{mL}$ centrifuge tubes, each containing $1000\mu\mathrm{L}$ of $80\%$ chromatographic-grade methanol, maintaining a solid:liquid ratio of 1:20. The mixture was oscillated for $1\mathrm{min}$ , followed by an extraction process using ultrasonic assistance at $50^{\circ}\mathrm{C}$ (frequency: $40\mathrm{kHz}$ , power: $300\mathrm{W}$ ) for $1\mathrm{h}$ . The samples were then centrifuged at $12000\mathrm{rpm}$ for $10\mathrm{min}$ at $4^{\circ}\mathrm{C}$ . The supernatant was filtered through a $0.22\mu\mathrm{m}$ organic-phase needle filter and injected into a $2\mathrm{mL}$ autosampler vial, which was stored at $-20^{\circ}\mathrm{C}$ before measurement. 
+
+The samples were analysed via an ultraperformance liquid chromatography (UPLC) system (Thermo Ultimate 3000; column: ACQUITY UPLC HSS T3 $1.8\mu \mathrm{m}$ , $2.1\mathrm{mm}\times 100\mathrm{mm}$ , column, part no. 186003539, serial no. 012631029257) at the National Key Laboratory of Crop Genetics and Germplasm Enhancement, Nanjing Agricultural University. The chromatographic conditions were as follows: solvent A consisted of $0.5\%$ aqueous acetic acid in water, and solvent B consisted of $100\%$ acetonitrile. The gradient elution profile was programmed as follows: $15\% -26\%$ B (v/v) over $16\mathrm{min}$ , followed by a rapid return to $15\%$ B from 16 to $16.1\mathrm{min}$ and holding at $15\%$ B until $18\mathrm{min}$ . The solvent flow rate of the mobile phase was maintained at $4\mathrm{mL / min}$ . UV detection was performed at $260\mathrm{nm}$ via a diode array detector (DAD). The column temperature was set at $40^{\circ}\mathrm{C}$ , with an injection volume of $2\mu \mathrm{L}$ . Twelve isoflavones, including daidzein, genistein, glycinein, daidzin, genistin, glycitin, $6^{\prime \prime}$ -O-acetylgénistin, $6^{\prime \prime}$ -O-acetylglycitin, $6^{\prime \prime}$ -O-acetyldaidzin, $6^{\prime \prime}$ -O-malonyldaidzin, $6^{\prime \prime}$ -O-malonylgénistin and $6^{\prime \prime}$ -O-malonylglycitin, were quantified. GEC: genistein class content (genistein, genistin, $6^{\prime \prime}$ -O-acetylgénistin, $6^{\prime \prime}$ -O-malonylgénistin); DAC: daidzein class content (daidzein, daidzin, $6^{\prime \prime}$ -O-acetyldaidzin, $6^{\prime \prime}$ -O-malonyldaidzin); GLC: glycitein class content (glycitein, Glycitin, $6^{\prime \prime}$ -O-acetylglycitin, $6^{\prime \prime}$ -O-malonylglycitin). The total isoflavone content was calculated as the sum of all individual isoflavone component content. 
+
+# 4.3 | GWAS of Soybean Seed Isoflavone Content
+
+A natural population consisting of 219 accessions was genotyped via resequencing data, revealing 5410112 single-nucleotide polymorphisms (SNPs) with a minor allele frequency (MAF) $>0.05$ (Hu et al. 2024; Lu et al. 2020). A GWAS was conducted via a compressed mixed linear model (CMLM) that considered intricate population structure and familial relationships. All analyses were performed via the R package Genome Association and Prediction Integrated Tool (GAPIT) (Segura et al. 2012). The significance threshold was established at $1/n$ (where $n$ denotes the number of markers; $p \leq 1.85 \times 10^{-7}$ , $-\mathrm{Log}_{10}(p) \geq 6.73$ ), and a suggestive significance threshold was delineated for values that met the criterion $5.73 \leq -\mathrm{Log}_{10}(p) < 6.73$ . Manhattan maps and 
+
+quantile-quantile (Q-Q) plots were generated via R software (R-4.3.3) (http://www.R-project.org/). For each sample, three biological replicates were analysed. 
+
+# 4.4 | Haplotype Analysis and Cloning of Sequences
+
+A 1492-bp genomic region extending from the $5^{\prime}$ UTR to the $3^{\prime}$ UTR of GmMYB4 was analysed. The haplotype analysis was performed via whole-genome resequencing datasets derived from the 219 soybean accessions. SNPs with a proportion of missing data greater than 0.1 and an MAF less than 0.05 were excluded. The full-length coding sequence (CDS) of GmMYB4 (Glyma.11G107100) was cloned from the soybean accession NJAU_32. Other genes and promoters described in the text were also cloned from NJAU_32. The primers used are listed in Table S8. 
+
+The full-length amino acid sequences and promoter sequences for these soybean genes were retrieved from the Phytozome database (https://phytozome next.jgi.doe.gov/info/Gmax_Wm82_a4_v1). Multiple sequence alignments were performed via SnapGene software, adhering to the default settings. 
+
+# 4.5 | Analysis of Gene Expression Patterns and Subcellular Localisation
+
+RNA was extracted from various tissues of the soybean plant at distinct growth stages including from the roots, stems and leaves during the full-blossom stage; from the pod walls at 10 and 20 days after anthesis; and from the seeds at 20 and 40 days after anthesis. This RNA was then utilised for RT-qPCR to evaluate the expression levels of GmMYB4 in genotypes characterised by high isoflavone content (NJAU_32, NJAU_113) and low isoflavone content (NJAU_179, NJAU_185). All the samples were flash-frozen in liquid nitrogen and subsequently stored at $-80^{\circ}\mathrm{C}$ . The primers used are listed in TableS8. 
+
+For RNA extraction, an RNA Simple Total RNA Kit (Tiangen, Beijing, China) was used. cDNA synthesis was performed with the HiScript II all-in-one RT SuperMix Perfect for qPCR (Vazyme Biotech Co., Nanjing, China). Gene expression analysis was performed via RT-qPCR on an ABI 7500 system (Applied Biosystems, Carlsbad, CA, USA) utilising the ChamQ SYBR qPCR Master Mix (without ROX) (Vazyme Biotech Co., Nanjing, China). The expression levels were normalised via the $2^{-\Delta \Delta C_{\mathrm{T}}}$ method (Campion and Loughran 2021), with the mRNA level of soybean Tubulin (Glyma.03g124400) serving as the quantitative control. Three biological replicates were established for each gene expression analysis. The primers used are listed in Table S8. 
+
+For subcellular localisation, the GmMYB4 CDS was amplified by PCR with specific primers and ligated into the pFGC5941 vector, which included the green fluorescent protein (GFP) gene. Both the control (35S:GFP) and the experimental (35S:GmMYB4:GFP) constructs driven by the cauliflower mosaic virus (CaMV 35S) promoter were transformed into Agrobacterium tumefaciens strain EHA105 and subsequently cotransferred into $N$ . benthamiana leaves. At $48\mathrm{h}$ after transformation, the epidermal 
+
+layers of the cotransformed leaves were imaged via a confocal laser scanning microscope (LSM780; Zeiss, Germany). The primers used are listed in Table S8. 
+
+# 4.6 | Transformation of Soybean Hairy Roots and Creation of Transgenic Soybean Plants
+
+The CDS of GmMYB4 was cloned, and the overexpression vector pMDC83-GmMYB4-OE (OE-GmMYB4) and the RNA interference vector pB7GWIWG2(2)-GmMYB4-RNAi (RNAi-GmMYB4) encoding GFP were constructed for soybean hairy root experiments. In this study, the overexpression empty vector (OE-EV) and RNAi empty vector (RNAi-EV) were used as controls. The pMDC83-GmMYB4-OE and pB7GWIWG2(2)-GmMYB4-RNAi constructs, along with the corresponding empty vectors pMDC83-EV and pB7GWIWG2(2)-EV, were subsequently transformed into the A. tumefaciens strain K599. Seeds of the cultivar 'Jack' were surface sterilised with chlorine gas and subsequently germinated on 1/2 MS (PhytoTech, M519) for approximately 6 days under a 16h light/8h dark photoperiod at $25^{\circ}\mathrm{C}$ until the cotyledons achieved full green colouration. A scalpel was used to bisect the two cotyledon lobes and create a $0.5\mathrm{cm}^2$ wound on the abaxial surface. A. tumefaciens cultures were grown to an optical density at $600\mathrm{nm}$ $(\mathrm{OD}_{600})$ of 0.85-0.9, harvested by centrifugation, and resuspended in $10\mathrm{mM}$ magnesium chloride to adjust the $\mathrm{OD}_{600}$ to 0.5-0.6. This mixture was subsequently applied to the wound site to induce hairy root formation. The infected soybean cotyledons were cultured on white medium (Solarbio, LA6790) in the dark at $25^{\circ}\mathrm{C}$ for 2 weeks, after which they were transferred to fresh medium for an additional 2 weeks. Transgenic hairy roots were screened using portable hand-held green-red light (luyer-3260, Shanghai, China) for subsequent gene expression and isoflavone content analysis. This light can excite green fluorescent protein to distinguish transgenic and nontransgenic hairy roots quickly. The primers used are listed in Table S8. 
+
+The CRISPR/Cas9 system was utilised to knock out GmMYB4, with target sites selected via the CRISPR-P 2.0 web tool (http:// crispr.hzau.edu.cn/CRISPR2/) on the basis of the GC content and putative off-target sites. Four sgRNAs were designed and integrated into the pGmUbi-Cas9- $4\times \mathrm{sgR}$ vector following the method described by Zhang et al. (2020). To generate overexpression lines, the full-length GmMYB4 CDS was incorporated into the pBA002 vector. These vectors were subsequently transformed into A. tumefaciens strain EHA105, which was subsequently introduced into 'Jack' via the cotyledon junction method (Paz et al. 2006). The T4 positive plants were identified by PCR amplification (Figure S4) and Sanger sequencing (Figure S5). The primers used are listed in Table S8. 
+
+# 4.7 | Measurement of the Total Anthocyanin Content
+
+Anthocyanins were extracted from $0.5\mathrm{g}$ fresh soybean leaves via a methanol:HCl (99:1, v/v) solution as previously described (Ni et al. 2017). The absorbances at 530, 620 and $650\mathrm{nm}$ were measured via the SpectraMax Paradigm (Molecular Devices, USA). The anthocyanin optical density value $A_{\lambda}$ was calculated 
+
+using the following formula: $[(A_{530} - A_{620}) - 0.1\times (A_{650} - A_{620})]$ . The anthocyanin content (nmol/g) was calculated via the following formula: $(A_{\lambda} / \varepsilon)\times (\mathrm{V / m})$ . Molar extinction coefficient of anthocyanins, $\varepsilon = 4.62\times 10^{4}$ . 
+
+# 4.8 | RNA-Seq and DAP-Seq
+
+Total RNA was extracted from leaves harvested from R2-stage wild-type plants, overexpression (OE) lines and knockout (ko) lines with a Total RNA Kit (AC0103; Sparkjade, Shandong, China). The assessment of RNA quality, library construction and sequencing on an Illumina NovaSeq 6000 platform was executed by Bluescape (Hebei, China). The reference genome data used for alignment were from the Phytozome database (https:// phytozome next.jgi.doe.gov/info/Gmax_Wm82_a4_v1). The expression levels of each gene were quantified via the fragments per kilobase of exon per million mapped reads (FPKM) method. DEGs between two given samples were identified on the basis of a fold change exceeding 2 and a false discovery rate (FDR) $< 0.05$ . Gene Ontology (GO) and Kyoto Encyclopedia of Genes and Genomes (KEGG) pathway analyses were performed for functional enrichment via GOATOOLS and KOBAS, respectively. For sequencing, three biological replicates were used for the GmMYB4 overexpression line, gmmyb4 mutant, and WT plants, with each replicate consisting of samples from five separate plants. 
+
+DAP-seq analysis was conducted following the method described by Bartlett et al. (2017) at Bluescape Hebei Biotechnology Company. Genomic DNA (gDNA) from the leaves of 30-day-old 'Jack' plants was extracted via the CTAB method (Kuo et al. 2022). The gDNA was then sheared into fragments of approximately 100-400 bp by a Covaris M220 (Covaris, USA) and subsequently used to construct a library via a NEXTFLEX Rapid DNA Seq Kit (PerkinElmer Inc., Austin, TX, USA). The CDS of GmMYB4 was cloned and inserted into the pFN19K HaloTag T7 SP6 flexxi vector, expressed via the TNT SP6-coupled wheat germ extraction system (Promega, Madison, WI, USA), and captured via Magne Halo Tag Beads (Promega). The purified protein was incubated with the gDNA library. DNA was eluted from two technical replicates and from a library incubated with beads without added protein as a negative control. The captured DNA was sequenced on an Illumina NaveSeq6000. Bowtie2 (Langmead and Salzberg 2012) was subsequently used to map the reads to the soybean genome data from the Phytozome database (https://phytozome next.jgi.doe.gov/info/Gmax_Wm82_a4_v1). The peaks from two biological duplicates with $p < 0.05$ were merged via MACS2 callpeaks (Zhang et al. 2008), and the reliability of these repeated peaks was scored with IDR software. Bound peaks were annotated via HOMER (Heinz et al. 2010), and conserved motifs in the peak regions were identified via MEME software (Machanick and Bailey 2011). 
+
+# 4.9 | Electrophoretic Mobility Shift Assay
+
+The GmMYB4-GST fusion protein was expressed in the Escherichia coli strain Rosetta 2 (DE3). The expression of the genes was induced with IPTG $(1\mathrm{mol / L}$ $66.7\mu \mathrm{L}$ of IPTG was 
+
+added for every $200\mathrm{mL}$ of bacterial mixture), and the protein was purified with protein purification resins and eluted with glutathione elution buffer. EMSAs were performed via a chemiluminescent EMSA kit (Beyotime, Shanghai, China) according to the manufacturer's instructions. Approximately $2\mu \mathrm{L}$ of purified GmMYB4-GST or GST protein and $1\mu \mathrm{L}$ of biotin-labelled probe were mixed, resulting in a total reaction volume of $20\mu \mathrm{L}$ . An unlabelled probe $(1\mu \mathrm{L})$ was added to this mixture as a competitor. The probe sequence used in the EMSA is provided in Figure 4a. 
+
+# 4.10 | Measurement of the Total Flavonoid and Proanthocyanidin Content
+
+Seed powder $(0.1\mathrm{g})$ was subjected to sequential extraction for flavonoids and proanthocyanidins. Flavonoid extraction was performed using $1\mathrm{mL}$ of $60\%$ ethanol with ultrasonication $(40\mathrm{kHz}, 300\mathrm{W})$ at $60^{\circ}\mathrm{C}$ for $30\mathrm{min}$ . Proanthocyanidin extraction employed $1\mathrm{mL}$ of commercial extraction buffer (kit-provided) under identical ultrasonic conditions $(40\mathrm{kHz}, 300\mathrm{W})$ but at $25^{\circ}\mathrm{C}$ for $30\mathrm{min}$ . Following extraction, samples were centrifuged at $12000\mathrm{rpm}$ for $10\mathrm{min}$ to obtain supernatants for analysis. 
+
+For quantification, standard curves were generated using serial dilutions of authentic reference compounds. Flavonoid content was determined after a $45\mathrm{min}$ incubation at $37^{\circ}\mathrm{C}$ with a chromogenic reagent, measuring absorbance at $470\mathrm{nm}$ . Proanthocyanidin quantification involved a $30\mathrm{min}$ reaction at $30^{\circ}\mathrm{C}$ with absorbance measurement at $500\mathrm{nm}$ . Sample concentrations were calculated against respective standard curves and normalised by dilution factors and sample mass to determine final content. The Plant Flavonoid Content Detection Kit (Catalogue No. BC1335; Solarbio, Beijing, China) is for quantitative analysis of flavonoid, and the Plant Proanthocyanidin Content Detection Kit (Catalogue No. BC1355; Solarbio, Beijing, China) is for proanthocyanidin detection. 
+
+# 4.11 | Firefly Luciferase Complementation Imaging Assay
+
+Firefly luciferase complementation imaging assays were performed as previously described (Chen et al. 2008). For vector construction, full-length CDSs were amplified and inserted into pCAMBIA1300-35S-nLUC and pCAMBIA1300-35S-cLUC to generate recombinant plasmids. Plasmid vectors for testing protein-protein interactions (GmMYB4-cLUC, GmMYB115-cLUC, GmTT8-nLUC, GmGL3-nLUC and GmEGL3-nLUC) were cotransfected into $N.$ benthamiana leaves via Agrobacterium-mediated infiltration. In brief, Agrobacterium strains carrying the cLUC and nLUC vectors were suspended and mixed in infiltration buffer $(10\mathrm{mM}$ 2-(N-morpholino)ethanesulfonic acid $[\mathrm{pH} = 5.6]$ , $10\mathrm{mM}$ $\mathrm{MgCl}_2$ and $150\mu \mathrm{M}$ acetosyringone). After $3\mathrm{h}$ of incubation at room temperature in the dark, the suspensions were infiltrated into young, fully expanded $N.$ benthamiana leaves. The plants were then incubated at $22^{\circ}\mathrm{C}$ for 2 days before luciferase activity was measured. Images were captured via a Berthold LB 985 plant imaging system. The primers used are listed in Table S8. 
+
+# 4.12 | Bimolecular Fluorescence Complementation (BiFC) Assay
+
+Agrobacterium-mediated transient infiltration of the constructs into $N$ . benthamiana leaves facilitated the BiFC analysis. The CDSs of GmMYB4, GmMYB115 and other genes were amplified via PCR and subsequently cloned and inserted into the vectors pSPYCE-35S and pSPYNE-35S, respectively. These recombinant vectors, designated GmMYB4-YFPc, GmMYB115-YFPc, and the interacting gene YFPn, were then infiltrated into tobacco leaves to achieve transient gene expression. Following a normal growth period of 2 days, the epidermal cells of the infiltrated leaves were subjected to imaging with a confocal laser scanning microscope (Leica SP8). The primers used are listed in Table S8. 
+
+# 4.13 | Yeast Two-Hybrid (Y2H) Assay
+
+Y2H assays were conducted via a Y2HGold Chemically Competent Cell Kit (Collaber, CC309, Beijing, China). The CDS of GmMYB4 was subsequently cloned and inserted into the pGBKT7 vector (P2135, NovoPro, China) to generate the bait protein vector. The recombinant plasmid was then transferred into the Y2HGold yeast strain to assess self-activation of the bait protein on SD-Trp/-His/-Ade culture plates. The CDSs of GmTT8, GmGL3, GmEGL3, GmMAPK6, GmMAPKK2, CA-GmMAPK6 and CA-GmMAPKK2, excluding the stop codons, were subsequently cloned and inserted into the pGADT7 vector to generate the prey protein vectors. Bait protein and prey protein vectors were cotransferred into the Y2HGold yeast strain, and the resulting cells were cultured on SD-Trp/-Leu plates for 3-4 days. Six single colonies were selected from each selection plate and spotted onto SD-Trp/-Leu/-His/-Ade/X-α-Gal synthetic dropout plates. The growth of the colonies cultured in an incubator at $30^{\circ}\mathrm{C}$ was observed after $8\mathrm{h}$ . The positive yeast colonies grew normally and exhibited a blue colour via a chromogenic reaction. The primers used are listed in Table S8. 
+
+# 4.14 | Yeast One-Hybrid (Y1H) Assays
+
+Fragments of the GmANS3, GmOMT5, Gm4CL, GmIFS2, GmANR2, GmF3H1, GmUGT, GmPAL1.3, GmC4H and GmCHS8 promoters were cloned from the soybean accession NJAU_32 and subsequently inserted into the pLacZi vector. Additionally, the full-length CDSs of GmMYB4 and GmMYB115 were cloned from the soybean accession NJAU_32 and integrated into the pB42AD vector. The full-length CDSs of GmTT8, GmGL3, and GmEGL3 were also cloned from the soybean accession NJAU_32 and incorporated into the pGADT7 (AD) vector. Y1H assays were conducted via a Y1HGold Chemically Competent Cell Kit (Collaber, CC308, Beijing, China). The steps for screening positive colonies were the same as those for Y2H. The primers used for these processes are listed in Table S8. 
+
+# 4.15 | Dual-Luciferase (Dual-LUC) Reporter Assay
+
+DNA fragments of the GmIFS2 and GmANS3 promoters were integrated into the pGreenII-0800-LUC vector, generating the reporter gene vector. The CDSs of GmMYB4, 
+
+GmMYB115, GmTT8 and GmTTG1 were incorporated into the pBA002 vector under the control of the CaMV 35S promoter to generate the effector construct. These reporter and effector constructs were introduced into A. tumefaciens strain GV3101 (pSoup-p19; Beijing Zoman Biotechnology Co. Ltd., ZK3718) and cotransferred into N. benthamiana leaves. The firefly and Renilla luciferase activities were quantified via a dual-luciferase assay kit (Yesen, 11401ES60). The luciferase signal was measured with a plant in vivo imaging system instrument (Berthold LB 985). The relative reporter expression level was determined as the ratio of firefly luciferase activity to Renilla luciferase activity. Three biological replicates were established for each Dual-LUC assay, with samples from three cotransformed leaves used as one replicate. The primers used are listed in Table S8. 
+
+# 4.16 | Coimmunoprecipitation (Co-IP) Assay
+
+The full-length CDSs of GmMYB4, GmMAPK6, and GmMAPKK2 were subsequently cloned and inserted into the pTF101-3FLAG and pTF101-6HA vectors, resulting in the GmMYB4-FLAG, GmMAPK6-HA and GmMAPKK2-HA constructs, respectively. These vectors were then transformed into A. tumefaciens strain EHA105 and subsequently cotransferred into N. benthamiana leaves. After 2 days, the infiltrated leaves were collected, and total protein extracts were incubated with anti-FLAG agarose (M20018M; Abmart) in Co-IP buffer (1 M Tris-MES $\left[\mathrm{pH}=8\right]$ , $1\mathrm{M}\mathrm{MgCl}_2\cdot 6\mathrm{H}_2\mathrm{O}$ , $0.5\mathrm{M}$ EDTA, $1\mathrm{M}$ DTT, $1\times$ protease inhibitor cocktail, and sucrose) and immunoprecipitated with Protein A/G PLUS-Agarose beads (sc-2003; Santa Cruz Biotechnology, USA) by incubation for $3\mathrm{h}$ . The supernatant was then incubated with anti-FLAG agarose beads (M185-10R; Medical & Biological Laboratories Co. Ltd., Japan) overnight at $4^{\circ}\mathrm{C}$ . The beads were subsequently washed three times with Co-IP buffer and boiled with $2\times$ SDS at $100^{\circ}\mathrm{C}$ for $5\mathrm{min}$ to detach the proteins from the beads. The proteins were separated on a $12\%$ polyacrylamide gel electrophoresis (PAGE) gel and transferred onto a polyvinylidene difluoride membrane (Millipore, ISEQ00010). The proteins were detected with either an anti-FLAG (A8592; Sigma-Aldrich) or anti-HA (M180-7; MBL) antibody. A chemiluminescence detector (Tanon, 5200Multi) was used for imaging. The primers used are listed in Table S8. 
+
+# 4.17 | In Vitro Phosphorylation and LC-MS/MS Analysis
+
+The full-length GmMYB4 CDS was cloned and inserted into the pGEX-2T-GST vector. The GmMPK6 $^{\text{D214G}}$ , E218A (CA-GmMAPK6) CDS was ligated into the pET-30a-His vector. The GmMYB4-GST and CA-GmMAPK6-His fusion proteins were expressed in the $E.$ coli strains Rosetta 2 (DE3) and BL21 (DE3), respectively, and purified with the corresponding affinity beads. Equal amounts of GmMYB4-GST and CA-GmMAPK6-His proteins were added to $200\mu \mathrm{L}$ of phosphorylation buffer $(1\times \mathrm{PKA}$ buffer and ATP) and incubated in a water bath for $30\mathrm{min}$ at $30^{\circ}\mathrm{C}$ . The reaction was stopped by adding SDS loading buffer at $4^{\circ}\mathrm{C}$ and boiling at $100^{\circ}\mathrm{C}$ for $5\mathrm{min}$ . The reaction products were subjected to electrophoresis 
+
+on $10\%$ (w/v) SDS-PAGE gels for LC-MS/MS analysis (Beijing BiotechPack Scientific). 
+
+The Coomassie-stained bands corresponding to purified GmMYB4-GST, on the basis of its predicted molecular weight, were excised from the SDS-PAGE gel and treated with trypsin. The GmMYB4-GST protein phosphorylated by CA-GmMAPK6-His in vitro was subjected to standard in-solution chymotryptic digestion. After enzymatic digestion, the surfactants were removed by adding extraction solution (5% [v/v] trifluoroacetic acid, 50% [v/v] acetonitrile, and 45% [v/v] ddH $_2$ O). The extracted peptides were lyophilised to near dryness and then resuspended in 10 μL of 0.1% (v/v) formic acid before LC-MS/MS analysis. The analysis was performed via a Q Exactive mass spectrometer (Thermo Fisher Scientific, Waltham, MA, USA) equipped with a nanoelectrospray ion source and connected to a nanoflow HPLC instrument (EASY-nLC1200 system; Thermo Fisher Scientific). Peptides were separated on a 100μm i.d. ×180 mm column (Reprosil-Pur 120 C18-AQ 3μm) at a flow rate of 600 nL/min while running an 80% acetonitrile gradient and were sprayed directly into the mass spectrometer. The 18 most intense peptide ions from the preview scan in the Orbitrap were acquired. The phosphopeptides were identified and quantified on the basis of the extracted ion chromatogram peak area via MaxQuant (1.6.2.10), with carbamidomethylation as a fixed modification and phosphorylation and oxidation as variable modifications. 
+
+# 4.18 | Statistical Analysis
+
+In this study, all values are presented as means $\pm$ SD, and the number $(n)$ of samples or replicates is indicated in the figure legends. Significant differences were analysed using Student's $t$ test for pairwise comparisons and one-way analysis of variance (ANOVA) with Duncan's test for comparisons between multiple groups and are indicated with $p$ values or different letters. 
+
+# 5 | Accession Numbers
+
+Sequence data in this article can be found in the Phytozome database (https://phytozome next.jgi.doe.gov/info/Gmax_Wm82_a4_v1) for the following genes: GmMYB4 (Glyma.11g107100), GmANS2 (Glyma.01g214200), GmANS3 (Glyma.11g027700), GmOMT5 (Glyma.05g223400), Gm4CL (Glyma.13g323000), GmIFS2 (Glyma.13g173500), GmIFS1 (Glyma.07g202300), GmANR2 (Glyma.08g062100), GmF3H1 (Glyma.02g048600), GmUGT (Glyma.08g066800), GmPAL1.3 (Glyma.03G181600), GmC4H (Glyma.02g236500), GmCHS8 (Glyma.11g011500), GmCHR1 (Glyma.14g005700), GmCHI1 (Glyma.20g241500), GmMYB115 (Glyma.07g037700), GmTT8 (Glyma.02g147800), GmGL3 (Glyma.05G208300), GmEGL3 (Glyma.08G014900), GmTTG1 (Glyma.06G136900), GmMAPK6 (Glyma.02g138800) and GmMAPKK2 (Glyma.17g052400). 
+
+# Author Contributions
+
+D.Y., H.C. and C.Y. conceived the study. C.Y., P.J., Y.S., J.W., W.H., Z.Y., W.Z., S.C. and Y.P. performed the experiments. C.Y. analysed data. C.Y., 
+
+
+
+P.Z., J.W., H.C. and D.Y. wrote the paper. All authors read and approved this manuscript. 
+
+
+
+# Acknowledgements
+
+This work was supported in part by the National Key Research and Development Program of China (2023YFD1200600, 2021YFF1001204), the National Natural Science Foundation of China (32472177), Horizon 2020 of the European Union (727312), Zhejiang Provincial Natural Science Foundation (LY24C130003) and the Bioinformatics Center of Nanjing Agricultural University. 
+
+# Conflicts of Interest
+
+The authors declare no conflicts of interest. 
+
+# Data Availability Statement
+
+The data that supports the findings of this study are available in the Supporting Information of this article. 
+
+# References
+
+
+
+Ahmed, Q. U., A. H. M. Ali, S. Mukhtar, et al. 2020. "Medicinal Potential of Isoflavonoids: Polyphenols That May Cure Diabetes." *Molecules* 25: 5491. 
+
+
+
+
+
+Albert, N. W., K. M. Davies, D. H. Lewis, et al. 2014. "A Conserved Network of Transcriptional Activators and Repressors Regulates Anthocyanin Pigmentation in Eudicots." Plant Cell 26: 962-980. 
+
+
+
+
+
+Anguraj Vadivel, A. K., T. McDowell, J. B. Renaud, and S. Dhaubhadel. 2021. "A Combinatorial Action of GmMYB176 and GmbZIP5 Controls Isoflavonoid Biosynthesis in Soybean (Glycine max)." Communications Biology 4: 356. 
+
+
+
+
+
+Azam, M., S. Zhang, J. Li, et al. 2023. "Identification of Hub Genes Regulating Isoflavone Accumulation in Soybean Seeds via GWAS and WGCNA Approaches." Frontiers in Plant Science 14: 1120498. 
+
+
+
+
+
+Bartlett, A., R. C. O'Malley, S. S. C. Huang, et al. 2017. "Mapping Genome-Wide Transcription-Factor Binding Sites Using DAP-Seq." Nature Protocols 12: 1659-1672. 
+
+
+
+
+
+Baudry, A., M. A. Heim, B. Dubreucq, M. Caboche, B. Weisshaar, and L. Lepiniec. 2004. "TT2, TT8, and TTG1 Synergistically Specify the Expression of BANYULS and Proanthocyanidin Biosynthesis in Arabidopsis thaliana." Plant Journal 39: 366-380. 
+
+
+
+
+
+Berriri, S., A. V. Garcia, N. Frei dit Frey, et al. 2012. "Constitutively Active Mitogen-Activated Protein Kinase Versions Reveal Functions of Arabidopsis MPK4 in Pathogen Defense Signaling." Plant Cell 24: 4281-4293. 
+
+
+
+
+
+Bian, S., R. Li, S. Xia, et al. 2018. "Soybean CCA1-Like MYB Transcription Factor GmMYB133 Modulates Isoflavonoid Biosynthesis." Biochemical and Biophysical Research Communications 507: 324-329. 
+
+
+
+
+
+Campion, E. M., and S. T. Loughran. 2021. "Gene Expression Analysis by Reverse Transcription Quantitative PCR." Methods in Molecular Biology 2283: 61-74. 
+
+
+
+
+
+Chen, H., Y. Zou, Y. Shang, et al. 2008. "Firefly Luciferase Complementation Imaging Assay for Protein-Protein Interactions in Plants." Plant Physiology 146: 368-376. 
+
+
+
+
+
+Chen, L. R., and K. H. Chen. 2021. "Utilization of Isoflavones in Soybeans for Women With Menopausal Syndrome: An Overview." International Journal of Molecular Sciences 22: 3212. 
+
+
+
+
+
+Chu, S., J. Wang, Y. Zhu, et al. 2017. "An R2R3-Type MYB Transcription Factor, GmMYB29, Regulates Isoflavone Biosynthesis in Soybean." PLoS Genetics 13: e1006770. 
+
+
+
+
+
+Dastmalchi, M., M. A. Bernards, and S. Dhaubhadel. 2016. "Twin Anchors of the Soybean Isoflavonoid Metabolon: Evidence for Tethering of the Complex to the Endoplasmic Reticulum by IFS and C4H." Plant Journal 8: 689-706. 
+
+
+
+
+
+Dong, N. Q., and H. X. Lin. 2021. "Contribution of Phenylpropanoid Metabolism to Plant Development and Plant-Environment Interactions." Journal of Integrative Plant Biology 63: 180-209. 
+
+
+
+
+
+Dubos, C., J. Le Gourrierec, A. Baudry, et al. 2008. "MYBL2 Is a New Regulator of Flavonoid Biosynthesis in Arabidopsis thaliana." Plant Journal 55: 940-953. 
+
+
+
+
+
+Gai, Q. Y., J. Jiao, X. Wang, J. Liu, Z. Y. Wang, and Y. J. Fu. 2019. "Chitosan Promoting Formononetin and Calycosin Accumulation in Astragalus Membranaceus Hairy Root Cultures via Mitogen-Activated Protein Kinase Signaling Cascades." Scientific Reports 9: 10367. 
+
+
+
+
+
+Gonzalez, A., M. Zhao, J. M. Leavitt, and A. M. Lloyd. 2008. "Regulation of the Anthocyanin Biosynthetic Pathway by the TTG1/bHLH/Myb Transcriptional Complex in Arabidopsis Seedlings." Plant Journal 53: 814-827. 
+
+
+
+
+
+Han, X., Q. Yin, J. Liu, W. Jiang, S. Di, and Y. Pang. 2017. "GmMYB58 and GmMYB205 Are Seed-Specific Activators for Isoflavonoid Biosynthesis in Glycine max." Plant Cell Reports 36: 1889-1902. 
+
+
+
+
+
+Heinz, S., C. Benner, N. Spann, et al. 2010. "Simple Combinations of Lineage-Determining Transcription Factors Prime Cis-Regulatory Elements Required for Macrophage and B Cell Identities." Molecular Cell 38: 576-589. 
+
+
+
+
+
+Hu, D., Y. Zhao, L. Zhu, et al. 2024. "Genetic Dissection of Ten Photosynthesis-Related Traits Based on InDel- and SNP-GWAS in Soybean." Theoretical and Applied Genetics 137: 96. 
+
+
+
+
+
+Jiang, H., S. Qu, F. Liu, et al. 2025. "Multi-Omics Analysis Identified the GmUGT88A1 Gene, Which Coordinate Regulates Soybean Resistance to Cyst Nematode and Isoflavone Content." Plant Biotechnology Journal 23: 1291-1307. 
+
+
+
+
+
+Kuo, P., I. R. Henderson, and C. Lambing. 2022. "CTAB DNA Extraction and Genotyping-By-Sequencing to Map Meiotic Crossovers in Plants." Methods in Molecular Biology 2484: 43-53. 
+
+
+
+
+
+Langmead, B., and S. L. Salzberg. 2012. "Fast Gapped-Read Alignment With Bowtie 2." Nature Methods 9: 357-359. 
+
+
+
+
+
+Li, H., Z. Yang, Q. Zeng, et al. 2020. "Abnormal Expression of bHLH3 Disrupts a Flavonoid Homeostasis Network, Causing Differences in Pigment Composition Among Mulberry Fruits." Horticulture Research 7: 83. 
+
+
+
+
+
+Li, P. 2017. "Exploration on the Regulatory Mechanism for Synthesis of Flavonoids and Isoflavones in Legumes." PhD Dissertation. 
+
+
+
+
+
+Li, P., Q. Dong, S. Ge, et al. 2016. "Metabolic Engineering of Proanthocyanidin Production by Repressing the Isoflavone Pathways and Redirecting Anthocyanidin Precursor Flux in Legume." Plant Biotechnology Journal 14: 1604-1618. 
+
+
+
+
+
+Li, S., W. Wang, J. Gao, et al. 2016. "MYB75 Phosphorylation by MPK4 Is Required for Light-Induced Anthocyanin Accumulation in Arabidopsis." Plant Cell 28: 2866-2883. 
+
+
+
+
+
+Liu, Y., S. Zhang, J. Li, et al. 2024. "An R2R3-Type MYB Transcription Factor, GmMYB77, Negatively Regulates Isoflavone Accumulation in Soybean [Glycine max(L.) Merr.]" Plant Biotechnology Journal 23: 824-838. 
+
+
+
+
+
+Lu, S., L. Dong, C. Fang, et al. 2020. "Stepwise Selection on Homeologous PRR Genes Controlling Fowering and Maturity During Soybean Domestication." Nature Genetics 52: 428-436. 
+
+
+
+
+
+Machanick, P., and T. L. Bailey. 2011. "MEME-ChIP: Motif Analysis of Large DNA Datasets." Bioinformatics 27: 1696-1697. 
+
+
+
+
+
+Mao, W., Y. Han, Y. Chen, et al. 2022. "Low Temperature Inhibits Anthocyanin Accumulation in Strawberry Fruit by Activating 
+
+
+
+
+
+FvMAPK3-Induced Phosphorylation of FvMYB10 and Degradation of Chalcone Synthase 1." Plant Cell 34: 1226-1249. 
+
+
+
+
+
+Ni, J., S. Bai, L. Gao, M. Qian, L. Zhong, and Y. Teng. 2017. "Identification, Classification, and Transcription Profiles of the B-Type Response Regulator Family in Pear." PLoS One 12: e0171523. 
+
+
+
+
+
+Pandey, A., P. Misra, M. P. Khan, et al. 2014. "Co-Expression of Arabidopsis Transcription Factor, AtMYB12, and Soybean Isoflavone Synthase, GmIFS1, Genes in Tobacco Leads to Enhanced Biosynthesis of Isoflavones and Flavonols Resulting in Osteoprotective Activity." Plant Biotechnology Journal 12: 69-80. 
+
+
+
+
+
+Paz, M. M., J. C. Martinez, A. B. Kalvig, T. M. Fonger, and K. Wang. 2006. "Improved Cotyledonary Node Method Using an Alternative Explant Derived From Mature Seed for Efficient Agrobacterium-Mediated Soybean Transformation." Plant Cell Reports 25: 206-213. 
+
+
+
+
+
+Ren, D., H. Yang, and S. Zhang. 2002. "Cell Death Mediated by MAPK Is Associated With Hydrogen Peroxide Production in Arabidopsis." Journal of Biological Chemistry 277: 559-565. 
+
+
+
+
+
+Rieu, D., A. Bocquet, J. L. Bresson, et al. 2006. "Phyto-Estrogénes et Aliments à Base de Soja Chez le Nourrisson et l'Enfant: La Prudence Est de Mise [Phytoestrogens and Soy Foods in Infants and Children: Caution is Needed]. Archives de Pediatrie 13: 1091-1093. 
+
+
+
+
+
+Segura, V., B. J. Vilhjalmsson, A. Platt, et al. 2012. "An Efficient Multi-Locus Mixed-Model Approach for Genome-Wide Association Studies in Structured Populations." Nature Genetics 44: 825-830. 
+
+
+
+
+
+Sharifi-Rad, J., C. Quispe, M. Imran, et al. 2021. "Genistein: An Integrative Overview of Its Mode of Action, Pharmacological Properties, and Health Benefits." Oxidative Medicine and Cellular Longevity 2021: 3268136. 
+
+
+
+
+
+Wang, X. C., J. Wu, M. L. Guan, C. H. Zhao, P. Geng, and Q. Zhao. 2020. "Arabidopsis MYB4 Plays Dual Roles in Flavonoid Biosynthesis." Plant Journal 101: 637-652. 
+
+
+
+
+
+Wu, D., D. Li, X. Zhao, et al. 2020. "Identification of a Candidate Gene Associated With Isoflavone Content in Soybean Seeds Using Genome-Wide Association and Linkage Mapping." Plant Journal 104: 950-963. 
+
+
+
+
+
+Xu, F., Y. Ning, W. Zhang, et al. 2014. "An R2R3-MYB Transcription Factor as a Negative Regulator of the Flavonoid Biosynthesis Pathway in Ginkgo biloba." Functional & Integrative Genomics 14: 177-189. 
+
+
+
+
+
+Xu, W., C. Dubos, and L. Lepiniec. 2015. "Transcriptional Control of Flavonoid Biosynthesis by MYB-bHLH-WDR Complexes." Trends in Plant Science 20: 176-185. 
+
+
+
+
+
+Yi, J., M. R. Derynck, X. Li, P. Telmer, F. Marsolais, and S. Dhaubhadel. 2010. "A Single-Repeat MYB Transcription Factor, GmMYB176, Regulates CHS8 Gene Expression and Affects Isoflavonoid Biosynthesis in Soybean." Plant Journal 62: 1019-1034. 
+
+
+
+
+
+Yin, X., Y. Zhang, L. Zhang, et al. 2021. "Regulation of MYB Transcription Factors of Anthocyanin Synthesis in Lily Flowers." Frontiers in Plant Science 12: 761668. 
+
+
+
+
+
+Yu, O., J. Shi, A. O. Hession, A. A. Maxwell, B. McGonigle, and J. T. Odell. 2003. "Metabolic Engineering to Increase Isoflavone Biosynthesis in Soybean Seeds." Phytochemistry 63: 753-763. 
+
+
+
+
+
+Zhang, B., D. Chopra, A. Schrader, and M. Hulskamp. 2019. "Evolutionary Comparison of Competitive Protein-Complex Formation of MYB, bHLH, and WDR Proteins in Plants." Journal of Experimental Botany 70: 3197-3209. 
+
+
+
+
+
+Zhang, L., Y. Wang, M. Sun, J. Wang, S. Kawabata, and Y. Li. 2014. "BrMYB4, a Suppressor of Genes for Phenylpropanoid and Anthocyanin Biosynthesis, Is Downregulated by UV-B but Not by Pigment-Inducing Sunlight in Turnip cv. Tsuda." Plant & Cell Physiology 55: 2092-2101. 
+
+
+
+
+
+Zhang, M., and S. Zhang. 2022. "Mitogen-Activated Protein Kinase Cascades in Plant Signaling." Journal of Integrative Plant Biology 64: 301-341. 
+
+
+
+
+
+Zhang, P., H. Du, J. Wang, et al. 2020. "Multiplex CRISPR/Cas9-Mediated Metabolic Engineering Increases Soya Bean Isoflavone Content and Resistance to Soya Bean Mosaic Virus." Plant Biotechnology Journal 18: 1384-1395. 
+
+
+
+
+
+Zhang, P., C. Yang, J. Wang, et al. 2024. "Cytochrome GmGLY1 Is Involved in the Biosynthesis of Glycine in Soybean." Journal of Agricultural and Food Chemistry 72: 10944-10957. 
+
+
+
+
+
+Zhang, Y., T. Liu, C. A. Meyer, et al. 2008. "Model-Based Analysis of ChIP-Seq (MACS)." Genome Biology 9: R137. 
+
+
+
+
+
+Zhao, M., T. Wang, P. Wu, et al. 2017. "Isolation and Characterization of GmMYBJ3, an R2R3-MYB Transcription Factor That Affects Isoflavonoids Biosynthesis in Soybean." PLoS One 12: e0179990. 
+
+
+
+
+
+Zimmermann, I. M., M. A. Heim, B. Weisshaar, and J. F. Uhrig. 2004. "Comprehensive Identification of Arabidopsis thaliana MYB Transcription Factors Interacting With R/B-Like BHLH Proteins." Plant Journal 40: 22-34. 
+
+
+
+# Supporting Information
+
+Additional supporting information can be found online in the Supporting Information section. Figure S1: Schematic depiction of phenylpropanoid metabolism in plants. Figure S2: Phylogenetic analysis and expression patterns of GmMYB4 in soybean. Figure S3: Genetic transformation experiments for GmMYB4 in soybean hairy roots. Figure S4: Positive identification of GmMYB4 overexpression lines via PCR. Figure S5: Mutation of GmMYB4 knockout lines mediated via CRISPR/Cas9. Figure S6: GmMYB4 expression levels in GmMYB4 transgenic lines. Figure S7: Determination of isoflavone content in leaves of double-knockout mutant lines. Figure S8: Expression levels of GmIFS2 and isoflavone content in GmIFS2 overexpression lines. Figure S9: The anthocyanin content in GmMYB4 transgenic lines. Figure S10: The flavonoid and proanthocyanidin content in GmMYB4 transgenic lines. Figure S11: Yeast one-hybrid (Y1H) assay between GmMYB4 and the promoters of genes in the isoflavone pathway. Figure S12: Multiple sequence alignments of GmMYB4 and other MYB TF proteins. Figure S13: In vitro phosphorylation of GmMYB4 by CA-GmMAPK6 and LC-MS/MS analysis for phosphorylation site identification. Figure S14: Isoflavone content and gene relative expression levels in soybean hairy roots. Figure S15: Multiple sequence alignments of GmMYB4, GmMYB115 and other MYB TFs related to flavonoid synthesis. Table S1: SNPs associated with seed GLC were repeatedly identified on chromosome 11. Table S2: Genes in candidated regions based on the Williams 82 reference genome. Table S3: KEGG enrichment analysis of DEGs between the GmMYB4 overexpression and wild-type lines. Table S4: KEGG enrichment analysis of DEGs between the gmmyb4 mutant and wild-type lines. Table S5: Joint analysis of DAP-seq data for GmMYB4 and RNA-seq data for the GmMYB4 overexpression lines. Table S6: GmMYB4 protein profile identification results after incubation with CA-GmMAPK6. Table S7: GmMYB4 protein profile identification results without incubation with CA-GmMAPK6. Table S8: Primers used in this study. 

@@ -1,0 +1,716 @@
+{
+  "file": "Nat_Commun_2023_Wang",
+  "md_path": "/data/haotianwu/biojson/extractor/input/Nat_Commun_2023_Wang.md",
+  "timestamp": "2026-03-28T11:53:07.325676",
+  "genes": [
+    {
+      "gene_name": "GuGT53",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The Data availability section lists GuGT53 with GenBank accession number OQ266890."
+        },
+        "Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper refers to the source plant as Glycyrrhiza uralensis or licorice/Gan-Cao, but does not explicitly use the species value 'Licorice' as a formal species designation for this gene field."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "GuGT53 is explicitly stated to be discovered/cloned from G. uralensis, i.e., Glycyrrhiza uralensis."
+        },
+        "Origin_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The source organism is Glycyrrhiza uralensis; 'Licorice' is a common name and not explicitly used as the origin-species field value in the paper for this gene."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'Then we discovered GuGT53 from G. uralensis' and later gives the accession in Data availability."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'GuGT53 (UGT88E28)' and GuGT53 is used as a glycosyltransferase; thus UDP-glycosyltransferase/UGT88E28 is supported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state that GuGT53 'could regio-selectively and efficiently catalyze 4′/4-O-glycosylation of liquiritigenin (1′) and 2′ into liquiritin (1) and isoliquiritin (2), respectively' and that replacing GuGT14 with GuGT53 improved isoliquiritin apioside yield in tobacco."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "GuGT53 is described in the engineered pathway leading to liquiritin apioside and isoliquiritin apioside production in tobacco."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Liquiritin apioside and isoliquiritin apioside are flavonoid apiosides in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states liquiritin apioside shows potent antitussive activity, but this function is tied specifically to liquiritin apioside, not explicitly to both terminal metabolites linked to GuGT53."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states (iso)liquiritin apiosides are major compounds in G. uralensis roots/rhizomes and reports de novo production in Nicotiana benthamiana leaves."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GuGT53 'showed a similar expression pattern as GuCHS, GuCHR, and GuApiGT' in G. uralensis, within the root-enriched coexpression context."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "GuGT53 was validated by enzyme assay and LC/MS, and functionally tested in transient pathway engineering in N. benthamiana."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summarized points are directly supported by the Results section describing discovery from G. uralensis, regioselective glycosylation activity, and improved 2a production upon replacement of GuGT14 with GuGT53."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses RNA-seq/transcriptome data from G. uralensis and provides BioProject PRJNA945816 in Data availability."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "GuGT53 was used in Agrobacterium-mediated transient expression in N. benthamiana leaves in the de novo biosynthesis experiments."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the Results: GuGT53 functions upstream in the engineered pathway, while GuApiGT performs the terminal apiosylation."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Species",
+          "old_value": "Licorice",
+          "new_value": "NA",
+          "reason": "The paper refers to the source plant as Glycyrrhiza uralensis or licorice/Gan-Cao, but does not explicitly use the species value 'Licorice' as a formal species designation for this gene field."
+        },
+        {
+          "field": "Origin_Species",
+          "old_value": "Licorice",
+          "new_value": "NA",
+          "reason": "The source organism is Glycyrrhiza uralensis; 'Licorice' is a common name and not explicitly used as the origin-species field value in the paper for this gene."
+        }
+      ],
+      "stats": {
+        "supported": 14,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "GuApiGT",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GuApiGT has GenBank accession number OQ201607."
+        },
+        "Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The formal source species is Glycyrrhiza uralensis; 'Licorice' is only a common name and not a species designation."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "GuApiGT was identified from Glycyrrhiza uralensis."
+        },
+        "Origin_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "As above, 'Licorice' is a common name rather than the explicit origin-species field used in the paper."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was cloned from G. uralensis cDNA."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly describes GuApiGT as an apiosyltransferase/phenolic apiosyltransferase for flavonoid glycosides."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "GuApiGT is a UDP-dependent glycosyltransferase, named UGT79B74, with GT-B fold, and a unique 45-aa PSPG box containing the RLGSDH motif, all explicitly stated."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The work concerns flavonoid apioside biosynthesis and identifies GuApiGT as the missing apiosylation enzyme in that pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GuApiGT catalyzes 2″-O-apiosylation of flavonoid glycosides, explicitly matching this branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "GuApiGT converts glycosides such as liquiritin/isoliquiritin to their apiosides, making it the terminal apiosylation step in these products' biosynthesis."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GuApiGT efficiently catalyzes 2″-O-apiosylation of flavonoid glycosides using UDP-Api."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Liquiritin and isoliquiritin are directly assayed acceptors, and UDP-apiose is the required sugar donor."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Liquiritin apioside, isoliquiritin apioside, and many other flavonoid 2″-O-apiosides are reported products of GuApiGT."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "GuApiGT directly forms the target apiosides from their glycoside precursors."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper identifies GuApiGT as the missing phenolic apiosylation step, but does not directly demonstrate it is rate-limiting."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show efficient regioselective 2″-O-apioside formation and de novo biosynthesis of at least 10 flavonoid apiosides in tobacco using GuApiGT with upstream genes."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Liquiritin apioside and isoliquiritin apioside are direct products formed by GuApiGT."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are flavonoid apiosides."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states liquiritin apioside shows potent antitussive activity and notes flavonoid apiosides are bioactive natural products that may play hormone-like roles."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports (iso)liquiritin apiosides in roots/rhizomes of G. uralensis and de novo production in N. benthamiana leaves."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state higher contents in roots prompted transcriptome analysis, and GuApiGT candidate MSTRG.23171.4 showed expression patterns similar to GuCHS and GuCHR."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are described in the Results and Methods: co-expression, RT-PCR cloning, recombinant assays, LC/MS, kinetics, crystal structure, mutagenesis, transient tobacco expression, metabolite profiling."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point is explicitly supported by the Results and conclusion."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq BioProject PRJNA945816 and GuApiGT structural data PDB 8HZZ are listed in Data availability."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Optimal pH 8.0 and 37°C, suppression by some divalent cations, and Agrobacterium-mediated transient expression in tobacco are all reported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "UAXS was co-used in donor supply systems and co-infiltrated in tobacco, but the paper does not show a direct physical protein-protein interaction with GuApiGT."
+        },
+        "Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states transient expression used pEAQ-HT-DEST1 with a 35S promoter."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Strict UDP-apiose preference, failure to use UDP-Xyl/UDP-Glc, 37 glycoside substrates accepted, not free flavonoids, and structural definition of selectivity residues are all in Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly presents GuApiGT as enabling de novo biosynthesis of bioactive flavonoid apiosides in tobacco, supporting engineering value."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Species",
+          "old_value": "Licorice",
+          "new_value": "NA",
+          "reason": "The formal source species is Glycyrrhiza uralensis; 'Licorice' is only a common name and not a species designation."
+        },
+        {
+          "field": "Origin_Species",
+          "old_value": "Licorice",
+          "new_value": "NA",
+          "reason": "As above, 'Licorice' is a common name rather than the explicit origin-species field used in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "PtApiGT",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists SsApiGT/PtApiGT/GiApiGT/GgApiGT as OQ230794-OQ230797; given the provided mapping and gene order, OQ230795 for PtApiGT is consistent though not individually spelled out in the main text."
+        },
+        "Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper uses the formal species Pueraria thomsonii, not the common name 'Kudzu'."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "PtApiGT is explicitly from P. thomsonii (Pueraria thomsonii)."
+        },
+        "Origin_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The source plant is given as Pueraria thomsonii, not explicitly as 'Kudzu'."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states PtApiGT was cloned from P. thomsonii."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "PtApiGT was identified as an apiosyltransferase by enzyme catalysis reactions."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PtApiGT is one of the candidate apiosyltransferase genes discovered using the unique 45-amino acid PSPG box filter, implying a UDP-dependent glycosyltransferase of this class."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is discussed in the context of flavonoid apioside/apiosyltransferase discovery in Leguminosae."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "As an apiosyltransferase it belongs to the apiosylation branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Apiosyltransferases directly install the apiose residue onto flavonoid glycosides, which is the terminal modification for flavonoid apiosides."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states PtApiGT was identified as an apiosyltransferase by enzyme catalysis reactions, supporting apiosylation of flavonoid glycosides."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact substrates used for PtApiGT are not specified in the main text excerpt, though flavonoid glycoside acceptors with UDP-Api are implied by the assay context."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Its identified function is as an apiosyltransferase, so flavonoid apiosides are the direct products."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "As an apiosyltransferase it directly forms the apioside product."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The value is 'Not established,' which matches the paper because no rate-limiting role is claimed for PtApiGT."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states PtApiGT was cloned and identified as an apiosyltransferase."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Flavonoid apiosides are the product class linked to PtApiGT."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "This class is explicitly the study focus for these ApiGTs."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper broadly states apiosides/flavonoid apiosides are bioactive natural products."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states PtApiGT was cloned and identified by enzyme catalysis reactions."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Motif-guided identification, experimental confirmation, and support for generality in Leguminosae are all stated in the relevant Results section."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene came from transcriptome database mining, and the accession is listed in Data availability."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states four additional enzymes were identified; PtApiGT is one of them."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Species",
+          "old_value": "Kudzu",
+          "new_value": "NA",
+          "reason": "The paper uses the formal species Pueraria thomsonii, not the common name 'Kudzu'."
+        },
+        {
+          "field": "Origin_Species",
+          "old_value": "Kudzu",
+          "new_value": "NA",
+          "reason": "The source plant is given as Pueraria thomsonii, not explicitly as 'Kudzu'."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "SsApiGT",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists the four ApiGT accession numbers as OQ230794-OQ230797; the provided mapping of SsApiGT to OQ230794 is consistent, though not individually assigned in the main text sentence."
+        },
+        "Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper uses the Latin species name Spatholobus suberectus, not 'Spatholobus' as a species value."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "SsApiGT is explicitly from S. suberectus (Spatholobus suberectus)."
+        },
+        "Origin_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not use 'Spatholobus' alone as the origin-species field value."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is explicitly S. suberectus."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "SsApiGT was identified as an apiosyltransferase by enzyme catalysis reactions."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "SsApiGT is one of the Leguminosae candidate genes found using the unique 45-aa PSPG box filter, supporting assignment as a UDP-dependent glycosyltransferase with this PSPG-box type."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is discussed in the context of flavonoid apioside biosynthesis/apiosyltransferases."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "As an apiosyltransferase it belongs to the apiosylation branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Apiosyltransferases catalyze the terminal apiosylation step to form flavonoid apiosides."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies SsApiGT as an apiosyltransferase by enzyme catalysis reactions, supporting this reaction description at a general level."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact acceptor substrates used for SsApiGT are not detailed in the provided main-text excerpt."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "As an apiosyltransferase, it produces flavonoid apiosides."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme directly forms the apioside product."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "No such role is established in the paper; therefore 'Not established' is appropriate."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says SsApiGT was identified as an apiosyltransferase."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Flavonoid apiosides are the direct product class."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These enzymes are characterized in the context of flavonoid apiosides."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper broadly describes apiosides/flavonoid apiosides as bioactive natural products."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods and Results indicate synthesis/cloning and enzyme catalysis assay; the Methods explicitly note the full length of SsApiGT was synthesized."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are consistent with motif-guided mining, functional validation, and conservation in Leguminosae reported in the paper."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was mined from online transcriptome databases and the accession range is given in Data availability."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The Methods explicitly state the full length of SsApiGT was synthesized for testing."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Species",
+          "old_value": "Spatholobus",
+          "new_value": "NA",
+          "reason": "The paper uses the Latin species name Spatholobus suberectus, not 'Spatholobus' as a species value."
+        },
+        {
+          "field": "Origin_Species",
+          "old_value": "Spatholobus",
+          "new_value": "NA",
+          "reason": "The paper does not use 'Spatholobus' alone as the origin-species field value."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "GgApiGT",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists the four ApiGT accessions in the OQ230794-OQ230797 range; the provided mapping to GgApiGT is consistent though not individually enumerated in the main text."
+        },
+        "Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper uses the Latin name Glycyrrhiza glabra, not the common species value 'Licorice'."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "GgApiGT is explicitly from G. glabra (Glycyrrhiza glabra)."
+        },
+        "Origin_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The origin species is stated as G. glabra, not 'Licorice'."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names G. glabra as one of the four plants from which ApiGTs were cloned."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "GgApiGT was identified as an apiosyltransferase by enzyme catalysis reactions."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "GgApiGT belongs to the Leguminosae candidate ApiGT set discovered using the unique 45-aa PSPG box filter."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is discussed in the context of flavonoid apioside biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "As an apiosyltransferase, it belongs to the apiosylation branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme directly performs the terminal apiosylation forming flavonoid apiosides."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies GgApiGT as an apiosyltransferase by enzyme catalysis reactions, supporting this general reaction description."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "Specific tested substrates for GgApiGT are not described in the main text excerpt."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Flavonoid apiosides are the product class directly linked to its identified function."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "As an apiosyltransferase it directly forms apioside products."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish such a role, so 'Not established' is supported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state GgApiGT was identified as an apiosyltransferase."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Flavonoid apiosides are the terminal product class."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "This class is directly supported by the study context."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper generally describes apiosides/flavonoid apiosides as bioactive natural products."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states it was cloned and identified by enzyme catalysis reactions."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental identification, conservation across Glycyrrhiza species, and membership in the Leguminosae ApiGT clade are all supported by the Results."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Candidate mining from transcriptome databases is explicitly described and accessions are given."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the amino acid sequences of the four cloned ApiGTs were highly conservative, with identity of 90.07%."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Species",
+          "old_value": "Licorice",
+          "new_value": "NA",
+          "reason": "The paper uses the Latin name Glycyrrhiza glabra, not the common species value 'Licorice'."
+        },
+        {
+          "field": "Origin_Species",
+          "old_value": "Licorice",
+          "new_value": "NA",
+          "reason": "The origin species is stated as G. glabra, not 'Licorice'."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "GiApiGT",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists the accession range OQ230794-OQ230797 for SsApiGT/PtApiGT/GiApiGT/GgApiGT; the provided mapping to GiApiGT is consistent though not individually parsed in text."
+        },
+        "Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper uses the Latin name Glycyrrhiza inflata, not the common species value 'Licorice'."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "GiApiGT is explicitly from G. inflata (Glycyrrhiza inflata)."
+        },
+        "Origin_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The source is Glycyrrhiza inflata rather than the common name 'Licorice'."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper names G. inflata as one of the four plants from which ApiGTs were cloned."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "GiApiGT was identified as an apiosyltransferase by enzyme catalysis reactions."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "GiApiGT was mined as part of the Leguminosae candidate ApiGT genes using the 45-aa PSPG box filter, supporting classification as a UDP-dependent glycosyltransferase of this type."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is discussed within the context of flavonoid apioside biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "As an apiosyltransferase, it belongs to the apiosylation branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It directly performs the terminal apiosylation that generates apiosides."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies GiApiGT as an apiosyltransferase by enzyme catalysis reactions, supporting this general reaction assignment."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact tested acceptor substrate(s) for GiApiGT are not specified in the main text excerpt."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "As an apiosyltransferase, GiApiGT forms flavonoid apiosides."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme directly forms the target apioside product."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "No rate-limiting role is established; 'Not established' matches the paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly say GiApiGT was identified as an apiosyltransferase."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Flavonoid apiosides are the product class."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "This is the direct metabolite class studied."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper generally states apiosides/flavonoid apiosides are bioactive natural products."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GiApiGT was cloned and identified by enzyme catalysis reactions."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional validation, extension to another Glycyrrhiza species, and support for motif-based mining are all supported by the Results."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was mined from transcriptome databases and included in the accession list."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports the four characterized ApiGTs are highly conserved, supporting this statement."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Species",
+          "old_value": "Licorice",
+          "new_value": "NA",
+          "reason": "The paper uses the Latin name Glycyrrhiza inflata, not the common species value 'Licorice'."
+        },
+        {
+          "field": "Origin_Species",
+          "old_value": "Licorice",
+          "new_value": "NA",
+          "reason": "The source is Glycyrrhiza inflata rather than the common name 'Licorice'."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 138,
+    "supported": 119,
+    "unsupported": 12,
+    "uncertain": 7,
+    "total_corrections": 12
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "file": "PNAS_2026_Yang",
+  "md_path": "/data/haotianwu/biojson/extractor/input/PNAS_2026_Yang.md",
+  "timestamp": "2026-03-28T11:54:06.461655",
+  "genes": [
+    {
+      "gene_name": "GmIF6H1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies GmIF6H1/GmCYP76F17 as encoded by Glyma.11G108300; capitalization differs slightly from the JSON but refers to the same locus."
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is on soybean and explicitly states Glycine max (L.) Merr."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The title/abstract explicitly gives soybean as Glycine max (L.) Merr.; 'Glycine max' is supported."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GmIF6H1 is a soybean gene tested in soybean materials."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The origin species is soybean, explicitly Glycine max."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Most transgenic analyses were in Williams 82, and hairy-root overexpression of GmCYP76F17 was performed in Kefeng-1; both are stated."
+        },
+        "Origin_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states that unless otherwise stated, soybean lines were in the Williams 82 background."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The authors explicitly redesignate GmCYP76F17 as GmIF6H1, isoflavone 6-hydroxylase 1."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states it is a cytochrome P450 belonging to the CYP76 subfamily and names it CYP76F17."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Subcellular localization analysis showed GmCYP76F17-GFP colocalized with an ER marker."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly places GmIF6H1 in soybean isoflavonoid/glycitein biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show GmIF6H1 acts on daidzein to produce 6-hydroxydaidzein leading to glycitein-type isoflavonoids."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The study presents GmIF6H1 as a daidzein-branching enzyme whose overexpression diverts flux away from glyceollin biosynthesis, indicating a competing branch point with daidzein 2'-hydroxylation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper demonstrates formation of 6-hydroxydaidzein as the direct intermediate toward glycitein and shows effects on glycitein-type isoflavonoid accumulation."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast feeding, microsomal assays, and isotope labeling support A-ring C6 hydroxylation of daidzein to 6-hydroxydaidzein; Fig. 3E also shows in vitro activity toward formononetin and biochanin A."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly concludes daidzein is the bona fide substrate in planta."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The product from daidzein in yeast was identified as 6-hydroxydaidzein."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is directly linked to glycitein/glycitein-type isoflavonoid production throughout the Results."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Glycitein is an isoflavonoid, as described in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 5A-B states glycitein and derivatives accumulate preferentially in mature roots and hypocotyls; seed glycitein-type isoflavonoids were profiled in natural populations."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show glycitein-type compounds contribute to defense against P. sojae, and the introduction/discussion note soybean isoflavonoids are relevant to human health/nutrition."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CRISPR mutants nearly lack glycitein-type isoflavonoids, and both loss- and gain-of-function increase susceptibility to P. sojae due to flux balance with glyceollins."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls GmIF6H1 'a key determinant' of glycitein production, while not claiming it is rate-limiting; the JSON wording preserves that nuance."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is preferentially expressed in mature roots and hypocotyls, and Fig. 6C states GmIF6H1 expression remained unchanged upon P. sojae infection."
+        },
+        "Expression_Pattern_of_Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by the tissue specificity analysis in soybean."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed factors appear in Results/Methods: P. sojae infection, daidzein-d6 feeding, germinating hypocotyls, and metal/pH/temperature effects in microsomal assays."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed method is described in Results/Methods: mGWAS, hairy-root OE, yeast feeding, microsomal kinetics, ER localization, CRISPR knockout, 35S overexpression, isotope tracing, infection assay, and chemical complementation."
+        },
+        "Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states CaMV 35S-driven overexpression lines were generated; haplotypes in the GmIF6H1 region including promoter region were analyzed."
+        },
+        "Omics_Data": {
+          "verdict": "UNCERTAIN",
+          "reason": "Metabolomics and GWAS components are clearly supported, and 53 soja accessions are explicitly mentioned. However, 'transcriptome profiling/RNA-seq' is mentioned without specifying RNA-seq or providing accession information in the paper text, so that portion is not clearly supported."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show knockout increases susceptibility, overexpression reduces glyceollin I and increases susceptibility, and overexpression causes accumulation of glycosylated/malonylglycosylated 6-hydroxydaidzein intermediates."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses opportunities for engineering disease-resilient cultivars and shows the favorable Hap2/Thr248 allele increases glycitein-type metabolites, but the specific advisory wording about 'requires precise expression balancing rather than simple overexpression' and 'editing or allele selection should consider tradeoff' is an inference rather than an explicit statement."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "All elements are present in the paper: former name GmCYP76F17, redesignation as GmIF6H1, T248A domestication-associated effect, daidzein not liquiritigenin as bona fide substrate, and trace glycitein in infected mutants suggesting possible alternative routes."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately condenses the main supported Results: mGWAS identification, enzymatic/in planta validation, Thr248 haplotype effect, and balanced defense flux between glycitein-type isoflavonoids and glyceollin."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 31,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 33,
+    "supported": 31,
+    "unsupported": 0,
+    "uncertain": 2,
+    "total_corrections": 0
+  }
+}
