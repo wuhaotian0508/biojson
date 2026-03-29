@@ -5,6 +5,16 @@ Single-step API call:
     extract_all_genes → Title/Journal/DOI + Common_Genes/Pathway_Genes/Regulation_Genes
 
 Function calling schemas are built directly from the schema JSON file.
+
+[PR 改动 by 学长 muskliu - 2026-03-29]
+- 删除 ~220 行 v1-v3 死代码：
+  _build_extract_schema(), _build_classify_schema(), _load_extract_schemas(),
+  CATEGORY_MAP, CAT_TO_TOOL, _handle_classify(), _handle_extract(), _message_to_dict()
+  这些是旧版分步提取的代码，现在只用 extract_all_genes 单步提取，所以不再需要
+- _load_prompt() 和 _load_extract_all_schema() 加了 @lru_cache，避免重复读文件
+- 导入改为使用 utils.py 中的共享工具函数（GENE_ARRAY_KEYS, ensure_list 等）
+- 删除了未使用的 import re
+- preprocess_md → preprocess_md_for_llm（text_utils 中重命名）
 """
 
 import json

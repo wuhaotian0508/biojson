@@ -2,6 +2,11 @@
 config.py — Centralized configuration for the extractor pipeline.
 
 All paths, API settings, and concurrency settings.
+
+[PR 改动 by 学长 muskliu - 2026-03-29]
+- get_openai_client() 和 get_fallback_client() 改为单例缓存模式
+  原来每次调用都会创建新的 OpenAI 实例，现在用模块级变量缓存，避免重复创建
+- 新增 _primary_client, _fallback_client, _fallback_resolved 三个模块级变量
 """
 
 import os

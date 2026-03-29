@@ -5,6 +5,17 @@ Dynamic batching strategy (per 10 genes):
     < 10 genes  → 1 batch
     10-19 genes → 2 batches
     20-29 genes → 3 batches
+
+[PR 改动 by 学长 muskliu - 2026-03-29]
+- 导入改为使用 utils.py 中的共享工具函数（GENE_ARRAY_KEYS, ensure_list, safe_parse_json, stem_to_dirname）
+  原来是从 extract.py 导入 stem_to_dirname, _safe_parse_json, _message_to_dict（跨模块耦合）
+- preprocess_md → preprocess_md_for_llm（text_utils 中重命名）
+- 拆分 verify_paper() 为 4 个子函数，逻辑更清晰：
+  _collect_genes_for_verification() — 收集所有 gene 信息
+  _run_batch_verification() — 执行分批 API 调用
+  _build_verification_report() — 构建验证报告 + 应用修正
+  _save_verification_results() — 保存文件
+- 删除冗余的 docstring 注释
 """
 
 import json
