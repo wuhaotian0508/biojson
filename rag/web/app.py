@@ -1,86 +1,92 @@
 #!/usr/bin/env python3
-"""Flask Web 界面 - 基因信息 RAG 问答系统"""
-from flask import Flask, request, jsonify, Response
-from flask_cors import CORS
-import json
+"""
+Flask Web 应用 - 提供 RAG 问答 Web 界面
+"""
 import sys
 from pathlib import Path
 
-# 导入父目录的 RAG 组件（web/ → rag/）
+# 添加父目录到路径
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from retriever import JinaRetriever
-from generator import RAGGenerator
 
-app = Flask(__name__, static_folder='static', static_url_path='')
-CORS(app)
+from flask import Flask, render_template, request, jsonify, Response
+import json
+# 使用简单检索器（TF-IDF）
+from simple_retriever import SimpleRetriever as Retriever
+from generator import Generator
+import config
 
-# 全局初始化 RAG 系统
-print("初始化 RAG 系统...")
-retriever = JinaRetriever()
-retriever.build_index(force=False)
-generator = RAGGenerator()
-print("初始化完成！")
+app = Flask(__name__)
+
+# 全局初始化
+print("初始化检索器...")
+retriever = Retriever()
+retriever.build_index()
+
+print("初始化生成器...")
+generator = Generator()
+
+print("系统就绪！")
 
 
 @app.route('/')
 def index():
-    """返回前端页面"""
+    """首页"""
     return app.send_static_file('index.html')
-
-
-@app.route('/api/health')
-def health():
-    """健康检查"""
-    return jsonify({"status": "ok", "rag_ready": True})
 
 
 @app.route('/api/query', methods=['POST'])
 def query():
-    """SSE 流式问答接口"""
-    try:
-        data = request.get_json()
-        question = data.get('question', '').strip()
+    """处理查询请求 - SSE 流式输出"""
+    data = request.get_json()
+    query_text = data.get('query', '').strip()
 
-        if not question:
-            return jsonify({"error": "问题不能为空"}), 400
+    if not query_text:
+        return jsonify({'error': '查询不能为空'}), 400
 
-        def generate():
-            try:
-                # 1. 检索相关基因
-                results = retriever.retrieve(question, use_rerank=True)
-                sources = [
-                    {
-                        "gene": chunk.gene_name,
-                        "article": chunk.article_title[:50] + "..." if len(chunk.article_title) > 50 else chunk.article_title,
-                        "score": float(score)
-                    }
-                    for chunk, score in results[:5]
-                ]
-                yield f"event: sources\ndata: {json.dumps(sources, ensure_ascii=False)}\n\n"
+    def generate():
+        try:
+            # 检索
+            chunks = retriever.retrieve(query_text)
 
-                # 2. 流式生成答案
-                for token in generator.generate_stream(question, results):
-                    yield f"event: token\ndata: {json.dumps({'content': token}, ensure_ascii=False)}\n\n"
+            # 发送检索结果
+            sources = [
+                {
+                    'paper_title': chunk.paper_title,
+                    'gene_name': chunk.gene_name,
+                    'journal': chunk.journal,
+                    'doi': chunk.doi,
+                    'score': float(score)
+                }
+                for chunk, score in chunks
+            ]
 
-                # 3. 完成
-                yield f"event: done\ndata: {{}}\n\n"
+            yield f"data: {json.dumps({'type': 'sources', 'data': sources})}\n\n"
 
-            except Exception as e:
-                import traceback
-                traceback.print_exc()
-                yield f"event: error\ndata: {json.dumps({'message': str(e)}, ensure_ascii=False)}\n\n"
+            # 生成答案 (流式)
+            for text in generator.generate(query_text, chunks, stream=True):
+                yield f"data: {json.dumps({'type': 'text', 'data': text})}\n\n"
 
-        return Response(
-            generate(),
-            mimetype='text/event-stream',
-            headers={
-                'Cache-Control': 'no-cache',
-                'X-Accel-Buffering': 'no'
-            }
-        )
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+            # 发送完成信号
+            yield f"data: {json.dumps({'type': 'done'})}\n\n"
+
+        except Exception as e:
+            yield f"data: {json.dumps({'type': 'error', 'data': str(e)})}\n\n"
+
+    return Response(generate(), mimetype='text/event-stream')
+
+
+@app.route('/api/health', methods=['GET'])
+def health():
+    """健康检查"""
+    return jsonify({
+        'status': 'ok',
+        'total_chunks': len(retriever.chunks)
+    })
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True, threaded=True)
+    app.run(
+        host=config.WEB_HOST,
+        port=config.WEB_PORT,
+        debug=config.DEBUG
+    )

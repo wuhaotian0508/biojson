@@ -1,128 +1,140 @@
-"""数据加载和预处理模块"""
+"""
+数据加载器 - 从 JSON 文件加载基因数据并生成 chunk
+"""
 import json
 from pathlib import Path
 from typing import List, Dict, Any
 from dataclasses import dataclass
+import config
+
 
 @dataclass
 class GeneChunk:
-    """基因信息切片，用于检索"""
-    chunk_id: str
-    text: str                # 用于检索的文本
-    gene_name: str           # 基因名
-    article_title: str       # 文章标题
-    journal: str
-    doi: str
-    species: str
-    category: str            # Plant/Animal/Microbial
-    metadata: Dict[str, Any] # 完整的基因字段
+    """基因信息块"""
+    gene_name: str          # 基因名称
+    paper_title: str        # 文章标题
+    journal: str            # 期刊
+    doi: str                # DOI
+    gene_type: str          # 基因类型 (Pathway_Genes/Regulation_Genes/Common_Genes)
+    content: str            # 格式化的基因信息文本
+    metadata: Dict[str, Any]  # 原始基因数据
 
-def load_json_files(data_dir: Path) -> List[Dict]:
-    """加载所有JSON文件"""
-    files = list(data_dir.glob("*.json"))
-    data = []
-    for f in files:
-        try:
-            with open(f, "r", encoding="utf-8") as fp:
-                data.append(json.load(fp))
-        except Exception as e:
-            print(f"Error loading {f}: {e}")
-    return data
 
-def gene_to_searchable_text(gene: Dict, article_title: str) -> str:
-    """将基因信息转换为可检索的文本"""
-    parts = []
+class DataLoader:
+    """数据加载器"""
 
-    # 核心字段
-    if gene.get("Gene_Name"):
-        parts.append(f"基因名: {gene['Gene_Name']}")
-    if gene.get("Species_Latin_Name"):
-        parts.append(f"物种: {gene['Species_Latin_Name']}")
-    if gene.get("Protein_Family_or_Domain"):
-        parts.append(f"蛋白家族/结构域: {gene['Protein_Family_or_Domain']}")
+    def __init__(self, data_dir: Path = config.DATA_DIR):
+        self.data_dir = data_dir
+        self.translation = self._load_translation()
 
-    # 功能相关
-    if gene.get("Core_Phenotypic_Effect"):
-        parts.append(f"核心表型效应: {gene['Core_Phenotypic_Effect']}")
-    if gene.get("Regulatory_Mechanism"):
-        parts.append(f"调控机制: {gene['Regulatory_Mechanism']}")
-    if gene.get("Regulatory_Pathway"):
-        parts.append(f"调控通路: {gene['Regulatory_Pathway']}")
-    if gene.get("Biosynthetic_Pathway"):
-        parts.append(f"生物合成通路: {gene['Biosynthetic_Pathway']}")
+    def _load_translation(self) -> Dict[str, str]:
+        """加载字段翻译映射"""
+        translate_file = config.PROJECT_ROOT / "translate.json"
+        if translate_file.exists():
+            with open(translate_file, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        return {}
 
-    # 互作和调控
-    if gene.get("Interacting_Proteins"):
-        parts.append(f"互作蛋白: {gene['Interacting_Proteins']}")
-    if gene.get("Upstream_or_Downstream_Regulation"):
-        parts.append(f"上下游调控: {gene['Upstream_or_Downstream_Regulation']}")
+    def load_all_genes(self) -> List[GeneChunk]:
+        """加载所有基因数据"""
+        chunks = []
+        json_files = list(self.data_dir.glob("*_nutri_plant_verified.json"))
 
-    # 研究信息
-    if gene.get("Research_Topic"):
-        parts.append(f"研究主题: {gene['Research_Topic']}")
-    if gene.get("Trait_Category"):
-        parts.append(f"性状类别: {gene['Trait_Category']}")
-    if gene.get("Key_Environment_or_Treatment_Factor"):
-        parts.append(f"关键环境/处理因素: {gene['Key_Environment_or_Treatment_Factor']}")
+        print(f"找到 {len(json_files)} 个数据文件")
 
-    # 实验验证
-    if gene.get("Core_Validation_Method"):
-        parts.append(f"核心验证方法: {gene['Core_Validation_Method']}")
-    if gene.get("Experimental_Methods"):
-        parts.append(f"实验方法: {gene['Experimental_Methods']}")
+        for json_file in json_files:
+            try:
+                with open(json_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
 
-    # 育种价值
-    if gene.get("Breeding_Application_Value"):
-        parts.append(f"育种应用价值: {gene['Breeding_Application_Value']}")
+                paper_title = data.get("Title", "Unknown")
+                journal = data.get("Journal", "Unknown")
+                doi = data.get("DOI", "Unknown")
 
-    # 关键发现
-    if gene.get("Summary_key_Findings_of_Core_Gene"):
-        parts.append(f"关键发现: {gene['Summary_key_Findings_of_Core_Gene']}")
+                # 处理三种基因类型
+                for gene_type in ["Pathway_Genes", "Regulation_Genes", "Common_Genes"]:
+                    genes = data.get(gene_type, [])
+                    for gene in genes:
+                        chunk = self._create_gene_chunk(
+                            gene=gene,
+                            paper_title=paper_title,
+                            journal=journal,
+                            doi=doi,
+                            gene_type=gene_type
+                        )
+                        chunks.append(chunk)
 
-    return "\n".join(parts)
+            except Exception as e:
+                print(f"处理文件 {json_file} 时出错: {e}")
 
-def process_all_data(data_dir: Path) -> List[GeneChunk]:
-    """处理所有数据，生成检索用的切片"""
-    all_chunks = []
-    raw_data = load_json_files(data_dir)
+        print(f"总共加载了 {len(chunks)} 个基因")
+        return chunks
 
-    for doc in raw_data:
-        title = doc.get("Title", "Unknown")
-        journal = doc.get("Journal", "Unknown")
-        doi = doc.get("DOI", "")
+    def _create_gene_chunk(self, gene: Dict, paper_title: str,
+                          journal: str, doi: str, gene_type: str) -> GeneChunk:
+        """创建基因信息块"""
+        gene_name = gene.get("Gene_Name", "Unknown")
 
-        # 处理各类基因
-        for category, key in [("Plant", "Plant_Genes"),
-                              ("Animal", "Animal_Genes"),
-                              ("Microbial", "Microbial_Genes")]:
-            genes = doc.get(key, [])
-            for i, gene in enumerate(genes):
-                gene_name = gene.get("Gene_Name", f"Unknown_{i}")
-                species = gene.get("Species_Latin_Name", gene.get("Species", "Unknown"))
+        # 格式化基因信息
+        content_parts = [
+            f"基因名称: {gene_name}",
+            f"文章: {paper_title}",
+            f"期刊: {journal}",
+            f"DOI: {doi}",
+            f"基因类型: {self._translate_gene_type(gene_type)}",
+            ""
+        ]
 
-                # 生成可检索文本
-                text = gene_to_searchable_text(gene, title)
+        # 添加基因详细信息
+        for key, value in gene.items():
+            if key == "Gene_Name":
+                continue
 
-                chunk = GeneChunk(
-                    chunk_id=f"{doi}_{gene_name}_{i}",
-                    text=text,
-                    gene_name=gene_name,
-                    article_title=title,
-                    journal=journal,
-                    doi=doi,
-                    species=species,
-                    category=category,
-                    metadata=gene
-                )
-                all_chunks.append(chunk)
+            # 跳过 NA 和空值
+            if value in [None, "NA", "", []]:
+                continue
 
-    print(f"Processed {len(raw_data)} articles, {len(all_chunks)} gene chunks")
-    return all_chunks
+            # 翻译字段名
+            field_name = self.translation.get(key, key)
+
+            # 格式化值
+            if isinstance(value, list):
+                value_str = "; ".join(str(v) for v in value if v and v != "NA")
+                if not value_str:
+                    continue
+            else:
+                value_str = str(value)
+
+            content_parts.append(f"{field_name}: {value_str}")
+
+        content = "\n".join(content_parts)
+
+        return GeneChunk(
+            gene_name=gene_name,
+            paper_title=paper_title,
+            journal=journal,
+            doi=doi,
+            gene_type=gene_type,
+            content=content,
+            metadata=gene
+        )
+
+    def _translate_gene_type(self, gene_type: str) -> str:
+        """翻译基因类型"""
+        mapping = {
+            "Pathway_Genes": "代谢途径基因",
+            "Regulation_Genes": "调控基因",
+            "Common_Genes": "通用基因"
+        }
+        return mapping.get(gene_type, gene_type)
+
 
 if __name__ == "__main__":
-    from config import DATA_DIR
-    chunks = process_all_data(DATA_DIR)
-    print(f"\nSample chunk:")
-    print(f"  Gene: {chunks[0].gene_name}")
-    print(f"  Article: {chunks[0].article_title}")
-    print(f"  Text preview: {chunks[0].text[:200]}...")
+    loader = DataLoader()
+    chunks = loader.load_all_genes()
+    print(f"加载了 {len(chunks)} 个基因 chunk")
+
+    # 显示第一个 chunk 示例
+    if chunks:
+        print("\n示例 chunk:")
+        print(chunks[0].content[:500])

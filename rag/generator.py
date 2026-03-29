@@ -1,169 +1,147 @@
-"""基于检索结果的LLM生成模块 - 带来源标注"""
-from typing import List, Tuple, Dict, Any
-from openai import OpenAI
-
-from data_loader import GeneChunk
-from config import LLM_API_KEY, LLM_BASE_URL, LLM_MODEL
-
-SYSTEM_PROMPT = """你是一个专业的植物分子生物学专家，基于检索到的基因数据库信息回答用户问题。
-
-## 回答要求
-1. **准确性**: 只使用检索结果中的信息，不要编造
-2. **来源标注**: 每个关键信息必须标注来源，格式为 [文章名 | 基因名]
-3. **结构化**: 使用清晰的结构组织答案
-4. **专业性**: 使用准确的专业术语
-
-## 来源标注示例
-- "DREB1A通过结合DRE元件激活下游抗旱基因 [AnDHN, a Dehydrin Protein From... | DREB1A]"
-- "MYB转录因子家族在干旱响应中起关键作用 [Title of Paper | MYB51]"
-
-## 输出格式
-1. 先给出核心答案
-2. 然后分点详细说明，每点都要有来源标注
-3. 最后列出所有引用的来源清单
 """
+生成器 - 使用 LLM 生成答案，支持流式输出和来源标注
+"""
+from typing import List, Tuple, Iterator
+import requests
+from data_loader import GeneChunk
+import config
 
-def format_context(results: List[Tuple[GeneChunk, float]]) -> str:
-    """格式化检索结果作为上下文"""
-    context_parts = []
 
-    for i, (chunk, score) in enumerate(results, 1):
-        source = f"[{chunk.article_title} | {chunk.gene_name}]"
-        context_parts.append(f"""
-=== 来源 {i}: {source} ===
-物种: {chunk.species}
-类别: {chunk.category}
-相关性分数: {score:.4f}
-
-{chunk.text}
-""")
-
-    return "\n".join(context_parts)
-
-def format_source_list(results: List[Tuple[GeneChunk, float]]) -> str:
-    """生成来源清单"""
-    sources = []
-    for chunk, score in results:
-        sources.append(f"- {chunk.gene_name} ({chunk.species}): {chunk.article_title}")
-        if chunk.doi:
-            sources[-1] += f" DOI: {chunk.doi}"
-    return "\n".join(sources)
-
-class RAGGenerator:
-    """RAG生成器"""
+class Generator:
+    """LLM 生成器"""
 
     def __init__(self):
-        self.client = OpenAI(
-            api_key=LLM_API_KEY,
-            base_url=LLM_BASE_URL
-        )
-        self.model = LLM_MODEL
+        self.api_key = config.API_KEY
+        self.base_url = config.BASE_URL
+        self.model = config.LLM_MODEL
+        self.system_prompt = config.SYSTEM_PROMPT
 
-    def generate(self, query: str, results: List[Tuple[GeneChunk, float]],
-                 stream: bool = False) -> str:
-        """基于检索结果生成答案"""
+    def generate(self, query: str, chunks: List[Tuple[GeneChunk, float]],
+                stream: bool = False) -> Iterator[str] | str:
+        """生成答案"""
+        # 构建上下文
+        context = self._build_context(chunks)
 
-        context = format_context(results)
-        source_list = format_source_list(results)
+        # 构建提示词
+        user_prompt = f"""基于以下文献信息回答问题：
 
-        user_prompt = f"""## 用户问题
-{query}
-
-## 检索到的相关基因信息
 {context}
 
-## 可用来源清单
-{source_list}
+问题：{query}
 
-请基于以上检索结果回答用户问题。记住：
-1. 只使用检索结果中的信息
-2. 每个关键信息都要标注来源 [文章名 | 基因名]
-3. 如果检索结果不足以回答问题，明确说明
-"""
+请基于上述文献信息回答，每条信息都要用 [文章名 | 基因名] 格式标注来源。"""
 
         messages = [
-            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "system", "content": self.system_prompt},
             {"role": "user", "content": user_prompt}
         ]
 
         if stream:
-            return self._stream_generate(messages)
+            return self._generate_stream(messages)
         else:
-            response = self.client.chat.completions.create(
-                model=self.model,
-                messages=messages,
-                temperature=0.3,
-                max_tokens=4096
+            return self._generate_sync(messages)
+
+    def _build_context(self, chunks: List[Tuple[GeneChunk, float]]) -> str:
+        """构建上下文"""
+        context_parts = []
+
+        for i, (chunk, score) in enumerate(chunks, 1):
+            context_parts.append(
+                f"【文献{i}】\n"
+                f"来源：{chunk.paper_title} | 基因：{chunk.gene_name}\n"
+                f"相关度：{score:.3f}\n"
+                f"\n{chunk.content}\n"
+                f"{'-' * 80}\n"
             )
-            return response.choices[0].message.content
 
-    def _stream_generate(self, messages: List[Dict]) -> str:
+        return "\n".join(context_parts)
+
+    def _generate_sync(self, messages: List[dict]) -> str:
+        """同步生成"""
+        headers = {
+            "Authorization": f"Bearer {self.api_key}",
+            "Content-Type": "application/json"
+        }
+
+        data = {
+            "model": self.model,
+            "messages": messages,
+            "stream": False,
+            "temperature": 0.7,
+            "max_tokens": 2000
+        }
+
+        response = requests.post(
+            f"{self.base_url}/chat/completions",
+            json=data,
+            headers=headers
+        )
+        response.raise_for_status()
+
+        return response.json()["choices"][0]["message"]["content"]
+
+    def _generate_stream(self, messages: List[dict]) -> Iterator[str]:
         """流式生成"""
-        response = self.client.chat.completions.create(
-            model=self.model,
-            messages=messages,
-            temperature=0.3,
-            max_tokens=4096,
+        headers = {
+            "Authorization": f"Bearer {self.api_key}",
+            "Content-Type": "application/json"
+        }
+
+        data = {
+            "model": self.model,
+            "messages": messages,
+            "stream": True,
+            "temperature": 0.7,
+            "max_tokens": 2000
+        }
+
+        response = requests.post(
+            f"{self.base_url}/chat/completions",
+            json=data,
+            headers=headers,
             stream=True
         )
+        response.raise_for_status()
 
-        full_response = ""
-        for chunk in response:
-            if chunk.choices and chunk.choices[0].delta.content:
-                content = chunk.choices[0].delta.content
-                print(content, end="", flush=True)
-                full_response += content
-        print()
-        return full_response
+        for line in response.iter_lines():
+            if line:
+                line = line.decode('utf-8')
+                if line.startswith('data: '):
+                    line = line[6:]
+                    if line == '[DONE]':
+                        break
 
-    def generate_stream(self, query: str, results: List[Tuple[GeneChunk, float]]):
-        """流式生成答案，逐 token yield（用于 Web 界面）"""
-        context = format_context(results)
-        source_list = format_source_list(results)
-
-        user_prompt = f"""## 用户问题
-{query}
-
-## 检索到的相关基因信息
-{context}
-
-## 可用来源清单
-{source_list}
-
-请基于以上检索结果回答用户问题。记住：
-1. 只使用检索结果中的信息
-2. 每个关键信息都要标注来源 [文章名 | 基因名]
-3. 如果检索结果不足以回答问题，明确说明
-"""
-
-        messages = [
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": user_prompt}
-        ]
-
-        response = self.client.chat.completions.create(
-            model=self.model,
-            messages=messages,
-            temperature=0.3,
-            max_tokens=4096,
-            stream=True
-        )
-
-        for chunk in response:
-            if chunk.choices and chunk.choices[0].delta.content:
-                yield chunk.choices[0].delta.content
+                    try:
+                        import json
+                        chunk = json.loads(line)
+                        if 'choices' in chunk and len(chunk['choices']) > 0:
+                            delta = chunk['choices'][0].get('delta', {})
+                            if 'content' in delta:
+                                yield delta['content']
+                    except json.JSONDecodeError:
+                        continue
 
 
 if __name__ == "__main__":
-    from retriever import JinaRetriever
+    from simple_retriever import SimpleRetriever
 
-    # 加载索引
-    retriever = JinaRetriever()
+    # 初始化
+    retriever = SimpleRetriever()
     retriever.build_index()
+    generator = Generator()
 
-    # 测试
-    query = "植物中DREB转录因子如何调控抗旱性？"
-    results = retriever.retrieve(query)
+    # 测试查询
+    query = "MYB65 基因的功能是什么？"
 
-    generator = RAGGenerator()
-    answer = generator.generate(query, results, stream=True)
+    print(f"查询: {query}\n")
+    print("检索中...")
+    chunks = retriever.retrieve(query)
+
+    print(f"检索到 {len(chunks)} 个相关文献\n")
+    print("生成答案...\n")
+
+    # 流式输出
+    for text in generator.generate(query, chunks, stream=True):
+        print(text, end='', flush=True)
+
+    print("\n")
