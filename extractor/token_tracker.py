@@ -20,12 +20,26 @@ class TokenTracker:
     """Thread-safe API token usage tracker."""
 
     def __init__(self, model="unknown"):
+        """初始化 token 追踪器。
+
+        [PR 改动] self._lock 改为 threading.RLock()（可重入锁），
+        防止同一线程在 save_report() 嵌套调用 get_summary() 时死锁。
+        """
         self.model = model
         self.calls = []
         self._lock = threading.RLock()
 
     def add(self, response, stage="unknown", file=""):
-        """Record token usage from an API response (thread-safe)."""
+        """记录一次 API 调用的 token 用量（线程安全）。
+
+        从 response.usage 中提取 prompt_tokens/completion_tokens，
+        加入总计并保存到明细列表。
+
+        Args:
+            response: OpenAI API 的响应对象
+            stage: 调用阶段，如 "extract" / "verify" / "preprocess"
+            file: 对应的论文文件名
+        """
         usage = getattr(response, "usage", None)
         if usage is None:
             return
@@ -71,7 +85,7 @@ class TokenTracker:
         return summary
 
     def print_summary(self):
-        """Print total input/output/total tokens + call count."""
+        """打印 token 用量汇总（总 input/output/total + 调用次数）。"""
         with self._lock:
             if not self.calls:
                 print("\n📊 Token usage: no API calls recorded")
@@ -88,7 +102,11 @@ class TokenTracker:
         print(f"{'═' * 50}")
 
     def save_report(self, path):
-        """Save detailed usage report as JSON."""
+        """保存详细的 token 用量报告到 JSON 文件。
+
+        [PR 改动] 先在锁内复制 self.calls 列表，避免长时间持锁。
+        用 RLock 所以内部调用 get_summary() 不会死锁。
+        """
         path = str(path)
         os.makedirs(os.path.dirname(path) if os.path.dirname(path) else ".", exist_ok=True)
 

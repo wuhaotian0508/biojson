@@ -38,13 +38,21 @@ FALLBACK_MODEL = os.getenv("FALLBACK_MODEL", "")
 MAX_WORKERS = int(os.getenv("MAX_WORKERS", "10"))
 
 
-_primary_client = None
-_fallback_client = None
-_fallback_resolved = False
+# [PR 改动] 模块级缓存变量，避免每次调用都创建新的 OpenAI 客户端
+_primary_client = None       # 主 API 客户端缓存
+_fallback_client = None      # 备用 API 客户端缓存
+_fallback_resolved = False   # 标记是否已尝试过创建备用客户端
 
 
 def get_openai_client():
-    """Return the primary OpenAI-compatible client (cached)."""
+    """获取主 OpenAI 客户端（单例缓存）。
+
+    [PR 改动] 原来每次调用都 return OpenAI(...)，现在用模块级变量缓存，
+    整个进程只创建一次客户端实例，多线程并行处理论文时不会重复创建连接。
+
+    Returns:
+        OpenAI: 主 API 客户端实例
+    """
     global _primary_client
     if _primary_client is None:
         _primary_client = OpenAI(
@@ -55,7 +63,14 @@ def get_openai_client():
 
 
 def get_fallback_client():
-    """Return the fallback client (cached), or None if not configured."""
+    """获取备用 OpenAI 客户端（单例缓存），未配置则返回 None。
+
+    [PR 改动] 同样改为缓存模式。用 _fallback_resolved 标记避免重复检查环境变量。
+    即使 FALLBACK_API_KEY 未配置，也只检查一次，后续直接返回 None。
+
+    Returns:
+        OpenAI | None: 备用客户端实例，未配置时返回 None
+    """
     global _fallback_client, _fallback_resolved
     if not _fallback_resolved:
         key = os.getenv("FALLBACK_API_KEY")
@@ -67,6 +82,9 @@ def get_fallback_client():
 
 
 def ensure_dirs():
-    """Create all required output directories."""
+    """创建所有必需的输出目录（输出、报告、token 用量、已处理）。
+
+    在 pipeline 启动时调用一次，确保目录存在。
+    """
     for d in [OUTPUT_DIR, REPORTS_DIR, TOKEN_USAGE_DIR, PROCESSED_DIR]:
         d.mkdir(parents=True, exist_ok=True)

@@ -30,7 +30,16 @@ GENE_ARRAY_KEY_NAMES = tuple(k for k, _ in GENE_ARRAY_KEYS)
 # ─── Defensive parsing helpers ───────────────────────────────────────────────
 
 def ensure_list(val) -> list:
-    """Convert a value to a list, handling str→json.loads and type mismatches."""
+    """防御性地把值转成 list。
+
+    处理 LLM 返回的各种异常情况：
+    - 已经是 list → 直接返回
+    - 是 JSON 字符串 → json.loads 解析
+    - 其他类型 → 返回空列表
+
+    例: ensure_list('[{"Gene_Name":"CHS"}]') → [{"Gene_Name":"CHS"}]
+        ensure_list(None) → []
+    """
     if isinstance(val, list):
         return val
     if isinstance(val, str):
@@ -45,7 +54,14 @@ def ensure_list(val) -> list:
 
 
 def get_gene_name(gene_dict: dict) -> str:
-    """Extract gene name from a gene dict, trying multiple key variants."""
+    """从基因 dict 中提取基因名，兼容多种 key 命名。
+
+    依次尝试 Gene_Name → gene → gene_name → name，
+    兼容不同版本 schema 和 LLM 返回格式。
+
+    例: get_gene_name({"Gene_Name": "CHS"}) → "CHS"
+        get_gene_name({"gene": "SlMYB12"}) → "SlMYB12"
+    """
     return (
         gene_dict.get("Gene_Name")
         or gene_dict.get("gene")
@@ -56,10 +72,14 @@ def get_gene_name(gene_dict: dict) -> str:
 
 
 def safe_parse_json(json_str: str, label: str = "") -> Optional[dict]:
-    """Parse JSON with truncation repair.
+    """解析 JSON，支持截断修复。
 
-    Tries direct parse first, then attempts to fix truncated JSON by
-    balancing braces and brackets.
+    LLM 有时返回被截断的 JSON（超过 max_tokens），这个函数会：
+    1. 先尝试直接 json.loads
+    2. 失败则找最后一个 }，截断并补齐未闭合的 [] 和 {}
+    3. 再次尝试解析
+
+    例: '{"a":1,"b":[2,3' → 修复为 '{"a":1,"b":[2,3]}' → 成功解析
     """
     try:
         return json.loads(json_str)
@@ -84,9 +104,11 @@ def safe_parse_json(json_str: str, label: str = "") -> Optional[dict]:
 
 
 def stem_to_dirname(stem: str) -> str:
-    """Convert a filename stem to a directory name.
+    """把文件名 stem 转成目录名。
 
-    Strips MinerU prefix, removes '_(1)' duplicates, replaces '_' with '-'.
+    去掉 MinerU 前缀、去掉重复后缀 _(1)、下划线转连字符。
+    例: "MinerU_markdown_Nat_Biotechnol_2008_Butelli_(1)"
+    → "Nat-Biotechnol-2008-Butelli"
     """
     if stem.startswith("MinerU_markdown_"):
         stem = stem[len("MinerU_markdown_"):]

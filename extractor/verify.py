@@ -103,7 +103,12 @@ Call the verify_all_genes function with your verification results for ALL genes 
 # ─── Helper functions ────────────────────────────────────────────────────────
 
 def _extract_non_na_fields(gene_dict: dict) -> dict:
-    """Extract all non-NA fields from a gene dict."""
+    """提取基因 dict 中所有非 NA 的字段，用于验证。
+
+    跳过 None 和 "NA" 字符串；对 list 类型只保留非 NA 元素。
+    例: {"Gene_Name": "CHS", "EC_Number": "NA", "Species": "tomato"}
+    → {"Gene_Name": "CHS", "Species": "tomato"}
+    """
     fields = {}
     for key, value in gene_dict.items():
         if value is None:
@@ -120,7 +125,11 @@ def _extract_non_na_fields(gene_dict: dict) -> dict:
 
 
 def _build_genes_text(genes_with_info: list) -> str:
-    """Build verification text for a batch of genes."""
+    """为一批基因构建验证用的文本描述。
+
+    把每个基因的非 NA 字段格式化为 Markdown + JSON 代码块，
+    供 LLM 逐字段验证。
+    """
     parts = []
     for i, (gene_data, category) in enumerate(genes_with_info, 1):
         gene_name = gene_data.get("Gene_Name", f"Gene_{i}")
@@ -136,7 +145,14 @@ def _build_genes_text(genes_with_info: list) -> str:
 
 
 def _apply_corrections(gene_data: dict, field_verdicts_list: list) -> Tuple[dict, list]:
-    """Apply UNSUPPORTED → NA corrections."""
+    """对 UNSUPPORTED 的字段自动修正为 "NA"。
+
+    遍历 LLM 返回的 field_verdicts，找到 verdict=="UNSUPPORTED" 的字段，
+    将其原始值替换为 "NA"，并记录修正历史。
+
+    Returns:
+        (corrected_gene, corrections): 修正后的基因 dict 和修正记录列表
+    """
     corrections = []
     corrected_gene = dict(gene_data)
 
@@ -164,7 +180,11 @@ def _apply_corrections(gene_data: dict, field_verdicts_list: list) -> Tuple[dict
 
 
 def _compute_batches(total_genes: int) -> List[Tuple[int, int]]:
-    """Dynamic batching: returns list of (start, end) tuples."""
+    """动态分批策略：根据基因数量决定批次。
+
+    < 10 个基因 → 1 批；10-19 → 2 批；20-29 → 3 批，以此类推。
+    返回 [(start, end), ...] 索引范围列表。
+    """
     if total_genes < 10:
         return [(0, total_genes)]
 
@@ -178,7 +198,7 @@ def _compute_batches(total_genes: int) -> List[Tuple[int, int]]:
 
 
 def _handle_verify_all(arguments: dict) -> list:
-    """Process verify_all_genes result → gene_verdicts list."""
+    """处理 verify_all_genes 的 API 返回结果，提取 gene_verdicts 列表。"""
     return ensure_list(arguments.get("gene_verdicts", []))
 
 
@@ -186,7 +206,13 @@ def _handle_verify_all(arguments: dict) -> list:
 
 def _call_verify_api(api_client, model_name: str, user_prompt: str,
                      file_name: str, tracker: TokenTracker):
-    """Single batch verify API call. Returns (gene_verdicts_list, success)."""
+    """单批次验证 API 调用。
+
+    构建 messages → 调用 verify_all_genes FC tool → 解析返回的 gene_verdicts。
+
+    Returns:
+        (gene_verdicts_list, success): 验证结果列表和是否成功
+    """
     messages = [
         {"role": "system", "content": VERIFY_SYSTEM_PROMPT},
         {"role": "user", "content": user_prompt},
@@ -234,10 +260,11 @@ def _call_verify_api(api_client, model_name: str, user_prompt: str,
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def _collect_genes_for_verification(extraction_dict: dict) -> list:
-    """Collect all genes with category and position info.
+    """从提取结果中收集所有基因信息。
 
-    Returns:
-        list of (gene_data, category, arr_key, index_in_array) tuples
+    [PR 新增函数] 原来在 verify_paper() 中内联写，现在提取出来。
+    遍历 Common_Genes/Pathway_Genes/Regulation_Genes 三个数组，
+    返回 (gene_data, category, arr_key, index) 元组列表。
     """
     all_genes = []
     for arr_key, cat in GENE_ARRAY_KEYS:
@@ -254,7 +281,11 @@ def _run_batch_verification(
     stem: str,
     tracker: TokenTracker,
 ) -> list:
-    """Run batched verification API calls. Returns aggregated gene_verdicts."""
+    """执行分批验证 API 调用，返回所有批次的 gene_verdicts 汇总。
+
+    [PR 新增函数] 原来在 verify_paper() 中内联写，现在提取出来。
+    按 _compute_batches() 分批 → 每批调主 API → 失败切备用 → 汇总结果。
+    """
     total_genes = len(all_genes_with_info)
     batches = _compute_batches(total_genes)
     print(f"  🧬 Genes to verify: {total_genes}, batches: {len(batches)}")
@@ -303,10 +334,13 @@ def _build_verification_report(
     stem: str,
     md_path: Path,
 ) -> Tuple[dict, dict]:
-    """Build verification report and apply corrections.
+    """构建验证报告并应用修正。
+
+    [PR 新增函数] 原来在 verify_paper() 中内联写。
+    按基因名匹配 verdict → 调用 _apply_corrections() 修正 UNSUPPORTED 字段 → 统计汇总。
 
     Returns:
-        (file_report, verified_data)
+        (file_report, verified_data): 报告 dict 和修正后的完整提取数据
     """
     # Match verdicts to genes by name
     verdict_by_name = {}
@@ -401,7 +435,13 @@ def _save_verification_results(
     stem: str,
     md_path: Path,
 ):
-    """Write verified JSON, report, and move processed MD."""
+    """保存验证结果文件。
+
+    [PR 新增函数] 三步：
+    1. 写 verified JSON（修正后的提取结果）到 output/
+    2. 写 verification report 到 reports/<paper>/
+    3. 把已处理的 MD 移到 processed/ 目录
+    """
     # Write corrected verified JSON
     verified_json_path = OUTPUT_DIR / f"{stem}_nutri_plant_verified.json"
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -435,12 +475,16 @@ def verify_paper(
     stem: str,
     tracker: TokenTracker,
 ) -> Optional[dict]:
-    """Verify all genes in a paper with dynamic batching.
+    """验证论文中所有基因的提取结果（对外主入口）。
 
-    Orchestrates: collect → batch verify → build report → save.
+    [PR 改动] 原来 500+ 行的大函数，拆成 4 个子函数调度：
+    1. _collect_genes_for_verification() — 收集基因
+    2. _run_batch_verification() — 分批调 LLM 验证
+    3. _build_verification_report() — 构建报告 + 修正
+    4. _save_verification_results() — 保存文件
 
     Returns:
-        verification_report dict, skipped sentinel, or None on failure
+        验证报告 dict，跳过时返回 {"status": "skipped"}，失败返回 None
     """
     md_path = Path(md_path)
 

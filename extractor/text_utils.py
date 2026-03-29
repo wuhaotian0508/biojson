@@ -28,13 +28,19 @@ import json
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def preprocess_md(md_content):
-    """Local text preprocessing: no remote calls.
+    """纯本地文本清洗，不调用任何远程 API。
+
+    [PR 改动] 原来的 preprocess_md() 内部直接调了 extract_relevant_sections()（会发 LLM 请求），
+    现在拆成两层：preprocess_md() 只做本地清洗，preprocess_md_for_llm() 才加 LLM 过滤。
+    这样方便测试、RAG 等场景复用纯本地清洗逻辑。
+
+    步骤：去图片标签 → 去 URL → 合并多余空行
 
     Args:
-        md_content: raw Markdown from MinerU conversion
+        md_content: MinerU 转换后的 Markdown 原始文本
 
     Returns:
-        Cleaned text (images/URLs removed, extra blanks collapsed)
+        清洗后的文本
     """
     content = strip_images(md_content)
     content = strip_urls(content)
@@ -43,7 +49,15 @@ def preprocess_md(md_content):
 
 
 def preprocess_md_for_llm(md_content, tracker=None):
-    """Preprocessing for extraction/verification, includes LLM section filtering."""
+    """用于提取/验证的完整预处理：本地清洗 + LLM section 过滤。
+
+    [PR 新增函数] 在 preprocess_md() 基础上，额外调用 LLM 判断各 section 标题，
+    去掉 Introduction/References/Acknowledgments 等无关内容，只保留 Results + Methods。
+
+    Args:
+        md_content: Markdown 原始文本
+        tracker: 可选的 TokenTracker，用于追踪 LLM section 分类的 token 用量
+    """
     content = preprocess_md(md_content)
     return extract_relevant_sections(content, tracker=tracker)
 
@@ -53,17 +67,23 @@ def preprocess_md_for_llm(md_content, tracker=None):
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def strip_images(md_content):
-    """Remove Markdown image tags (both CDN and local path formats)."""
+    """去除 Markdown 图片标签（CDN 和本地路径两种格式）。
+
+    例: ![alt](https://cdn.com/img.png) → 删除
+    """
     return re.sub(r'!\[[^\]]*\]\([^)]*\)', '', md_content)
 
 
 def strip_urls(md_content):
-    """Remove parenthesized URLs: (https://...) or (http://...)."""
+    """去除括号内的 URL 链接。
+
+    例: (https://doi.org/10.1234) → 删除
+    """
     return re.sub(r'\(https?://[^)]*\)', '', md_content)
 
 
 def strip_extra_blanks(md_content):
-    """Collapse 3+ consecutive blank lines to 2."""
+    """合并多余空行：3个以上连续空行 → 2个。"""
     return re.sub(r'\n{3,}', '\n\n', md_content)
 
 
@@ -72,11 +92,11 @@ def strip_extra_blanks(md_content):
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def _split_sections(md_content):
-    """Split Markdown into sections by '# ' headings.
+    """按一级标题（# ）把 Markdown 拆分为多个 section。
 
     Returns:
-        preamble: content before the first '# ' heading
-        sections: list of (heading, body) tuples
+        preamble: 第一个 # 标题之前的内容（通常是论文标题/摘要）
+        sections: [(标题, 正文), ...] 列表
     """
     heading_pattern = re.compile(r'^# ', re.MULTILINE)
     matches = list(heading_pattern.finditer(md_content))
@@ -106,16 +126,19 @@ def _split_sections(md_content):
 
 
 def _classify_headings_with_llm(headings, tracker=None):
-    """Call LLM to identify which headings should be removed.
+    """调用 LLM 判断哪些 section 标题应该被移除。
 
-    Uses the shared client/fallback from config. Optionally tracks token usage.
+    给 LLM 发一个编号标题列表，让它返回要移除的编号（JSON 数组）。
+    会尝试主 API，失败则切备用 API。
+
+    [PR 改动] 新增 tracker 参数，支持追踪 section 分类这一步的 token 用量。
 
     Args:
-        headings: list of str, all '# ' headings in the paper
-        tracker: optional TokenTracker instance
+        headings: 所有 # 标题的列表
+        tracker: 可选的 TokenTracker
 
     Returns:
-        set of int (indices to remove), or None on failure
+        set[int]: 要移除的标题索引集合，LLM 调用失败返回 None
     """
     from .config import get_openai_client, get_fallback_client, MODEL, FALLBACK_MODEL
 
@@ -182,13 +205,15 @@ If nothing should be removed, return: []"""
 
 
 def extract_relevant_sections(md_content, tracker=None):
-    """Remove irrelevant sections (Intro, References, Acknowledgments, etc.).
+    """去除无关 section（Introduction/References/Acknowledgments 等）。
 
-    Flow:
-        1. Split all sections by '# '
-        2. Call LLM once to classify which headings to remove
-        3. Reassemble: preamble + kept sections
-        4. Falls back to full text if LLM call fails
+    [PR 改动] 新增 tracker 参数。
+
+    流程：
+    1. 按 # 标题拆分所有 section
+    2. 调用一次 LLM 分类哪些标题要移除
+    3. 重新拼接：preamble + 保留的 section
+    4. LLM 调用失败则 fallback 使用全文
     """
     preamble, sections = _split_sections(md_content)
 

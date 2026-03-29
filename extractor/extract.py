@@ -41,6 +41,10 @@ from .utils import (
 
 @lru_cache(maxsize=1)
 def _load_prompt():
+    """读取 prompt 模板文件（带缓存）。
+
+    [PR 改动] 加了 @lru_cache，整个进程只读一次文件，后续调用直接返回缓存。
+    """
     with open(PROMPT_PATH, "r", encoding="utf-8") as f:
         return f.read()
 
@@ -48,7 +52,11 @@ def _load_prompt():
 # ─── Build FC schemas from schema JSON ──────────────────────────────────────
 
 def _schema_props_to_fc(gene_def: dict) -> dict:
-    """Convert a gene type's properties to FC-compatible format."""
+    """把 schema JSON 中基因类型的 properties 转换为 OpenAI Function Calling 格式。
+
+    例: schema 中 CommonGene 的 {"Gene_Name": {"description": "..."}}
+    → FC 格式 {"Gene_Name": {"type": "string", "description": "..."}}
+    """
     fc_props = {}
     for field_name, field_schema in gene_def.get("properties", {}).items():
         desc = field_schema.get("description", "")
@@ -57,7 +65,11 @@ def _schema_props_to_fc(gene_def: dict) -> dict:
 
 
 def _build_extract_all_schema(schema_data: dict) -> dict:
-    """Build the extract_all_genes FC schema from MultipleGeneExtraction."""
+    """从 schema JSON 构建 extract_all_genes 的 Function Calling schema。
+
+    读取 MultipleGeneExtraction 下的 CommonGene/PathwayGene/RegulationGene 定义，
+    组装成一个包含 Title/Journal/DOI + 三个基因数组的 FC tool schema。
+    """
     multi = schema_data.get("MultipleGeneExtraction", {})
     defs = multi.get("$defs", {})
 
@@ -103,14 +115,24 @@ def _build_extract_all_schema(schema_data: dict) -> dict:
 
 @lru_cache(maxsize=1)
 def _load_extract_all_schema() -> dict:
-    """Load the single extract_all_genes schema (cached)."""
+    """加载并构建 extract_all_genes schema（带缓存）。
+
+    [PR 改动] 加了 @lru_cache，schema 文件只读一次。
+    """
     with open(SCHEMA_PATH, "r", encoding="utf-8") as f:
         schema_data = json.load(f)
     return _build_extract_all_schema(schema_data)
 
 
 def _handle_extract_all(arguments: dict) -> Tuple[dict, dict]:
-    """Process extract_all_genes result → (extraction_dict, gene_dict)."""
+    """处理 extract_all_genes 的 API 返回结果。
+
+    把 LLM 返回的 JSON arguments 解析成两个结构：
+    - extraction_dict: 包含 Title/Journal/DOI + 三个基因数组的完整提取结果
+    - gene_dict: {基因名: 分类} 的映射，如 {"SlMYB12": "Regulation", "CHS": "Pathway"}
+
+    [PR 改动] 使用 utils.py 的 GENE_ARRAY_KEYS/ensure_list/get_gene_name 替代原来的内联逻辑
+    """
     extraction = {
         "Title": arguments.get("Title", "NA"),
         "Journal": arguments.get("Journal", "NA"),
@@ -145,9 +167,20 @@ def _call_extract_api(
     extract_all_schema: dict,
     tracker: TokenTracker,
 ):
-    """Single-step API extraction using extract_all_genes.
+    """调用一次 LLM API 提取论文中的所有基因信息（单步提取）。
 
-    Returns (extraction_dict, gene_dict, success).
+    流程：构建 messages → 调用 API（带 FC tool） → 解析返回的 JSON → 统计基因数量
+
+    Args:
+        api_client: OpenAI 客户端实例
+        model: 模型名称
+        content: 预处理后的论文 Markdown 文本
+        name: 文件名（用于日志和 token 追踪）
+        extract_all_schema: extract_all_genes 的 FC schema
+        tracker: token 用量追踪器
+
+    Returns:
+        (extraction_dict, gene_dict, success): 提取结果、基因映射、是否成功
     """
     api_kwargs = dict(temperature=TEMPERATURE, max_tokens=16384)
     base_prompt = _load_prompt()
@@ -216,14 +249,20 @@ def extract_paper(
     md_path,
     tracker: TokenTracker,
 ) -> Tuple[Optional[dict], Optional[dict]]:
-    """Extract gene information from a single paper.
+    """从单篇论文中提取基因信息（对外主入口）。
+
+    完整流程：
+    1. 增量跳过：如果 extraction.json 已存在，直接读取返回
+    2. 读取 Markdown → preprocess_md_for_llm() 预处理（去图片/URL + LLM 过滤 section）
+    3. 调用主 API 提取，失败则切备用 API
+    4. 保存 extraction.json + gene_dict.json 到 reports 目录
 
     Args:
-        md_path: path to the markdown file
-        tracker: TokenTracker instance
+        md_path: 论文 Markdown 文件路径
+        tracker: token 用量追踪器
 
     Returns:
-        (extraction_dict, gene_dict) or (None, None) on failure
+        (extraction_dict, gene_dict): 提取结果和基因分类映射，失败返回 (None, None)
     """
     md_path = Path(md_path)
     name = md_path.name

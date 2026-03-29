@@ -39,7 +39,11 @@ from .token_tracker import TokenTracker
 
 def collect_paper_result(filename: str, result: dict, all_reports: list,
                          failed_files: list, skipped_files: list):
-    """Collect a paper result into the correct bucket."""
+    """把单篇论文的处理结果分桶收集。
+
+    [PR 新增函数] 原来这段逻辑在 main() 的顺序和并行两处重复写，
+    现在提取为独立函数，按 status 分到 all_reports / skipped / failed 三个列表。
+    """
     status = result.get("status", "failed")
     if status == "processed":
         report = result.get("report")
@@ -52,7 +56,12 @@ def collect_paper_result(filename: str, result: dict, all_reports: list,
 
 
 def resolve_test_files(files: list, test_index: str) -> list:
-    """Filter files for test mode."""
+    """测试模式下筛选文件。
+
+    支持两种方式：
+    - 数字索引：--test 1 → 第1个文件
+    - 文件名匹配：--test Butelli → 模糊匹配含 "Butelli" 的文件
+    """
     if test_index.isdigit():
         idx = int(test_index) - 1
         if 0 <= idx < len(files):
@@ -74,7 +83,11 @@ def resolve_test_files(files: list, test_index: str) -> list:
 
 
 def _print_paper_result(stem: str, result: dict):
-    """Print a single paper's result summary (shared by sequential and parallel)."""
+    """打印单篇论文的处理结果摘要（顺序和并行模式共用）。
+
+    [PR 新增函数] 原来顺序和并行模式各自写了一遍打印逻辑，现在统一。
+    显示 fidelity 准确率和 corrections 修正数。
+    """
     status = result.get("status")
     if status == "processed":
         report_data = result["report"]
@@ -88,7 +101,11 @@ def _print_paper_result(stem: str, result: dict):
 
 
 def process_one_paper(md_path: Path, stem: str, tracker: TokenTracker):
-    """Process a single paper: extract + verify. Thread-safe."""
+    """处理单篇论文：提取 + 验证（线程安全）。
+
+    流程：extract_paper() → verify_paper() → 返回结果 dict
+    在 ThreadPoolExecutor 中并行调用，每篇论文独立处理。
+    """
     try:
         extraction, gene_dict = extract_paper(md_path, tracker)
 
@@ -117,7 +134,10 @@ def process_one_paper(md_path: Path, stem: str, tracker: TokenTracker):
 
 
 def print_verify_summary(all_reports: list):
-    """Print summary of all verification reports."""
+    """打印所有论文的验证汇总统计。
+
+    统计总字段数、SUPPORTED/UNSUPPORTED/UNCERTAIN 数量、修正数、整体准确率。
+    """
     if not all_reports:
         return
 
@@ -145,6 +165,7 @@ def print_verify_summary(all_reports: list):
 
 
 def main():
+    """Pipeline 主函数：解析参数 → 发现文件 → 顺序/并行处理 → 汇总输出。"""
     parser = argparse.ArgumentParser(description="BioJSON Extraction Pipeline")
     parser.add_argument("--test", type=str, default=None,
                         help="Test mode: file index (1-based) or filename pattern")
