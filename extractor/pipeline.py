@@ -101,7 +101,7 @@ def _print_paper_result(stem: str, result: dict):
 
 
 def process_one_paper(md_path: Path, stem: str, tracker: TokenTracker):
-    """处理单篇论文：提取 + 验证（线程安全）。
+    """处理单篇论文：提取 + 验证（线程安全）。[PR 改动] 使用 GENE_ARRAY_KEY_NAMES 替代硬编码
 
     流程：extract_paper() → verify_paper() → 返回结果 dict
     在 ThreadPoolExecutor 中并行调用，每篇论文独立处理。
@@ -165,7 +165,7 @@ def print_verify_summary(all_reports: list):
 
 
 def main():
-    """Pipeline 主函数：解析参数 → 发现文件 → 顺序/并行处理 → 汇总输出。"""
+    """Pipeline 主函数：解析参数 → 发现文件 → 顺序/并行处理 → 汇总输出。[PR 改动] 拆出 collect_paper_result/_print_paper_result"""
     parser = argparse.ArgumentParser(description="BioJSON Extraction Pipeline")
     parser.add_argument("--test", type=str, default=None,
                         help="Test mode: file index (1-based) or filename pattern")

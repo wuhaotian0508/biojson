@@ -167,7 +167,7 @@ def _call_extract_api(
     extract_all_schema: dict,
     tracker: TokenTracker,
 ):
-    """调用一次 LLM API 提取论文中的所有基因信息（单步提取）。
+    """调用一次 LLM API 提取论文中的所有基因信息（单步提取）。[PR 改动] 改用 utils.safe_parse_json
 
     流程：构建 messages → 调用 API（带 FC tool） → 解析返回的 JSON → 统计基因数量
 
@@ -249,7 +249,7 @@ def extract_paper(
     md_path,
     tracker: TokenTracker,
 ) -> Tuple[Optional[dict], Optional[dict]]:
-    """从单篇论文中提取基因信息（对外主入口）。
+    """从单篇论文中提取基因信息（对外主入口）。[PR 改动] preprocess_md → preprocess_md_for_llm
 
     完整流程：
     1. 增量跳过：如果 extraction.json 已存在，直接读取返回
