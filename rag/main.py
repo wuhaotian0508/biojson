@@ -1,97 +1,121 @@
 #!/usr/bin/env python3
-"""RAG系统主入口 - 基因信息检索与问答"""
+"""
+主程序入口 - 命令行交互模式
+"""
 import argparse
-import sys
-from pathlib import Path
+# 使用简单检索器（TF-IDF）
+from simple_retriever import SimpleRetriever as Retriever
+from generator import Generator
 
-# 添加当前目录到路径
-sys.path.insert(0, str(Path(__file__).parent))
 
-from config import DATA_DIR
-from retriever import JinaRetriever
-from generator import RAGGenerator
+def interactive_mode():
+    """交互模式"""
+    print("=" * 80)
+    print("植物营养代谢基因问答系统")
+    print("=" * 80)
+    print("\n初始化系统...")
 
-class GeneRAG:
-    """基因信息RAG系统"""
+    # 初始化
+    retriever = Retriever()
+    retriever.build_index()
+    generator = Generator()
 
-    def __init__(self, build_index: bool = False):
-        print("初始化RAG系统...")
-        self.retriever = JinaRetriever()
-        self.retriever.build_index(force=build_index)
-        self.generator = RAGGenerator()
-        print("初始化完成！")
+    print("\n系统就绪！输入问题开始查询，输入 'exit' 或 'quit' 退出\n")
 
-    def query(self, question: str, use_rerank: bool = True,
-              stream: bool = True, show_sources: bool = True) -> str:
-        """执行RAG查询"""
-        print(f"\n{'='*60}")
-        print(f"问题: {question}")
-        print('='*60)
+    while True:
+        try:
+            query = input("\n请输入问题: ").strip()
 
-        # 检索
-        print("\n[1/2] 检索相关基因信息...")
-        results = self.retriever.retrieve(question, use_rerank=use_rerank)
+            if not query:
+                continue
 
-        if show_sources:
-            print(f"\n检索到 {len(results)} 条相关记录:")
-            for i, (chunk, score) in enumerate(results[:5], 1):
-                print(f"  {i}. {chunk.gene_name} ({chunk.species}) - {score:.3f}")
-                print(f"     来源: {chunk.article_title[:50]}...")
-
-        # 生成
-        print(f"\n[2/2] 生成答案...\n")
-        print("-" * 60)
-        answer = self.generator.generate(question, results, stream=stream)
-        print("-" * 60)
-
-        return answer
-
-    def interactive(self):
-        """交互式问答"""
-        print("\n" + "="*60)
-        print("基因信息RAG系统 - 交互模式")
-        print("输入问题进行查询，输入 'quit' 或 'exit' 退出")
-        print("="*60)
-
-        while True:
-            try:
-                question = input("\n请输入问题: ").strip()
-                if not question:
-                    continue
-                if question.lower() in ['quit', 'exit', 'q']:
-                    print("再见！")
-                    break
-
-                self.query(question)
-
-            except KeyboardInterrupt:
-                print("\n\n已中断")
+            if query.lower() in ['exit', 'quit', 'q']:
+                print("\n再见！")
                 break
-            except Exception as e:
-                print(f"错误: {e}")
+
+            # 检索
+            print("\n检索中...")
+            chunks = retriever.retrieve(query)
+            print(f"检索到 {len(chunks)} 个相关文献")
+
+            # 显示来源
+            print("\n相关文献:")
+            for i, (chunk, score) in enumerate(chunks, 1):
+                print(f"  {i}. [{chunk.paper_title} | {chunk.gene_name}] (相关度: {score:.3f})")
+
+            # 生成答案
+            print("\n生成答案...\n")
+            print("-" * 80)
+
+            for text in generator.generate(query, chunks, stream=True):
+                print(text, end='', flush=True)
+
+            print("\n" + "-" * 80)
+
+        except KeyboardInterrupt:
+            print("\n\n再见！")
+            break
+        except Exception as e:
+            print(f"\n错误: {e}")
+
+
+def single_query(query: str):
+    """单次查询模式"""
+    print(f"查询: {query}\n")
+
+    # 初始化
+    retriever = Retriever()
+    retriever.build_index()
+    generator = Generator()
+
+    # 检索
+    print("检索中...")
+    chunks = retriever.retrieve(query)
+    print(f"检索到 {len(chunks)} 个相关文献\n")
+
+    # 显示来源
+    print("相关文献:")
+    for i, (chunk, score) in enumerate(chunks, 1):
+        print(f"  {i}. [{chunk.paper_title} | {chunk.gene_name}] (相关度: {score:.3f})")
+
+    # 生成答案
+    print("\n答案:")
+    print("-" * 80)
+
+    for text in generator.generate(query, chunks, stream=True):
+        print(text, end='', flush=True)
+
+    print("\n" + "-" * 80)
 
 
 def main():
-    parser = argparse.ArgumentParser(description="基因信息RAG系统")
-    parser.add_argument("-q", "--query", type=str, help="直接查询问题")
-    parser.add_argument("-i", "--interactive", action="store_true", help="交互模式")
-    parser.add_argument("--build-index", action="store_true", help="强制重建索引")
-    parser.add_argument("--no-rerank", action="store_true", help="禁用rerank")
-    parser.add_argument("--no-stream", action="store_true", help="禁用流式输出")
+    parser = argparse.ArgumentParser(description="植物营养代谢基因问答系统")
+    parser.add_argument("-i", "--interactive", action="store_true",
+                       help="交互模式")
+    parser.add_argument("-q", "--query", type=str,
+                       help="单次查询")
+    parser.add_argument("--rebuild-index", action="store_true",
+                       help="重建索引")
 
     args = parser.parse_args()
 
-    rag = GeneRAG(build_index=args.build_index)
+    # 重建索引
+    if args.rebuild_index:
+        print("重建索引...")
+        retriever = Retriever()
+        retriever.build_index(force_rebuild=True)
+        print("索引重建完成！")
+        return
 
-    if args.query:
-        rag.query(args.query,
-                  use_rerank=not args.no_rerank,
-                  stream=not args.no_stream)
-    elif args.interactive:
-        rag.interactive()
+    # 交互模式
+    if args.interactive:
+        interactive_mode()
+    # 单次查询
+    elif args.query:
+        single_query(args.query)
+    # 默认交互模式
     else:
-        # 默认进入交互模式
-        rag.interactive()
+        interactive_mode()
 
 
 if __name__ == "__main__":

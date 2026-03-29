@@ -3,31 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>基因信息 RAG 问答系统</title>
-    <link rel="stylesheet" href="style.css">
+    <title>nutriMaster - 基因问答系统</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>🧬 基因信息 RAG 问答系统</h1>
-            <p class="subtitle">基于文献检索的智能问答</p>
-        </header>
+        <!-- 侧边栏 -->
+        <div class="sidebar">
+            <div class="logo-section">
+                <div class="logo">🧬 nutriMaster</div>
+            </div>
 
-        <div id="chat-container" class="chat-container">
-            <!-- 消息动态插入 -->
+            <div class="history-section">
+                <h3>历史会话</h3>
+                <div id="history-list">
+                    <div class="history-loading">查看全部...</div>
+                </div>
+            </div>
+
+            <!-- 底部知识库 -->
+            <div class="knowledge-base">
+                <div class="kb-icon">📚</div>
+                <span>我的知识库</span>
+            </div>
         </div>
 
-        <div class="input-area">
-            <textarea id="question-input" placeholder="请输入您的问题，例如：植物中DREB转录因子如何调控抗旱性？" rows="2"></textarea>
-            <button id="send-btn" class="primary">发送</button>
-        </div>
+        <!-- 主内容区 -->
+        <div class="main-content">
+            <!-- 头部 -->
+            <div class="header">
+                <div class="header-left">
+                    <button class="menu-btn">☰</button>
+                    <button class="new-chat-btn" id="new-chat-btn">+ 新对话</button>
+                </div>
+                <div class="header-right">
+                    <button class="lang-btn">简体中文</button>
+                    <button class="user-btn">👤</button>
+                </div>
+            </div>
 
-        <div class="actions">
-            <button id="clear-btn">清空对话</button>
-            <button id="export-btn">导出全部</button>
+            <!-- 内容包装器 -->
+            <div class="content-wrapper">
+                <!-- 欢迎标语区域 (初始显示) -->
+                <div id="welcome-section" class="welcome-section">
+                    <h1 id="welcome-slogan" class="welcome-slogan">今天你想知道点什么？</h1>
+                </div>
+
+                <!-- 聊天区域 -->
+                <div id="chat-container" class="chat-container"></div>
+
+                <!-- 场景介绍 (底部) -->
+                <div id="scene-intro" class="scene-intro">
+                    <div class="scene-category">
+                        <h2>场景介绍（类别）</h2>
+                    </div>
+                    <div class="scene-cards">
+                        <div class="scene-card"></div>
+                        <div class="scene-card"></div>
+                        <div class="scene-card"></div>
+                        <div class="scene-card"></div>
+                    </div>
+                    <div class="scene-detail">
+                        <h3>场景介绍（图片文字）</h3>
+                        <div class="detail-cards">
+                            <div class="detail-card"></div>
+                            <div class="detail-card"></div>
+                            <div class="detail-card"></div>
+                            <div class="detail-card"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 输入区域 -->
+            <div class="input-section">
+                <div class="input-container">
+                    <textarea
+                        id="query-input"
+                        placeholder="描述你的需求，例如：对衰老相关的Biomarker进行文献综述"
+                        rows="1"
+                    ></textarea>
+                    <div class="input-actions">
+                        <button class="action-btn" id="personal-btn">个人库</button>
+                        <button class="action-btn" id="depth-btn">深度调研</button>
+                        <button class="attach-btn">📎</button>
+                        <button class="send-btn" id="send-btn">➤</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="/static/app.js"></script>
 </body>
 </html>

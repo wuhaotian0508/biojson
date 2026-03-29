@@ -1,9 +1,10 @@
 {
-  "dangerouslySkipPermissions": true,
   "permissions": {
     "allow": [
       "Bash(npm run:*)",
-      "Bash(PGPASSWORD=ZZTt3wapv0D8lNBO psql -h db.vqcfjnwyxvayygxtaons.supabase.co -U postgres -d postgres -c \"\n-- 检查 Realtime publication 是否存在\nSELECT pubname FROM pg_publication WHERE pubname = 'supabase_realtime';\n\")"
+      "Bash(PGPASSWORD=ZZTt3wapv0D8lNBO psql -h db.vqcfjnwyxvayygxtaons.supabase.co -U postgres -d postgres -c \"\n-- 检查 Realtime publication 是否存在\nSELECT pubname FROM pg_publication WHERE pubname = 'supabase_realtime';\n\")",
+      "Bash(echo \"http_proxy=$http_proxy\" && echo \"https_proxy=$https_proxy\" && echo \"HTTP_PROXY=$HTTP_PROXY\" && echo \"HTTPS_PROXY=$HTTPS_PROXY\" && echo \"no_proxy=$no_proxy\")"
     ]
-  }
+  },
+  "dangerouslySkipPermissions": true
 }

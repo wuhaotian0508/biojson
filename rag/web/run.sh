@@ -1,5 +1,8 @@
 #!/bin/bash
-# 开发模式运行
-cd /data/haotianwu/biojson/rag/web
-export FLASK_ENV=development
+# 开发模式启动脚本
+
+echo "启动 RAG 基因问答系统 (开发模式)"
+echo "========================================"
+
+cd "$(dirname "$0")"
 python app.py
