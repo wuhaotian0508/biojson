@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "bash vercel-build.sh",
+  "outputDirectory": "public",
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "http://134.195.101.119:5000/api/:path*" },
+    { "source": "/admin/api/:path*", "destination": "http://134.195.101.119:5000/admin/api/:path*" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
+      ]
+    }
+  ]
+}
