@@ -1,0 +1,2532 @@
+{
+  "file": "10.1146@annurev.arplant.59.032607.092804",
+  "md_path": "/data/haotianwu/biojson/extractor/input/10.1146@annurev.arplant.59.032607.092804.md",
+  "timestamp": "2026-04-03T17:08:19.384098",
+  "genes": [
+    {
+      "gene_name": "GID1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states GID1 was identified from rice and mentions homologs in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly gives Oryza sativa and Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Both rice and Arabidopsis are discussed for GID1/homologs."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both species names appear explicitly."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "GID1 is described as a soluble GA receptor acting on bioactive GAs."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "GAs are discussed as hormones/diterpenoids in pathway context, but the exact phrase 'diterpenoid hormone' is not explicitly attached to this field in the paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GID1 is a soluble GA receptor and that central GA signaling components including GID1 are required for GA metabolism homeostasis."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly called a 'soluble GA receptor'."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GID1 interacts with DELLA proteins in a GA-dependent manner."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point is stated: GID1 affinity for bioactive GAs, GA-dependent GID1-GA-DELLA complex formation, and requirement of central GA signaling components including GID1 for homeostatic regulation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review cites in vitro binding, yeast complex formation, and gid1 mutant analysis."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says rice GID1 favors GA4 over GA1 in binding/response assays although GA1 is the major bioactive form in vegetative rice tissues."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 11,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "DELLA proteins",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "DELLA proteins are discussed broadly across plants."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The discussion is general to plants, with Arabidopsis and rice examples."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "DELLA proteins are described as repressors of GA responses, i.e. responses to bioactive gibberellins."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact field wording 'diterpenoid hormone' is not explicitly used here, though GAs are plant hormones derived from diterpenoid biosynthesis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states DELLA proteins repress GA responses and are involved in homeostatic regulation of GA metabolism genes."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly described as members of the GRAS protein family."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This review text does not explicitly state DELLA proteins are nuclear."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Interaction with GID1 is explicit, and SLY1/GID2 are identified as central signaling components in DELLA proteolysis pathway; however direct interaction is not explicitly stated in this review. Because the field lists both, support is partial at best."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states DELLA represses GA signaling, is degraded upon interaction with GID1-GA complex, and that Arabidopsis DELLA loss-of-function reduces AtGA3ox1 transcript levels in GA-deficient background."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast complex formation, degradation assays, and mutant analysis are all mentioned."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "RGA and GAI are explicitly named as DELLA genes and PIL5 direct targets."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "This review text does not explicitly state DELLA proteins are nuclear."
+        }
+      ],
+      "stats": {
+        "supported": 9,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "SLY1/GID2",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly names SLY1 in Arabidopsis and GID2 in rice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana and Oryza sativa are explicit species in the paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Arabidopsis and rice are discussed."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Latin names appear in the review."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "These signaling components are discussed in homeostatic control of bioactive GA levels."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact phrase is not explicitly used for this field."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review says SLY1/GID2 are central GA signaling components required for homeostatic regulation, and gid2 mutants show elevated OsGA20ox2 expression and high GA1."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies SLY1/GID2 as F-box proteins."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Their role in DELLA proteolysis is implied by pathway knowledge, but direct physical interaction with DELLA proteins is not explicitly stated in this review text."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Both claims are directly stated in the homeostasis section."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutant analysis, transcript analysis, and hormone measurement are explicitly described for rice gid2/gid1 mutants."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review links SLY1/GID2 to central signaling and DELLA pathway generally, but does not explicitly say 'functions in DELLA proteolysis pathway' in those exact words for both genes."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 9,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "SLR1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SLR1 is described in rice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice is explicitly given as Oryza sativa elsewhere in the review."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The examples are in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Oryza sativa is the rice species under discussion."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SLR1 is a DELLA protein in GA signaling responding to bioactive GAs."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Exact phrasing not explicitly attached to SLR1."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states SLR1 encodes a DELLA protein and is expressed in rapidly elongating/dividing tissues; aleurone expresses SLR1 but not GA biosynthetic genes, supporting GA response sites."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "SLR1 is explicitly said to encode a DELLA protein; DELLA proteins are defined as GRAS family members."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states SLR1 is expressed in rapidly elongating or dividing tissues and transcript is detectable in aleurone."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Both listed findings are directly stated in the developmental regulation section."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These claims derive from expression analysis described in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review indeed uses SLR1 mainly as a marker of GA response tissue, not a metabolism enzyme."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 11,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "CPS",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "CPS is explicitly defined as ent-copalyl diphosphate synthase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CPS is discussed broadly in plants, with Arabidopsis and rice examples."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review covers plant CPS generally."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CPS is part of GA biosynthesis leading to bioactive GAs."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact field wording is not directly stated."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CPS is described as part of gibberellin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states CPS converts GGDP in early GA biosynthesis toward ent-kaurene via ent-copalyl diphosphate."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "CPS is clearly an early/upstream enzyme."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GAs are biosynthesized from GGDP and CPS is one of the two TPSs involved in conversion of GGDP to ent-kaurene."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "By enzyme name and pathway, CPS forms ent-copalyl diphosphate; this is directly inferable and reflected in Figure 1 nomenclature."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a faithful description of CPS function in the first committed step from GGDP to ent-copalyl diphosphate."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CPS supplies the precursor pool for downstream bioactive GA synthesis."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says CPS and KS are located in plastids."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Null alleles of Arabidopsis CPS (ga1) result in severe GA-deficient dwarves."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CPS is one of the two terpene synthases."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indicates early steps are not the primary control point and says regulation of bioactive GA levels is mainly through 2ODDs, consistent with 'not established' for CPS."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points are directly supported by the biosynthesis and gene sections."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutant analysis, overexpression, metabolite profiling, and localization using GFP fusion are all described."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis CPS corresponds to GA1; rice has two functional CPS genes but only one likely in GA biosynthesis, with others linked to phytoalexins."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "GA deficiency causing dwarfism is explicitly described for null alleles."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The review broadly presents bioactive GAs as hormones controlling plant growth and development."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AtCPS-GUS is said to be expressed mainly in rapidly growing tissues during Arabidopsis development."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The same statement supports 'rapidly growing tissues'."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes AtCPS overexpression raises early intermediates but not bioactive GAs or phenotype, supporting limited value for increasing active GA."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The EC number 5.5.1.13 does not appear in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "5.5.1.13",
+          "new_value": "NA",
+          "reason": "The EC number 5.5.1.13 does not appear in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "KS",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "KS is explicitly defined as ent-kaurene synthase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "KS is discussed broadly in plants."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review covers plant KS generally, with Arabidopsis and rice examples."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "KS is part of GA biosynthesis leading to bioactive GAs."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Exact phrase not explicitly used."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "KS is part of gibberellin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states CPS and KS convert GGDP to ent-kaurene; thus KS acts in early GA biosynthesis from ent-CDP to ent-kaurene."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "KS is clearly upstream."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "By enzyme identity/pathway figure, KS uses ent-copalyl diphosphate; directly inferable from the described two-step conversion."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states KS contributes to the conversion to ent-kaurene."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Faithful to the pathway description."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "KS supplies precursor for downstream bioactive GA synthesis."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says both CPS and KS are located in plastids."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis KS null allele ga2 gives severe GA-deficient dwarfism."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "KS is one of the two TPSs."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper emphasizes 2ODDs as primary regulation sites, so 'not established' is consistent."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly stated or directly inferable from the review."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutant analysis and localization evidence are described."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states Arabidopsis KS corresponds to ga2 mutant context."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss causes severe GA-deficient dwarfism."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Bioactive GAs regulate plant growth and development throughout the review."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The EC number 4.2.3.19 does not appear in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "4.2.3.19",
+          "new_value": "NA",
+          "reason": "The EC number 4.2.3.19 does not appear in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "KO",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "KO is explicitly defined as ent-kaurene oxidase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "KO is discussed generally in plants, with Arabidopsis and rice gene examples."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review treats KO as a plant GA biosynthesis enzyme."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "KO is an upstream enzyme in biosynthesis of bioactive GAs."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Exact phrase not explicit for this field."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "KO is explicitly part of gibberellin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states KO catalyzes oxidation of ent-kaurene to ent-kaurenoic acid."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an early oxidation step."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly ent-kaurene."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly ent-kaurenoic acid."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says KO catalyzes sequential oxidation on C-19 to produce ent-kaurenoic acid."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "KO forms precursor pool for later GA biosynthesis."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says KO is located in the outer membrane of the plastid."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis KO null allele ga3 results in severe GA-deficient dwarfism."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "KO is designated as CYP701A according to P450 nomenclature."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The review does not identify KO as a key control point; it emphasizes 2ODDs instead, so 'not established' is consistent."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings are directly supported."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutant analysis and GFP-fusion localization are described."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states RSG binds the promoter of Arabidopsis AtKO."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The field value '4.2.3.19/oxidase step NA' is not given in the paper and is incorrect/unsupported by the review."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "4.2.3.19/oxidase step NA",
+          "new_value": "NA",
+          "reason": "The field value '4.2.3.19/oxidase step NA' is not given in the paper and is incorrect/unsupported by the review."
+        }
+      ],
+      "stats": {
+        "supported": 18,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "KAO",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "KAO is explicitly defined as ent-kaurenoic acid oxidase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "KAO is discussed broadly in plants."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Plant KAO is described generally."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "KAO produces GA12, precursor to bioactive GAs."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Exact wording not explicitly used."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "KAO is explicitly part of gibberellin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says ent-kaurenoic acid is subsequently converted to GA12 by KAO."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "KAO acts after KO and before GA20ox/GA3ox, i.e. upstream-midstream."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly ent-kaurenoic acid."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly GA12."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The review says ent-kaurenoic acid is converted to GA12 by KAO."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "GA12 is the common precursor for later bioactive GA biosynthesis."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The review says KAO is present in the endoplasmic reticulum."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Although not tied to a specific mutant phenotype here, the review clearly states KAO is required to make GA12, common precursor of bioactive GAs."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "KAO is designated CYP88A, a P450."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by the biosynthesis section."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Enzyme assignment and GFP-fusion localization are explicitly described."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 16,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "GA20ox",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "GA20ox is explicitly defined as gibberellin 20-oxidase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GA20ox is discussed across multiple plant species."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review covers GA20ox generally in plants."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GA12 is converted to GA4 through GA20ox and GA3ox, and GA53 is precursor for GA1 via 13-hydroxylated pathway."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Exact phrase not explicit for this field."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GA20ox is explicitly part of gibberellin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The review describes GA20ox-mediated C20 oxidation and C20-to-C19 conversion in late GA biosynthesis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "GA20ox acts after GA12 and before GA3ox, i.e. midstream/downstream."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes C20-GAs as substrates and mentions GA12/GA53 pathway intermediates contextually."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says GA20ox is responsible for production of C19-GAs from C20-GAs; GA9 and GA20 are immediate precursors discussed elsewhere."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The exact description matches the review wording, including loss of C-20 as CO2 and gamma-lactone formation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "GA20ox forms immediate precursors of bioactive GAs."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The review says these 2ODDs are assumed to be cytosolic owing to lack of targeting sequence."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Increased expression of a GA20ox gene in transgenic Arabidopsis increases GA levels and causes GA-overdose phenotypes."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "GA20ox is explicitly described as a soluble 2-oxoglutarate-dependent dioxygenase."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The review emphasizes late-step 2ODDs including GA20ox as primary sites controlling bioactive GA levels."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points are directly supported across the biosynthesis and regulation sections."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Overexpression, transcript analysis, mutant analysis, and metabolite profiling are all described in the review."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "GA20ox genes are discussed under feedback, auxin, photoperiod/light, and seed-development/ABA-related regulation."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "GA-overdose phenotypes upon overexpression are explicitly stated."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review discusses regulation of stature/growth and mentions SD1, but does not explicitly frame GA20ox as a breeding/engineering target in those words."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "These specific GA20ox family examples are all discussed in species-specific contexts in the review."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The EC number 1.14.11.12 does not appear in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.11.12",
+          "new_value": "NA",
+          "reason": "The EC number 1.14.11.12 does not appear in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "GA3ox",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "GA3ox is explicitly defined as gibberellin 3-oxidase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GA3ox is discussed across many plant species."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review treats GA3ox generally in plants."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says GA3ox converts inactive precursors GA9/GA20 into bioactive GAs such as GA4/GA1."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Exact phrase not explicit for this field."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GA3ox is explicitly part of gibberellin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The review clearly states GA3ox performs the final 3β-hydroxylation activation step."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly the final activation step to bioactive GAs."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names inactive precursors GA9 and GA20."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The products GA4 and GA1 are directly implied by the pathway text and Figure 1."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This description closely matches the review wording."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "GA3ox directly forms bioactive target products."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The review says these 2ODDs are assumed to be cytosolic owing to lack of targeting sequence."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review describes GA3ox as producing bioactive GAs and cites essential roles of AtGA3ox1/2 and OsGA3ox2 in specific tissues/processes."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "GA3ox is explicitly a 2-oxoglutarate-dependent dioxygenase."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The review highlights late-step 2ODDs as key determinants of bioactive GA levels; GA3ox is one of these and is the terminal activation step."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four statements are directly supported by the review."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Reverse genetics, enzyme assays, transcript analysis, and metabolite-related inference are described."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "GA3ox regulation by light, cold, auxin, ABA, and feedback is explicitly discussed."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "TaGA3ox2 weak GA13ox activity, OsGA3ox2 requirement for α-amylase induction, and LsGA3ox1/PsGA3ox1 examples are all directly mentioned."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The EC number 1.14.11.15 does not appear in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.11.15",
+          "new_value": "NA",
+          "reason": "The EC number 1.14.11.15 does not appear in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "GA13ox",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly refers to 'GA 13-oxidase (GA13ox)'."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GA13ox is discussed as a plant enzyme activity/pathway component; the text says it is necessary to identify genes encoding GA13ox(s) in plants."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The discussion is framed generally for plants."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The text states GA13ox converts GA12 to GA53, 'which is a precursor for GA1 in the 13-hydroxylated pathway'."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Gibberellins are discussed throughout as GAs, i.e. diterpenoid hormones."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly describes the '13-hydroxylated pathway' leading to GA1."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states that GA12 is a substrate for GA13ox for production of GA53, defining a GA12-to-GA53 branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Because GA13ox diverts GA12 to GA53 for the 13-hydroxylated route, describing it as a branch point is directly inferable."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says 'GA12 is also a substrate for GA13ox'."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly says GA13ox produces GA53 from GA12."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states GA12 is converted by GA13ox to GA53, a precursor for GA1 in the 13-hydroxylated pathway; 13-oxidation/13-hydroxylation is implied by the enzyme name and pathway description."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "GA53 is explicitly described as a precursor for GA1, so this enzyme forms a precursor pool for the GA1 branch."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review says identifying GA13ox genes/mutants will be necessary to clarify biological relevance, so a phenotypic effect is hypothesized rather than directly demonstrated."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The review does not establish GA13ox as a control step; 'not established' accurately reflects the text."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are consistent with the review: GA12->GA53->GA1 branch, bona fide plant GA13ox genes not yet identified, and wheat TaGA3ox2 has weak in vitro GA13ox activity."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports this as biochemical/pathway inference plus in vitro side activity of recombinant TaGA3ox2 protein."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the review's emphasis that GA13ox is an important missing enzyme/gene in plants at the time."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 16,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "GA2ox",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly names 'GA 2-oxidases (GA2oxs)'."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GA2ox enzymes are discussed broadly in plants."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review covers GA2ox roles across multiple plant species."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GA2oxs deactivate bioactive GAs and immediate precursors, and class III enzymes deplete precursor pools such as GA12 and GA53."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are gibberellins, i.e. diterpenoid hormones."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GA2ox is explicitly described under 'Gibberellin Deactivation'."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states the best-characterized deactivation reaction is '2β-hydroxylation' catalyzed by GA2oxs."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "GA2ox-mediated 2β-hydroxylation is clearly a deactivation side-route."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states class I/II GA2oxs use C19-GAs, while the newly reported type accepts only C20-GAs."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "2β-hydroxylation products are the inactive/deactivated GAs shown in Figure 1 and described in text."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This closely matches the paper's description of class I/II acting on C19-GAs and class III on C20-GAs via 2β-hydroxylation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says class III enzymes deplete precursor pools that would otherwise be converted to bioactive forms, and class I/II deactivate bioactive GAs/precursors."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states these 2ODDs are assumed to be cytosolic because they lack targeting sequences; this inference applies to GA oxidases including GA2ox."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review repeatedly links GA2ox upregulation to lowered bioactive GA and reduced growth/germination responses."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "GA2oxs are explicitly described as a class of 2-oxoglutarate-dependent dioxygenases."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The review says 2ODDs are primary sites for regulation of bioactive GA levels; for deactivation, GA2ox is central and best characterized."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point is reflected in the review: best-characterized deactivation enzymes, class distinctions, broad regulation, and GA-lowering effects."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Across the review these conclusions are supported by enzyme characterization, mutants/transgenics, transcript studies, and metabolite analyses."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed factors appear in the review as regulators of various GA2ox genes: GA treatment, light, cold, auxin, salt stress/DDF1, meristem regulation."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review describes biological effects of GA2ox upregulation on stature and stress-associated growth, but does not explicitly frame this as a breeding/engineering application value."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed example genes appear in the paper."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for GA2ox is given in the review; strict verification requires exact appearance/support."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.11.-",
+          "new_value": "NA",
+          "reason": "No EC number for GA2ox is given in the review; strict verification requires exact appearance/support."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "EUI/CYP714D1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2 and text describe EUI/CYP714D1 as the GA 16,17-epoxidase / 16α,17-epoxidation enzyme."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "EUI is described in rice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice is explicitly identified as Oryza sativa elsewhere in the review."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The characterization discussed is in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice corresponds to Oryza sativa in the review."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The text states EUI epoxidizes non-13-hydroxylated GAs including GA4."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are gibberellins, i.e. diterpenoid hormones."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "EUI is discussed under gibberellin deactivation."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly identifies a new deactivation mechanism via 16α,17-epoxidation."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is clearly a deactivation side-route."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly lists GA4, GA9, and GA12 among non-13-hydroxylated substrates."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The text says EUI forms 16,17-epoxides, and 16α,17-dihydrodiols are detected as hydrated products."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the explicit description in the review."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper frames this as GA deactivation competing with accumulation of active GAs."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The text states EUI is the principal deactivation enzyme in rice upper internodes and that eui mutants accumulate extremely high bioactive GAs."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "EUI is explicitly designated as a P450, CYP714D1."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states EUI/CYP714D1 should be the principal GA deactivation enzyme in the upper internodes of rice."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "Points 1, 2, and 4 are supported, but point 3 overstates the review: overexpression is reported to produce 16α,17-dihydrodiols, yet explicit 'GA-deficiency phenotypes' for EUI overexpression are not stated in this text."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutant analysis, overexpression, and metabolite profiling are all explicitly described."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The key functional site discussed is the upper internodes of rice."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The review supports that reducing GA restrains internode elongation, so this tradeoff is inferable."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 20,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "GAMT1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly names Arabidopsis GAMT1 as a gibberellin methyltransferase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GAMT1 is described from Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is explicitly Arabidopsis thaliana in the review."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Ectopic expression is described in Arabidopsis, tobacco, and petunia."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly gives Nicotiana tabacum and Petunia hybrida."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states GAMT1 utilizes a variety of GAs, including bioactive GAs and their precursors, as substrates."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are gibberellins, diterpenoid hormones."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GAMT1 is discussed under gibberellin deactivation."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly describes methylation as a GA deactivation mechanism."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a deactivation side-route."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says GAMT1 uses various GAs including bioactive GAs and precursors."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly says GAMT1 produces the corresponding methyl esters."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states GAMT1 catalyzes methylation of the C-6 carboxyl group using S-adenosyl-L-methionine."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper frames GAMT1 as deactivating GAs, thus competing with active GA accumulation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states ectopic expression causes dwarfism with GA-deficiency and gamt1 gamt2 double mutants show elevated bioactive GAs in developing seeds."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "GAMT1 is explicitly identified as a methyltransferase."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by the review."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "In vitro activity, ectopic expression, double-mutant analysis, and metabolite data are all described."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review says both GAMT1 and GAMT2 are predominantly expressed in developing and germinating seeds."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review discusses expression and elevated bioactive GA levels in developing seeds, but does not explicitly state 'terminal metabolite accumulation site' for GAMT1 products."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Dwarfism/reduced growth upon ectopic expression is explicitly stated."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 20,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "GAMT2",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly names Arabidopsis GAMT2 as a gibberellin methyltransferase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GAMT2 is described from Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is explicitly Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Ectopic expression is described in Arabidopsis, tobacco, and petunia."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly gives the Latin names Nicotiana tabacum and Petunia hybrida."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says GAMT2 utilizes a variety of GAs including bioactive GAs and precursors."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are gibberellins, i.e. diterpenoid hormones."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GAMT2 is discussed under gibberellin deactivation."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly describes GA methylation as a deactivation branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a deactivation side-route."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states GAMT2 utilizes various GAs including bioactive GAs and precursors."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The text says the enzymes produce corresponding methyl esters."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the explicit description of methylation at the C-6 carboxyl using S-adenosyl-L-methionine."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "GAMT2 is presented as a deactivation enzyme, thus competing with active GA pools."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review reports dwarfism/GA-deficiency upon ectopic expression and increased seed bioactive GAs in gamt1 gamt2 double mutants."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "GAMT2 is explicitly a methyltransferase."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed points are directly supported by the paper."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The methods summarized are all present in the review."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Both GAMT1 and GAMT2 are said to be predominantly expressed in developing and germinating seeds."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "As with GAMT1, seed-related expression and bioactive GA level changes are reported, but not an explicit product accumulation site."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Reduced growth/dwarfism upon ectopic expression is explicitly stated."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 20,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "KNOX proteins",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "KNOX proteins are explicitly described as homeodomain proteins."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly defines KNOX as 'KNOTTED1-like homeobox' proteins."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The text discusses KNOX genes from several plant species."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The mechanism is discussed broadly in plants, with examples in tobacco, Arabidopsis, and rice."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "KNOX proteins are discussed as reducing endogenous levels of bioactive GAs."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are gibberellins, diterpenoid hormones."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The review says KNOX proteins suppress GA biosynthesis and promote low-GA regimes via GA20ox repression and GA2ox induction."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports repression of GA20ox and activation of GA2ox expression, with cytokinin involvement for part of the effect."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "GA20ox and GA2ox genes are explicitly discussed as KNOX-regulated targets."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states KNOX proteins suppress GA20ox expression and establish a low-GA state in the SAM."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The text supports a major developmental role for KNOX proteins in establishing low-GA meristems."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Ectopic KNOX expression causes dwarfism and reduced endogenous GA levels; low GA helps maintain indeterminate meristem state."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states KNOX genes are expressed in the corpus of the shoot apical meristem in tobacco and Arabidopsis."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These conclusions derive from ectopic expression, direct binding (for NTH15), and expression analyses as described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All summary points match the review."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "KNOX function is discussed in the context of meristem identity/developmental program."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review indeed summarizes a regulator family and gives NTH15 and STM as concrete examples."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 17,
+        "unsupported": 0,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "NTH15",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "NTH15 is described as a tobacco KNOX protein, i.e. a transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "NTH15 is explicitly a KNOX protein, hence KNOTTED1-like homeobox."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says 'a tobacco KNOX protein, NTH15'."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tobacco is identified elsewhere as Nicotiana tabacum in the review."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The NTH15 example is in tobacco."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tobacco corresponds to Nicotiana tabacum."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "NTH15 represses GA biosynthesis, thereby lowering bioactive GA levels."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are gibberellins, diterpenoid hormones."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says NTH15 represses GA biosynthesis by suppressing GA20ox expression."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct transcriptional repression is explicitly described."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "GA20ox is explicitly the target mentioned."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The review says NTH15 suppresses GA20ox expression through direct binding to its first intron."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The review supports NTH15 as a direct meristem-associated suppressor of GA biosynthesis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "KNOX ectopic expression reduces endogenous GA levels and causes dwarfism; NTH15 is the direct example mechanistically linked to this suppression."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The review does not explicitly state nuclear localization for NTH15 in this text, even though it is a transcription factor."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "KNOX genes in tobacco and Arabidopsis are stated to be expressed in the corpus of the shoot apical meristem; NTH15 is the tobacco KNOX example."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "Direct binding is explicit, and reduced GA levels/dwarfism are stated for ectopic KNOX expression generally, but the review does not explicitly detail all three methods specifically for NTH15 in this passage."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are consistent with the review."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "NTH15 is indeed presented as the representative tobacco KNOX mechanism."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "The review does not explicitly state nuclear localization for NTH15 in this text, even though it is a transcription factor."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "STM",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "STM is explicitly called a KNOX protein, i.e. a transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "STM is a KNOX protein, hence KNOTTED1-like homeobox."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "STM is discussed in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is Arabidopsis thaliana in the review."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The STM example concerns Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis corresponds to Arabidopsis thaliana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "STM contributes to establishing a low-GA regime in the meristem, affecting bioactive GAs."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are gibberellins, diterpenoid hormones."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The review specifically links STM to GA deactivation gene expression in the meristem."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The review says STM upregulates AtGA2ox4 and AtGA2ox6."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "AtGA2ox4 and AtGA2ox6 are explicitly named."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states STM upregulates AtGA2ox4 and AtGA2ox6 at the base of the meristem."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says this expression contributes to establishment of a low-GA regime in the SAM."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Maintaining low GA in the SAM to promote meristem identity is directly supported."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Nuclear localization is not explicitly stated in the review passage."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "STM is discussed in the context of the shoot apical meristem, and KNOX genes are said to be expressed in the SAM corpus."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review summarizes expression/genetic evidence for STM's regulation of AtGA2ox genes."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are supported by the passage."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "STM is indeed discussed as the Arabidopsis KNOX example."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "Nuclear localization is not explicitly stated in the review passage."
+        }
+      ],
+      "stats": {
+        "supported": 18,
+        "unsupported": 1,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "AG",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "AG is a homeotic gene encoding a transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AGAMOUS is a MADS-domain family member; the review defines the MADS acronym in the adjacent section and AG is a classic MADS-box gene."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AG is discussed in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is Arabidopsis thaliana in the review."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The AG example concerns Arabidopsis floral meristem."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis corresponds to Arabidopsis thaliana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AG is said to elevate AtGA3ox1 expression, which may increase GA levels in the floral meristem."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are gibberellins, diterpenoid hormones."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "AG is linked to GA biosynthesis via AtGA3ox1 activation in the floral meristem."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The review says AG elevates expression of AtGA3ox1."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "AtGA3ox1 is explicitly named."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct activation of AtGA3ox1 is supported by AG binding to its promoter in vitro and in vivo."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states this may cause increased GA levels in the floral meristem and promote differentiation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly links AG-induced AtGA3ox1 expression and probable GA increase to the shift from meristem identity to organ differentiation."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Nuclear localization is not explicitly stated in the review passage."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Microarray analysis and promoter binding in vitro and in vivo are explicitly stated."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed findings are directly supported by the review."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an accurate summary connection between floral homeotic regulation and GA metabolism."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "Nuclear localization is not explicitly stated in the review passage."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 1,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "LEC2",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "LEC2 is explicitly described as an Arabidopsis transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states LEC2 and FUS3 are Arabidopsis B3 transcription factors."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "LEC2 is discussed in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is Arabidopsis thaliana in the review."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The LEC2 example concerns Arabidopsis seeds."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis corresponds to Arabidopsis thaliana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The review says bioactive GA levels are elevated in immature seeds of lec2 mutants."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are gibberellins, diterpenoid hormones."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "LEC2 is linked to suppression of GA accumulation during seed maturation via AtGA3ox2 expression control."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Although indirect, the review supports a negative regulatory role because lec2 mutants show ectopic activation of AtGA3ox2 and elevated GA."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "AtGA3ox2 is the specific gene implicated in part through ectopic activation in lec2 mutants."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states elevated GA levels in lec2 mutants occur in part through ectopic activation of AtGA3ox2, supporting prevention of ectopic activation by LEC2."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The review supports LEC2 as part of the seed maturation machinery maintaining low GA during embryogenesis/seed maturation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "lec2 immature seeds have elevated bioactive GAs, supporting suppression of GA accumulation by LEC2."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutant analysis and gene expression analysis are explicitly the basis for the LEC2 conclusion."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements are supported, with the caveat that the repression is inferred from mutant effects rather than direct binding."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states direct promoter binding is shown for FUS3, not LEC2, so this note is accurate."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 17,
+        "unsupported": 0,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "FUS3",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states FUS3 is an Arabidopsis B3 transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says LEC2 and FUS3 are Arabidopsis B3 transcription factors."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "FUS3 is discussed in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names Arabidopsis; the full species name Arabidopsis thaliana appears in the review."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The cited experiments concern Arabidopsis seeds and mutants."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the species discussed."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says bioactive GAs are elevated in immature seeds of fus3 mutants."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "GAs are gibberellins and part of diterpenoid metabolism generally, but the exact phrase 'diterpenoid hormone' is not explicitly used for this field in the FUS3 section."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The section explicitly frames FUS3 as regulating GA and ABA balance during seed development."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states transient FUS3 induction increases ABA and represses AtGA3ox1 and AtGA20ox1, indicating repression of GA biosynthesis and positive regulation of ABA."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper names AtGA3ox2, AtGA3ox1, and AtGA20ox1 in connection with FUS3 regulation."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Direct binding is shown only for FUS3 to AtGA3ox2 promoter RY elements in vitro. The paper does not say FUS3 directly represses AtGA3ox2, and repression upon induction is reported for AtGA3ox1 and AtGA20ox1."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indicates FUS3 is a positive and negative regulator of ABA and GA levels, respectively, contributing to GA-ABA balance in seed."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "fus3 mutant immature seeds have elevated bioactive GAs, and transient FUS3 induction increases ABA."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says FUS3 protein levels are regulated positively by ABA and negatively by GA."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization for FUS3 is stated in the paper text provided."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes mutant analysis, transient induction of FUS3, and direct in vitro binding to promoter RY elements."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary matches the paper: elevated GAs in fus3 mutants, direct binding to AtGA3ox2 promoter RY elements, and repression of GA biosynthesis with promotion of ABA accumulation."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "Calling FUS3 'a central hormonal balance regulator in seeds' is a reasonable synthesis but not a direct phrase from the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Regulatory_Effect_on_Target_Genes",
+          "old_value": "Represses AtGA3ox2 directly and represses AtGA3ox1 and AtGA20ox1 upon induction",
+          "new_value": "NA",
+          "reason": "Direct binding is shown only for FUS3 to AtGA3ox2 promoter RY elements in vitro. The paper does not say FUS3 directly represses AtGA3ox2, and repression upon induction is reported for AtGA3ox1 and AtGA20ox1."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No subcellular localization for FUS3 is stated in the paper text provided."
+        }
+      ],
+      "stats": {
+        "supported": 15,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "AGL15",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "AGL15 is described as a member of the MADS domain family, i.e. a transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says AGL15 is a member of the MADS domain family."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AGL15 is discussed in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana appears in the review as the species."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The evidence described concerns Arabidopsis seeds/embryogenesis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the species discussed."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says AGL15 plays a role in lowering GA content during embryogenesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Although GAs are diterpenoid hormones generally, the exact class label is not explicitly attached to AGL15 in the paper."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states AGL15 is involved in GA deactivation/lowering GA content during embryogenesis via AtGA2ox6."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "AtGA2ox6 is activated in seeds that overexpress AGL15."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "AtGA2ox6 is explicitly identified as a direct target of AGL15 in vivo."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states AtGA2ox6 is a direct target by ChIP and is activated in AGL15-overexpressing seeds."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states AGL15 plays a role in lowering GA content during embryogenesis through upregulation of a GA-deactivation gene."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Lowering GA content during embryogenesis is explicitly stated as the inferred consequence."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization for AGL15 is stated in the paper text."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says AGL15 accumulates during embryo development in Arabidopsis."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "ChIP and overexpression in seeds are explicitly described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary matches the statements on direct targeting, activation in overexpressing seeds, and likely lowering of GA levels."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says the direct target relationship was identified in vivo by ChIP analysis."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No subcellular localization for AGL15 is stated in the paper text."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "RSG",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "RSG is explicitly described as a tobacco transcriptional activator."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states RSG contains a basic leucine zipper domain."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RSG is described as a tobacco factor."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tobacco is referred to elsewhere as Nicotiana tabacum in the review."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The described dominant negative transgenic studies are in tobacco."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is tobacco/Nicotiana tabacum."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "RSG is discussed in the context of GA homeostasis and biosynthesis affecting bioactive GA levels/GA-deficiency dwarfism."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The general class is inferable, but this exact label is not explicitly stated in the RSG section."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly places RSG in GA homeostasis and biosynthesis regulation."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "RSG is a transcriptional activator, and GA negatively modulates it via 14-3-3-mediated cytoplasmic sequestration."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "RSG binds the promoter of Arabidopsis AtKO, and GA20ox feedback regulation is implicated; however the combined field wording is partly interpretive rather than a direct target list."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Dominant negative RSG represses AtKO expression and impairs feedback regulation of GA20ox expression."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper suggests RSG links GA status to biosynthetic gene expression in homeostasis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Dominant negative RSG represses AtKO expression and causes dwarfism in tobacco."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "RSG is sequestered in the cytoplasm by 14-3-3 proteins and translocated into the nucleus when GA levels are reduced."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states 14-3-3 proteins interact with RSG."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Promoter binding, dominant negative transgenics, and localization/nuclear translocation studies are all described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately reflects the paper's statements, including the caveat that RSG may participate in GA20ox feedback."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly suggests RSG might be involved in feedback regulation of GA20ox expression."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the possible role of RSG in GA homeostasis appears restricted to GA20ox and not GA3ox."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 18,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "AGF1",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "AGF1 is explicitly described as an AT-hook protein of GA feedback regulation."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says AGF1 is an AT-hook protein."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AGF1 is discussed in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana appears in the review."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The AtGA3ox1 promoter context is Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the relevant species."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AGF1 is discussed as part of GA feedback regulation of biosynthesis, affecting bioactive GA homeostasis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The specific class label is not explicitly given in the AGF1 section."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies AGF1 as acting in GA feedback regulation."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "AGF1 binds the cis-element for GA negative feedback response in the AtGA3ox1 promoter."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies the 43-bp cis-element in the AtGA3ox1 promoter."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNCERTAIN",
+          "reason": "AGF1 binds the feedback element, but the review says how AGF1 mediates the GA signal remains unclear, so 'mediates' is plausible but not firmly demonstrated."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents AGF1 as an additional component that might act in GA homeostasis, specifically for AtGA3ox1."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No phenotype or direct impact on GA levels/homeostasis by AGF1 itself is reported in the paper text."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper mentions nuclear localization of AGF1-GFP and says GA does not affect it."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Binding to the cis-element and GFP localization are explicitly described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary matches the paper: binding to the 43-bp element, unclear mechanism, and distinct regulation from AtGA20ox1."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states GA does not affect AGF1 transcript levels or the nuclear localization of AGF1-GFP."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Core_Phenotypic_Effect",
+          "old_value": "Impacts feedback regulation of AtGA3ox1 and thereby GA biosynthesis homeostasis",
+          "new_value": "NA",
+          "reason": "No phenotype or direct impact on GA levels/homeostasis by AGF1 itself is reported in the paper text."
+        }
+      ],
+      "stats": {
+        "supported": 15,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "OsYAB1",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "OsYAB1 is discussed as YABBY1, implying a transcription factor of the YABBY family."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The name YABBY1 indicates the YABBY family, and the paper refers to YABBY1 (OsYAB1)."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsYAB1 is from rice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice is Oryza sativa in the review."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments discussed are in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Oryza sativa is the relevant species."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says overexpression of OsYAB1 results in a decrease in GA1 levels."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact class label is not explicitly stated for this entry."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents OsYAB1 as a possible mediator of GA homeostasis downstream of DELLA."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The review says decreased GA1 might be caused by downregulation of OsGA3ox2 and upregulation of OsGA2ox3."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "OsGA3ox2 and OsGA2ox3 are explicitly named."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says the effect on GA1 'might be caused by' downregulation of OsGA3ox2 and upregulation of OsGA2ox3, so this causative claim is tentative."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper suggests OsYAB1 may be a mediator of GA homeostasis downstream of DELLA and feedback inhibition."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Overexpression causes a semidwarf phenotype and decreases GA1 levels."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states OsYAB1 expression is dependent on the DELLA protein."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Overexpression, cosuppression, in vitro promoter binding, and GA1 measurements are all mentioned."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary matches the paper, with the note that target gene effects are phrased cautiously there."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says OsYAB1 may act as a mediator of feedback inhibition."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states OsYAB1 binds a GA-responsive element in the OsGA3ox2 promoter in vitro."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 17,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "PIL5",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PIL5 is described as a basic helix-loop-helix protein and a regulator of germination."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says PIL5 is a basic helix-loop-helix protein."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PIL5 is discussed in Arabidopsis seeds."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana appears in the review."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The findings are from Arabidopsis seed germination studies."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the species used."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says phytochrome-regulated expression changes result in an increase in GA4 levels in seeds, with PIL5 involved."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact class label is not stated in the PIL5 section."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly discusses PIL5 in light-regulated seed GA metabolism and GA responsiveness."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 4c and text state PIL5 suppresses GA3ox expression and activates GA2ox expression when active, and phytochrome activation leads to PIL5 degradation."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "AtGA3ox1, AtGA3ox2, AtGA2ox2, RGA, and GAI are all explicitly discussed in relation to PIL5."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states PIL5 is involved in regulating AtGA3ox1/2 and AtGA2ox2, but ChIP shows no direct binding to those promoters; it does directly bind RGA and GAI promoters."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The review presents PIL5 as a key negative regulator controlling GA accumulation and germination under phytochrome control."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The text and Figure 4c indicate active PIL5 keeps GA4 low and suppresses germination until light causes degradation."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states PIL5 is involved in both phyA- and phyB-mediated regulation, i.e. phytochrome activation by light."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "ChIP, gene expression analysis, and light-response genetics are all explicitly discussed."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately reflects the paper, including indirect regulation of GA metabolism genes and direct binding to DELLA promoters."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The description that PIL5 integrates light signaling with hormonal balance is consistent with the review's discussion of GA and ABA metabolism/responsiveness."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states PIL5 does not bind directly to AtGA3ox1, AtGA3ox2, or AtGA2ox2 promoters according to ChIP."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 18,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "SPT",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "SPT is explicitly described as a bHLH transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says SPT is a bHLH transcription factor closely related to PIL5."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SPT is discussed in Arabidopsis seeds."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana appears in the review."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The work described concerns Arabidopsis seed germination."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the relevant species."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SPT is discussed through regulation of AtGA3ox genes and bioactive GA increase after cold treatment, affecting seed germination."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact class label is not explicitly stated in this section."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states SPT controls responses to cold stratification in part through regulating AtGA3ox genes, and also contributes to phytochrome-dependent light responses in seeds."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "SPT is explicitly called a light-stable repressor of seed germination and acts through AtGA3ox genes."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says SPT acts in part through regulating the AtGA3ox genes."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says SPT controls responses through regulating AtGA3ox genes, but does not explicitly specify repression of AtGA3ox transcript levels in the provided text."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents SPT as a light-stable repressor affecting cold stratification responses via GA biosynthesis genes."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "SPT is explicitly described as a repressor of seed germination."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review only summarizes recent work; it does not specify detailed methods in the provided text."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately reflects the paper's statements."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says SPT is closely related to PIL5."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 14,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "DDF1",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "DDF1 encodes an AP2 transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says DDF1 encodes an AP2 transcription factor closely related to DREBs."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "DDF1 is discussed in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana appears in the review."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The described overexpression and salt stress studies are in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the relevant species."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states DDF1 overexpression causes reduction in GA4 content, and salt-treated plants have reduced bioactive GAs."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact class label is not explicitly stated in this section."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links DDF1 to stress-responsive changes in GA metabolism/deactivation under salt stress."
+        },
+        "Regulation_Mode": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper suggests AtGA2ox7 is a target of DDF1 from unpublished data, but does not establish a firm transcriptional activation mechanism in the reviewed published results."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNSUPPORTED",
+          "reason": "AtGA2ox7 as a DDF1 target is cited only as unpublished data in the review, so it is not firmly supported by the paper as a validated result."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The claim that DDF1 targets AtGA2ox7 to reduce GA levels under salt stress relies on unpublished data noted in the review, not established evidence in the paper."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports DDF1 as a salt-inducible regulator linking stress tolerance with reduced GA levels and growth restraint."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Overexpression reduces GA4, causes dwarfism, and improves salt survival."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says DDF1 expression is strongly induced by high-salinity stress."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "High-salinity/salt stress is explicitly the relevant treatment."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "Overexpression, stress assays, and metabolite profiling are described, but 'target identification' refers to unpublished data and is not validated in the paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "Points 1-3 are supported, but point 4 about AtGA2ox7 as a target is based on unpublished data and should not be treated as firmly supported."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports dwarfism/reduced growth accompanying improved stress survival."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes the AtGA2ox7 target assignment is from unpublished data."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Regulatory_Targets",
+          "old_value": "AtGA2ox7",
+          "new_value": "NA",
+          "reason": "AtGA2ox7 as a DDF1 target is cited only as unpublished data in the review, so it is not firmly supported by the paper as a validated result."
+        },
+        {
+          "field": "Regulatory_Effect_on_Target_Genes",
+          "old_value": "Targets AtGA2ox7, a C20-GA-specific GA2ox, to reduce bioactive GA levels under salt stress",
+          "new_value": "NA",
+          "reason": "The claim that DDF1 targets AtGA2ox7 to reduce GA levels under salt stress relies on unpublished data noted in the review, not established evidence in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 14,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 518,
+    "supported": 466,
+    "unsupported": 16,
+    "uncertain": 36,
+    "total_corrections": 16
+  }
+}

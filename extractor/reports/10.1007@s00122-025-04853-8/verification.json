@@ -1,0 +1,243 @@
+{
+  "file": "10.1007@s00122-025-04853-8",
+  "md_path": "/data/haotianwu/biojson/extractor/input/10.1007@s00122-025-04853-8.md",
+  "timestamp": "2026-04-03T14:24:36.356255",
+  "genes": [
+    {
+      "gene_name": "HvGS3",
+      "category": "Common",
+      "verification": {
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is conducted in barley and repeatedly states barley as the organism."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to barley as Hordeum vulgare in Methods."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The transformed spring barley variety is explicitly stated as 'Golden Promise'."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HvGS3 is the barley gene edited in barley plants."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "HvGS3 is from barley, whose Latin name Hordeum vulgare appears in the paper."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The HvGS3 gene edited is in the Golden Promise background; the paper states the spring barley variety 'Golden Promise'."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states HvGS3 is a Type C Gγ subunit and describes Type C Gγ subunits as containing OSR domain, transmembrane domain, cys-rich region, and VWFC."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly report increased lignin content in hvgs3 and interpret reduced GA biosynthesis via down-regulated GA3ox plus GA3 response assays."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Lignin as a phenylpropanoid-related polymer and gibberellin as a diterpenoid hormone are biologically correct, but these exact class labels are not stated in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links lignin to stem strength/lodging resistance and gibberellin to internode elongation/plant height."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Lignin content and transcriptome analyses were performed on the second internode/stem tissues; GA-related expression was examined in internodes."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The study includes greenhouse and field experiments and exogenous GA3 treatment assays on seedlings."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly described and used: CRISPR/Cas9 knockout, T-DNA-free homozygous lines, histology, lignin assay, transcriptome analysis, and GA3 response assay."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show HvGS3 knockout reduced plant height and cell length, increased stem strength and lignin, and improved lodging resistance."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each component is supported by Results: 37.8–43.1% height reduction, stronger stems/greater CLRI and anatomical strengthening with 22% higher lignin, and transcriptome evidence of lignin-pathway upregulation plus GA3ox downregulation."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports reduced grains per spike, thousand-grain weight, spike length, and grain length in hvgs3 lines."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The discussion cites a Gβ subunit interaction model from rice and notes HvDEP1 background context, but no direct protein interaction test for HvGS3 with Gβ or HvDEP1 is performed in this paper."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Transcriptome/RNA-seq is reported, and the CNGBdb project number CNP0006753 is explicitly given in Data availability."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract/conclusion explicitly present HvGS3 editing as a resource for breeding new lodging-resistant/dwarf barley germplasm, while results also show grain-trait penalties."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "HvGS3 is the main experimentally edited gene throughout the paper; discussion also states Golden Promise has DEP1 functional deficiency and that genetic background may influence HvGS3 function."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 18,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "GA3ox",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies GA3ox as GA 3-oxidase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GA3ox is explicitly discussed in the gibberellin biosynthesis pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GA3ox directly contributes to production of bioactive GAs, indicating a late biosynthetic step."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states GA3ox comprises a rate-limiting step in GA biosynthesis; results say it directly contributes to bioactive GA production."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not name the specific substrates or even 'late GA precursors' explicitly."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state GA3ox directly contributes to production of bioactive forms such as GA1, GA3, and GA4."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The enzyme role in producing bioactive GAs is stated, but the specific wording 'catalyzes 3-oxidation reactions' is not explicitly described in the paper text."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says GA3ox directly contributes to production of bioactive GA forms, supporting a direct connection."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway end product discussed is gibberellin/active GAs."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Calling gibberellin a diterpenoid hormone is correct generally, but this class label is not explicitly stated in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links GA biosynthesis with internode elongation and plant height."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The discussion explicitly says GA3ox comprises a rate-limiting step in GA biosynthesis."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression and phenotypic context are in barley."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Barley is identified as Hordeum vulgare in the paper."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses the barley variety Golden Promise."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The transcriptome data concern barley tissues, so the implicated GA3ox is from barley."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is barley, Hordeum vulgare."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental material is Golden Promise."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state GA3ox was significantly down-regulated in hvgs3 internodes; transcriptome sampling was from internode tissues at the jointing stage, and the text says second internodes."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "GA3ox is analyzed in the HvGS3 knockout background, and exogenous GA3 treatment assays are reported."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq differential expression and exogenous GA3 physiological response are both explicitly used."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper never identifies GA3ox as a 2-oxoglutarate-dependent dioxygenase family member."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements are supported: log2FoldChange −5.61, interpretation as suppressed GA biosynthesis, and GA3-induced height increase supporting GA deficiency/dwarfing."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper associates reduced GA3ox expression with suppressed GA biosynthesis and dwarf phenotype in hvgs3."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Reduced grain-related traits are reported for HvGS3 mutants, but the paper does not directly attribute those tradeoffs specifically to GA3ox expression changes."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq was performed and project CNP0006753 is explicitly provided."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses breeding value for HvGS3 editing, but does not explicitly propose GA3ox itself as a breeding target or marker."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "GA3ox was not directly edited; it was implicated downstream through transcriptome and GA3 response evidence rather than direct manipulation."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Substrate",
+          "old_value": "Late GA precursors",
+          "new_value": "NA",
+          "reason": "The paper does not name the specific substrates or even 'late GA precursors' explicitly."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "2-oxoglutarate-dependent dioxygenase family",
+          "new_value": "NA",
+          "reason": "The paper never identifies GA3ox as a 2-oxoglutarate-dependent dioxygenase family member."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 48,
+    "supported": 40,
+    "unsupported": 2,
+    "uncertain": 6,
+    "total_corrections": 2
+  }
+}

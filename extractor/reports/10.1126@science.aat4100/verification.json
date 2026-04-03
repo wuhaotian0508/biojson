@@ -1,0 +1,489 @@
+{
+  "file": "10.1126@science.aat4100",
+  "md_path": "/data/haotianwu/biojson/extractor/input/10.1126@science.aat4100.md",
+  "timestamp": "2026-04-03T16:57:13.997627",
+  "genes": [
+    {
+      "gene_name": "PAS",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PAS was identified and silenced in Madagascar periwinkle, i.e. Catharanthus roseus."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states the work concerns Catharanthus roseus."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PAS was studied in C. roseus, transiently expressed in Nicotiana benthamiana, and expressed in Pichia pastoris and Sf9 insect cells."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Catharanthus roseus and Nicotiana benthamiana are explicit; Pichia pastoris and Sf9 insect cells are also explicit, and Sf9 corresponds to Spodoptera frugiperda cells."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "PAS is directly tied to catharanthine and tabersonine formation; vinblastine is only an indirect downstream product discussed at pathway level, not directly measured for PAS assays."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These metabolites are alkaloids in the monoterpene indole alkaloid/vinblastine pathway."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states catharanthine and tabersonine are monomeric precursors for other bioactive alkaloids, and vinblastine is described as a potent anticancer drug."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The article is explicitly about vinblastine/vincristine biosynthesis in the monoterpene indole alkaloid pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PAS acts in the route from stemmadenine acetate to the catharanthine/tabersonine scaffolds."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The oxidase gene was explicitly named precondylocarpine acetate synthase (PAS)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PAS is described as a gene annotated as reticuline oxidase, and PAS homologs are discussed with berberine bridge enzyme-type chemistry and flavin dependence."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states PAS is targeted to the vacuole through small vesicles budding from the ER, suggesting oxidation occurs in the ER lumen, ER-derived vacuole-targeted vesicles, and/or vacuole."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states PAS had low absolute expression levels but a similar tissue expression pattern to TS."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "PAS reacted with stemmadenine acetate 7 and failed to react with stemmadenine 1."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "PAS converted stemmadenine acetate to precondylocarpine acetate 10, validated by mass and retention time against semisynthetic standard."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes oxidation of stemmadenine acetate to precondylocarpine acetate; C-N bond oxidation is proposed based on reticuline oxidase chemistry."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PAS acts upstream of DPAS and CS/TS and is presented as enabling catharanthine/tabersonine and thus vinblastine pathway completion."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "PAS is the upstream oxidase step before DPAS and CS/TS."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents PAS as one of the missing enzymes completing the pathway; it does not establish rate limitation, and the field explicitly notes that rate-limiting is not established."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Silencing caused accumulation of stemmadenine acetate, and PAS function was required in reconstitution assays leading to downstream products."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summarized findings are directly reported: silencing accumulated stemmadenine acetate, heterologous PAS formed precondylocarpine acetate, and coexpression with DPAS plus CS/TS yielded catharanthine/tabersonine in N. benthamiana."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all described: VIGS, transient coexpression in N. benthamiana, in vitro assays with heterologous protein, LC-MS/coelution, and proteomics validation."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper reports BiFC interactions for DPAS with CS and TS, not PAS with DPAS/CS/TS."
+        },
+        "Omics_Data": {
+          "verdict": "UNCERTAIN",
+          "reason": "RNA-seq from C. roseus and proteomics data S2/S3 are explicit, but the exact phrase 'accession NA' is not from the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Both points are explicit: PAS did not react with non-acetylated stemmadenine, and PAS lacks His and Cys residues involved in covalent FAD binding."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly emphasizes heterologous production and development of alternative host platforms for valuable alkaloids."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "DPAS; CS; TS",
+          "new_value": "NA",
+          "reason": "The paper reports BiFC interactions for DPAS with CS and TS, not PAS with DPAS/CS/TS."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "DPAS",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "DPAS was identified from and silenced in Madagascar periwinkle."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is explicitly Catharanthus roseus."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "DPAS was studied in C. roseus, transiently in Nicotiana benthamiana, and expressed in Escherichia coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "These species names appear in the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "DPAS is directly linked to catharanthine and tabersonine production; vinblastine is only an indirect downstream connection, not directly measured in DPAS experiments."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway products discussed are alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states catharanthine and tabersonine are precursors for bioactive alkaloids and vinblastine is an anticancer drug."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "DPAS is described as part of vinblastine/monoterpene indole alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "DPAS functions in the reduction step from precondylocarpine acetate toward the shared precursor of catharanthine/tabersonine."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The alcohol dehydrogenase was renamed dihydroprecondylocarpine synthase (DPAS)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "DPAS is explicitly described as a medium-chain alcohol dehydrogenase."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states DPAS colocalizes with CS and TS in the cytosol."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Precondylocarpine acetate 10 is explicitly proposed and experimentally supported as the substrate of the reductase DPAS."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The reduced product is proposed to be dihydroprecondylocarpine acetate 11 but could not be isolated; the paper treats this as an assumed/proposed intermediate."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states precondylocarpine acetate is reduced by DPAS to a labile intermediate assumed to be dihydroprecondylocarpine acetate."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "DPAS forms the immediate precursor subsequently converted by CS/TS to catharanthine/tabersonine."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "DPAS is explicitly positioned between PAS and CS/TS."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "DPAS is one of the missing enzymes completing the pathway; no rate-limiting claim is made in the field."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that DPAS is required for conversion toward the unstable intermediate feeding catharanthine/tabersonine biosynthesis."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are in the paper: silencing led to precondylocarpine acetate accumulation, DPAS participated in reconstitution, and BiFC suggested stronger interaction with TS than CS."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all described for DPAS: gene silencing, transient coexpression, in vitro assays, LC-MS/MS with standards, and BiFC."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC explicitly examined DPAS interactions with TS and CS."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says the product could not be isolated because of lability and was inferred from tubotaiwine and coupled assays."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper highlights pathway reconstitution in heterologous hosts as a synthetic biology goal enabled by these discoveries."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes the reactive intermediate can decompose or cyclize spontaneously, complicating handling and likely engineering."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "TS",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TS was identified and silenced in Madagascar periwinkle."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is explicitly Catharanthus roseus."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TS was studied in C. roseus, expressed in Nicotiana benthamiana, and expressed in Escherichia coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "These species are explicitly mentioned."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "TS directly forms tabersonine; connection to vinblastine is indirect via downstream vindoline/vinblastine pathway and not directly measured here."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Tabersonine and vinblastine are alkaloids in this context."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states tabersonine is a precursor for vindoline and other biologically active alkaloids, and vinblastine is anticancer."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "TS is part of the tabersonine branch of monoterpene indole alkaloid/vinblastine biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "TS defines the tabersonine-forming branch from the shared unstable precursor/dehydrosecodine route."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names the enzyme tabersonine synthase (TS)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "TS was identified among genes annotated as alpha/beta hydrolases."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states TS colocalizes in the cytosol."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The two alpha/beta hydrolases including TS were identified by shared expression profile with previously identified vinblastine biosynthetic enzymes."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports a proposed substrate of dihydroprecondylocarpine acetate 11 and shows activity in assays using precondylocarpine acetate 10 plus DPAS, so the phrasing captures both direct proposal and coupled-assay context."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "TS leads to formation of tabersonine 2."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper characterizes TS as a hydrolase likely enabling formation of dehydrosecodine from dihydroprecondylocarpine acetate, which cyclizes to tabersonine."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "TS directly forms the tabersonine scaffold, which is upstream of vindoline/vinblastine."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "TS is the downstream branch-forming cyclization/hydrolase step."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "TS is certainly branch-determining, but the paper does not explicitly call it a terminal control step or rate-limiting step."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "VIGS reduced tabersonine accumulation and coupled assays showed TS promotes tabersonine formation from the shared intermediate."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by the Results."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all reported for TS."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC showed strong interaction between TS and DPAS."
+        },
+        "Omics_Data": {
+          "verdict": "UNCERTAIN",
+          "reason": "RNA-seq from C. roseus is explicit, but the exact note 'accession NA' is not present in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states TS and CS likely retained hydrolase function from an ancestor, likely use the same unstable substrate, and TS interacts more strongly with DPAS than CS does."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Using TS to direct flux toward tabersonine-derived alkaloids is a direct inference from the reported branch specificity and heterologous reconstruction."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper notes spontaneous cyclization can occur and affect product outcomes."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 24,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "CS",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CS was identified and silenced in Madagascar periwinkle."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is explicitly Catharanthus roseus."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CS was studied in C. roseus, expressed in Nicotiana benthamiana, and expressed in Escherichia coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "These species are explicitly mentioned."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "CS directly forms catharanthine; vinblastine is only an indirect downstream product, though catharanthine is a direct monomeric precursor."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Catharanthine and vinblastine are alkaloids in this pathway."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states catharanthine is a precursor of vinblastine/vincristine and other bioactive alkaloids, and vinblastine is anticancer."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CS is part of the catharanthine branch of monoterpene indole alkaloid/vinblastine biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CS defines the catharanthine-forming branch from the shared unstable precursor/dehydrosecodine route."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names catharanthine synthase (CS)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CS was identified among genes annotated as alpha/beta hydrolases."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states CS colocalizes in the cytosol."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The two alpha/beta hydrolases including CS were identified by shared expression profile with known vinblastine-pathway enzymes."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports a proposed substrate of dihydroprecondylocarpine acetate 11 and shows activity in assays using precondylocarpine acetate 10 plus DPAS, so the phrasing is aligned with the evidence."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "CS leads to formation of catharanthine 3."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper characterizes CS as likely enabling deacetoxylation/formation of dehydrosecodine from dihydroprecondylocarpine acetate, which cyclizes to catharanthine."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CS directly forms catharanthine, a monomeric precursor of vinblastine."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "CS is the downstream branch-forming cyclization/hydrolase step."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "CS is branch-determining, but the paper does not explicitly establish it as a control or rate-limiting step."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "VIGS reduced catharanthine accumulation and coupled assays showed CS promotes catharanthine formation from the shared intermediate."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by the Results."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all reported for CS."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC tested and detected a weak interaction between CS and DPAS."
+        },
+        "Omics_Data": {
+          "verdict": "UNCERTAIN",
+          "reason": "RNA-seq from C. roseus is explicit, but 'accession NA' is not stated in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that CS and TS act on the same unstable precursor but direct alternative cyclization outcomes, and CS interacts more weakly with DPAS than TS does."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Directing flux toward catharanthine and downstream vinblastine/vincristine production is consistent with the demonstrated branch function and the paper's heterologous production emphasis."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper notes branch competition and spontaneous cyclization/decomposition of the reactive intermediate."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 24,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 105,
+    "supported": 94,
+    "unsupported": 1,
+    "uncertain": 10,
+    "total_corrections": 1
+  }
+}

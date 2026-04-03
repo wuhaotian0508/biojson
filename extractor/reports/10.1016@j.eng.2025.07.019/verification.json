@@ -1,0 +1,1839 @@
+{
+  "file": "10.1016@j.eng.2025.07.019",
+  "md_path": "/data/haotianwu/biojson/extractor/input/10.1016@j.eng.2025.07.019.md",
+  "timestamp": "2026-04-03T16:08:19.090537",
+  "genes": [
+    {
+      "gene_name": "G2-EPSPS",
+      "category": "Common",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly expands G2-EPSPS as 5-enolpyruvylshikimate-3-phosphate synthase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states G2-EPSPS was identified from Pseudomonas fluorescens."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Pseudomonas fluorescens is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says transgenic Atropa belladonna plants were generated using G2-EPSPS combined with H6H."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Atropa belladonna is explicitly the transgenic plant species discussed."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 for the G2-EPSPS marker with H6H shows anisodamine and scopolamine increased."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Hyoscyamine, anisodamine, and scopolamine are described as tropane alkaloids, so alkaloid class is supported."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The introduction states hyoscyamine, anisodamine, and scopolamine are essential anticholinergic drugs for treating various disorders."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the text and Table 1: G2-EPSPS was used as a marker gene with H6H in transgenic A. belladonna, hyoscyamine decreased, anisodamine/scopolamine increased, and the lines had strong herbicide tolerance in the field; the paper does not present it as a TA biosynthetic gene."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly stated: source from P. fluorescens, use as marker with H6H in A. belladonna to obtain high scopolamine lines, and strong herbicide tolerance in the field."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "Transgenic plant generation and field context are explicit, and metabolite outcomes are in Table 1, but 'field evaluation' and 'metabolite profiling' are not described as methods in this review passage."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "H6H is clearly combined with G2-EPSPS in the construct/lines, but the paper does not show a physical or biochemical protein interaction."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents G2-EPSPS as a marker gene from P. fluorescens linked to herbicide tolerance, not as one of the TA biosynthetic genes."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "This application is directly supported by the text describing herbicide-tolerant, high-scopolamine transgenic A. belladonna lines generated using G2-EPSPS with H6H."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "UNCERTAIN",
+          "reason": "Field tolerance is explicitly mentioned, but 'herbicide selection/tolerance context' is only partly explicit; the text says herbicide tolerance in the field but does not detail treatment conditions."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 12,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "ODC",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "ODC is explicitly defined as ornithine decarboxylase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state that ODC is a pyridoxal phosphate-dependent decarboxylase."
+        },
+        "Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review discusses ODC as part of TA biosynthesis and engineering in Atropa belladonna and other TA-producing species, but this exact broad source wording is not explicitly stated."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "A. belladonna is the fully elucidated species and an engineering species, but the paper does not specifically assign the ODC source gene in the cited engineering study here."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says ODC was investigated in hairy root cultures from different TA-producing plant species and Table 1 shows transgenic Atropa belladonna plants with ODC."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Atropa belladonna is explicitly listed in Table 1 for ODC engineering."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ODC is explicitly included in medicinal tropane alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ODC is listed in Module I, from ornithine to tropine."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "ODC is described in the initial shared pathway, so upstream positioning is directly inferable."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The text states Module I synthesizes tropine from ornithine and includes ODC at the beginning, supporting ornithine as substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 reports increased putrescine upon ODC engineering, and ODC as ornithine decarboxylase directly implies putrescine production in this pathway context."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is directly consistent with the pathway description: ODC is in the shared initial pathway from ornithine toward N-methyl-Δ1-pyrrolinium, producing putrescine."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "As the first upstream step supplying putrescine for downstream TA synthesis, 'supplies precursor pool' is directly inferable."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not designate ODC as rate-limiting, so 'not established' is faithful."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "ODC is connected to medicinal TAs including hyoscyamine, anisodamine, and scopolamine, and Table 1 reports effects on these metabolites."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These compounds are explicitly medicinal tropane alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The introduction states these TAs are anticholinergic drugs for treating various disorders."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 shows ODC in A. belladonna increases putrescine, N-methylputrescine, hyoscyamine, and anisodamine, while scopolamine is unchanged."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are explicitly supported by the pathway description and Table 1."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pathway elucidation and transgenic engineering/metabolite outcomes are supported at review level, but the specific methods 'overexpression in plants/hairy roots' are summarized from cited literature rather than described in Results here."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper places ODC upstream of PMT in the same pathway but does not describe a direct interaction between the proteins."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The perspectives section states single-gene overexpression is typically restricted in its ability to promote TA production."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says ODC has been used in engineering individually and Table 1 includes ODC + H6H."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports ODC as an engineering target and notes synergistic enhancement when multiple TA genes are overexpressed, consistent with stacking with downstream enzymes such as H6H."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "Pyridoxal phosphate-dependent decarboxylase",
+          "new_value": "NA",
+          "reason": "The paper does not state that ODC is a pyridoxal phosphate-dependent decarboxylase."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "PMT",
+          "new_value": "NA",
+          "reason": "The paper places ODC upstream of PMT in the same pathway but does not describe a direct interaction between the proteins."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "PMT",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "PMT is explicitly defined as putrescine N-methyltransferase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "As a named N-methyltransferase, classification as methyltransferase is directly supported by the enzyme name in the paper."
+        },
+        "Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "PMT is discussed as a TA biosynthetic gene and as used in different TA-producing species, but the exact wording 'Atropa belladonna and other Solanaceae TA-producing species' is not explicitly stated for source."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "A. belladonna is used for engineering, but the paper does not explicitly identify the PMT source gene species in the cited experiments here."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says PMT was investigated in hairy root cultures from different TA-producing species and Table 1 includes PMT + H6H in A. belladonna plants."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Atropa belladonna is explicitly the species in Table 1."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PMT is explicitly included in medicinal TA biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PMT is listed in Module I, from ornithine to tropine."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "PMT is part of the initial shared pathway and thus upstream."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "By enzyme name and pathway order, PMT acts on putrescine; this is directly inferable and standardly stated in the text's shared initial pathway context."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The text names the next compound in sequence as N-methylputrescine before MPO acts, supporting PMT product as N-methylputrescine."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the pathway description: PMT methylates putrescine in the shared nicotine/TA entry pathway."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PMT is an upstream precursor-supplying step, directly inferable from the pathway."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not explicitly call PMT rate-limiting, so 'not established' is acceptable."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PMT is linked to medicinal TAs, and Table 1 shows PMT + H6H affects hyoscyamine, anisodamine, and scopolamine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are explicitly tropane alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states these metabolites are anticholinergic drugs for treating various disorders."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 shows PMT + H6H in A. belladonna decreases hyoscyamine and increases anisodamine/scopolamine, supporting this summary."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are supported by the pathway description and Table 1."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review supports pathway role and transgenic engineering outcomes, but does not itself provide primary experimental methods in detail."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "ODC, MPO, and H6H are pathway-neighbor or co-expression genes, but no direct protein-protein interactions are reported."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The PMT + H6H line in Table 1 shows hyoscyamine decreases while anisodamine/scopolamine increase, supporting a metabolite balance shift away from hyoscyamine when stacked."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes PMT among genes used in hairy root engineering and in whole-plant engineering in A. belladonna."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports PMT as a gene used in engineering and notes synergistic effects of multiple-gene overexpression, consistent with stacking with H6H."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "ODC; MPO; H6H",
+          "new_value": "NA",
+          "reason": "ODC, MPO, and H6H are pathway-neighbor or co-expression genes, but no direct protein-protein interactions are reported."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "MPO",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "MPO is explicitly defined as N-methylputrescine oxidase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The enzyme name implies oxidase, but the specific family label 'amine oxidase' is not stated in the paper."
+        },
+        "Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "MPO is part of the A. belladonna pathway, but the broad wording 'Atropa belladonna and other Solanaceae TA-producing species' is not explicitly given."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "A. belladonna is the species with the fully elucidated pathway, but the paper does not explicitly assign MPO source species for all contexts."
+        },
+        "Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "MPO is described in the pathway, but the paper does not specifically state it was applied/tested in Solanaceae TA-producing plants in engineering experiments in this passage."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Atropa belladonna is the pathway species, but no specific MPO application experiment in A. belladonna is described here."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "MPO is explicitly included in medicinal TA biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "MPO is explicitly part of Module I."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "MPO is an early upstream step leading to N-methyl-Δ1-pyrrolinium."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "By enzyme name and pathway order, MPO acts on N-methylputrescine."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The text states ODC, PMT, and MPO culminate in N-methyl-Δ1-pyrrolinium."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is directly supported by the statement that the shared pathway culminates in N-methyl-Δ1-pyrrolinium through MPO."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "MPO provides an upstream precursor pool for downstream TA synthesis."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not identify MPO as rate-limiting, so 'not established' is faithful."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "MPO is in the biosynthetic path leading ultimately to hyoscyamine, anisodamine, and scopolamine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are clearly designated as tropane alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The introduction states these TAs are pharmaceutical anticholinergic drugs."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The text supports that MPO generates the key intermediate N-methyl-Δ1-pyrrolinium required for tropinone and downstream TA biosynthesis."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements match the pathway description in the review."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Within this review, MPO support comes from pathway elucidation rather than an engineering experiment."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "PMT and PYKS are adjacent pathway enzymes, but the paper does not report protein interactions."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "MPO is named among the elucidated biosynthetic enzymes, and unlike the listed ten engineering genes, it is not highlighted in the engineering paragraph."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly propose MPO as an engineering target, though this is a plausible inference from its pathway role."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "PMT; PYKS",
+          "new_value": "NA",
+          "reason": "PMT and PYKS are adjacent pathway enzymes, but the paper does not report protein interactions."
+        }
+      ],
+      "stats": {
+        "supported": 16,
+        "unsupported": 1,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "PYKS",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names PYKS as type III polyketide synthase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Type III polyketide synthase is explicitly stated."
+        },
+        "Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "PYKS is part of the A. belladonna pathway, but the broader wording 'Atropa belladonna and other Solanaceae TA-producing species' is not explicitly stated."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "A. belladonna is the species for which the pathway was fully elucidated, but the paper does not specify PYKS source species in all experiments."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says PYKS was among ten TA biosynthetic genes investigated in hairy root cultures from different TA-producing plant species."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Atropa belladonna is not specifically named as the applied species for PYKS in the engineering statement."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PYKS is explicitly part of medicinal TA biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PYKS is explicitly in Module I."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "PYKS acts after N-methyl-Δ1-pyrrolinium formation and before TRI, so midstream within Module I is supported."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The text says PYKS and CYP82M3 produce tropinone from N-methyl-Δ1-pyrrolinium."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states PYKS and CYP82M3 together produce tropinone, but does not specifically define a separate 'tropinone precursor/tropinone-forming intermediate' as PYKS product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states PYKS and CYP82M3 produce tropinone from N-methyl-Δ1-pyrrolinium."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Tropinone is the immediate precursor for TRI-catalyzed tropine formation, so this connection is directly inferable."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not identify PYKS as rate-limiting."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PYKS is part of the pathway to hyoscyamine, anisodamine, and scopolamine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are medicinal tropane alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The introduction gives their pharmaceutical anticholinergic function."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that PYKS is required for tropinone formation and notes it was investigated in hairy root engineering."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements are supported by the biosynthesis and engineering sections."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pathway elucidation and hairy root engineering are supported generally, but the paper does not provide primary experimental details in this review."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "CYP82M3 is a functional partner in the pathway, but no direct protein interaction is shown."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says PYKS and CYP82M3 jointly generate tropinone."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Given its inclusion among genes investigated for engineering TA production, use in pathway reconstruction or gene stacks is supported at a general level."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "CYP82M3",
+          "new_value": "NA",
+          "reason": "CYP82M3 is a functional partner in the pathway, but no direct protein interaction is shown."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 1,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "CYP82M3",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names CYP82M3 as tropinone synthase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "As a CYP-designated gene, and specifically CYP82M3, placement in cytochrome P450 CYP82 family is directly supported by the name."
+        },
+        "Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "CYP82M3 is discussed in A. belladonna and comparative Solanaceae contexts, but the exact broad source wording is not explicitly given."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "A. belladonna is the species with the elucidated pathway, but the paper does not explicitly define the source species for every CYP82M3 mention."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses CYP82M3 in comparative Solanaceae genomics and says it was among genes investigated in hairy root cultures from different TA-producing species."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Atropa belladonna is not explicitly named as the applied hairy-root species for CYP82M3 in this passage."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82M3 is explicitly included in medicinal TA biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82M3 is explicitly in Module I."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It acts after N-methyl-Δ1-pyrrolinium and before TRI, consistent with midstream in Module I."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states CYP82M3 with PYKS produces tropinone from N-methyl-Δ1-pyrrolinium, supporting this substrate description."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Tropinone is explicitly stated as the product formed by PYKS and CYP82M3."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly matches the pathway description."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Tropinone is the immediate precursor of tropine and thus of downstream medicinal TAs."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "No rate-limiting designation is made in the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82M3 lies on the pathway to hyoscyamine, anisodamine, and scopolamine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are explicitly tropane alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Their anticholinergic pharmaceutical function is explicitly stated."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Required for tropinone production and early pathway flux is directly supported by the pathway description."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are explicitly supported: CYP82M3 is tropinone synthase, CYP82M3-TRI gene pair occurs in producing and nonproducing species, and CYP82M3 was among genes investigated in hairy root engineering."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Comparative genomics, pathway elucidation, and hairy root engineering are all explicitly mentioned as the basis of review statements."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "PYKS and TRI are pathway neighbors/functional partners, but direct protein interactions are not reported."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Genomic analyses are explicitly mentioned, and no accessions are claimed."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly uses CYP82M3 conservation with TRI to support ancestral presence of the early TA pathway in Solanaceae."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Its general utility for pathway reconstruction is plausible from the evolutionary discussion, but the paper does not explicitly say CYP82M3 alone should be combined with missing downstream genes for engineering."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "PYKS; TRI",
+          "new_value": "NA",
+          "reason": "PYKS and TRI are pathway neighbors/functional partners, but direct protein interactions are not reported."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "TRI",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "TRI is explicitly defined as tropinone reductase I."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not specify a precise family, but calling it a reductase is consistent with its enzyme name and function."
+        },
+        "Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "TRI is discussed in A. belladonna and comparative Solanaceae contexts, but this exact source wording is not explicitly provided."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "A. belladonna is the elucidated pathway species, but the paper does not explicitly designate the TRI source species in each context."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TRI is discussed in Solanaceae species including Solanum tuberosum and as one of the genes investigated in hairy root cultures from different TA-producing species."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Atropa belladonna is not explicitly identified as the applied species for TRI engineering in this passage."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "TRI is explicitly included in medicinal TA biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "TRI is explicitly in Module I."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Within Module I, TRI acts after tropinone formation, so downstream within the module is directly supported."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly states TRI converts tropinone to tropine."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states tropine is the product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly stated in the pathway description."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Tropine is explicitly described as a precursor for medicinal TAs, making it an immediate precursor connection."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "No rate-limiting role is assigned in the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "TRI lies on the pathway to hyoscyamine, anisodamine, and scopolamine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are medicinal tropane alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The introduction explicitly gives their anticholinergic drug function."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that TRI is needed for tropine formation; it also states TRI is inactivated in S. tuberosum and activity can be restored by targeted nucleotide substitution, supporting the described consequence for pathway potential."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are explicitly stated in the paper."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Comparative genomics, targeted nucleotide substitution, and pathway elucidation are explicitly mentioned."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "CYP82M3 is a pathway partner and gene-pair neighbor, but no direct protein interaction is reported."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Genomic analyses are explicitly mentioned and no accession numbers are claimed."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes the review's evolutionary example of a present but nonfunctional TRI in nonproducing species."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly suggests reintroducing or restoring missing/disrupted genes in nonproducing Solanaceae could restore TA biosynthesis, making TRI editing in potato a supported application inference."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "CYP82M3",
+          "new_value": "NA",
+          "reason": "CYP82M3 is a pathway partner and gene-pair neighbor, but no direct protein interaction is reported."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "ArAT4",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "ArAT4 is explicitly defined as phenylalanine:4-hydroxyphenylpyruvate aminotransferase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "As an aminotransferase by name, this family description is supported."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the TA pathway was fully elucidated in Atropa belladonna and includes ArAT4 as a Module II enzyme there."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Atropa belladonna is explicitly the species with the fully elucidated pathway containing ArAT4."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ArAT4 is discussed in the A. belladonna biosynthetic pathway."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Atropa belladonna is explicitly named."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ArAT4 is explicitly part of medicinal TA biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ArAT4 is explicitly in Module II, phenylalanine to phenyllactylglucose."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "ArAT4 initiates Module II, so upstream is directly supported."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states ArAT4 converts phenylalanine."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states the product is phenylpyruvate."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly stated in the Module II description."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "ArAT4 supplies the precursor branch leading to phenyllactylglucose, the acyl donor for littorine synthesis."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not identify ArAT4 as rate-limiting."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "ArAT4 feeds the pathway ultimately leading to hyoscyamine, anisodamine, and scopolamine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are explicitly medicinal tropane alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The introduction states these alkaloids are pharmaceutical anticholinergic drugs."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately restates the pathway role of ArAT4 in supplying phenylpyruvate for the phenyllactate/phenyllactylglucose branch needed for littorine synthesis."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are explicitly supported by the Module II pathway description."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Within this review, ArAT4 support comes from pathway elucidation."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "PPAR is the next pathway enzyme, but no direct protein interaction with ArAT4 is reported."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly shows Module II linking phenylalanine metabolism to TA biosynthesis."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "ArAT4's value as a target to increase acyl-donor supply is a reasonable inference, but the paper does not explicitly propose ArAT4 for engineering."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "PPAR",
+          "new_value": "NA",
+          "reason": "PPAR is the next pathway enzyme, but no direct protein interaction with ArAT4 is reported."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "PPAR",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names PPAR as 'phenylpyruvic acid reductase' in Module II."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The text describes PPAR as reducing phenylpyruvate to phenyllactate, supporting oxidoreductase function, though not as a formal family assignment."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states the TA biosynthetic pathway was fully elucidated in Atropa belladonna, encompassing PPAR."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Atropa belladonna is explicitly identified as the species in which the full pathway was elucidated."
+        },
+        "Applied_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not report direct testing or engineering of PPAR in Atropa belladonna results; it is only described as a pathway enzyme."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No direct application experiment for PPAR in A. belladonna is described in this review text."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PPAR is explicitly placed in medicinal tropane alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PPAR is explicitly described in Module II, phenylalanine to phenyllactylglucose."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Within Module II, PPAR acts after ArAT4 and before UGT1, supporting a midstream position."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states phenylpyruvate is reduced by PPAR."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states PPAR forms phenyllactate."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This reaction is explicitly described in the Module II paragraph."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Phenyllactate is described as the substrate for UGT1, which then generates the acyl donor for littorine synthesis, so this is directly inferable as an immediate precursor step in the branch."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not identify PPAR as rate-limiting; 'not established' matches the text."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway is described as leading from precursors to scopolamine, with hyoscyamine and anisodamine also identified as medicinal TAs in the pathway context."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These end products are tropane alkaloids; alkaloid class is directly supported."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Hyoscyamine, anisodamine, and scopolamine are explicitly described as essential anticholinergic drugs for treating various disorders."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The text states PPAR forms phenyllactate, and UGT1 uses phenyllactate to produce the acyl donor for littorine synthesis."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed points restate the Module II description in the paper."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper is a review and mentions pathway elucidation, but does not present specific validation experiments for PPAR in the Results-style detail requested."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "ArAT4 and UGT1 are adjacent pathway enzymes, but no protein-protein interaction evidence is stated."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible extrapolation, but the paper does not specifically propose PPAR as an engineering target."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Applied_Species",
+          "old_value": "Atropa belladonna",
+          "new_value": "NA",
+          "reason": "The paper does not report direct testing or engineering of PPAR in Atropa belladonna results; it is only described as a pathway enzyme."
+        },
+        {
+          "field": "Applied_Species_Latin_Name",
+          "old_value": "Atropa belladonna",
+          "new_value": "NA",
+          "reason": "No direct application experiment for PPAR in A. belladonna is described in this review text."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "ArAT4; UGT1",
+          "new_value": "NA",
+          "reason": "ArAT4 and UGT1 are adjacent pathway enzymes, but no protein-protein interaction evidence is stated."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 3,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "UGT1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names UGT1 as 'phenyllactate UDP-glycosyltransferase 1'."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The name itself identifies it as a UDP-glycosyltransferase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "UGT1 is included in the Atropa belladonna pathway that the review says has been fully elucidated."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Atropa belladonna is explicitly named as the species for the fully elucidated pathway."
+        },
+        "Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says UGT1 was among ten genes investigated in hairy root cultures from different TA-producing species, but does not explicitly state Atropa belladonna and the combined value is broader than the exact wording."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specifically state A. belladonna as the applied species for UGT1 engineering."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "UGT1 is explicitly part of medicinal TA biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "UGT1 is explicitly assigned to Module II."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "UGT1 acts after PPAR in Module II, supporting a downstream-within-Module-II position."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states phenyllactate and UDP-glucose are substrates for UGT1."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states UGT1 produces phenyllactylglucose."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This reaction and product role are stated verbatim in the review."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Phenyllactylglucose is explicitly called the acyl donor for littorine synthesis, making it an immediate precursor connection."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not designate UGT1 as rate-limiting; 'not established' is consistent."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "UGT1 is part of the pathway leading to hyoscyamine, anisodamine, and scopolamine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These metabolites are medicinal tropane alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states these TAs are anticholinergic drugs for various disorders."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The first clause is supported because UGT1 produces the acyl donor directly required for littorine synthesis; the paper also says UGT1 was investigated in hairy root engineering."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by the Module II description and the engineering overview."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review mentions enzyme function and that UGT1 was investigated in hairy roots, but gives no direct experimental details here."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "PPAR and LS are sequential enzymes, not shown as interacting proteins in the paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The statement is reasonable but is not explicitly made for UGT1 in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Applied_Species_Latin_Name",
+          "old_value": "Atropa belladonna",
+          "new_value": "NA",
+          "reason": "The paper does not specifically state A. belladonna as the applied species for UGT1 engineering."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "PPAR; LS",
+          "new_value": "NA",
+          "reason": "PPAR and LS are sequential enzymes, not shown as interacting proteins in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "LS",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names LS as littorine synthase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "LS is explicitly stated to belong to the serine carboxypeptidase-like acyltransferase family."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "LS is part of the Atropa belladonna pathway described as fully elucidated."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Atropa belladonna is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses LS in Atropa belladonna pathway elucidation, in nonproducing Solanaceae as missing/disrupted, and among genes investigated in hairy root cultures from different TA-producing species."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Only Atropa belladonna is provided, but the field value also includes nonproducing Solanaceae and hairy root cultures without Latin names; the exact Latin-name field is not faithfully represented."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "LS is explicitly within medicinal TA biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "LS is explicitly the sole enzyme of Module III, littorine formation."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "LS connects upstream precursor modules to downstream littorine conversion, supporting a committed mid-to-downstream position."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states LS condenses phenyllactylglucose and tropine."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states the product is littorine."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The esterification reaction is described directly."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Littorine is immediately upstream of Module IV toward hyoscyamine/scopolamine."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not identify LS as rate-limiting; 'not established' is consistent."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "LS lies in the pathway to hyoscyamine, anisodamine, and scopolamine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are tropane alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "These TAs are explicitly described as anticholinergic drugs."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly supports littorine as a required precursor and states LS is missing or disrupted in nonproducing Solanaceae."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are explicitly described in the review."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "Enzyme identification and comparative genomics are supported; hairy root engineering is only generically mentioned among ten genes, without LS-specific evidence details here."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "UGT1 and CYP80F1 are adjacent pathway enzymes, but no interaction evidence is reported."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly mentions genomic analyses and does not provide accession numbers."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Lineage-specific loss is explicitly discussed as explaining uneven TA distribution."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly suggests reintroducing missing genes such as LS into nonproducing Solanaceae to restore TA biosynthesis, supporting high engineering value."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Applied_Species_Latin_Name",
+          "old_value": "Atropa belladonna",
+          "new_value": "NA",
+          "reason": "Only Atropa belladonna is provided, but the field value also includes nonproducing Solanaceae and hairy root cultures without Latin names; the exact Latin-name field is not faithfully represented."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "UGT1; CYP80F1",
+          "new_value": "NA",
+          "reason": "UGT1 and CYP80F1 are adjacent pathway enzymes, but no interaction evidence is reported."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "CYP80F1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names CYP80F1 as littorine mutase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "As a CYP-designated enzyme, cytochrome P450 family assignment is directly implied by the name; CYP80F1 supports CYP80 family placement."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP80F1 is part of the fully elucidated Atropa belladonna pathway."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Atropa belladonna is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses CYP80F1 in Atropa belladonna pathway elucidation, nonproducing Solanaceae loss, and as one of the genes investigated in hairy root cultures from TA-producing species."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Only Atropa belladonna is listed in the Latin-name field, while the applied species value includes additional categories not represented here."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP80F1 is explicitly in medicinal TA biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly places CYP80F1 in Module IV."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP80F1 acts in the downstream conversion from littorine toward scopolamine."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly states littorine is the substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly states hyoscyamine aldehyde is generated."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Oxidation with rearrangement of littorine to hyoscyamine aldehyde is stated directly."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Hyoscyamine aldehyde is the immediate precursor to hyoscyamine in the next step."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not call CYP80F1 rate-limiting; 'not established' is consistent."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP80F1 is in the path leading to hyoscyamine, anisodamine, and scopolamine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These products are alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states these TAs are pharmaceutical anticholinergic drugs."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme's role in converting littorine toward hyoscyamine is explicit, and missing/disrupted CYP80F1 in nonproducing Solanaceae is explicitly stated."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings are directly supported by the text."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "Enzyme identification and comparative genomics are supported; CYP80F1-specific hairy root engineering details are not given in this article text."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "LS and HDH are neighboring pathway enzymes, not demonstrated interacting proteins."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Genomic analyses are explicitly mentioned, with no accession data provided."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly links loss of CYP80F1 with inability to produce downstream TAs in nonproducing species."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly suggests introducing missing genes such as CYP80F1 to reconstruct TA biosynthesis, supporting strong engineering value."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Applied_Species_Latin_Name",
+          "old_value": "Atropa belladonna",
+          "new_value": "NA",
+          "reason": "Only Atropa belladonna is listed in the Latin-name field, while the applied species value includes additional categories not represented here."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "LS; HDH",
+          "new_value": "NA",
+          "reason": "LS and HDH are neighboring pathway enzymes, not demonstrated interacting proteins."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "HDH/HAR",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states an oxidoreductase named hyoscyamine aldehyde reductase (HAR) or hyoscyamine dehydrogenase (HDH)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls it an oxidoreductase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HDH/HAR is part of the Atropa belladonna pathway described as fully elucidated."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Atropa belladonna is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says HDH was among ten genes investigated in hairy root cultures from different TA-producing species, but does not specifically say Atropa belladonna hairy roots."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No explicit applied-species Latin name for HDH/HAR engineering is given."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "HDH/HAR is explicitly part of medicinal TA biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is described in Module IV, littorine to scopolamine."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It acts downstream after CYP80F1."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly states hyoscyamine aldehyde is the substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states the product is hyoscyamine."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Reduction of hyoscyamine aldehyde into hyoscyamine is directly stated."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "This step directly forms hyoscyamine, one of the target medicinal TAs."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish this enzyme as rate-limiting; 'not established' fits."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Hyoscyamine is directly formed, and scopolamine is downstream via H6H."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states medicinal TAs are anticholinergic drugs for various disorders."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The text directly supports formation of hyoscyamine as precursor to anisodamine/scopolamine."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are supported, except the engineering point only generally via the overview that HDH was investigated in hairy root cultures."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "Enzyme identification is supported; hairy root engineering is only generally mentioned, without HDH-specific evidence details here."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "CYP80F1 and H6H are adjacent pathway enzymes, not shown as interaction partners."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Alternative naming as HAR or HDH is explicitly stated."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable inference, but the paper does not specifically emphasize HDH/HAR as an engineering target in this wording."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Applied_Species_Latin_Name",
+          "old_value": "Atropa belladonna",
+          "new_value": "NA",
+          "reason": "No explicit applied-species Latin name for HDH/HAR engineering is given."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "CYP80F1; H6H",
+          "new_value": "NA",
+          "reason": "CYP80F1 and H6H are adjacent pathway enzymes, not shown as interaction partners."
+        }
+      ],
+      "stats": {
+        "supported": 18,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "H6H",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names H6H as hyoscyamine 6β-hydroxylase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention the 2-oxoglutarate/Fe(II)-dependent dioxygenase family/domain."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "H6H is discussed in Atropa belladonna and H. niger; the paper also refers to other TA-producing plants generally."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Atropa belladonna and Hyoscyamus niger are explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes H6H engineering in Atropa belladonna plants, activation in Anisodus acutangulus hairy roots by AaWRKY11, and notes its investigation in hairy root cultures from TA-producing species."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Atropa belladonna and Anisodus acutangulus are both explicitly named in the relevant contexts."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states AaWRKY11 activates H6H in A. acutangulus hairy roots."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "H6H is explicitly part of medicinal TA biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly placed in Module IV."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "H6H catalyzes the final conversions to anisodamine and scopolamine, supporting a terminal role."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states H6H hydroxylates hyoscyamine to anisodamine and then converts anisodamine to scopolamine."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Anisodamine and scopolamine are explicitly identified as products of H6H activity."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The exact hydroxylation and epoxidation sequence is explicitly stated."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "H6H directly forms anisodamine and scopolamine, final medicinal products."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "H6H is clearly emphasized as an important terminal engineering determinant, but the paper does not explicitly call it rate-limiting."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Anisodamine and scopolamine are directly formed by H6H."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are medicinal tropane alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes them as pharmaceutical anticholinergic drugs."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 explicitly shows H6H overexpression decreases hyoscyamine and increases anisodamine/scopolamine in A. belladonna."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points are supported by the pathway description, Table 1, the H. niger performance statement, and the PMT+H6H/ODC+H6H transgenic data."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports enzyme identification, transgenic overexpression in plants, hairy root engineering context, metabolite profiling via Table 1, and TF activation evidence via AaWRKY11 and LNIR discussion."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "AaWRKY11 and LNIR regulate gene expression, and PMT/ODC are co-engineered enzymes; the paper does not report physical protein interactions."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 shows reduced hyoscyamine accompanying increased anisodamine/scopolamine, supporting this tradeoff."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports H6H as a valuable engineering gene and notes H. niger H6H outperforms others, but 'one of the best-performing enzymes' is somewhat interpretive."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper strongly emphasizes H6H in transgenic engineering, mentions superior H. niger H6H, and shows benefits of stacking with upstream genes."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Low nitrogen is mentioned in relation to LNIR activating multiple biosynthetic genes in A. belladonna; as an indirect relevance note this is supported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "2-oxoglutarate/Fe(II)-dependent dioxygenase",
+          "new_value": "NA",
+          "reason": "The paper does not mention the 2-oxoglutarate/Fe(II)-dependent dioxygenase family/domain."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "AaWRKY11; LNIR; PMT; ODC",
+          "new_value": "NA",
+          "reason": "AaWRKY11 and LNIR regulate gene expression, and PMT/ODC are co-engineered enzymes; the paper does not report physical protein interactions."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "AaWRKY11",
+      "category": "Regulation",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene name and text identify AaWRKY11 as a WRKY transcription factor."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly a transcription factor."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states AaWRKY11 is from Anisodus acutangulus."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Anisodus acutangulus is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses AaWRKY11 function in A. acutangulus hairy roots."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Anisodus acutangulus is explicitly named."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Hairy roots are explicitly stated."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention nuclear localization."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states AaWRKY11 activates H6H."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Activation is explicitly stated."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says AaWRKY11 activates H6H."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states it promotes scopolamine biosynthesis."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a direct restatement of activation of H6H promoting scopolamine biosynthesis in hairy roots."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Scopolamine is explicitly named."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Scopolamine is a medicinal tropane alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states medicinal TAs such as scopolamine are anticholinergic drugs for treating various disorders."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states AaWRKY11 promotes scopolamine biosynthesis in hairy roots."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are explicitly stated in the engineering section."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "Hairy root functional analysis and target-gene activation are implied by the cited study, but this review does not provide direct experimental details."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "H6H is a regulatory target gene, not a demonstrated interacting protein."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper presents transcriptional regulation as promising and includes AaWRKY11 as an example, but does not explicitly call it a promising engineering regulator in those exact terms."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Combining transcription factors with rate-limiting enzymes is suggested generally, but specific combination with H6H for AaWRKY11 is not explicitly stated."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "The paper does not mention nuclear localization."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "H6H",
+          "new_value": "NA",
+          "reason": "H6H is a regulatory target gene, not a demonstrated interacting protein."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "LNIR",
+      "category": "Regulation",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies LNIR as a basic helix-loop-helix transcription factor."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly a transcription factor."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states LNIR is in Atropa belladonna."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Atropa belladonna is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses LNIR function in A. belladonna hairy root cultures."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Atropa belladonna is explicitly named."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states LNIR is low-nitrogen-responsive and increases TA accumulation in hairy root cultures."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention nuclear localization."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Low nitrogen is explicitly stated."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says LNIR activates multiple biosynthetic genes."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Activation is explicitly stated."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states it activates multiple biosynthetic genes."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states LNIR increases TA accumulation and activates multiple biosynthetic genes, supporting control of medicinal TA biosynthesis."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a faithful paraphrase of LNIR being low-nitrogen-responsive, activating multiple genes, and increasing TA accumulation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway products highlighted throughout the paper are hyoscyamine, anisodamine, and scopolamine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are tropane alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes medicinal TAs as anticholinergic drugs for various disorders."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states LNIR increases TA accumulation in A. belladonna hairy root cultures and is low-nitrogen-responsive."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly stated in the engineering section."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "The cited work likely contains functional analysis, activation evidence, and metabolite profiling, but this review does not provide those experimental details directly."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper mentions regulation of multiple genes, not protein-protein interactions."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly suggests combining transcription factors with rate-limiting enzymes as a promising approach."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "General value of transcription factors is supported, but 'high application value' and specific stacking with H6H are not explicitly stated for LNIR."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Low nitrogen is explicitly mentioned."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "The paper does not mention nuclear localization."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "multiple TA biosynthetic genes",
+          "new_value": "NA",
+          "reason": "The paper mentions regulation of multiple genes, not protein-protein interactions."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 367,
+    "supported": 297,
+    "unsupported": 25,
+    "uncertain": 45,
+    "total_corrections": 25
+  }
+}

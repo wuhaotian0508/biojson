@@ -1,0 +1,301 @@
+{
+  "file": "10.1126@science.adk6112",
+  "md_path": "/data/haotianwu/biojson/extractor/input/10.1126@science.adk6112.md",
+  "timestamp": "2026-04-03T16:57:06.349081",
+  "genes": [
+    {
+      "gene_name": "CYP76M57 (AMIS)",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies this gene in barley and names it in barley context."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Barley is explicitly identified as Hordeum vulgare."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "HOR10350, Tafeno, and Du-Li Huang (ZDM_01467) are all explicitly mentioned in relation to CYP76M57/AMIS."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was tested in barley, Nicotiana benthamiana, Arabidopsis thaliana, and Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "These Latin names are explicitly given in the abstract/results."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Golden Promise and Tafeno are explicitly used for barley complementation and knockout experiments."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AMIS/CYP76M57 is identified as part of gramine biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows AMIS converts tryptophan to aminomethylindole (AMI), the early dedicated conversion in the pathway."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "AMIS acts before NMT and generates AMI from tryptophan, making it an upstream committed step toward gramine."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "AMI is described as the key intermediate and immediate precursor methylated by NMT to gramine."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Microsome assays directly show L-tryptophan is the substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "AMI is directly produced by AMIS, and glyoxylic acid is shown as a by-product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 4 and text explicitly describe a cryptic oxidative rearrangement via an iminium intermediate yielding AMI and glyoxylic acid."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The authors explicitly rename CYP76M57 to AMI synthase (AMIS)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly a cytochrome P450 monooxygenase, systematic name CYP76M57, belonging to CYP76 family/CYP76M subfamily; heme content is shown."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway end product connected to AMIS is gramine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Gramine is explicitly called an alkaloid/indole alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states gramine protects against aphids, fungi, viruses, and other plants and reduces palatability to ruminants."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Gramine levels are repeatedly measured in leaves, including pan-genome comparisons and transgenic analyses."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "AMIS expression enables AMI production and, with NMT, gramine production; AMIS knockout abolishes detectable gramine/AMI in Tafeno."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All five listed points are directly supported by Results: correlation across accessions, heterologous production in three hosts, coexpression yielding gramine including in Golden Promise, knockout eliminating products in Tafeno, and mechanistic enzyme assays showing P450 requirements and iminium intermediate."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper calls AMIS the key gene and shows it is essential, but does not directly test or quantify rate limitation/control strength."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Constitutive transgenic expression is stated for Arabidopsis and barley experiments; endogenous expression pattern is not reported, matching the field wording."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "For barley, constructs named 'HvAMIS p6i-d35S' support d35S. For Arabidopsis, the text says constitutively expressing but does not specify promoter identity in the provided text."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly show dependence on oxygen, NADPH, and support by CPR/CYB5 redox partners."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "AMIS activity is studied in microsomes and the protein has an N-terminal membrane anchor typical of P450s, supporting membrane-associated microsomal localization."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "CPR and CYB5 are used as redox partners that support AMIS activity, but direct physical interaction is not demonstrated in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states gramine improves defense but negatively affects fodder palatability to ruminants."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract/discussion explicitly frame AMIS discovery as enabling breeding/editing to tune gramine content and engineering in other hosts."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "S211W loss of activity in Du-Li Huang is directly shown; transposon-associated intron insertions in some nonproducing accessions are explicitly discussed as possible cause of altered expression."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly suggests transposon presence may contribute to altered expression because such regions are often silenced, while noting no direct assay; this matches the field wording."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly present in the Results and supporting descriptions."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly uses the barley pan-genome v1.0; the note 'no accession reported in provided text' is consistent because no accession identifier for this gene is given here."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 30,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "NMT",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NMT is described as a barley gene previously reported in gramine biosynthesis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Barley is explicitly Hordeum vulgare."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Golden Promise is explicitly discussed for NMT transgenesis, but HOR10350 is not clearly stated as the source variety of the NMT gene itself in the provided text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NMT was tested in barley, Nicotiana benthamiana, Arabidopsis thaliana, and Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "These Latin names are explicitly given."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Golden Promise is explicitly used for barley complementation with NMT."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "NMT is explicitly part of gramine biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states AMI is methylated twice by NMT via MAMI to yield gramine."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "NMT acts downstream of AMIS in the terminal methylation steps."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "NMT directly contributes to gramine formation via sequential methylation."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The introduction states NMT methylates AMI twice via the intermediate MAMI; thus AMI and MAMI are inferable substrates/intermediate substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "MAMI and gramine are directly identified as the monomethylated intermediate and final product associated with NMT activity."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says NMT methylates AMI twice to yield gramine via MAMI."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "NMT is described as an N-methyltransferase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "NMT is explicitly identified as a methyltransferase by function/name."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The end product is gramine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Gramine is explicitly called an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states gramine defends against aphids, fungi, viruses, and other plants and reduces ruminant palatability."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Gramine is measured in leaves in the relevant experiments."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show NMT together with AMIS is required to convert AMI into gramine in heterologous systems and barley Golden Promise."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed statement is supported: prior identification, coexpression-dependent gramine formation in all hosts tested, NMT-alone negatives in plants, and MAMI accumulation in yeast coexpression strains."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The field says not established as rate-limiting, which matches the paper; it is shown as required downstream enzyme but not tested as rate-limiting."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Constitutive transgenic expression is stated for Arabidopsis and barley; endogenous expression pattern is not reported."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Barley construct name 'HvNMT p6i-d35S' supports d35S there, but Arabidopsis is only described as constitutively expressing without promoter identity in the provided text."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Its activity depends on AMIS-derived substrate availability, which is directly supported by lack of product in NMT-only transformants and product when coexpressed with AMIS."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper shows pathway coexpression with AMIS but does not demonstrate protein-protein interaction or define AMIS as an interacting protein."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "As part of gramine engineering, increased gramine is explicitly linked to reduced fodder palatability and enhanced defense."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says the structural genes now enable targeted breeding/engineering of gramine production; NMT must be stacked with AMIS for pathway completion."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "NMT is said to be in a distant cluster with AMIS on chromosome 1H, and presence of both genes largely correlates with gramine production across accessions."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient/stable expression, barley cotransformation, yeast reconstitution, metabolite profiling, and NMR validation of products are all described."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly uses barley pan-genome v1.0; no specific accession for NMT is provided in the text."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "AMIS",
+          "new_value": "NA",
+          "reason": "The paper shows pathway coexpression with AMIS but does not demonstrate protein-protein interaction or define AMIS as an interacting protein."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 64,
+    "supported": 58,
+    "unsupported": 1,
+    "uncertain": 5,
+    "total_corrections": 1
+  }
+}

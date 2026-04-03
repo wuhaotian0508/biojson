@@ -1,0 +1,552 @@
+{
+  "file": "10.1016@j.ijfoodmicro.2017.04.006",
+  "md_path": "/data/haotianwu/biojson/extractor/input/10.1016@j.ijfoodmicro.2017.04.006.md",
+  "timestamp": "2026-04-03T16:04:04.504195",
+  "genes": [
+    {
+      "gene_name": "RtPAL",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states 'the phenylalanine ammonia lyase from an oleaginous yeast, Rhodosporidium toruloides'."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given anywhere in the review text."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The text says the pathway 'commences with the conversion of phenylalanine to p-coumaric acid via cinnamate', supporting PAL-mediated deamination of phenylalanine to cinnamate as the entry step."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls it a 'phenylpropanoid biosynthetic pathway'."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The described engineered phenylpropanoid pathway is specifically 'leading to the production of 4-[4-hydroxyphenyl]butan-2-one' (raspberry ketone)."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "RtPAL is described as part of the pathway commencement from phenylalanine, so it is upstream."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "RtPAL provides entry from phenylalanine into the pathway toward raspberry ketone, i.e. precursor supply."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the pathway commences with conversion of phenylalanine."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The text states conversion proceeds 'via cinnamate', supporting cinnamic acid/cinnamate as PAL product."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The final product is explicitly named as raspberry ketone, '4-[4-hydroxyphenyl]butan-2-one'."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper describes a phenylpropanoid pathway but does not explicitly classify raspberry ketone itself as a 'phenylpropanoid'."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Raspberry ketone is described as a highly desirable aroma compound producing raspberry flavour/character in wine."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states the semisynthetic wine yeast equipped with the pathway could produce de novo raspberry ketone."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The text supports pathway engineering with codon-optimized genes integrated into the HO locus and fermentation in Chardonnay grape juice under standard wine fermentation conditions; metabolite production is reported, though 'metabolite profiling' is not named verbatim."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Rhodosporidium toruloides is explicitly given as the source."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The full Latin name Rhodosporidium toruloides appears in the paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is explicitly a wine yeast strain."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The review discusses a semisynthetic wine yeast strain of Saccharomyces cerevisiae / wine yeast context; the engineered host is clearly yeast S. cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The host wine yeast strain AWRI1631 is explicitly named."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states production occurred 'in Chardonnay grape juice under standard wine fermentation conditions'."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish RtPAL as rate-limiting; thus 'not established' is consistent with the text."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Raspberry ketone production is described in Chardonnay grape juice during wine fermentation, supporting fermenting must/wine as the accumulation context."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review broadly argues synthetic biology could create customized wine yeasts with targeted flavour profiles, but this exact application statement about stacking with other pathways is not explicitly stated."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No protein family/domain assignment for RtPAL is provided in the paper."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "These enzymes are components of the same engineered pathway, but the paper does not explicitly describe protein-protein interactions among RtPAL, AtC4H, and Pc4CL2-RpBAS."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This is indeed a review summarizing Lee et al. (2016), and it explicitly states the codon-optimized genes were synthesized and integrated into the yeast HO locus."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point is consistent with the review: RtPAL was one introduced codon-optimized gene in AWRI1631, it functions at the entry step from phenylalanine toward p-coumaric acid, and together with the other enzymes supported raspberry ketone accumulation above predicted sensory threshold."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "4.3.1.24",
+          "new_value": "NA",
+          "reason": "No EC number is given anywhere in the review text."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "ammonia-lyase family",
+          "new_value": "NA",
+          "reason": "No protein family/domain assignment for RtPAL is provided in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "AtC4H",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly lists 'the cinnamate-4-hydroxylase from the well-characterized model plant, Arabidopsis thaliana'."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is stated in the review."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway description states conversion from phenylalanine to p-coumaric acid occurs via cinnamate, supporting hydroxylation of cinnamic acid to p-coumaric acid by C4H."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly called a phenylpropanoid biosynthetic pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway is specifically the one leading to raspberry ketone production."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "AtC4H acts after cinnamate formation and before downstream coumarate activation, fitting upstream-midstream."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "AtC4H forms p-coumaric acid, an immediate precursor in the stated pathway toward raspberry ketone."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Inferable from the phrase 'via cinnamate' before p-coumaric acid formation."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies p-coumaric acid as the product in the route."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Raspberry ketone (4-[4-hydroxyphenyl]butan-2-one) is explicitly named."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The pathway is phenylpropanoid, but the paper does not explicitly assign raspberry ketone to a metabolite class."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes raspberry ketone as a desirable aroma/flavour compound conferring raspberry character to wine."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review supports that inclusion of this engineered pathway enabled de novo raspberry ketone synthesis in wine yeast."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by codon-optimized gene synthesis and integration into the HO locus, fermentation in Chardonnay grape juice, and reporting of raspberry ketone production; exact phrase 'metabolite profiling' is not used."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The source is explicitly identified as Arabidopsis thaliana."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana appears verbatim."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is a wine yeast strain."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The engineered host is a Saccharomyces cerevisiae wine yeast context."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "AWRI1631 is explicitly named."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly says 'in Chardonnay grape juice under standard wine fermentation conditions'."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not identify AtC4H as rate-limiting; 'not established' is consistent."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Production is described during Chardonnay grape juice fermentation."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review generally supports custom wine yeasts for flavor traits, but this specific utility statement is not directly made for AtC4H."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No mention of cytochrome P450 or CYP73 family appears in the provided text."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The enzymes co-occur in the same pathway, but explicit interaction is not stated."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states this was one of the codon-optimized genes synthesized and integrated at the HO locus in AWRI1631."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary matches the review's pathway description and final phenotype, though support is at pathway level rather than an isolated single-gene test."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.14.91",
+          "new_value": "NA",
+          "reason": "No EC number is stated in the review."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "cytochrome P450 monooxygenase, CYP73 family",
+          "new_value": "NA",
+          "reason": "No mention of cytochrome P450 or CYP73 family appears in the provided text."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "Pc4CL2",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names 'the coumarate CoA ligase 2 gene from parsley, Petroselinum crispum'."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states conversion of p-coumaric acid to raspberry ketone requires additional enzymatic steps including a condensation reaction between coumaroyl-CoA and malonyl-CoA, supporting the need for 4CL2 to activate p-coumaric acid to coumaroyl-CoA."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly part of the phenylpropanoid biosynthetic pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway is specifically directed to raspberry ketone production."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Pc4CL2 acts after p-coumaric acid formation and before the condensation step, fitting a midstream position."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Coumaroyl-CoA is directly referenced as substrate for the condensation reaction leading toward raspberry ketone."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Inferable from the enzyme name and pathway text describing conversion of p-coumaric acid onward via coumaroyl-CoA."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly mentions coumaroyl-CoA as the intermediate needed for the subsequent condensation reaction."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Raspberry ketone is explicitly named as 4-[4-hydroxyphenyl]butan-2-one."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "No explicit class assignment for raspberry ketone is provided."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Raspberry ketone is presented as a desirable raspberry aroma/flavour compound in wine."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The engineered pathway including Pc4CL2 enabled de novo raspberry ketone synthesis in the semisynthetic wine yeast."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports heterologous pathway engineering, fusion construct design, integration into the HO locus, Chardonnay fermentation, and detection of product formation; 'metabolite profiling' is not explicit."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is explicitly given as parsley."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Petroselinum crispum appears verbatim."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is a wine yeast strain."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The context is engineered Saccharomyces cerevisiae wine yeast."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "AWRI1631 is explicitly specified."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states standard wine fermentation conditions in Chardonnay grape juice."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish Pc4CL2 as rate-limiting; thus 'not established' is consistent."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The product is reported in Chardonnay grape juice/wine fermentation."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "General future application to customized wine yeasts is discussed, but this exact value statement for Pc4CL2 is not explicitly made."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No acyl-activating enzyme family/domain assignment is stated."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states Pc4CL2 was fused by a rigid linker to benzalacetone synthase from Rheum palmatum; association with RtPAL and AtC4H as pathway components is present, though not as direct interactions."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly specifies that Pc4CL2 was fused via a rigid linker to RpBAS."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "Points 1 and 2 are supported, but point 3 adds 'efficient' production/channeling language not explicitly stated in the review; contribution to final raspberry ketone production is supported at pathway level."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "6.2.1.12",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "acyl-activating enzyme family",
+          "new_value": "NA",
+          "reason": "No acyl-activating enzyme family/domain assignment is stated."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "RpBAS",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names 'the benzalacetone synthase from rhubarb, Rheum palmatum'."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the review."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The text states conversion to raspberry ketone requires enzymatic steps including 'a condensation reaction between coumaroyl-CoA and malonyl-CoA', which matches BAS function in forming benzalacetone as precursor."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly part of the phenylpropanoid biosynthetic pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway is specifically the branch leading to raspberry ketone production."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "RpBAS catalyzes the downstream condensation step after coumaroyl-CoA formation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "This enzyme forms a direct precursor step toward raspberry ketone in the engineered pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The condensation substrates coumaroyl-CoA and malonyl-CoA are explicitly mentioned in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review does not explicitly name benzalacetone as the product in this article, though it is inferable from BAS biochemistry."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Raspberry ketone, 4-[4-hydroxyphenyl]butan-2-one, is explicitly stated."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly classify raspberry ketone as a phenylpropanoid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The compound is explicitly described as a highly desirable raspberry aroma/flavour compound in wine."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The engineered pathway including RpBAS enabled de novo raspberry ketone biosynthesis in semisynthetic wine yeast."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The text supports heterologous pathway engineering, fusion construct design, integration into the HO locus, fermentation in Chardonnay juice, and product accumulation; exact 'metabolite profiling' wording is absent."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states rhubarb as source."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rheum palmatum appears verbatim."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is a wine yeast strain."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied organism is clearly Saccharomyces cerevisiae wine yeast context."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "AWRI1631 is explicitly named."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says standard wine fermentation conditions in Chardonnay grape juice."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not identify RpBAS as a 'key branch step' or otherwise establish control/rate limitation."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Raspberry ketone accumulation is described in Chardonnay grape juice fermentation / resulting wine context."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review broadly discusses customized wine yeast strains and targeted flavour profiles, but not this specific application statement for RpBAS."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No type III polyketide synthase family/domain is mentioned in the review text."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states the coumarate CoA ligase 2 gene was fused by a rigid linker to the benzalacetone synthase, supporting Pc4CL2 as directly linked partner."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states RpBAS was fused to Pc4CL2 with a rigid linker, and that engineered activities complemented native host activities, which supports the statement about reliance on host native activities for completion of raspberry ketone synthesis."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The review supports introduction of RpBAS as part of a Pc4CL2-RpBAS fusion in AWRI1631 and that, together with native host activities, the engineered pathway enabled raspberry ketone production above predicted sensory threshold during Chardonnay fermentation."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.3.1.170",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the review."
+        },
+        {
+          "field": "Rate_Limiting_or_Key_Control_Step",
+          "old_value": "key branch step",
+          "new_value": "NA",
+          "reason": "The paper does not identify RpBAS as a 'key branch step' or otherwise establish control/rate limitation."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "type III polyketide synthase",
+          "new_value": "NA",
+          "reason": "No type III polyketide synthase family/domain is mentioned in the review text."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 3,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 108,
+    "supported": 87,
+    "unsupported": 9,
+    "uncertain": 12,
+    "total_corrections": 9
+  }
+}

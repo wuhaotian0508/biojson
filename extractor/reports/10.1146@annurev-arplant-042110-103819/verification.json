@@ -1,0 +1,1624 @@
+{
+  "file": "10.1146@annurev-arplant-042110-103819",
+  "md_path": "/data/haotianwu/biojson/extractor/input/10.1146@annurev-arplant-042110-103819.md",
+  "timestamp": "2026-04-03T17:01:29.887545",
+  "genes": [
+    {
+      "gene_name": "UGT75B1",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly names Arabidopsis At1g05560 as UGT75B1."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "UGT75B1 is explicitly described as an Arabidopsis UDP-glucosyltransferase."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says Arabidopsis, but does not spell out the Latin binomial 'Arabidopsis thaliana' in this sentence."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene discussed is from Arabidopsis and the evidence cited concerns Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Arabidopsis is clear, but the full Latin binomial is not explicitly given in the text excerpt."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly called a cytosolic UDP-glucosyltransferase."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "UGT75B1 acts on pABA, a folate precursor, so linkage to folate is indirect rather than direct end-product testing."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Folate is the relevant vitamin end product, but UGT75B1 is discussed for precursor homeostasis rather than direct folate measurements."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper states the pABA-glucose ester is largely sequestered in vacuoles, not folate itself for this gene."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states pABA can be esterified to glucose in a reversible reaction mediated by UGT75B1 and that the ester is a major vacuolar-sequestered form, supporting a role in precursor homeostasis."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are consistent with the text: UGT75B1 mediates esterification, the ester is often more abundant and vacuolar, and the reaction is relevant to folate precursor management."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review mentions in vitro reconversion and localization/metabolite distribution but does not detail the original experimental methods enough to fully support this exact phrasing."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme is explicitly described as cytosolic."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This general statement about folate function is not tied to UGT75B1 evidence in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says the in vivo reconversion route is unknown and esterase gene(s) have not been identified."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite_Accumulation_Site",
+          "old_value": "vacuole",
+          "new_value": "NA",
+          "reason": "The paper states the pABA-glucose ester is largely sequestered in vacuoles, not folate itself for this gene."
+        },
+        {
+          "field": "Terminal_Metabolite_Function",
+          "old_value": "Folate supports one-carbon metabolism essential for plant growth and human nutrition.",
+          "new_value": "NA",
+          "reason": "This general statement about folate function is not tied to UGT75B1 evidence in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 8,
+        "unsupported": 2,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "AtFOLT1",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly identifies AtFOLT1 as At5g66380."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AtFOLT1 is explicitly described as an Arabidopsis gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Arabidopsis is explicit, but the full Latin name is not written in the relevant sentence."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The transporter is discussed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper uses Arabidopsis, not the full binomial here."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states AtFOLT1 is the closest Arabidopsis homolog of mammalian MFT, which is a member of the mitochondrial carrier family."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AtFOLT1 is directly discussed as a folate transporter."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Folate is the transported metabolite; folate is a vitamin."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "AtFOLT1 is targeted to the chloroplast envelope and is discussed under plastidial folate import."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states it mediates folate transport in heterologous systems, localizes to the chloroplast envelope, and knockout affects neither growth nor leaf/chloroplast folate content."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point is explicitly supported: transport in heterologous systems, chloroplast-envelope targeting, and lack of obvious knockout phenotype suggesting redundancy."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly mentions complementation of mft mutation in Chinese hamster ovary cells, folate uptake in E. coli, chloroplast-envelope targeting, and ablation analysis."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated as targeted to the chloroplast envelope."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly contrasts its homology to mammalian mitochondrial transporter with its chloroplast, not mitochondrial, localization in planta."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 12,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "At2g32040",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly uses the identifier At2g32040."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "At2g32040 is described as an Arabidopsis chloroplast envelope protein."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Arabidopsis is explicit, but the full Latin name is not given at this point."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is analyzed in Arabidopsis and by heterologous expression."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The text does not explicitly spell out Arabidopsis thaliana here."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly said to belong to the folate-biopterin transporter family."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "It is described as mediating uptake of monoglutamyl folates and folate analogs."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The transported compounds are folates, i.e. vitamins."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The transporter is discussed in the context of plastidial/chloroplast folate import."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states ablation increases chloroplast folate content and reduces the proportion of 5-methyltetrahydrofolate."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by the text."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states E. coli uptake assays and ablation/mutant analysis."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Described as a chloroplast envelope protein."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly notes that the cyanobacterial ortholog Slr0642 helped identify residues essential for transport."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 12,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "AtMRP1",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly identifies AtMRP1 as At1g30400."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AtMRP1 is explicitly described as an Arabidopsis vacuolar MRP protein."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Arabidopsis is named, but the full Latin name is not spelled out in the relevant sentence."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The in planta evidence refers to Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The full binomial is not explicitly stated at this point."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly described as an MRP subfamily ATP-binding cassette transporter."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "It transports folic acid and methotrexate and is discussed under vacuolar folate monoglutamate import."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Folic acid/folate is the relevant metabolite class, i.e. vitamin."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The transporter is explicitly vacuolar."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states it contributes to MgATP-dependent vacuolar import of folic acid and methotrexate, polyglutamyl folates are poor substrates, and it may not be the main physiological folate transporter."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings are explicitly stated in the review."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly mentions yeast expression, vacuolar membrane vesicle transport assays, and ablation/mutant analysis."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Described as a vacuolar MRP protein and involved in vacuolar uptake."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says ablation eliminates only approximately half of vacuolar methotrexate uptake activity."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 12,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "GCHI",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2 and text explicitly identify GCHI as GTP cyclohydrolase I."
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2 lists GTP cyclohydrolase I as EC 3.5.4.16."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review discusses plant GCHI and engineering transgenes from E. coli, mouse, and chicken."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "E. coli is explicit, but mouse/chicken are given as common names and Arabidopsis is not consistently expanded to full Latin names in the relevant passage."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 explicitly includes Arabidopsis, tomato, rice, maize, and lettuce engineering studies with GCHI."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "These species are given mostly as common names in Table 1; the exact Latin names listed in the JSON are not explicitly all present in the review text provided."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly states plant GCHI is a homodimer of subunits with two tandem domains, each similar to a canonical GCHI monomer."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GCHI is explicitly placed in folate biosynthesis under pterin synthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The section heading and Figure 2 place GCHI in pterin synthesis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly calls GCHI the committing enzyme of pterin synthesis, i.e. upstream committed step."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states the two committing reactions including GCHI exert major control over flux through the folate pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly states pterin synthesis begins with conversion of GTP."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly states GCHI converts GTP to dihydroneopterin triphosphate."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly matches the description in the pterin synthesis section."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "GCHI is clearly described as supplying the pterin precursor branch for folate biosynthesis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The entire pathway context is folate biosynthesis, and engineering studies link GCHI manipulation to folate accumulation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Folate is the end product discussed; it is a vitamin."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states folates are present throughout plant cells—in mitochondria, plastids, cytosol, and vacuoles."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly says plant GCHI is apparently cytosolic."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Engineering studies in Table 1 and surrounding text show strong pterin increases and typically modest folate increases unless combined with ADCS."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported in the review."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly presents GCHI as a major engineering target, especially with ADCS, while cautioning about excessive pterin accumulation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review describes biochemical studies and multiple transgenic overexpression studies with folate/pterin profiling; heterologous complementation is mentioned more generally for pathway enzymes."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Methotrexate is discussed in pathway regulation context, and transgenic engineering in fruit, grain, and leaves is explicitly described."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states endogenous GCHI expression was unaffected in engineered tomato fruit and that both plant and nonplant GCHI transgenes can function."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "DHN triphosphate diphosphatase",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2 names step B as dihydroneopterin triphosphate diphosphatase."
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2 explicitly lists EC 3.6.1.n4 for this step."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "An Arabidopsis enzyme is explicitly mentioned for this reaction."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Arabidopsis is named, but the full binomial is not explicitly given in this sentence."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The evidence described is for Arabidopsis enzyme activity in vitro."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The full Latin name is not explicitly stated here."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme is explicitly described as from the large Nudix family."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "This enzyme is placed in folate biosynthesis, pterin synthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The reaction is described in the pterin synthesis section."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It is an early upstream step immediately after GCHI."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The text says the GCHI product dihydroneopterin triphosphate is dephosphorylated first by removal of pyrophosphate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The product is explicitly given as dihydroneopterin monophosphate."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly stated in the text."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "This reaction supplies an early precursor in the folate pterin branch."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme is discussed as part of folate biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Folate is the pathway end product; it is a vitamin."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The Nudix hydrolase is stated to appear cytosolic."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says the Arabidopsis enzyme catalyzes the reaction in vitro but its in vivo folate role awaits genetic confirmation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly stated."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly says the enzyme catalyzes this reaction in vitro."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review emphasizes that in vivo role awaits genetic confirmation, matching the statement that it is not strongly genetically validated."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 19,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "DHNA",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly identifies the enzyme as dihydroneopterin aldolase."
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2 lists EC 4.1.2.25 for dihydroneopterin aldolase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review refers to Arabidopsis and other plants having dihydroneopterin aldolase families."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Arabidopsis is explicit but the exact Latin formulation is not presented in the passage."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis and other plants are the species discussed, with tomato engineering context for transcript induction."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact binomials given in the JSON are not all explicitly written in the relevant text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states Arabidopsis and other plants have small, diverged dihydroneopterin aldolase families."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme is explicitly part of folate biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is described in the pterin synthesis section."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an upstream pterin-pathway step before folate assembly."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The text states the enzyme cleaves dihydroneopterin and also dihydromonapterin after epimerization."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly says it yields HMDHP."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The description matches the text, including cleavage to HMDHP and glycolaldehyde and epimerization/cleavage of dihydromonapterin."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "HMDHP is the immediate precursor for downstream folate assembly."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme is part of folate biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Folate is the relevant end product; it is a vitamin."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Members lack obvious targeting signals and are therefore presumed cytosolic."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Producing HMDHP as precursor for downstream folate assembly is directly supported by the pathway description."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements are supported, including transcript increase in engineered tomato fruit."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly references biochemical characterization, comparative genomics/family analysis, and transcriptomic response in engineered tomato."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly notes pterin glycosides in engineered tomato fruit and that the glycosyltransferases are unknown."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 19,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "ADCS",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly identifies ADCS as aminodeoxychorismate synthase."
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2 lists EC 2.6.1.85 for ADCS."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses Arabidopsis and other plant ADCS enzymes and Arabidopsis transgenes in engineering studies."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Arabidopsis is explicit, but exact Latin names for all sources are not all written in the relevant passages."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato and rice engineering studies are explicitly discussed; Arabidopsis is the source of a transgene and native enzyme discussions."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The full Latin binomials are not all explicitly given in the passages used."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly describes ADCS as a bipartite protein with tandem domains homologous to PabA and PabB."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ADCS is explicitly part of folate biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ADCS is placed in pABA synthesis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "ADCS is explicitly the first step of pABA synthesis, i.e. an upstream committed step."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states the committing reactions of pterin and pABA synthesis exert major control over flux, and engineering shows ADCS is crucial with GCHI."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly says pABA is synthesized from chorismate and first chorismate is converted to aminodeoxychorismate by ADCS."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The product aminodeoxychorismate is explicitly stated."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly matches the text and Figure 2."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "ADCS supplies the pABA precursor pool for folate biosynthesis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Engineering studies directly connect ADCS manipulation to folate changes."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Folate is the end product and is a vitamin."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Both pABA synthesis steps are explicitly localized in plastids."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review directly states ADCS alone had no effect in tomato, reduced folate in rice, but combined with GCHI gave major increases."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by the pABA synthesis, regulation, and engineering sections."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly presents ADCS as a key partner with GCHI for biofortification and notes pABA accumulation is of less concern."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Biochemical evidence and transgenic overexpression with precursor/folate profiling are explicitly discussed."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states endogenous ADCS expression was unaffected in engineered tomato fruit."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 21,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "ADCL",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly names aminodeoxychorismate lyase."
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2 lists EC 4.1.3.38."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme is described for plants, with induction mentioned in engineered tomato fruit."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact Latin names listed in the JSON are not explicitly all given in the relevant ADCL discussion."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Plants generally and tomato engineering context are discussed."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The full Latin names are not all explicitly stated in the relevant text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The enzyme is a lyase by name and EC class, but 'Protein_Family_or_Domain: Lyase' is generic rather than specifically stated as a family/domain."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ADCL is explicitly part of folate biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is the second step of pABA synthesis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It is an upstream precursor-forming step in the pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly states aminodeoxychorismate lyase converts aminodeoxychorismate to pABA."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "pABA is explicitly the product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the text directly."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "It supplies the pABA precursor pool for folate biosynthesis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "ADCL is part of the folate pathway."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Folate is the final product under discussion; it is a vitamin."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Both pABA synthesis steps are stated to be localized in plastids."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "As the enzyme producing pABA, it supports precursor supply for mitochondrial folate assembly; this is directly inferable from the pathway description."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme's catalytic role, plastid location, and transcript increase in engineered tomato fruit are all supported."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review supports biochemical characterization and transcriptomic analysis in engineered tomato fruit."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 17,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "HPPK/DHPS",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The review names step F/G enzymes as HMDHP pyrophosphokinase and dihydropteroate synthase, and states they are two domains of a single bifunctional protein in plants."
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2 lists HMDHP pyrophosphokinase as EC 2.7.6.3 and dihydropteroate synthase as EC 2.5.1.15."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses the plant bifunctional enzyme generally and specifically mentions a wheat HMDHP pyrophosphokinase-dihydropteroate synthase transgene used in rice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says 'wheat' but does not explicitly give the Latin name Triticum aestivum in the provided text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 and text state the wheat HPPK/DHPS gene was expressed in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says 'rice' but does not explicitly state Oryza sativa in the provided text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states these reactions are catalyzed by two domains of a single bifunctional protein in plants."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme is described in the folate biosynthesis pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states HMDHP and pABA are assembled into THF in the mitochondrion, covering these steps."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "These reactions occur after precursor formation and before DHF/THF formation, so 'midstream' is directly inferable."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The review says the rice transgene result 'suggests that one or another of the activities of this bifunctional enzyme exerts significant control of flux through the folate synthesis pathway.'"
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states HMDHP is activated by pyrophosphorylation and then coupled to pABA."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The review says the coupling yields dihydropteroate."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This reaction sequence is explicitly described in the Folate Assembly section."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Dihydropteroate is an intermediate en route to DHF/THF/folate; this is directly inferable from pathway description."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway discussed is folate biosynthesis, and this enzyme contributes to folate formation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Folate is a vitamin; while not spelled out in these exact words, this is standard and directly inferable from the review's subject."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The canonical enzyme is described as mitochondrially targeted, and an Arabidopsis cytosolic form expressed in developing seeds and salt-stressed seedlings is explicitly mentioned."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 reports +75% folate in rice leaves and +40% in grain upon wheat HPPK/DHPS expression, and text says this suggests flux control at this step."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are stated or directly summarized from the review: bifunctionality in plants, modest increases in rice folate, and possible value as an added engineering target."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly proposes inserting HPPK/DHPS into plants already expressing GCHI and ADCS as a rational strategy."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The evidence cited is transgenic expression in rice with folate measurements in leaves and grain."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The cytosolic Arabidopsis form is explicitly said to be expressed only in developing seeds and salt-stressed seedlings."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 21,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "GLA1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'DHF synthase couples dihydropteroate to glutamate to yield DHF.'"
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2 lists DHF synthase as EC 6.3.2.12."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly gives 'At5g41480, GLA1' for the Arabidopsis DHF synthase gene."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The cited validated gene is from Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says Arabidopsis but does not explicitly write Arabidopsis thaliana in the provided text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant evidence described is in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The text gives Arabidopsis, not the full Latin binomial in the provided excerpt."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GLA1/DHF synthase is described in folate biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The reaction is part of the mitochondrial folate assembly steps F-I."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The DHF synthase step occurs after dihydropteroate formation and before THF production, so 'downstream' is inferable."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states DHF synthase couples dihydropteroate to glutamate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The same sentence states the product is DHF."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This reaction is explicitly described."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "DHF is the immediate precursor to THF; this is directly inferable from the pathway sequence."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "This enzyme contributes directly to folate biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Folate is a vitamin; this is standard and consistent with the review context."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states the HMDHP and pABA precursors are assembled into THF in the mitochondrion, encompassing DHF synthase."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says disruption of At5g41480/GLA1 results in folate deficiency and is embryo lethal."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements are explicitly supported: GLA1 encodes DHF synthase, this is the only biosynthetic step confirmed by mutant studies, and disruption causes folate deficiency plus embryo lethality."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says its function has been confirmed by mutant studies."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 18,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "DHFR-TS",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states 'DHF is reduced to THF by DHF reductase, which in plants is fused to thymidylate synthase.'"
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2 lists DHF reductase as EC 1.5.1.3."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The statement is made generally for plants."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No specific species is attached to the DHFR-TS fusion statement in the text; Arabidopsis thaliana is not given for this field."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The methotrexate inhibitor evidence cited is in Arabidopsis cells, and the fusion statement applies to plants generally."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper mentions Arabidopsis cells but does not explicitly give the Latin binomial in the provided text for this DHFR-TS entry."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says plant DHFR is fused to thymidylate synthase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "This enzyme is part of folate biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The DHFR step is included in mitochondrial folate assembly steps F-I."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is the last reduction step before THF formation, so 'downstream' is directly inferable."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly says DHF is reduced to THF."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The product THF is explicitly stated."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The reduction of DHF to THF and fusion to TS are explicitly described."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "THF is the core folate product formed by this step."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "THF/folate is the product of this pathway step."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Folate is a vitamin; this is consistent with the paper context."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states assembly into THF occurs in the mitochondrion, encompassing the DHFR step."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses methotrexate inhibition blocking folate synthesis and changing transcript levels, but does not directly present DHFR-TS-specific phenotypic testing in Results-style detail in this review."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The review supports that plant DHFR is fused to TS, that this step converts DHF to THF in mitochondria, and that methotrexate inhibition reveals feedback on cytosolic FPGS transcript levels."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review mentions inhibitor studies and prior biochemical knowledge but does not detail direct biochemical characterization of plant DHFR-TS in this text."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Methotrexate treatment is explicitly described as inhibiting DHF reductase."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Source_Species_Latin_Name",
+          "old_value": "Arabidopsis thaliana",
+          "new_value": "NA",
+          "reason": "No specific species is attached to the DHFR-TS fusion statement in the text; Arabidopsis thaliana is not given for this field."
+        },
+        {
+          "field": "Applied_Species_Latin_Name",
+          "old_value": "Arabidopsis thaliana",
+          "new_value": "NA",
+          "reason": "The paper mentions Arabidopsis cells but does not explicitly give the Latin binomial in the provided text for this DHFR-TS entry."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "FPGS",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly identifies folylpolyglutamate synthase (FPGS)."
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2 lists FPGS as EC 6.3.2.17."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is discussed in detail, and other higher plants are also mentioned as having multiple FPGS genes/isoforms."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The exact Latin binomial is not provided in the text for this field."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is used for localization and knockout evidence, and tomato is mentioned regarding gene number and engineering context."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The provided text uses common names Arabidopsis and tomato, not explicit Latin names for this field."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "FPGS is discussed within folate metabolism/polyglutamylation."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "FPGS is the enzyme for folate polyglutamylation."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Describing it as a retention/storage-related modification step is consistent with the text that polyglutamylation favors protein binding and stability."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says the polyglutamate tail is added to THF and its C1-substituted forms."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The reaction generates folate polyglutamates."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly describes addition of glutamate residues one at a time by FPGS."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Polyglutamylation modifies folates for retention/stability rather than creating the folate core; this is supported by the text."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "FPGS acts on folates."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Folate is a vitamin."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states Arabidopsis has isoforms targeted to cytosol, mitochondria, and plastids, though multiple targeting is also suggested."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states cytosolic FPGS transcript increases under methotrexate-induced folate depletion and mitochondrial FPGS is induced in engineered tomato fruit; polyglutamylation is linked to folate stability/retention."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are supported by the review."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Localization is supported by immunology/GFP fusions, targeting by knockout evidence, and expression responses by transcriptomic analyses."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states that for human FPGS high folate substrate concentrations curtail long-chain polyglutamates and notes plant engineering data are consistent with a similar effect."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Source_Species_Latin_Name",
+          "old_value": "Arabidopsis thaliana",
+          "new_value": "NA",
+          "reason": "The exact Latin binomial is not provided in the text for this field."
+        },
+        {
+          "field": "Applied_Species_Latin_Name",
+          "old_value": "Arabidopsis thaliana; Solanum lycopersicum",
+          "new_value": "NA",
+          "reason": "The provided text uses common names Arabidopsis and tomato, not explicit Latin names for this field."
+        }
+      ],
+      "stats": {
+        "supported": 18,
+        "unsupported": 2,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "GGH",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies gamma-glutamyl hydrolase (GGH)."
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2 lists GGH as EC 3.4.19.9."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis leaves and tomato fruit are explicitly discussed for GGH manipulation."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The Latin names are not explicitly stated in the text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis and tomato are both explicitly used in the cited overexpression/suppression studies."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The common names are given, not the Latin binomials."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GGH is discussed as part of folate metabolism, specifically deglutamylation and salvage."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly places GGH in deglutamylation and also notes its role in pABA-Glu polyglutamate hydrolysis during salvage."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "GGH functions in salvage/recycling of glutamyl tails rather than de novo folate synthesis."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states folate polyglutamates are substrates and also says pABA-Glu polyglutamates are good substrates."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes shortening/removal of folate polyglutamate tails and removal of polyglutamyl tails from pABA-Glu derivatives, yielding shorter-chain/monoglutamyl forms."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says GGH shortens or removes the folate polyglutamate tail and acts on pABA-Glu polyglutamates."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "GGH modifies/storage-controls folate forms rather than forming the folate core; this is directly supported."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "GGH acts on folates and folate-derived pABA-Glu forms."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Folate is a vitamin."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states GGH is located in vacuoles."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states overexpressing GGH reduces tail length and total folate, while ablating 99% of GGH activity increases both tail length and total folate."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings are explicitly supported in the review and Table 1."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly proposes suppressing GGH activity as a rational engineering strategy to increase polyglutamylation and folate levels."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Evidence comes from overexpression/RNAi/ablation studies with measurements of folate content and tail length."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The text supports that overexpression decreases folate content, and it does not report major growth penalties for GGH suppression in the cited studies."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 specifically lists AtGGH2 and LeGGH2 in engineering examples."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Source_Species_Latin_Name",
+          "old_value": "Arabidopsis thaliana; Solanum lycopersicum",
+          "new_value": "NA",
+          "reason": "The Latin names are not explicitly stated in the text."
+        },
+        {
+          "field": "Applied_Species_Latin_Name",
+          "old_value": "Arabidopsis thaliana; Solanum lycopersicum",
+          "new_value": "NA",
+          "reason": "The common names are given, not the Latin binomials."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 2,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "PTAR",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly names pterin aldehyde reductase (PTAR)."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PTAR isoforms are discussed in pea leaves and Arabidopsis seeds."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper uses common names pea and Arabidopsis here, not explicit Latin binomials."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Pea and Arabidopsis are both directly discussed in relation to PTAR activity/isoforms."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Latin names are not explicitly given in the provided text for PTAR."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The review says one Arabidopsis isoform belongs to the short-chain dehydrogenase/reductase family."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PTAR is discussed under folate salvage processes."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PTAR specifically functions in pterin salvage."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "PTAR is clearly described as part of salvage/recycling, not de novo biosynthesis."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states PTAR isoforms can reduce both dihydropterin-6-aldehyde and pterin-6-aldehyde."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states reduction of dihydropterin-6-aldehyde gives HMDHP."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The text directly describes reduction of pterin aldehydes to enable salvage back into biosynthesis."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PTAR supplies the precursor HMDHP back into folate synthesis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PTAR contributes to recycling material back to folate synthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Folate is a vitamin."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says the reaction appears to take place predominantly in the cytosol in pea leaves."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states PTAR salvage activity prevents irreversible oxidation and that high combined activity likely favors rapid conversion to HMDHP."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Multiple NADPH-dependent isoforms, one cloned Arabidopsis SDR-family isoform, and much higher activity than de novo enzymes are all explicitly stated."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review cites in vivo salvage, enzyme assays, cloned isoform characterization, and knockout evidence for one isoform."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly concludes that broad-specificity aldehyde reductases rather than a single dedicated enzyme seem responsible."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Source_Species_Latin_Name",
+          "old_value": "Arabidopsis thaliana; Pisum sativum",
+          "new_value": "NA",
+          "reason": "The paper uses common names pea and Arabidopsis here, not explicit Latin binomials."
+        },
+        {
+          "field": "Applied_Species_Latin_Name",
+          "old_value": "Arabidopsis thaliana; Pisum sativum",
+          "new_value": "NA",
+          "reason": "Latin names are not explicitly given in the provided text for PTAR."
+        }
+      ],
+      "stats": {
+        "supported": 18,
+        "unsupported": 2,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "At1g10310",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies At1g10310 as one Arabidopsis PTAR isoform that has been cloned."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The accession At1g10310 is explicitly given."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is explicitly from Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The text says Arabidopsis but does not explicitly write Arabidopsis thaliana in the provided excerpt."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The knockout evidence is in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The common name Arabidopsis is used, not the full Latin name."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states it belongs to the short-chain dehydrogenase/reductase family."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is discussed under folate salvage."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It functions in pterin salvage."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It is part of salvage/recycling of folate breakdown products."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says it attacks diverse aromatic and aliphatic aldehydes, and as a PTAR isoform it reduces pterin aldehydes."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The text supports reduction of pterin aldehydes, but does not explicitly assign At1g10310 itself a named product such as HMDHP in the exact wording of this field."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states At1g10310 attacks pterin aldehydes and other aldehydes."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "As a PTAR isoform, it contributes to salvage of pterin cleavage products back toward folate synthesis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Its relevant pathway context is folate salvage."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Folate is a vitamin."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "PTAR activity is predominantly cytosolic, but the paper does not explicitly state At1g10310 itself is cytosolic."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says At1g10310 knockout plants have only a subtle reduction in total PTAR activity, indicating redundancy."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are explicitly stated: cloned isoform, subtle knockout effect on total PTAR activity, and altered fatty acid desaturation phenotype."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review cites cloning, biochemical substrate characterization, and knockout analysis."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states it is not a dedicated enzyme but part of a battery of broad-specificity aldehyde reductases."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 17,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "5-FCL",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly names 5-formyltetrahydrofolate cycloligase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The cited model study was in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The excerpt uses Arabidopsis, not the explicit Latin binomial."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The ablation study discussed was in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Only Arabidopsis is explicitly written in the provided text."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is discussed within folate metabolism/engineering rather than de novo core synthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The review frames it as blocking metabolism of 5-formyltetrahydrofolate, i.e., 5-formyl-THF interconversion."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a salvage/interconversion-type step, not a core de novo synthesis step."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme name itself and context support 5-formyltetrahydrofolate as substrate."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The provided excerpt does not explicitly state that the product is 5,10-methenyltetrahydrofolate."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper mentions blocking metabolism of 5-formyltetrahydrofolate but does not explicitly describe the conversion to 5,10-methenyl-THF in this excerpt."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "This enzyme interconverts folate forms rather than making the folate core, which is inferable from the context."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is discussed in the context of folate content engineering."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Folate is a vitamin."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review says the strategy raises total folate only twofold and leads to slowed growth and delayed flowering; Table 1 lists 5-FCL ablated with +2-fold folate and growth effects."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary statements are directly supported by the engineering section and Table 1."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review describes an Arabidopsis model study using ablation/blocking of 5-FCL metabolism with folate and growth phenotyping."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Slowed growth and delayed flowering are explicitly reported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Product",
+          "old_value": "5,10-Methenyltetrahydrofolate",
+          "new_value": "NA",
+          "reason": "The provided excerpt does not explicitly state that the product is 5,10-methenyltetrahydrofolate."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Converts 5-formyltetrahydrofolate into metabolically active folate form.",
+          "new_value": "NA",
+          "reason": "The paper mentions blocking metabolism of 5-formyltetrahydrofolate but does not explicitly describe the conversion to 5,10-methenyl-THF in this excerpt."
+        }
+      ],
+      "stats": {
+        "supported": 14,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 332,
+    "supported": 286,
+    "unsupported": 12,
+    "uncertain": 34,
+    "total_corrections": 12
+  }
+}

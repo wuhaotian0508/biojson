@@ -1,0 +1,993 @@
+{
+  "file": "10.1111@1744-7917.12128",
+  "md_path": "/data/haotianwu/biojson/extractor/input/10.1111@1744-7917.12128.md",
+  "timestamp": "2026-04-03T16:46:45.452785",
+  "genes": [
+    {
+      "gene_name": "GLUTAMATE RECEPTOR-LIKE genes",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review cites Mousavi et al. (2013) about GLUTAMATE RECEPTOR-LIKE genes in Arabidopsis context."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is explicitly referred to as Arabidopsis thaliana elsewhere in the review, and the cited systemic signaling work is in Arabidopsis."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The statement about GLUTAMATE RECEPTOR-LIKE genes concerns Arabidopsis leaves."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as Arabidopsis thaliana by the cited Arabidopsis context."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states that electrical signals generated via GLUTAMATE RECEPTOR-LIKE genes are sufficient to increase jasmonoyl-isoleucine (JA-Ile) in leaves."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "JA-Ile is an active jasmonate and is presented as such in the paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This paraphrases the explicit statement that electrical signals generated via GLUTAMATE RECEPTOR-LIKE genes are sufficient to increase JA-Ile production in leaves."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All points match the review's statement: these genes generate electrical signals tied to systemic signaling and increased JA-Ile, not direct biosynthesis."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review presents this as recent work by Mousavi et al. (2013), i.e., referenced prior work rather than experiments in this review."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by the statement linking systemic electrical signaling to JA-Ile accumulation."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "JA-Ile is discussed in the context of defense signaling, but this exact function statement is not explicitly attached to GLUTAMATE RECEPTOR-LIKE genes in Results-like evidence of this review."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review indeed mentions these genes only in a cited systemic signaling context and does not experimentally analyze them."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "UNCERTAIN",
+          "reason": "The section is about systemic signaling after wounding/herbivory, but the exact pair 'Wounding; simulated herbivory' is not specifically stated for GLUTAMATE RECEPTOR-LIKE genes."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says JA-Ile increases 'in leaves'."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 12,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "ACS6",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "ACS6 is named as an ACC synthase isoform in the text discussing ethylene synthesis."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says 'In Arabidopsis, MPK6 ... directly phosphorylates ACS6 and ACS2'."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is identified in the review as Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The ACS6 statement refers to Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by Arabidopsis thaliana context."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly links phosphorylation/stabilization of ACS6 to increased ethylene production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Ethylene is explicitly discussed as a phytohormone."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ACS6 is discussed in the paragraph explaining ethylene biosynthesis."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review states that ethylene is synthesized via ACS and ACO but does not explicitly describe ACS6 as converting S-adenosyl-L-methionine to ACC."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "S-adenosyl-L-methionine is not mentioned in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states ACS catalyzes the first of the two steps in ethylene synthesis leading to ACC, naming 1-aminocyclopropane-1-carboxylic acid."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "ACS is presented as the first step of two in ethylene biosynthesis, so upstream is directly inferable."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "ACC is explicitly the precursor in the ethylene pathway, so 'forms immediate precursor' is inferable."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states MPK6 phosphorylation stabilizes ACS6 and increases ethylene production."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are explicitly stated for ACS6 in the Arabidopsis example."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "This is presented as evidence from the cited Arabidopsis study by Liu and Zhang (2004), not from this review's own experiments."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "MPK6 is explicitly stated to directly phosphorylate ACS6."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "ACS6 is an ACC synthase isoform in the text."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is linked to MAPK-mediated ethylene accumulation, but 'defense hormone accumulation' in insect context is somewhat extrapolated from a cross-reference rather than directly demonstrated for ACS6 in herbivory."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Substrate",
+          "old_value": "S-adenosyl-L-methionine",
+          "new_value": "NA",
+          "reason": "S-adenosyl-L-methionine is not mentioned in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 16,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "ACS2",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "ACS2 is named as an ACC synthase isoform in the ethylene discussion."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states in Arabidopsis MPK6 directly phosphorylates ACS2."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis in this review is Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The claim is made in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by the Arabidopsis thaliana context."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The review says phosphorylation/stabilization of ACS2 increases ethylene production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Ethylene is treated as a phytohormone in the review."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ACS2 is discussed within the ethylene biosynthesis paragraph."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact conversion from S-adenosyl-L-methionine to ACC is not explicitly written in the review."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "S-adenosyl-L-methionine is not mentioned in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "ACC is explicitly named in the ethylene synthesis explanation."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "ACS is stated as the first of two steps in ethylene synthesis."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "ACC is the immediate precursor to ethylene as inferable from the two-step pathway description."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states MPK6 stabilization of ACS2 increases ethylene production."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points are directly stated for ACS2."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "This is cited from prior Arabidopsis work, as described."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "MPK6 is explicitly named as directly phosphorylating ACS2."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "ACS2 is an ACC synthase isoform by explicit naming."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Substrate",
+          "old_value": "S-adenosyl-L-methionine",
+          "new_value": "NA",
+          "reason": "S-adenosyl-L-methionine is not mentioned in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 16,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "AOS",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "AOS is explicitly expanded as allene oxide synthase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paragraph discusses AOS in the context of N. attenuata WIPK function."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant context is Nicotiana attenuata."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by the N. attenuata discussion."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as Nicotiana attenuata."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AOS is explicitly placed in the JA biosynthetic pathway."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "JA is discussed as jasmonic acid/jasmonate."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says AOS is involved in JA biosynthesis."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states AOS converts 13-OOH-18:3 to the immediate precursor of OPDA."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "13-OOH-18:3 is explicitly named."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review says AOS converts 13-OOH-18:3 to the immediate precursor of OPDA, but does not explicitly mention 'allene oxide' as the product."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "A midstream role is biologically reasonable but not explicitly labeled in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly states AOS forms the immediate precursor of OPDA."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states WIPK probably influences AOS activity, linking it positively to JA biosynthesis."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements closely paraphrase the review, including the tentative wording 'probably' for WIPK influence."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly frames this as evidence/inference from silencing studies and pathway analysis, citing Kallenbach et al. (2010)."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "WIPK is explicitly proposed to influence AOS activity."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Cytochrome P450 CYP74 family is not mentioned anywhere in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review indeed presents WIPK regulation of AOS as probable rather than directly demonstrated mechanism."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "Cytochrome P450 CYP74 family",
+          "new_value": "NA",
+          "reason": "Cytochrome P450 CYP74 family is not mentioned anywhere in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 16,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "SIPK",
+      "category": "Regulation",
+      "verification": {
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The review supports SIPK as a phosphorylation-signaling regulator positively affecting JA/ET and defense-related gene/metabolite accumulation."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "JA biosynthesis and ET production are directly supported; defense-related metabolism is also supported by reduced defense genes/metabolites in silenced plants."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states SIPK promotes herbivory-induced JA and ET accumulation and that silenced plants have decreased defense metabolites."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point is directly supported by the Wu et al. (2007) and related summaries, including systemic SIPK activation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly described in the review for SIPK studies."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Wounding, M. sexta oral secretions, and FACs are all explicitly described as activating SIPK."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "Defense-related genes are supported; the lipase target is presented as likely; ACS-like ethylene biosynthetic enzymes are only by homology inference, not directly shown for SIPK in N. attenuata."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The review supports activation of jasmonate/ethylene-associated processes and defense-related gene expression by SIPK."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The review directly supports SIPK as a major positive regulator of herbivory-induced JA and ET bursts."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "MEK2 is explicitly required upstream for SIPK activation, and SIPK is discussed alongside WIPK as a homologue/signaling partner though not necessarily direct physical interactor."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Mechanical wounding, simulated herbivory, OS elicitation, and FAC treatment are all explicitly discussed."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Leaves and systemic leaves are explicitly mentioned in connection with SIPK activity and hormone induction context."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "JA/ET-mediated defense against insect herbivores is explicitly discussed."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately describes the review nature and reliance on N. attenuata plus homology to Arabidopsis MPK6."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 13,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "WIPK",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "WIPK is discussed in both Nicotiana tabacum and Nicotiana attenuata."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Latin names appear in the review."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The reviewed evidence is from tobacco and coyote tobacco."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as Nicotiana tabacum and Nicotiana attenuata."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "JA is directly supported, and defensive metabolites are supported generally as decreased in WIPK-silenced plants."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "JA and defense metabolites fit the review's descriptions."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "WIPK is explicitly a MAPK."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "WIPK is explicitly stated to be a member of MAPK subfamily A; TEY motif is consistent with subfamily A MAPKs in the review."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Positive regulation of jasmonate-associated defense metabolism is directly supported."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "JA biosynthesis and defense gene activation are directly described for WIPK."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review supports promotion of JA accumulation and downstream defensive metabolites."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed points are supported, including rapid induction, reduced JA/defense genes in antisense lines, activation by OS/FACs, and probable influence on AOS."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are explicitly described across the cited studies."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Wounding, OS, and FACs are all explicitly linked to WIPK activation."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "Defense-related genes are supported; AOS is only proposed as a probable enzymatic target/activity point, not directly demonstrated."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Activation of jasmonate-associated defense responses is supported by reduced JA and defense gene expression when WIPK is suppressed."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The review clearly states WIPK is important for the herbivory/wounding JA burst."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "MEK2 is explicitly upstream; SIPK is closely linked as co-activated homologue, though direct interaction is not shown."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed treatments are explicitly described."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Leaves and systemic leaves are supported by the WIPK local/systemic activation discussion."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Defense against insect herbivores is directly relevant and discussed."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states only SIPK, not WIPK, is involved in herbivory-induced ET production."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 21,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "MPK4",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MPK4 is discussed in Arabidopsis, soybean, tobacco, and N. attenuata."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed Latin names appear or are directly identifiable from the review."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The plant-insect functional discussion focuses on coyote tobacco and tobacco."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as Nicotiana attenuata and Nicotiana tabacum."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "JA and SA are directly discussed, and defensive pathway outputs are discussed."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "JA and SA are phytohormones; defensive metabolites/pathways are discussed."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "MPK4 is explicitly identified as a MAPK."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly places MPK4 in MAPK subfamily B."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Species-dependent effects, including negative regulation of JA in N. attenuata and positive role in JA-responsive genes in tobacco, are directly stated."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Defense hormone signaling and JA-independent defense pathways are directly described."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes the review's statements for N. attenuata and tobacco."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four summary points are directly stated in the MPK4 section."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Silencing/VIGS, wounding/OS treatments, JA measurements, and defense assays are all described."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Wounding, M. sexta OS, and S. littoralis OS are explicitly discussed."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "JA-responsive genes are supported, but 'JA-independent defense pathway components' are not specifically identified."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Species- and context-dependent regulation is exactly the point of the section."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The review supports condition-dependent control of defense hormone output and resistance."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed conditions, including drought and ABA, are mentioned."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant studies concern leaf responses."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Defense against herbivores and pathogens is explicitly discussed for MPK4."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The Arabidopsis mpk4 mutant is explicitly described as stunted and sterile."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the review's emphasis on distinct Nicotiana roles."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 21,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "MPK1/2",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "These genes are discussed in tomato."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is explicitly named Solanum lycopersicum in the review."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant experiments are in tomato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as Solanum lycopersicum."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Reduced induced JA levels in MPK1/2-silenced plants are explicitly stated."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "JA is a jasmonate."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "MPK1 and MPK2 are explicitly MAPKs."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "They are explicitly described as tomato homologues of SIPK."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Positive signaling role is supported by reduced JA when co-silenced."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "JA biosynthesis and JA biosynthetic gene expression are explicitly described."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Promotion of induced JA and insect resistance is directly supported by JA and larval growth results."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are explicitly stated in the tomato paragraph."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are described in the cited tomato study."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "M. sexta feeding in a prosystemin overexpression background is explicitly stated."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "JA biosynthetic genes are explicitly mentioned as having reduced expression upon co-silencing."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Activation of JA biosynthetic gene expression is directly supported by the co-silencing result."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "A positive regulator of induced JA accumulation is directly supported."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The studies concern feeding on plants/leaves, but the paper does not explicitly state the JA measurement site as leaves in this sentence."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Improved larval growth on silenced plants directly links this pathway to defense against herbivores."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 18,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "MPK3",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MPK3 is discussed in tomato and Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Solanum lycopersicum and Arabidopsis thaliana are present in the review."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The evidence cited involves tomato and Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by the species contexts in the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The review does not directly connect MPK3 itself to jasmonic acid or ethylene output in the insect sections; ET regulation is discussed for MPK6, not MPK3."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Because the specific metabolite linkage for MPK3 is not established here, the metabolite class claim is not supported."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "MPK3 is explicitly a MAPK."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says tomato MPK3 is the homologue of WIPK and Arabidopsis MPK3 is a MAPK."
+        },
+        "Regulation_Mode": {
+          "verdict": "UNCERTAIN",
+          "reason": "General phosphorylation signaling is true for MAPKs, but this exact role for MPK3 in herbivory metabolism is not developed in the review."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "UNCERTAIN",
+          "reason": "Aphid resistance and herbivory-associated activation are mentioned, but direct control of a metabolite-linked process is not clearly shown for MPK3."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This cautious wording matches the review: activation and resistance association are described, while direct metabolic effect is less resolved."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly stated in the review."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Activation assays and cited resistance studies are indeed the basis of the statements."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "M. sexta feeding, grasshopper OS, and wounding are all explicitly linked to MPK3 activation."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The review does not establish decisive metabolite control for MPK3, and the field accurately says this is not fully established."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects why MPK3 is mentioned in the review despite limited direct metabolite causality."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "jasmonic acid; ethylene",
+          "new_value": "NA",
+          "reason": "The review does not directly connect MPK3 itself to jasmonic acid or ethylene output in the insect sections; ET regulation is discussed for MPK6, not MPK3."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "jasmonate; phytohormone",
+          "new_value": "NA",
+          "reason": "Because the specific metabolite linkage for MPK3 is not established here, the metabolite class claim is not supported."
+        }
+      ],
+      "stats": {
+        "supported": 12,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "MEK2",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MEK2 is discussed in Nicotiana tabacum and Nicotiana attenuata."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Latin names are present in the review."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The core defense-function evidence is in N. attenuata."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as Nicotiana attenuata."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "Trypsin proteinase inhibitors are explicitly supported, but direct regulation of jasmonic acid by MEK2 itself is not explicitly stated in this section."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Because the JA linkage is indirect, the combined class statement is only partly supported."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "MEK2 is explicitly identified as a MAPKK."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "MAPKK is explicitly stated."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states MEK2 activates SIPK and WIPK upstream."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "It is supported as part of the MAPK cascade controlling anti-herbivore defense outputs."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states MEK2 is required for SIPK/WIPK activation and that MAPKKs including MEK2 affect trypsin proteinase inhibitor activity."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points match the review text."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Constitutive activation, VIGS, MAPK activation assays, and defense phenotype analysis are described."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Wounding and simulated herbivory are explicitly the treatments used."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "SIPK and WIPK are explicitly named as downstream targets of MEK2."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Activates downstream MAPKs is exactly what the review states."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "As immediate upstream activator of SIPK/WIPK, this is directly supported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "SIPK and WIPK are explicitly downstream of MEK2."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The studies concern leaf defense responses in N. attenuata/tobacco."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Trypsin proteinase inhibitors and related outputs are discussed as anti-herbivore defenses."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 18,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "MKK4/MKK5",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MKK4 and MKK5 are explicitly discussed in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the species referenced."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The activation assay is in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as Arabidopsis thaliana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The review only states that MKK4/MKK5 activate MPK6/MPK3 in protoplasts; it does not connect them here to ethylene or jasmonate outputs."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No direct metabolite linkage is given for MKK4/MKK5 in this review."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "They are explicitly described as homologues of MEK2 and therefore MAPKKs."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "MAPKK is supported by the text."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says constitutively activated MKK4 and MKK5 activate MPK6 and MPK3."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "UNCERTAIN",
+          "reason": "MAPK cascade linkage is supported, but explicit control of herbivory-related defense signaling by MKK4/MKK5 is not shown here."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "Activation of MPK6/MPK3 in protoplasts is supported, but 'supporting defense hormone signaling cascades' is an extrapolation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "Point 1 is supported; point 2 generalizes them as herbivory/pathogen upstream regulators, which is not directly tested in this review's insect context."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Constitutively activated kinase assay in Arabidopsis protoplasts is exactly what the review states."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "MPK6 and MPK3 are explicitly named downstream targets."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Activation of downstream MAPKs is directly stated."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The wording accurately limits them to an upstream pathway component rather than direct product determinant."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "They are indeed discussed as background MAPK cascade components in the review."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "ethylene; jasmonate-associated defense outputs",
+          "new_value": "NA",
+          "reason": "The review only states that MKK4/MKK5 activate MPK6/MPK3 in protoplasts; it does not connect them here to ethylene or jasmonate outputs."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "phytohormone",
+          "new_value": "NA",
+          "reason": "No direct metabolite linkage is given for MKK4/MKK5 in this review."
+        }
+      ],
+      "stats": {
+        "supported": 12,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 200,
+    "supported": 175,
+    "unsupported": 7,
+    "uncertain": 18,
+    "total_corrections": 7
+  }
+}

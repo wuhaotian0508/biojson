@@ -583,11 +583,13 @@ async function handleSend() {
         experimentDone: false,
         genesAvailable: false,
         genes: [],  // 检测到的基因名列表（由后端 genes_available 事件填充）
+        streamDone: false, // 标记流式传输是否完成，防止后续 updateMessage 覆盖按钮
     });
 
     try {
         const { answerText, sources } = await streamQuery(query, assistantMsgId);
-        saveToHistory(query, answerText, sources);
+        const state = getAssistantTurnState(assistantMsgId);
+        saveToHistory(query, answerText, sources, state.genes, state.sops);
     } catch (error) {
         updateMessage(assistantMsgId, `<p style="color: red;">${t('error.prefix')}: ${error.message}</p>`);
     } finally {
@@ -602,8 +604,36 @@ function hideWelcomeAndScene() {
     if (sceneIntro) sceneIntro.classList.add('hidden');
 }
 
+// 构建当前 session 的多轮历史（不含当前提问）
+// 策略：保留第 1 轮（初始上下文）+ 最近 2 轮（最新讨论），避免 token 过长
+function buildHistory() {
+    if (!currentSessionId) return [];
+    const session = conversationHistory.find(s => s.id === currentSessionId);
+    if (!session || !session.messages.length) return [];
+
+    const all = session.messages;
+    let selected;
+    if (all.length <= 3) {
+        // 3 轮以内全部保留
+        selected = all;
+    } else {
+        // 第 1 轮 + 最近 2 轮
+        selected = [all[0], ...all.slice(-2)];
+    }
+
+    const history = [];
+    for (const turn of selected) {
+        history.push({ role: 'user', content: turn.query });
+        if (turn.answerText) {
+            history.push({ role: 'assistant', content: turn.answerText });
+        }
+    }
+    return history;
+}
+
 // 流式查询
 async function streamQuery(query, messageId) {
+    const history = buildHistory();
     const response = await fetch('/api/query', {
         method: 'POST',
         headers: {
@@ -614,6 +644,7 @@ async function streamQuery(query, messageId) {
             query,
             use_personal: usePersonal,
             use_depth: isDeepSearch,
+            history,
         }),
     });
 
@@ -631,13 +662,14 @@ async function streamQuery(query, messageId) {
 
     let answerText = '';
     let sources = [];
+    let buffer = '';
 
     while (true) {
         const { done, value } = await reader.read();
-        if (done) break;
+        buffer += decoder.decode(value || new Uint8Array(), { stream: !done });
 
-        const chunk = decoder.decode(value);
-        const lines = chunk.split('\n');
+        const lines = buffer.split('\n');
+        buffer = done ? '' : (lines.pop() || '');
 
         for (const line of lines) {
             if (line.startsWith('data: ')) {
@@ -668,6 +700,7 @@ async function streamQuery(query, messageId) {
                         const state = getAssistantTurnState(messageId);
                         state.experimentDone = true;
                         state.experimentRunning = false;
+                        state.sops = data.sops;
                         const msgEl = document.getElementById(messageId);
                         if (msgEl) {
                             const regions = getMessageRegions(messageId);
@@ -682,7 +715,20 @@ async function streamQuery(query, messageId) {
                             state.genes = data.genes;
                         }
                     } else if (data.type === 'done') {
+                        const state = getAssistantTurnState(messageId);
+                        state.streamDone = true;
                         updateMessage(messageId, formatAnswer(answerText));
+                        // 将来源渲染到 extrasEl（不会被 updateMessage 覆盖）
+                        const { extrasEl } = getMessageRegions(messageId);
+                        if (extrasEl && state.sources && state.sources.length > 0) {
+                            const sourcesHtml = renderSources(state.sources);
+                            if (sourcesHtml) {
+                                const sourcesDiv = document.createElement('div');
+                                sourcesDiv.className = 'sources-wrapper';
+                                sourcesDiv.innerHTML = sourcesHtml;
+                                extrasEl.appendChild(sourcesDiv);
+                            }
+                        }
                         renderExperimentButton(messageId);
                     } else if (data.type === 'error') {
                         const state = getAssistantTurnState(messageId);
@@ -701,6 +747,35 @@ async function streamQuery(query, messageId) {
                     }
                 }
             }
+        }
+
+        if (done) {
+            if (buffer.trim().startsWith('data: ')) {
+                try {
+                    const data = JSON.parse(buffer.trim().slice(6));
+                    if (data.type === 'done') {
+                        const state = getAssistantTurnState(messageId);
+                        state.streamDone = true;
+                        updateMessage(messageId, formatAnswer(answerText));
+                        const { extrasEl } = getMessageRegions(messageId);
+                        if (extrasEl && state.sources && state.sources.length > 0) {
+                            const sourcesHtml = renderSources(state.sources);
+                            if (sourcesHtml) {
+                                const sourcesDiv = document.createElement('div');
+                                sourcesDiv.className = 'sources-wrapper';
+                                sourcesDiv.innerHTML = sourcesHtml;
+                                extrasEl.appendChild(sourcesDiv);
+                            }
+                        }
+                        renderExperimentButton(messageId);
+                    }
+                } catch (parseErr) {
+                    if (parseErr.message && !parseErr.message.startsWith('Unexpected')) {
+                        throw parseErr;
+                    }
+                }
+            }
+            break;
         }
     }
 
@@ -742,13 +817,14 @@ async function streamExperiment(messageId) {
 
     const reader = response.body.getReader();
     const decoder = new TextDecoder();
+    let buffer = '';
 
     while (true) {
         const { done, value } = await reader.read();
-        if (done) break;
+        buffer += decoder.decode(value || new Uint8Array(), { stream: !done });
 
-        const chunk = decoder.decode(value);
-        const lines = chunk.split('\n');
+        const lines = buffer.split('\n');
+        buffer = done ? '' : (lines.pop() || '');
 
         for (const line of lines) {
             if (!line.startsWith('data: ')) continue;
@@ -765,8 +841,11 @@ async function streamExperiment(messageId) {
                 } else if (data.type === 'result' && data.sops) {
                     state.experimentDone = true;
                     state.experimentRunning = false;
+                    state.sops = data.sops;
                     const regions = getMessageRegions(messageId);
                     if (regions.extrasEl) renderSOPs(regions.extrasEl, data.sops);
+                    // 将 SOP 结果更新到已保存的历史记录中
+                    updateLastTurnSops(state.sops, state.genes);
                 } else if (data.type === 'error') {
                     state.experimentRunning = false;
                     const msg = data.msg || data.data || t('auth.networkFail');
@@ -778,6 +857,10 @@ async function streamExperiment(messageId) {
                     throw parseErr;
                 }
             }
+        }
+
+        if (done) {
+            break;
         }
     }
 }
@@ -909,7 +992,8 @@ function getAssistantTurnState(messageId) {
             experimentRunning: false,
             experimentDone: false,
             genesAvailable: false,
-            genes: [],  // 检测到的基因名列表（由后端 genes_available 事件填充）
+            genes: [],
+            streamDone: false,
         });
     }
     return assistantTurnState.get(messageId);
@@ -941,17 +1025,16 @@ function renderExperimentButton(messageId) {
     if (!state.answerText || !state.genesAvailable || state.experimentRunning || state.experimentDone) return;
 
     const { answerEl, extrasEl } = getMessageRegions(messageId);
-    if (!answerEl) return;
+    if (!extrasEl) return;
 
     // 避免重复渲染
-    const existing = answerEl.querySelector('.experiment-trigger-area') || (extrasEl && extrasEl.querySelector('.experiment-trigger-area'));
+    const existing = extrasEl.querySelector('.experiment-trigger-area');
     if (existing) return;
-    // 也检查独立按钮（兼容）
-    const existingBtn = answerEl.querySelector('.experiment-btn') || (extrasEl && extrasEl.querySelector('.experiment-btn'));
+    const existingBtn = extrasEl.querySelector('.experiment-btn');
     if (existingBtn) return;
-    const progressEl = extrasEl && extrasEl.querySelector('.experiment-progress');
+    const progressEl = extrasEl.querySelector('.experiment-progress');
     if (progressEl && !progressEl.querySelector('.experiment-step.error')) return;
-    if (extrasEl && extrasEl.querySelector('.experiment-sop')) return;
+    if (extrasEl.querySelector('.experiment-sop')) return;
 
     // ---- 创建基因编辑器 + SOP 按钮的容器 ----
     const container = document.createElement('div');
@@ -979,36 +1062,8 @@ function renderExperimentButton(messageId) {
     });
     container.appendChild(btn);
 
-    // 尝试将容器放在"最终建议"章节末尾
-    let inserted = false;
-    const headings = answerEl.querySelectorAll('h1, h2, h3, h4, h5, h6, strong');
-    for (const heading of headings) {
-        const text = heading.textContent || '';
-        if (text.includes('最终建议')) {
-            // 找到该标题所在的段落/章节的最后一个兄弟元素
-            let section = heading.closest('h1, h2, h3, h4, h5, h6') || heading.closest('p') || heading.parentElement;
-            // 收集同级后续元素直到下一个同级标题或结束
-            let lastEl = section;
-            let next = section.nextElementSibling;
-            const sectionTag = section.tagName;
-            while (next) {
-                // 遇到同级或更高级标题则停止
-                if (/^H[1-6]$/.test(next.tagName) && next.tagName <= sectionTag) break;
-                // 遇到引用来源清单则停止
-                if ((next.textContent || '').includes('引用来源清单')) break;
-                lastEl = next;
-                next = next.nextElementSibling;
-            }
-            lastEl.after(container);
-            inserted = true;
-            break;
-        }
-    }
-
-    // 兜底：放到 extrasEl
-    if (!inserted && extrasEl) {
-        extrasEl.appendChild(container);
-    }
+    // 始终放到 extrasEl（不插入 answerEl，避免被 updateMessage 覆盖）
+    extrasEl.appendChild(container);
 }
 
 /**
@@ -1132,12 +1187,9 @@ function renderGeneEditor(messageId, state) {
 }
 
 function removeExperimentButton(messageId) {
-    // 移除整个实验触发区域（含基因编辑器 + SOP 按钮）
-    const { answerEl, extrasEl } = getMessageRegions(messageId);
-    answerEl?.querySelector('.experiment-trigger-area')?.remove();
+    // 移除整个实验触发区域（含基因编辑器 + SOP 按钮）— 仅在 extrasEl 中
+    const { extrasEl } = getMessageRegions(messageId);
     extrasEl?.querySelector('.experiment-trigger-area')?.remove();
-    // 兼容旧的独立按钮（无容器包裹的情况）
-    answerEl?.querySelector('.experiment-btn')?.remove();
     extrasEl?.querySelector('.experiment-btn')?.remove();
 }
 
@@ -1148,9 +1200,68 @@ function escapeHtml(text) {
     return div.innerHTML;
 }
 
+function trimSopsForStorage(sops, maxCharsPerSop = 12000, maxTotalChars = 30000) {
+    if (!sops || Object.keys(sops).length === 0) return null;
+
+    const trimmed = {};
+    let totalChars = 0;
+
+    for (const [accession, text] of Object.entries(sops)) {
+        if (totalChars >= maxTotalChars) break;
+
+        const rawText = typeof text === 'string' ? text : String(text || '');
+        const remaining = Math.max(maxTotalChars - totalChars, 0);
+        const limit = Math.min(maxCharsPerSop, remaining);
+        if (limit <= 0) break;
+
+        trimmed[accession] = rawText.length > limit
+            ? rawText.slice(0, limit) + '\n\n...(历史记录中已截断)'
+            : rawText;
+        totalChars += trimmed[accession].length;
+    }
+
+    return Object.keys(trimmed).length > 0 ? trimmed : null;
+}
+
+function buildPersistableHistory(includeSops = true) {
+    return conversationHistory.map(session => ({
+        ...session,
+        messages: (session.messages || []).map(turn => {
+            const nextTurn = { ...turn };
+            if (includeSops) {
+                const trimmedSops = trimSopsForStorage(nextTurn.sops);
+                if (trimmedSops) {
+                    nextTurn.sops = trimmedSops;
+                } else {
+                    delete nextTurn.sops;
+                }
+            } else {
+                delete nextTurn.sops;
+            }
+            return nextTurn;
+        }),
+    }));
+}
+
+function persistConversationHistory() {
+    try {
+        const sanitized = buildPersistableHistory(true);
+        localStorage.setItem('conversation_history', JSON.stringify(sanitized));
+        conversationHistory = sanitized;
+    } catch (err) {
+        console.warn('保存历史失败，改为不持久化 SOP 全文:', err);
+        const fallback = buildPersistableHistory(false);
+        localStorage.setItem('conversation_history', JSON.stringify(fallback));
+        conversationHistory = fallback;
+    }
+}
+
 // 保存到历史
-function saveToHistory(query, answerText, sources) {
+function saveToHistory(query, answerText, sources, genes, sops) {
     const turn = { query, answerText, sources, timestamp: Date.now() };
+    // 保存基因列表和 SOP 结果（用于切换对话后重新渲染，不会发给 LLM）
+    if (genes && genes.length > 0) turn.genes = genes;
+    if (sops && Object.keys(sops).length > 0) turn.sops = sops;
 
     if (currentSessionId) {
         // 追问：追加到当前 session
@@ -1180,15 +1291,32 @@ function saveToHistory(query, answerText, sources) {
         conversationHistory = conversationHistory.slice(0, 20);
     }
 
-    localStorage.setItem('conversation_history', JSON.stringify(conversationHistory));
+    persistConversationHistory();
     loadHistory();
+}
+
+// 将 SOP 结果更新到当前 session 最后一轮（按钮触发 SOP 生成后调用）
+function updateLastTurnSops(sops, genes) {
+    if (!currentSessionId) return;
+    const session = conversationHistory.find(s => s.id === currentSessionId);
+    if (!session || !session.messages.length) return;
+    const lastTurn = session.messages[session.messages.length - 1];
+    if (sops && Object.keys(sops).length > 0) lastTurn.sops = sops;
+    if (genes && genes.length > 0) lastTurn.genes = genes;
+    persistConversationHistory();
 }
 
 // 加载历史
 function loadHistory() {
     const saved = localStorage.getItem('conversation_history');
     if (saved) {
-        conversationHistory = JSON.parse(saved);
+        try {
+            conversationHistory = JSON.parse(saved);
+        } catch (err) {
+            console.warn('历史记录解析失败，已清空本地缓存:', err);
+            conversationHistory = [];
+            localStorage.removeItem('conversation_history');
+        }
 
         // 兼容旧格式：将单条 {query, answerText} 迁移为 session 格式
         let migrated = false;
@@ -1210,7 +1338,14 @@ function loadHistory() {
         }).filter(Boolean);
 
         if (migrated) {
-            localStorage.setItem('conversation_history', JSON.stringify(conversationHistory));
+            persistConversationHistory();
+        }
+
+        const hasStoredSops = conversationHistory.some(
+            session => (session.messages || []).some(turn => turn.sops && Object.keys(turn.sops).length > 0)
+        );
+        if (hasStoredSops) {
+            persistConversationHistory();
         }
     }
 
@@ -1255,7 +1390,26 @@ function restoreConversation(session) {
         const answerHtml = turn.answerText
             ? formatAnswer(turn.answerText)
             : `<p style="color: #999;">${t('history.oldRecord')}</p>`;
-        addMessage('assistant', answerHtml);
+        const msgId = addMessage('assistant', answerHtml);
+
+        // 恢复来源、基因、SOP 到 extrasEl
+        const { extrasEl } = getMessageRegions(msgId);
+        if (extrasEl) {
+            // 来源
+            if (turn.sources && turn.sources.length > 0) {
+                const sourcesHtml = renderSources(turn.sources);
+                if (sourcesHtml) {
+                    const sourcesDiv = document.createElement('div');
+                    sourcesDiv.className = 'sources-wrapper';
+                    sourcesDiv.innerHTML = sourcesHtml;
+                    extrasEl.appendChild(sourcesDiv);
+                }
+            }
+            // SOP 结果
+            if (turn.sops && Object.keys(turn.sops).length > 0) {
+                renderSOPs(extrasEl, turn.sops);
+            }
+        }
     }
 
     // 更新侧边栏高亮

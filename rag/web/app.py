@@ -212,6 +212,7 @@ def query():
     query_text = data.get('query', '').strip()
     use_personal = data.get('use_personal', False)
     use_depth = data.get('use_depth', False)
+    history = data.get('history', [])  # 多轮对话历史
 
     if not query_text:
         return jsonify({'error': '查询不能为空'}), 400
@@ -220,8 +221,14 @@ def query():
         try:
             # ---- 快速路径：用户明确要求 SOP 时，跳过检索/生成，直接执行 pipeline ----
             if skill_loader.should_trigger(query=query_text, trigger_source="query"):
+                # 从多轮历史中提取上一轮 assistant 回答，作为基因提取的上下文
+                prev_answer = ""
+                for msg in reversed(history):
+                    if msg.get("role") == "assistant" and msg.get("content"):
+                        prev_answer = msg["content"]
+                        break
                 tool_call = skill_loader.build_tool_call(
-                    query=query_text, answer_text="", trigger_source="query",
+                    query=query_text, answer_text=prev_answer, trigger_source="query",
                 )
                 if tool_call:
                     try:
@@ -288,7 +295,7 @@ def query():
 
             # 6) LLM 生成
             answer_text = ""
-            for event in generator.generate_stream_with_tools(query_text, ranked, use_depth=use_depth):
+            for event in generator.generate_stream_with_tools(query_text, ranked, use_depth=use_depth, history=history):
                 if event["type"] == "text":
                     answer_text += event["data"]
                     yield _sse({'type': 'text', 'data': event['data']})

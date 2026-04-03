@@ -1,0 +1,876 @@
+{
+  "file": "10.1016@j.plipres.2012.06.001",
+  "md_path": "/data/haotianwu/biojson/extractor/input/10.1016@j.plipres.2012.06.001.md",
+  "timestamp": "2026-04-03T16:08:05.679945",
+  "genes": [
+    {
+      "gene_name": "DGAT1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly refers to DGAT1 as acyl-CoA:diacylglycerol acyltransferase 1 (DGAT1)."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not provide an EC number for DGAT1 itself. EC numbers are given for ACAT, AWAT, Aas, etc., but not DGAT1/DGAT2."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT1 is repeatedly described as participating in TG biosynthesis, and TG synthesis via the Kennedy pathway is referenced elsewhere in the review."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states DGAT catalyzes the second-last? No—PAP is second-last, implying DGAT is the final acylation step of the Kennedy pathway to TG."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The review consistently describes DGAT activity as transfer of acyl-CoA to diacylglycerol to form triacylglycerol."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "In vitro assays are described using acyl-CoA and sn-1,2-DG as substrates for DGAT."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT activity is defined throughout as producing TG."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Triacylglycerol/TG is the product formed by DGAT1."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "TG is repeatedly discussed as a storage/neutral lipid in the review context."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT1 directly catalyzes formation of TG, the target product."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT is described as catalyzing the terminal acylation step to TG."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review supports DGAT1 as an important engineering/control target for oil accumulation, but does not establish universal rate limitation for DGAT1 across systems."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "This review summarizes DGAT1 orthologs from many organisms including mouse, human, Arabidopsis, Brassica, tung, etc."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional characterization and engineering studies are described across multiple species and hosts."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss-of-function mutants reduce seed oil in Arabidopsis, while overexpression often increases seed oil/TG content in several crops and systems."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed approaches are described in the review: heterologous expression, knockout mutants, overexpression, in vitro assays, metabolite/oil analysis, and field trials."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states mammalian DGAT1 is broadly expressed with highest levels in small intestine/adipose and in plants is often high during seed development and also in flowers/pollen or other tissues."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT1 is described as ER-localized; murine DGAT1 predominantly in ER, and tung DGAT1 in ER/distinct ER regions. The review notes DGAT2, not DGAT1, associates with lipid droplets in mammals."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT1 is explicitly classified as an MBOAT family membrane-bound O-acyltransferase with multiple hydrophobic/TMD regions."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "ACBP modulation of B. napus DGAT1 and DGAT1 self-association/tetramerization are supported. However, stearoyl-CoA desaturase 1 interaction is discussed for DGAT2, not DGAT1, making the combined field only partially supported."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "TG as an energy/storage lipid is supported, but 'source of signaling molecules' and 'substrate reserve for membrane biogenesis' are not directly stated for DGAT1-derived TG in this review."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The review discusses TG accumulation in seed embryos/endosperm, olive mesocarp, adipose tissue, liver, intestine/enterocytes, and lipid droplets."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "High-fat diet, oleate stimulation, drought in canola, and diet-induced obesity models are all explicitly discussed in relation to DGAT1 studies."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states Dgat1 knockout mice do not lactate and have reduced tissue TG; plant engineering can alter seed traits/oil content, though details vary by species."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points are consistent with the review: DGAT1 is one major DGAT family, affects oil/TG accumulation, has broader acyl-acceptor range/additional activities in mammals, and is a biotechnology/therapeutic target."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The review strongly supports DGAT1 overexpression for raising seed oil and describes DGAT1 as a therapeutic target for obesity/hypertriglyceridemia/steatosis, though 'tissue-specific safety consideration' is more inferential."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The review mentions genomics/bioinformatics progress and provides individual gene IDs in tables rather than a unified accession dataset."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This is indeed a review covering orthologs from diverse taxa and repeatedly emphasizes species-specific differences in function/topology/regulation."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.3.1.20",
+          "new_value": "NA",
+          "reason": "The paper does not provide an EC number for DGAT1 itself. EC numbers are given for ACAT, AWAT, Aas, etc., but not DGAT1/DGAT2."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "DGAT2",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly designates the second major DGAT family as DGAT2, acyl-CoA:diacylglycerol acyltransferase 2."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given for DGAT2 in the review."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT2 is repeatedly described as catalyzing TG biosynthesis and participating in the Kennedy pathway context."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT2 catalyzes the final acylation step from DG to TG, i.e., the terminal step of the glycerol-3-phosphate/Kennedy route."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly describes DGAT2 as transferring acyl-CoA to DG to form TG."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Acyl-CoA and diacylglycerol are the standard substrates used in DGAT2 assays discussed in the review."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT2 forms triacylglycerol."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "TG is the direct product."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "TG is treated as a neutral/storage lipid throughout the review."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT2 directly forms the target product TG."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It catalyzes the terminal acylation step to TG."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review supports DGAT2 as a major determinant/predominant contributor in some systems, but does not establish formal universal rate limitation."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT2 is described across many species including fungus, yeast, mammals, and multiple plants."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional studies were performed in multiple systems/species."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review supports predominant mammalian roles in TG biosynthesis and unusual-FA channeling into TG in some plants."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Purification, heterologous expression, mouse knockout/ASO studies, plant transgenics, in vitro assays, and lipid profiling are all described."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states higher expression in human hepatocytes/adipocytes, broader expression in mouse, and higher seed expression in castor/tung than DGAT1."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT2 is described as ER-localized, associated with lipid droplets/ER-lipid droplet interface, and enriched in mitochondria-associated membranes in animals."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The DGAT2 family with fewer TMDs than DGAT1 and conserved HPHG/EPHS motif is explicitly discussed."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly mentions DGAT2 self-association and physical interaction/co-localization with stearoyl-CoA desaturase 1; plant interactions are proposed as future work."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Energy storage is supported, but 'source of signaling molecules' and 'substrate reserve for membrane biogenesis' are not explicitly linked to DGAT2-derived TG in the review."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Seed oil bodies/lipid droplets, adipose tissue, liver, and cytosolic lipid droplets are all discussed in DGAT2-related contexts."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "High-fat diet, oleate stimulation, dietary fat, antisense treatment, and unusual-FA contexts are all explicitly described."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states Dgat2 knockout mice show lipopenia, skin abnormalities, and early death; engineering unusual FA flux affects oil composition."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points are faithfully reflected in the review."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The review supports DGAT2 for unusual FA channeling and therapeutic inhibition with caution because complete loss is deleterious."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Genomics/bioinformatics and individual IDs in tables are indeed presented without a single unified accession dataset."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly contrasts Arabidopsis with castor/tung and notes topology/motif differences among animals, fungi, and plants."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.3.1.20",
+          "new_value": "NA",
+          "reason": "No EC number is given for DGAT2 in the review."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "MGAT1; MGAT2; MGAT3",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The review identifies MGAT1, MGAT2, and MGAT3 as monoacylglycerol acyltransferase genes/isoforms."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "They are described as participating in monoacylglycerol-dependent neutral lipid metabolism and related to TG metabolism."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly presents MGATs as DGAT2-related enzymes linking MGAT activity to DG and also DGAT activity."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states they catalyze DG synthesis from monoacylglycerol and can also display DGAT activity when overexpressed."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Monoacylglycerol and acyl-CoA are their main substrates, and DG is used in DGAT side-activity assays."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The review supports DG as the main product and TG as a product under DGAT activity conditions."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "TG is explicitly linked as a product when MGATs show DGAT activity."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "TG is a neutral/storage lipid in the review context."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "This field accurately reflects that MGATs supply precursor pools and can directly form TG via DGAT activity."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Their principal role is upstream of terminal TG synthesis, with auxiliary terminal DGAT activity."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The review specifically highlights MGAT2 as key in dietary fat absorption and high-fat-diet responses; it does not establish this for MGAT1/3."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The section focuses mainly on mammalian MGAT genes."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Mammalian systems are the focus for MGAT biology in the review."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "MGATs are linked to intestinal fat absorption and MGAT2 deficiency protects against high-fat-diet-induced metabolic disorders."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Overexpression, knockout mice, tissue expression analyses, and in vitro assays are all described."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review provides these specific expression patterns for MGAT1, MGAT2, and MGAT3, including stomach/kidney, intestine/liver, and GI tract/ileum/liver."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Immunocytochemical analyses are cited showing MGAT1/2/3 localization to the ER."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "MGATs are explicitly said to be DGAT2-related acyltransferases sharing significant sequence similarity with DGAT2."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Energy storage and dietary fat utilization are supported functions in the context of MGAT/TG metabolism."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Enterocytes are strongly supported, but 'systemic lipid storage tissues' is a broader inference not directly framed as MGAT terminal metabolite accumulation sites."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "High-fat diet and dietary fat absorption are explicitly discussed."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The review notes that inhibition/knockout alters intestinal fat absorption while being metabolically beneficial."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points accurately summarize the review's treatment of MGAT genes."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The review presents MGAT2 mainly as a therapeutic/metabolic-disease target, not a crop engineering target."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review clearly includes MGATs as DGAT-related enzymes rather than canonical DGAT1/2 families."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 24,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "WS/DGAT",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "WS/DGAT is explicitly named wax ester synthase/diacylglycerol acyltransferase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The review describes WS/DGAT in bacterial neutral lipid biosynthesis producing TG and wax esters."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is presented as a bifunctional wax ester/TG synthesis branch in bacteria."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states WS/DGAT synthesizes wax esters and TG, and Acinetobacter WS/DGAT also has MGAT activity in vitro."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Wax alcohol or DG with acyl-CoA are implied by wax ester synthase and DGAT activities, respectively."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Wax esters and TG are explicit products."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Both TG and wax ester are direct products discussed in the review."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are neutral lipids in the context of the review."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "WS/DGAT directly forms TG and wax ester products."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "As DGAT activity, it represents the terminal step in the bacterial TG branch."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The review does not discuss WS/DGAT as a rate-limiting or key control step."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Bacterial WS/DGATs and an Arabidopsis ortholog are explicitly described."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Bacteria, yeast heterologous systems, and Arabidopsis are all mentioned."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "WS/DGAT promotes TG and/or wax ester synthesis in native and heterologous systems."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Gene identification/cloning, heterologous expression, and in vitro functional assays are all described."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The bacterial WS/DGAT is explicitly called membrane-associated."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states these enzymes are unrelated to eukaryotic DGAT1/DGAT2 and form a distinct bifunctional WS/DGAT family."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Storage/wax lipid formation is supported; persistence is specifically linked to Ag85A in M. tuberculosis context."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review discusses bacterial TG/wax synthesis but does not explicitly use the term 'bacterial neutral lipid bodies/cellular lipid stores' for WS/DGAT products in this section."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Acinetobacter calcoaceticus ADP1 synthesizes wax ester and TG under growth-limiting conditions."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three points are all directly supported by the review."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review supports heterologous engineering/synthetic biology potential indirectly, but does not explicitly discuss 'industrial lipid engineering where wax ester/TG co-production is desired' in this wording."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states Arabidopsis WS/DGAT predominantly synthesizes wax esters."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Rate_Limiting_or_Key_Control_Step",
+          "old_value": "Not established",
+          "new_value": "NA",
+          "reason": "The review does not discuss WS/DGAT as a rate-limiting or key control step."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "DGAT3",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The review refers to AhDGAT3 as a DGAT from developing peanut cotyledons and Table 1 labels AhDGAT3 under 'Soluble DGAT'."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT3 is discussed as part of TG biosynthesis by soluble enzymes."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly presents soluble/cytosolic TG synthesis as an alternative branch outside membranes."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "AhDGAT3 is described as a soluble DGAT catalyzing TG synthesis from DGAT activity, though the full reaction text is inferential from DGAT designation."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "As a DGAT, acyl-CoA and DG are inferable substrates, but the review does not explicitly state substrate pair for AhDGAT3 in the provided text."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "As a DGAT-related enzyme, its product is TG; the review explicitly says it catalyzes synthesis of TG."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "TG is the end product discussed."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "TG is discussed as a neutral/storage lipid."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT3 directly forms TG according to its DGAT activity."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT3 is presented as a soluble DGAT catalyzing TG synthesis, i.e., a terminal step in a soluble route."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No rate-limiting or key-control claim is made for DGAT3."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arachis hypogaea is explicitly identified as the source species."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper gives the species name Arachis hypogaea."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AhDGAT3 is functionally characterized in E. coli, and homologs are discussed in Arabidopsis, soybean, and rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Arachis hypogaea as the applied species is not the main recombinant host; E. coli is the expression host in Table 1, so this field is only partially aligned."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review uses DGAT3 to support that TG synthesis can occur in the cytoplasm and is not exclusively membrane-bound."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Identification in developing cotyledons, recombinant E. coli expression, sequence comparison, and DGAT activity characterization are described."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Developing peanut cotyledons are explicit, and Arabidopsis putative DGAT3 expression during seed maturation from computational microarray analysis is also stated."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly treats DGAT3 as soluble/cytosolic."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is described as a soluble DGAT-related protein with 13% identity to bacterial WS/DGAT and no homology to DGAT1/2."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Cross-reactivity with antibodies against a Rhodotorula glutinis DGAT peptide is described, but this is not a demonstrated protein-protein interaction."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "TG as energy storage is consistent with the review's general context."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Developing seed cotyledons are supported, but 'cytosolic lipid pools' is an inference not directly stated."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points accurately reflect the review's discussion of DGAT3."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review does not explicitly frame DGAT3 as an engineering target; that statement is plausible but speculative."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly mentions computational microarray analysis for Arabidopsis putative DGAT3."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review indeed says this enzyme class is less understood and needs further validation of expression-activity relationships."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Rate_Limiting_or_Key_Control_Step",
+          "old_value": "Not established",
+          "new_value": "NA",
+          "reason": "No rate-limiting or key-control claim is made for DGAT3."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 1,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "DCR",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "DCR is explicitly identified as Defective Cuticle Ridge."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review links DCR to TG enriched in hydroxy FA and cutin precursor formation, but does not define a formal 'triacylglycerol/cutin-related hydroxy fatty acid metabolism' pathway label."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "DCR is explicitly described as a BAHD family acyltransferase involved in synthesis of hydroxy-FA-enriched TG that may serve as precursor for cutin synthesis."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states DCR is involved in catalyzing synthesis of TG enriched in hydroxy FA, likely precursor for cutin synthesis."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The review does not specify hydroxy-FA-containing acyl donors and DG as DCR substrates."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Hydroxy-FA-enriched TG is explicitly described as the product class."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Hydroxy-FA-enriched TG is directly described."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review supports TG linked to cutin precursor function, but the specific label 'storage/structural lipid intermediate' is interpretive."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "DCR directly forms TG enriched in hydroxy FA, which may serve as precursor for cutin synthesis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "A branch-specific role is supported, but 'terminal/branch-specific step' is not explicitly stated."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No such claim is made for DCR."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "A. thaliana is explicitly stated."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 shows AtDCR functionally characterized in S. cerevisiae H1266, and the native species is Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Arabidopsis thaliana is the source species, but the recombinant host used for characterization is yeast, so this field is only partly aligned."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary matches the review's statement that DCR promotes hydroxy-FA-rich TG implicated in cutin precursor formation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "DCR was characterized functionally, and Table 1 shows heterologous expression in yeast."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The review does not explicitly assign DCR a soluble localization; it only says it belongs to BAHD family and is a DGAT-related enzyme."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "DCR is explicitly said to belong to the BAHD family of acyltransferases."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says the TG may serve as precursor for cutin synthesis."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Effects on cuticle biology are plausible from the name/role, but the review does not summarize tradeoffs explicitly."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points accurately reflect the review's description of DCR as a BAHD acyltransferase making hydroxy-FA-rich TG linked to cutin."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review does not explicitly discuss engineering use/value of DCR."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review indeed includes DCR as a DGAT-related soluble/noncanonical acyltransferase rather than canonical DGAT1/2."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Substrate",
+          "old_value": "Hydroxy-fatty-acid-containing acyl donors and diacylglycerol",
+          "new_value": "NA",
+          "reason": "The review does not specify hydroxy-FA-containing acyl donors and DG as DCR substrates."
+        },
+        {
+          "field": "Rate_Limiting_or_Key_Control_Step",
+          "old_value": "Not established",
+          "new_value": "NA",
+          "reason": "No such claim is made for DCR."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Soluble/noncanonical DGAT-related enzyme context",
+          "new_value": "NA",
+          "reason": "The review does not explicitly assign DCR a soluble localization; it only says it belongs to BAHD family and is a DGAT-related enzyme."
+        }
+      ],
+      "stats": {
+        "supported": 15,
+        "unsupported": 3,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "AWAT1; AWAT2",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly names these as acyl-CoA:wax alcohol acyltransferase or multifunctional O-acyltransferase (AWAT or MFAT)."
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly provides EC 2.3.1.75 for AWAT/MFAT."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AWATs are described as participating predominantly in wax ester synthesis and broader neutral lipid metabolism."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The review presents AWAT as a DGAT2-related branch mainly for wax ester synthesis."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says AWAT predominantly mediates wax ester synthesis and also exhibits DGAT, MGAT, and ARAT activities."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Wax alcohol and acyl-CoA are implied by AWAT activity, and MGAT/DGAT side-activity substrates are explicitly relevant."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Wax esters are the predominant products; DGAT/MGAT/ARAT activities imply TG, DG, and retinyl ester formation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Wax esters and TG are both directly linked to AWAT activity in the review."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are neutral lipids in context."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects that AWAT mainly acts in a parallel wax branch but can directly form TG via side activity."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "AWAT performs a terminal step in the wax ester branch; auxiliary TG activity is also supported."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No rate-limiting or key-control claim is made for AWAT1/2."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The AWATs discussed are human isoforms."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Human/Homo sapiens is explicit in Table 1 and text context."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional studies are in human genes expressed in yeast and insect cells."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Homo sapiens is the source species, but applied systems include yeast and insect cells rather than only human."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states AWAT likely plays an essential role in lipid metabolism in human skin, predominantly through wax ester synthesis with additional DGAT-related activity."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Identification, heterologous overexpression, and enzyme activity assays are described; Table 1 lists yeast and Sf9 expression systems."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says MFAT/AWAT expression is predominant in skin and AWAT2 transcripts are restricted in sebaceous glands."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "AWATs are DGAT2-related and likely ER-associated, but the review does not explicitly state ER localization for AWAT1/2 in the provided text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AWATs are explicitly said to share significant sequence similarity to DGAT2 and to have originated from DGAT2 duplications."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Skin surface lipid formation is explicitly supported; barrier-related wording is reasonable though not emphasized."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Skin and sebaceous glands are explicitly stated."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points faithfully summarize the review's description of AWAT1/2."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential dermatological relevance is inferable, but the review does not explicitly discuss AWATs as application targets."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review indeed treats AWATs as DGAT-related multifunctional acyltransferases rather than core bulk TG enzymes."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Rate_Limiting_or_Key_Control_Step",
+          "old_value": "Not established",
+          "new_value": "NA",
+          "reason": "No rate-limiting or key-control claim is made for AWAT1/2."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 181,
+    "supported": 151,
+    "unsupported": 8,
+    "uncertain": 22,
+    "total_corrections": 8
+  }
+}

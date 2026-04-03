@@ -1,0 +1,282 @@
+{
+  "file": "10.1016@j.ibmb.2025.104431",
+  "md_path": "/data/haotianwu/biojson/extractor/input/10.1016@j.ibmb.2025.104431.md",
+  "timestamp": "2026-04-03T16:04:04.507257",
+  "genes": [
+    {
+      "gene_name": "MhieDPPS1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results section 3.2 explicitly states full-length cDNA of M. hieroglyphica DPPS1 with GenBank accession no. PQ537095."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is cloned from and studied in Monolepta hieroglyphica throughout the paper."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper consistently identifies the source organism as Monolepta hieroglyphica."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MhieDPPS1 was studied in M. hieroglyphica, co-expressed in E. coli, and overexpressed in a Drosophila melanogaster transgenic model."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "These Latin names all appear in the paper: Monolepta hieroglyphica, E. coli/Escherichia coli, and Drosophila melanogaster."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The title and Results describe DPPS1 as a decaprenyl diphosphate synthase subunit/gene."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports 'six conserved motifs and three Asp-rich/DDxxD motifs' for MhieDPPS1, but the specific phrasing 'cis/prenyltransferase-related' is not stated in the text provided."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results link MhieDPPS1 to CoQ biosynthesis and its enzymatic products ((E)-GPP, (E)-FPP, (E)-GGPP) place it within terpenoid backbone/isoprenoid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that DPPS1 is required with DPPS2 for CoQ9/CoQ10 production and also generates prenyl intermediates linked to juvenile hormone precursor supply."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "From the reported in vitro formation of prenyl intermediates and joint requirement for CoQ9/10 formation, MhieDPPS1 is directly inferable as a precursor-supplying branch-point enzyme."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Section 3.3 explicitly reports activity with IPP + DMAPP and IPP + (E)-GPP."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Section 3.3 states MhieDPPS1 generates (E)-GPP and (E)-FPP from IPP + DMAPP and (E)-FPP and (E)-GGPP from IPP + (E)-GPP; section 3.5 shows CoQ9/10 production requires co-expression with MhieDPPS2 in E. coli."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an accurate synthesis of sections 3.3 and 3.5: MhieDPPS1 transfers IPP to allylic substrates in vitro and, together with MhieDPPS2, enables CoQ9/10 formation in vivo in E. coli."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "RNAi of MhieDPPS1/2 reduced CoQ9 and CoQ10, increased JH III, and affected survival; transgenic/RNAi studies also altered developmental timing and metabolic networks."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly focuses on CoQ9 and CoQ10 as the end products linked to DPPS1."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Coenzyme Q/ubiquinone is a terpenoid-quinone; this classification is directly consistent with 'ubiquinone and other terpenoid-quinone biosynthesis' stated in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The reported data support that MhieDPPS1 supplies prenyl precursors and is required with MhieDPPS2 for final CoQ9/10 formation."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract/discussion state CoQ is essential for cellular metabolism and discuss electron transport, antioxidant defense, metabolism, growth and lifespan-related roles."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Section 3.1 explicitly states both CoQ9 and CoQ10 were detected in adult M. hieroglyphica."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "Supported parts: higher in maize-fed insects, higher in female abdomen, and higher in females than males. However 'elevated in female gonad' is not supported for MhieDPPS1; section 3.6 says no significant differences across female head/thorax/cuticle/intestine/gonads for MhieDPPS1."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MhieDPPS1 was significantly upregulated in maize-fed beetles by qRT-PCR, and it was overexpressed in Drosophila using a UAS-DPPS1-2a-DPPS2 construct."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are described and used for MhieDPPS1: RT-qPCR, recombinant enzyme GC-MS assays, kinetics, docking, E. coli co-expression LC-MS, RNAi with metabolite measurement, transgenic Drosophila, and transcriptomics."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional interdependence with MhieDPPS2 is directly demonstrated by the E. coli co-expression experiment and emphasized in Results/Discussion."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The study presents MhieDPPS1 as important/key in CoQ biosynthesis, but does not experimentally establish 'control point' status; the caution about not being definitively sole rate-limiting is appropriate."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Host plant diet, dsRNA RNAi, and ubiquinol supplementation are all explicit treatments in the study affecting the measured traits."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Knockdown reduced survival in M. hieroglyphica, and overexpression in Drosophila extended developmental period and altered metabolic networks/gut microbiota."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states the construct used pJFRC28-10XUAS-IVS-GFP-p10 and generated a UAS-DPPS1-2a-DPPS2 line, but does not explicitly mention GAL4 induction in the provided text."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly describe transcriptome sequencing on Illumina NovaSeq 6000 and gut microbiome sequencing on Illumina MiSeq; no accession is provided."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion/conclusion explicitly mention environmentally friendly pest management technologies and targeted interventions based on DPPS/CoQ biology."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes two major supported findings: broad in vitro prenyltransferase activity of MhieDPPS1 alone and inverse relationship between CoQ and JH III, while CoQ9/10 production in vivo required co-expression with MhieDPPS2."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four summary points are supported by Results sections 3.1, 3.3, 3.5, and 3.7, except that RNAi was performed on DPPS1/2 including combined knockdown; the summary still faithfully reflects the core evidence involving MhieDPPS1."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 27,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "MhieDPPS2",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results section 3.2 explicitly gives MhieDPPS2 GenBank accession no. PQ537096."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MhieDPPS2 was cloned from and studied in Monolepta hieroglyphica."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source organism is explicitly Monolepta hieroglyphica."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MhieDPPS2 was studied in M. hieroglyphica, in E. coli co-expression assays, and in transgenic Drosophila melanogaster."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "These applied species are all named in the paper."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies DPPS2 as the second decaprenyl diphosphate synthase subunit/gene."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Calling it a decaprenyl diphosphate synthase family protein is consistent with the paper's direct identification of DPPS2 as a DPPS homolog/subunit."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly link MhieDPPS2 with CoQ9/CoQ10 production together with MhieDPPS1."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports DPPS2 as part of the CoQ side-chain synthesis module through the co-expression requirement for CoQ9/10 production."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It is directly inferable from the co-expression data that MhieDPPS2 functions as a required partner step in CoQ biosynthesis."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Section 3.5 shows MhieDPPS2 is required with MhieDPPS1 for CoQ9 and CoQ10 production in vivo in E. coli."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Although no standalone enzymatic activity for MhieDPPS2 is shown, the paper supports its joint function with MhieDPPS1 in CoQ side-chain formation needed for CoQ9/10 biosynthesis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "RNAi experiments and co-expression data support a role in CoQ biosynthesis, elevated JH III upon knockdown, and reduced survival."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The terminal metabolites linked to MhieDPPS2 are CoQ9 and CoQ10."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "CoQ/ubiquinone is a terpenoid-quinone, matching the paper's pathway terminology."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The E. coli co-expression experiment demonstrates that MhieDPPS2 is required together with MhieDPPS1 for target-product formation."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses CoQ functions in metabolism, antioxidant defense, growth and lifespan; electron transport is part of standard CoQ biology discussed under cellular metabolism."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Section 3.1 reports detection of CoQ9 and CoQ10 in adult M. hieroglyphica."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Section 3.1 states no significant diet-dependent difference for MhieDPPS2 by qRT-PCR, and section 3.6 supports higher expression in female abdomen/intestine and higher expression in females than males."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The transgenic Drosophila model overexpressed MhieDPPS2 together with MhieDPPS1 using the linked construct."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed approaches are documented for MhieDPPS2: RT-qPCR, E. coli co-expression with LC-MS, RNAi with metabolite assays, tissue expression, transgenic Drosophila, and transcriptome analysis."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional interdependence with MhieDPPS1 is explicitly shown by the co-expression requirement for CoQ9/10 production."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The statement is cautious and matches the paper: MhieDPPS2 is a required component of the CoQ biosynthetic module, but rate-limiting status is not established."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Host plant diet, dsRNA RNAi, and ubiquinol supplementation are all experimental factors in the study relevant to DPPS2-associated analyses."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Knockdown reduced survival; co-overexpression with MhieDPPS1 in Drosophila extended developmental period and altered microbiome composition."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The UAS vector is explicit, but the phrase 'inducible GAL4/UAS system' is not directly stated in the provided text."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods/results explicitly include transcriptome (NovaSeq 6000) and gut microbiome (MiSeq) datasets, with no accession number reported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The conclusion/discussion support pest-management application by targeting DPPS/CoQ biosynthesis."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Section 3.5 directly shows no CoQ production when MhieDPPS2 is expressed alone, and functional interdependence with MhieDPPS1 is a central conclusion."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each summary point is supported by Results: cloning/phylogeny, E. coli co-expression requirement, RNAi-associated CoQ/JH effects, and high female intestine expression."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 29,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 61,
+    "supported": 56,
+    "unsupported": 0,
+    "uncertain": 5,
+    "total_corrections": 0
+  }
+}

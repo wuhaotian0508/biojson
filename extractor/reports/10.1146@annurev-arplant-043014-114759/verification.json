@@ -1,0 +1,1343 @@
+{
+  "file": "10.1146@annurev-arplant-043014-114759",
+  "md_path": "/data/haotianwu/biojson/extractor/input/10.1146@annurev-arplant-043014-114759.md",
+  "timestamp": "2026-04-03T17:03:16.386725",
+  "genes": [
+    {
+      "gene_name": "PhPDR1",
+      "category": "Common",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes PhPDR1 as a PDR (pleiotropic drug resistance) efflux pump belonging to the ATP-binding-cassette membrane protein superfamily of transporters."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'In petunia, the corresponding transporter PhPDR1 has been identified'."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says petunia but does not explicitly give the Latin binomial 'Petunia hybrida' in the provided text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PhPDR1 is discussed in petunia, and ectopic overexpression in Arabidopsis is explicitly mentioned."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Arabidopsis thaliana is inferable from context, but 'Petunia hybrida' is not explicitly written in the text."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PhPDR1 is described as releasing strigolactones into the soil and affecting SL levels in root exudates."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly identifies strigolactones as carotenoid-derived compounds and plant hormones, i.e. apocarotenoid hormones."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The text links SL release to promotion of arbuscular mycorrhizal interaction and also discusses SL roles in root growth responses and bud inhibition."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states that Phpdr1 mutants had similar SL levels in roots but much lower levels in root exudates, indicating export into the rhizosphere."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly mentions identification of mutants, comparison of SL levels in roots versus root exudates, reduced symbiosis, and Arabidopsis overexpression with GR24 root-growth assay."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point is directly reflected in the Transport section: export carrier role, low exudate SL but similar root SL in mutants, reduced interaction with Glomus intraradices, and Arabidopsis overexpression counteracting GR24 root inhibition."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "PhPDR1 is stated to be predominantly localized in the plasma membrane."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The text says PhPDR1 is predominantly localized in individual subepidermal cells of lateral roots and is also highly expressed near axillary buds."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The transporter is described as releasing SLs into root exudates/the soil/rhizosphere."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper states phosphate deficiency decreased expression of PDR1 in petunia, opposite to the JSON claim that phosphate deficiency decreases PDR1 expression? Wait this matches decrease. However broader context says shortage promotes SL release, but the explicit sentence indeed says phosphate deficiency decreased PDR1. So supported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible application inferred from the biology, but no engineering/breeding application statement is made in the review."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses SLs as parasitic weed germination stimulants and PhPDR1 as an SL exporter, so this tradeoff is plausible, but not directly stated for PhPDR1 manipulation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This is indeed a review, PhPDR1 is discussed for transport rather than biosynthesis, and the text explicitly says present data do not clearly show whether PhPDR1 is involved in SL transport to the shoot."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Environment_or_Treatment_Factor",
+          "old_value": "Phosphate deficiency decreases PDR1 expression in petunia",
+          "new_value": "NA",
+          "reason": "The paper states phosphate deficiency decreased expression of PDR1 in petunia, opposite to the JSON claim that phosphate deficiency decreases PDR1 expression? Wait this matches decrease. However broader context says shortage promotes SL release, but the explicit sentence indeed says phosphate deficiency decreased PDR1. So supported."
+        }
+      ],
+      "stats": {
+        "supported": 13,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "D27",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly concludes that D27 encodes a 9-cis/all-trans-β-carotene isomerase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "D27 is described as a small iron-binding protein without known conserved domains."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "D27 is introduced in rice and OsD27 assays are specifically discussed."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review uses 'rice' and 'OsD27' but does not explicitly write 'Oryza sativa' in the provided text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The text discusses rice, Arabidopsis, and transient expression in Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nicotiana benthamiana is explicitly written, but Oryza sativa and Arabidopsis thaliana are not explicitly spelled out in the provided text."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "D27 is linked to strigolactone biosynthesis and, in N. benthamiana with downstream enzymes, to carlactone and 4-deoxyorobanchol formation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Strigolactones are explicitly described as carotenoid-derived compounds/hormones."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "D27 is described as a further SL biosynthetic enzyme and the first step of SL biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The text states SL biosynthesis starts with D27-catalyzed 9-cis/all-trans-β-carotene isomerization, i.e. the initial precursor configuration step."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "D27 is clearly placed upstream of MAX1 and at the beginning of the pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "OsD27 was incubated with 9-cis- and all-trans-β-carotene and interconverted them."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states D27 mediates interconversion of all-trans- and 9-cis-β-carotene."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This reversible interconversion is explicitly described in the D27 section and Figure 4."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "D27 is presented as providing the correctly configured precursor for CCD7, so its connection is supplying the precursor pool."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports D27 as key for supplying the correct stereoisomer substrate; it does not call it rate-limiting, and the JSON explicitly notes that limitation is not established."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states D27 is plastid localized."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review says D27 promotes SL biosynthesis by generating 9-cis-β-carotene and that rice d27 and Arabidopsis d27 mutants show increased tillering/branching phenotypes."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly mentions in vitro enzyme assays, mutant phenotypes, Arabidopsis grafting, and transient expression in N. benthamiana."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly reflected in the D27 discussion."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states MtD27 is enhanced by phosphate and nitrogen deficiency, that phosphate resupply in rice reduces upstream gene expression including D27, and that OsNSP1/OsNSP2 knockdown reduces D27 expression."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Phosphate deficiency and phosphate resupply effects on D27 expression are explicitly described."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "CCD7/CCD8/MAX1 are pathway-related rather than direct physical interactors; NSP1/NSP2 are stated to control MtD27/OsD27 transcription, not protein interaction."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review discusses biological significance but does not explicitly propose engineering D27 for architecture modification."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "These are reasonable inferences from SL biology but are not directly stated as tradeoffs of D27 manipulation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says higher plants contain two D27 homologs with unknown functions and that d27 phenotypes are milder, suggesting alternative sources of 9-cis-β-carotene."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 21,
+        "unsupported": 0,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "CCD7",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly lists Arabidopsis MAX3, rice D17/HTD1, pea RMS5, and petunia DAD3 as CCD7 ortholog names."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD7 stands for carotenoid cleavage dioxygenase 7 and is named as such in the review."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CCDs are described as carotenoid cleavage oxygenases, nonheme iron enzymes."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis, rice, pea, and tomato ortholog activity are all discussed."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper uses common names and 'LeCCD7' but does not explicitly provide all four Latin binomials in the provided text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review discusses Arabidopsis, rice, pea, E. coli assays, and N. benthamiana in pathway reconstruction."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nicotiana benthamiana and Escherichia coli are explicit, but the full Latin names for Arabidopsis, rice, and pea are not all explicitly written in the provided text."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD7 is directly linked to strigolactone biosynthesis and formation of the precursor carlactone via downstream CCD8."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "SLs are explicitly carotenoid-derived hormones/apocarotenoids."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD7 is explicitly placed in SL biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states SL biosynthesis originates from β-carotene and CCD7 performs the early oxidative cleavage."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD7 is clearly upstream in the pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The revisited assays showed CCD7 enzymes from Arabidopsis, pea, and rice cleaved only 9-cis-β-carotene."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly gives 9-cis-β-apo-10'-carotenal and β-ionone as products."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 4 and text explicitly describe stereospecific cleavage at the C9'-C10' double bond of 9-cis-β-carotene."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD7 forms the direct substrate for CCD8, i.e. an immediate precursor."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "It is clearly a key core-pathway step; the JSON carefully avoids claiming it is explicitly rate-limiting."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review states D27/CCD7/CCD8 are plastid-localized collectively by contrast with MAX1, but CCD7 localization is not separately demonstrated in the provided text."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Genetic evidence in branching mutants is described, with CCD7 orthologs involved in SL biosynthesis and branching/tillering inhibition."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly mentions heterologous expression in carotenoid-accumulating E. coli, in vitro assays with pure stereoisomers, mutant evidence, and transient expression in N. benthamiana for pathway reconstruction."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by the CCD7 section and Figure 4."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis CCD7 highest in roots, rice CCD7 in vascular bundles, and tomato CCD7 highest in immature green fruits are all explicitly stated."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MtCCD7 induction by phosphate/nitrogen deficiency and rice D17/HTD1 reduction after phosphate resupply are explicitly described."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states auxin promotes CCD7 expression, phosphate deficiency induces it, and SL/GR24 feedback represses biosynthetic genes including MAX3/MAX4 and D10; for CCD7 specifically phosphate and auxin evidence are direct, GR24 repression is less direct but the field is broadly consistent."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "D27 and CCD8 are pathway neighbors, but the review does not present them as direct physical interactors of CCD7."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible application inferred from the biology, but not explicitly proposed in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly notes roles in phosphate-starvation adaptation/symbiosis and that CCD7 also contributes to mycorradicin and cyclohexenone pigments, supporting these tradeoff concerns."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says CCD7 cleaves other 9-cis carotenoids such as 9-cis-lutein and 9-cis-zeaxanthin in vitro."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "CCD8",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly lists Arabidopsis MAX4, rice D10, pea RMS1, and petunia DAD1 as CCD8 ortholog names."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD8 is the carotenoid cleavage dioxygenase 8 discussed in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CCDs are described as carotenoid cleavage oxygenases and nonheme iron enzymes."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis, rice, pea, and petunia are all discussed for CCD8 orthologs or expression."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The full Latin names are not all explicitly written in the provided text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis, rice, pea, E. coli, and N. benthamiana are all explicitly involved in CCD8-related results."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Escherichia coli and Nicotiana benthamiana are explicit, but the full Latin names for Arabidopsis, rice, and pea are not explicitly written in the provided text."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD8 forms carlactone, which is directly connected to downstream strigolactones."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Carlactone/SLs are described as carotenoid-derived apocarotenoid hormones or intermediates."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD8 is explicitly part of SL biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly presents CCD8 as the carlactone-forming step."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD8 is downstream of CCD7 and upstream of MAX1, i.e. midstream committed scaffold formation."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states CCD8 enzymes were incubated with 9-cis-β-apo-10'-carotenal and converted this substrate into carlactone."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Carlactone is explicitly identified as the product of the preferred 9-cis substrate reaction."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly describes repeated oxygenation, intramolecular rearrangement, and butenolide formation in carlactone biosynthesis."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Carlactone is the immediate precursor to downstream SLs."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The field describes CCD8 as a key scaffold-forming step without falsely claiming explicit rate limitation."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "As with CCD7, the review contrasts plastid-localized D27/CCD7/CCD8 with ER-localized MAX1, but CCD8 localization is not individually demonstrated in the excerpt."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD8 is required for carlactone/SL production, and mutants in CCD8 orthologs are linked to branching/tillering phenotypes."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review mentions in vitro assays, isotopic labeling for carlactone conversion, rescue with carlactone, endogenous detection, and transient expression in N. benthamiana."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by the CCD8 section."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states CCD8 genes generally show high expression in roots and details Arabidopsis MAX4 expression in root tips, floral organs, siliques, and nodal tissues."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MtCCD8 induction by phosphate/nitrogen deficiency and D10 decrease after phosphate resupply are explicitly stated."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The review directly supports auxin induction, phosphate deficiency effects, SL feedback on D10/MAX4/DAD1, and ABA-deficiency-associated lowering of CCD8 transcripts in some systems."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "CCD7 and MAX1 are pathway-related enzymes, but no direct physical interaction is reported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This application is plausible but not directly proposed in the review."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Broad tradeoff claims are biologically plausible from the review but not specifically stated as consequences of CCD8 manipulation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states that CCD8 also cleaves all-trans-β-apo-10'-carotenal to β-apo-13-carotenone in vitro and that the in planta significance is unresolved."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 22,
+        "unsupported": 0,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "MAX1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states Arabidopsis has MAX1 and rice has five MAX1 homologs including a nonfunctional mutated one; Os900, Os1400, Os1900, and Os5100 are explicitly named among the functional homologs."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The review identifies Os900 as a carlactone oxidase and Os1400 as an orobanchol synthase, both MAX1 homologs; MAX1 homologs are strigolactone-forming CYPs."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis MAX1 is explicitly stated to be a member of the CYP711 family."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review discusses MAX1 in Arabidopsis and rice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Common names are used; the full Latin names are not explicitly given in the excerpt."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis, rice, Nicotiana benthamiana, and yeast are all explicitly involved in MAX1-related findings."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nicotiana benthamiana is explicit, but Arabidopsis thaliana, Oryza sativa, and Saccharomyces cerevisiae are not all explicitly spelled out."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The review links MAX1 homologs to SL-LIKE 1 in Arabidopsis and to 4-deoxyorobanchol and orobanchol in rice, all strigolactones or SL-like compounds."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These products belong to the carotenoid-derived SL hormone class discussed throughout the review."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "MAX1 is explicitly described as part of SL biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "MAX1 acts downstream of carlactone in oxidative cyclization/diversification steps."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "MAX1 is clearly described as downstream of D27/CCD7/CCD8."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Carlactone is explicitly stated as a MAX1 substrate, and 4-deoxyorobanchol is the substrate for Os1400."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "SL-LIKE 1, 4-deoxyorobanchol, and orobanchol are all explicitly described as products of MAX1 homolog activity."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states Arabidopsis/rice MAX1 homologs convert carlactone to downstream SLs, with Os900 making 4-deoxyorobanchol and Os1400 converting that to orobanchol."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "MAX1 homologs directly form downstream target SL products."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "MAX1 is clearly important and determines diversification, but the paper does not explicitly characterize it as a 'key control point' or terminal determinant in a regulatory sense."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis MAX1 is described as having an ER membrane anchor suggesting cytosolic/ER localization; microsomal assays support ER-associated localization for rice homologs."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states max1 mutants accumulate carlactone and that MAX1 converts carlactone into downstream bioactive SLs tied to branching phenotypes."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutant accumulation, grafting, 13C-carlactone feeding, transient expression in N. benthamiana, and yeast microsome assays are all explicitly described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three summary points are directly supported by the MAX1 and Diversity sections, though 'strigol-like' diversification remains somewhat prospective."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The Arabidopsis MAX1 expression pattern in vascular-associated tissues, axillary regions, and root central cylinder is explicitly stated."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states MtMAX1 is induced by phosphate/nitrogen deficiency and controlled by NSP1/NSP2."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "MtMAX1 induction by phosphate and nitrogen deficiency is explicitly stated; phosphate resupply reducing upstream genes in rice is also stated though not directly MAX1."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "D27, CCD7, CCD8, Os900, and Os1400 are pathway-related enzymes/homologs, but the review does not describe them as interacting proteins of MAX1."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review does not explicitly propose engineering MAX1 for agronomic tailoring, even though the inference is reasonable."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential consequences of changing SL composition are plausible but not specifically stated as tradeoffs of MAX1 manipulation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly treats MAX1 as a biosynthetic enzyme family with distinct rice homolog activities and one nonfunctional homolog."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "D27; CCD7; CCD8; Os900; Os1400",
+          "new_value": "NA",
+          "reason": "D27, CCD7, CCD8, Os900, and Os1400 are pathway-related enzymes/homologs, but the review does not describe them as interacting proteins of MAX1."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 1,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "Os900",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states that Os900 is a carlactone oxidase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Os900 is described as one of the rice MAX1 homologs, and MAX1 belongs to the CYP711 family."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Os900 is explicitly a rice MAX1 homolog."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The excerpt uses 'rice' but does not explicitly state 'Oryza sativa'."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results are described from rice genes expressed in Nicotiana benthamiana and from yeast microsomes."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nicotiana benthamiana is explicit, but Oryza sativa and Saccharomyces cerevisiae are not explicitly spelled out in the excerpt."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Os900 is explicitly shown to produce 4-deoxyorobanchol."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "4-Deoxyorobanchol is explicitly treated as a parent strigolactone, a carotenoid-derived apocarotenoid hormone."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Os900 is discussed as part of strigolactone biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states Os900 produces the parent SL of the orobanchol-like subfamily."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Os900 acts downstream of carlactone formation to produce a parent SL."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says yeast microsomes expressing Os900 converted 11R-configured carlactone into 4-deoxyorobanchol."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "4-Deoxyorobanchol is explicitly named as the product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The review describes repeated oxygenation/ring closure conversion of carlactone by Os900 to 4-deoxyorobanchol."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Os900 directly forms the target product 4-deoxyorobanchol."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "Os900 is important for parent SL formation, but the review does not explicitly define it as rate-limiting or a 'key terminal determinant'."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct localization is not separately tested for Os900, but yeast microsomes and MAX1 ER association support microsome/ER localization."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Coexpression of Os900 caused a strong decrease in carlactone accompanied by formation of 4-deoxyorobanchol."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient coexpression in N. benthamiana and yeast microsome assays are explicitly described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings are directly supported by the text."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "OsD27, OsCCD7/D17, OsCCD8/D10, and Os1400 are pathway partners/coexpressed enzymes, but no direct protein-protein interactions are reported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible application inferred from pathway function, but not explicitly discussed in the review."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "These tradeoffs are plausible from SL biology but are not directly stated for Os900 manipulation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review clearly distinguishes Os900 as a specific rice MAX1 homolog with catalytic function, rather than generic Arabidopsis MAX1."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "OsD27; OsCCD7/D17; OsCCD8/D10; Os1400",
+          "new_value": "NA",
+          "reason": "OsD27, OsCCD7/D17, OsCCD8/D10, and Os1400 are pathway partners/coexpressed enzymes, but no direct protein-protein interactions are reported."
+        }
+      ],
+      "stats": {
+        "supported": 18,
+        "unsupported": 1,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "Os1400",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states that 'Os1400 is an orobanchol synthase'."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Os1400 is described as one of the rice MAX1 homologs; MAX1 is stated to belong to the CYP711 family."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review discusses Os1400 as a rice MAX1 homolog."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice in this review refers to Oryza sativa."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Os1400 was investigated as a rice homolog and tested by separate investigations in Nicotiana benthamiana and expression in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nicotiana benthamiana is explicitly named, but the yeast species is not specified as Saccharomyces cerevisiae in the review text."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states Os1400 converts 4-deoxyorobanchol into orobanchol."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Orobanchol is a strigolactone, and the review defines strigolactones as carotenoid-derived compounds/apocarotenoid hormones."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Os1400 is discussed in the section on diversity/biosynthesis of strigolactones."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The review places Os1400 in the orobanchol-like strigolactone branch, converting 4-deoxyorobanchol to orobanchol after parent SL formation."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents Os1400 as acting downstream of 4-deoxyorobanchol to form orobanchol, i.e. a terminal step for orobanchol formation."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated: Os1400 converts 4-deoxyorobanchol into orobanchol."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated: the product is orobanchol."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 4 states Os1400 converts 4-deoxyorobanchol to orobanchol by introducing a hydroxyl group at C-4."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Os1400 directly forms the named target metabolite orobanchol from 4-deoxyorobanchol."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "Os1400 is clearly important for the terminal conversion to orobanchol, but the review does not call it rate-limiting or explicitly a key control step."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "MAX1 proteins are described as cytochrome P450s and Arabidopsis MAX1 has an ER membrane anchor, but Os1400 localization is not directly stated; yeast microsomes are an assay system, not in planta localization evidence for Os1400 in this text."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states Os1400 converts 4-deoxyorobanchol into orobanchol and that this indicates diversification of orobanchol-like SLs after parent SL formation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says separate investigations of single homologs in N. benthamiana and expression in yeast showed the activity."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed points are directly aligned with the review's statements about Os1400 identity, reaction, and implication for SL diversification."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Os900 and Os1400 are discussed in the same pathway, but no direct protein-protein interaction is reported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible application inferred from pathway function, but the review does not explicitly discuss Os1400 as an engineering target."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review broadly discusses roles of different SLs in fungi/parasitic weeds, but does not explicitly state this tradeoff for Os1400 manipulation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 4 text states Os1400 was formerly designated ent-2'-epi-5-deoxystrigol-4-hydroxylase."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "Os900",
+          "new_value": "NA",
+          "reason": "Os900 and Os1400 are discussed in the same pathway, but no direct protein-protein interaction is reported."
+        }
+      ],
+      "stats": {
+        "supported": 18,
+        "unsupported": 1,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "MAX2",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states MAX2 acts as a recognition subunit in an SCF-type ubiquitin ligase complex."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "MAX2 is explicitly described as a leucine-rich-repeat F-box protein."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MAX2 is discussed specifically in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis in this review refers to Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review discusses MAX2 in Arabidopsis, including mutant and stress phenotypes."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the species used for MAX2 examples in the review."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "MAX2 functions in signaling response to strigolactones rather than controlling production of a terminal metabolite."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Strigolactones are indeed carotenoid-derived apocarotenoid hormones, but MAX2 is a signaling component rather than directly tied to metabolite production."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states MAX2 is required for the SL response and also discusses downstream developmental and stress responses."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states MAX2 acts in an SCF ubiquitin ligase complex and is believed to target proteins for proteasomal degradation."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "D53 is identified in rice via D3, and effects on PIN1/BRC1 are discussed downstream of SLs, but the review does not explicitly define these as direct Arabidopsis MAX2 targets."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states max2 mutants show altered induction of ABA-responsive and drought-responsive genes, supporting indirect effects on gene expression via signaling."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "MAX2 is explicitly stated to be required for the SL response, making it an essential signaling component."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states MAX2 is required for SL response and that max2 mutants are hypersensitive to drought; branching defects are the canonical MAX2 phenotype discussed in the review context."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutant phenotyping and transcriptome/stress analyses are directly mentioned; the signaling framework is also discussed."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points accurately summarize the review's discussion of MAX2 as an essential SCF-associated signaling component with broad phenotypes."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No explicit nucleus/cytoplasm localization for MAX2 is stated in the review."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "MAX2 is explicitly linked with D14/DAD2 in signaling; SCF complex context is explicit. D53-related repressors are part of the described pathway, though direct Arabidopsis MAX2-D53 evidence is not the focus."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review discusses feedback regulation of SL biosynthetic genes and signaling involvement, but does not specifically assign this mechanistically to MAX2."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Drought, salt stress, GR24, and karrikin signaling context are all explicitly discussed with MAX2."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable inference, but the review does not explicitly propose MAX2 engineering applications."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly notes MAX2 is involved in karrikin signaling and possibly other pathways, implying pleiotropy."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says MAX2 is not biosynthetic, mediates karrikin signaling, and may transduce other signals."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus/cytoplasm (SCF complex context)",
+          "new_value": "NA",
+          "reason": "No explicit nucleus/cytoplasm localization for MAX2 is stated in the review."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 1,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "D14",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "D14 is explicitly described as an α/β-fold hydrolase required for the SL response and functioning as a receptor-like perception component."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly notes D14 is an α/β-fold hydrolase and that structures contain the conserved Ser-His-Asp catalytic triad."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "D14 is presented in rice, with Arabidopsis and petunia ortholog contexts."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice here is Oryza sativa."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review discusses rice D14, Arabidopsis D14, and petunia ortholog DAD2."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "These species are named in the review, though petunia is not given as Petunia hybrida in the text; still commonly inferred from context."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "D14 perceives strigolactones but does not control their synthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Strigolactones fit this class, but D14 is a receptor rather than a metabolite-producing factor."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states D14 is required for the SL response and perception/signaling."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Binding/hydrolysis of SL analogs by D14 leading to interaction with MAX2/D3 and repressor degradation is described."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly connects D14 with MAX2/D3 pathway interaction and D53 degradation."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Although indirect, the review supports that D14 initiates signaling causing downstream developmental/transcriptional responses."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states D14 is required for SL response, i.e. determines sensitivity to SLs."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states D14/DAD2 binds and hydrolyzes SL analogs and that this underlies downstream signaling and repressor degradation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Biochemical assays, crystal structures, protein interaction data, and mutant genetics are all described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements match the review's presentation of D14 function and signaling role."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Interaction with MAX2/D3 pathway and D53 is directly described; DAD2 is an ortholog context also discussed."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "GR24 and other synthetic analogs are explicitly discussed for D14 assays."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review does not explicitly frame D14 as an engineering target."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Broader developmental effects are plausible, but the review does not state these tradeoffs for D14 engineering."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly notes that direct biochemical evidence described for D14 used synthetic SL analogs rather than natural SLs."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 17,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "D53",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states D53 likely represents a repressor of SL downstream signaling."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "D53 is discussed in rice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice here is Oryza sativa."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The D53 findings cited in the review are in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Oryza sativa is the rice species concerned."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "D53 is a signaling repressor, not a biosynthetic determinant of a terminal metabolite."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Strigolactones are the hormone class involved, but D53 does not produce them."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly places D53 downstream in SL signaling as a repressor."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states D53 is degraded through the D3-dependent proteasome pathway upon GR24 binding to D14."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "As a repressor of downstream signaling, its degradation is necessary for signaling outputs; this is directly stated or directly inferable."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The review presents D53 removal as necessary for SL response."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "A new high-tillering rice mutant d53 is explicitly described, and D53 degradation is linked to normal SL response."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutant identification and degradation through D14/D3 pathway in response to GR24 are described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points closely follow the review's discussion of D53."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "D14 and D3 are explicitly named in the D53 signaling context."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "GR24 treatment is explicitly mentioned as the trigger in the D14-D53 context."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential use in tillering manipulation is plausible, but not explicitly stated in the review."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Broad developmental effects are inferable but not explicitly detailed as tradeoffs in the review."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly describes D53 as a core signaling repressor rather than a biosynthetic regulator."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 15,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "NSP1",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "NSP1 is explicitly described as a transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The review does not state that NSP1 is a GRAS family transcription factor."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NSP1 is discussed in Medicago truncatula and rice ortholog/knockdown context."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Medicago truncatula and rice/Oryza sativa are explicitly referred to or directly inferable."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review discusses NSP1 in Medicago truncatula and rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Medicago truncatula and Oryza sativa are supported from the text/context."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "NSP1 is linked to regulation of SL biosynthetic genes, thus to strigolactone production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Strigolactones are carotenoid-derived apocarotenoid hormones in this review."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states NSP1 controls expression of MtD27 and MtMAX1 in the context of SL biosynthesis under nutrient deficiency/symbiosis."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Because NSP1 is described as a transcription factor controlling expression of biosynthetic genes, positive transcriptional regulation is directly supported."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "MtD27 and MtMAX1 are explicitly stated; rice knockdown affecting D27 expression supports OsD27 involvement."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states NSP1 controls expression of MtD27/MtMAX1 and knockdown of OsNSP1 strongly reduces D27 expression."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "By controlling core SL biosynthetic genes and affecting tiller number, NSP1 is clearly linked to SL production/function."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states MtD27 transcripts were almost undetectable in nsp1 mutants and OsNSP1 knockdown reduced D27 expression by ~90% and increased tiller number."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutant/knockdown analysis and transcript measurements are explicitly described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements match the review's explicit discussion."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The review does not state nuclear localization for NSP1."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant context is phosphate and nitrogen deficiency, explicitly stated in roots of Medicago truncatula."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible application but not explicitly discussed in the review."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly notes NSP1/NSP2 are required for rhizobial and mycorrhizal symbiosis, implying broader symbiosis effects beyond SL metabolism."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly highlights NSP1 as directly controlling core SL biosynthetic genes."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "GRAS family (inferred standard classification)",
+          "new_value": "NA",
+          "reason": "The review does not state that NSP1 is a GRAS family transcription factor."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "The review does not state nuclear localization for NSP1."
+        }
+      ],
+      "stats": {
+        "supported": 18,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "NSP2",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "NSP2 is explicitly described as a transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The review does not state that NSP2 is a GRAS family transcription factor."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NSP2 is discussed in Medicago truncatula and rice ortholog/knockdown context."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Medicago truncatula and rice/Oryza sativa are supported."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review discusses NSP2 in Medicago truncatula and rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Medicago truncatula and Oryza sativa are supported from the review."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "NSP2 is linked to expression of SL biosynthetic genes, hence to strigolactone production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Strigolactones are defined as carotenoid-derived apocarotenoid hormones in the review."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly places NSP2 in transcriptional control of SL biosynthesis under nutrient/symbiosis conditions."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "As a transcription factor controlling biosynthetic gene expression, positive transcriptional regulation is supported."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "MtD27 and MtMAX1 are explicitly stated; reduced OsD27 expression upon OsNSP2 knockdown is also described."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states MtD27 is reduced to ~20% in nsp2 mutant and OsNSP2 knockdown strongly reduces D27 expression."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "By regulating SL biosynthetic genes and affecting tillering, NSP2 is linked to SL production/function."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states MtD27 is reduced to about 20% of WT in nsp2 and OsNSP2 knockdown lowers D27 and increases tiller number."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutant/knockdown analyses and transcript measurement are explicitly reported."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points directly match the review's statements."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The review does not state nuclear localization for NSP2."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The section explicitly describes phosphate and nitrogen deficiency context."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "A plausible application, but not explicitly proposed in the review."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly notes NSP2 is required for rhizobial and mycorrhizal symbiosis, implying broader effects."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly assigns NSP2 control over core SL biosynthetic genes."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "GRAS family (inferred standard classification)",
+          "new_value": "NA",
+          "reason": "The review does not state that NSP2 is a GRAS family transcription factor."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "The review does not state nuclear localization for NSP2."
+        }
+      ],
+      "stats": {
+        "supported": 18,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 281,
+    "supported": 222,
+    "unsupported": 9,
+    "uncertain": 50,
+    "total_corrections": 9
+  }
+}

@@ -1,0 +1,843 @@
+{
+  "file": "10.1016@j.tibtech.2015.04.006",
+  "md_path": "/data/haotianwu/biojson/extractor/input/10.1016@j.tibtech.2015.04.006.md",
+  "timestamp": "2026-04-03T16:11:35.066711",
+  "genes": [
+    {
+      "gene_name": "ERG9",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states 'in the case of yeast, downregulation of the endogenous squalene synthase ERG9', so yeast is supported generally, but the exact source-species framing for ERG9 is not directly given."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast is explicitly identified elsewhere in the paper as 'Saccharomyces cerevisiae'."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ERG9 downregulation is explicitly discussed 'in the case of yeast' for terpenoid production engineering."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper names yeast as 'Saccharomyces cerevisiae'."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses ERG9 in terpenoid/diterpenoid production platforms generally, not a specific terminal metabolite called 'heterologous diterpenoids'."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "ERG9 is discussed in the context of terpenoid production, including diterpenoid engineering."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states that downregulation of yeast ERG9 has been used to increase formation of isoprenyl diphosphate intermediates in terpenoid production."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three elements are consistent with the review: ERG9 is an endogenous competing-pathway gene in yeast, its downregulation is used to increase precursor availability, and it is not described as a diterpene scaffold-forming enzyme."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention disruption of sterol metabolism or host fitness tradeoffs from ERG9 repression."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly presents ERG9 downregulation as a successful host-engineering strategy in yeast terpenoid production."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This article is clearly a review and ERG9 is mentioned as an engineering lever rather than a gene directly tested in new experiments in this paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Potential_Tradeoffs",
+          "old_value": "Possible disruption of native sterol metabolism and host fitness if excessively repressed.",
+          "new_value": "NA",
+          "reason": "The paper does not mention disruption of sterol metabolism or host fitness tradeoffs from ERG9 repression."
+        }
+      ],
+      "stats": {
+        "supported": 8,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "diTPSs",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper defines diTPS as diterpene synthase(s)."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The article consistently discusses diTPSs as plant enzymes."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact taxon name 'Viridiplantae' does not appear in the paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review discusses diTPSs broadly across plants and for plant engineering applications."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact label 'Viridiplantae' is not used in the article."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly states that diTPSs generate diverse diterpenoids/diterpene scaffolds leading to many diterpenoid metabolites."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme family is explicitly central to diterpenoid biosynthesis."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper centers on diterpenoid biosynthesis and the role of diTPSs in it."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states diTPSs convert GGPP, some act on NNPP, and class I diTPSs can use class II products such as CPP, LPP, and PPP-related intermediates."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states diTPSs form various hydrocarbon and oxygenated diterpene scaffolds."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes diTPSs as catalyzing the committed cyclization and/or rearrangement of GGPP or prenyl diphosphate intermediates into diterpene scaffolds."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The article states diTPSs facilitate the first committed reaction in diterpenoid biosynthesis."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explains that diTPSs directly form scaffolds that are then modified into final diterpenoids."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper strongly supports diTPSs as the first committed and central diversification step of diterpenoid metabolism."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review repeatedly states that diTPSs determine scaffold identity and underlie diterpenoid metabolic diversity."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points accurately summarize the central arguments of the review about diTPS modularity, committed-step function, and engineering value."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly mentions biochemical characterization, heterologous expression, phylogeny-guided discovery, and metabolite profiling as key methods."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes the TPS family and the class I, class II, and bifunctional class I/II diTPSs with alpha, beta, gamma domain architecture."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The article is indeed broadly centered on the diTPS family rather than one single gene."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly frames diTPSs as a toolkit for synthetic biology, pathway reconstruction, and diterpenoid bioengineering."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 18,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "TXS",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The glossary defines TXS as taxadiene synthase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper refers to 'Taxus-specific taxadiene synthases' and shows 'T. brevifolia taxadiene synthase' in Figure 3."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 3 explicitly names 'T. brevifolia taxadiene synthase', and the genus Taxus is discussed in text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper mentions taxadiene production in microbial and plant engineering platforms as examples using plant diTPSs."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Taxus brevifolia is supported, but the exact combined value 'Taxus brevifolia; NA' is not a paper expression and microbial/plant heterologous systems are not given with one Latin-name field."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies taxadiene as the product of TXS and as a precursor in taxol biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Taxadiene is discussed as a diterpene/diterpenoid scaffold."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The glossary states TXS forms the central intermediate in biosynthesis of taxol (paclitaxel)."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states diTPSs convert GGPP, and taxadiene synthase is cited as a class I diTPS acting directly on GGPP."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "TXS is explicitly defined as producing taxadiene."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The glossary and pathway discussion support that TXS cyclizes GGPP to taxadiene, a central intermediate in taxol biosynthesis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "As a class I diTPS producing the pathway-entry scaffold, TXS is part of the committed diterpene scaffold-forming step; this is directly inferable from the paper's general diTPS description."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes taxadiene as the central intermediate/precursor for taxol."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "TXS is clearly central pathway entry, but the paper does not specifically call TXS rate-limiting or a control step."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses taxadiene as a pharmaceutical precursor produced in engineering platforms using TXS."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements match the glossary, Figure 3, and engineering examples cited in the review."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper refers to biochemical characterization of diTPSs and pathway reconstruction/engineering platforms including taxadiene production."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes taxol/paclitaxel as an anti-cancer agent/pharmaceutical."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Taxadiene is explicitly listed among precursors of pharmaceuticals produced in engineering platforms."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Taxadiene synthase is explicitly mentioned among monofunctional class I diTPS enzymes."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 18,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "LAS",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names levopimaradiene-abietadiene synthase (LAS)."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly discusses Norway spruce LAS and other conifer LASs."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Picea abies is explicitly supported, but 'and other conifers' as part of the same Latin-name value is not a precise paper phrase."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "LAS is discussed in Norway spruce, other conifers, and as part of engineering platforms for DRAs and related compounds."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Picea abies is supported, but the exact combined value 'Picea abies; Pinaceae' is not explicitly given in this form."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links LAS-derived scaffolds to diterpene resin acids and also names levopimaradiene/abietadiene products, but this exact combined terminal-metabolite wording merges pathway products and intermediates."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "LAS products and related resin acids are diterpenoids."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The review discusses conifer oleoresin / diterpene resin acid biosynthesis and LAS function within it."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "For Norway spruce LAS the paper says it is a bifunctional class I/II diTPS, implying GGPP substrate; later it also mentions monofunctional pine diTPSs using (+)-CPP and bifunctional LAS producing (+)-CPP as an intermediate. The exact 'GGPP or (+)-CPP depending on enzyme context' phrasing is an inference across contexts."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states Norway spruce LAS forms epimers of 13-hydroxy-8(14)-abietene as initial product which dehydrate to olefin products, and names levopimaradiene-abietadiene synthase."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The review supports LAS as a conifer diTPS generating abietane/pimarane-related scaffolds including levopimaradiene/abietadiene-type products in oleoresin metabolism."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "LAS is a scaffold-forming diTPS step in diterpenoid biosynthesis; this is directly consistent with the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links LAS-generated scaffolds to downstream diterpene resin acid formation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Conifer oleoresin diterpenoids are described as defense metabolites, and LAS provides their scaffold precursors."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly consistent with the discussion of Norway spruce LAS, confirmation in other conifers, and engineering of DRA-related compounds."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper references biochemical characterization and functional confirmation of LAS enzymes and their use in engineering platforms."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Defense against pests/pathogens is explicitly stated for conifer oleoresin diterpenoids, but 'industrial feedstock for coatings and inks' is not stated in this paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly mentions engineering platforms for DRAs and suggests redirecting conifer metabolic capacity toward valuable diterpenoids."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses bifunctional class I/II LAS in conifers and also monofunctional conifer diTPS contexts, so the general statement is supported."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 14,
+        "unsupported": 0,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "TPS21",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper identifies tomato TPS21 as converting NNPP into lycosantalene, but does not explicitly call it 'lycosantalene synthase' in the text provided."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states 'tomato (Solanum lycopersicum) TPS21'."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Solanum lycopersicum is explicitly given."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TPS21 is presented as a tomato gene discovered in tomato specialized diterpenoid metabolism."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Solanum lycopersicum is explicitly given for TPS21."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states TPS21 converts NNPP into lycosantalene."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Lycosantalene is presented as a diterpene scaffold/product of a diTPS."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses this as a newly discovered diTPS function, but does not explicitly label a named 'specialized diterpenoid biosynthesis' pathway for TPS21."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states TPS21 converts the cisoid isomer of GGPP (NNPP)."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Lycosantalene is explicitly named as the product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This description closely matches the paper's wording."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "As a diTPS forming the diterpene scaffold, this is directly inferable as the committed scaffold-forming step from the paper's general framework."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "TPS21 directly forms the target diterpene scaffold lycosantalene."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper emphasizes TPS21 as the first diTPS known to use NNPP, expanding substrate space."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements accurately restate the paper's TPS21 discussion."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review frames these discoveries as resulting from gene discovery and biochemical characterization."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "TPS21 is discussed among monofunctional class I diTPSs acting directly on GGPP/NNPP."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 15,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "rhizathalene synthase",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly mentions 'the class I rhizathalene synthase in Arabidopsis'."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is explicitly named."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact species name 'Arabidopsis thaliana' does not appear in the text provided; only Arabidopsis is stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme is discussed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Only 'Arabidopsis' appears explicitly, not the full Latin binomial in the supplied text."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme name directly indicates rhizathalene and the paper presents its discovery as a diTPS function."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Rhizathalene synthase is discussed as a diterpene synthase product."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly describe a named 'belowground defense diterpenoid biosynthesis' pathway here."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states some class I diTPSs act directly on GGPP and specifically cites rhizathalene synthase as such a discovery."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Rhizathalene is directly implied by the enzyme name and context."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "Direct class I conversion from GGPP is inferable, but the added phrase 'belowground defense diterpene' is not stated in this paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "As a diTPS producing the scaffold directly from GGPP, it fits the committed scaffold-forming step described in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme directly forms its diterpene product."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state that rhizathalene is a belowground defense metabolite in the provided text."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "Points 1 and 2 are supported, but the claim that rhizathalene functions as a belowground defense metabolite is not stated in this review text."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Belowground defense is not mentioned in the supplied text."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses discovery of new diTPSs through gene discovery and biochemical characterization."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls it a class I rhizathalene synthase."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Biosynthetic_Pathway",
+          "old_value": "belowground defense diterpenoid biosynthesis",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly describe a named 'belowground defense diterpenoid biosynthesis' pathway here."
+        },
+        {
+          "field": "Core_Phenotypic_Effect",
+          "old_value": "Produces the belowground defense metabolite rhizathalene.",
+          "new_value": "NA",
+          "reason": "The paper does not state that rhizathalene is a belowground defense metabolite in the provided text."
+        },
+        {
+          "field": "Terminal_Metabolite_Function",
+          "old_value": "Belowground defense.",
+          "new_value": "NA",
+          "reason": "Belowground defense is not mentioned in the supplied text."
+        }
+      ],
+      "stats": {
+        "supported": 11,
+        "unsupported": 3,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "DXS",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The glossary defines DXS as 1-deoxy-D-xylulose 5-phosphate synthase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper refers generally to DXS as a plant MEP-pathway enzyme and specifically mentions a tomato DXS in one engineering example."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Solanum lycopersicum is supported for the tomato DXS example, but the exact taxon term 'Viridiplantae' does not appear."
+        },
+        "Applied_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper mentions coexpression of tomato DXS in Nicotiana benthamiana, but does not discuss DXS application in microbial systems."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nicotiana benthamiana is explicitly supported, but 'NA' and the broader applied-species formulation are not paper terms."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links DXS to improved diterpenoid engineering generally, but not a specific terminal metabolite called 'heterologous diterpenoids'."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "DXS is discussed in the context of diterpenoid engineering and precursor supply."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The glossary defines DXS as a key enzyme of the MEP pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The substrates pyruvate and glyceraldehyde-3-phosphate are not mentioned in the paper text provided."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The product 1-deoxy-D-xylulose-5-phosphate is not explicitly stated in the text; only the enzyme name is given."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports DXS as a key MEP-pathway enzyme improving precursor supply, but does not explicitly describe the chemical reaction with named substrates/products."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "DXS is clearly presented as an upstream precursor-supply enzyme in the MEP pathway."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links DXS to supplying precursors for GGPP and downstream diterpenoid engineering."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The glossary explicitly calls DXS a key enzyme of the MEP pathway, and overexpression of rate-limiting MEP genes is discussed."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states coexpression with tomato DXS improved diterpenoid engineering in N. benthamiana and that overexpression of MEP genes increases isoprenyl diphosphate formation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points align with the glossary, precursor-engineering discussion, and the N. benthamiana example."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes overexpression/coexpression strategies in metabolic engineering contexts."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state that DXS is a thiamine diphosphate-dependent enzyme."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses the plastidial MEP pathway, which implies plastid localization, but does not explicitly state DXS localization."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly presents DXS as a useful upstream target to improve diterpenoid engineering."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Applied_Species",
+          "old_value": "microbial systems; Nicotiana benthamiana",
+          "new_value": "NA",
+          "reason": "The paper mentions coexpression of tomato DXS in Nicotiana benthamiana, but does not discuss DXS application in microbial systems."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "pyruvate; glyceraldehyde-3-phosphate",
+          "new_value": "NA",
+          "reason": "The substrates pyruvate and glyceraldehyde-3-phosphate are not mentioned in the paper text provided."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "1-deoxy-D-xylulose-5-phosphate",
+          "new_value": "NA",
+          "reason": "The product 1-deoxy-D-xylulose-5-phosphate is not explicitly stated in the text; only the enzyme name is given."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "thiamine diphosphate-dependent enzyme",
+          "new_value": "NA",
+          "reason": "The paper does not state that DXS is a thiamine diphosphate-dependent enzyme."
+        }
+      ],
+      "stats": {
+        "supported": 11,
+        "unsupported": 4,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "GGPP synthase",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly mentions a tobacco GGPP synthase and discusses GGPP formation; geranylgeranyl diphosphate synthase is directly inferable."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "A tobacco GGPP synthase is explicitly mentioned, and plant GGPP supply is discussed generally."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says 'tobacco GGPP synthase' but does not specify Nicotiana tabacum or the taxon 'Viridiplantae' in this context."
+        },
+        "Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper explicitly supports use in Nicotiana benthamiana, but not microbial systems specifically for a named GGPP synthase gene here."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nicotiana benthamiana is supported, but the full combined value with 'Viridiplantae' and 'NA' is not explicitly present."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links improved GGPP supply to diterpenoid engineering generally, not to a specific terminal metabolite phrased as 'heterologous diterpenoids'."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "GGPP synthase is discussed as supplying the direct precursor for diterpenoid production."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states GGPP is the general precursor for diterpenoids; thus GGPP synthase belongs to GGPP precursor biosynthesis."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specify the substrates of GGPP synthase as 'isoprenyl diphosphate intermediates'."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies GGPP as the product/general precursor in diterpenoid biosynthesis."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the paper's statement that GGPP is the general precursor for diterpenoids and that a tobacco GGPP synthase was used to improve engineering."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "GGPP synthase is clearly an upstream precursor-supply step relative to diTPSs."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly frames GGPP as the direct precursor pool for diterpenoid biosynthesis."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states that enhancing GGPP formation remains challenging, indicating it as an important control point in engineering."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states coexpression with a tobacco GGPP synthase improved diterpenoid engineering in N. benthamiana."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements are consistent with the discussion of GGPP as common precursor, supply bottlenecks, and the tobacco GGPP synthase coexpression example."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports this through coexpression/metabolic engineering experiments cited in review form."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly call GGPP synthase a prenyltransferase in the provided text."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper clearly presents GGPP supply as a priority engineering target for diterpenoid production."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Substrate",
+          "old_value": "isoprenyl diphosphate intermediates",
+          "new_value": "NA",
+          "reason": "The paper does not specify the substrates of GGPP synthase as 'isoprenyl diphosphate intermediates'."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "prenyltransferase",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly call GGPP synthase a prenyltransferase in the provided text."
+        }
+      ],
+      "stats": {
+        "supported": 13,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "farnesyl diphosphate synthase",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly mentions 'farnesyl diphosphate synthase' in yeast engineering."
+        },
+        "Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses this in yeast, but does not explicitly say the enzyme itself is the yeast enzyme rather than a heterologous version."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast is identified in the paper as Saccharomyces cerevisiae."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The engineering example is explicitly in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast is named as Saccharomyces cerevisiae."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links this engineering to improved GGPP supply for diterpenoid production generally, not a specific terminal metabolite called 'heterologous diterpenoids'."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The context is diterpenoid production engineering."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses product-specificity redirection toward GGPP as precursor engineering for diterpenoid production."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly list IPP and DMAPP as substrates for farnesyl diphosphate synthase."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states product specificity was redirected toward formation of GGPP; FPP is inherent in the enzyme name though not directly discussed as the native product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states that product specificity of farnesyl diphosphate synthase was redirected toward GGPP formation to improve GGPP supply in yeast."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is clearly discussed as an upstream precursor-supply engineering strategy."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme engineering is explicitly linked to improving precursor pool (GGPP) for diterpenoid production."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states that redirecting product specificity improved GGPP supply in yeast."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three points closely follow the exact engineering example described in the paper."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes this as an engineering strategy involving redirected product specificity in yeast, i.e. protein/metabolic engineering."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly label farnesyl diphosphate synthase as a prenyltransferase."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Substrate",
+          "old_value": "IPP; DMAPP",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly list IPP and DMAPP as substrates for farnesyl diphosphate synthase."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "prenyltransferase",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly label farnesyl diphosphate synthase as a prenyltransferase."
+        }
+      ],
+      "stats": {
+        "supported": 13,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 161,
+    "supported": 121,
+    "unsupported": 12,
+    "uncertain": 28,
+    "total_corrections": 12
+  }
+}

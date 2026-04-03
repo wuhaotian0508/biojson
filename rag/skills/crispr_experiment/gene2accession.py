@@ -42,8 +42,13 @@ def run_gene2accession(genes: list[dict], work_dir: Path) -> Path:
     # ---- 动态导入 分析流程 中的核心查找函数 ----
     import importlib.util
     _PIPELINE_SCRIPTS_DIR = Path(__file__).parent.parent.parent / "分析流程"
+    script_path = _PIPELINE_SCRIPTS_DIR / "gene2accession.py.py"
+    if not script_path.exists():
+        raise FileNotFoundError(
+            f"SOP 依赖脚本缺失: {script_path}. 当前仓库中未找到旧版分析流程目录。"
+        )
     spec = importlib.util.spec_from_file_location(
-        "gene2accession_py", _PIPELINE_SCRIPTS_DIR / "gene2accession.py.py"
+        "gene2accession_py", script_path
     )
     if spec is None or spec.loader is None:
         raise ImportError("无法加载 gene2accession.py.py 脚本")

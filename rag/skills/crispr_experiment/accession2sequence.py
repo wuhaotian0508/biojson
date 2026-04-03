@@ -10,6 +10,7 @@ Step 2: Accession → FASTA 序列
 from __future__ import annotations
 
 import logging
+import os
 import time
 from pathlib import Path
 
@@ -21,6 +22,54 @@ logger = logging.getLogger(__name__)
 _ENTREZ_EFETCH_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
 # ---- 请求标识 ----
 _ENTREZ_EMAIL = "biojson_rag@example.com"
+_MAX_RETRIES = 3
+
+
+def _has_env_proxy() -> bool:
+    return any(
+        os.getenv(name)
+        for name in ("http_proxy", "https_proxy", "HTTP_PROXY", "HTTPS_PROXY", "all_proxy", "ALL_PROXY")
+    )
+
+
+def _build_session(use_env_proxy: bool) -> requests.Session:
+    session = requests.Session()
+    session.trust_env = use_env_proxy
+    session.headers.update({
+        "User-Agent": "biojson_rag/1.0",
+        "Accept-Encoding": "identity",
+        "Connection": "close",
+    })
+    return session
+
+
+def _fetch_fasta_text(acc: str, params: dict) -> str:
+    last_error = None
+    proxy_modes = [True, False] if _has_env_proxy() else [True]
+
+    for use_env_proxy in proxy_modes:
+        mode_name = "env-proxy" if use_env_proxy else "direct"
+        session = _build_session(use_env_proxy)
+        try:
+            for attempt in range(1, _MAX_RETRIES + 1):
+                try:
+                    r = session.get(_ENTREZ_EFETCH_URL, params=params, timeout=(10, 30))
+                    r.raise_for_status()
+                    return r.text.strip()
+                except requests.exceptions.RequestException as exc:
+                    last_error = exc
+                    logger.warning(
+                        "accession %s 下载失败 (%s attempt %d/%d): %s",
+                        acc, mode_name, attempt, _MAX_RETRIES, exc,
+                    )
+                    if attempt < _MAX_RETRIES:
+                        time.sleep(attempt)
+        finally:
+            session.close()
+
+    if last_error is not None:
+        raise last_error
+    raise ValueError(f"未能下载 accession {acc} 的序列")
 
 
 def run_accession2sequence(accession_file: Path, work_dir: Path) -> Path:
@@ -66,9 +115,11 @@ def run_accession2sequence(accession_file: Path, work_dir: Path) -> Path:
                 "email": _ENTREZ_EMAIL,   # NCBI 要求的邮箱标识
                 "tool": "biojson_rag",    # 工具标识
             }
-            r = requests.get(_ENTREZ_EFETCH_URL, params=params, timeout=30)
-            r.raise_for_status()
-            text = r.text.strip()
+            try:
+                text = _fetch_fasta_text(acc, params)
+            except requests.exceptions.RequestException as exc:
+                logger.warning("accession %s 下载异常，跳过: %s", acc, exc)
+                continue
 
             # 验证返回的确实是 FASTA 格式（以 > 开头）
             if not text.startswith(">"):

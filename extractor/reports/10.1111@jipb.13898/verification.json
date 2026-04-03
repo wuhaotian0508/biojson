@@ -1,0 +1,905 @@
+{
+  "file": "10.1111@jipb.13898",
+  "md_path": "/data/haotianwu/biojson/extractor/input/10.1111@jipb.13898.md",
+  "timestamp": "2026-04-03T16:51:23.871582",
+  "genes": [
+    {
+      "gene_name": "miR2111",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly discusses miR2111 in soybean and cites soybean work (Zhang et al., 2021)."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper is about soybean, Glycine max."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review discusses miR2111 function in soybean."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Soybean is Glycine max in the paper title and text."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links miR2111 to nodulation and thus nitrogen fixation capacity, but does not frame this as a specific terminal metabolite value; this is an inferred nutrient outcome rather than explicit metabolite measurement."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Nitrogen/nitrate is discussed as a mineral nutrient context for nodulation regulation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states miR2111 is transported from shoot to root, targets TML transcripts, and increasing miR2111 increases nodule number."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly mentions petiole feeding of synthetic mature miR2111 RNA, overexpression, target mimicry, and resulting nodulation effects."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly summarized in the section on shoot-derived signal in soybean."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says miR2111 is a shoot-derived signal and that GmNARK suppresses its expression; the claim of constitutive synthesis in shoot appears in the abstract generally, while 'upregulated under low nitrate conditions' is stated for legumes with specific reference to M. truncatula, not explicitly soybean."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper says miR2111 targets transcripts of TML; it does not describe a protein-protein interaction with 'GmTML' as an interacting protein."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Rhizobial inoculation/rhizobia-induced CLE perception and low nitrate are both discussed as affecting miR2111."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states ectopic miR2111 expression enhanced lateral root emergence while decreasing lateral root length and average root diameter, alongside promoting nodulation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The conclusion explicitly states miR2111 is not the SDI researchers had been looking for."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible inference from the review, but the paper does not directly propose miR2111 engineering in these exact terms or caution wording."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "GmTML (target transcript)",
+          "new_value": "NA",
+          "reason": "The paper says miR2111 targets transcripts of TML; it does not describe a protein-protein interaction with 'GmTML' as an interacting protein."
+        }
+      ],
+      "stats": {
+        "supported": 11,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "GmTML",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses TML in the soybean AON pathway and refers to GmTML in Figure 2."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Soybean is Glycine max in the paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GmTML is discussed in soybean."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is soybean/Glycine max."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links GmTML to nodulation and fixed-nitrogen acquisition indirectly, but no terminal nutrient metabolite is directly measured for GmTML."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The trait is in the context of nitrogen as a mineral nutrient."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract explicitly describes TML as a Kelch repeat-containing F-box protein."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states TML is a negative regulator of nodulation in roots and that TML accumulation inhibits nodule organogenesis."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper mentions target mimicry and miR2111 functional studies with nodulation effects in soybean."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points are directly described in the shoot-derived signal section and conclusion."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract and main text describe TML as root-expressed / acting in roots."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Rhizobia-induced CLE signaling and AON activation leading to miR2111 suppression/TML accumulation are described."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The conclusion explicitly says TML mutants exhibit a weaker phenotype than GmNARK mutants, implying additional pathways."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This restates the conclusion that TML is central but weaker than GmNARK, suggesting additional pathways."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not directly state this breeding recommendation; it is an inference from the described weaker phenotype."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 13,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "GmRIC1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies GmRIC1 in soybean."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Soybean is Glycine max in the paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GmRIC1 is discussed for soybean."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is soybean/Glycine max."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links GmRIC1 to nodulation and nitrogen fixation indirectly, not to a directly measured terminal metabolite."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The trait context is nitrogen as a mineral nutrient via nodulation."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GmRIC1 is explicitly presented as part of AON root-to-shoot CLE peptide signaling."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies GmRIC1 as a rhizobia-induced CLE peptide."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "GmRIC1 encodes/represents the CLE peptide production step in the signaling pathway."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says GmRIC1 regulates nodulation systemically via GmNARK, but 'required for' is too strong because necessity is not demonstrated in this review text."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "GmRIC1 is a CLE peptide gene, not described as an enzyme in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly groups GmRIC1 among CLE peptides."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "It is described as a rhizobia-induced CLE peptide/root-to-shoot signal candidate."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states rhizobia-induced CLE peptides GmRIC1 and GmRIC2 regulate nodulation systemically via GmNARK."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper cites prior studies showing these peptides regulate nodulation systemically, but does not in this text explicitly detail overexpression experiments specifically for GmRIC1."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements are directly supported by the review text, with the root-to-shoot role described as likely/strong candidate."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says these CLE genes are produced in roots in response to rhizobia."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Rhizobial induction is explicit."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper discusses regulated organ/root system and nodules, but not 'terminal metabolite accumulation site' for GmRIC1."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says transport/binding evidence is from LjCLE-RS2 and that for soybean one can speculate similarly for GmRIC1/GmRIC2."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This application is plausible but not directly proposed in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Enzyme_Name",
+          "old_value": "CLE signaling peptide precursor",
+          "new_value": "NA",
+          "reason": "GmRIC1 is a CLE peptide gene, not described as an enzyme in the paper."
+        },
+        {
+          "field": "Terminal_Metabolite_Accumulation_Site",
+          "old_value": "Root nodules / root system as the regulated organ",
+          "new_value": "NA",
+          "reason": "The paper discusses regulated organ/root system and nodules, but not 'terminal metabolite accumulation site' for GmRIC1."
+        }
+      ],
+      "stats": {
+        "supported": 15,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "GmRIC2",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies GmRIC2 in soybean."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Soybean is Glycine max."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GmRIC2 is discussed for soybean."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Glycine max."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "Only indirect connection to nitrogen acquisition via nodulation is provided."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Nitrogen context is explicit in the nodulation discussion."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GmRIC2 is described in AON root-to-shoot CLE signaling."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls GmRIC2 a rhizobia-induced CLE peptide."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It functions at the signaling peptide production step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review supports contribution to systemic inhibition, but not strict necessity/'required for' wording."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "GmRIC2 is not described as an enzyme; it is a CLE peptide gene."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CLE peptide family membership is explicit."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "It is a rhizobia-induced CLE peptide signal."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says GmRIC1 and GmRIC2 regulate nodulation systemically via GmNARK."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "Dependency and systemic function are cited, but the exact methods listed are not all explicitly described in this review text for GmRIC2."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points match the review's description."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Produced in roots in response to rhizobia according to the paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Rhizobial inoculation/response is explicit."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No terminal metabolite accumulation site is given."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed groups GmRIC1/2 as GmNARK-dependent root-to-shoot signals and notes direct soybean binding evidence is speculative."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is not directly stated in the review."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Enzyme_Name",
+          "old_value": "CLE signaling peptide precursor",
+          "new_value": "NA",
+          "reason": "GmRIC2 is not described as an enzyme; it is a CLE peptide gene."
+        },
+        {
+          "field": "Terminal_Metabolite_Accumulation_Site",
+          "old_value": "Root nodules / root system as the regulated organ",
+          "new_value": "NA",
+          "reason": "No terminal metabolite accumulation site is given."
+        }
+      ],
+      "stats": {
+        "supported": 15,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "GmNIC1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies GmNIC1 in soybean."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Soybean is Glycine max."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GmNIC1 is discussed in soybean."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Glycine max."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "Only indirect link to nitrogen acquisition via nodulation is made."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Nitrogen/nitrate is the mineral nutrient context."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes GmNIC1 in nitrate-mediated nodulation inhibition via CLE signaling."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GmNIC1 is explicitly called a nitrate-induced CLE peptide gene."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It functions as the signaling peptide production component."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports local inhibition role, but 'required for' is stronger than the review explicitly states."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "GmNIC1 is not described as an enzyme but as a CLE peptide gene."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly a CLE peptide gene."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes it as a nitrate-induced CLE peptide signal."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The text says GmNIC1 is involved in nitrate-mediated nodulation inhibition through GmNARK in the root and overexpression suppresses nodulation locally."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states overexpression of GmNIC1 suppresses nodulation in transgenic roots but not nontransgenic roots in the same plant."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three summary points are directly reflected in the text."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is explicitly nitrate-induced/high nitrate responsive."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "High nitrate is explicit."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No terminal metabolite accumulation site is reported."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly discusses GmNIC1, while Figure 2 mentions GmNIC1/2."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This breeding implication is plausible but not directly stated in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Enzyme_Name",
+          "old_value": "CLE signaling peptide precursor",
+          "new_value": "NA",
+          "reason": "GmNIC1 is not described as an enzyme but as a CLE peptide gene."
+        },
+        {
+          "field": "Terminal_Metabolite_Accumulation_Site",
+          "old_value": "Root nodules / root system as the regulated organ",
+          "new_value": "NA",
+          "reason": "No terminal metabolite accumulation site is reported."
+        }
+      ],
+      "stats": {
+        "supported": 16,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "GmNARK",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GmNARK is the central soybean gene discussed throughout the paper."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Soybean is Glycine max."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper focuses on soybean GmNARK."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Glycine max."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "GmNARK is linked to nodulation and fixed nitrogen acquisition indirectly, not to a directly measured terminal metabolite."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Nitrogen is the mineral nutrient context of the paper."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states GmNARK encodes a leucine-rich repeat receptor kinase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly described as CLV1-like / homologous to Arabidopsis CLV1 and an LRR receptor kinase."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "As a receptor kinase it is inferably membrane-localized, but 'plasma membrane' is not explicitly stated in this review."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly assigns GmNARK roles in systemic AON and nitrate-mediated nodulation inhibition."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The review repeatedly identifies GmNARK as the critical shoot regulator/receptor controlling systemic suppression of nodulation."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "miR2111 suppression, TML accumulation, GmRR11d dependence, and perception of GmRIC1/2 and GmNIC1 are supported broadly, but packaging all as direct primary targets overstates mechanistic certainty."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states perception of CLE peptides by GmNARK suppresses miR2111 expression, allowing TML accumulation and inhibition of nodulation."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "AON is explicitly described as a root-shoot-root autoregulatory feedback loop."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract explicitly mentions negative regulation by phosphorylation via the activated receptor complex."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss-of-function supernodulation, partial nitrate tolerance of nodulation, and altered lateral root development are all described."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly mentions mutant analysis, reciprocal grafting, positional/map-based cloning, allele sequencing, and phenotyping."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points are all directly supported by the paper."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GmNARK functions in shoots for AON and in roots for nitrate-mediated local inhibition."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports perception of GmRIC1/2 and GmNIC1 signals and mentions co-receptors generally, but does not demonstrate direct physical interaction for each listed partner in soybean."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Rhizobial inoculation and nitrate are central signals discussed for GmNARK action."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states AON mutants grow slower, have altered root architecture, excessive nodulation, and broader pleiotropic effects; strong developmental effects are also discussed in the duplicated CLV1 context."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly discusses GmCLV1A as a duplicated homolog with architectural roles and says the transcription factor linking GmNARK to miR2111 remains unknown."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper mentions genetic modifications to enhance the AON pathway may increase yield, but does not specifically recommend partial GmNARK alleles or this exact engineering strategy."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 19,
+        "unsupported": 0,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "GmRR11d",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GmRR11d is explicitly discussed in soybean."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Soybean is Glycine max."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is discussed for soybean."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Glycine max."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "Only indirect linkage to nitrogen acquisition through nodulation is provided."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The nodulation trait is framed in nitrogen nutrient context."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls GmRR11d a B-type response regulator."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly described as positively regulating cytokinin response, i.e. a cytokinin response regulator."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No nuclear localization is stated in the review."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says GmRR11d mediates systemic inhibition of nodulation and cytokinin response activation."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The text says GmRR11d governs a transcriptional program associated with nodulation attenuation and cytokinin response activation."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says GmRR11d can suppress the transcriptional activity of GmNSP1 on GmNIN1a; Figure 2 also mentions direct repression of GmNIN as a possibility."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Suppression of GmNSP1 activity on GmNIN1a to inhibit nodulation is explicitly stated."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes suppression of transcriptional activity, consistent with transcriptional repression/attenuation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states GmRR11d positively regulates cytokinin response in root and mediates inhibition of soybean nodulation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly attributes these findings to Chen et al. (2022), including mechanistic suppression and nodulation function; while methods are summarized rather than detailed, functional analysis and transcriptional assays are supported."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three summary points are directly drawn from the text."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says rhizobial induction of GmRR11d and its function are dependent on GmNARK, and Figure 2 places its expression in root."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GmRR11d induction/function are GmNARK-dependent and that it responds to local cytokinins."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Rhizobial induction and cytokinin response are explicitly discussed."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says whether shoot-derived cytokinins or some other signals activate GmRR11d remains unknown."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This application is reasonable but not directly stated in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No nuclear localization is stated in the review."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "NNC1",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NNC1 is discussed in soybean context and expanded as Nodule Number Control 1."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Soybean is Glycine max."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NNC1 is discussed for soybean."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Glycine max."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "Only indirect link to nitrogen acquisition via nodulation is made."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The context is nitrogen nutrient acquisition through nodulation."
+        },
+        "Regulator_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "NNC1 is treated functionally as a regulator in the figure/text, but the review excerpt does not explicitly call it a transcription factor."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states NNC1 suppresses expression of nodulation-related genes including CLE genes, thus regulating nodulation signaling."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states NNC1 suppresses GmRIC1/2 and GmENOD40, restraining nodulation/AON signaling."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2 explicitly lists GmRIC1/2 and GmENOD40 as inhibited by NNC1."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2 explicitly says NNC1 directly inhibits GmRIC1/2 expression and suppresses GmENOD40; it also interacts with GmNIN to inhibit activation of GmRIC1/2."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The described mode is transcriptional inhibition/repression in Figure 2."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes NNC1 as suppressing nodulation gene expression and attenuating nodulation signaling."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper cites genetic/transcriptional studies generally, but does not specify the validation methods for NNC1 in this review text."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These findings are directly summarized in Figure 2 and surrounding text."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2 states miR172c inhibits expression of its target gene NNC1, so NNC1 is regulated by miR172c."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2 explicitly states NNC1 interacts with GmNIN."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2 identifies miR172c as upstream of NNC1."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review indeed highlights NNC1 in the AON summary figure as relevant to CLE signal production."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This engineering implication is not directly stated in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Core_Validation_Method",
+          "old_value": "Genetic and transcriptional studies cited in review",
+          "new_value": "NA",
+          "reason": "The paper cites genetic/transcriptional studies generally, but does not specify the validation methods for NNC1 in this review text."
+        }
+      ],
+      "stats": {
+        "supported": 16,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "GmSPL9d",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly discusses GmSPL9d in soybean."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Soybean is Glycine max."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GmSPL9d is discussed for soybean."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Glycine max."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "Only indirect connection to nitrogen acquisition via nodulation is made."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The nodulation trait is in nitrogen nutrient context."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes GmSPL9d as a positive regulator of soybean nodulation, functioning via promoter binding; this supports regulator status."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly expands GmSPL9d as SQUAMOSA promoter-binding protein-like 9d."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No nuclear localization is stated in the paper."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says the miR156b-GmSPL9d module regulates symbiotic nodulation by targeting key regulatory genes in nodulation signaling."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly calls GmSPL9d a positive regulator of soybean nodulation."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states GmSPL9d binds promoters of GmNINa, miR172c, and GmENOD40-1."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "It states GmSPL9d regulates expression of those genes, in context as a positive regulator of nodulation."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Promoter binding and regulation of expression support transcriptional activation mode here."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states GmSPL9d promotes symbiotic nodulation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review summarizes target-binding/promoter regulation and nodulation phenotyping from Yun et al. (2022), but does not explicitly detail the methods."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three points are directly supported by the text."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says miR156b mainly targets GmSPL9d and that miR156b is down-regulated by rhizobia."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Rhizobia are explicitly mentioned as down-regulating miR156b in this module."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This application is not directly proposed in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No nuclear localization is stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 16,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 179,
+    "supported": 140,
+    "unsupported": 10,
+    "uncertain": 29,
+    "total_corrections": 10
+  }
+}

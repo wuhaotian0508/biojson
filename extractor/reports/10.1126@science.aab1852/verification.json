@@ -1,0 +1,434 @@
+{
+  "file": "10.1126@science.aab1852",
+  "md_path": "/data/haotianwu/biojson/extractor/input/10.1126@science.aab1852.md",
+  "timestamp": "2026-04-03T16:56:52.299112",
+  "genes": [
+    {
+      "gene_name": "STORR",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper identifies STORR as a P450-oxidoreductase fusion responsible for epimerization of (S)- to (R)-reticuline."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Study is in opium poppy."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly names Papaver somniferum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutants were from high-morphine cultivar HM2."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional genetics and metabolite phenotypes were analyzed in opium poppy."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Papaver somniferum in the paper."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "HM2 wild type and mutant lines were used."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper links STORR-mediated (R)-reticuline formation to downstream morphinan alkaloids including morphine, codeine, and thebaine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Morphinans are described as benzylisoquinoline alkaloids and morphinan alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Morphine/codeine are described as analgesics and thebaine as feedstock for semisynthetic opiates."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Results report dried capsule alkaloid contents and capsule reticuline content."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly discusses the morphinan branch of benzylisoquinoline alkaloid metabolism."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "STORR is presented as the gateway epimerization from (S)- to (R)-reticuline in morphinan biosynthesis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states the missing 'gateway step' is the epimerization to (R)-reticuline."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states (R)-reticuline is required for morphinan biosynthesis and STORR catalyzes its formation."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "STORR fusion performs sequential conversion using (S)-reticuline and 1,2-dehydroreticuline as substrates of its two modules."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Products of the two sequential reactions are 1,2-dehydroreticuline and (R)-reticuline."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly stated in abstract/results and demonstrated by heterologous expression assays."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is clearly a key/gateway step required for morphinan production, but 'control step' is not explicitly established and rate-limiting was not tested."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states STORR contains a cytochrome P450 module and an aldo-keto reductase family oxidoreductase module."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Microsomal and soluble fractions were used for heterologous assays, but the paper does not explicitly assign an in vivo subcellular localization beyond fusion protein detection in gel fractions."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "EMS mutagenesis identified alleles and Saccharomyces cerevisiae heterologous expression was used for assays."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Identified from stem and capsule EST resources; cDNA clones from stems; protein detected in stem extracts."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Stem/capsule transcript resource and stem protein detection are described for HM2/opium poppy."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "An opium poppy cytochrome P450 reductase redox partner was coexpressed with CYP82Y2 for activity assays."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper used EST/transcript sequencing and quantitative proteomics by mass spectrometry."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutants lose morphinan alkaloids and accumulate (S)-reticuline; STORR is required for conversion to (R)-reticuline."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed points are reported in the results or supported discussion, including fusion architecture, two-step catalysis, mutant phenotypes, proteomics, and substrate channeling/evolution hypothesis."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods appear in the results: mutant alleles, F2 segregation/complementation, yeast expression, enzyme assays, chiral HPLC-MS, proteomics."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutants lacking STORR accumulate (S)-reticuline, laudanine, and laudanosine instead of morphinans."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states STORR may enable microbial-based morphinan production and fills the previously missing enzymatic step."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "All statements are present: naming of STORR, direct microsomal conversion with no detectable intermediate accumulation, and related transcript arrangements in P. bracteatum and P. setigerum but not P. rhoeas."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 30,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "CYP82Y2",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state CYP82Y2 module catalyzed conversion of (S)-reticuline to 1,2-dehydroreticuline and 'acts as a 1,2-dehydroreticuline synthase'."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Gene was identified in opium poppy."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly studies Papaver somniferum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutant and wild-type cultivar HM2 were used for genetics."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Phenotypes linked to the gene module were analyzed in opium poppy HM2 mutants."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Papaver somniferum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "HM2 background is explicit."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper links CYP82Y2-mediated first step to (R)-reticuline formation and downstream morphinan biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "(R)-reticuline is a benzylisoquinoline alkaloid intermediate; alkaloid classification is consistent with paper context."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states morphine, codeine, and thebaine derive from this branch; CYP82Y2 provides precursor for these compounds."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutant metabolite analyses are reported in dried capsules/capsule content."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82Y2 functions in the morphinan branch of BIA biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is directly assigned to the epimerization subpathway."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states CYP82Y2 module is responsible for the first epimerization step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82Y2 forms the immediate intermediate needed for oxidoreductase-mediated (R)-reticuline production."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly assayed with (S)-reticuline."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly shown as 1,2-dehydroreticuline."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly states oxidation of (S)-reticuline to 1,2-dehydroreticuline."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is part of the gateway step, but the paper does not establish CYP82Y2 alone as rate-limiting or a separate control point."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper designates the P450 module as CYP82Y2."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82Y2 activity was observed in microsomal preparations, consistent with how the module was assayed."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Heterologous expression in S. cerevisiae with CPR is explicitly described."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Identified from stem cDNA and stem/capsule EST library."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Transcript evidence comes from stem and capsule resources."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Assayed with an opium poppy CPR redox partner and exists as fused with oxidoreductase in STORR."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by EST/transcript sequencing; proteomics covered full-length STORR rather than isolated CYP82Y2 but relation is valid as module-level evidence."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "storr-2 and storr-3 lesions in CYP82Y2 prevent 1,2-dehydroreticuline accumulation and morphinan production while causing (S)-reticuline accumulation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed claims are stated in results: module identity, mutant phenotypes, 97% conversion, and upstream role."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods listed match reported experiments."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of CYP82Y2 blocks branch entry and causes (S)-reticuline accumulation."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper's microbial production framing supports engineering importance, though this is an inference from results and abstract."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly states oxidoreductase is not acting as the P450 redox partner but catalyzes the second reaction."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 31,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "STORR oxidoreductase module",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show the oxidoreductase module converts 1,2-dehydroreticuline to (R)-reticuline."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Module is from opium poppy STORR."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper studies Papaver somniferum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "HM2 cultivar used."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutant phenotypes were characterized in opium poppy."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Papaver somniferum is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "HM2 is explicit."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Module directly forms (R)-reticuline, which leads to morphinan alkaloids."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Reticuline is in BIA metabolism; class description aligns with paper context."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper links (R)-reticuline to morphine/codeine/thebaine biosynthesis."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Relevant mutant metabolite analyses were in capsules."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Module functions in morphinan branch of BIA biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is the second half of the epimerization subpathway."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states oxidoreductase catalyzes the second epimerization step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "It directly forms (R)-reticuline, the gateway intermediate."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly assayed with 1,2-dehydroreticuline."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly shown to produce (R)-reticuline."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Reduction of 1,2-dehydroreticuline to (R)-reticuline is directly stated."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is part of the gateway step, but the paper does not establish this module alone as rate-limiting/control."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper says oxidoreductase belongs to aldo-keto reductase family; discussion mentions subfamily 4 and close homology to codeinone reductase family."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Separate oxidoreductase activity was assayed in crude soluble extracts; in vivo it is part of the fusion protein."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Assayed after expression in Saccharomyces cerevisiae."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Identified from stem cDNA and stem/capsule EST resource as part of STORR."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Stem/capsule transcript evidence for STORR supports this module."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Module is fused to CYP82Y2 in STORR."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Transcript sequencing and proteomics of the full-length STORR support the module's existence within the fusion protein."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "storr-1 in oxidoreductase module leads to low but significant 1,2-dehydroreticuline accumulation and loss of morphinans, supporting loss of second-step activity."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point is directly supported: AKR family identity, storr-1 phenotype, 100% in vitro conversion, and non-redox-partner role."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutant analysis, yeast expression, soluble assay, and chiral HPLC-MS are all reported."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of this activity blocks (R)-reticuline formation and morphinan production, with accumulation of upstream intermediate(s)."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper frames STORR as enabling microbial morphinan production; module necessity for clean (R)-reticuline production is a direct inference from results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly says it was considered as possible redox partner but shown instead to catalyze the second step."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 31,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 96,
+    "supported": 92,
+    "unsupported": 0,
+    "uncertain": 4,
+    "total_corrections": 0
+  }
+}

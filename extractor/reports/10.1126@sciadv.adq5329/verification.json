@@ -1,0 +1,157 @@
+{
+  "file": "10.1126@sciadv.adq5329",
+  "md_path": "/data/haotianwu/biojson/extractor/input/10.1126@sciadv.adq5329.md",
+  "timestamp": "2026-04-03T16:55:42.468987",
+  "genes": [
+    {
+      "gene_name": "Bcthi4",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state 'B. cinerea B05.10 Bcthi4 gene sequence (Gene ID: 5430120) from GenBank.'"
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Bcthi4 is studied in Botrytis cinerea throughout the paper."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The organism is explicitly Botrytis cinerea."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in B. cinerea strains."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied organism is explicitly Botrytis cinerea."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Results repeatedly use B. cinerea Pers. and B. cinerea B05.10."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Title and Results identify Bcthi4 as thiamine thiazole synthase / thiazole synthase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "Thiazole synthase is supported, and the text calls it a 'typical suicide enzyme,' but 'THI4 family' is not explicitly stated in the paper text provided."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Bcthi4 is repeatedly described as part of the thiamine biosynthesis pathway; TPP is discussed as the active form."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state Bcthi4 is responsible for synthesizing the thiazole component, i.e., the thiazole branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls Bcthi4 'the key enzyme in the thiamine biosynthesis pathway' and a thiazole synthase."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state Bcthi4 is responsible for synthesizing the thiazole component of thiamine."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The thiazole component is supported, but 'HET-P-related thiazole intermediate' is only inferable from Fig. 4L notation and not explicitly assigned as Bcthi4's product."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states thiazole and pyrimidine components are coupled to form thiamine, so Bcthi4 supplies a required precursor for thiamine/TPP formation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Thiamine and thiamine pyrophosphate (TPP) were directly measured and discussed as pathway outputs."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Thiamine is described as a vitamin/coenzyme and TPP as its active cofactor form."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly say TPP is essential for glycolysis, TCA cycle, pentose phosphate pathway, branched-chain amino acid metabolism, and related metabolism."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 4 text states thiamine and TPP content were measured in B. cinerea Pers. and B05.10 mycelial cells."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The Discussion mentions thiamine deficiency 'in the cytoplasm,' but Bcthi4 localization itself is not directly demonstrated or explicitly assigned as cytoplasmic."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RT-qPCR showed Bcthi4 up-regulation in Pers. and B05.10 under Z24 stress, and RNA-seq/AS analysis identified up-regulated A5SS events for Bcthi4."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support that Z24 inhibits Bcthi4 activity, disrupts thiamine biosynthesis, and suppresses B. cinerea growth; Bcthi4 expression increases under Z24 stress."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are reported in Results/Methods: DARTS, mass spectrometry, SPR, CETSA, docking, mutant validation of Met304/Thr232/Thr231, enzyme assay, RT-qPCR, RNA-seq/AS, thiamine/TPP assays, and thiamine rescue."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each numbered claim matches the Results: target identification, direct binding and mutant loss, enzyme inhibition, transcription/A5SS up-regulation, and partial rescue by exogenous thiamine."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These treatments/environments are all described: Z24, exogenous thiamine, PDA/liquid PDA, and infection assays on tomato, cucumber, and grape."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper calls Bcthi4 a key enzyme and attractive target, but does not explicitly prove it is rate-limiting."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Z24 is a small-molecule compound, not a protein; the field value is biologically mismatched."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "The conclusion that Z24 is the first fungal Bcthi4 catalytic inhibitor is stated by authors, and A5SS up-regulation is supported. However, the mechanistic interpretation that increased thiamine/TPP reflects 'limited thiamine synthesis' rather than pathway flux is largely interpretive and partly from Discussion."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Discussion support use of Bcthi4 as a fungicide target and screening Bcthi4 inhibitors for crop protection; no breeding angle is claimed, but the stated fungicide-target value is supported."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 8J-K shows no major effect on seed germination but delayed radish bud/tube growth at higher Z24 concentrations."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper includes RNA-seq with AS analysis, metabolomics by UPLC-Q Exactive MS, and proteomics/mass spectrometry from DARTS bands."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "B05.10 is explicitly named as the standard B. cinerea strain and used throughout the study."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "Z24",
+          "new_value": "NA",
+          "reason": "Z24 is a small-molecule compound, not a protein; the field value is biologically mismatched."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 1,
+        "uncertain": 5
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 31,
+    "supported": 25,
+    "unsupported": 1,
+    "uncertain": 5,
+    "total_corrections": 1
+  }
+}

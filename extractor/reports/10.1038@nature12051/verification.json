@@ -1,0 +1,1443 @@
+{
+  "file": "10.1038@nature12051",
+  "md_path": "/data/haotianwu/biojson/extractor/input/10.1038@nature12051.md",
+  "timestamp": "2026-04-03T16:31:36.284074",
+  "genes": [
+    {
+      "gene_name": "ERG9",
+      "category": "Common",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: the paper states MET3 promoter was replaced with copper-regulated CTR3 promoter for ERG9 repression; older strains used MET3-ERG9. It also states GAL-regulated promoters were used broadly for heterologous genes and GAL80 deletion enabled constitutive GAL-regulated expression."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: all engineering was done in baker’s yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: the organism is explicitly Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported in substance: strains are engineered yeast derived from Y337/CEN.PK background, and the listed strains are discussed. 'CEN.PK2-1C/Y337 lineage' is a fair summary, though not phrased exactly this way."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: ERG9 is described as a competing reaction consuming FPP for squalene; repressing it is used to redirect flux. The text supports tunable repression and preserving viability, though wording like 'best deployed together...' is an inference consistent with the paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: ERG9 encodes squalene synthase competing for FPP, and CTR3 replacement maintained similar amorphadiene production to MET3 design."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: promoter replacement and strain comparison with sesquiterpene measurements in flask/fermentation are described."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: CuSO4 represses CTR3-driven ERG9; methionine represses MET3-driven ERG9; glucose/ethanol mixed-feed and early induction/repression conditions are described."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement: no epigenetic regulation is reported."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: engineered ERG9 expression under a copper-repressible promoter during fermentation is described."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported in minimal form: ERG9 is a native yeast sterol gene, and no native expression pattern is reported."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement: no accession for ERG9 is provided."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Unsupported: the paper does not describe direct protein interactions of ERG9 with tHMG1 or ADS; these are pathway relationships, not reported physical/protein interactions."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement: no omics dataset is reported for ERG9."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: ERG9 is explicitly identified as squalene synthase and CTR3 is said to be equivalent to MET3 while using cheaper CuSO4 repression."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Supported/uncertain mix: need to preserve viability is implicit because ERG9 is repressed rather than deleted, but the paper does not directly test 'too much ERG9 repression' tradeoff here. Overall claim is reasonable but not directly demonstrated."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported in essence: ERG9 encodes squalene synthase. 'Prenyltransferase-related' is extra characterization not stated, but not contradictory."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: ERG9 is a yeast gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: source is Saccharomyces cerevisiae."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Uncertain: the paper uses CEN.PK strains for engineering, but calling the source species variety specifically 'CEN.PK-derived' for ERG9 is not explicitly stated as the source allele identity."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Uncertain: ERG9/squalene synthase is membrane-associated in general biology, but localization is not reported in this paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: ERG9 is described as a competing-pathway gene, CTR3 substituted for MET3 with equivalent output, and ERG9 repression is part of the production platform."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: engineered pathway targets artemisinic acid and then artemisinin."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: artemisinic acid accumulated in fermentation broth, precipitated extracellularly, and partitioned into IPM."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: artemisinic acid/artemisinin are sesquiterpene terpenoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: artemisinin is described as a potent antimalarial used in ACTs."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "tHMG1; ADS",
+          "new_value": "NA",
+          "reason": "Unsupported: the paper does not describe direct protein interactions of ERG9 with tHMG1 or ADS; these are pathway relationships, not reported physical/protein interactions."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "ADS",
+      "category": "Pathway",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported in general: ADS was on pAM322 in earlier strains under strong galactose-regulated promoters, and GAL-regulated expression was used in engineered yeast."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: the applied host is baker’s yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: Saccharomyces cerevisiae is explicitly the production host."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported in substance: Y337-derived engineered strains including Y285 and later strains are discussed as carrying the pathway."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: ADS is part of the artemisinic acid/artemisinin sesquiterpene biosynthetic pathway."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: ADS is the entry enzyme to amorphadiene formation and must be combined with precursor supply and downstream oxidation modules for production."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: ADS forms amorpha-4,11-diene from FPP as shown in pathway figure and prior strain description."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: ADS supplies the amorphadiene precursor and high amorphadiene titres were achieved in engineered yeast."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: heterologous expression in yeast and fermentation titres/pathway reconstruction are described."
+        },
+        "EC_Number": {
+          "verdict": "UNCERTAIN",
+          "reason": "Uncertain: the paper does not provide an EC number for ADS."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: ADS forms the dedicated hydrocarbon precursor to the target product."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: galactose induction and glucose/ethanol fermentation regimen are described."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: ADS is amorpha-4,11-diene synthase."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement: none reported."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: ADS is heterologously expressed in yeast during production."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Unsupported: while ADS is known from trichomes in the literature, this paper text does not discuss its native expression pattern."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement: not reported here."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Unsupported: ERG9 and CYP71AV1 are pathway-neighbor genes, but the paper does not report protein interactions with ADS."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: ADS is the committed entry step to the sesquiterpene branch."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement: none reported for ADS in this paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: ADS was previously introduced in Y337 and codon-optimized synthetic genes were used."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: ADS performs sesquiterpene scaffold formation."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported in a limited sense: the paper shows downstream oxidation capacity is important; no specific ADS-specific tradeoff beyond that is discussed."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: amorpha-4,11-diene."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: farnesyl diphosphate."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: ADS is a terpene synthase."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported with caveat: it is the committed entry step, though not explicitly called rate-limiting; the field text acknowledges that."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: ADS comes from sweet wormwood."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: Artemisia annua."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement: not reported."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Uncertain: cytosolic localization is biologically plausible for a terpene synthase but not stated in this paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: ADS provides the first dedicated step, high amorphadiene production established the platform, and downstream enzymes were needed for full conversion."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported in general: final products were measured in broth/IPM, though ADS itself produces amorphadiene upstream."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Expression_Pattern_of_Source_Species",
+          "old_value": "Not detailed here; known trichome-associated in Artemisia annua but not discussed in this paper text",
+          "new_value": "NA",
+          "reason": "Unsupported: while ADS is known from trichomes in the literature, this paper text does not discuss its native expression pattern."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "ERG9; CYP71AV1",
+          "new_value": "NA",
+          "reason": "Unsupported: ERG9 and CYP71AV1 are pathway-neighbor genes, but the paper does not report protein interactions with ADS."
+        }
+      ],
+      "stats": {
+        "supported": 32,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "CYP71AV1",
+      "category": "Pathway",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: CYP71AV1 and CPR1 were expressed from strong galactose-regulated promoters on a high-copy plasmid in early strains, with GAL-regulated expression in later strains."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: the listed strains are discussed as carrying CYP71AV1 or descendants thereof."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: it is central to the artemisinic acid oxidation pathway."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: the paper directly shows CYP71AV1 is essential but insufficient alone, and balancing with CPR1/CYB5/ADH1/ALDH1 is critical for titre and viability."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: CYP71AV1 is the amorphadiene oxidase performing sequential oxidations toward artemisinic alcohol/aldehyde/acid with redox partners."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: CYP71AV1 converts amorphadiene into oxidized precursors; with CPR1 alone titres were low and viability impaired; adding accessory enzymes improved production."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: heterologous expression, metabolite profiling, and strain comparisons are described."
+        },
+        "EC_Number": {
+          "verdict": "UNCERTAIN",
+          "reason": "Uncertain: no EC number is provided in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: galactose induction, fermentation regime, oxidative stress context, and IPM effects are described."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: described as amorphadiene oxidase."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Unsupported: native expression pattern is not detailed in this paper text for CYP71AV1."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement: not reported here."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: functional interplay with CPR1 and CYB5 is directly discussed."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: CYP71AV1 acts upstream/midstream in the oxidation module."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: CYP71AV1 plus CPR1 alone was insufficient and linked to viability loss, with full route requiring CYB5, ADH1, and ALDH1."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: poor coupling can release ROS and reduce viability; intermediate accumulation is also shown."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported in general: artemisinic alcohol is a major immediate product, though CYP71AV1 can also catalyze further oxidations."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: amorpha-4,11-diene."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: cytochrome P450 monooxygenase, CYP71 family."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: the oxidation module centered on CYP71AV1 is presented as a bottleneck/key control point."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: Artemisia annua."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement: not reported."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Uncertain: ER/microsomal localization is typical for plant P450s but not directly stated in this paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Expression_Pattern_of_Source_Species",
+          "old_value": "Not detailed in this paper text",
+          "new_value": "NA",
+          "reason": "Unsupported: native expression pattern is not detailed in this paper text for CYP71AV1."
+        }
+      ],
+      "stats": {
+        "supported": 33,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "CPR1",
+      "category": "Pathway",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: initially on high-copy plasmid under strong galactose-regulated promoters; later a single integrated copy under GAL3 promoter."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: Y285/Y301 high-expression versus Y657 descendants low-expression is described."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: CPR1 serves the P450 redox support role in artemisinic acid biosynthesis."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: the paper explicitly demonstrates that reducing CPR1 expression improved viability and that dosage balance matters in P450 engineering."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported in functional terms: CPR1 is the cognate reductase transferring electrons to CYP71AV1."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: CPR1 is required, but high expression correlated with poor health; reduced CPR1 improved growth/viability while lowering oxidation rate."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: promoter engineering/genomic integration, growth/viability assays, and metabolite profiling are described."
+        },
+        "EC_Number": {
+          "verdict": "UNCERTAIN",
+          "reason": "Uncertain: no EC number is given in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: cognate NADPH-cytochrome P450 reductase."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement: not reported."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: functional interaction with CYP71AV1 is direct, and CYB5 is discussed in the same electron-transfer context."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: authors discuss poor coupling/ROS and effects of lower CPR1 combined with CYB5/dehydrogenases."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: overexpression harms viability; underexpression reduces oxidation rate and acid titre."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Unsupported: CPR1 does not have a 'product' as framed here; it provides electron transfer rather than producing a discrete metabolite. The wording is not directly supported."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported in functional terms: NADPH/electron transfer to CYP71AV1 catalytic cycle."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported in essence: CPR1 is a diflavin reductase/P450 reductase, though domain details are not elaborated in the paper."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: the paper emphasizes expression ratio as a key control parameter."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: Artemisia annua CPR1."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Uncertain: microsomal localization is expected but not directly stated in this paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Product",
+          "old_value": "Reduced CYP71AV1 catalytic cycle / electron transfer support",
+          "new_value": "NA",
+          "reason": "Unsupported: CPR1 does not have a 'product' as framed here; it provides electron transfer rather than producing a discrete metabolite. The wording is not directly supported."
+        }
+      ],
+      "stats": {
+        "supported": 33,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "CYB5",
+      "category": "Pathway",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: a chromosomally integrated copy was expressed from the GAL7 promoter."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: introduced in Y692 and descendants."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: CYB5 improved oxidation efficiency and titres, especially in low-CPR1 background."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported in functional terms: CYB5 enhances CYP71AV1-mediated oxidation, though the exact mechanism is not fully established."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: increased artemisinic acid and aldehyde, and ~40% increase in total sesquiterpenes in shake flasks."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: identified from trichome ESTs, expressed in yeast, and assessed by metabolite profiling in flasks/fermentors."
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: not applicable / no EC number provided for cytochrome b5 itself in this context."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: GAL induction and low-CPR1 background are described."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: cytochrome b5."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: identified from Artemisia annua trichome EST library."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: codon-optimized synthetic gene for A. annua CYB5 is given as GenBank JQ582841 in Methods."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: functional interaction context with CYP71AV1 and CPR1 is discussed."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: EST library/trichome accession 35608 is explicitly mentioned."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: paper highlights CYB5 as the second cytochrome and reports near doubling of aldehyde in fermentors."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as limited statement: no explicit penalty reported and context dependence is evident."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Unsupported: CYB5 does not itself directly produce these metabolites; it enhances P450 turnover. Framing as a primary product is not directly supported."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported in functional terms: electron transfer support to CYP71AV1 system."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: cytochrome b5 hemoprotein."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: CYB5 is presented as a key auxiliary factor for oxidation efficiency."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Uncertain: microsomal/ER localization is biologically plausible but not stated in this paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Product",
+          "old_value": "Enhanced formation of artemisinic alcohol/aldehyde and acid through supported P450 turnover",
+          "new_value": "NA",
+          "reason": "Unsupported: CYB5 does not itself directly produce these metabolites; it enhances P450 turnover. Framing as a primary product is not directly supported."
+        }
+      ],
+      "stats": {
+        "supported": 34,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "ALDH1",
+      "category": "Pathway",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: single integrated copy expressed from GAL7 promoter."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: expressed in Y973, Y1368, Y1283, Y1284 lineage."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: ALDH1 is shown to detoxify/pull flux through aldehyde oxidation and is important for high titre production."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: oxidizes artemisinic aldehyde to artemisinic acid."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: markedly increased acid production, reduced aldehyde accumulation, enabled early induction, and more than doubled yield versus initial Y285."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: yeast expression, metabolite profiling, fermentor comparison, and prior isolation cited."
+        },
+        "EC_Number": {
+          "verdict": "UNCERTAIN",
+          "reason": "Uncertain: not provided in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: directly forms artemisinic acid."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported only as absence statement: not detailed here beyond being from A. annua/recently isolated."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: JQ609276 is given in Methods."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Unsupported: the paper does not report a direct protein interaction between ALDH1 and ADH1; they are sequential enzymes."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: terminal oxidation step to artemisinic acid."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement: no new omics data for ALDH1 here."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: ALDH1 led to extracellular crystalline artemisinic acid precipitation and supports native pathway importance."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: precipitation complicated sampling; no major biological penalty noted."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: artemisinic acid."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: artemisinic aldehyde."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: aldehyde dehydrogenase."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: ALDH1 clearly relieves a major bottleneck at the terminal step."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Uncertain: likely cytosolic is inference; not reported in paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: extracellular precipitate and IPM phase are described."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "ADH1",
+          "new_value": "NA",
+          "reason": "Unsupported: the paper does not report a direct protein interaction between ALDH1 and ADH1; they are sequential enzymes."
+        }
+      ],
+      "stats": {
+        "supported": 33,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "ADH1",
+      "category": "Pathway",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: single integrated copy expressed from GAL7 promoter."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: Y1283 and Y1284 descendants carry ADH1."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: ADH1 completes the missing step and works with ALDH1 to remove alcohol accumulation and improve titre."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: recombinant ADH1 oxidizes artemisinic alcohol to artemisinic aldehyde using NAD."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: no detectable artemisinic alcohol in flask cultures and 18% increase in artemisinic acid production are reported."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: EST identification, recombinant protein purification and kinetics, yeast expression, and metabolite profiling are all described."
+        },
+        "EC_Number": {
+          "verdict": "UNCERTAIN",
+          "reason": "Uncertain: not provided in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: GAL-regulated/constitutive context and pH 8.5 NAD-preference in assays are described."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported in function, though the exact paper wording is 'putative alcohol dehydrogenase (ADH1)' and then characterized as specific for artemisinic alcohol."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: EST percentages and tissue pattern are described in Methods, indicating trichome-associated expression and low expression in some tissues."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: JQ582842 is given in Methods."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Unsupported: ALDH1 is a sequential downstream enzyme, not a reported interacting protein."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: EST library data and 454 sequencing expression data are described."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: MDR family membership, Km 11 ± 3 µM, kcat 41 ± 5 s−1, low activity with dihydroartemisinic alcohol, and NAD preference are all reported."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: no explicit penalty reported and need for ALDH1 downstream to avoid aldehyde buildup is a fair inference from pathway logic and paper context."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: artemisinic aldehyde."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: artemisinic alcohol."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: medium-chain dehydrogenase/reductase superfamily, NAD-dependent alcohol dehydrogenase."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: important pathway-completion step; the field text does not overstate it."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Uncertain: likely cytosolic is not directly stated in this paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "ALDH1",
+          "new_value": "NA",
+          "reason": "Unsupported: ALDH1 is a sequential downstream enzyme, not a reported interacting protein."
+        }
+      ],
+      "stats": {
+        "supported": 33,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "tHMG1",
+      "category": "Pathway",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Uncertain: Fig. 1a shows tHMG1 among overexpressed genes under GAL induction system, but the exact promoter for tHMG1 is not specified in this paper text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported in broad terms: tHMG1 is part of the Y337-derived platform, though not newly manipulated here."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: tHMG1 is in the mevalonate pathway feeding sesquiterpene biosynthesis as shown in figure context."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Supported only partly: precursor-supply engineering value is consistent with its role, but this paper does not experimentally evaluate tHMG1 itself. Thus the broader application claim is only indirectly supported."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "Supported in general biology and figure label: HMG-CoA reductase converts HMG-CoA to mevalonate; 'truncated form increases cytosolic precursor flux' is not directly tested here."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "Uncertain: tHMG1 is part of the platform, but its specific effect is not experimentally isolated in this paper."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: only via prior strain/platform description and pathway figure, not direct new validation."
+        },
+        "EC_Number": {
+          "verdict": "UNCERTAIN",
+          "reason": "Uncertain: not reported in paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: tHMG1 supplies precursor pool."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported broadly: overexpressed genes in green are under GAL induction system, but exact tHMG1-specific control is not detailed."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: truncated HMG-CoA reductase is explicitly stated in figure legend."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported only broadly: engineered overexpression is indicated in the figure, but not detailed experimentally here."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement: native pattern not detailed."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Unsupported: no protein interactions with ERG9 or ADS are reported."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: upstream precursor-supply step."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: tHMG1 appears in pathway overview as part of prior overexpressed module and is not newly interrogated here."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement only weakly: tradeoffs are not discussed here."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported in general biochemistry, though not discussed directly here."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported in general biochemistry, though not discussed directly here."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported in essence: HMGR oxidoreductase; however domain details are not discussed."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "Uncertain: commonly true biologically, but not directly tested or stated in this paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: yeast gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Uncertain: source variety not explicitly stated for the HMG1 allele."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Uncertain: localization of tHMG1 is not stated in this paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "Uncertain: tHMG1 underpins the platform, but the summary overstates direct findings of this paper for tHMG1."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported for the overall process, though not tHMG1-specific."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "ERG9; ADS",
+          "new_value": "NA",
+          "reason": "Unsupported: no protein interactions with ERG9 or ADS are reported."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 1,
+        "uncertain": 9
+      }
+    },
+    {
+      "gene_name": "GAL80",
+      "category": "Regulation",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: GAL80 was deleted, leading to constitutive expression of GAL-regulated genes without galactose in Y1284."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: Y1284 and parent Y1283 background are described."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: deletion removed galactose requirement and improved titre, simplifying process, with viability context noted in the paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: GAL80 deletion enabled constitutive expression and higher artemisinic acid than parent without requiring galactose."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: gene deletion/replacement and strain comparison in flask/fed-batch fermentations are described."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: GAL80 deletion acts as a process-level switch for the GAL-driven pathway and improved production."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: galactose presence/absence and early induction/repression context are described; improved viability context is also discussed."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: deleted in engineered production strain Y1284."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement: native expression pattern not reported."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported in general: GAL80 is part of GAL regulatory circuitry and deletion relieves repression, though mechanistic details are not explored here."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Unsupported: 'GAL promoters/GAL regulatory system' are not proteins, and specific interacting proteins are not reported here."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: deletion affects transcriptional control of GAL-promoter-driven heterologous pathway genes."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as absence statement."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: strategy was used previously and became practical here after improved viability."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: the paper implies constitutive expression required improved viability; the toxicity caveat is a reasonable interpretation though not directly tested as a separate experiment."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported in general: GAL7-driven genes listed are direct engineered targets; inclusion of ADS and CYP71AV1 is reasonable because heterologous genes were GAL-regulated, though exact promoter assignment for each is not fully enumerated here."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "UNCERTAIN",
+          "reason": "Uncertain: GAL80 functions in the GAL regulatory system, but complex details are not examined in this paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported in broad terms: GAL80 is a galactose-response transcriptional repressor, though domain details are not discussed."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: transcriptional repression relieved by deletion."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: transcriptional regulator/repressor."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: deletion derepresses GAL-controlled pathway genes and increases constitutive expression."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: yeast gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Uncertain: source variety not explicitly stated."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Uncertain: nuclear localization is plausible but not stated in the paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported: GAL80 is part of the galactose-responsive GAL network, and deletion bypasses galactose requirement."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "GAL promoters/GAL regulatory system",
+          "new_value": "NA",
+          "reason": "Unsupported: 'GAL promoters/GAL regulatory system' are not proteins, and specific interacting proteins are not reported here."
+        }
+      ],
+      "stats": {
+        "supported": 31,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 313,
+    "supported": 277,
+    "unsupported": 10,
+    "uncertain": 26,
+    "total_corrections": 10
+  }
+}

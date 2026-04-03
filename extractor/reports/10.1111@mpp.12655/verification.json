@@ -1,0 +1,650 @@
+{
+  "file": "10.1111@mpp.12655",
+  "md_path": "/data/haotianwu/biojson/extractor/input/10.1111@mpp.12655.md",
+  "timestamp": "2026-04-03T16:51:03.838606",
+  "genes": [
+    {
+      "gene_name": "HopM1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly discusses HopM1 as a type III effector in Pseudomonas syringae pv. tomato DC3000."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly uses Pseudomonas syringae pv. tomato (Pst) DC3000."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HopM1 is discussed in both Nicotiana benthamiana and Arabidopsis contexts, including growth/symptoms in N. benthamiana and water soaking in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly mentions Nicotiana benthamiana and Arabidopsis; Arabidopsis thaliana is the standard full name and is consistent with the paper's usage of Arabidopsis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not classify HopM1 under a 'phytohormone mimic / apoplastic water status' metabolite class. HopM1 is an effector promoting water soaking, not a metabolite or phytohormone mimic."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper clearly links HopM1 to apoplastic water soaking/water availability, but this is not a metabolite. The exact field label 'Terminal_Metabolite' is mismatched to the paper's terminology."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly refers to promotion of an aqueous apoplastic environment and apoplastic water soaking in leaves."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states that HopM1 promotes an aqueous apoplastic environment and that an aqueous apoplast plus PTI suppression are sufficient for basic pathogenesis, promoting growth and disease."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "HopM1 is explicitly a type III effector (T3E)."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 lists HopM1 localization as 'Trans-Golgi network/endosome'."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 lists MIN7 and MIN10/GRF8, and also states HopM1 down-regulates NHL13."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly reflected in the review: HopM1 is part of the minimal pathogenic pair with AvrPtoB, is redundant with AvrE1 for aqueous apoplast promotion, and targets MIN7 while suppressing ROS, stomatal closure, and callose deposition and promoting water soaking/necrosis."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are explicitly described: deletion/reassembly polymutants, restoration to D28E, min7 mutant phenocopy, and symptom/growth assays."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "High humidity, dip inoculation, and pressure infiltration are all mentioned in relation to these experiments."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly states HopM1 promotes water soaking and bacterial growth and suppresses PTI-associated responses such as ROS, stomatal closure, and callose deposition."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible implication, but the paper does not explicitly propose engineering MIN7 or related pathways for resistance."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 links HopM1/MIN7 to vesicle trafficking, membrane stability, and immune signalling, supporting possible tradeoffs in those processes."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The statement about classification as 'Common Gene' is metadata from the extraction task, not supported by the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "phytohormone mimic / apoplastic water status",
+          "new_value": "NA",
+          "reason": "The paper does not classify HopM1 under a 'phytohormone mimic / apoplastic water status' metabolite class. HopM1 is an effector promoting water soaking, not a metabolite or phytohormone mimic."
+        },
+        {
+          "field": "Other_Important_Info",
+          "old_value": "Review paper; effector categorized here as Common Gene because it is neither pathway enzyme nor transcriptional regulator.",
+          "new_value": "NA",
+          "reason": "The statement about classification as 'Common Gene' is metadata from the extraction task, not supported by the paper."
+        }
+      ],
+      "stats": {
+        "supported": 14,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "AvrE1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AvrE1 is discussed as a DC3000 type III effector."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly refers to Pseudomonas syringae pv. tomato DC3000."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AvrE1 is discussed in both N. benthamiana and Arabidopsis pathogenesis contexts."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana and Arabidopsis are explicitly discussed; Arabidopsis thaliana is consistent with the paper's Arabidopsis usage."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not define AvrE1 under a metabolite class or as a phytohormone mimic."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "AvrE1 promotes apoplastic water soaking, but 'apoplastic water availability' is not a metabolite and the exact field framing is not used in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper clearly describes apoplastic water soaking/an aqueous apoplast in leaves."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "AvrE1 is explicitly stated to promote water soaking and disease through creation of an aqueous apoplast."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AvrE1 is explicitly a type III effector."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 lists 'Plasma membrane and associated vesicles' for AvrE1."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 lists PP2A and states AvrE1 down-regulates NHL13."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each statement matches the review: AvrE1 is in the HopM1/AvrE1 REG, promotes MIN7-independent water soaking, and suppresses ROS/callose while contributing to necrotic symptoms."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review describes deletion/reassembly polymutants, restoration to D28E, and symptom assays in Arabidopsis and N. benthamiana."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "High humidity is explicitly tied to the water-soaking experiments in Arabidopsis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly attributes water soaking promotion and suppression of PTI outputs to AvrE1."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable extrapolation, but the paper does not explicitly propose PP2A-centered resistance engineering."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states that AvrE1 acts redundantly with HopM1 to promote an aqueous apoplast."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "phytohormone mimic / apoplastic water status",
+          "new_value": "NA",
+          "reason": "The paper does not define AvrE1 under a metabolite class or as a phytohormone mimic."
+        }
+      ],
+      "stats": {
+        "supported": 14,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "AvrPtoB",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AvrPtoB is repeatedly discussed as a DC3000 effector."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source strain is Pseudomonas syringae pv. tomato DC3000 throughout the paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AvrPtoB is discussed in N. benthamiana, tomato, and Arabidopsis contexts."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana, tomato, and Arabidopsis are explicit; Solanum lycopersicum and Arabidopsis thaliana are the full names."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not define a metabolite class for AvrPtoB; it is an effector acting on immune signalling, not a metabolite."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The review directly states AvrPtoB promotes pathogen growth and chlorotic/necrotic symptoms by suppressing immunity."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes AvrPtoB as a type III effector with kinase interaction domains and a C-terminal E3 ubiquitin ligase domain."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 lists AvrPtoB localization as 'Cytosol'."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 lists FLS2, BAK1, CERK1/Bti9, Pto, Fen, and MKK2."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are explicitly supported: minimal pair with HopM1, redundancy with AvrPto for early immune suppression, and multidomain PTI/ETI suppression including HopAD1 cell-death suppression."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly mentions deletion/reassembly polymutants, domain mutant analysis, symptom assays, and interaction studies from cited work."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Dip inoculation and PTI-related conditions are discussed in connection with AvrPtoB function and minimal-pathogenesis assays."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states AvrPtoB suppresses PTI and ETI and promotes chlorosis, necrosis, and bacterial growth."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a logical application, but the paper does not explicitly recommend stacking PRRs/NLRs to evade AvrPtoB suppression."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review strongly emphasizes AvrPtoB as a decisive minimal-pathogenesis effector with modular domains."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "phytohormone mimic / immune signaling-associated disease symptom development",
+          "new_value": "NA",
+          "reason": "The paper does not define a metabolite class for AvrPtoB; it is an effector acting on immune signalling, not a metabolite."
+        }
+      ],
+      "stats": {
+        "supported": 13,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "AvrPto",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AvrPto is discussed as a DC3000 effector."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper consistently refers to Pseudomonas syringae pv. tomato DC3000."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AvrPto is discussed in N. benthamiana, tomato, and Arabidopsis-related contexts."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "These full Latin names are consistent with the species discussed in the paper."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No metabolite class is assigned to AvrPto in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says AvrPto promotes pathogenesis by blocking PTI perception."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 describes AvrPto as a kinase inhibitor, and it is clearly a type III effector."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 lists AvrPto at the plasma membrane."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 lists FLS2, BAK1, EFR, and Pto."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three points are all supported by the text and Table 2."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion mutants and transcriptional profiling are described; AvrPto restoration is also discussed in D29E context. 'Restoration to polymutants' is broadly supported though less central than for AvrPtoB/HopM1."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Flagellin-induced PTI conditions are central to the discussion of AvrPto function."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly supports suppression of PTI perception and contribution to virulence."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible application but not directly stated in the review."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states AvrPto acts redundantly with AvrPtoB and is not highlighted as the sufficient minimal pair in N. benthamiana."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "immune signaling-associated disease symptom development",
+          "new_value": "NA",
+          "reason": "No metabolite class is assigned to AvrPto in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 13,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "HopE1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HopE1 is part of the DC3000 effector repertoire discussed in the review."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper concerns Pseudomonas syringae pv. tomato DC3000."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HopE1 is discussed as affecting N. benthamiana pathogenesis and Arabidopsis transgenic secretion phenotypes."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana and Arabidopsis are discussed; Arabidopsis thaliana is the standard full name."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states HopE1 reduces cell wall-based extracellular immunity and defense protein secretion, contributing to disease."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "HopE1 is a type III effector."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 lists CaM/MAP65 for HopE1."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each statement is supported by the review and Table 2."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The reassembly screen is explicitly described, and transgenic expression studies are summarized in the review."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly links HopE1 to reduced extracellular immunity and contribution to symptoms/growth."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential resistance-target framing is an inference not directly proposed by the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly describes HopE1 as key but not part of the minimal sufficient pair."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 11,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "HopG1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HopG1 is listed among DC3000 key effectors."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper is about Pseudomonas syringae pv. tomato DC3000."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HopG1 is discussed in N. benthamiana pathogenesis; other cited studies involve broader hosts, but N. benthamiana is explicit in the review's reassembly context."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana is explicitly discussed."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 directly states 'Chlorotic symptoms↑' for HopG1."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "HopG1 is a type III effector."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 lists mitochondria."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 lists a mitochondrial-localized kinesin motor protein."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points are directly supported by the review and Table 2."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly cites the shuffled reassembly screen and summarizes localization/phenotypic studies."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Promotion of chlorosis and virulence contribution are directly stated."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This engineering implication is not explicitly made in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states HopG1 affects actin remodeling; this is directly supported by Table 2 and text."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 12,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "HopAM1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HopAM1 is discussed as a DC3000 effector."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source strain is Pseudomonas syringae pv. tomato DC3000."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HopAM1 is discussed in both N. benthamiana and Arabidopsis contexts."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana and Arabidopsis are explicit; Arabidopsis thaliana is the standard full name."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not define a metabolite class for HopAM1; it discusses ABA signalling and water status, not a terminal metabolite class."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The exact phrase 'abscisic acid signaling-associated water status' does not appear as a metabolite. ABA signalling is discussed, but not as a terminal metabolite."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state that an ABA-related product accumulates in the leaf apoplast for HopAM1; it only mentions possible effects on apoplastic water availability during drought stress."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 supports contribution to necrosis, osmotic stress modulation, and meristem chlorosis."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "HopAM1 is a type III effector."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are supported by the text and Table 2, though the 'may promote' wording appropriately reflects uncertainty in mechanism."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The reassembly screen and accession-dependent cell death assays are explicitly described or cited in the review."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Drought stress is explicitly mentioned in the HopAM1 discussion."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports necrosis/chlorosis promotion and osmotic stress-related effects."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible implication, but the review does not directly present it as an application."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The tradeoff statement is reasonable given ABA/drought functions, but it is not explicitly discussed in the review."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The review indicates HopAM1 mode of action is poorly understood, with several 'n.d.' entries in Table 2."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "phytohormone-associated water status",
+          "new_value": "NA",
+          "reason": "The paper does not define a metabolite class for HopAM1; it discusses ABA signalling and water status, not a terminal metabolite class."
+        },
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "abscisic acid signaling-associated water status",
+          "new_value": "NA",
+          "reason": "The exact phrase 'abscisic acid signaling-associated water status' does not appear as a metabolite. ABA signalling is discussed, but not as a terminal metabolite."
+        },
+        {
+          "field": "Terminal_Metabolite_Accumulation_Site",
+          "old_value": "leaf apoplast",
+          "new_value": "NA",
+          "reason": "The paper does not state that an ABA-related product accumulates in the leaf apoplast for HopAM1; it only mentions possible effects on apoplastic water availability during drought stress."
+        }
+      ],
+      "stats": {
+        "supported": 11,
+        "unsupported": 3,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "cmaL",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "cmaL is described as a coronatine biosynthesis gene in Pseudomonas syringae pv. tomato DC3000 derivatives."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper is centered on Pseudomonas syringae pv. tomato DC3000 and its derivatives."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The cmaL restoration phenotypes are explicitly described for Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana is explicitly named."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "COR is explicitly described as a phytotoxin and JA-Ile analogue; 'jasmonate mimic' is directly supported conceptually."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states restoring cmaL enables production of coronatine (COR)."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states COR acts in infected leaf tissue and promotes symptoms, but does not explicitly describe an 'accumulation site' using this wording."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states COR reverses stomatal closure and promotes chlorotic and necrotic symptoms."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "cmaL is explicitly a coronatine biosynthesis gene/protein involved in CMA production."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements are directly supported: previously unknown step in CMA production, loss in D28E leaving CFA only, and restoration enabling COR and stronger chlorotic symptoms."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses deletion/restoration in D28E and phenotype-based inference from CFA/CMA/COR outputs with symptom assays."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "cmaL restoration enables COR biosynthesis and increases chlorosis/virulence phenotypes."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Although plausible, the paper does not explicitly propose cmaL as a pathogen-control target."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The statement about why it is included in this extraction schema is external metadata, not supported by the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Other_Important_Info",
+          "old_value": "Included because coronatine is a metabolite directly discussed; gene is not a plant nutrient metabolism gene.",
+          "new_value": "NA",
+          "reason": "The statement about why it is included in this extraction schema is external metadata, not supported by the paper."
+        }
+      ],
+      "stats": {
+        "supported": 11,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 120,
+    "supported": 99,
+    "unsupported": 9,
+    "uncertain": 12,
+    "total_corrections": 9
+  }
+}

@@ -1,0 +1,730 @@
+{
+  "file": "10.1126@science.aac9373",
+  "md_path": "/data/haotianwu/biojson/extractor/input/10.1126@science.aac9373.md",
+  "timestamp": "2026-04-03T16:58:01.278904",
+  "genes": [
+    {
+      "gene_name": "morB",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the hydrocodone module encodes morphine reductase (morB) from P. putida M10."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly names P. putida M10, supporting the species Pseudomonas putida."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All pathway genes were expressed in yeast strains in this study."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host organism throughout the paper is Saccharomyces cerevisiae."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "morB was part of the hydrocodone module and the resulting engineered yeast produced hydrocodone."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Hydrocodone is an opioid alkaloid, consistent with the paper's framing of opioid compounds as benzylisoquinoline-derived alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes hydrocodone as an opioid drug/medicine used for pain-related treatment context."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states growth media were assayed for opioid compounds and hydrocodone was detected there."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The text says T6ODM and morB were introduced together as a hydrocodone module, and the engineered yeast then produced hydrocodone."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point matches the Results: morB was introduced with T6ODM, the module enabled detectable hydrocodone, and titer was ~0.3 µg/L."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper calls morB 'morphine reductase' in Fig. 1A text and 'morphine reductase (morB)' in Results, but does not explicitly state 'morphinone reductase / oxidoreductase' as a family/domain."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Hydrocodone pathway extension in yeast and LC-MS/MS analysis of growth medium are explicitly described."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "morB was paired functionally with T6ODM in the same module, but no direct protein-protein interaction is shown."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "morB was introduced as a heterologous gene into engineered yeast."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The hydrocodone-producing strain was cultured with 50 mM 2-oxoglutarate to support T6ODM activity in the paired module."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strains derive from the CEN.PK2 background, as stated for the yeast engineering platform."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The source strain designation M10 appears explicitly for P. putida M10."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports only very low hydrocodone accumulation (~0.3 µg/L), supporting very low product titer as a limitation."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is reasonable inference that morB is useful for engineered downstream opioid diversification, but this exact application statement is not directly made in Results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed emphasizes pathway extension to hydrocodone rather than mechanistic characterization of morB itself."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 17,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "DRS-DRR",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly mention Pbr.89405 and Pso.2062398 as DRS-DRR sequences of interest."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper names the enzyme 1,2-dehydroreticuline synthase-1,2-dehydroreticuline reductase (DRS-DRR)."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies DRS-DRR variants from P. bracteatum and P. somniferum, i.e., Iranian poppy and opium poppy."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Papaver bracteatum and Papaver somniferum are explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "DRS-DRR was characterized by heterologous expression in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The engineered host is Saccharomyces cerevisiae."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results and Fig. 2 indicate DRS-DRR converts (S)-reticuline to (R)-reticuline."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The product of the epimerization is stated as (R)-reticuline."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes oxidation to 1,2-dehydroreticuline followed by stereospecific reduction to (R)-reticuline."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "DRS-DRR is placed in benzylisoquinoline alkaloid/morphinan opioid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The text states this is the epimerization step leading from (S)-reticuline to the morphinan branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents reticuline as a branchpoint molecule and DRS-DRR as the gateway into the morphinan branch."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme supplies (R)-reticuline, the direct precursor for morphinan alkaloid biosynthesis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "DRS-DRR supported downstream production of thebaine, and hydrocodone was later produced in the extended pathway containing this step."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Thebaine and hydrocodone are opioid alkaloids in the paper's pathway context."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly frames opioids including these compounds as medicines for pain management and palliative care."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Thebaine and hydrocodone were assayed from growth media of engineered yeast cultures."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show DRS-DRR enables (S)- to (R)-reticuline conversion and supports downstream salutaridine/thebaine pathway function."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings are directly reflected in the Results and figures."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes this activity as the key enzyme/gateway enabling entry from (S)-reticuline into morphinan biosynthesis."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme is described as a fusion containing a CYP82Y1-like domain and a COR-like domain."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results include transcriptome mining, heterologous expression, chiral LC-MS, feeding assays, and downstream metabolite analysis."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "SalSyn was co-expressed downstream in pathway assays, but no direct physical interaction between DRS-DRR and SalSyn is demonstrated."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "DRS-DRR was heterologously expressed in engineered yeast strains."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The assays used fed rac-norlaudanosoline and pathway contexts yielding reticuline, as described in Results."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "These engineered strains are in the CEN.PK2-derived yeast background."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Identification relied on plant transcriptome mining using the 1000 Plants Project and PhytoMetaSyn databases."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper's engineering results show DRS-DRR is essential for reconstructing morphinan biosynthesis from (S)-reticuline in yeast."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The natural fusion architecture and near-simultaneous independent identification by other groups are both explicitly discussed."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 28,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "SalSyn",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "SalSyn is explicitly named salutaridine synthase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SalSyn variants from P. somniferum and P. bracteatum were examined."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Papaver somniferum and Papaver bracteatum are explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SalSyn was expressed and engineered in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host throughout is Saccharomyces cerevisiae."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly assays conversion of (R)-reticuline by SalSyn."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "SalSyn conversion to salutaridine is explicitly stated and measured."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper positions SalSyn as the step converting (R)-reticuline to salutaridine toward the morphinan scaffold."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SalSyn is part of morphinan/opioid biosynthesis in the reconstructed pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It functions in promorphinan scaffold formation downstream of reticuline epimerization."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents conversion of (R)-reticuline to salutaridine as the key committed step toward morphinans."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Salutaridine is an immediate precursor on the route to thebaine and then hydrocodone in the engineered pathway."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SalSyn optimization increased downstream thebaine, and hydrocodone was later produced in the full extended pathway."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These terminal compounds are opioid alkaloids in the paper context."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper frames these opioids as pain-management/palliative-care medicines."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Thebaine and hydrocodone were analyzed in growth medium."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show SalSyn catalyzes the key conversion and that engineered chimeras improved pathway flux."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The three summary points match the described Results and Fig. 3."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says reticuline accumulation indicated SalSyn conversion warranted optimization and describes it as a key pathway P450."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "SalSyn is explicitly described as a cytochrome P450."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Western blotting, glycosylation mutagenesis, chimera engineering, feeding assays, and LC-MS/MS were all used."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses CPR and CFS-derived chimeric fusions in relation to SalSyn, but does not directly demonstrate protein-protein interaction with CPR."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SalSyn was heterologously expressed in engineered yeast."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results discuss ER membrane insertion and microsomal CYP behavior for SalSyn."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The assays involved feeding (R)-reticuline or rac-norlaudanosoline."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The engineered yeast strains are CEN.PK2-derived."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states misprocessing and N-linked glycosylation reduced SalSyn activity in yeast."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly support SalSyn engineering and N-terminal redesign as valuable for improving microbial opioid production."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The best variant yEcCFS1-83-yPbSalSyn92-504 is explicitly named, and BM3-based fusion was also tested."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 28,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "SalR",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "SalR is explicitly salutaridine reductase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Variants from P. bracteatum and P. somniferum were examined."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Papaver bracteatum and Papaver somniferum are explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SalR variants were tested in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "By enzyme name and pathway placement, SalR reduces salutaridine; this is directly indicated in the pathway description."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway names salutaridinol as the reduced product prior to SalAT action."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Reducing salutaridine to salutaridinol is the described function of SalR in the pathway."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SalR is part of morphinan/opioid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It functions in downstream morphinan conversion toward thebaine."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "SalR is a midstream step after salutaridine formation and before SalAT/thebaine."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "It forms the immediate precursor salutaridinol toward thebaine."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SalR is part of the thebaine route and the full pathway later extends to hydrocodone."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Thebaine and hydrocodone are opioid alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses these opioids in medicinal pain-management context."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Growth medium was analyzed for thebaine and hydrocodone."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state P. bracteatum SalR exhibited the highest activity in yeast among tested variants."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings are stated in the Results section."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish SalR as rate-limiting; thus 'Not established' is faithful."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly label SalR as a short-chain dehydrogenase/reductase-like oxidoreductase."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Variant screening in yeast and LC-MS/MS analysis of downstream products are described."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "SalAT acts downstream in the same pathway, but no direct protein interaction is demonstrated."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SalR was heterologously expressed in engineered yeast."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant assays involved feeding rac-norlaudanosoline to pathway-reconstituted strains."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The work used CEN.PK2-derived strains."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results mention site-directed mutants reported to reduce substrate inhibition and increase Vmax were examined in preliminary experiments, supporting this statement."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The final pathway selection of PbSalR supports its utility for optimized microbial thebaine synthesis."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "PbSalR was explicitly selected for the final pathway/module."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 26,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "SalAT",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "SalAT is explicitly named salutaridinol 7-O-acetyltransferase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Variants from P. somniferum, P. bracteatum, and P. orientale were examined."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Papaver somniferum, Papaver bracteatum, and Papaver orientale are explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SalAT variants were expressed in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "By enzyme name and pathway context, SalAT acetylates salutaridinol."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports acetylation of salutaridinol en route to thebaine, but does not explicitly state 'salutaridinol-7-O-acetate leading to spontaneous/enzymatic rearrangement to thebaine' in the provided text."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme name itself supports acetylation at the 7-O position in thebaine biosynthesis."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SalAT is part of morphinan/opioid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It functions in the late thebaine-forming steps."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "SalAT is downstream of SalR and near thebaine formation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "It directly precedes thebaine formation in the reconstructed pathway."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SalAT contributes to thebaine production and thus also to the extended hydrocodone route."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Thebaine and hydrocodone are opioid alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper frames them as medicinal pain-related compounds; thebaine is also described as a starting material for many opioid drugs."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Thebaine and hydrocodone were measured in growth medium."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states PsSalAT showed the highest activity in yeast and was used for thebaine formation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by the Results."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish SalAT as rate-limiting; thus 'Not established' is supported."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme is explicitly an acetyltransferase by name."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Variant screening in yeast with pathway feeding assays and LC-MS/MS detection of thebaine are described."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "SalR is the upstream enzyme in the same pathway, but no direct interaction is shown."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SalAT was heterologously expressed in engineered yeast."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant pathway assays used fed rac-norlaudanosoline."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strain background is CEN.PK2-derived."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Its selection as the best-performing enzyme for the final module supports this engineering value claim."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says PsSalAT was selected as the best-performing variant for the final pathway."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 25,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "T6ODM",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "T6ODM is explicitly named thebaine 6-O-demethylase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states T6ODM is from P. somniferum."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Papaver somniferum is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "T6ODM was introduced into engineered yeast strains."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host organism is Saccharomyces cerevisiae."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "By enzyme name and hydrocodone route context, T6ODM acts on thebaine."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly specify the exact intermediate product in the provided text, only that T6ODM extends the pathway toward hydrocodone."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme name supports 6-O-demethylation of thebaine in the engineered hydrocodone route."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes this as a downstream engineered route to hydrocodone not native to poppy."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "T6ODM is part of the hydrocodone extension module."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It is downstream of thebaine formation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "It contributes directly to the route from thebaine to hydrocodone."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "T6ODM was part of the module that enabled hydrocodone production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Hydrocodone is an opioid alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Hydrocodone is described as an opioid drug/medicine in pain-treatment context."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Hydrocodone was assayed in the growth medium."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states that introducing T6ODM with morB extended the pathway beyond thebaine to hydrocodone."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings are directly supported by the Results."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish T6ODM as rate-limiting; thus 'Not established' is faithful."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "Although T6ODM is known as a 2-oxoglutarate/Fe(II)-dependent dioxygenase, this family/domain wording is not explicitly stated in the provided paper text."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results describe pathway extension in yeast, culture supplementation, and LC-MS/MS detection of hydrocodone."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "morB functions in the same extension module, but no direct physical interaction is demonstrated."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "T6ODM was heterologously expressed in engineered yeast."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The strain was cultured with 50 mM 2-oxoglutarate to support T6ODM activity."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strains used are CEN.PK2-derived."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The final hydrocodone titer was very low (~0.3 µg/L), supporting this limitation."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results support its importance for extending microbial production from thebaine to hydrocodone."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes the hydrocodone route is not present in native opium poppy and used T6ODM with morB."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 25,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 161,
+    "supported": 149,
+    "unsupported": 0,
+    "uncertain": 12,
+    "total_corrections": 0
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "file": "10.1007@s00122-022-04054-7",
+  "md_path": "/data/haotianwu/biojson/extractor/input/10.1007@s00122-022-04054-7.md",
+  "timestamp": "2026-04-03T14:24:25.188113",
+  "genes": [
+    {
+      "gene_name": "ClZISO",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies the causal gene as Cla97C07G142750 and names it ClZISO."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study gene is from watermelon."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the species is Citrullus lanatus."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The EMS mutant was generated from red-fleshed line '302', and ClZISO was characterized from WT 302."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional and phenotypic analyses are in watermelon."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species in the study is watermelon, Citrullus lanatus."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The analyses compare cultivar 302 and the derived psf mutant."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show reduced downstream carotenoids including lycopene and β-carotene in psf and altered ABA accumulation in fruit. These are connected to ClZISO function."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly involves carotenoids and ABA, a phytohormone derived from carotenoids."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Carotenoid and ABA effects are reported in watermelon fruit flesh, and localization assays indicate chromoplast localization."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links carotenoids to flesh color and nutritional benefits, and states ABA promotes fruit development/ripening based on prior work while showing ABA accumulation in WT fruit is blocked in psf."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ClZISO is explicitly placed in the carotenoid biosynthesis pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places ZISO between ζ-carotene isomers and upstream of lycopene formation, i.e. the central desaturation/isomerization part of carotenoid biosynthesis."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Cla97C07G142750 is annotated as 15-cis-zeta-carotene isomerase (ZISO)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "ZISO carotenoid isomerase is supported, but 'integral membrane isomerase' appears only in Discussion as background from prior reports, not as a direct characterization/domain shown for ClZISO in this paper."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Subcellular localization assays showed ClZISO-mCherry and ClZISOmu-mCherry coincide with chromoplast autofluorescence."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR showed ClZISO is ubiquitously expressed in roots, stems, leaves, flowers and fruits, and increases in WT flesh during fruit development."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports expression in multiple organs in WT and psf, with increasing expression during WT fruit development but relatively stable expression of ClZISOmu in psf."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The E. coli assay and text state ClZISO converts 9,15,9'-tri-cis-ζ-carotene."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states the product is 9,9'-di-cis-ζ-carotene."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state ClZISO catalyzes conversion of 9,15,9'-tri-cis-ζ-carotene to 9,9'-di-cis-ζ-carotene, i.e. isomerization of the central 15-15' bond."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The study shows ClZISO mutation blocks production of downstream carotenoids and reduces ABA, supporting its role as an immediate upstream step required for downstream biosynthesis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene acts in the middle of the carotenoid pathway, after upstream desaturation products and before lycopene/downstream carotenoids."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The mutation clearly blocks pathway flux and causes upstream accumulation/reduced downstream products, but the paper does not explicitly define ClZISO as a rate-limiting step. 'Key control step' is interpretive."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support that loss of ClZISO function causes yellow photosensitive flesh, accumulation of ζ-carotene intermediates, reduced downstream carotenoids, and lower fruit ABA accumulation; WT is associated with red flesh and normal downstream accumulation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are reported in the paper: EMS mutant screen, BSA-seq mapping, mutation identification, qRT-PCR, localization, E. coli pAC-ZETA assay with HPLC, carotenoid profiling, light assays, and RNA-seq."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly shows rapid photobleaching under intense sunlight and partial restoration of pink color/downstream carotenoids after long-term white LED treatment via photoisomerization."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The localization constructs were driven by the constitutive 35S promoter."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq was performed and deposited under SRA PRJNA759595; BSA-seq/resequencing is reported, and no public accession is given in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports reduced total carotenoids in fruit, blocked ABA increase in fruit development, delayed hypocotyl greening, and lighter flower/callus coloration in the mutant."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states it provides a theoretical and technical basis for breeding different flesh color lines, but the more detailed claims about avoiding loss-of-function alleles and modulating phenotype by light environment are extrapolations not explicitly presented as breeding recommendations in Results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports an EMS-induced G-to-A mutation at Chr.07:30,263,420 causing W273 to a stop codon; ClZISOmu retains chromoplast localization but loses catalytic activity; light partially compensates via photoisomerization."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four summary points are directly supported by the Results: causal identification, enzymatic activity and localization, mutant metabolic/phenotypic consequences, and partial light bypass in vitro and in vivo."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 30,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 33,
+    "supported": 30,
+    "unsupported": 0,
+    "uncertain": 3,
+    "total_corrections": 0
+  }
+}

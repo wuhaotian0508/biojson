@@ -1,0 +1,2993 @@
+{
+  "file": "10.1038@nbt.15061",
+  "md_path": "/data/haotianwu/biojson/extractor/input/10.1038@nbt.15061.md",
+  "timestamp": "2026-04-03T16:37:44.207965",
+  "genes": [
+    {
+      "gene_name": "Anthocyanin metabolic engineering module (Del/Ros1-driven phenylpropanoid/flavonoid activation)",
+      "category": "Common",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states Del and Ros1 cDNAs were each under the control of the fruit-specific E8 promoter, with pigmentation beginning during ripening."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The transgenes were expressed in tomato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies tomato as Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Transformation was done in cv. MicroTom, and the phenotype was transferred to Money Maker, Ailsa Craig and VF36."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports fruit-specific activation to enrich tomato fruit with anthocyanins and notes no vegetative pigmentation, but statements about combining with endogenous pathway optimization, transport/modification genes, consumer traits, regulatory acceptance, and background-dependent expression are extrapolations not directly tested here."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by reported intense purple fruit, high anthocyanin accumulation, threefold increase in hydrophilic antioxidant capacity, and lifespan extension in Trp53-/- mice fed purple tomato diet."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are described: transgenic expression, HPLC/metabolite profiling, spectrophotometric anthocyanin measurement, TEAC assay, northern blot/subtractive hybridization/microarray, and mouse dietary assay."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The phenotype clearly depended on ripening stage because E8 expression starts late in fruit development. The mention of light dependence applies to prior tomato systems, not directly to Del/Ros1 fruit."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "No epigenetic regulation was discussed."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Pigmentation was restricted mainly to ripening fruit, beginning at the end of mature green stage and intensifying thereafter; stems and leaves lacked abnormal anthocyanin accumulation."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "This entry explicitly says not applicable for the generalized trait entry, and the paper does not provide a source-species expression pattern in this context."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "No accession number for this generalized module is given; 'Not applicable' is consistent."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Del and Ros1 are the regulatory pair, and the paper shows induction of many downstream enzymes/transport-related proteins (PAL, CHI, F3H, F3'5'H, DFR, ANS, 3-GT, RT, 5-GT, putative acyltransferase, GST, PAT). However, calling all of these 'interacting proteins' overstates direct physical interaction; they are mainly downstream induced genes."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Suppression subtractive hybridization, northern blot, PROFOOD microarray with ArrayExpress accessions, and HPLC/ESI-MS metabolite profiling are all described."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says anthocyanin levels were comparable to blackberries/blueberries, identifies major acylated delphinidin/petunidin glycosides, and reports increased hydrophilic antioxidant capacity without reduction in lipophilic antioxidants."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "No vegetative defects were reported, but the rest of the statement lists possible tradeoffs not assessed in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Del is a bHLH TF and Ros1 is a MYB-related TF; together they form a MYB-bHLH regulatory module controlling flavonoid metabolism."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The source regulators were from snapdragon and were expressed in tomato."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper names snapdragon as Antirrhinum majus."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "No source variety is reported."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nuclear localization for transcription factors is biologically plausible, but the paper does not experimentally determine localization here; downstream enzyme localizations are also not investigated in this study."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Accurately summarizes the study's major findings on Del/Ros1-driven fruit anthocyanin engineering and mouse lifespan effects."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The engineered end products were anthocyanins."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins accumulated in peel, pericarp, inner flesh, initially around vascular tissue."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are flavonoid polyphenols."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Plant pigmentation and antioxidant-related roles are consistent with the paper. The broader dietary disease-protection list reflects background statements in the introduction rather than direct demonstration in this paper, but is broadly aligned."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 22,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "PAL",
+      "category": "Pathway",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL itself was not placed under a promoter; its expression was induced indirectly in fruit by Del/Ros1 expressed from the E8 promoter."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The PAL discussed is from tomato fruit."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is identified as Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The expression and enzyme activity analyses were done in MicroTom lines."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL catalyzes entry into phenylpropanoid metabolism feeding anthocyanin biosynthesis."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper emphasizes PAL as a flux-determining step in Solanaceous phenylpropanoid metabolism, supporting its engineering relevance, though explicit stacking recommendations are inferential."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL deaminates phenylalanine to cinnamic acid; this is the standard PAL reaction and matches the pathway description."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states PAL transcript was induced and PAL activity increased 200-fold in Del/Ros1 line N, likely explaining high anthocyanin levels."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL was identified in subtractive hybridization, validated by northern blot, showed increased enzyme activity, and induction was supported by microarray analysis."
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "EC 4.3.1.24 is correct for phenylalanine ammonia-lyase, though the paper does not explicitly list EC numbers."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL supplies precursors to the anthocyanin pathway."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL was measured in ripening fruit under E8-driven Del/Ros1 expression."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL stands for phenylalanine ammonia-lyase."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported in the paper."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says PAL was the exception among pathway genes, as some expression was detectable in wild-type fruit; thus calling it simply low/basal in wild type and strongly induced in Del/Ros1 is accurate."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "No source-species expression pattern is provided for PAL."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports regulation by Del and Ros1, but does not show direct physical protein-protein interaction between PAL and these factors."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL is the upstream entry point to phenylpropanoid metabolism."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "These datasets and accessions are described and include PAL induction."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The authors explicitly argue PAL activity determines flux in Solanaceous phenylpropanoid metabolism and contrast this with previous Lc/C1 work."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL acts in the general phenylpropanoid entry pathway."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Possible flux diversion effects are speculative; the paper did not directly assess these tradeoffs, though it did report no obvious growth defects."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL produces cinnamic acid."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL uses L-phenylalanine."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL belongs to the ammonia-lyase PAL family."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The authors explicitly state PAL activity determines flux through phenylpropanoid metabolism in Solanaceous species."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The PAL discussed is endogenous tomato PAL."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Endogenous source is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental material was MicroTom."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Cytosolic localization is biologically typical for PAL but was not experimentally shown in this paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Matches the reported PAL transcript and activity induction and inferred role in anthocyanin accumulation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL contributes to anthocyanin accumulation as the terminal engineered product."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins accumulated in tomato peel and flesh."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "This is consistent with the paper's framing of anthocyanins as pigmentation and antioxidant compounds with health-associated benefits."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 33,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "CHI",
+      "category": "Pathway",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "CHI was not directly driven by a promoter construct; it was activated indirectly under the E8-Del/Ros1 system."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The CHI discussed is in tomato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The study used MicroTom transgenic fruit for these analyses."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CHI functions in flavonoid/anthocyanin biosynthesis."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes CHI may limit flux in tomato skin and that Del/Ros1 induces CHI activity, supporting engineering value."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "CHI converts naringenin chalcone to naringenin."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports a threefold increase in chalcone isomerase activity, transient during fruit development. However, attributing contribution to both anthocyanin and flavonol accumulation is somewhat interpretive but consistent with discussion."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly reports CHI enzyme activity increase and includes pathway-gene expression analyses broadly, though CHI-specific transcript validation is not individually detailed."
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "EC 5.5.1.6 is correct for chalcone isomerase, though not stated in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CHI generates a central intermediate for downstream anthocyanin formation."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The induction was transient during fruit development/ripening under Del/Ros1 control."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "CHI is chalcone isomerase."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states CHI may limit flux in tomato skin and Del/Ros1 induced CHI activity; however, explicit endogenous spatial expression beyond this is not deeply profiled."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "No source-species expression pattern is reported."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Regulation by Del/Ros1 is supported, but direct physical interaction with CHI protein is not shown."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "CHI acts early in flavonoid biosynthesis."
+        },
+        "Omics_Data": {
+          "verdict": "UNCERTAIN",
+          "reason": "Microarray support is plausible from pathway induction, but CHI-specific microarray evidence is not explicitly described in the main text; enzyme assay is clearly reported."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The discussion explicitly states CHI may limit flavonoid flux in tomato skin and that Del/Ros1, unlike Lc/C1, induced CHI activity."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CHI is in the core flavonoid trunk pathway."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential flux shifts are speculative and not directly tested."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "CHI produces naringenin."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "CHI uses naringenin chalcone."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Belongs to chalcone isomerase family."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The discussion says CHI activity may limit flux through flavonoid metabolism in tomato skin."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "This CHI is endogenous tomato CHI."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Source is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental line was MicroTom."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Cytosolic localization is standard but not experimentally determined here."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Accurately summarizes reported CHI activity induction and inferred role in relieving bottleneck."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CHI contributes to anthocyanin production."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins accumulated in peel and flesh."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Consistent with pigmentation and antioxidant functions discussed in the paper."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 32,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "F3H",
+      "category": "Pathway",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "F3H was induced indirectly by E8-driven Del/Ros1 rather than being directly promoter-driven itself."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene discussed is in tomato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Analyses were performed in MicroTom transgenic fruit."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "F3H is part of flavonoid/anthocyanin biosynthesis."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Its role in establishing anthocyanin flux is supported, though the explicit recommendation to stack it is inferential."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "F3H converts flavanones such as naringenin to dihydroflavonols."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states northern blot verified induction of F3H by Del and Ros1, supporting progression toward anthocyanin intermediates."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Northern blot verification is explicitly stated; metabolite accumulation supports pathway function."
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "EC 1.14.11.9 is correct for flavanone 3-hydroxylase, though not listed in paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "F3H forms the dihydroflavonol precursor class for downstream anthocyanins."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Observed in ripening fruit under the E8-Del/Ros1 system."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "F3H is flavanone 3-hydroxylase."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says with the exception of PAL there was no detectable expression of these anthocyanin biosynthetic genes in wild-type fruit; F3H was induced in Del/Ros1 fruit."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Regulation by Del and Ros1 is supported, but direct protein interaction is not shown."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "F3H acts in the early-mid pathway."
+        },
+        "Omics_Data": {
+          "verdict": "UNCERTAIN",
+          "reason": "Northern blot evidence is explicit, but saying microarray support is 'likely' is weaker because not individually detailed."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes F3H was not identified by subtractive hybridization but was confirmed by northern blot."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "F3H is in the core flavonoid/anthocyanin trunk pathway."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "F3H produces dihydroflavonols."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "F3H uses flavanones such as naringenin."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "F3H is a 2-oxoglutarate-dependent dioxygenase."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish F3H as rate-limiting."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The F3H discussed is endogenous tomato F3H."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Source is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "MicroTom experimental background."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Cytosolic localization is plausible but not experimentally shown here."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary matches the reported induction and functional interpretation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "F3H contributes to anthocyanin production."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins accumulated in tomato fruit peel and flesh."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Consistent with paper's pigmentation and antioxidant framing."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 33,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "F3'5'H",
+      "category": "Pathway",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "F3'5'H was induced indirectly by E8-driven Del/Ros1."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The F3'5'H discussed is in tomato fruit."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The work was done in MicroTom."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "F3'5'H is a branch-setting enzyme in anthocyanin biosynthesis."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly argues that F3'5'H activation was key to success in tomato because of DFR specificity, supporting engineering value, though some wording is broader extrapolation."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The description of generating 3',5'-hydroxylated intermediates leading to dihydromyricetin-derived anthocyanins matches the discussion."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states Del/Ros1 activated F3'5'H and this allowed formation of compatible substrate for DFR, essential for anthocyanin accumulation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "This is supported by gene-expression analysis and the metabolite profile rich in delphinidin/petunidin derivatives, though the mechanistic conclusion about necessity is interpretive."
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "EC 1.14.14.81 is standard for flavonoid 3',5'-hydroxylase, though not given in paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "F3'5'H forms branch-selecting immediate precursors for the target anthocyanins."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Observed in ripening fruit under E8-driven Del/Ros1 expression."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Correct enzyme name."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The discussion explicitly states Del/Ros1 activated F3'5'H whereas Lc/C1 did not."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Functional dependency with DFR is supported, and Del/Ros1 regulate it, but direct physical interactions are not demonstrated."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "F3'5'H acts at a branch point determining delphinidin/petunidin route."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Gene-expression and metabolite profiling support are present, but exact F3'5'H-specific omics source is not individually detailed beyond discussion."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The discussion explicitly says F3'5'H induction is a key reason Del/Ros1 succeeded where Lc/C1 failed, and metabolite data support delphinidin/petunidin products."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "This is the delphinidin/petunidin anthocyanin branch."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Possible branch redirection effects are plausible but not directly assessed."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Formation of 3',5'-hydroxylated dihydroflavonols including dihydromyricetin is consistent with the discussion."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "General substrate description is consistent, though the exact preferred substrate species are not experimentally characterized here."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "F3'5'H is a cytochrome P450 monooxygenase."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports F3'5'H as a branch-switch determinant critical to success in this system."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "This is endogenous tomato F3'5'H."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Source is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "MicroTom background."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "ER membrane localization is typical for P450s but not experimentally shown in this paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Accurately summarizes the paper's mechanistic interpretation and product profile."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are the terminal metabolites discussed."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins accumulated in tomato peel and flesh."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Consistent with purple pigmentation and antioxidant-related function in paper."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 33,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "DFR",
+      "category": "Pathway",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "DFR was induced indirectly by E8-driven Del/Ros1, not directly placed under a promoter."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The DFR discussed is from tomato fruit."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The analyses are in MicroTom background."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "DFR is a late anthocyanin biosynthetic enzyme."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports the importance of matching DFR substrate specificity with upstream hydroxylation; explicit stacking advice is an inference but reasonable."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "DFR reduces dihydroflavonols to leucoanthocyanidins, and the discussion specifically highlights Solanaceous DFR preference for dihydromyricetin over dihydrokaempferol."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The mechanistic role is supported by pathway logic and the discussion, though DFR-specific phenotypic effect was not directly isolated experimentally."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Induction of anthocyanin pathway genes and metabolite output support this, but DFR-specific expression evidence is not detailed gene-by-gene in the main text."
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "EC 1.1.1.219 is correct for DFR, though not listed in paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "DFR forms leucoanthocyanidins, the immediate precursors of anthocyanidins."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Observed in ripening fruit context under Del/Ros1 control."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Correct expansion of DFR."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indicates anthocyanin biosynthetic genes were not detectably expressed in wild-type fruit except PAL, and were induced in Del/Ros1 fruit."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Functional pathway relationships with F3'5'H and ANS are valid, but direct protein-protein interactions are not shown."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "DFR acts in the late anthocyanin pathway."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "General omics support exists for induced pathway genes, but DFR-specific evidence is not individually shown in the excerpt."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly emphasizes DFR substrate specificity as explaining prior engineering failures."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "DFR is part of the core late anthocyanin branch."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Constraint on pigment spectrum due to substrate specificity is supported by discussion."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "DFR produces leucoanthocyanidins."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Dihydroflavonols, especially dihydromyricetin in this successful system, is supported by the discussion."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "DFR is an NADPH-dependent oxidoreductase of the short-chain dehydrogenase/reductase family; while not discussed explicitly, this is standard annotation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not call DFR rate-limiting, but does support it as a substrate-constrained determinant in this system."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Endogenous tomato DFR is discussed."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Source is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "MicroTom experimental background."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Cytosolic localization is typical but not experimentally tested here."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Faithfully summarizes induction plus substrate-specificity logic from the discussion."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are the final target product."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins accumulated in tomato peel and flesh."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Consistent with pigmentation and antioxidant function described."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 34,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "ANS",
+      "category": "Pathway",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "ANS was induced indirectly by E8-driven Del/Ros1."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The ANS discussed is in tomato fruit."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments were done in MicroTom."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ANS is part of anthocyanin biosynthesis."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "As a necessary late-pathway enzyme this is generally true, though explicit stacking advice is not directly tested in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "ANS oxidizes leucoanthocyanidins to anthocyanidins."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports induction of late biosynthetic genes including ANS, enabling anthocyanidin formation, though ANS-specific effect is not isolated alone."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by gene-expression analyses and metabolite accumulation."
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "EC 1.14.20.4 is correct for anthocyanidin synthase, though not listed in paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "ANS directly forms anthocyanidins, immediate precursors of anthocyanins."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Observed in ripening fruit context."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Correct expansion of ANS."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states anthocyanin biosynthetic genes except PAL were not detectably expressed in wild-type fruit and were induced in Del/Ros1 fruit."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Del/Ros1 regulate the pathway and ANS functions between DFR and 3-GT in pathway order, but direct protein interactions are not shown."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "ANS acts in the late pathway."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "General subtractive hybridization/northern/microarray support for induced pathway genes is described, though ANS-specific details are not shown individually in the excerpt."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "It was part of the nearly complete late biosynthetic program induced by Del/Ros1, which is consistent with the paper."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ANS is in the core late anthocyanin branch."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "ANS forms anthocyanidins."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "ANS uses leucoanthocyanidins."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "ANS is a 2-oxoglutarate-dependent dioxygenase."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish ANS as rate-limiting."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Endogenous tomato ANS is implied."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Source is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "MicroTom background."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Cytosolic localization is plausible but not experimentally tested in this paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Accurately reflects coordinated ANS induction and role in purple fruit formation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are the final products."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins accumulated in peel and flesh."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Consistent with pigmentation and antioxidant activity in the paper."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 34,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "3-GT",
+      "category": "Pathway",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "3-GT was induced indirectly by E8-driven Del/Ros1."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway gene discussed is in tomato fruit."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Analyses were in MicroTom background."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "3-GT is part of anthocyanin biosynthesis/modification."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Its importance for stabilization of anthocyanins is biologically sound and consistent with the structures identified, though direct engineering tests of 3-GT alone were not done."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "3-GT adds glucose at the 3-O position of anthocyanidins."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports induction of 3-GT and identifies glycosylated anthocyanins, supporting this role."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Gene-expression analysis and structural identification of glycosylated anthocyanins support the claim."
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "EC 2.4.1.115 is correct for flavonoid 3-O-glucosyltransferase, though not listed in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "3-GT is required for anthocyanin storage/stabilization."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Observed in ripening fruit context."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Correct enzyme name."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Induction in Del/Ros1 fruit is consistent with the paper's pathway-gene activation results."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pathway adjacency to ANS, RT, and 5-GT is plausible, but direct protein interaction is not shown."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Late pathway modification step."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "General gene-expression data plus HPLC/ESI-MS structure data support this."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The major anthocyanins were indeed 3,5-diglucosides further modified with rutinoside/acyl groups."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanin glycosylation module is appropriate."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The specific diversion tradeoff is speculative and not tested."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "3-GT forms anthocyanin 3-O-glucosides."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanidins and UDP-glucose are the standard substrates and fit the described structures."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "3-GT is a family 1 UDP-glycosyltransferase."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish 3-GT as rate-limiting."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Endogenous tomato gene is implied."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Source is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "MicroTom background."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Cytosolic localization is typical but not experimentally shown here."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Accurately summarizes induction and glycosylated anthocyanin outcome."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are the final product."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins accumulated in peel and flesh."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Consistent with pigment stability and antioxidant function."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 33,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "RT",
+      "category": "Pathway",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "RT was induced indirectly by the E8-driven Del/Ros1 transgene system."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The RT discussed is in tomato fruit."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments were done in MicroTom."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "RT functions in anthocyanin glycoside decoration."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Usefulness for rutinosylated anthocyanin formation is consistent with the observed tomato anthocyanin structures, though direct engineering of RT alone was not tested."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway diagram defines RT as flavonoid 3-O-glucoside-rhamnosyltransferase, consistent with adding rhamnose to form rutinosides."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "RT was among induced genes, and the identified anthocyanins were 3-rutinoside-5-glucoside derivatives."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by gene-expression analysis and MS structural data showing rutinosides."
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "No precise EC number is provided in the paper; 2.4.1.- is a generic placeholder and acceptable as uncertain classification."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "RT performs a modification/storage step for the target product."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Observed in ripening fruit context."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway figure names RT as flavonoid 3-O-glucoside-rhamnosyltransferase."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Induction in Del/Ros1 fruit is consistent with reported pathway activation."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Functional sequence with 3-GT and 5-GT is plausible but direct protein interactions are not shown."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "RT is a late modification step."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Gene-expression analysis plus HPLC/ESI-MS structural profiling support this."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The detected anthocyanins were indeed 3-rutinoside-5-glucoside derivatives."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanin glycoside decoration is appropriate."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Rutinosylated anthocyanins/flavonoids are consistent with the product structures identified."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Flavonoid 3-O-glucosides are correct substrates; UDP-rhamnose is biochemically expected though not explicitly stated in paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Rhamnosyltransferases of this type are glycosyltransferases; consistent though not explicitly discussed."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish RT as rate-limiting."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Endogenous tomato RT is implied."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Source is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "MicroTom background."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Cytosolic localization is typical for glycosyltransferases but not experimentally shown in this paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Matches induction and structural evidence for rutinosylated anthocyanins."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are the target end products."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins accumulated in peel and flesh."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Pigment stabilization/solubility and antioxidant function are consistent with anthocyanin roles, though not directly dissected for RT specifically."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 34,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "5-GT",
+      "category": "Pathway",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "5-GT was induced indirectly by E8-driven Del/Ros1."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene discussed is in tomato fruit."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The work used MicroTom lines."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "5-GT is part of anthocyanin biosynthesis/modification."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Its role in producing 3,5-diglucoside anthocyanins is consistent with the structures found, though this specific engineering claim was not directly tested alone."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway figure identifies 5-GT as flavonoid-5-glucosyltransferase, supporting addition of glucose at the 5-position."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Induction of 5-GT is consistent with the major anthocyanins being 3,5-diglucosides."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by gene-expression analysis and HPLC/ESI-MS identification of 3,5-diglucosylated anthocyanins."
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "A precise EC number is not given in the paper; 2.4.1.- as unspecified glycosyltransferase is acceptable."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "5-GT is required for modification/storage of the target product."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Observed in ripening fruit context."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Correct name from the pathway figure."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Induced in Del/Ros1 fruit as part of anthocyanin pathway activation."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Functional relation to 3-GT, RT, and anthocyanin acyltransferase is plausible but direct physical interaction is not shown."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Late modification step."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Gene-expression analysis and structural profiling support this field."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states that the major anthocyanins were 3,5-diglucosides acylated with cinnamic acids."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanin glycoside decoration is appropriate."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanin 3,5-diglucosides are indeed the major products identified."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanin glucosides and UDP-glucose are biochemically appropriate, though not directly assayed in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "5-GT is a glycosyltransferase, consistent with the pathway annotation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish 5-GT as rate-limiting."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Endogenous tomato 5-GT is implied."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Source is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "MicroTom background."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Cytosolic localization is typical for glycosyltransferases but not experimentally shown here."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Accurately summarizes induction and relevance to 3,5-diglucosylated anthocyanins."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are the end products."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins accumulated in peel and flesh."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Consistent with pigmentation stability and antioxidant function."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 34,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "AAC",
+      "category": "Pathway",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states Del and Ros1 cDNAs were each under the fruit-specific E8 promoter, and AAC is described as a putative anthocyanin acyltransferase induced by Del/Ros1; indirect activation under the E8 transgene system is consistent."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments were done in tomato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies tomato as Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The transformed material was tomato cv. MicroTom."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AAC is explicitly a putative anthocyanin acyltransferase, so anthocyanin modification is supported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a forward-looking interpretation about engineering utility, pigment persistence, color intensity, and bioaccessibility; such application value is not directly assessed in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper refers to a putative anthocyanin acyltransferase and shows acylated anthocyanins, supporting transfer of hydroxycinnamoyl groups onto anthocyanins in general, though direct enzymatic assay was not done."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says Del/Ros1 increased transcripts of a putative anthocyanin acyltransferase and major anthocyanins were acylated delphinidin/petunidin derivatives; 'likely contributed' is a fair inference."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Suppression subtractive hybridization and northern validation are explicitly stated for induced genes; HPLC/ESI-MS characterized acylated anthocyanins."
+        },
+        "EC_Number": {
+          "verdict": "UNCERTAIN",
+          "reason": "No EC number is provided in the paper for this putative acyltransferase."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "As an anthocyanin acyltransferase, it is connected to late modification/storage-readiness of anthocyanins, but 'required' is not directly demonstrated."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The induction and phenotype are described in ripening fruit, matching a fruit ripening context."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly mentions 'a putative anthocyanin acyltransferase'."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states expression of Del and Ros1 increased transcript levels of a putative anthocyanin acyltransferase in fruit."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "No accession number for AAC is reported."
+        },
+        "Gene_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "AAC is used in the figure/pathway context as anthocyanin acyltransferase, but not as a formal gene symbol in the text. The concept is present, the exact gene naming is not formalized."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not report direct protein-protein interactions of AAC with Del, Ros1, 5-GT, PAT, or GST."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanin acylation is a late tailoring/modification step and the paper places AAC after glycosylation in the pathway model."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Suppression subtractive hybridization and northern blot are explicit; HPLC/ESI-MS metabolite analysis is explicit."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies major pigments acylated with caffeoyl, coumaroyl, and feruloyl groups."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanin acylation branch is consistent with the pathway model and compound structures."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Possible effects on hue or bioavailability are not assessed in this paper."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows the products are acylated anthocyanin glycosides."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "Anthocyanin glycosides and hydroxycinnamoyl donors are plausible substrates, but not directly tested here."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "BAHD-type is not reported in the paper."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish AAC as rate-limiting."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The induced gene is from tomato fruit."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The work was performed in MicroTom fruit, though the endogenous gene itself is not variety-specific; still acceptable in context."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Cytosolic localization is not reported in the paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points reflect the paper: induction of a putative acyltransferase, accumulation of heavily acylated anthocyanins, and likely contribution to product diversification/stability, though the stabilizing role is inferred."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant end products are anthocyanins."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "High anthocyanin levels were detected in both peel and flesh of purple tomato fruit."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Pigment role is explicit and antioxidant activity is supported at the fruit level, though not assigned specifically to acylation."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "Del; Ros1; 5-GT; PAT; GST",
+          "new_value": "NA",
+          "reason": "The paper does not report direct protein-protein interactions of AAC with Del, Ros1, 5-GT, PAT, or GST."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "BAHD-type acyltransferase (putative)",
+          "new_value": "NA",
+          "reason": "BAHD-type is not reported in the paper."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "Cytosolic localization is not reported in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 3,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "GST",
+      "category": "Pathway",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Del and Ros1 were driven by E8, and GST is described as induced indirectly in this system."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism is tomato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is given as Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The transformed cultivar is MicroTom."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The figure notes GST may be involved in anthocyanin transport into the vacuole, supporting anthocyanin sequestration/vacuolar transport."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable application inference, but it is not directly tested in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper only says GST may be involved in transport into the vacuole; it does not demonstrate direct catalytic conjugation activity here."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states one of the induced genes was likely involved in anthocyanin transport into the vacuole, and the figure labels GST as potentially involved; supportive but inferential."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Differential expression and pathway figure support are present, but the transport role is inferred from known function rather than directly validated."
+        },
+        "EC_Number": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not assign an EC number to the induced GST or demonstrate its catalytic function in this context."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "GST is connected to anthocyanin storage/transport, but 'required' is not directly shown."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The induced expression occurs in ripening fruit context."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "GST is explicitly named as glutathione S-transferase in the pathway figure."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression of Del/Ros1 increased transcripts of genes likely involved in anthocyanin transport into the vacuole, including GST per the pathway figure and validation framework."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "No accession number is reported."
+        },
+        "Gene_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "GST appears in the pathway figure, but the specific gene identity is not fully defined in the text."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No direct interactions among GST, Del, Ros1, or PAT are reported."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway figure places GST at the vacuolar sequestration/storage step."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports induced genes by suppression subtractive hybridization, northern validation, and microarray confirmation across lines; GST is included in the pathway model, though exact per-gene listing is not fully reproduced here."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The figure text explicitly states PAT and GST may be involved in transport of anthocyanins into the vacuole."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanin vacuolar sequestration module matches the figure description."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Effects on other phenolics are not discussed."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not define GST's product as vacuole-sequestered anthocyanin complexes; this is an inference."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins as transport-associated substrates are consistent with the figure, though not directly assayed."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "GST family assignment is inherent in the name and supported by the figure."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Not established in the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The induced transport-associated gene is from tomato fruit."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Context is MicroTom fruit."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports involvement in transport into the vacuole, but does not directly localize GST to cytosol/tonoplast-associated process."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary captures the paper's inference that GST was induced and likely supported vacuolar sequestration contributing to stable anthocyanin storage."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant stored metabolites are anthocyanins."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins accumulate in peel and flesh cells, and the figure specifies vacuolar transport."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Pigmentation and antioxidant activity are supported at the fruit level; safe intracellular storage is inferred from vacuolar sequestration role."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "Del; Ros1; PAT",
+          "new_value": "NA",
+          "reason": "No direct interactions among GST, Del, Ros1, or PAT are reported."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 1,
+        "uncertain": 8
+      }
+    },
+    {
+      "gene_name": "PAT",
+      "category": "Pathway",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "PAT is described as induced indirectly by Del/Ros1 expressed from the fruit-specific E8 promoter."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study species is tomato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The transformed variety is MicroTom."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PAT is explicitly described as a putative anthocyanin transporter involved in transport into the vacuole."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is an application-oriented inference not directly tested in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports a transport role into the vacuole but does not biochemically characterize the transporter."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly says Del/Ros1 increased transcript levels of genes likely involved in transport of anthocyanins into the vacuole, including a putative anthocyanin transporter."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Suppression subtractive hybridization and northern blot validation are explicitly reported for differential genes; the role is inferred from pathway context and phenotype."
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Transporter; no EC number is expected and none is reported."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "PAT is connected to anthocyanin storage/transport, but 'required' is not directly proven."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression and phenotype occur in ripening fruit context."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper names it as a putative anthocyanin transporter, not an enzyme. The provided field wording is acceptable as the functional name reported."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Induced in Del/Ros1 fruit is explicitly supported."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "No accession number is reported."
+        },
+        "Gene_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "PAT appears in the figure/pathway legend as putative anthocyanin transporter, but not as a formal gene symbol in the text."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No direct protein interactions with Del, Ros1, or GST are reported."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Transport/storage step is supported by the pathway figure and text."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Suppression subtractive hybridization and northern blot are explicit; microarray confirmation across lines is also reported for identified genes."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper cites a putative anthocyanin transporter17 in tomato context, supporting this note."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanin vacuolar transport module is consistent with the figure."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Possible effects on other metabolites are not discussed."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The transporter contributes to a vacuole-imported anthocyanin pool, but this phrasing is inferential rather than directly measured."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are the relevant transported substrates per the figure and text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The specific transporter family is not reported."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Not established in the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The induced transporter gene is from tomato."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Context is MicroTom."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Tonoplast/vacuolar transport system is implied by the transport role into the vacuole, but not directly shown."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary accurately reflects induction of a putative transporter and inferred contribution to vacuolar anthocyanin deposition."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The transported/stored metabolites are anthocyanins."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Fruit peel and flesh cells accumulated anthocyanins and transport into vacuole is specified in the figure."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Pigment storage is supported; antioxidant-associated accumulation is supported at the fruit level."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "Del; Ros1; GST",
+          "new_value": "NA",
+          "reason": "No direct protein interactions with Del, Ros1, or GST are reported."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 1,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "Del (Delila)",
+      "category": "Regulation",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states Del and Ros1 cDNAs were each under the control of the fruit-specific E8 promoter."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The transgenic host is tomato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Transformation was in cv. MicroTom and phenotype was transferred to Money Maker, Ailsa Craig and VF36."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper strongly supports Del as useful for fruit biofortification when coexpressed with Ros1 and under fruit-specific promoters; some phrasing about best use in other species/backgrounds is extrapolative but consistent."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Co-expression with Ros1 produced intense purple peel and flesh and high anthocyanin content."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly described in the paper."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that Del together with Ros1 broadly activated biosynthetic, modification and transport genes required for high anthocyanin accumulation."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Pigmentation followed E8 expression during ripening and began around mature green/breaker stage."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states no abnormal anthocyanin accumulation in stems/leaves and fruit-specific pigmentation beginning during ripening."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states Del and Ros1 interact to induce anthocyanin biosynthesis in snapdragon flowers."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported in the paper."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "No accession number is reported."
+        },
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Delila (Del) is explicitly named."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Del is explicitly stated to interact with Ros1 in snapdragon flowers; no others are directly reported."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows broad activation of anthocyanin biosynthesis plus modification and transport genes."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "These datasets and accession identifiers are reported."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The comparison with Lc/C1 and emphasis on PAL, CHI, and F3'5'H induction are explicit discussion points; statement that Del alone was not tested as sufficient here is also true."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "No visible vegetative defects under fruit-specific expression are supported; broader ectopic effects are speculative."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "Most listed targets are supported collectively because Del/Ros1 increased transcripts of almost all genes required for anthocyanin biosynthesis, side-chain modification, and vacuolar transport; however per-gene direct targeting by Del specifically is not shown."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "Del is a bHLH that interacts with Ros1, consistent with an MYB-bHLH regulatory complex."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states Del encodes a basic helix-loop-helix transcription factor."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Del acts transcriptionally in combination with Ros1 to induce anthocyanin genes."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly a transcription factor."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Broad activation of anthocyanin biosynthetic, tailoring and transport genes is explicitly supported for Del/Ros1 together."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Del is from snapdragon."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Snapdragon is Antirrhinum majus."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "No source variety is reported."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nuclear localization is expected for a TF but not directly stated in the paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary accurately reflects the paper's main findings for Del/Ros1-mediated anthocyanin engineering."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are the target product."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Pigmentation spread through peel, pericarp and inner flesh; vacuolar transport is indicated in the pathway model."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Pigmentation and antioxidant/health association are both explicit."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Del expression was driven by the ripening-associated E8 promoter."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 33,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "Ros1 (Rosea1)",
+      "category": "Regulation",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states Ros1 and Del cDNAs were each under the fruit-specific E8 promoter."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is tomato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Transformation was in MicroTom and phenotype was transferred to Money Maker, Ailsa Craig and VF36."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports Ros1 as useful in combination with Del for anthocyanin biofortification, though statements about heterologous host testing are somewhat extrapolative."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Co-expression with Del caused high anthocyanin accumulation, purple fruit, increased antioxidant capacity, and dietary efficacy in mice at the fruit level."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly used in the study."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Ros1 is presented as the essential MYB partner together with Del for high anthocyanin accumulation."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Phenotype depended on ripening because Ros1 was under the E8 promoter."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports fruit-restricted ripening expression and pigment spread through vascular tissue to peel/pericarp/flesh."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Ros1 functions in anthocyanin induction in snapdragon flowers per the paper."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "No accession number is given."
+        },
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rosea1 (Ros1) is explicitly named."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Ros1 is explicitly stated to interact with Del."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Broad anthocyanin biosynthesis, modification and transport induction is supported for Del/Ros1."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "These omics approaches and accessions are explicitly reported."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states Del and Ros1 interact in snapdragon flowers and discusses specificity relative to C1/Lc."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "No visible growth penalty under fruit-specific expression is supported, but broader constitutive-use effects are speculative."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The broad target list is consistent with Del/Ros1-induced genes, though not assigned to Ros1 alone directly."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "Ros1 forms the MYB-bHLH complex with Del."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states Ros1 encodes a MYB-related transcription factor."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Ros1 acts transcriptionally with Del to activate anthocyanin pathway genes."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly a transcription factor."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Broad activation of anthocyanin structural and transport genes is explicitly supported for the Del/Ros1 combination."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Ros1 is from snapdragon."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Snapdragon is Antirrhinum majus."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "No variety is reported."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nuclear localization is expected for a TF but not directly shown here."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary matches the paper's findings for Ros1 with Del."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are the target metabolites."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins accumulated through peel, pericarp and inner flesh, with vacuolar deposition implied."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Pigmentation and antioxidant/health-associated functions are supported."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression is driven by the ripening-dependent E8 promoter."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 33,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "ANT1",
+      "category": "Regulation",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper mentions overexpression of ANT1 in prior work but does not specify promoter or native/constitutive context."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ANT1 overexpression is discussed in tomato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No variety is specified for the prior ANT1 study in this paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports that ANT1 is less effective than Del/Ros1, but suggestions about combination use with additional partners/pathway genes are not given."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states ANT1 overexpression resulted in limited purple coloring on the skin and cell layers immediately beneath the skin."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "This is based on a referenced prior study, not direct testing here."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports ANT1 as limited, not sufficient for high-level whole-fruit enrichment in the cited context."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Not detailed in this paper."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Not described here beyond the resulting pigmentation pattern."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "ANT1 is an endogenous tomato regulator, but detailed source expression pattern is not discussed."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "No accession number is reported."
+        },
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "ANT1 is explicitly named."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "No interacting proteins are reported in this paper for ANT1."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "ANT1 is explicitly described as a transcription factor that regulates anthocyanin production in tomato."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "No omics data from this study involve ANT1."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Its role as a contextual comparator is accurate."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Not assessed here."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not specify ANT1 targets."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "UNCERTAIN",
+          "reason": "Likely complex involvement is outside what the paper states."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper only says ANT1 encodes a transcription factor regulating anthocyanin production; family/domain is not specified here."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "As a TF regulating anthocyanin production, transcriptional activation is reasonable but not explicitly shown here."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls ANT1 a transcription factor."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The statement is general and consistent with it regulating anthocyanin production, but tissue-range limitation is inferred from phenotype rather than target-gene data."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ANT1 is a tomato gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nuclear localization is inferred for a TF but not stated."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary matches the comparator information provided in the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are the relevant metabolites."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says skin and immediately beneath the skin."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Pigmentation and antioxidant-associated dietary role are consistent with the paper's framing of anthocyanins."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Applied_Promoters",
+          "old_value": "Native/constitutive context not engineered in this study",
+          "new_value": "NA",
+          "reason": "The paper mentions overexpression of ANT1 in prior work but does not specify promoter or native/constitutive context."
+        },
+        {
+          "field": "Applied_Species_Variety",
+          "old_value": "Not specified",
+          "new_value": "NA",
+          "reason": "No variety is specified for the prior ANT1 study in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 2,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "Lc",
+      "category": "Regulation",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The comparator study is cited, but promoter details are not provided in this paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Lc/C1 expression is discussed in tomato fruit."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No tomato variety is specified for the cited comparator study."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that Lc/C1 is ineffective for anthocyanin engineering in tomato and discusses pathway compatibility issues, including F3'5'H/DFR context."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states Lc and C1 increased flavonols but no anthocyanin accumulation was noted."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "This conclusion comes from a referenced prior study, not direct testing here."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper clearly uses Lc/C1 as a comparator showing ineffective anthocyanin induction in tomato."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Not detailed here."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Not detailed in this paper."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Lc is described as a regulatory gene controlling anthocyanin biosynthesis in maize."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "No accession number is reported."
+        },
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Lc is explicitly named."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Lc is discussed together with C1 as the maize regulatory pair."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes Lc/C1 as controlling anthocyanin biosynthesis in maize and affecting flavonoid pathway output in tomato."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "No omics data from this study are presented for Lc."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The discussion explicitly proposes failure due to lack of F3'5'H activation and weaker PAL/CHI induction together with DFR substrate specificity."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Not assessed here."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "The broad phrasing is acceptable, but specific target genes are not directly listed for Lc/C1 in this paper."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "Pairing with C1 is explicit; calling it MYB-bHLH-type is consistent with known identities and the paper's comparison, though not formally detailed."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "Lc is a bHLH transcription factor in maize context; while not explicitly stated here, this is strongly implied by the comparison to Del/Ros1 and known pairing with C1. Still, from paper alone this is not direct."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Transcriptional activation with C1 is consistent with its role as a regulatory gene controlling anthocyanin biosynthesis."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Lc is explicitly one of the regulatory genes encoding transcription factors."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports partial/insufficient activation in tomato, reflected by flavonol increase without anthocyanins."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Lc is from maize."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Maize is Zea mays."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "No variety is reported."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nuclear localization is inferred for a TF but not stated."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary accurately reflects the discussion and cited comparator study."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are the intended target product in this comparison."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says no anthocyanin accumulation was noted in tomato fruit."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Pigmentation and antioxidant-associated dietary role are consistent with paper context."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Applied_Promoters",
+          "old_value": "Not specified in this paper for comparator study",
+          "new_value": "NA",
+          "reason": "The comparator study is cited, but promoter details are not provided in this paper."
+        },
+        {
+          "field": "Applied_Species_Variety",
+          "old_value": "Not specified",
+          "new_value": "NA",
+          "reason": "No tomato variety is specified for the cited comparator study."
+        }
+      ],
+      "stats": {
+        "supported": 30,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "C1",
+      "category": "Regulation",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Promoter details for the cited comparator study are not given in this paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "C1/Lc expression is discussed in tomato fruit."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No variety is specified for the cited comparator study."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that C1/Lc is not optimal for tomato anthocyanin biofortification."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states C1 with Lc increased flavonols but no anthocyanin accumulation was noted."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "This is from a prior referenced study, not direct testing here."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper clearly presents C1/Lc as ineffective for tomato anthocyanin production under the cited conditions."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Not detailed."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Not detailed in this paper."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "C1 is described as a regulatory gene controlling anthocyanin biosynthesis in maize."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "No accession number is reported."
+        },
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "C1 is explicitly named."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "C1 is explicitly discussed together with Lc as the regulatory pair."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Flavonoid/anthocyanin pathway regulation is supported by the paper's description."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "No omics data from this study involve C1."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Its use as a comparator emphasizing species-specific TF compatibility is supported."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Not assessed here."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "Specific target genes are not listed for C1 in this paper."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "Pairing with Lc is explicit."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "C1 is generally a MYB TF, but this paper does not explicitly state the family/domain here."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "As one of the regulatory genes encoding transcription factors, transcriptional activation with Lc is supported."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says Lc and C1 encode transcription factors."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Partial activation insufficient for anthocyanin production in tomato is supported by the flavonol-only phenotype and discussion."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "C1 is from maize."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Maize is Zea mays."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nuclear localization is inferred for a TF but not directly stated."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary accurately captures the paper's comparison and interpretation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are the target metabolite in this context."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says no anthocyanin accumulation was noted in tomato fruit."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Pigmentation and antioxidant-associated roles are consistent with the paper's framing of anthocyanins."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Applied_Promoters",
+          "old_value": "Not specified in this paper for comparator study",
+          "new_value": "NA",
+          "reason": "Promoter details for the cited comparator study are not given in this paper."
+        },
+        {
+          "field": "Applied_Species_Variety",
+          "old_value": "Not specified",
+          "new_value": "NA",
+          "reason": "No variety is specified for the cited comparator study."
+        }
+      ],
+      "stats": {
+        "supported": 30,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "DET1",
+      "category": "Regulation",
+      "verification": {
+        "Applied_Promoters": {
+          "verdict": "UNSUPPORTED",
+          "reason": "DET1 was not transgenically manipulated in this study, and no promoter information is provided for the cited prior silencing work."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "DET1 silencing is discussed in tomato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No variety is specified for the cited work."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports DET1 downregulation as a modest prior strategy compared with Del/Ros1, but caution about pleiotropic tradeoffs is an inference."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states silencing tomato DET1 increases flavonoid levels up to 3.5-fold."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "This is based on referenced prior work, not direct testing here."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports DET1 as an indirect negative regulator and not the central successful regulator in this study."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "DET1 is explicitly described as repressing light-mediated development."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Not detailed here."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "Calling it a tomato endogenous regulator is reasonable, but the paper does not discuss source expression pattern."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "No accession number is reported."
+        },
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "DET1 is explicitly named."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "No interacting proteins are reported in this paper."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says DET1 represses light-mediated development and its silencing increases flavonoids, supporting this description."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "No omics data from this study involve DET1."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "It is indeed mentioned as a prior modest engineering route relative to Del/Ros1."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The suggestion of pleiotropic developmental effects is plausible from its role, but not analyzed in this paper."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specify DET1 targets."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported here."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "Only described as repressing light-mediated development; no family/domain given."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Repression of light-mediated development is explicitly stated."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Developmental/light signaling regulator is consistent with the paper's description, though not named in exactly those words."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Indirect repression of flavonoid accumulation is supported, but direct gene-expression targets are not described."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "DET1 is tomato DET1 in the cited context."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Not reported in the paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary matches the comparator information provided in the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports increased flavonoid levels, not specifically anthocyanins; thus 'Flavonoids / anthocyanins contextually' is broadly consistent."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The context is tomato fruit."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Flavonoid is correct."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Antioxidant and pigmentation-related framing is consistent with flavonoids/anthocyanins in the paper, though not specifically assigned to DET1 study here."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Light-mediated developmental signaling is explicitly implicated."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Applied_Promoters",
+          "old_value": "Native gene; not transgenically manipulated here",
+          "new_value": "NA",
+          "reason": "DET1 was not transgenically manipulated in this study, and no promoter information is provided for the cited prior silencing work."
+        },
+        {
+          "field": "Applied_Species_Variety",
+          "old_value": "Not specified",
+          "new_value": "NA",
+          "reason": "No variety is specified for the cited work."
+        },
+        {
+          "field": "Primary_Regulatory_Targets",
+          "old_value": "Not specified here; broad light-responsive/metabolic outputs",
+          "new_value": "NA",
+          "reason": "The paper does not specify DET1 targets."
+        }
+      ],
+      "stats": {
+        "supported": 29,
+        "unsupported": 3,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 665,
+    "supported": 584,
+    "unsupported": 14,
+    "uncertain": 67,
+    "total_corrections": 14
+  }
+}

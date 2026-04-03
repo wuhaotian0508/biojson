@@ -1,0 +1,895 @@
+{
+  "file": "10.1016@j.molp.2023.10.008",
+  "md_path": "/data/haotianwu/biojson/extractor/input/10.1016@j.molp.2023.10.008.md",
+  "timestamp": "2026-04-03T16:07:54.385804",
+  "genes": [
+    {
+      "gene_name": "GoPGF",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies cotton and names GoPGF as a cotton gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism is explicitly Gossypium hirsutum."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in cotton."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is explicitly Gossypium hirsutum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state the upland cotton variety used was R15 for experiments and transgenic lines."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places GoPGF upstream of GoHSFA4a/GoNAC42, which regulate biosynthesis of both gossypol-type terpenoids and volatile terpenes; the summary explicitly states this hierarchical network controls terpenoid biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These products are repeatedly described as terpenoids/terpenes."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The study localizes volatile and non-volatile terpenoid biosynthesis to secretory glandular cells/pigment glands in leaves, and GoPGF functions in this gland context."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 4F/G discussion states GoPGF expression remained relatively stable or slightly decreased under pathogen or insect invasion; GoPGF is also an SGC/gland marker in the paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show GoPGF silencing decreases GoHSFA4a and GoNAC42 transcripts, and the paper presents GoPGF as an upstream regulator linking gland formation and terpenoid biosynthesis."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "GoPGF is a known gland formation regulator and binds G-box/E-box motifs, but this paper excerpt does not explicitly state its protein family/domain as bHLH."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper shows GoPGF binds the promoter regions of GoHSFA4a and GoNAC42, not protein-protein interactions with proteins."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "GoPGF was tested by VIGS, ChIP-seq, EMSA, Y1H, microscale thermophoresis, and dual-LUC in the Results."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by Figure 4 and related text."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the paper's framing of GoPGF as an upstream established regulator rather than the newly discovered TF."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "GEO GSE243419, GSA CRA012990, and public RNA-seq SRA PRJNA248163 and PRJNA600707 are listed in Data Availability."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states terpenoid phytoalexins accumulate in response to pathogens and insect infestation, indicating defense function."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Pathogen invasion and insect infestation are explicitly discussed as treatments/stimuli."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "GoHSFA4a promoter; GoNAC42 promoter",
+          "new_value": "NA",
+          "reason": "The paper shows GoPGF binds the promoter regions of GoHSFA4a and GoNAC42, not protein-protein interactions with proteins."
+        }
+      ],
+      "stats": {
+        "supported": 16,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "GhTPS6",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GhTPS6 is a cotton gene in this cotton study."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study species is Gossypium hirsutum."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional experiments were done in cotton leaves."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Gossypium hirsutum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods indicate experiments were performed in G. hirsutum variety R15."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state silencing GhTPS6 significantly reduced β-myrcene and heliocides 2 and 3."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "β-myrcene and heliocides are terpenoid-related metabolites discussed in the terpenoid biosynthesis context."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "GhTPS6 is SGC-localized and the paper concludes volatile terpenes and non-volatile terpenoids are produced specifically in SGCs of leaves."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper later frames these terpenoids as defense-related metabolites induced by pathogen/insect attack."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says four TPSs, including GhTPS6, showed distinct and remarkable expression patterns in SGCs."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the explicit VIGS result: β-myrcene and heliocides 2/3 decreased, while trans-β-ocimene and heliocides 1/4 increased."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "GhTPS6 is explicitly described as a terpene synthase and specifically a monoterpene synthase."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses VIGS and metabolite profiling in this study, and cites prior work for its enzymatic function."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements are directly supported by the Results text."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly discusses GhTPS6 as linking β-myrcene production to downstream heliocide formation via Diels-Alder reaction."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The scRNA-seq datasets GSE243419 and CRA012990 are listed in Data Availability."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The metabolite shift toward trans-β-ocimene and heliocides 1/4 after silencing is explicitly stated."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says GhTPS6 specifically catalyzes β-myrcene synthesis, but does not explicitly name the enzyme 'β-myrcene synthase' in this excerpt."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GhTPS6 is described as a monoterpene synthase in the monoterpene branch."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GhTPS6 uses geranyl diphosphate from the MEP pathway, i.e., the MEP-derived monoterpene branch."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly states GhTPS6 catalyzes formation of β-myrcene from geranyl diphosphate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "β-myrcene is explicitly stated as the product catalyzed by GhTPS6."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is directly restated from the Results."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results support both direct β-myrcene formation and indirect support of heliocides 2/3 formation."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "As a terpene synthase converting prenyl diphosphate to β-myrcene, it is a branch/terminal synthase step."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish GhTPS6 as rate limiting; 'not established' is faithful."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 25,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "GhTPS1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GhTPS1 is discussed in cotton."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study species is Gossypium hirsutum."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression localization is in cotton leaf cells."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Gossypium hirsutum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper's cotton material is R15."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GhTPS1 is responsible for synthesis of β-caryophyllene and α-humulene."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are volatile sesquiterpene terpenoids."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "GhTPS1 is among TPSs showing distinct expression in SGCs, and volatile terpenes are concluded to be biosynthesized in SGCs."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper later presents volatile terpenes as stress/defense-associated terpenoids."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GhTPS1 is among the four TPSs with distinct and remarkable expression patterns in SGCs."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "Association with synthesis is supported from cited prior work and expression data, but GhTPS1 itself was not directly perturbed/tested functionally in this paper's Results."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "GhTPS1 is explicitly described as a terpene synthase and sesquiterpene synthase."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "In this paper GhTPS1 is supported by scRNA-seq localization, while enzymatic function is cited from previous work; the field accurately reflects that."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "Points 1 and 2 are supported, but point 3 ('contributes') is inferential rather than directly tested in this paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed references prior work for GhTPS1 function rather than revalidating it here."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed scRNA-seq datasets appear in Data Availability."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper calls GhTPS1 a sesquiterpene synthase, but does not give a more specific enzyme name beyond that."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GhTPS1 belongs to sesquiterpene biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says GhTPS1 is a sesquiterpene synthase using farnesyl diphosphate from the MVA pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "It explicitly uses farnesyl diphosphate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "β-caryophyllene and α-humulene are explicitly given as products."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This paraphrases the explicit statement in Results."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents GhTPS1 as directly synthesizing those volatile terpenes."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "As a TPS forming final sesquiterpenes from FPP, this is a branch/terminal synthase step."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The study does not establish this, so 'not established' is accurate."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 22,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "GhTPS2",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GhTPS2 is a cotton TPS gene discussed in this study."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study species is Gossypium hirsutum."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression localization was analyzed in cotton."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Gossypium hirsutum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental cotton variety in Methods is R15."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The text says GhTPS2 primarily catalyzes formation of guaia-1(10),11-diene."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "This metabolite is discussed as a sesquiterpene terpenoid product."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "GhTPS2 is among TPSs with distinct expression in SGCs; the paper concludes volatile terpene biosynthesis is SGC-specific."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not specifically assign guaia-1(10),11-diene a defense function in the Results excerpt."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GhTPS2 is one of the four TPSs with distinct and remarkable SGC expression."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "Its product association comes from cited prior work and expression data; GhTPS2 was not directly functionally perturbed in this paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "GhTPS2 is explicitly described as a terpene synthase and sesquiterpene synthase."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "This paper supports it by scRNA-seq localization and cites prior enzymatic assignment; that is accurately summarized."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "Statements 1 and 2 are supported; statement 3 ('contributes') is plausible but not directly tested here."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not directly perturb GhTPS2, so this note is accurate."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed scRNA-seq accessions are in Data Availability."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Only the class 'sesquiterpene synthase' is explicit; no more specific formal enzyme name is provided in the excerpt."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GhTPS2 falls within sesquiterpene biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GhTPS2 uses farnesyl diphosphate from the MVA pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Farnesyl diphosphate is explicitly stated for GhTPS2 class usage."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Guaia-1(10),11-diene is explicitly stated as the primary product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a faithful paraphrase of the Results."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents GhTPS2 as directly forming this target product."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "TPS conversion from FPP to sesquiterpene is a terminal/branch synthase step."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish this, so 'not established' is accurate."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 21,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "GhTPS3",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GhTPS3 is discussed as a cotton TPS gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The organism is Gossypium hirsutum."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression localization was analyzed in cotton leaves."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Gossypium hirsutum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods name R15 as the cotton variety used."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says GhTPS3 is implicated in biosynthesis of L-pinene and β-pinene."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are monoterpene terpenoids."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "GhTPS3 is among TPSs strongly expressed in SGCs, and volatile terpenes are concluded to be produced in SGCs."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper later discusses these monoterpenes as induced in defense contexts."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The text states four TPSs, including GhTPS3, have distinct and remarkable expression in SGCs."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The gene is associated with these products, but not directly perturbed or validated in this paper's Results."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "GhTPS3 is explicitly described as a terpene synthase and monoterpene synthase."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "This study provides scRNA-seq localization and cites prior enzymatic functional assignment."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "Enrichment and prior product implication are supported, but direct contribution in this paper is not experimentally demonstrated."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed references prior work rather than newly testing GhTPS3 function."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The scRNA-seq accessions are listed in Data Availability."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly categorizes GhTPS3 as a monoterpene synthase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GhTPS3 belongs to monoterpene biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GhTPS3 uses geranyl diphosphate from the MEP pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "As a monoterpene synthase using GPP from the MEP pathway, this substrate is directly indicated."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "L-pinene and β-pinene are explicitly named as GhTPS3-associated products."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a faithful paraphrase of the functional statement in Results."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The cited function is that GhTPS3 directly forms these monoterpenes."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "TPS conversion from GPP to monoterpenes is a branch/terminal synthase step."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish rate limitation; 'not established' is accurate."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "GoHSFA4a",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 3A explicitly gives GoHSFA4a as Gh_A05G3255/Gh_D04G0354."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GoHSFA4a is a cotton gene in this study."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is explicitly Gossypium hirsutum."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GoHSFA4a was tested in cotton."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Gossypium hirsutum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments were carried out in cotton variety R15 according to Methods."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "VIGS of GoHSFA4a reduced gossypol-type non-volatile terpenoids, β-caryophyllene, α-humulene, L-pinene, β-pinene, β-myrcene, and trans-β-ocimene."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are terpenoid/terpene metabolites."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "GoHSFA4a is specifically expressed in pigment glands/SGCs and regulates terpenoid biosynthesis in SGCs of leaves."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly links induced terpenoid accumulation to pathogen and insect defense."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Pathogen invasion, insect infestation, and developmental signals are all explicitly discussed in relation to GoHSFA4a."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 3A and text show SGC/pigment-gland enrichment, low expression in glandless CCRI12gl, and Figure 4F/G discussion states induction by pathogen and insect invasion."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "VIGS and CRISPR reduce terpenoid levels, downregulate biosynthetic genes, and do not alter gland development."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper shows GoPGF activates/binds the promoter of GoHSFA4a, not a protein-protein interaction with GoHSFA4a."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "GoHSFA4a is explicitly an HSF transcription factor."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The cited scRNA-seq, GSA, and public RNA-seq accessions are all in Data Availability."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results support GoHSFA4a as a key downstream activator affecting gland-associated terpenoid production under developmental and stress contexts."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Dual-LUC and binding assays show GoHSFA4a activates target gene expression."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The text says it is homologous to AtHSFA4a and belongs to the HSFA4 subfamily."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "pGoHSFA4a::GUS and target promoters in dual-LUC are explicitly described."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states coordinated regulation of MVA/gossypol-pathway genes and volatile/non-volatile terpenoid biosynthesis."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species material used in this study is R15."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly reported for GoHSFA4a except that qRT-PCR is included under gene expression analysis and used in the Results."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point is directly supported by Results and figures."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes heat stress does not affect GoHSFA4a expression despite HSFA4 family expectations."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "HMGS and CYP736A196 are explicitly shown as direct targets; broader related genes are supported by activation assays and expression changes."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Supplemental Figure 13A shows nuclear localization."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says GoHSFA4a activates MVA and gossypol pathway genes."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "GoPGF directly activates GoHSFA4a, and pathogen/insect/developmental signals are discussed as relevant inputs."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "GoPGF",
+          "new_value": "NA",
+          "reason": "The paper shows GoPGF activates/binds the promoter of GoHSFA4a, not a protein-protein interaction with GoHSFA4a."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 1,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "GoNAC42",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 3A explicitly gives GoNAC42 as Gh_A06G1947/Gh_D06G2096."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GoNAC42 is a cotton gene in this study."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Gossypium hirsutum."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GoNAC42 was tested in cotton."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Gossypium hirsutum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state experiments used cotton variety R15."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "VIGS of GoNAC42 reduced gossypol-type non-volatile terpenoids and the listed volatile terpene products."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are terpenoid metabolites."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "GoNAC42 is specifically expressed in pigment glands/SGCs in leaves."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links terpenoid induction to pathogen and insect defense."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Pathogen invasion, insect infestation, and developmental signals are explicitly discussed."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 3A and text show SGC/pigment-gland enrichment, low expression in glandless CCRI12gl, and induction under pathogen/insect challenge."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "VIGS reduces volatile and non-volatile terpenoids and related gene expression without affecting gland development."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper shows promoter-level regulation by GoPGF, not protein-protein interaction between GoNAC42 and GoPGF."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "GoNAC42 is explicitly a NAC TF."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The cited accessions are listed in Data Availability."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents GoNAC42 as a key downstream activator coordinating gland-specific terpenoid biosynthesis."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Dual-LUC and DNA-binding assays support transcriptional activation."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says it is homologous to AtNAC042 and is a NAC TF."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "pGoNAC42::GUS and target promoters in dual-LUC are explicitly described."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results show coordination of MVA/gossypol-pathway genes and volatile/non-volatile terpene biosynthesis."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The study materials are from R15."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed methods are all reported for GoNAC42 in the paper."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states no reciprocal effect between GoHSFA4a and GoNAC42 expression."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four summary points are directly supported by the Results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed presents GoNAC42 as acting in parallel with GoHSFA4a downstream of GoPGF, with no hierarchical regulation detected between them."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "HMGR and DH1 are explicitly identified as direct targets, with additional related genes affected."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Subcellular localization showed nuclear localization."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says it activates MVA and gossypol pathway genes."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "GoPGF directly activates GoNAC42, and pathogen/insect/developmental signals are discussed as relevant."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "GoPGF",
+          "new_value": "NA",
+          "reason": "The paper shows promoter-level regulation by GoPGF, not protein-protein interaction between GoNAC42 and GoPGF."
+        }
+      ],
+      "stats": {
+        "supported": 29,
+        "unsupported": 1,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "CGP1",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CGP1 is discussed as a cotton regulator."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study species is Gossypium hirsutum."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CGP1 is mentioned in the context of cotton leaf SGC TFs."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Gossypium hirsutum."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper mentions CGP1 as involved in gland pigmentation, but does not specify a terminal metabolite or metabolite class for it in this study."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "It is mentioned in relation to gland pigmentation, i.e., pigment glands."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CGP1 is explicitly mentioned among known SGC/gland-related TFs in the identified TF set."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states CGP1 is involved in gland pigmentation, citing previous work."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly called the MYB TF CGP1."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper only mentions CGP1 via background citation and does not newly validate it; this field accurately states that."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a faithful summary: CGP1 is cited as a known gland pigmentation regulator and is not a primary focus here."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects that CGP1 is contextual rather than functionally characterized in this paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly names CGP1 as a MYB transcription factor."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 12,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 191,
+    "supported": 176,
+    "unsupported": 3,
+    "uncertain": 12,
+    "total_corrections": 3
+  }
+}

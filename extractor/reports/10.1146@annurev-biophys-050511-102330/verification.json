@@ -1,0 +1,619 @@
+{
+  "file": "10.1146@annurev-biophys-050511-102330",
+  "md_path": "/data/haotianwu/biojson/extractor/input/10.1146@annurev-biophys-050511-102330.md",
+  "timestamp": "2026-04-03T17:00:28.677494",
+  "genes": [
+    {
+      "gene_name": "bacA",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states: 'an enzyme present in E. coli ... bacA'."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Escherichia coli is explicitly named in the review section discussing bacA."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "bacA is discussed specifically in E. coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Escherichia coli is explicitly the species discussed for bacA."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The review says bacA 'was recently shown to be an undecaprenyl pyrophosphatase'."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by the statement that bacA was long thought to be an undecaprenol kinase but was reassigned as an undecaprenyl pyrophosphatase."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "If bacA is an undecaprenyl pyrophosphatase, the direct product inferable from the text is undecaprenyl phosphate in the recycling pathway."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Undecaprenyl phosphate is an undecaprenoid lipid carrier, but the exact class label 'terpenoid' is not explicitly used in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses undecaprenyl phosphate recycling in bacterial membranes, but does not explicitly state a specific accumulation site for bacA product."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states undecaprenyl phosphate serves as the covalent scaffold/carrier for peptidoglycan components and related cell wall molecules."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are accurately summarized from the review discussion of bacA as a contrasted enzyme, not the dgkA-like UDPK."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The text presents bacA reassignment as prior work cited in the review, i.e. biochemical reassignment from the literature."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "bacA is indeed mentioned only as a contrasted enzyme in the undecaprenoid recycling discussion, not as a main experimental subject of this review."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 11,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "dgkB",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly discusses 'the dgkA gene of another Gram-positive organism, Bacillus subtilis' and later 'B. subtilis encodes a functional DAGK ... dubbed dgkB'."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Bacillus subtilis is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The dgkB discussion is specifically in Bacillus subtilis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Bacillus subtilis is explicitly named."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states many bacteria contain homologs to the 'water soluble eukaryotic diacylglycerol kinases' and that B. subtilis encodes such a functional DAGK, dgkB."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review states Rock and colleagues showed dgkB provides the critical DAGK activity required for recycling DAG produced as a by-product of lipoteichoic acid production in Gram-positive organisms."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "As a DAGK, the direct product is phosphatidic acid; this is the established reaction throughout the review."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Phosphatidic acid is explicitly discussed as a phospholipid/glycerophospholipid intermediate."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links DAG recycling to membrane-associated processes, but does not explicitly state a product accumulation site for dgkB."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The review presents phosphatidic acid as a central intermediate in glycerophospholipid biosynthesis, supporting phospholipid homeostasis."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an accurate summary of the explicit dgkB discussion in the review."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says Rock and colleagues demonstrated function and determined the structure of the enzyme."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "dgkB is indeed included in the review as an important contextual distinction from Gram-positive dgkA/UDPK."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says dgkB is homologous to water-soluble eukaryotic DAGKs, implying non-integral character, but does not explicitly assign 'cytosol/peripheral to membrane' localization."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 12,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "dgkA",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states dgkA encodes diacylglycerol kinase in E. coli and undecaprenol kinase in many Gram-positive bacteria."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed species are explicitly discussed in relation to dgkA: E. coli, Streptococcus mutans, Bacillus subtilis, and Staphylococcus aureus."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "These Latin binomials all appear in the paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The review broadly discusses dgkA family function across prokaryotes."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "These specific prokaryotic species are explicitly covered as examples."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The review describes dgkA products as very small multispan membrane enzymes and E. coli DAGK as a homotrimer with three transmembrane helices per subunit."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "DAGK/UDPK are described as membrane enzymes associated with the plasma membrane."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly links dgkA to DAG recycling in glycerophospholipid-related metabolism and undecaprenol recycling associated with cell wall biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed branch is explicitly described: MDO-cycle DAG recycling, LPS-related DAG recycling, and undecaprenol-to-undecaprenyl phosphate recycling."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The review repeatedly describes dgkA functions as recycling/salvage roles rather than de novo synthesis."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly states E. coli DAGK uses sn-1,2-diacylglycerol and Gram-positive UDPK uses undecaprenol, with ATP/MgATP as donor."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly gives phosphatidic acid for DAGK and undecaprenyl phosphate for UDPK."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a faithful synthesis of the review's explicit reaction descriptions."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "dgkA directly forms phosphatidic acid or undecaprenyl phosphate according to the paper."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says DAGK is not especially fast but appears matched to substrate diffusion/flip-flop in vivo; it does not claim classic rate-limiting status."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed effects are explicitly discussed across species: DAG detoxification/recycling in Gram-negatives and acid resistance, lantibiotics, biofilm formation, virulence, and sporulation in Gram-positives."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Both phosphatidic acid and undecaprenyl phosphate are explicit reaction products."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Glycerophospholipid for phosphatidic acid is supported, but 'terpenoid lipid carrier' is not the exact wording used for undecaprenyl phosphate."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Both product contexts are membrane/plasma membrane associated throughout the review."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly describes PA as central to phospholipid biosynthesis and DAG detoxification, and undecaprenyl phosphate as carrier/scaffold for peptidoglycan and teichoic-acid/cell wall components."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The E. coli regulatory relationships stated here are explicitly described in the review."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Low osmolarity, acidic culture conditions, heat stress, and stringent response are all explicitly mentioned in relation to these physiological contexts."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Functional/regulatory linkage to BasR/BasS and PlsB is described, but calling them direct interacting proteins is not supported."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The review indeed mentions a second promoter for plsB and does not provide specific dgkA promoter names."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed method categories are explicitly represented in the review's summary of prior studies."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The review proposes UDPK as a possible anti-cariogenic drug target and gives no plant/crop engineering framing."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately captures the main review conclusions about dgkA across species."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper is a review and explicitly emphasizes species-dependent functional differences within the dgkA family."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 26,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "basR",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "basR is discussed in the E. coli regulatory context."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Escherichia coli is explicitly the organism for this regulatory discussion."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The basR/dgkR relationship is discussed in E. coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Escherichia coli is explicitly named."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states basR is part of the basRS two-component signaling system, so response regulator is appropriate."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly refers to the basRS two-component signaling system."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says dgkA transcription is up-regulated by signaling originating in basR, tying it to DAG recycling during LPS biosynthesis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The linked metabolic outcome of dgkA activity in E. coli is phosphatidic acid production from DAG."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Phosphatidic acid is a glycerophospholipid intermediate as discussed in the review."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Membrane context is clear, but explicit 'accumulation site' for the metabolite is not stated."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "PA is described as supporting phospholipid biosynthesis and lipid recycling/homeostasis."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states dgkA transcription is up-regulated by basR-originating signaling."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper connects basRS-regulated dgkA transcription to recycling DAG generated during LPS biosynthesis."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "dgkA is explicitly identified as transcriptionally up-regulated by basR-originating signaling."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Upregulation/activation of dgkA transcription is explicitly stated."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "The review places basRS within regulation of genes involved in LPS biosynthesis; two-component signaling is explicit."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a faithful inference from basR-mediated dgkA upregulation and dgkA's role in converting DAG to PA during LPS biosynthesis."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "BasS is the cognate partner in the explicitly named basRS two-component system."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly names the basRS two-component system."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links basRS to LPS biosynthesis regulation but does not specify a discrete environmental condition."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review describes this as part of an elegant regulatory/genetic study by Bouveret and coworkers."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Potential antibacterial engineering/target value for basR is not discussed in the paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points match the review text, including identification of basR as dgkR and its upregulation of dgkA."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "basR is indeed included because it is explicitly identified as a regulator of dgkA."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Potential antibacterial regulatory target but not relevant to crop nutrient breeding",
+          "new_value": "NA",
+          "reason": "Potential antibacterial engineering/target value for basR is not discussed in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "σE",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "σE is discussed in the E. coli dgkA/plsB regulatory context."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Escherichia coli is explicitly the organism under discussion."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The described regulation occurs in E. coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Escherichia coli is explicitly named in this context."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "σE is explicitly identified as a heat stress-induced factor; classifying it as an alternative sigma factor is standard and directly consistent."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Sigma factor identity is explicit from the symbol σE and phrasing."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says σE activates plsB transcription while down-regulating dgkA, creating reciprocal modulation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The connected metabolic intermediate in this discussion is phosphatidic acid."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Phosphatidic acid is discussed as a glycerophospholipid intermediate."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "A specific accumulation site is not explicitly stated."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "PA is explicitly described as a central phospholipid intermediate."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly states transcriptional activation of plsB and downregulation of dgkA by σE."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an accurate inference from reciprocal regulation of plsB and dgkA in phospholipid synthesis versus DAG recycling."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "plsB and dgkA are explicitly named as targets of reciprocal σE-related regulation."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated: activates plsB and down-regulates dgkA."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "σE is explicitly described as heat stress-induced."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The reciprocal regulatory shift is supported, but the specific phrasing about flux to target product is an interpretive extension rather than explicit result."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "UNCERTAIN",
+          "reason": "Although sigma factors act through RNA polymerase holoenzyme, this specific complex involvement is not stated in the paper."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state cytosolic localization for σE."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Heat stress-induced is explicitly stated."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Heat stress-induced is explicitly stated in E. coli."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Heat stress is explicitly mentioned."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The review attributes these findings to a recent regulatory study by Bouveret and co-workers."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three points faithfully summarize the explicit text."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This characterization matches how σE is used in the review background."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "The paper does not state cytosolic localization for σE."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "Sgp",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Sgp is discussed in the context of Streptococcus mutans and related Gram-positive organisms."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Streptococcus mutans is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The operon context is given for Gram-positive bacteria such as Streptococcus mutans."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Streptococcus mutans is explicitly named."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says Sgp is a small GTPase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says Sgp is homologous to Era GTPase."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The review says the operon observations suggest UDPK plays a role in a stress-induced pathway that modulates ribosome function; this cautious phrasing is preserved."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The linked UDPK product in this pathway context is undecaprenyl phosphate."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses undecaprenyl phosphate as an undecaprenoid carrier but does not use the exact label 'terpenoid lipid carrier'."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Membrane context is implied, but no explicit accumulation site is stated."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Undecaprenyl phosphate is explicitly described as the scaffold/carrier for peptidoglycan and related cell wall components."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states Era/Sgp membrane association versus RNA association is reversible and stress responsive; indirect pathway linkage is appropriate."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "UNCERTAIN",
+          "reason": "The review suggests a stress-induced pathway affecting ribosome function, but does not establish that Sgp controls a metabolic process directly."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Acidic culture conditions and physiological stress are explicitly mentioned for Sgp/Era membrane association."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The field is appropriately cautious, stating direct regulation is not shown and only operon association implies coupling."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Direct binding to ribosomal RNA is explicit, and operon association with ygfG/dgkA is explicit, but 'interacting proteins' overstates direct protein-protein interactions."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The review explicitly says Era membrane association versus RNA association is reversible; for homologous Sgp acidic conditions include membrane association."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper mentions membrane association under acidic conditions, not an expression pattern per se."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "Again, acidic culture conditions affect association behavior, not explicitly expression level."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Acidic culture conditions/low pH are explicitly mentioned."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents this as operon/contextual association plus prior functional studies on Sgp/Era-like proteins."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Potential anti-cariogenic target value is discussed for UDPK, not for Sgp specifically."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary carefully reflects the review's explicit statements and uncertainty."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed treats Sgp as an operon-associated factor rather than a direct validated metabolic regulator."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Potential anti-cariogenic target context, but indirect",
+          "new_value": "NA",
+          "reason": "Potential anti-cariogenic target value is discussed for UDPK, not for Sgp specifically."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 1,
+        "uncertain": 6
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 128,
+    "supported": 108,
+    "unsupported": 3,
+    "uncertain": 17,
+    "total_corrections": 3
+  }
+}
