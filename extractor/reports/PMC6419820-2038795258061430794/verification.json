@@ -1,0 +1,163 @@
+{
+  "file": "MinerU_markdown_PMC6419820_2038795258061430794",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC6419820_2038795258061430794.md",
+  "timestamp": "2026-03-31T22:21:40.425251",
+  "genes": [
+    {
+      "gene_name": "SCD1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses human NSCLC patient tissues and human NSCLC cell lines; SCD1 measurements are from those human materials."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Human patient tissues/cell lines are used, so Homo sapiens is supported by context."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied experimental systems for this gene include human patient tissues and human NSCLC cell lines."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Those applied systems are human, i.e. Homo sapiens."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly studies NSCLC patient tissues and the cell lines HCC827, PC9, H1975, and HCC827GR."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states OA (oleic acid) is an SCD1 enzymatic product."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "OA is explicitly described as a kind of MUFA, i.e. a fatty acid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show OA increases lipid droplet content, restores proliferation/survival signaling, reduces TKI cytotoxicity, and is associated with resistance phenotypes."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SCD1 is described as a key enzyme in lipid metabolism that generates MUFAs; the study frames it within monounsaturated fatty acid/lipid droplet-associated lipid metabolism."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly state SCD1 introduces a double bond into palmitic and stearic acids, yielding palmitoleic acid and OA, matching a desaturation branch to MUFA production."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper calls SCD1 a key enzyme, but does not explicitly define it as a 'branch point' enzyme."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "SCD1 is expanded in the abbreviations and text as Stearoyl-CoA Desaturase 1."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided anywhere in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The enzyme is functionally described as a desaturase, but specific family/domain terminology such as 'integral membrane desaturase' does not appear."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state that SCD1 localizes to the endoplasmic reticulum."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state SCD1 introduces a double bond into palmitic and stearic acids."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state SCD1 gives rise to palmitoleic acid and OA."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This reaction description closely matches the explicit statement in Results about introducing a double bond into palmitic and stearic acids to yield palmitoleic acid and OA."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly identifies OA as an enzymatic product of SCD1."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows intracellular lipid droplet accumulation in tumor cells and cell lines, and links OA to higher LD content, but does not directly state that OA itself accumulates specifically in lipid droplets."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support higher SCD1 in post-TKI tissues and resistant cell lines, decrease after short-term Gefitinib from database/cell staining context, and decrease after g-PPT treatment by western blot."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the reported patterns in H1975/HCC827GR and post-TKI tumors, plus downregulation by g-PPT and reduction after short-term Gefitinib exposure."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The study directly examines long- vs short-term EGFR-TKI treatment, OA supplementation, and g-PPT treatment."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links SCD1 and EGFR signaling phenotypically and measures both, but does not directly demonstrate a physical protein interaction in this study; the mechanistic EGFR stabilization of SCD1 is cited from prior literature."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are used in the paper to evaluate SCD1 or associated lipid phenotypes: IHC, western blot, GEO datasets GSE83666/GSE38310, Oil Red O/Nile red/BODIPY, and xenograft IHC/IF."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that high SCD1 is associated with LD accumulation and TKI resistance, OA reduces TKI sensitivity, and g-PPT lowers SCD1/LDs and restores Gefitinib sensitivity in resistant models."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an accurate synthesis of the Results: elevated SCD1 in resistant/post-TKI settings, OA reduces TKI cytotoxicity and restores signaling, and g-PPT suppresses SCD1/LDs and synergizes with Gefitinib in vitro and in vivo."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "SCD1 is repeatedly called a key enzyme/control point in lipid metabolism, but the paper does not explicitly establish it as a rate-limiting step."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly uses GEO datasets GSE83666 and GSE38310."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports context-dependent effects: in PC9 sensitive cells, g-PPT plus Gefitinib did not enhance apoptosis and even weakened Gefitinib-induced apoptosis relative to Gefitinib alone."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the paper's framing: SCD1 is presented as the central metabolic link to EGFR signaling, MUFA/OA, LDs, and resistance, while direct EGFR-mediated stabilization is cited from previous work rather than proven here."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.19.1",
+          "new_value": "NA",
+          "reason": "No EC number is provided anywhere in the paper."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Endoplasmic reticulum",
+          "new_value": "NA",
+          "reason": "The paper does not state that SCD1 localizes to the endoplasmic reticulum."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 2,
+        "uncertain": 5
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 31,
+    "supported": 24,
+    "unsupported": 2,
+    "uncertain": 5,
+    "total_corrections": 2
+  }
+}

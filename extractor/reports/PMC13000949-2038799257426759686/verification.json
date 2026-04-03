@@ -1,0 +1,403 @@
+{
+  "file": "MinerU_markdown_PMC13000949_2038799257426759686",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC13000949_2038799257426759686.md",
+  "timestamp": "2026-03-31T22:05:06.090724",
+  "genes": [
+    {
+      "gene_name": "OsFtsh2",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsFtsh2 is discussed in rice throughout the paper, including prior studies and experiments in rice protoplasts and rice mutant backgrounds."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies the study species as rice (Oryza sativa L.) in the title/keywords."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsFtsh2 constructs and mutants were tested in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental plant is rice, given as Oryza sativa L."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Most analyses used Chunjiang06 WT and ft background; OsFtsh2 CRISPR was transformed into WT and ft backgrounds, matching 'Chunjiang06 and transgenic backgrounds'."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state that previous studies showed OsFtsH2 encodes an ATP-dependent zinc metalloprotease."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Subcellular localization results indicated OsFtsh2-GFP was localized in chloroplasts."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "OsFtsh2 was studied as a photosystem repair protein; the paper does not directly link OsFtsh2 itself to carotenoid as a terminal metabolite."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No direct OsFtsh2-specific evidence ties it to carotenoid metabolite production/class."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This function is true for carotenoids generally in the paper, but not demonstrated as an OsFtsh2-associated terminal metabolite field."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Leaves/chloroplasts are relevant to the study, but the paper does not assign a terminal metabolite accumulation site specifically for OsFtsh2."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show OsFT interacts with OsFtsh2, both localize in chloroplasts, and ft/ftsh2 double mutants are smaller and paler than single mutants, supporting a role in PSII/photosynthetic maintenance."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed points are supported by Results: OsFtsh2 was identified as an OsFT interactor involved in PSII repair; interaction/co-localization were shown by Y2H, BiFC, LCI, Co-IP; double mutants had enhanced defects."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods appear in Materials/Results for OsFtsh2: Y2H, subcellular localization, BiFC, LCI, Co-IP, CRISPR-Cas9 mutagenesis, and mutant phenotyping."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Double CaMV35S promoter is explicitly stated for localization vectors, but 'Ubi promoter (fusion constructs)' is not clearly stated for OsFtsh2 interaction fusion constructs as phrased here; pUbi vectors were used in Co-IP, not generally all fusion constructs."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "High light context is discussed for PSII repair and ftsh2 function, and seedling-stage phenotyping of ftsh2/double mutant is shown."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Physical interaction between OsFtsh2 and OsFT was shown by Y2H, BiFC, LCI, and Co-IP."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state that loss-of-function OsFtsh2 mutation causes albino lethality in rice seedlings per prior studies, and the double mutant had more severe defects."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes the paper's experimental framing: OsFtsh2 is not a carotenoid enzyme but an experimentally tested interactor linking OsFT to PSII protein repair/renewal."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The caution about severe loss-of-function is consistent with the paper, but explicit breeding/engineering application value for OsFtsh2 is not discussed in Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "Carotenoids",
+          "new_value": "NA",
+          "reason": "OsFtsh2 was studied as a photosystem repair protein; the paper does not directly link OsFtsh2 itself to carotenoid as a terminal metabolite."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "carotenoid",
+          "new_value": "NA",
+          "reason": "No direct OsFtsh2-specific evidence ties it to carotenoid metabolite production/class."
+        },
+        {
+          "field": "Terminal_Metabolite_Function",
+          "old_value": "Support photosynthetic pigment function and photoprotection",
+          "new_value": "NA",
+          "reason": "This function is true for carotenoids generally in the paper, but not demonstrated as an OsFtsh2-associated terminal metabolite field."
+        }
+      ],
+      "stats": {
+        "supported": 14,
+        "unsupported": 3,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "OsFT",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Vector construction and Results explicitly identify OsFT as LOC_Os07g10490."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsFT is a rice gene studied in this rice paper."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper specifies rice as Oryza sativa L."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The ft mutant was identified in the japonica cultivar Chunjiang06, which served as WT for most analyses."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsFT was tested in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental species is rice, Oryza sativa L."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Most experiments were done in Chunjiang06 background, including WT, ft, complementation, and overexpression lines."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states OsFT is a new allele of OsZDS encoding ζ-carotene desaturase and involved in carotenoid biosynthesis."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "OsFT is explicitly described as encoding ζ-carotene desaturase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The study repeatedly states OsFT functions in the carotenoid biosynthesis pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links OsFT to carotenoid biosynthesis upstream of all-trans-β-carotene and xanthophyll/ABA/SL-related products, though some wording is imperfect."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "OsFT is clearly in the carotenoid pathway, but 'midstream' is an interpretive classification not explicitly stated."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies OsFT as ZDS and shows downstream effects on all-trans-β-carotene and xanthophyll-cycle metabolites; a carotenoid desaturation step at ζ-carotene stage is consistent with the paper's assignment."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "As ζ-carotene desaturase, the named substrate ζ-carotene is directly implied by the enzyme identity stated in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not clearly name the immediate product(s) of OsFT, only downstream carotenoid consequences; 'more desaturated carotenoid intermediates' is broadly inferable but not explicit."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows OsFT affects downstream all-trans-β-carotene, ABA, and SL via carotenoid biosynthesis, supporting a precursor-supply relationship."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "All-trans-β-carotene was directly measured and shown to be affected by OsFT genotype."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "All-trans-β-carotene is a carotenoid, consistent with the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states carotenoids are important for photosynthetic pigments/photoprotection and are precursors for ABA and SL."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "All-trans-β-carotene was measured from rice leaves harvested at tillering stage."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "OsFT-GFP was localized to chloroplasts."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GUS and RT-PCR showed high expression in stem, leaf, and sheath, and lower expression in panicle and root."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Same expression pattern was directly reported in the transgenic/experimental rice context."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support that OsFT loss reduces pigments, photosystem stability, lutein-cycle components, all-trans-β-carotene, and tillering, while overexpression increases photosynthesis-related performance, ABA, tillering, drought tolerance, and yield."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by Results, including cloning/complementation, reduced metabolites/photosystem proteins/tillers in loss-of-function, and improved photosynthetic/drought/yield traits in overexpression."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are present and used for OsFT in the paper."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly call OsFT a rate-limiting or key control step."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq with 12 Illumina HiSeq libraries is explicitly described; no accession number is provided in the paper text, so 'accession number NA' is consistent."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The Ubi promoter was used for OsFT overexpression constructs, and a native upstream OsFT promoter fragment was used for the GUS reporter."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "OsFT was studied under high light and drought field treatment conditions."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "OsFT was shown to interact with OsFtsh2."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Under normal and drought conditions, overexpression lines had higher tiller number/yield but lower thousand-grain weight, grain length, and grain width than WT."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the paper: OsFT is a new allele of OsZDS, links carotenoid metabolism with photosystem stability and hormone crosstalk, and the text indeed contains some inconsistent carotenoid intermediate wording."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly frames OsFT as useful for breeding drought-resistant, high-yield rice with improved photosynthetic efficiency, while Results also show grain-size tradeoffs."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Rate_Limiting_or_Key_Control_Step",
+          "old_value": "key control point",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly call OsFT a rate-limiting or key control step."
+        }
+      ],
+      "stats": {
+        "supported": 31,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "PGL13",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PGL13 is discussed as a rice gene/mutant in this rice study."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper's study species is rice, Oryza sativa L."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "pgl13 and ft/pgl13 were analyzed in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is rice, Oryza sativa L."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states pgl13 and ft are two japonica rice mutants with identical genetic backgrounds; WT background used in the paper is Chunjiang06, so 'Chunjiang06 background japonica mutant' is consistent."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states PGL13 encodes a carotenoid isomerase (CRTISO)."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Carotenoid isomerase is explicitly stated."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PGL13 is explicitly placed in the carotenoid biosynthesis pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states OsFT and PGL13 are involved in consecutive steps of the carotenoid biosynthesis pathway, placing PGL13 downstream of OsFT/ZDS."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "PGL13 is in the pathway, but 'midstream' is an interpretive label not explicitly stated."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states PGL13 further isomerizes carotenoid intermediates toward all-trans forms, supporting this description."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes PGL13/CRTISO as acting on cis forms to produce all-trans forms; 'cis-carotenoid intermediates' is a faithful generalization."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes PGL13 as producing all-trans carotenoid intermediates."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links PGL13 activity to downstream all-trans-β-carotene and ABA/SL biosynthesis, supporting a precursor-supply role."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "All-trans-β-carotene was directly measured and shown to be reduced in pgl13."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "All-trans-β-carotene is a carotenoid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states carotenoids function in photosynthetic light harvesting/photoprotection and as hormone precursors."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "All-trans-β-carotene measurements were from rice leaves at tillering stage."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show pgl13 had reduced pigments and all-trans-β-carotene, reduced ABA and SL, increased tiller number, and ft/pgl13 showed phenotypic recovery relative to ft."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are supported by the Results section."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutant phenotyping, double-mutant analysis, metabolite profiling, qRT-PCR, and mention of PGL13-OE1 comparison all appear in the Results."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish PGL13 as rate-limiting; thus 'not established' is faithful."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The pgl13 analyses described were conducted at the tillering stage."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper shows a genetic interaction/relationship between PGL13 and OsFT, but no protein-protein interaction evidence is provided."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "PGL13 was directly tested through dedicated mutant and double-mutant experiments on carotenoid-pathway effects on tillering."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The statement is a reasonable implication, but the paper does not explicitly discuss PGL13 as a breeding/engineering target in Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "OsFT (genetic interaction only)",
+          "new_value": "NA",
+          "reason": "The paper shows a genetic interaction/relationship between PGL13 and OsFT, but no protein-protein interaction evidence is provided."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 80,
+    "supported": 68,
+    "unsupported": 5,
+    "uncertain": 7,
+    "total_corrections": 5
+  }
+}

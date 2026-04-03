@@ -1,0 +1,232 @@
+{
+  "file": "MinerU_markdown_PMC6565433_2038795208631554050",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC6565433_2038795208631554050.md",
+  "timestamp": "2026-03-31T22:22:29.460686",
+  "genes": [
+    {
+      "gene_name": "PLM",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly identify PLM as gene At1g43580 after positional cloning and resequencing."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in Arabidopsis, including Col-0 and C24 backgrounds."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "plm-1 is in C24 and plm-2 is in Col-0; both backgrounds were analyzed."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PLM is an Arabidopsis gene identified as At1g43580."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Arabidopsis thaliana as stated in Methods and gene nomenclature."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The studied PLM alleles are from Arabidopsis backgrounds C24 and Col-0."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "Broad root expression is supported by pPLM::PLM-YFP in Results, but the claim of slightly higher expression in sink tissues like shoot apex and early-stage seeds comes only from Discussion citing ATTED-II, not direct experimental evidence in this paper."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state pPLM::PLM-YFP displayed a broad expression pattern in the root."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state PLM is predicted to encode an SMS family protein with a weak PAP2_C domain, and phylogeny indicates it is distinct from SMSs and IPCSs, likely a new plant-specific enzyme/clade."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "PLM-YFP co-localized with the ER reporter RFP-HDEL and altered with reticulon overexpression, supporting ER localization."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly link plm mutants to reduced VLCFA-ceramides and a likely effect on overall GIPC content; these are the sphingolipid products most clearly associated with PLM function."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The affected metabolites, ceramides and GIPCs, are explicitly discussed as sphingolipids."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Root tissues are supported because lipid profiling was performed on roots, but specific accumulation at the plasmodesmata-associated membrane system/PPP-endodermis interface is only inferred in Discussion, not directly measured."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links sphingolipids, especially VLCFA-ceramides/GIPCs, to plasmodesmal architecture and symplastic trafficking/phloem unloading."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support reduced VLCFA-ceramides, likely reduced GIPC content, enhanced GFP unloading specifically across PPP-endodermis, increased root meristem GFP, and transient early root elongation in plm mutants."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point is supported by Results: identification as At1g43580 suppressor, enhanced post-SE unloading at PPP-endodermis but not SE-PPP, ER-localized and distinct from IPCS/SMS, reduced VLCFA ceramides with GIPC reduction trend and no major phospholipid/DAG/sterol changes, and altered PD ultrastructure with blocked type I-to-II transition."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state only slight early root elongation differences while general growth/biomass were similar, and larger GFP fusion proteins remained restricted in plm-2."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a forward-looking application claim not directly tested in the paper. It is a reasonable inference from the findings but not explicitly demonstrated."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are reported in Results/Methods: positional cloning, resequencing, complementation, T-DNA allele, GFP assays, FRAP, sphingolipid profiling, electron tomography, ER colocalization, and FB1 phenocopy."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The study indeed used 5-day-old seedling roots, analyzed phloem unloading, used FB1 treatment to phenocopy enhanced GFP unloading, and performed alloxan stress assays."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "RTNLB6 was used as an ER-shaping co-expression marker to perturb ER morphology, but no physical or functional interaction with PLM was demonstrated."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Methods mention pPLM::PLM-YFP, UB10::PLM-YFP, and pSUC2::GFP."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states PLM enzymatic activity is not conclusively proven and proposes either a novel enzyme role or indirect regulation of sphingolipid biosynthesis."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports whole-genome resequencing for mapping, targeted sphingolipid profiling by HPLC/ESI-MS/MS, lipid profiling, and GIPC glycosylation analysis by MALDI-MS."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "RTNLB6",
+          "new_value": "NA",
+          "reason": "RTNLB6 was used as an ER-shaping co-expression marker to perturb ER morphology, but no physical or functional interaction with PLM was demonstrated."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "CALS3",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper names CALS3/GSL12 but does not provide the specific accession AT5G13000 in the provided text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CALS3 mutants analyzed are in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "cals3-1d is in C24 and cals3-3d is in Col-0, as stated in Methods/Results."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CALS3 is an Arabidopsis gene in this study."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Arabidopsis thaliana."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses Arabidopsis C24 and Col-0 cals3 alleles."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly call CALS3 'CALLOSE SYNTHASE 3/GLUCAN SYNTHASE-LIKE12'."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The study examined CALS3 protein localization, but the exact localization 'plasma membrane / plasmodesmata-associated' is not explicitly stated in the provided text."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CALS3 is a callose synthase and the paper discusses callose accumulation in relation to cals3-d."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Callose is a polysaccharide (β-1,3-glucan), explicitly described in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states callose accumulates in the cell wall around plasmodesmata."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states callose abundance inversely correlates with trafficking efficiency/symplastic transport."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state cals3-d mutants had reduced plasmodesmatal permeability, decreased intercellular trafficking, impaired phloem unloading, and defective root development; plm suppresses these without reducing callose accumulation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed points are supported: cals3-d was the screening background, it causes reduced permeability/unloading/root defects, CALS3 transcript and localization were unchanged in plm-2, and increased callose in cals3-3d persisted in plm-2;cals3-3d."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Gain-of-function cals3-d caused short roots and defective unloading/root development in Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This application-oriented statement is not directly tested; the paper only shows that manipulating this pathway strongly affects trafficking and growth."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper used previously characterized gain-of-function cals3 alleles and in this study used GFP unloading assays, qPCR, protein localization, and callose immunolocalization."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "CALS3 is indeed a direct experimental comparator/background in the Results, though PLM is the primary focus."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Alloxan-induced callose accumulation assays were performed and discussed in relation to plm versus wild type, within the CALS3/callose context."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Gene_Accession_Number",
+          "old_value": "AT5G13000",
+          "new_value": "NA",
+          "reason": "The paper names CALS3/GSL12 but does not provide the specific accession AT5G13000 in the provided text."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 45,
+    "supported": 38,
+    "unsupported": 2,
+    "uncertain": 5,
+    "total_corrections": 2
+  }
+}

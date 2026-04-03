@@ -1,0 +1,165 @@
+{
+  "file": "MinerU_markdown_PMC11376391_2038801297905328136",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC11376391_2038801297905328136.md",
+  "timestamp": "2026-03-31T21:36:20.240669",
+  "genes": [
+    {
+      "gene_name": "LOGL1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states in Accession numbers: 'The gene ID for LOGL1 is LOC_OS01g51210.' This supports LOC_Os01g51210 apart from minor capitalization/underscore style."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The title and text identify the gene as 'LONELY GUY-Like 1 (LOGL1)' and describe it as encoding 'a putative cytokinin-activation enzyme'."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state 'The members of the LOG gene family encode for cytokinin-activating enzymes' and LOGL1 is explicitly treated as one such family member."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly links LOGL1 to cytokinin activation and reports that LOGL1 misregulation alters expression of thiamin biosynthesis genes/pathway, supporting 'cytokinin activation; indirect regulation of thiamin biosynthesis pathway'."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state LOG-family genes convert inactive cytokinin nucleotides to active free-base forms iP and tZ, matching this branch description."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says LOG-family genes 'convert inactive cytokinin nucleotides to active free-base forms, N6-(Δ2-isopentenyl) adenine (iP), and trans-zeatin (tZ)' and later 'catalyze the dephosphorylation and deribosylation of iP- and tZ-nucleotides to produce active nucleobase forms'."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports inactive cytokinin nucleotides as substrates and mentions inactive tZR measurements, but it does not directly state LOGL1 uses 'ribosides including trans-zeatin riboside-related precursors' as substrates."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results/Discussion explicitly identify active cytokinin free-base forms including trans-zeatin (tZ) and iP as the products associated with LOG-family activity."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports indirect regulation of grain-weight-associated metabolism and thiamin pathway gene expression through LOGL1/cytokinin activity rather than direct thiamin biosynthesis catalysis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Given LOGL1 activates cytokinin and thiamin effects are downstream transcriptional/metabolic consequences, 'Upstream' is directly inferable from the paper's pathway model."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The manuscript does not claim LOGL1 is rate-limiting, so 'Not established' is faithful."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is in rice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract and text specify rice as 'Oryza sativa'."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional mutant and overexpression characterization was performed in rice cv. Kitaake."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All applications/phenotyping are in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species throughout is Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses Kitaake for transgenics, RDP1 accessions for GWAS, and a tropical japonica subset for field tents exactly as stated."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states LOGL1 is 'highly active, with increased transcript abundance during reproductive development' and expression was assayed in developing grains at 2 DAF where it is highly expressed."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state LOGL1 had ~2-fold higher transcript abundance in LGA than HGA and validate lower LOGL1 transcript abundance in HGA developing grains at 2 DAF."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "trans-zeatin is directly measured/supported, but 'thiamin-related pathway output linked to grain weight' is broader than what was measured; the study shows thiamin biosynthesis gene-expression changes, not thiamin metabolite accumulation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "trans-zeatin is a phytohormone cytokinin, and thiamin is vitamin B1; both classes are explicitly discussed."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion links cytokinin to endosperm cell division/sink capacity and thiamin to carbon metabolism and oxidative stress responses."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Developing grains are the tissue analyzed for LOGL1 expression and cytokinin levels, but 'endosperm' specifically is discussed conceptually rather than directly measured for LOGL1 products."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly supported by GWAS/allelic comparisons and mutant/OE phenotyping: lower LOGL1 or loss of function is associated with higher SGW under HNT; OE increases HNT sensitivity and reduces grain number, fertility, and grain weight per plant under HNT."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods appear in the paper: GWAS, allelic expression analysis, RT-qPCR, CRISPR-Cas9 mutants, constitutive OE using maize ubiquitin promoter, field and greenhouse HNT phenotyping, RNA-seq, and cytokinin profiling."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "CCA1, LHY1, THIC, and THI1 are discussed as genes/pathway components with altered expression, but the paper does not show physical protein-protein interactions with LOGL1."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The greenhouse HNT treatment of 30/28°C during grain development and field tents heated ~4°C above ambient at night are explicitly described."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GWAS used 411,066 SNPs, RNA-seq BioProject PRJNA855943, and public datasets GSE6893 and GSE98455."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each summary point is consistent with Results: SGW1 maps to LOGL1 intron; HGA has lower LOGL1 and higher SGW under HNT; logl1 mutants higher SGW under HNT and OE more HNT-sensitive; misregulation altered cytokinin ratio, circadian/thiamin genes, and ROS-associated responses; agronomic traits were also affected."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly interprets OE phenotypes as a tradeoff/compensatory effect: higher SGW but reduced tiller number, grain number, fertility, and total grain weight per plant, especially under HNT."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The study supports selecting favorable low-expression SGW1/LOGL1 alleles for warmer nights, stacking with qSGW6 favorable alleles, and indicates OE is undesirable due to HNT sensitivity/yield penalties; downregulation/editing is a reasonable direct inference from mutant results."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state OE constructs used destination vector pANIC6B containing the maize ubiquitin 1 promoter."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes a core interpretation in Results/Discussion: OE lines had higher SGW than WT but this was attributed to compensatory effects from fewer grains/reduced sink capacity, not improved HNT tolerance; strongest effect was under HNT with indirect cytokinin-circadian-thiamin/ROS links."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "CCA1; LHY1; THIC; THI1",
+          "new_value": "NA",
+          "reason": "CCA1, LHY1, THIC, and THI1 are discussed as genes/pathway components with altered expression, but the paper does not show physical protein-protein interactions with LOGL1."
+        }
+      ],
+      "stats": {
+        "supported": 29,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 33,
+    "supported": 29,
+    "unsupported": 1,
+    "uncertain": 3,
+    "total_corrections": 1
+  }
+}

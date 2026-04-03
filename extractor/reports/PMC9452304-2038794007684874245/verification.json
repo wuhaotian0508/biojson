@@ -1,0 +1,1999 @@
+{
+  "file": "MinerU_markdown_PMC9452304_2038794007684874245",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC9452304_2038794007684874245.md",
+  "timestamp": "2026-03-31T22:41:59.166749",
+  "genes": [
+    {
+      "gene_name": "ERG20",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ERG20 is explicitly described as a yeast gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host yeast throughout is Saccharomyces cerevisiae, and ERG20 is a native yeast gene."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ERG20 engineering was performed in yeast strains."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "All engineered strains are Saccharomyces cerevisiae."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "ERG20 manipulation was part of precursor-supply engineering used for de novo strictosidine production and later strains producing catharanthine and vindoline also retained precursor-supply edits."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Strictosidine, catharanthine and vindoline are alkaloids/MIA pathway metabolites in the paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state ERG20 was downregulated to improve the GPP:FPP ratio; later dynamic down-regulation of ERG20 improved de novo strictosidine production; and an ERG20(F96W,N127W)-tCroGES fusion was constructed to redirect flux to geraniol."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a fair summary of the described precursor-supply effect of reducing FPP synthesis to favor geraniol/MIA flux."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Dynamic promoter replacement, variant/fusion design, and metabolite profiling are all described in Results/Methods."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "ERG20 is explicitly described as encoding farnesyl pyrophosphate synthase."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Glucose-dependent dynamic control and testing in SC and YPD media are described."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNSUPPORTED",
+          "reason": "PHXT3 for ERG20 knockdown is stated, but 'PICI1' is not the promoter named in the paper; the paper states PICI1/ICL1? actually P_ICL1 and P_MLS1 were used, so the provided field contains an incorrect promoter name."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Growth balance concerns are biologically plausible, but this exact tradeoff for ERG20 repression is not directly demonstrated in Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a reasonable inference from the demonstrated chassis engineering role of ERG20 in MIA production."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "ERG20 is indeed used as native yeast precursor-supply engineering rather than as a plant-pathway catalyst."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "All strains are derived from CEN.PK2-1C."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Native yeast genes come from the CEN.PK2-1C-derived host background used in the study."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "These metabolites are discussed as anticancer alkaloid precursors toward vinblastine supply."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "ERG20 is a cytosolic/ergosterol-pathway enzyme by background knowledge, but the paper does not explicitly state ERG20 localization."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ERG20 expression was engineered dynamically in yeast."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states an ERG20(F96W,N127W)-tCroGES fusion was made."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Applied_Promoters",
+          "old_value": "PHXT3 for knockdown; PICI1 and other engineered promoters for expression variants",
+          "new_value": "NA",
+          "reason": "PHXT3 for ERG20 knockdown is stated, but 'PICI1' is not the promoter named in the paper; the paper states PICI1/ICL1? actually P_ICL1 and P_MLS1 were used, so the provided field contains an incorrect promoter name."
+        }
+      ],
+      "stats": {
+        "supported": 18,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "ERG9",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ERG9 is described as a native yeast gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host yeast is Saccharomyces cerevisiae."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ERG9 was engineered in yeast strains."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "All relevant strains are Saccharomyces cerevisiae."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "ERG9 downregulation was part of the design leading to de novo strictosidine production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Strictosidine is an alkaloid/MIA intermediate."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly say ERG9 was dynamically down-regulated, together with ERG20, and this was part of the strain enabling de novo strictosidine production."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Redirecting isoprenoid flux away from sterol synthesis toward MIA precursor formation is consistent with the stated rationale."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Dynamic promoter replacement/pathway engineering and metabolite profiling are described."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "ERG9 is described as encoding a GPP-consuming enzyme; by standard annotation it is squalene synthase, consistent with the pathway role, though not named explicitly in Results."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states PHXT1 was used for dynamic down-regulation of ERG9."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential sterol/growth defects are plausible but not directly shown for ERG9 in the Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a reasonable inference from the demonstrated chassis-engineering strategy."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strains are CEN.PK2-1C-derived."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Native yeast gene in the CEN.PK2-1C-derived background."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Glucose-dependent dynamic control is explicitly described."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 15,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "AgrGPPS2",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AgrGPPS2 is explicitly named as a heterologous GPP synthase from Abies grandis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Abies grandis is explicitly cited."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AgrGPPS2 was expressed in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied host is Saccharomyces cerevisiae."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AgrGPPS2 was used in strains producing strictosidine, and extra copies were later integrated in strains producing vindoline and catharanthine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are alkaloid/MIA metabolites."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state AgrGPPS2 was overexpressed to increase geraniol availability and extra copies were later integrated to boost one-pot vindoline/catharanthine production."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Enhancing GPP supply for the monoterpene branch is exactly the stated purpose."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Overexpression, promoter swapping, extra-copy integration, and metabolite profiling are all described."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AgrGPPS2 is explicitly described as a specific GPP synthase."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states constitutive promoters were later replaced with glucose-repressible P_MLS1 for AgrGPPS2 expression in one optimization step."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a reasonable inference from its successful use as a precursor-supply enzyme."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "All strains are CEN.PK2-1C-derived."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 13,
+        "unsupported": 0,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "tCroGES",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CroGES is from Catharanthus roseus; the truncated form tCroGES is used in yeast engineering."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Catharanthus roseus is explicit throughout."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "tCroGES was engineered in yeast strains."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "tCroGES supported precursor supply in strains for strictosidine and later vindoline/catharanthine production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These metabolites are alkaloids/MIA compounds."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Targeted proteomics showed poor geraniol synthase expression; ERG20(F96W,N127W) was fused to tCroGES; extra copies of the fusion were later integrated to boost vindoline/catharanthine production."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Improving geraniol supply is the explicit engineering rationale."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Targeted proteomics, fusion engineering, extra-copy integration, and metabolite profiling are described."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "GES is geraniol synthase, a terpene synthase."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states geraniol synthase is plastid-localized in C. roseus; the field carefully says plastidial in plant, engineered in yeast."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to tCroGES as a truncated form used in engineering."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Strains are derived from CEN.PK2-1C."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 13,
+        "unsupported": 0,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "CroTDC",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CroTDC is from Catharanthus roseus."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Catharanthus roseus is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CroTDC was overexpressed in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CroTDC was used in the strain producing de novo strictosidine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Strictosidine is an alkaloid/MIA intermediate."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly state CroTDC was overexpressed to convert tryptophan to tryptamine in the final precursor-supply optimization leading to glucose-based strictosidine production."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Increasing tryptamine supply for strictosidine formation matches the described role."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Overexpression in production strains with metabolite profiling is described."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "TDC is tryptophan decarboxylase, an aromatic amino-acid decarboxylase class enzyme; this is consistent with the paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Reasonable inference from its demonstrated use to establish de novo indole entry into the pathway."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strains are CEN.PK2-1C-derived."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 12,
+        "unsupported": 0,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "CroCPR",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CroCPR is explicitly the C. roseus cytochrome P450 reductase."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Catharanthus roseus is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CroCPR was co-expressed in yeast pathway modules."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CroCPR was included in modules enabling production of strictosidine, tabersonine, catharanthine, and vindoline."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are alkaloid/MIA metabolites."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says each module included CroCPR to support P450 enzymes, and an extra copy of CroCPR with CroGS and CroGO was integrated in MIA-EM-1."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Supporting heterologous P450 activity is the explicit stated role."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Module co-expression and extra-copy integration are described."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CroCPR is explicitly named NADPH-cytochrome P450 reductase."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Reasonable inference from the P450-heavy pathway engineering shown."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strains are CEN.PK2-1C-derived."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 12,
+        "unsupported": 0,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "CroCYB5",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CroCYB5 is explicitly the C. roseus cytochrome b5."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Catharanthus roseus is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CroCYB5 was co-expressed in yeast modules."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CroCYB5 was included in modules leading to strictosidine, tabersonine/catharanthine, and vindoline production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These metabolites are alkaloids/MIA compounds."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states each module included CroCYB5 together with CroCPR to support cytochrome P450 enzymes."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Facilitating P450 function is directly aligned with the described role."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Module co-expression is explicitly stated."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CroCYB5 is explicitly cytochrome b5."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Strains are CEN.PK2-1C-derived."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 11,
+        "unsupported": 0,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "RseSGD/CroSGD domain hybrids",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The hybrids were constructed from Rauvolfia serpentina SGD and Catharanthus roseus SGD domains."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both species names are explicit in the SGD section."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The hybrids were tested in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The hybrids were assayed via tetrahydroalstonine production, a downstream MIA side product used as a functional readout."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "THA is an alkaloid/MIA-related product."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly state that RseSGD domain 3 was required for activity and that maintaining R3+R4 from RseSGD gave the highest THA production."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The domain-swapping experiments indeed defined structural features required for SGD function in yeast."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Domain swapping, THA assay, and localization microscopy are all described."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "These are SGD-derived beta-glucosidase hybrid proteins."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Hybrid SGD engineering was a central experimental focus for enabling downstream pathway function."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The yeast strains are CEN.PK2-1C-derived."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 12,
+        "unsupported": 0,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "STR",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The main optimized STR discussed is from Catharanthus roseus (CroSTR)."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Catharanthus roseus is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "STR was expressed and tested in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "STR directly forms strictosidine, the measured product in the Results."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Strictosidine is an alkaloid/MIA intermediate."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Strictosidine is in the monoterpene indole alkaloid/vinblastine biosynthetic pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly places STR in the strictosidine module."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "STR is strictosidine synthase."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly describe the Pictet-Spengler-type reaction of secologanin and tryptamine to strictosidine catalysed by STR."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Secologanin and tryptamine are explicitly the fed substrates for STR assays."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Strictosidine is the measured product."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "STR directly forms the target metabolite strictosidine."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents STR as the last step of the strictosidine module and gateway to downstream MIAs."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Fluorescence microscopy showed CroSTR localized in the vacuole or ER membrane in yeast; vacuolar localization was discussed as relevant."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Strictosidine synthase family assignment is consistent with the enzyme identity discussed."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly say unused secologanin suggested STR as a rate-limiting step."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements are directly supported by the STR optimization section."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Full-length CroSTR strongly increased strictosidine production relative to truncated variants."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Feeding, homologue screening, truncation comparison, overexpression, metabolite profiling, and localization microscopy are all described."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "STR was engineered and expressed in yeast platform strains."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "High-copy plasmid expression for tCroSTR is stated, but the exact 'mixed engineered constitutive promoters' wording is not explicitly documented in the paper text provided."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Secologanin/tryptamine feeding and SC/YPD media are described in relevant experiments."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Strictosidine is described as the common precursor to more than 3,000 MIAs, including anticancer alkaloids downstream."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a reasonable inference from the demonstrated importance of full-length STR and localization."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results directly show truncated versions had much poorer activity, likely owing to mislocalization."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "CroSTR being superior among screened homologues and discussion of vacuolar acidity/trafficking are both in the Results."
+        },
+        "Omics_Data": {
+          "verdict": "UNCERTAIN",
+          "reason": "PXD024976 is indeed the targeted proteomics dataset for strain MIA-AU, but the paper does not specifically link this omics dataset to STR optimization; it is more general strain-level proteomics context."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strains are CEN.PK2-1C-derived."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The EC number 4.3.3.2 does not appear in the paper text provided."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "4.3.3.2",
+          "new_value": "NA",
+          "reason": "The EC number 4.3.3.2 does not appear in the paper text provided."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "8HGO",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The optimized enzyme specifically highlighted is Vmi8HGO-A from Vinca minor."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Vinca minor is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme was screened and integrated in yeast strains."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "8HGO optimization was connected to improved strictosidine-pathway flux and strictosidine production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Strictosidine is an alkaloid/MIA intermediate."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "This enzyme functions in the MIA iridoid/secologanin branch leading to strictosidine."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "8HGO is part of the strictosidine module shown in Fig. 1."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "8HGO is explicitly defined as 8-hydroxygeraniol oxidoreductase."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper treats 8HGO as converting 8-hydroxygeraniol toward 8-oxogeranial; this is directly inferable from the bottleneck analysis and screening design."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The screening used feeding with 8-hydroxygeraniol."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "8-oxogeranial is the next intermediate discussed in the pathway and bottleneck analysis."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "It is an upstream precursor-supply step rather than direct terminal product formation."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It is an upstream/mid pathway step in the strictosidine module."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly distinguish NAD+-dependent type-A and NADP+-dependent type-B 8HGO enzymes."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Feeding analysis explicitly indicated 8HGO as a main bottleneck."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly described in the Results."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Vmi8HGO-A improved downstream metabolite formation and strictosidine production."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Feeding, enzyme screening, integration, and metabolite profiling are described."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "8-hydroxygeraniol and tryptamine feeding is explicitly stated."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not specify the exact promoter used for Vmi8HGO-A in the excerpt; only general engineered expression can be inferred."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Strictosidine is the gateway to medicinal MIAs as described."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The negative effects of Cro8HGO-B and Ptr8HGO-B and native yeast background activity are explicitly described."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a reasonable inference from the comparative enzyme screening results."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Strains are CEN.PK2-1C-derived."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No accession number for Vmi8HGO-A is provided in the paper text; only that it was identified from transcriptome data."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Gene_Accession_Number",
+          "old_value": "Vmi8HGO-A sequence identified from transcriptome; accession NA",
+          "new_value": "NA",
+          "reason": "No accession number for Vmi8HGO-A is provided in the paper text; only that it was identified from transcriptome data."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "ISY",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The best-performing ISY identified was NcaISY from Nepeta cataria."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nca refers to Nepeta cataria in the cited catmint/catnip enzyme screening context."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NcaISY was screened and integrated in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "ISY optimization was linked to improved strictosidine-pathway performance."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Strictosidine is an alkaloid/MIA intermediate."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ISY functions in the iridoid/secologanin branch of MIA biosynthesis leading to strictosidine."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ISY is part of the strictosidine module in Fig. 1."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "ISY is explicitly defined as iridoid synthase."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results discuss cyclization of 8-oxogeranial to nepetalactol by iridoid synthase and cyclases, supporting this description."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "8-oxogeranial feeding was used for the screening."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The immediate output is a cyclized iridoid/nepetalactol-type intermediate, consistent with the paper's wording."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "ISY supplies upstream precursors rather than directly forming strictosidine."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It is an upstream/midstream strictosidine-module step."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "ISY identity is supported, but the specific 'short-chain dehydrogenase/reductase-like' family wording is not explicitly given in the paper text."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Feeding analysis explicitly indicated iridoid synthase as a main bottleneck."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by the ISY/cyclase optimization section."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "NcaISY improved iridoid precursor formation and downstream strictosidine-pathway output."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Precursor feeding, combinatorial screening, integration, and metabolite profiling are described."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "8-oxogeranial and tryptamine feeding is explicitly stated."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact promoters used for NcaISY are not specified in the provided text."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly identify NcaML-PLA as the partner cyclase with NcaISY."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly shows cyclase partner choice strongly affected output."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a reasonable inference from the enzyme-pair optimization results."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Strains are CEN.PK2-1C-derived."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "MLP/NEPS2 cyclase",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states strains expressing NcaML-PLA in combination with NcaISY performed best; Nca denotes Nepeta cataria."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "NcaML-PLA/NcaISY are from Nepeta cataria as indicated by the gene prefix and cited cyclase screening context."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All engineering and testing were performed in yeast strains."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host organism throughout is Saccharomyces cerevisiae."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme was tested in the strictosidine optimization module and its best combination increased strictosidine along with pathway intermediates."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Strictosidine is an alkaloid/MIA, consistent with the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme was used to optimize the iridoid-to-secologanin/strictosidine branch of MIA biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The screening was explicitly part of optimization of the strictosidine module."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly names the successful cyclase as NcaML-PLA."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says iridoid synthases and cyclases (MLPs and NEPS2) are critical enzymes involved in cyclization of 8-oxogeranial to nepetalactol."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The cyclase acts with ISY on the activated intermediate generated from 8-oxogeranial; this is directly described."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links these enzymes to cyclization toward nepetalactol and downstream loganic acid/loganin/secologanin/strictosidine."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Its effect is through improving precursor flux to strictosidine, not direct formation."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It functions upstream in the strictosidine branch before loganic acid/loganin/secologanin and strictosidine."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to cyclases as MLPs and NEPS2, i.e. major latex protein-like cyclases."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports NcaML-PLA with NcaISY gave the highest titres among combinations and improved downstream intermediates and strictosidine."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by the higher titres of downstream metabolites when NcaML-PLA was used."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "They screened combinatorial libraries, fed 8-oxogeranial and tryptamine, and measured metabolites."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "NcaML-PLA was explicitly evaluated in combination with NcaISY."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The genes were engineered for expression in yeast, but no promoter for this gene is specified in the provided text."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "It is indeed a supporting heterologous optimization enzyme rather than a canonical C. roseus vinblastine enzyme."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "All strains were constructed on the basis of CEN.PK2-1C."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 21,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "SGD",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The functional SGD described in this context is RseSGD from Rauvolfia serpentina."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "RseSGD is explicitly expanded as Rauvolfia serpentina SGD."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme was expressed and tested in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae throughout the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "RseSGD was used as the gateway enzyme enabling downstream tabersonine pathway construction, and SGD is part of the branch leading to tabersonine/catharanthine/vindoline."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These downstream products are alkaloids."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SGD is explicitly presented as the gateway from strictosidine into downstream MIA/vinblastine biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper calls SGD the gateway enzyme from strictosidine to downstream branches."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names SGD as strictosidine-β-D-glucosidase."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Hydrolysis of strictosidine to strictosidine aglycone is the known and implied SGD reaction; the paper discusses detection of strictosidine aglycone and downstream THA."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "SGD acts on strictosidine, as directly indicated by its gateway role."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to strictosidine aglycone as the product not detected with CroSGD alone."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "SGD supplies the committed intermediate for downstream MIA products."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It is described as the gateway step after strictosidine."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Fluorescence microscopy showed RseSGD localizing in the nucleus in yeast, associated with activity."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "SGD is a glucosidase; the name itself supports β-glucosidase family assignment."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper frames SGD choice/function as decisive for downstream activity in yeast."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed findings are reported: CroSGD non-functional for THA, RseSGD active, nuclear localization difference, R3 required, R3+R4 best, and RseSGD used in downstream pathway engineering."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "RseSGD enabled functional conversion into downstream MIA branch products/THA in yeast."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "They used homologue screening, THAS assay, domain swapping, fluorescence microscopy, and metabolite profiling."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "THA assays were performed by feeding secologanin and tryptamine."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Expression in yeast is supported, but specific promoters for SGD are not stated in the provided text."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "CroTHAS was coexpressed with SGD in the functional THA assay context."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "CroSGD diffuse cytoplasmic localization and poor function versus RseSGD is explicitly described."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a reasonable direct inference from the demonstrated superior RseSGD performance and domain requirements in yeast."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The yeast background is CEN.PK2-1C-derived strains."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The specific EC number 3.2.1.105 does not appear in the paper text provided."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "3.2.1.105",
+          "new_value": "NA",
+          "reason": "The specific EC number 3.2.1.105 does not appear in the paper text provided."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "T16H2",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly lists C. roseus T16H2 in the vindoline module."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Catharanthus roseus is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "T16H2 was expressed in yeast strains."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "T16H2 is part of the vindoline module and extra copies improved vindoline titre."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Vindoline is an alkaloid."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "T16H2 is explicitly in the vindoline branch of vinblastine biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is part of the vindoline module."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "T16H2 is tabersonine 16-hydroxylase 2 as defined in Fig. 1 abbreviations and text."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "As tabersonine 16-hydroxylase, hydroxylation of tabersonine at C16 is directly implied by the enzyme name and pathway context."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Tabersonine feeding was used for vindoline production and T16H2 acts at the first vindoline step from tabersonine."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper detected 16-hydroxytabersonine, consistent with T16H activity."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "It forms an immediate precursor on the way to vindoline."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It is the upstream step of the vindoline branch."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "T16H2 is a P450 and likely ER-associated, but this specific localization for T16H2 is not directly shown in the paper text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "T16H2 is one of the cytochrome P450 enzymes in the module."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Extra copies of T16H2 with 16OMT gave the highest vindoline improvement, supporting importance as a control point."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports vindoline production from the module, the highest improvement with extra T16H2 and 16OMT, and use of T16H2 in later de novo construction."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by increased vindoline upon module expression and extra-copy engineering."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "They used module reconstruction, feeding, extra-copy engineering, and metabolite profiling."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "No promoter specific to T16H2 is given in the provided text."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The module included CroCPR and CroCYB5 to support cytochrome P450 enzymes including T16H2."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Vindoline production was tested with tabersonine feeding."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "T16H2, rather than T16H1, was chosen in the later de novo vindoline-engineering workflow."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Prioritizing T16H2 is directly consistent with the reported engineering outcome."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Strains were CEN.PK2-1C-derived."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 24,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "16OMT",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "16OMT is listed as part of the C. roseus vindoline module."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Catharanthus roseus is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was expressed in yeast strains."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "16OMT is part of the vindoline biosynthetic module and implicated in improved vindoline production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Vindoline is an alkaloid."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is explicitly within the vindoline branch of vinblastine biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It belongs to the vindoline module."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper defines 16OMT as tabersonine 16-O-methyltransferase."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Its methyltransferase name and detection of 16-methoxytabersonine support methylation of 16-hydroxytabersonine."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "16-hydroxytabersonine is the implied substrate in the pathway and is explicitly detected."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "16-methoxytabersonine is explicitly mentioned as an accumulated intermediate."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "It forms an immediate precursor toward vindoline."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It is upstream-midstream in the vindoline branch."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme name directly identifies it as an O-methyltransferase."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Extra copies with T16H2 produced the highest improvement in vindoline titre."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Both listed points are directly supported by the Results text."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Vindoline was improved when 16OMT and T16H2 were overexpressed."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by module reconstruction, feeding, extra-copy overexpression, and metabolite profiling."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "No specific promoter for 16OMT is provided in the text."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "16OMT was among the genes integrated into de novo vindoline strain MIA-CW-1."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The engineered strains derive from CEN.PK2-1C."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 21,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "T3O",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "T3O is listed as a C. roseus gene in the vindoline module."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Catharanthus roseus is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was expressed in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "T3O is part of the vindoline-producing module."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Vindoline is an alkaloid."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places T3O in the vindoline branch of vinblastine biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is in the vindoline module."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper defines T3O as tabersonine 3-oxygenase."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "T3O is named tabersonine 3-oxygenase, but the exact reaction description given in the JSON is more detailed than explicitly described in this paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Accumulation of 16-methoxytabersonine before the suspected T3O bottleneck supports this substrate assignment."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly name the immediate oxidized product in this text."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "T3O forms a downstream precursor en route to vindoline, not the terminal product directly."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It is a midstream step in the vindoline branch."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "T3O is one of the P450 enzymes in the pathway context."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states accumulated intermediates indicated a potential bottleneck at T3O."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These two points are directly stated in the Results."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The inferred insufficient T3O activity constraining vindoline is exactly the authors' interpretation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "This conclusion comes from module reconstruction and metabolite profiling."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "No promoter specific to T3O is stated."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The module included CroCPR and CroCYB5 to support cytochrome P450 enzymes including T3O."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Characterizing T3O as a weak P450 step is consistent with the Results, though phrased interpretively."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strains are CEN.PK2-1C-derived."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 20,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "TS",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TS is identified as C. roseus tabersonine synthase in the pathway/module descriptions."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Catharanthus roseus is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TS was engineered in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "TS directly forms tabersonine, which was measured in yeast."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Tabersonine is an alkaloid."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "TS is part of the tabersonine branch of vinblastine biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is in the tabersonine/catharanthine module."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "TS is defined as tabersonine synthase."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact substrate description 'dihydroprecondylocarpine acetate-derived intermediate' is plausible pathway knowledge but not explicitly stated in this paper text for TS."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "Shared precursor competition is discussed, but this exact substrate wording is not explicitly provided for TS."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "TS produces tabersonine, directly supported by gene name and measured product."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "TS directly forms the target product tabersonine."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "TS is the terminal branch enzyme producing tabersonine."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not classify TS as an 'alkaloid synthase' family/domain."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Low TS expression in MIA-DJ and extra-copy addition in later strains support TS as a likely bottleneck."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed points are described in the Results/Extended Data discussion."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "TS enables tabersonine formation, and low expression is linked to restricted flux toward vindoline branch."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by module integration, metabolite profiling, proteomics, and extra-copy engineering."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "No specific promoter for TS is provided in the text."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly indicate catharanthine synthase had better expression or catalytic reactivity than tabersonine synthase in branch context."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Untargeted proteomics data for strain MIA-DJ are stated to be available at ProteomeXchange PXD025067."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strains derive from CEN.PK2-1C."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "alkaloid synthase",
+          "new_value": "NA",
+          "reason": "The paper does not classify TS as an 'alkaloid synthase' family/domain."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "CS",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CS is C. roseus catharanthine synthase as explicitly stated."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Catharanthus roseus is explicitly given."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CS was integrated and tested in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CS directly forms catharanthine, which was measured."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Catharanthine is an alkaloid."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CS is part of the catharanthine branch of vinblastine biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It belongs to the tabersonine/catharanthine module."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names catharanthine synthase/CroCS."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "Competition for dihydroprecondylocarpine acetate is stated, but the exact reaction wording is not explicitly given for CS."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says catharanthine synthase competes for dihydroprecondylocarpine acetate, indicating the shared precursor."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "CS produces catharanthine, directly supported by gene name and measurements."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CS directly forms the target product catharanthine."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It is the terminal branch step to catharanthine."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not provide a protein family/domain designation 'alkaloid synthase' for CS."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings are directly supported in the Results."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CS increased catharanthine and diverted shared precursor from tabersonine/vindoline branch as described."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Module integration, inducible expression, and metabolite profiling were used."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states CS was placed under galactose inducible PGAL1 promoter."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Galactose addition was used to induce CS in biphasic fermentation."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Competition with the tabersonine/vindoline branch for a shared precursor is explicitly described."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Stage-specific inducible CS expression is a direct engineering implication from the reported strategy."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strains are CEN.PK2-1C-derived."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "alkaloid synthase",
+          "new_value": "NA",
+          "reason": "The paper does not provide a protein family/domain designation 'alkaloid synthase' for CS."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "GS",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper refers to C. roseus geissoschizine synthase (CroGS)."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Catharanthus roseus is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GS was expressed in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "GS was used in the module leading to tabersonine and catharanthine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Tabersonine and catharanthine are alkaloids."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GS is part of the post-strictosidine MIA branch toward tabersonine/catharanthine."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It belongs to the tabersonine/catharanthine module."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is explicitly named geissoschizine synthase."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme name and pathway context support conversion toward geissoschizine from strictosidine aglycone-derived intermediate."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses enhancing conversion of unstable strictosidine aglycone to geissoschizine and its oxidation by adding CroGS, CroGO, and CroCPR."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Geissoschizine is the named product implied by geissoschizine synthase and explicit text."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "GS supplies precursor flux to tabersonine/catharanthine rather than directly making final products."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It is an early post-gateway step after SGD."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not assign GS to an 'alkaloid reductase/synthase' family/domain."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Both statements are supported: extra copies were introduced, and GS was part of the limiting module improved later."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The extra-copy strategy was specifically intended to improve flux from strictosidine aglycone into downstream products."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by module engineering, extra-copy integration, and metabolite profiling."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly mentions integrating extra copies of CroGS, CroGO and CroCPR together."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly says this was to enhance conversion of unstable strictosidine aglycone and its oxidation."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strains are CEN.PK2-1C-derived."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "alkaloid reductase/synthase",
+          "new_value": "NA",
+          "reason": "The paper does not assign GS to an 'alkaloid reductase/synthase' family/domain."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 1,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "GO",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper refers to C. roseus geissoschizine oxidase (CroGO)."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Catharanthus roseus is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GO was expressed in yeast strains."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "GO is part of the pathway to tabersonine/catharanthine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are alkaloids."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GO is in the post-strictosidine branch toward tabersonine/catharanthine."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It belongs to the tabersonine/catharanthine module."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names geissoschizine oxidase."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "As geissoschizine oxidase, oxidation of geissoschizine toward downstream intermediates is supported by pathway context."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The substrate geissoschizine is implied by the enzyme name and module design."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact 'oxidized geissoschizine-derived intermediate' is not explicitly named in this paper text."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "GO supplies precursor pool for downstream alkaloids."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It is an early-midstream step in the tabersonine/catharanthine module."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "GO is explicitly the cytochrome P450 enzyme geissoschizine oxidase."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Both listed points are directly supported by the Results."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Extra copies of GO were introduced to promote downstream branch flux."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by module engineering, extra-copy integration, and metabolite profiling."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly pairs GO with CroCPR/CroCYB5 as P450 support and with CroGS in extra-copy engineering."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strains are CEN.PK2-1C-derived."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 19,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "PRX1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PRX1 is explicitly from Catharanthus roseus in the module description."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Catharanthus roseus is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PRX1 was expressed/tested in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PRX1 was intended for the terminal vinblastine step."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Vinblastine is an alkaloid."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PRX1 is part of the terminal coupling step in vinblastine biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is in the vindoline/catharanthine coupling module."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "PRX1 is defined as class III peroxidase."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states PRX1 was suggested to condense vindoline and catharanthine and discusses coupled product formation."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Vindoline and catharanthine were the fed substrates used to test vinblastine formation."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses vinblastine-related coupling and anhydrovinblastine/leurosine-type products in this context."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PRX1 was intended to directly form the target coupled product toward vinblastine."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It is the terminal step."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports confocal microscopy indicated CroPRX1 was not expressed/folded properly in yeast."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PRX1 is explicitly called a class III plant peroxidase."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings are directly supported in the Results and Discussion."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "No in vivo vinblastine was achieved in yeast because PRX1 did not function properly."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "They used module integration, substrate feeding, confocal microscopy, and metabolite profiling."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Improper folding/expression blocking terminal conversion is directly supported."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The suggestion of finding a better homologue or using peroxisomal compartmentalization appears in the Discussion."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "It is a direct engineering implication from the failure of in vivo PRX1 function."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strains are CEN.PK2-1C-derived."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 0
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 421,
+    "supported": 393,
+    "unsupported": 7,
+    "uncertain": 21,
+    "total_corrections": 7
+  }
+}

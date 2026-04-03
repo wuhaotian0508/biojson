@@ -1,0 +1,398 @@
+{
+  "file": "MinerU_markdown_PMC10329457_2038801811950833673",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC10329457_2038801811950833673.md",
+  "timestamp": "2026-03-31T21:27:22.038117",
+  "genes": [
+    {
+      "gene_name": "GH3.2",
+      "category": "Common",
+      "verification": {
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.2 is described as encoding an indole-3-acetic acid-amido synthetase; thus it is directly linked to IAA."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states auxin is a plant hormone and discusses IAA as auxin."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GH3.2 'encodes indole-3-acetic acid-amido synthetase'."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The transcriptome experiments were performed on Arabidopsis seedlings."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly refers to Arabidopsis thaliana seedlings."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.2 is a plant gene identified from Arabidopsis seedling RNA-seq."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The RNA-seq mapping was against the TAIR10 Arabidopsis reference genome."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.2 is among genes significantly induced only under RGI conditions across tripartite and drop-out experiments."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Same support as above: the paper explicitly states GH3.2 was induced only under RGI conditions."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "RGI conditions included Arthrobacter CL28 and Variovorax drop-out; suppression occurred with Variovorax CL14/full SynCom, matching the described contrasts."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.2 is presented as a robust marker for late auxin responses under bacterially induced RGI, not as a manipulated causal gene."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not propose direct application for GH3.2; describing it as limited direct value and useful as a biomarker is consistent with the paper's use."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 18 genes were induced only under RGI conditions and specifically names GH3.2; it was not directly manipulated."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "This conclusion comes from plant RNA-seq differential expression analyses in tripartite and drop-out experiments."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly discusses auxin as a plant hormone controlling root development."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Root apex context is discussed for 17 co-expressed genes and DR5::GFP was quantified in the root elongation zone, but GH3.2 itself is the exception and no explicit accumulation site for IAA is given."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Plant RNA-seq data are reported and deposited in GEO accession GSE131158."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point matches the Results: GH3.2 is the only overlapping gene named explicitly, encodes IAA-amido synthetase, and its induction supports excess auxin signalling under RGI suppressed by Variovorax."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 17,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "ACC deaminase",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly searched for KEGG orthology identifier K01505 for ACC deaminase."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names K01505 as '1-aminocyclopropane-1-carboxylate deaminase'."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses ACC deaminase in the context of ACC/ethylene-related growth inhibition and ACC degradation capacity."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ACC degradation is directly implied by the enzyme name and its use in explaining ACC-induced RGI suppression."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links the gene to ACC degradation but does not define it as a 'terminal degradation step of precursor pool'."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "ACC is explicitly named as 1-aminocyclopropane-1-carboxylic acid and the substrate relevant to ACC deaminase."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The products ammonia and α-ketobutyrate are not stated in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Deamination of ACC lowering the ethylene precursor pool is consistent with the named enzyme and the phenotypic interpretation in the paper."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The entry says 'Not established', which accurately reflects that the paper does not establish this."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper connects ACC deaminase presence with suppression of ACC-induced, ethylene-related RGI."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly discuss ethylene/ACC-induced root growth inhibition, so the phenotype is connected to ethylene-related inhibitory signalling."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Ethylene is explicitly described as a plant hormone."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "PLP-dependent domain/family is not mentioned in the paper."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization is reported."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ACC-induced RGI assays were performed on Arabidopsis seedlings."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The plant species is Arabidopsis thaliana."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was surveyed in Variovorax genomes."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper refers to Variovorax isolates/genomes, i.e. Variovorax spp."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "CL14, MF160, B4 and YR216 were among the strains tested for ACC-induced RGI suppression; YR216 is specifically discussed as lacking the gene."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states YR216 did not suppress ACC-induced RGI and does not contain an ACC deaminase gene; presence/absence was scanned across genomes."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "ACC treatment was explicitly used to induce RGI in Fig. 3a."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links ACC deaminase presence/absence to ability to mitigate ACC-induced root growth inhibition."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential inoculant value is a reasonable inference but is not explicitly discussed in the paper for this gene."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper did not directly manipulate ACC deaminase; evidence is from comparative genomics and phenotype correlation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "This is exactly how the paper addressed it: KEGG/ comparative genomics plus physiological assays of ACC-induced RGI suppression."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points accurately summarize the Results regarding ACC-induced RGI suppression and YR216 lacking the gene."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Comparative genomics across Variovorax genomes and KEGG annotation scan are described."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states ethylene inhibits root growth and acts synergistically with auxin."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Root growth inhibition is measured in roots, but no explicit site of ethylene accumulation is given."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "3.5.99.7",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "ammonia; α-ketobutyrate",
+          "new_value": "NA",
+          "reason": "The products ammonia and α-ketobutyrate are not stated in the paper."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "PLP-dependent ACC deaminase",
+          "new_value": "NA",
+          "reason": "PLP-dependent domain/family is not mentioned in the paper."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "No localization is reported."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 4,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "iacC/iacD/iacE-containing hotspot 33 auxin degradation operon",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The knockout is explicitly described as deletion of Variovorax CL14 genes 2643613653–2643613677."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes hotspot 33 as containing weak homologues to iacC, iacD, iacE, iacF and iacR and hypothesizes it is an auxin-degradation operon."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The locus is explicitly proposed and functionally shown to mediate IAA degradation/auxin catabolism."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to it as an auxin-degradation operon / hotspot 33."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The data show the locus acts directly on IAA via degradation in culture and in planta rescue assays."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA degradation by the locus is directly tested and demonstrated."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Specific IAA degradation products are not identified in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows hotspot 33 is necessary and sufficient for IAA degradation and reducing auxin-associated RGI."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper concludes hotspot 33 is the critical genetic locus required for suppression of RGI and auxin degradation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "This locus directly removes the target signalling metabolite IAA."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA is the metabolite directly degraded and central to the phenotype."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA is explicitly treated as an auxin."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states hotspot 33 contains weak homologues to Paraburkholderia iacC, iacD, iacE, iacF and iacR."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The Methods explicitly state the insert genes are in the same direction as the IPTG-inducible Lac promoter in pBBR1-MCS2."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis assays, E. coli library screening, and Acidovorax root219 gain-of-function are all described."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana, Acidovorax root219, and Escherichia coli are all present in the paper, though Acidovorax is given without a formal species epithet."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The hotspot is from Variovorax CL14."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source is a Variovorax strain; genus-level Latin name is supported."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "CL14 is explicitly the source strain for hotspot 33, the genomic library, and the deletion mutant."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states hotspot 33 genes were the most highly upregulated among the 12 hotspots in coculture with Arthrobacter CL28."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Coculture with Arthrobacter CL28 and exogenous IAA treatment were both used in experiments testing this locus."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Gain- and loss-of-function data show promotion of IAA degradation and suppression of auxin-associated RGI."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This engineering application is plausible but not explicitly proposed in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed details are present: weak iac homologues, absence of iacA/iacB/iacI, full rescue of IAA-induced RGI by V2, partial rescue of Arthrobacter-induced RGI, deletion abolishing rescue without colonization defect."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "These are homologous genes within the same operon, but the paper does not demonstrate protein-protein interactions."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed approaches are explicitly used in the paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an accurate synthesis of the Results and figures for hotspot 33."
+        },
+        "Omics_Data": {
+          "verdict": "UNCERTAIN",
+          "reason": "Comparative genomics and Variovorax CL14 RNA-seq are supported, and GEO GSE131158 is for plant RNA-seq context; however PRJNA543313 is for 16S data, not hotspot 33 omics specifically."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes partial rescue by Acidovorax root219::V2 despite significantly lower root colonization than Variovorax CL14."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states auxin/IAA controls root development and excess levels inhibit primary root growth."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Rhizosphere/root elongation zone context is directly supported by bacterial/root interaction assays and DR5::GFP measurements in the root elongation zone, though phrased as context rather than a measured compartment."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Product",
+          "old_value": "IAA degradation products",
+          "new_value": "NA",
+          "reason": "Specific IAA degradation products are not identified in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 79,
+    "supported": 67,
+    "unsupported": 5,
+    "uncertain": 7,
+    "total_corrections": 5
+  }
+}

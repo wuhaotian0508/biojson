@@ -1,0 +1,525 @@
+{
+  "file": "MinerU_markdown_PMC11666457_2038801160713838602",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC11666457_2038801160713838602.md",
+  "timestamp": "2026-03-31T21:39:40.333176",
+  "genes": [
+    {
+      "gene_name": "GAME15",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state tomato genes were cloned from tomato leaf cDNA; cultivated tomato is the source for GAME15."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies cultivated tomato as Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify cultivated tomato cv. Micro Tom cDNA was used for cloning GAME15."
+        },
+        "Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "GAME15 was directly used in N. benthamiana reconstitution assays, but not tested in S. nigrum in Results."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nicotiana benthamiana is directly used with GAME15; Solanum nigrum is not directly shown for GAME15."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "SN30 bulk refers to S. nigrum seed stock, but GAME15 was not directly applied there."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "GAME15 was part of the reconstitution leading to dehydrotomatidine, but the paper does not isolate or mechanistically test GAME15's direct effect on steroidal glycoalkaloids."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Only indirectly connected through pathway reconstitution; not directly validated for GAME15 alone."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The specific statement 'Leaves/flower buds in tomato; leaves and fruits depending species' is not presented for GAME15."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states SGAs have roles in plant defense and are antinutritional because of toxicity and bitterness."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state GAME15 was coexpressed with GAME6, GAME8, GAME11 and GAME4 in N. benthamiana as part of the reconstitution that enabled dehydrotomatidine formation when GAME12/GABA-T4 was present."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points match the Results: GAME15 was included in reconstitution, served as an upstream component, and was not the main mechanistic focus."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods and Results describe transient Agrobacterium-mediated expression in N. benthamiana leaves."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant evidence is transient pathway reconstitution with UHPLC-MS metabolite profiling."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME15 was coexpressed in the same reconstitution assay with GAME6, GAME8, GAME11, GAME4 and candidate GABA-T homologs including GAME12/GABA-T2 and GABA-T4."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential utility as part of multigene engineering is a reasonable inference, but this was not specifically discussed for GAME15."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects that GAME15 was experimentally included in Results but was not the main mechanistic focus."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite_Accumulation_Site",
+          "old_value": "Leaves/flower buds in tomato; leaves and fruits depending species",
+          "new_value": "NA",
+          "reason": "The specific statement 'Leaves/flower buds in tomato; leaves and fruits depending species' is not presented for GAME15."
+        }
+      ],
+      "stats": {
+        "supported": 10,
+        "unsupported": 1,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "GAME12",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GAME12 is identical to GABA-T2, annotated as Solyc12g006470."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME12 is explicitly named GLYCOALKALOID METABOLISM12 and described as a GABA transaminase-like enzyme."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and introduction identify GAME12 as a GABA-T family member; transaminase assays use PLP, supporting PLP-dependent aminotransferase function."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato GAME12 was cloned and tested."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify cv. Micro Tom for tomato cDNA used to clone GAME12."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME12 was tested in Nicotiana benthamiana and stably expressed in black nightshade (S. nigrum)."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Nicotiana benthamiana and Solanum nigrum are directly used in Results."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "S. nigrum wild type SN30 bulk is specified in Methods; N. benthamiana variety is not given, so 'NA; SN30 bulk' is consistent with the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME12 is central to steroidal glycoalkaloid biosynthesis throughout the paper."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states GAME12 controls the branch point between steroidal saponins and SGAs by introducing nitrogen."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Nitrogen introduction by GAME12 is described as a late pathway step and branch point."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support that GAME12 forms 26-aminofurostanol leading to alkaloid aglycones and committing flux toward SGAs."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies the proposed substrate as 26-furostanol aldehyde, uses GABA as amino donor, and shows lower activity with L-alanine."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results tentatively assign 26-aminofurostanol as the immediate product, which spontaneously cyclizes to dehydrotomatidine/solasodine."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the biochemical conclusions of the coupled assays and product assignments."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly describes GAME12 as controlling the branch point and as sufficient to switch accumulation from saponins to SGAs."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly connect GAME12 to dehydrotomatidine, solasodine, soladulcidine-related SGAs, and SGAs broadly."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These products are steroidal alkaloids/SGAs as described in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GAME12 is primarily expressed in tomato leaf and flower buds; in S. nigrum endogenous GAME12 is detected in green fruits, and transgenic expression causes engineered leaves to produce SGAs."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "SGAs are explicitly described as defensive, antinutritional, toxic and bitter."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This summarizes the demonstrated phenotypes in N. benthamiana, in vitro, and transgenic S. nigrum."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All six points are directly supported by Results and Discussion summaries."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state GAME12 is primarily expressed in leaf and flower buds, contrasted with GABA-T4 roots."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Supplementary Fig. 32 show endogenous GAME12 expression in S. nigrum green fruits but not young leaves, and transgenic leaf overexpression induces SGAs."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Confocal microscopy confirmed cytosolic localization of GAME12/GABA-T2."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed experimental contexts are directly described in Results/Methods."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These are the exact major methods used to validate GAME12 function."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME12 was assayed together with GAME4, and in pathway reconstitution with GAME6, GAME8, GAME11 and GAME15."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "A constitutive promoter is explicitly stated for S. nigrum stable transformation, but '35S-based transient expression context' for GAME12 is not explicitly stated in Results for pathway reconstitution, only free GFP constructs in localization assays use 35S labels."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly demonstrates engineering value by converting S. nigrum leaves into SGA-producing tissue and increasing flux with GAME4 stacking."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "SGAs are described as antinutritional/toxic, and GAME4+GAME12 lowers uttroside B while increasing SGAs."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The data availability section gives S. nigrum transcriptome SRA accessions PRJNA1134384 and PRJNA1133681."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support altered localization and specificity in evolution, and show spontaneous cyclization after the aminotransferase step."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 33,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "GAME4",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME4 is explicitly named GLYCOALKALOID METABOLISM4."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Introduction states GAME4 is a member of the CYP88D family, i.e., a cytochrome P450."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato GAME4 was cloned and characterized."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods indicate tomato cv. Micro Tom cDNA was used for cloning GAME4."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME4 was used in vitro, in N. benthamiana reconstitution, and in S. nigrum stable transformation with GAME12."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "N. benthamiana and S. nigrum are directly used; in vitro has no species designation, so 'NA; Nicotiana benthamiana; Solanum nigrum' is acceptable."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "SN30 bulk is stated for S. nigrum; no variety is specified for the others."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME4 is characterized in steroidal glycoalkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME4 is the oxidation step immediately before GAME12-mediated nitrogen incorporation."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes GAME4 as the immediate upstream step to GAME12 in the late pathway."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show GAME4 forms the immediate precursor needed for GAME12 and SGA formation."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "In vitro assays indicate GAME4 acts on deglycosylated furostanol substrates derived from protodioscin and uttroside B."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indirectly confirms formation of 26-furostanol aldehyde by reductive amination trapping."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately restates the validated GAME4 oxidase role."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "While not called rate-limiting, Results support it as an important upstream control point whose low expression limits flux and whose coexpression boosts SGAs."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME4 is linked through assays to dehydrotomatidine, solasodine, soladulcidine, and SGAs broadly."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are steroidal alkaloids/SGAs."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The general wording 'SGA-accumulating Solanum tissues; engineered S. nigrum leaves when coexpressed' is broadly consistent, but the first part is generic rather than explicitly stated for GAME4."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "SGAs are explicitly said to function in defense and are antinutritional, toxic and bitter."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly support promotion of SGA formation and increased SGAs/decreased uttroside B upon GAME4+GAME12 coexpression."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All five points are described in Results."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and qPCR/transcriptome analyses show GAME4 expression in S. nigrum fruits and very low expression in young leaves relative to upstream GAME genes."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME4 was expressed as microsomes and is a cytochrome P450; microsomal localization is directly used experimentally."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These assay and expression contexts are directly described."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These are the actual methods establishing GAME4 function."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME4 was used with GAME12 and in pathway reconstitution with GAME6, GAME8, GAME11 and GAME15."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Stable S. nigrum overexpression is described, but the specific promoter for GAME4 is not explicitly named in the provided text."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper demonstrates GAME4 plus GAME12 can redirect flux toward SGAs in engineered S. nigrum."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show increased SGAs with decreased uttroside B, and SGAs are antinutritional/toxic."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The cited S. nigrum transcriptome accessions are in the paper and used to assess GAME4 expression."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes that prior C-26 oxidase activity had not been biochemically validated and this study provides that validation."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 30,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "GABA-T4",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results identify GABA-T4 as Solyc08g014610."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The fourth homolog is explicitly named GABA-T4."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "GABA-T4 is identified as a GABA-T family homolog; as a transaminase it is PLP-dependent in the same assay framework."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GABA-T4 is a tomato homolog."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The tomato source species is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Methods say GABA-T4 was amplified from a synthetic gene rather than directly from Micro Tom cDNA, though the homolog itself is from tomato; assigning Micro Tom specifically is not explicitly supported."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GABA-T4 was tested in N. benthamiana and in vitro."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "N. benthamiana is directly used; in vitro has no species, so 'NA' is acceptable."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GABA-T4 was tested as an SGA-pathway aminotransferase and showed SGA-forming activity."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It acts analogously to GAME12 at the nitrogen-incorporation branch point."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Its activity is in the late branch point step forming alkaloid aglycones."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Reconstitution and in vitro assays directly connect GABA-T4 to alkaloid aglycone formation."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Although 26-furostanol aldehyde is not isolated directly for GABA-T4, coupled assays indicate it acts on the same GAME4-generated aldehyde with GABA donor."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "By analogy to GAME12 and assay products, 26-aminofurostanol leading to solasodine/dehydrotomatidine is directly inferable from Results."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the demonstrated analogous activity to GAME12."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish rate-limiting status for GABA-T4, so 'Not established' is appropriate."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show dehydrotomatidine in N. benthamiana and solasodine in vitro, connecting GABA-T4 to SGAs."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are steroidal alkaloid/SGA products."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "GABA-T4 is primarily expressed in roots, but the paper does not show native root accumulation of these terminal metabolites; 'potentially' makes it speculative."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "SGAs are described as defensive, toxic and bitter."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly show GABA-T4 can promote SGA-forming aglycone production in heterologous and in vitro assays."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed findings are in the Results, including identification, cytosolic localization, dehydrotomatidine and solasodine formation, low canonical activity, root expression, and phylogenomic context."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state GABA-T4 is expressed primarily in root tissues."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Confocal microscopy confirmed cytosolic localization of GABA-T4."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient reconstitution and in vitro coupled assays are the direct experimental contexts used."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods were directly used to validate GABA-T4 activity."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "GABA-T4 was assayed with GAME4 and coexpressed in reconstitution with GAME6, GAME8, GAME11 and GAME15."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "A transient Agrobacterium expression system was used, but no specific promoter for GABA-T4 is explicitly named in the Results text provided."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential engineering use is plausible from activity data, but the paper does not explicitly propose GABA-T4 as an engineering tool."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Given that GABA-T4 promotes SGA-forming activity and SGAs are described as toxic/antinutritional, this tradeoff is directly inferable."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support that GABA-T4 is absent from some lineages and that its native role is less established than GAME12."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 27,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 114,
+    "supported": 100,
+    "unsupported": 1,
+    "uncertain": 13,
+    "total_corrections": 1
+  }
+}

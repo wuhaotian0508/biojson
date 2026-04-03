@@ -1,0 +1,633 @@
+{
+  "file": "MinerU_markdown_PMC6108399_2038795372087775235",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC6108399_2038795372087775235.md",
+  "timestamp": "2026-03-31T22:20:20.477198",
+  "genes": [
+    {
+      "gene_name": "KIN10",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies Arabidopsis lines including KIN10-ox in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly stated in Experimental Model and Subject Details."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "KIN10-ox was tested in Arabidopsis seedlings/plants."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the experimental species throughout."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state L. er. was used as control for tps lines and Figure 2/S2 use KIN10-ox with L. er. wild type."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper links KIN10 to sugar signaling, Tre6P pathway, sucrose, and circadian entrainment, but the exact phrase 'trehalose-6-phosphate-mediated sugar signaling / sucrose-responsive energy status' is a constructed process description rather than a direct terminal metabolite."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Tre6P is a sugar signaling metabolite in the paper, but for KIN10 itself no terminal metabolite assignment is directly made."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Summary support that KIN10 signaling is required for sucrose-induced circadian phase changes, i.e. signaling energy/sucrose status to circadian phase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "KIN10 is explicitly described as 'an α subunit of the sugar sensor SnRK1' and a sugar-sensing kinase."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Figures 2C and 4G show KIN10 overexpression lengthens period under low-energy conditions and abolishes morning sucrose-pulse-induced phase advance."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods appear in the paper: KIN10-ox, CCA1:luc period assays with/without sucrose under different light conditions, phase response curves, and western blot confirmation in Figure S1F."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states KIN10 regulates bZIP63 activity and bZIP63 is downstream of KIN10 signaling, but it does not directly test or show physical KIN10-bZIP63 interaction in this paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each of the three summary points is supported by Results/Figures 2C, S2A, and 4G."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Low light/high light, 90 mM sucrose, and transient sucrose pulses are all explicitly used for KIN10 experiments."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Transcriptome meta-analysis explicitly compares circadian/diel transcripts with KIN10-regulated datasets [17]."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This is speculative application language not stated or tested in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports altered clock behavior under constitutive overexpression and broad energy signaling involvement, but 'likely perturbs broader energy signaling' is an inference rather than directly demonstrated here."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "KIN10 is indeed treated as a signaling component upstream of bZIP63, not as a metabolic enzyme or transcription factor."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "trehalose-6-phosphate-mediated sugar signaling / sucrose-responsive energy status",
+          "new_value": "NA",
+          "reason": "The paper links KIN10 to sugar signaling, Tre6P pathway, sucrose, and circadian entrainment, but the exact phrase 'trehalose-6-phosphate-mediated sugar signaling / sucrose-responsive energy status' is a constructed process description rather than a direct terminal metabolite."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Potential target to rewire energy-signaling input into the circadian system, but constitutive activation causes altered clock behavior and may have broad pleiotropic effects.",
+          "new_value": "NA",
+          "reason": "This is speculative application language not stated or tested in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 13,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "PRR7",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PRR7 is studied in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the species used."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PRR7 experiments are in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit in the methods."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "PRR7-related data are shown in both Col-0 context (bzip63-1, prr7-11) and Ws context (bzip63-2), matching 'Col-0; Ws'."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "PRR7 is linked to sugar-responsive circadian entrainment, but this is not a metabolite and the paper does not define a terminal metabolite for PRR7."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This is a physiological output category, not a metabolite class stated in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "PRR7 is described as mediating circadian phase adjustment in response to sugars and being required for sugar-responsive period change."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PRR7 is explicitly named PSEUDO RESPONSE REGULATOR7, a clock gene/protein of the pseudo-response regulator family."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure S1A states bZIP63 transcripts peak prior to PRR7 in constant light, with PRR7 peaking at ZT8."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state PRR7 accumulates before dawn under low light/low energy and is suppressed by sucrose supplementation and high light."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that bZIP63 upregulates PRR7 under low-energy conditions and cites/uses prior evidence that prr7-11 lacks normal sugar-responsive period adjustment; PRR7 is central to phase adjustment."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "qRT-PCR and ChIP are directly shown here; prr7-11 entrainment phenotype is cited from prior work and late phase under LD is shown here, so 'confirmed for entrainment phenotype' overstates direct testing in this paper."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "bZIP63 binds the PRR7 promoter, but the paper does not demonstrate a direct PRR7-bZIP63 protein-protein interaction."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are supported by Figure 1B-E and the framing of PRR7 as the node through which sugar signaling affects circadian phase."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Low light, high light, and sucrose supplementation are explicit conditions for PRR7 transcript analyses."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The native PRR7 promoter is directly analyzed in ChIP and motif mapping."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This is speculative and not discussed/tested in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Figures 4K and 4L show prr7-11 has late CCA1 phase/defective entrainment under light-dark cycles."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "PRR7 is indeed treated as a core downstream target central to the mechanism shown."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "sucrose-responsive circadian entrainment output",
+          "new_value": "NA",
+          "reason": "PRR7 is linked to sugar-responsive circadian entrainment, but this is not a metabolite and the paper does not define a terminal metabolite for PRR7."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "carbohydrate signaling-related physiological output",
+          "new_value": "NA",
+          "reason": "This is a physiological output category, not a metabolite class stated in the paper."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Possible node for tuning clock responses to carbon status, though central clock role likely imposes pleiotropic constraints.",
+          "new_value": "NA",
+          "reason": "This is speculative and not discussed/tested in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 15,
+        "unsupported": 3,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "CHE",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly give CHE as AT5G08330.1."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CHE is from Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the study species."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "che mutants and CHE-ox are tested in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "CHE lines are listed, but the exact background 'Col-0' is not explicitly stated in the provided text for che-1/che-2/CHE-ox."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "CHE is linked to sucrose-responsive circadian behavior, not a metabolite."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This is not a metabolite class supported by the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "CHE is shown to modulate circadian transcriptional responses to sugars, especially CCA1 amplitude and phase responses."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC images indicate nuclear interaction and text/figure note nuclear position; CHE is treated as a nuclear clock component."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CHE is described as CCA1 HIKING EXPEDITION (CHE/TCP21), i.e. a TCP transcription factor clock component."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure S3C and Results state sucrose induces CHE transcripts, attenuated in KIN10-ox and somewhat in tps1-12."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show CHE affects CCA1 amplitude in a sugar-dependent manner; CHE-ox enhances sucrose-induced phase advance; che mutants retain morning phase advance, so CHE is modulatory not essential."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are present: Y2H, BiFC, qRT-PCR after sucrose pulse, mutant/overexpression CCA1:luc amplitude and phase response analyses."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "bZIP63 interaction is supported, but 'CCA1 promoter' is a DNA target rather than a protein."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by Figure S3 and Figure 4H-J."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "90 mM sucrose, sucrose pulses, low light, and LD cycles are all used in CHE-related assays."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "CCA1:luc and CCA1(TBSm):luc reporters are supported, but 35S promoter use for CHE-ox is not explicitly stated in this paper text."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This application statement is speculative and not supported by the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Broader clock perturbation from CHE overexpression is plausible but not directly demonstrated as a tradeoff in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed presents CHE as a secondary modulator rather than the decisive regulator of the sugar entrainment pathway."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "sucrose-responsive circadian output",
+          "new_value": "NA",
+          "reason": "CHE is linked to sucrose-responsive circadian behavior, not a metabolite."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "carbohydrate signaling-related physiological output",
+          "new_value": "NA",
+          "reason": "This is not a metabolite class supported by the paper."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Low priority engineering target for nutrient traits; mainly useful for modulating sugar-clock coupling.",
+          "new_value": "NA",
+          "reason": "This application statement is speculative and not supported by the paper."
+        }
+      ],
+      "stats": {
+        "supported": 14,
+        "unsupported": 3,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "TPS1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "TPS1 is explicitly named TREHALOSE-6-PHOSPHATE SYNTHASE1."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TPS1 mutants are Arabidopsis lines."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit in the methods."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "tps1 mutants were tested in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the organism used."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state L. er. was used as control for experiments with tps lines; thus applied background/context is Landsberg erecta."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly places TPS1 in trehalose-6-phosphate biosynthesis and sugar signaling."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state Tre6P tracks sucrose and negatively regulates SnRK1 activity, placing TPS1 in the Tre6P branch linking sucrose status to SnRK1 signaling."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "TPS1 is described as synthesizing Tre6P, i.e. an upstream step generating a signaling metabolite."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specify the substrates UDP-glucose and glucose-6-phosphate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "TPS1 is explicitly stated to synthesize trehalose-6-phosphate."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The exact biochemical reaction description is not given in the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Trehalose-6-phosphate is explicitly the signaling metabolite produced by TPS1 and central to the study."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Tre6P is explicitly described as a signaling sugar, i.e. a sugar signaling metabolite."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state Tre6P tracks sucrose and transmits energy status via regulation of SnRK1/bZIP63-related targets and circadian regulation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that TPS1 directly forms Tre6P, which is required for sugar-responsive phase adjustment."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "TPS1 is clearly important for Tre6P production, but the paper does not explicitly call it rate-limiting or a key control step."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Figures 2D and 4D-F show reduced TPS1 function decreases or abolishes sucrose effects on period and phase."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are directly used: tps1 mutant analysis, CCA1:luc period assays, sucrose-pulse phase response curves, and DIN6:luc analysis."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Native tps1 alleles and DIN6:luc/CCA1:luc reporters were used as stated."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Low light, high light, sucrose supplementation, and transient sucrose pulses are all used in TPS1 experiments."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Transcriptome meta-analysis uses OtsA/Tre6P-regulated transcript datasets [20]."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states tps1 alleles have altered metabolic phenotypes and longer periods under sucrose; broader effects are discussed."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This application statement is speculative and not stated in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes tps1-12 is the weakest allele for metabolite alterations and retains partial sucrose responsiveness."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.4.1.15",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "UDP-glucose; glucose-6-phosphate",
+          "new_value": "NA",
+          "reason": "The paper does not specify the substrates UDP-glucose and glucose-6-phosphate."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "catalyzes formation of trehalose-6-phosphate from UDP-glucose and glucose-6-phosphate",
+          "new_value": "NA",
+          "reason": "The exact biochemical reaction description is not given in the paper."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Useful target to tune sugar signaling and clock entrainment, but central metabolic signaling role suggests pleiotropy and developmental constraints.",
+          "new_value": "NA",
+          "reason": "This application statement is speculative and not stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 4,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "bZIP63",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly give bZIP63 as AT5G28770.2."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "bZIP63 is studied in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit in methods."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "bZIP63 mutant, RNAi, and overexpression lines are all Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the experimental species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "bZIP63 experiments use both Col-0 and Ws backgrounds as stated in methods and figures."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "bZIP63 is explicitly described as a transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper names BASIC LEUCINE ZIPPER63, a bZIP transcription factor."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "ChIP promoter binding and BiFC nuclear signal support nuclear localization/function."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support transcriptional upregulation of PRR7 under low-energy conditions, and text states bZIP63 activity is regulated by SnRK1/KIN10-mediated phosphorylation."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The central finding is that bZIP63 controls sugar-responsive circadian entrainment via clock gene regulation."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "PRR7 is directly shown as a promoter target of bZIP63."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Figures 1C-E show bZIP63 upregulates PRR7 under low-energy/low-light conditions and sucrose suppresses this accumulation."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Low energy/starvation, sucrose status, KIN10/SnRK1, and TPS1/Tre6P pathway are all implicated in regulating bZIP63-related function in this paper."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports bZIP63 homo/heterodimerization in cited context and directly shows interaction with CHE."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "bZIP63 is shown to be required for sugar-responsive circadian phase adjustment via PRR7, matching the stated influence."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This field gives a physiological output rather than a metabolite; the paper does not define a terminal metabolite for bZIP63."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This is not a metabolite class supported by the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that bZIP63 helps align circadian phase with daily energy availability."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure S1A explicitly states bZIP63 peaks before PRR7, at ZT6 in constant light."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show bZIP63 function is especially important before dawn under low light/low energy and has little effect on PRR7 under high light."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1F and Figures 4A-C support loss of sucrose-induced period shortening and absence of morning sucrose-pulse phase advance in bzip63-1; overexpression increases PRR7."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are directly used in the paper."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "CHE interaction is supported; KIN10 is a functional upstream regulator but not shown here as a direct protein interactor; 'PRR7 promoter' is DNA, not a protein."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are direct conclusions from Figures 1 and 4."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This is speculative application language not supported by direct evidence in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Defective entrainment and late phase in mutants are shown, but broader perturbation of starvation/sugar signaling by constitutive misexpression is inferred rather than directly tested here."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed treatments are explicitly used in bZIP63 experiments."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state CaMV 35S promoter drove HA-bZIP63 overexpression and RNAi constructs."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure S1A cites circadian expression data from GEO accession GSE19271."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "bZIP63 is clearly the central core gene and main sugar-responsive transcription factor of the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "sucrose-responsive circadian phase/period regulation",
+          "new_value": "NA",
+          "reason": "This field gives a physiological output rather than a metabolite; the paper does not define a terminal metabolite for bZIP63."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "carbohydrate signaling-related physiological output",
+          "new_value": "NA",
+          "reason": "This is not a metabolite class supported by the paper."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Strong candidate for engineering carbon-status-responsive clock behavior, though likely pleiotropic due to broad energy signaling functions.",
+          "new_value": "NA",
+          "reason": "This is speculative application language not supported by direct evidence in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 3,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 116,
+    "supported": 89,
+    "unsupported": 15,
+    "uncertain": 12,
+    "total_corrections": 15
+  }
+}

@@ -1,0 +1,441 @@
+{
+  "file": "MinerU_markdown_PMC12281193_2038800151832727558",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12281193_2038800151832727558.md",
+  "timestamp": "2026-03-31T21:50:15.129745",
+  "genes": [
+    {
+      "gene_name": "UPL3",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The Methods state: 'The upl3-26 T-DNA insertion mutant (SALK_116326C) was obtained from the Arabidopsis Biological Resource Center.'"
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies Arabidopsis; title and Methods identify Arabidopsis plants."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The Methods explicitly mention searches against the 'Arabidopsis thaliana' database, and the study organism is Arabidopsis thaliana."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state 'All plants were in the Col-0 ecotype background.'"
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments were performed in Arabidopsis seedlings/plants."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Arabidopsis thaliana as indicated throughout the paper."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state all plants were in the Col-0 ecotype background."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Discussion describe UPL3 as 'a member of the HECT domain-containing family of proteasome-associated ubiquitin ligases' and note the UPL3/4 subfamily has 'a C-terminal HECT domain and N-terminal Armadillo repeats.'"
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper concerns sugar availability/starvation signaling, not a specific terminal nutrient/metabolite product directly produced by UPL3. 'Sugar' is a treatment/signal context, not a gene-linked end product demonstrated in Results."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Because no terminal metabolite is directly established for UPL3 in the Results, assigning 'Carbohydrate' as product class is not supported."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper discusses sugar generally as an energy source in the Abstract/Discussion, but does not establish a UPL3-controlled final metabolite function in Results."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show UPL3 promotes starvation-induced BZR1 degradation, inhibits growth under sugar-limited conditions, and supports survival during prolonged starvation; upl3 mutants grow more under short-term starvation but survive less after long-term starvation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point is supported by Results: identification by SIL-IP-MS/PRM, increased BZR1 and BR-hyperresponsive phenotypes in upl3, UPL3 increase with starvation/TOR inhibition and decrease with glucose, and requirement for growth suppression/survival under starvation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that UPL3 likely acts downstream of sugar-TOR signaling and promotes degradation of ubiquitinated BZR1; the discussion also cites prior work that upl3 mutants accumulate lower sugar and starch, while noting this is from another study and not the focal phenotype here."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The Discussion states that 'both UPL3 and BZR1 are ubiquitously expressed across all plant organs (Supplemental Figure 10),' but this is a discussion summary referring to supplemental data rather than directly shown in the provided Results text."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "Same issue: the statement appears in Discussion with reference to Supplemental Figure 10, but the supporting data are not presented in the provided Results text."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "BZR1 is directly supported as an interacting protein by SIL-IP-MS, coIP, and BiFC. TOR is not shown to physically interact with UPL3; the paper supports signaling relationship ('acts downstream of TOR'), not protein interaction."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods and Results report quantitative proteomics by 15N SIL-IP-MS, targeted PRM, and dataset deposition under PRIDE identifier PXD04613."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show upl3 loss promotes growth under short-term starvation yet dramatically decreases survival under prolonged starvation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed approaches appear in the paper: upl3-4/upl3-26 mutants, coIP, BiFC, BZR1 immunoblots, glucose/starvation and AZD8055 treatments, tor-es interaction, and survival assays."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The study explicitly uses sugar starvation/darkness, glucose supplementation, AZD8055 TOR inhibition, estradiol-induced tor-es, and PPZ treatment."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses 35S constructs (e.g., 35S::BZR1-YFP, 35S::YFP-UPL3, 35S::UPL3-Myc) and native BZR1 promoter constructs (BZR1::BZR1-CFP/YFP)."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The Discussion proposes UPL3 as a potential engineering target for improved productivity/resilience, but this is speculative and not experimentally validated in this paper; the caution about reduced survival with reduced UPL3 is inferable from Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "Sugar",
+          "new_value": "NA",
+          "reason": "The paper concerns sugar availability/starvation signaling, not a specific terminal nutrient/metabolite product directly produced by UPL3. 'Sugar' is a treatment/signal context, not a gene-linked end product demonstrated in Results."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "Carbohydrate",
+          "new_value": "NA",
+          "reason": "Because no terminal metabolite is directly established for UPL3 in the Results, assigning 'Carbohydrate' as product class is not supported."
+        },
+        {
+          "field": "Terminal_Metabolite_Function",
+          "old_value": "Primary energy source for cellular functions; supports growth and survival under stress",
+          "new_value": "NA",
+          "reason": "The paper discusses sugar generally as an energy source in the Abstract/Discussion, but does not establish a UPL3-controlled final metabolite function in Results."
+        }
+      ],
+      "stats": {
+        "supported": 16,
+        "unsupported": 3,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "BZR1",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "BZR1 studied here is from Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Arabidopsis thaliana."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state all plants were in the Col-0 ecotype background."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "BZR1 experiments were conducted in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state all plants were in Col-0 background."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract calls BZR1 'the master transcription factor of the brassinosteroid signaling pathway.'"
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The name BRASSINAZOLE RESISTANT 1 and discussion of BZR1/BZR2/BES1 support membership in the BZR family transcription factors."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC showed strong fluorescence in nuclei of N. benthamiana epidermal cells coexpressing UPL3 and BZR1, supporting nuclear localization in this interaction context."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "BZR1 is linked to growth/BR signaling and sugar-responsive regulation, not to a final nutrient metabolite product directly measured in Results. 'Sugar' is not a terminal product of BZR1."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No terminal metabolite product class for BZR1 is established in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The function given pertains to sugar generally, not to a BZR1-controlled final nutrient product demonstrated in Results."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports growth regulation in response to sugar availability via BR signaling and BZR1 stability, but does not directly define this as a 'metabolic process' controlled by BZR1."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The study directly shows BZR1 protein abundance is controlled by ubiquitin-mediated degradation via UPL3; as a transcription factor, BZR1 also functions in transcriptional regulation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Figure 5 show BR-hyperresponsive lines including bzr1-1D have reduced survival under prolonged starvation; the paper also shows starvation-induced degradation of BZR1 inhibits growth, and stabilized BZR1 in upl3 correlates with longer hypocotyls under sugar limitation."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "While BZR1 is the master TF of BR signaling, the phrase 'target product' implies a final metabolite/product, which is not established here."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly shows starvation/TOR inhibition promote BZR1 degradation, upl3 increases phosphorylated and dephosphorylated BZR1, and stabilized BZR1 correlates with longer hypocotyls under sugar limitation and lower survival in BR-hyperresponsive contexts."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not identify specific BZR1 downstream target genes in this study. 'BR-responsive growth genes' is generally plausible but not directly shown here."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNCERTAIN",
+          "reason": "Although BZR1 is a transcription factor promoting BR responses, this paper does not directly assay target gene activation."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "The study supports regulation of BZR1 by sugar availability/starvation, TOR signaling, UPL3-mediated degradation, and BR dependence inferred from PPZ sensitivity of growth phenotypes."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "UPL3 is directly supported as an interacting protein. BAF1 is identified in BZR1 IP-MS and discussed as a BZR1/2 E3 ligase from prior work, so partly supported. TOR is not shown to physically interact with BZR1 in this paper; it is an upstream signaling regulator."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "Discussion states ubiquitous expression across organs citing Supplemental Figure 10, but the evidence is not in the provided Results text."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "Same reason as above."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "BZR1-YFP lines were used for 15N SIL-IP-MS and PRM interactome analysis; dataset PXD04613 is provided."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports a growth-survival tradeoff: elevated BR/BZR1 activity supports growth under sugar limitation but compromises survival under extended starvation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are present: anti-BZR1 immunoblotting, BZR1-CFP/YFP lines, confocal imaging, upl3 genetic background analyses, glucose/AZD8055 treatments, and survival assays."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly shows BZR1 interacts with UPL3 by coIP and BiFC."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed focuses on BZR1 protein stability rather than downstream metabolic targets, and Supplemental Figure 5E/Results indicate upl3 especially increases dephosphorylated active BZR1 relative to baf1."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These treatments are all used in experiments involving BZR1: sugar starvation/darkness, glucose, AZD8055, and PPZ."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses 35S::BZR1-YFP and native BZR1 promoter constructs BZR1::BZR1-CFP/YFP."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The notion of manipulating BZR1 stability for engineering is a reasonable inference from Discussion but is not directly tested as an application in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "Sugar",
+          "new_value": "NA",
+          "reason": "BZR1 is linked to growth/BR signaling and sugar-responsive regulation, not to a final nutrient metabolite product directly measured in Results. 'Sugar' is not a terminal product of BZR1."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "Carbohydrate",
+          "new_value": "NA",
+          "reason": "No terminal metabolite product class for BZR1 is established in the paper."
+        },
+        {
+          "field": "Terminal_Metabolite_Function",
+          "old_value": "Primary energy source for cellular functions; supports growth and survival under stress",
+          "new_value": "NA",
+          "reason": "The function given pertains to sugar generally, not to a BZR1-controlled final nutrient product demonstrated in Results."
+        },
+        {
+          "field": "Decisive_Influence_on_Target_Product",
+          "old_value": "Master transcription factor of the brassinosteroid signaling pathway; decisive growth regulator whose degradation links sugar status to growth arrest",
+          "new_value": "NA",
+          "reason": "While BZR1 is the master TF of BR signaling, the phrase 'target product' implies a final metabolite/product, which is not established here."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 4,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_name": "TOR",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TOR is studied in Arabidopsis seedlings/plants."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism is Arabidopsis thaliana."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state all plants were in the Col-0 ecotype background; tor-es is used in this background context."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TOR-related experiments use Arabidopsis seedlings."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods indicate Col-0 background for all plants."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "TOR is referred to as part of sugar-TOR signaling, and the acronym target of rapamycin denotes a signaling kinase; this is standard and consistent with the paper's treatment of TOR inhibition."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper names TOR and uses TOR inhibition/RNAi, but does not explicitly state 'serine/threonine protein kinase' in the provided text."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "TOR is a signaling component, not a gene tied here to a direct terminal nutrient product. 'Sugar' is the upstream signal/context, not a product."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No direct terminal metabolite product is established for TOR in this paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This describes sugar generally, not a TOR-specific final product shown in Results."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports sugar-responsive control of growth through TOR-dependent regulation of BZR1 stability and UPL3 accumulation."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support that sugar-TOR signaling inhibits/negatively regulates UPL3 accumulation under sugar-sufficient conditions, because TOR inhibition increases YFP-UPL3 and promotes BZR1 degradation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The study shows TOR inhibition arrests growth, increases UPL3 levels, and promotes BZR1 degradation; upl3 partially suppresses these TOR inhibition effects."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The claim is framed around a 'target product,' but the paper establishes TOR as an upstream signaling node, not as decisive for a final metabolite product."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed points are directly supported by Figure 3, Figure 4, and supplemental imaging: TOR inhibition by AZD8055 or tor-es suppresses growth, upl3 suppresses TOR inactivation phenotypes, and TOR inhibition increases UPL3/promotes BZR1 degradation."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports TOR acting upstream of the UPL3-BZR1 module, but does not directly show TOR molecularly targets UPL3 or BZR1."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNCERTAIN",
+          "reason": "No direct target gene assays are presented; the claim is about indirect promotion of BZR1 accumulation via UPL3 inhibition, which is plausible but mechanistically inferential."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly links sugar availability/glucose to TOR signaling in regulation of BZR1 and UPL3."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not show physical interaction of TOR with UPL3 or BZR1; it supports regulatory relationships only."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Growth arrest upon TOR inactivation is shown, and carbon-conservation under starvation is discussed conceptually, but the paper does not directly demonstrate broader TOR tradeoffs or benefits."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed methods are used: AZD8055, inducible tor-es RNAi, hypocotyl phenotyping, BZR1 immunoblotting, and YFP-UPL3/BZR1-YFP fluorescence analyses."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "TOR is indeed an upstream signaling component rather than the primary focal nutrient-metabolism gene, yet experimentally central for defining the UPL3-BZR1 mechanism."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Glucose, sugar starvation/darkness, AZD8055, and estradiol induction of tor-es are all explicitly used."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The idea that UPL3 may be a more targetable downstream lever than TOR is an inference, not an experimentally tested conclusion in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "Sugar",
+          "new_value": "NA",
+          "reason": "TOR is a signaling component, not a gene tied here to a direct terminal nutrient product. 'Sugar' is the upstream signal/context, not a product."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "Carbohydrate",
+          "new_value": "NA",
+          "reason": "No direct terminal metabolite product is established for TOR in this paper."
+        },
+        {
+          "field": "Terminal_Metabolite_Function",
+          "old_value": "Primary energy source and metabolic signal coordinating growth with carbon availability",
+          "new_value": "NA",
+          "reason": "This describes sugar generally, not a TOR-specific final product shown in Results."
+        },
+        {
+          "field": "Decisive_Influence_on_Target_Product",
+          "old_value": "Key sugar-responsive signaling node upstream of UPL3-BZR1 module",
+          "new_value": "NA",
+          "reason": "The claim is framed around a 'target product,' but the paper establishes TOR as an upstream signaling node, not as decisive for a final metabolite product."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "UPL3; BZR1",
+          "new_value": "NA",
+          "reason": "The paper does not show physical interaction of TOR with UPL3 or BZR1; it supports regulatory relationships only."
+        }
+      ],
+      "stats": {
+        "supported": 15,
+        "unsupported": 5,
+        "uncertain": 5
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 79,
+    "supported": 51,
+    "unsupported": 12,
+    "uncertain": 16,
+    "total_corrections": 12
+  }
+}

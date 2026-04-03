@@ -1,0 +1,1125 @@
+{
+  "file": "MinerU_markdown_PMC12441185_2038799991425761280",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12441185_2038799991425761280.md",
+  "timestamp": "2026-03-31T21:55:48.693071",
+  "genes": [
+    {
+      "gene_name": "CpSTTr",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Described as an ortholog identified in the C. pubescens transcriptome."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "C. pubescens is the source species named throughout the paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CpSTTr was co-expressed in N. benthamiana leaves."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "N. benthamiana is explicitly the heterologous expression host."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links CpSTTr to improved flux toward methoxylated and non-methoxylated Cinchona alkaloid intermediates in reconstitution, though not directly to final quinine production in the heterologous system."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These pathway products are Cinchona/monoterpenoid indole alkaloid intermediates."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states quinine is an antimalarial and bittering ingredient and quinidine is an antiarrhythmic medication."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 1 and 2, along with dihydro analogs 5 and 6, accumulate only in roots and stem in C. pubescens."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Co-expression of CpSTTr improved metabolic flux of strictosidine and 10-methoxystrictosidine to downstream products and increased methoxylated product ratio."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by transient co-expression in N. benthamiana and LC–MS analysis of leaf extracts."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says CpSTTr was identified in the C. pubescens transcriptome; no detailed tissue expression is given, matching the statement."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was co-expressed transiently in N. benthamiana leaves."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies CpSTTr as an ortholog of a strictosidine transporter and explicitly discusses it as a vacuole transporter affecting export from the vacuole."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly identified as an ortholog of a strictosidine transporter."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Strictosidine and 10-methoxystrictosidine are metabolites/transported substrates, not proteins; the paper does not describe protein interaction partners here."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The reconstitution included co-infiltration of tryptamine and secologanin in N. benthamiana leaves."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was identified by searching the C. pubescens transcriptome; no accession is provided."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states without transporter, strictosidine and 10-methoxystrictosidine accumulated while downstream products were low."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly supported by the conclusion that inclusion of the transporter modulates product profile and improves heterologous pathway flux."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly highlights transporters as key controllers of product distribution in native and heterologous systems."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are consistent with the Results describing transcriptome identification, improved downstream conversion, and altered methoxylated/non-methoxylated product distribution."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "strictosidine; 10-methoxystrictosidine",
+          "new_value": "NA",
+          "reason": "Strictosidine and 10-methoxystrictosidine are metabolites/transported substrates, not proteins; the paper does not describe protein interaction partners here."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 1,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "CpT5H1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "CpT5H1 was named as a tryptamine-5-hydroxylase candidate after activity was shown."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient expression with tryptamine yielded 5-hydroxytryptamine/serotonin."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Tryptamine was infiltrated as substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Formation of 5-hydroxytryptamine (serotonin, 27) was detected by LC–MS."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places CpT5H1 in quinine/Cinchona alkaloid biosynthesis, a monoterpenoid indole alkaloid pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It forms the early precursor for the methoxylated branch via serotonin/5-methoxytryptamine."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper concludes methoxylation is initiated at the tryptamine stage, i.e., an early upstream step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The work shows 5-methoxytryptamine derived from tryptamine feeds methoxylated alkaloids including quinine and quinidine."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is clearly important and early, but the paper does not test or state that CpT5H1 is rate-limiting or a control step."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Identified by BLAST against CYP71P1, a cytochrome P450 tryptamine-5-hydroxylase, among oxidase candidates."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CpT5H1 is from C. pubescens."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Cinchona pubescens is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Function tested by transient expression in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana is explicitly named."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper connects this early step to methoxylated Cinchona alkaloids including quinine and quinidine through feeding and reconstitution logic."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are monoterpenoid indole alkaloids/Cinchona alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Quinine and quinidine functions are stated in the introduction."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Methoxylated alkaloids 1,2,5,6 are stated to accumulate in roots and stem."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "By producing serotonin from tryptamine, CpT5H1 enables the precursor route to 5-methoxytryptamine-derived alkaloids."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Validated by transient expression in N. benthamiana plus tryptamine infiltration and LC–MS detection of serotonin."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states CpT5H1 and CpT5H2 have complementary gene expression profiles."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was transiently expressed in N. benthamiana leaves."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not report direct physical interaction between CpT5H1 and CpOMT1."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Tryptamine infiltration into N. benthamiana leaves is explicit."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Identified from transcriptome/RNA-seq mining of C. pubescens; no accession stated."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by reconstitution of methoxylated alkaloid intermediates using CpT5H with CpOMT1 and downstream genes."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states CpT5H1 and CpT5H2 are 97.9% identical amino acids."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points match the Results and conclusions."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "CpOMT1",
+          "new_value": "NA",
+          "reason": "The paper does not report direct physical interaction between CpT5H1 and CpOMT1."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "CpT5H2",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "CpT5H2 was named as a tryptamine-5-hydroxylase candidate after activity was shown."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient expression with tryptamine yielded 5-hydroxytryptamine/serotonin."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Tryptamine was infiltrated as substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Formation of serotonin (27) was detected only in leaves expressing CpT5H1 or CpT5H2."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Placed in quinine/Cinchona alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It forms the early precursor for the methoxylated branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper concludes hydroxylation occurs at the tryptamine stage, an early upstream step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "5-methoxytryptamine is shown to feed methoxylated alkaloids including quinine/quinidine."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "No explicit rate-limiting or control-step analysis is presented for CpT5H2."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Identified via homology to CYP71P1 among oxidase/P450 candidates."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CpT5H2 is from C. pubescens."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly C. pubescens."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Function tested in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana is explicitly named."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The step is directly linked to methoxylated Cinchona alkaloids through 5-methoxytryptamine formation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are monoterpenoid indole alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Functions of quinine and quinidine are stated in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Roots and stem accumulation of methoxylated alkaloids is explicitly stated."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CpT5H2 enables serotonin formation, feeding the 5-methoxytryptamine branch."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient expression, tryptamine infiltration, and LC–MS detection of serotonin are reported."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states complementary expression relative to CpT5H1."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Transiently expressed in N. benthamiana leaves."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No direct protein-protein interaction with CpOMT1 is reported."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Tryptamine infiltration into N. benthamiana leaves is explicit."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Identified by transcriptome/RNA-seq mining; no accession given."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Its use in reconstitution supports engineering methoxylated intermediates."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly one of the two highly similar active enzymes."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary accurately reflects the Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "CpOMT1",
+          "new_value": "NA",
+          "reason": "No direct protein-protein interaction with CpOMT1 is reported."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "CpOMT1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly reclassifies CpOMT1 as a serotonin O-methyltransferase."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "CpOMT1 methylated serotonin (27) to 5-methoxytryptamine (21)."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 27 is the native/preferred substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The methylated product matched authentic 5-methoxytryptamine."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Placed in quinine/Cinchona alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It establishes the early methoxylated branch precursor."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Methoxylation is shown to occur early on tryptamine-derived intermediates."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "5-methoxytryptamine is directly shown to be incorporated into quinine/quinidine and related methoxylated alkaloids."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports branch-establishing importance and substrate preference, but does not demonstrate rate limitation."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is an O-methyltransferase and is stated to be evolutionarily related to aromatic O-methyltransferases from other MIA pathways."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CpOMT1 is from C. pubescens."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly C. pubescens."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Assayed via recombinant protein from E. coli and transient expression in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Escherichia coli and Nicotiana benthamiana are explicitly named."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The work links 5-methoxytryptamine formation to methoxylated Cinchona alkaloids including quinine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are monoterpenoid indole alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Quinine/quinidine functions are explicitly stated."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Roots and stem accumulation of major methoxylated alkaloids is stated."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme produces 5-methoxytryptamine from serotonin, supplying the methoxy precursor."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by purified-protein in vitro assay, transient expression in N. benthamiana, LC–MS, and authentic standard matching."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Candidate selection criteria included expression in all tissues with FPKM > 4 and co-expression with CpT5H1/2; CpOMT1 emerged from this set."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports expression in E. coli and transient expression in N. benthamiana."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not demonstrate direct physical interaction with CpT5H1 or CpT5H2."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Serotonin substrate feeding/infiltration and co-expression assays are described."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Identified via transcriptome mining with expression/co-expression criteria; no accession given."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows methylation of N-acetyl-serotonin and weak activity toward 6-hydroxycinchoninone, consistent with substrate promiscuity."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Reconstitution data support its utility for engineering methoxylated alkaloid production."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says it was previously identified as a 6'-hydroxycinchoninone O-methyltransferase and is reclassified here based on substrate preference/activity."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by the Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "CpT5H1; CpT5H2",
+          "new_value": "NA",
+          "reason": "The paper does not demonstrate direct physical interaction with CpT5H1 or CpT5H2."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "CpSTR",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "CpSTR is explicitly identified as strictosidine synthase from C. pubescens."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows CpSTR turns over tryptamine, 5-methoxytryptamine, and 5-hydroxytryptamine with secologanin, implying formation of strictosidine and substituted analogs."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "These substrates were separately tested in N. benthamiana with secologanin."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Strictosidine and 10-methoxystrictosidine are explicitly observed; hydroxy strictosidine analog turnover is supported by testing 5-hydroxytryptamine but the exact product naming is not detailed in the main text."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Placed in Cinchona/quinine monoterpenoid indole alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is the pathway entry into strictosidine-derived alkaloid scaffold formation."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Strictosidine synthase is the entry/committed early step in MIA biosynthesis."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CpSTR channels both methoxy and non-methoxy inputs into downstream alkaloid intermediates."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "Its substrate tolerance is clearly important, but the paper does not establish CpSTR as rate-limiting."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is functionally characterized as a strictosidine synthase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CpSTR is from C. pubescens."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly C. pubescens."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Function tested in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "N. benthamiana is explicitly named."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme is linked to both methoxylated and non-methoxylated Cinchona alkaloid pathways, including quinine-related products."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are monoterpenoid indole alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Quinine and quinidine functions are stated."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states major alkaloids accumulate in roots and stem."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly conclude CpSTR can turn over methoxy and non-methoxy substrates, enabling parallel formation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by functional characterization and substrate testing in N. benthamiana with LC–MS."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was transiently expressed in N. benthamiana leaves."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses likely vacuolar production/accumulation of strictosidine, but does not state CpSTR localization; the field itself notes localization NA."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "CpDCS, CpDCE, and CpSTTr are pathway-associated genes, but no direct protein-protein interactions are shown."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly reports co-testing with tryptamine, 5-methoxytryptamine, or 5-hydroxytryptamine plus secologanin."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "CpSTR was identified from the C. pubescens transcriptome; no accession reported."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows in N. benthamiana that strictosidine and 10-methoxystrictosidine accumulate unless transporter-assisted export improves downstream flux."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The unusual substrate promiscuity versus other STR orthologs makes CpSTR valuable for synthetic biology, as directly discussed."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states CpSTR is phylogenetically distant from CrSTR and RsSTR and notes unusual substrate promiscuity."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary accurately reflects the Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "CpDCS; CpDCE; CpSTTr",
+          "new_value": "NA",
+          "reason": "CpDCS, CpDCE, and CpSTTr are pathway-associated genes, but no direct protein-protein interactions are shown."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "CpDCS",
+      "category": "Pathway",
+      "verification": {
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states CpDCS and CpDCE produce intermediate dihydrocorynantheal (18) from strictosidine aglycone."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Strictosidine aglycone is explicit; acceptance of methoxy analog is inferred from reconstitution products and is appropriately stated as inferred."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Dihydrocorynantheal is explicit; methoxy dihydrocorynantheal is supported by production of methoxylated analogs in reconstitution."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "These enzymes are discussed as downstream enzymes in Cinchona alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "They function in downstream conversion to a corynanthe-type intermediate."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a midstream step downstream of strictosidine formation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows downstream enzymes accept methoxy/non-methoxy substrates and contribute to alkaloid intermediate formation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish this, and the field value is 'not established,' which is faithful."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CpDCS is a C. pubescens enzyme previously reported."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The Cp prefix and context identify C. pubescens."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Used in N. benthamiana pathway reconstitution."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "N. benthamiana is explicit."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Linked to quinine-related methoxylated and non-methoxylated alkaloid intermediates in reconstitution."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are monoterpenoid indole alkaloid intermediates."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Quinine and quinidine functions are stated in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Roots and stem accumulation of relevant alkaloids is stated generally for C. pubescens."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Reconstitution supports production of both methoxy and non-methoxy dihydrocorynantheal-type products."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by transient pathway reconstitution in N. benthamiana with LC–MS profiling."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was transiently co-expressed in N. benthamiana leaves."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper implies downstream cytosolic access issues, but does not explicitly localize CpDCS to the cytosol."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "CpDCE and CpSTR are pathway-associated enzymes, not demonstrated physical interactors."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Assayed by co-expression with upstream genes and substrate co-infiltration in N. benthamiana."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Low downstream product accumulation without transporter is explicitly described."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The demonstrated substrate tolerance in reconstitution supports use in heterologous assembly."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper refers to CpDCS as a previously reported downstream enzyme rather than a new discovery."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points are consistent with the Results and cited prior work."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "CpDCE; CpSTR",
+          "new_value": "NA",
+          "reason": "CpDCE and CpSTR are pathway-associated enzymes, not demonstrated physical interactors."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "CpDCE",
+      "category": "Pathway",
+      "verification": {
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states CpDCS and CpDCE produce dihydrocorynantheal from strictosidine aglycone."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Strictosidine aglycone is explicit; methoxy analog acceptance is inferred from reconstitution output."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Dihydrocorynantheal is explicit; methoxy analog formation is supported by reconstitution of methoxylated downstream products."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CpDCE is discussed as a downstream Cinchona alkaloid pathway enzyme."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It functions in conversion to the corynanthe-type intermediate branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a midstream downstream step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links it to both methoxy and non-methoxy alkaloid intermediate formation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The field states 'not established,' matching the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CpDCE is from C. pubescens."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "C. pubescens context is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Used in N. benthamiana reconstitution."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "N. benthamiana is explicit."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Linked to quinine-related methoxylated and non-methoxylated intermediates."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are monoterpenoid indole alkaloid intermediates."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Quinine/quinidine functions are stated."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Relevant alkaloids are stated to accumulate in roots and stem."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Reconstitution supports production of methoxy and non-methoxy dihydrocorynantheal-type products."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Validated in transient N. benthamiana pathway reconstitution with LC–MS."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was transiently expressed in N. benthamiana leaves."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Cytosolic context is inferred but not explicitly stated for CpDCE."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No direct protein-protein interactions with CpDCS or CpSTR are shown."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Co-expression and substrate co-infiltration in N. benthamiana are described."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Low downstream accumulation without transporter is directly reported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Its tolerance of methoxylated intermediates supports heterologous pathway engineering."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "It is treated as a previously reported downstream enzyme in this study."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary matches the Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "CpDCS; CpSTR",
+          "new_value": "NA",
+          "reason": "No direct protein-protein interactions with CpDCS or CpSTR are shown."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "CpTHAS1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies CpTHAS1 as one of two off-pathway enzymes reducing strictosidine aglycone into tetrahydroalstonine."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated: CpTHAS1 and CpTHAS2 reduce reactive strictosidine aglycone into tetrahydroalstonine 20."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Strictosidine aglycone is explicit."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Tetrahydroalstonine 20 is explicit."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Described as an off-pathway branch from Cinchona alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly an off-pathway/shunt to tetrahydroalstonine."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This occurs after strictosidine aglycone formation, i.e., midstream side-route."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "As an off-pathway enzyme, it diverts flux away from quinine-related products; this is consistent with the Results."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The field says 'not established,' which is faithful to the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CpTHAS1 is from C. pubescens."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "C. pubescens is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Function was tested in N. benthamiana pathway reconstruction."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "N. benthamiana is explicit."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Tetrahydroalstonine is explicitly the off-pathway product."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Tetrahydroalstonine is a monoterpenoid indole alkaloid."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports reduction of strictosidine aglycone to tetrahydroalstonine during reconstitution."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional identification in N. benthamiana with LC–MS is described."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was transiently expressed in N. benthamiana leaves."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "CpTHAS2 is not shown as a physical interactor of CpTHAS1."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Assayed in the context of pathway co-expression in N. benthamiana."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "As an off-pathway reductase to tetrahydroalstonine, it plausibly siphons flux away from desired products; this follows from the reported off-pathway activity."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The off-pathway activity makes it relevant to engineering, although this is an inference from the Results and conclusion of pathway tuning."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes these as off-pathway enzymes."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All points accord with the Results, though the engineering implication is inferential but reasonable."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "CpTHAS2",
+          "new_value": "NA",
+          "reason": "CpTHAS2 is not shown as a physical interactor of CpTHAS1."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 1,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "CpTHAS2",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies CpTHAS2 as one of two off-pathway enzymes reducing strictosidine aglycone into tetrahydroalstonine."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated in the Results."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Strictosidine aglycone is explicit."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Tetrahydroalstonine 20 is explicit."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is an off-pathway branch from Cinchona alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicit shunt to tetrahydroalstonine."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Midstream side-route after strictosidine aglycone formation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Diverts flux away from quinine-related products, consistent with off-pathway designation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The field states 'not established,' which matches the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CpTHAS2 is from C. pubescens."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "C. pubescens is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Function tested in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "N. benthamiana is explicit."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Tetrahydroalstonine is explicitly the product."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "It is a monoterpenoid indole alkaloid."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Reported to reduce strictosidine aglycone to tetrahydroalstonine during reconstitution."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional identification in N. benthamiana with LC–MS is described."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Transiently expressed in N. benthamiana leaves."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "CpTHAS1 is not shown as a direct physical interactor."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Assayed in pathway co-expression context in N. benthamiana."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "As an off-pathway shunt enzyme, it may siphon flux away from desired products; this is consistent with the Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Its off-pathway activity makes it relevant to engineering considerations, reasonably inferred from the reconstitution data."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly described as off-pathway."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary matches the Results, with the yield implication being a fair inference."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "CpTHAS1",
+          "new_value": "NA",
+          "reason": "CpTHAS1 is not shown as a direct physical interactor."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 1,
+        "uncertain": 0
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 235,
+    "supported": 219,
+    "unsupported": 9,
+    "uncertain": 7,
+    "total_corrections": 9
+  }
+}

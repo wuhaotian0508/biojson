@@ -1,0 +1,609 @@
+{
+  "file": "MinerU_markdown_PMC10374582_2038801689426821138",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC10374582_2038801689426821138.md",
+  "timestamp": "2026-03-31T21:27:46.594448",
+  "genes": [
+    {
+      "gene_name": "GORKY",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GORKY is mentioned in the introduction in the context of tomato fruit ripening, so tomato is supported."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper concerns tomato and explicitly gives the species as Solanum lycopersicum."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The described role of GORKY is in tomato fruit ripening."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by the tomato species context, Solanum lycopersicum."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states: 'GORKY, a nitrate/peptide family transporter'."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The text says GORKY facilitates the shift by exporting α-tomatine 'from vacuoles to cytosol' during fruit ripening."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links GORKY function to fruit ripening but does not provide direct expression data or explicit expression pattern for GORKY in this paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The background states α-tomatine is converted to Esculeoside A during ripening, and GORKY facilitates precursor relocation for that pathway."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Esculeoside A is presented throughout as an SGA, i.e. a steroidal glycoalkaloid."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states Esculeoside A is the dominant SGA in red, ripe tomato fruit."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Esculeoside A is explicitly described as non-bitter and less toxic."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The introduction explicitly says GORKY exports α-tomatine from vacuoles to cytosol during ripening, enabling further enzymatic conversion to Esculeoside A."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The role is explicitly tied to fruit ripening."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "In this paper GORKY is only cited as prior work/background ('by an unknown transporter' then 'GORKY... facilitates'), so 'previously reported, cited background evidence' is accurate."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not discuss GORKY as a breeding/engineering target or supportive target for Esculeoside A improvement."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Both summary points match the background statement about GORKY exporting α-tomatine from vacuoles to cytosol during ripening and thereby enabling downstream pathway access."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Accurate: GORKY is mentioned only as contextual background and is not experimentally characterized in the Results of this paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Potential supportive target to improve precursor availability for Esculeoside A formation",
+          "new_value": "NA",
+          "reason": "The paper does not discuss GORKY as a breeding/engineering target or supportive target for Esculeoside A improvement."
+        }
+      ],
+      "stats": {
+        "supported": 15,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "GAME36",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The candidate identified and renamed GAME36 is explicitly given as Solyc08g075210."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME36 was identified from cultivated tomato."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The cultivated tomato species studied is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the cultivated tomato source/background for GAME36 work is cv. Micro-Tom."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional analyses including CRISPR mutants were performed in tomato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is tomato, Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "CRISPR-Cas9 knockout and much of the functional work were performed in Micro-Tom."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME36 is explicitly described as the missing acetylation step in the Esculeoside A pathway and part of SGA detoxification during ripening."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly states the branch converts α-tomatine to Esculeoside A and GAME36 functions in that branch."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME36 is explicitly described as a BAHD-type acyltransferase / BAHD acyltransferase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "BAHD acyltransferase family is explicitly supported, but 'conserved HXXXD/DFGWG-type BAHD motifs implied' is not directly stated for GAME36 itself; motifs are discussed mainly for GAME36-like truncated proteins."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR showed high expression in green fruit and flowers, weak in leaves, and also high in red ripe fruit (Fig. 2e and text)."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states predominant expression in immature and mature green fruit across twelve wild tomato accessions, and gives the cultivated tomato tissue pattern."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Hydroxytomatine is the validated substrate, and coupled assays showed activity toward hydroxy-dehydrotomatine, hydroxytomatidine and hydroxysolamargine in vitro."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "In vitro assays explicitly showed conversion of hydroxytomatine to acetoxytomatine."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the demonstrated reaction: transfer of an acetyl group from acetyl-CoA to hydroxylated SGAs, notably hydroxytomatine to acetoxytomatine."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME36 catalyzes the second step in the four-step pathway, so a midstream position is supported."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Acetoxytomatine is shown to be an intermediate leading downstream to acetoxy-hydroxytomatine and Esculeoside A."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper clearly establishes GAME36 as the key missing/core step; it does not claim rate-limiting, and the field explicitly says rate-limiting not established."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME36 is part of the pathway culminating in Esculeoside A."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Esculeoside A is described as an SGA, i.e. steroidal glycoalkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes Esculeoside A as non-bitter and less toxic, improving palatability and reducing anti-nutritional toxicity."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Esculeoside A is explicitly stated to accumulate in red ripe tomato fruit."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Knockout abolished acetoxy-SGAs and caused precursor buildup; GAME36 enables conversion from bitter/toxic α-tomatine toward non-bitter less toxic Esculeoside A."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper ties GAME36 function to fruit ripening and explicitly states earlier GAME36-associated steps appear ethylene-independent."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are present in the Results/Methods: candidate screening, recombinant assays, coupled assays, kinetics, CRISPR knockout, metabolite profiling, in vitro reconstruction, and transient N. benthamiana reconstruction."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract/discussion explicitly mention relevance for domestication, breeding, reducing bitterness/toxicity, and pathway reconstitution/metabolic engineering."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points accurately summarize direct Results for GAME36."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed statements are supported: specificity for hydroxylated SGAs, preference for acetyl-CoA over butyryl-CoA, no reversible reaction, functional S. pennellii ortholog, inactive eggplant homolog, and evidence for a minor alternative late-ripening route discussed from mutant data."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Knockout causing accumulation of precursor SGAs in fruit is directly shown; no growth penalty is not reported anywhere, so 'no growth penalty reported' is accurate as a statement about absence of report."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "GAME31, GAME40, and GAME5 act sequentially with GAME36 in pathway reconstruction, but direct physical protein-protein interaction is not tested. Functional association is supported, literal 'interacting proteins' is not."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Both BioProject IDs PRJNA307656 and PRJNA798612 are explicitly listed in Data availability."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 30,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "GAME31",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME31 is a tomato gene in this paper."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The tomato species is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The recombinant SlGAME31 used here is from cultivated tomato cv. Micro-Tom."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME31 was used functionally in tomato pathway assays and reconstruction."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper specifies SlGAME31 from Micro-Tom."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME31 is explicitly part of the Esculeoside A/steroidal glycoalkaloid metabolism pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It catalyzes the first step in the α-tomatine to Esculeoside A branch."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME31 is described as a 2-Oxoglutarate-Dependent Dioxygenase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly groups GAME31 among 2-ODDs."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states SlGAME31 hydroxylates α-tomatine, dehydrotomatine, tomatidine and α-solamargine."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The corresponding products hydroxytomatine, hydroxy-dehydrotomatine, hydroxytomatidine and hydroxysolamargine are explicitly described."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states GAME31 hydroxylates α-tomatine at C-23 to form hydroxytomatine."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME31 performs the first pathway step, i.e. upstream."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Hydroxytomatine is directly used by GAME36 in the route to Esculeoside A."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish GAME31 as rate-limiting; 'not established' is faithful."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME31 participates in the pathway leading to Esculeoside A."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Esculeoside A is an SGA/steroidal glycoalkaloid in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Esculeoside A is described as non-bitter and less toxic."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Esculeoside A accumulates in red ripe tomato fruit."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This is the direct pathway role attributed to GAME31 in the paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "In Discussion, the paper states earlier steps carried out by GAME31 and GAME36 appear ethylene-independent during ripening."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME31 was previously characterized and in this paper used in coupled assays and pathway reconstruction."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows full pathway reconstitution using GAME31 with GAME36/40/5, supporting stacking for engineering."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points accurately summarize GAME31's established role and its use in this paper's reconstruction assays."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME31 is indeed a background/companion enzyme here rather than the main discovery."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "GAME36, GAME40, and GAME5 are pathway partners in sequential assays, but direct molecular interactions were not tested."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 26,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "GAME40",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME40 is discussed as a tomato gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper refers to SlGAME40 from cultivated tomato cv. Micro-Tom in expression/reconstruction work."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME40 was used in tomato pathway reconstruction context."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The recombinant SlGAME40 described here is from Micro-Tom."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME40 is explicitly one of the Esculeoside A pathway enzymes."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It catalyzes a step in the α-tomatine to Esculeoside A branch."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME40 is described as a 2-Oxoglutarate-Dependent Dioxygenase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly places GAME40 in the 2-ODD family and states it is also known as E8."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly says GAME40/E8 is an ethylene-responsive gene during fruit ripening."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway description states acetoxytomatine is converted by GAME40 to acetoxy-hydroxytomatine via C-27 hydroxylation."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Acetoxy-hydroxytomatine is explicitly identified as the GAME40 product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says GAME40 performs C-27 hydroxylation of acetoxytomatine to acetoxy-hydroxytomatine."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME40 is the penultimate/downstream step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Its product is the direct precursor for GAME5-mediated Esculeoside A formation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish rate-limiting status; 'not established' is faithful."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME40 contributes to biosynthesis of Esculeoside A."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Esculeoside A is a steroidal glycoalkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper calls Esculeoside A non-bitter and less toxic."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Esculeoside A is dominant in red ripe tomato fruit."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This correctly reflects GAME40's pathway role as penultimate hydroxylation step."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly ties GAME40 to an ethylene-responsive ripening-associated step."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME40 was previously characterized and used here in pathway reconstruction."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "As part of the full reconstructed pathway, GAME40 is supported as a component for multigene engineering."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These summary statements match the paper's pathway description and reconstruction results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Correctly states GAME40 is a companion enzyme here, not the new discovery."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The named genes function in the same pathway, but no direct physical interactions are shown."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 27,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "GAME5",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME5 is a tomato gene in this paper."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The reconstruction used SlGAME5 from cultivated tomato cv. Micro-Tom."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME5 was used in tomato pathway reconstruction and transient expression."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper refers to SlGAME5 from Micro-Tom."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME5 is explicitly one of the Esculeoside A pathway enzymes."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It acts in the α-tomatine to Esculeoside A branch."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME5 is explicitly referred to as a UGT/UDP glycosyltransferase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper groups GAME5 under uridine diphosphate glycosyltransferases (UGTs)."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states GAME5 transcript is highly upregulated at breaker stage and severely affected in ripening mutants."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says GAME5 glycosylates acetoxy-hydroxytomatine."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The product is explicitly Esculeoside A."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states 27-O-glucosylation of acetoxy-hydroxytomatine to form Esculeoside A."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME5 performs the last/terminal step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME5 directly forms the target end product Esculeoside A."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Rate-limiting status is not established in the paper; this field is faithful."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME5 directly produces Esculeoside A."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Esculeoside A is a steroidal glycoalkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Esculeoside A is described as non-bitter and less toxic."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states it accumulates in red ripe tomato fruit."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects GAME5's terminal biosynthetic role."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links GAME5 expression to ripening and notes it is affected in ripening mutants."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "GAME5 was previously characterized and used here in in vitro reconstruction and transient expression."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Because GAME5 is required for reconstructed Esculeoside A production, its use in engineering is supported."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements match the pathway description and reconstruction experiments."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Accurate that GAME5 is a companion pathway enzyme here, not the main discovery."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "These are pathway partners in combined assays, but direct protein-protein interactions were not demonstrated."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 27,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 132,
+    "supported": 125,
+    "unsupported": 1,
+    "uncertain": 6,
+    "total_corrections": 1
+  }
+}

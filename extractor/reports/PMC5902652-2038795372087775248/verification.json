@@ -1,0 +1,151 @@
+{
+  "file": "MinerU_markdown_PMC5902652_2038795372087775248",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC5902652_2038795372087775248.md",
+  "timestamp": "2026-03-31T22:17:46.188583",
+  "genes": [
+    {
+      "gene_name": "KfXYS1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly designates the protein as 'Klebsormidium flaccidum XYLAN SYNTHASE-1 (KfXYS1)'."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given anywhere in the paper, and the specific value '2.4.2.-' does not appear."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "KfXYS1 is explicitly described as an IRX10/XYS1 ortholog; the Results also place IRX10/XYS1 in the GT47 family among xylan-biosynthetic families."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "KfXYS1 is explicitly from Klebsormidium flaccidum."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The full Latin name Klebsormidium flaccidum is explicitly used throughout the paper."
+        },
+        "Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The gene originates from K. flaccidum, but the experimental expression systems were S. cerevisiae and HEK293 cells; 'applied species' as K. flaccidum is only partly appropriate."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper studies K. flaccidum walls and a K. flaccidum gene, but functional assays were conducted in heterologous yeast and HEK293 systems rather than in K. flaccidum itself."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The study explicitly focuses on 1,4-beta-xylan formation/biosynthesis and shows KfXYS1 has 1,4-beta-xylan synthase activity."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state IRX10/XYS1 proteins are enzymatically implicated in 1,4-beta-xylan backbone synthesis, supporting backbone elongation."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly supports a role in xylan backbone synthesis/polymerization through successive Xyl transfer events forming beta-1,4-xylan."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states IRX10/XYS1 orthologs are 'the only group of proteins that have been enzymatically implicated in 1,4-beta-xylan backbone synthesis' and 'play a central role', but it does not describe KfXYS1 as rate-limiting or a control step."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by the enzyme assays, MALDI-TOF-MS, and NMR showing transfer of Xyl from UDP-Xyl to xylooligosaccharide acceptors, generating beta-1,4-xylan products."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "UDP-Xyl was the donor substrate in assays, and xylobiose, labeled xylotetraose, and labeled xylopentaose were explicitly used as acceptors in different experiments."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows production of elongated beta-1,4-linked xylan oligosaccharides/polysaccharide products by HPLC, MALDI-TOF-MS, xylanase digestion, and NMR."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "KfXYS1 directly synthesizes the target polymer backbone rather than affecting it indirectly."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The product directly demonstrated is 1,4-beta-xylan, and K. flaccidum cell walls are shown to contain substituted 1,4-beta-xylan."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Xylan is a polysaccharide; the paper discusses it as a cell wall glycopolymer/polysaccharide."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses xylan as a key structural cell wall polysaccharide and links such wall innovations in charophytes to terrestrialization; however this is general for xylan rather than directly tested function."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Immunohistochemistry showed LM11 labeling in the K. flaccidum cell wall in a punctate pattern on the luminal side, interpreted as newly synthesized xylan before wall integration."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exclusive beta-1,4-xylan synthase activity in vitro is directly supported, but 'promotes synthesis of substituted 1,4-beta-xylan in K. flaccidum cell walls' is inferred rather than directly tested by genetic perturbation in K. flaccidum."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are described and used in the paper: phylogenetics, heterologous expression in yeast and HEK293, purification, enzyme assays, HPLC, MALDI-TOF-MS, 1D 1H NMR, xylanase specificity, monosaccharide analysis, PACE, CoMPP, and immunolabeling."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper mentions 'a predicted transmembrane domain in the N-terminus' that was replaced for HEK293 expression, but does not directly demonstrate Golgi localization of KfXYS1."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "pESC-URA is stated for yeast expression with galactose induction, so galactose-inducible control is inferable, but GAL1/GAL10 promoters are not explicitly named in the paper text; pGEn2 mammalian expression vector is explicitly stated."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The work indeed relies on heterologous expression systems and in vitro assay conditions rather than endogenous perturbation treatments."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly used genome mining of K. flaccidum and the 1KP dataset/proteomes/transcriptome resources for phylogenetic analysis."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not make explicit claims about engineering, breeding, synthetic biology utility, or application value of KfXYS1."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed details are supported: the name KfXYS1; 75% identity across 376 residues with AtXYS1; no activity with UDP-glucose, UDP-Arap, or UDP-Araf; and NMR evidence excluding 1,3-beta-Xyl linkages."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately reflects the Results: identification as algal IRX10/XYS1 ortholog, activity in two heterologous systems, structural confirmation of exclusive 1,4-beta-xylan synthase activity, and detection of substituted 1,4-beta-xylan in K. flaccidum walls."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.4.2.-",
+          "new_value": "NA",
+          "reason": "No EC number is given anywhere in the paper, and the specific value '2.4.2.-' does not appear."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "useful target for engineering xylan backbone biosynthesis and modifying cell wall polysaccharide composition in plants/algae; provides an evolutionarily conserved xylan synthase for synthetic biology",
+          "new_value": "NA",
+          "reason": "The paper does not make explicit claims about engineering, breeding, synthetic biology utility, or application value of KfXYS1."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 2,
+        "uncertain": 6
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 28,
+    "supported": 20,
+    "unsupported": 2,
+    "uncertain": 6,
+    "total_corrections": 2
+  }
+}

@@ -1,0 +1,820 @@
+{
+  "file": "MinerU_markdown_PMC11997217_2038800630146965509",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC11997217_2038800630146965509.md",
+  "timestamp": "2026-03-31T21:45:47.935087",
+  "genes": [
+    {
+      "gene_name": "DAO1",
+      "category": "Common",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The Introduction states 'DIOXYGENASE FOR AUXIN OXIDATION (DAO)' mediates IAA inactivation, consistent with a dioxygenase for auxin oxidation family."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper is about Arabidopsis and discusses DAO proteins in Arabidopsis auxin metabolism context."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism throughout is Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Metabolite measurements and biological context are in Arabidopsis seedlings."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species in experiments is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col is the wild-type background used in the study."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "DAO1 is discussed in the Arabidopsis Col study context, though not directly tested."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states IAA-amino acid conjugates can be irreversibly oxidized to oxIAA-amino acid conjugates by DAO proteins and specifically discusses oxIAA-Asp."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "oxIAA-Asp is an oxidized auxin conjugate, matching the paper’s description of oxidized IAA-amino acid conjugates."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state IAA-Asp can be directly converted to oxIAA-Asp by DAO1, supporting further oxidation/inactivation of IAA-Asp."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA/IAA metabolites including oxIAA-Asp were measured from whole seedlings."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "DAO1-mediated conversion of IAA-Asp to oxIAA-Asp is cited from prior work and used to interpret results, but DAO1 itself was not genetically or biochemically tested in this paper."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately states DAO1 was not directly tested and was inferred through pathway logic plus oxIAA-Asp metabolite measurements."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant metabolite comparisons were between darkness and continuous white light."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "DAO1 is indeed not a main focus but is directly invoked in Results to interpret oxIAA-Asp accumulation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements match the paper: DAO1 is invoked as converter to oxIAA-Asp, light increases oxIAA-Asp, and DAO1 is not directly manipulated."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No breeding/engineering application for DAO1 is discussed or tested in the paper."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Metabolite profiling was performed and no DAO1-specific accession/public dataset is reported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Possible downstream auxin-catabolism target, though not functionally tested here",
+          "new_value": "NA",
+          "reason": "No breeding/engineering application for DAO1 is discussed or tested in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 16,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "GH3.5",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly list gh3.5-1 as SALK_033434C."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.5 is described as a synthetase that conjugates amino acids to IAA, matching indole-3-acetic acid-amido synthetase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GH3.5 is a group II GH3 family member/acyl amido synthetase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.5 studied here is from Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The organism is Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Arabidopsis thaliana."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state UBQ10pro:GH3.5:GFP transgenic plants were generated; transient MYC-Ub constructs were under 35S in pSY738. GH3.5-GFP itself in protoplasts is not explicitly said to be 35S, but the field as written refers to transient ubiquitin-expression constructs using 35S, which is supported by construct nomenclature."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "GH3.5 directly produces IAA-Asp and likely contributes to IAA-Glu as a group II GH3; oxIAA-Asp is downstream oxidized product, not directly made by GH3.5."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA-Asp, IAA-Glu, and oxIAA-Asp are auxin metabolites/conjugates discussed in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links GH3.5-mediated IAA conjugation to auxin inactivation/homeostasis and shorter hypocotyls."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA and its conjugates were quantified in whole seedlings."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.5 is placed in auxin metabolism/IAA conjugation pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes group II GH3-mediated IAA-amino acid conjugation."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.5 is stated to conjugate amino acids to IAA, and in vitro assays directly tested IAA-Asp formation."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA and Asp are directly used in assays; Glu is inferred from group II GH3 function and higher-order metabolite data."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA-Asp is directly shown as GH3.5 product in vitro; IAA-Glu contribution is consistent with group II GH3 family function and in vivo family-level metabolite analysis."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.5 directly forms IAA-amino acid conjugates."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show GH3.5 contributes to short hypocotyl phenotype and COP1-mediated K63 ubiquitination inhibits GH3.5 activity in the dark."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are reported in the paper and used for GH3.5-related analyses."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports GH3.5 as a key control point in COP1/light-regulated IAA conjugation, while not claiming classical rate limitation."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/discussion support GH3.5 in nucleus and cytoplasm; COP1-GH3.5 interaction is nuclear and GH3.5-GFP signals are reported in both compartments."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.5 mRNA is lower in light than dark, induced by auxin in cited/confirmed context, and decreased in cop1-4 in dark."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supplementary Fig. 4a is described as higher in darkness and decreasing upon transfer to light."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "COP1-GH3.5 physical interaction is shown by pull-down, LCI, Co-IP, and BiFC."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Dark/light, exogenous IAA, nalacin, and 2,4-D are all used in GH3.5-related experiments."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.5 acts in downstream auxin inactivation via conjugation."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links increased GH3 function with shorter hypocotyls and reduced elongation, though framed biologically rather than as application tradeoff."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly shows COP1 does not affect GH3.5 stability but suppresses activity through K63 ubiquitination; noncompetitive inhibition is presented as a possibility."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These four statements closely match the Results and Discussion."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This is an extrapolative application claim not discussed or tested in the paper."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col is the background used."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.5 source and experiments are in Col background Arabidopsis."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.6, not GH3.5, was the direct substrate candidate from IP-MS, but GH3.5 is part of the study’s omics context and no accession is reported. Support is partial but acceptable because screening context is real."
+        },
+        "EC_Number": {
+          "verdict": "UNCERTAIN",
+          "reason": "No EC number is given in the paper; 6.3.2.- is plausible for acyl/amide synthetase but not explicitly stated."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Potential target to tune auxin metabolism and seedling architecture by editing ubiquitination control or GH3 activity; caution that enhanced GH3 activity may reduce elongation growth and cause pleiotropic growth effects",
+          "new_value": "NA",
+          "reason": "This is an extrapolative application claim not discussed or tested in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 32,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "GH3.6",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly list gh3.6 as SALK_013458C."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "As a group II GH3 member, GH3.6 is described as an IAA-amino acid conjugating synthetase; the exact full enzyme name is consistent with paper context."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.6 is explicitly described as a group II GH3/acyl amido synthetase family member."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.6 is from Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Arabidopsis thaliana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Group II GH3 proteins are stated to inactivate IAA mainly by conjugation with Asp or Glu, supporting IAA-Asp and IAA-Glu."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA-Asp and IAA-Glu are auxin conjugate metabolites."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places group II GH3s in auxin inactivation/homeostasis."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA conjugates were measured in whole seedlings."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.6 belongs to auxin metabolism/IAA conjugation pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the explicit group II GH3-mediated IAA conjugation branch."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "As a group II GH3 member, GH3.6 is described to conjugate IAA with amino acids."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA and amino acids are the stated substrates for group II GH3 proteins."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA-amino acid conjugates are the stated products for group II GH3s."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.6 is part of the enzyme family directly forming IAA conjugates."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show gh3.6 alone does not alter cop1-4 hypocotyl phenotype, while higher-order mutants including gh3.6 contribute redundantly to metabolite/phenotype changes."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.6 was identified by IP-MS candidate screening, tested genetically with cop1-4, and included in higher-order mutant metabolite analyses."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish rate limitation for GH3.6."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Dark versus light conditions are central to these analyses."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.6 functions in downstream auxin inactivation by conjugation."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable inference from family behavior, but GH3.6-specific growth tradeoffs are not individually shown."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.6 was indeed a substrate candidate in screening, but genetics pointed to GH3.5 rather than GH3.6 as the major COP1-linked effector for dark hypocotyl control."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three points are all consistent with the paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Application value for multigene stacking/editing is not discussed in the paper."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col is the background used."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis Col background is used."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "IP-MS substrate screening is explicitly reported and no public accession is provided."
+        },
+        "EC_Number": {
+          "verdict": "UNCERTAIN",
+          "reason": "No EC number is stated in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Useful in multigene stacking/editing of group II GH3 family for auxin-homeostasis engineering rather than as a single major target",
+          "new_value": "NA",
+          "reason": "Application value for multigene stacking/editing is not discussed in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "GH3.9",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.9 is one of the Arabidopsis group II GH3 proteins that conjugate IAA to amino acids; exact naming is consistent with paper context."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly lists GH3.9 among the eight group II GH3 family members."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.9 is discussed in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study species is Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Higher-order mutant analyses were in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Arabidopsis thaliana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Group II GH3 proteins are stated to produce IAA-Asp and IAA-Glu conjugates."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA-Asp and IAA-Glu are auxin conjugate metabolites."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Group II GH3s are described as mediating auxin inactivation/homeostasis."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Metabolites were measured in whole seedlings."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.9 belongs to the auxin metabolism/IAA conjugation pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the explicitly described group II GH3 IAA conjugation branch."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "As a group II GH3 member, GH3.9 is inferably an IAA-amino acid conjugating enzyme, though not individually assayed here."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA and amino acids are the stated substrates of group II GH3 proteins."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA-amino acid conjugates are the products attributed to group II GH3 proteins."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.9 is part of the enzyme family directly producing IAA conjugates."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The quadruple mutant lacking GH3.5/6/9/17 further promoted hypocotyl elongation of cop1-4, supporting redundant contribution including GH3.9."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Higher-order mutant analysis and metabolite profiling including gh3(5/6/9/17) are reported."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish GH3.9 as rate-limiting."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Dark and light comparisons were used for family-level effects."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.9 acts in downstream auxin inactivation via conjugation."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible inference, but GH3.9-specific tradeoffs are not directly tested."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.9 is only studied in higher-order group II GH3 mutants, not individually."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The statements align with quadruple mutant metabolite and phenotype data, though family-level rather than individual proof."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Multiplex editing application is not discussed in the paper."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col is the background used."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis Col background is used."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Metabolite profiling was performed and no accession is reported."
+        },
+        "EC_Number": {
+          "verdict": "UNCERTAIN",
+          "reason": "No EC number is given in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Relevant for multiplex editing of group II GH3 genes to modulate auxin conjugation capacity",
+          "new_value": "NA",
+          "reason": "Multiplex editing application is not discussed in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "GH3.17",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.17 is included among Arabidopsis group II GH3 enzymes that conjugate IAA to amino acids; exact enzyme-style name is consistent with context."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly lists GH3.17 among group II GH3 family members."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.17 is discussed in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The organism is Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Higher-order mutant analyses are in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Arabidopsis thaliana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Group II GH3 proteins are said to generate IAA-Asp and IAA-Glu conjugates."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are auxin conjugate metabolites."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Group II GH3s are explicitly connected to auxin inactivation/homeostasis."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Metabolites were measured in whole seedlings."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.17 belongs to auxin metabolism/IAA conjugation pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the group II GH3-mediated conjugation branch described in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "As a group II GH3 member, GH3.17 is inferably involved in conjugating IAA to amino acids, though not individually assayed here."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA and amino acids are the family-level substrates stated in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA-amino acid conjugates are the family-level products stated in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.17 is part of the enzyme family directly producing IAA conjugates."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The quadruple gh3(5/6/9/17) mutant in cop1-4 affects hypocotyl elongation and IAA conjugate levels, supporting redundant contribution including GH3.17."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Higher-order mutant analysis and metabolite profiling are indeed used."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish GH3.17 as rate-limiting."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Dark/light are the relevant conditions used."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.17 functions in auxin inactivation by conjugation."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The tradeoff is inferred from family-level growth effects, not directly shown for GH3.17 alone."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.17 is indeed examined as a redundant family member in quadruple mutant backgrounds."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points reflect the family-level quadruple mutant results including GH3.17."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Engineering relevance is not discussed in the paper."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col is the background used."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis Col background is used."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Metabolite profiling is reported and no accession is given."
+        },
+        "EC_Number": {
+          "verdict": "UNCERTAIN",
+          "reason": "No EC number is explicitly reported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Relevant for multiplex engineering of group II GH3 genes controlling auxin metabolism",
+          "new_value": "NA",
+          "reason": "Engineering relevance is not discussed in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "COP1",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "cop1-4, cop1-6, YFP-COP1/cop1-6, and CRISPR-generated cop1-4-like alleles are all explicitly described."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The Introduction explicitly states COP1 is a RING-type E3 with RING, coiled-coil, and WD40 repeat domains."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "COP1 is explicitly described as an E3 ubiquitin ligase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "COP1 studied here is Arabidopsis COP1."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments were performed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col is the wild-type background used."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The Arabidopsis background is Col."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results measure COP1 effects on IAA-Asp, IAA-Glu, and oxIAA-Asp/IAA-Asp+oxIAA-Asp accumulation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are auxin metabolite/conjugate products discussed in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links these metabolites to auxin inactivation/homeostasis and hypocotyl elongation control."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA metabolites were measured in whole seedlings."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The central finding is that COP1 inhibits GH3-mediated IAA conjugation, regulating auxin metabolism."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.5 is directly validated as COP1 target; group II GH3 module is supported genetically at family level."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly shows COP1 inhibits GH3.5 enzymatic activity through K63-linked ubiquitination without affecting stability."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Non-proteolytic K63-linked ubiquitination is the main mechanistic conclusion."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and model show COP1 promotes hypocotyl elongation in the dark by limiting IAA-amino acid conjugation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are present and relevant to COP1."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports COP1 as a major negative regulator of IAA conjugate production in darkness through direct inhibition of GH3.5 and family-level effects."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "GH3.5 interaction is directly shown; COP1-SPA4 complex is used in vitro and SPA proteins are discussed."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "COP1-SPA4 complex was used as the E3 in vitro and COP1-GH3.5 interaction was validated."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Light suppresses COP1 function and darkness maintains its activity, repeatedly stated in the paper."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "COP1-GH3.5 interaction is shown in the nucleus, supporting nuclear localization relevant here."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports COP1 functional activity being dark-active and light-suppressed, but this is not an expression pattern per se."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "Again, dark-active/light-suppressed refers to function rather than measured expression."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Darkness versus continuous white light is the central environmental factor."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of COP1 causing short hypocotyl/constitutive photomorphogenic traits is intrinsic background knowledge and reflected in mutant phenotypes here; overaccumulated IAA conjugates in cop1 are also shown."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "A main conclusion is that GH3.5 is not destabilized, establishing a non-proteolytic COP1 function."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These four statements accurately summarize the Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This application-oriented claim is not discussed or tested in the paper."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "IP-MS screening is explicitly part of the study and no public accession is reported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Target for engineering seedling architecture and auxin metabolic outputs, but deployment requires caution because COP1 broadly controls photomorphogenesis and many pleiotropic traits",
+          "new_value": "NA",
+          "reason": "This application-oriented claim is not discussed or tested in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 29,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 173,
+    "supported": 156,
+    "unsupported": 6,
+    "uncertain": 11,
+    "total_corrections": 6
+  }
+}

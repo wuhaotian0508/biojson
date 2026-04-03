@@ -1,0 +1,632 @@
+{
+  "file": "MinerU_markdown_PMC10651158_2038801517317754896",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC10651158_2038801517317754896.md",
+  "timestamp": "2026-03-31T21:31:33.166409",
+  "genes": [
+    {
+      "gene_name": "GmPLP1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is on soybean and states 'The soybean variety DongNong 50 (DN50) was used as the WT and the background plant'."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper is clearly about soybean, but the Latin name 'Glycine max' does not explicitly appear in the provided text."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and methods explicitly state the soybean variety 'DongNong 50' (DN50)."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All stable genetic tests for GmPLP1 were performed in soybean."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Soybean is explicit, but 'Glycine max' is not explicitly written in the provided text."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The transformation background and experimental soybean variety is explicitly 'DongNong 50' (DN50)."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results repeatedly state GmPLP1 affects biosynthesis and content of AsA/ascorbic acid."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Ascorbic acid is measured, but the paper does not explicitly call it a 'vitamin' in the Results."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly connect increased AsA with enhanced ROS scavenging and improved high-light tolerance."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "AsA content is measured in soybean leaves and leaf transient-expression assays are used."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show GmPLP1 negatively regulates high-light tolerance and AsA accumulation, increases ROS/light damage, and overexpression lowers photosynthetic performance and yield-related traits while RNAi has the opposite effects."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes GmPLP1 as a positive blue light receptor protein and analyzes PAS/LOV fragments, showing interaction through the LOV region."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are directly reported in Results/Methods: RNAi and overexpression, Fv/Fm, DAB/NBT/H2O2, total AsA, Y2H/pull-down/BiFC/LCA, transient leaf expression, and GGP activity assay."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1 and text state GmPLP1 mRNA decreases under HWL; protein increases initially then decreases under HWL; protein is induced by low blue light and reduced strongly under high blue light."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Same soybean system as source species; the described expression pattern is directly shown for soybean GmPLP1."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The exact light treatments and intensities are given in Results/figure legends and Methods: HWL 1800, LWL 50, LBL 5, HBL 500, LRL 5, HRL 600 μmol m−2 s−1."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports proGmPLP1:GmPLP1-Flag, transient pCAMBIA3300-GmPLP1-GFP, and RNAi via pFGC5941-GmPLP1."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Y2H, pull-down, BiFC, and LCA show interaction of GmPLP1 with GmVTC2a/b/c."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly show overexpression causes weaker growth, smaller leaf area, lower Pn/light saturation, higher ROS, more photodamage, and worse yield-related performance; RNAi shows opposite trends."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "Supported parts: blue-light-sensing negative regulator, direct interaction, not described as metabolic enzyme or transcription factor, transcriptome effects on oxidative genes/GmPHOT1. However the exact residue numbering is inconsistent in the paper: Results mention C285/R286, while Methods/LCA mention C290A/R290D, so the precise residue statement is not fully secure."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All five listed findings are reflected in the Results: suppression by high/high-blue light, negative effect on tolerance, interaction with GmVTC2s via LOV domain, blue light weakening interaction, and inhibition of GGP activity/AsA biosynthesis."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says the findings are significant for improving soybean yield/adaptability, and RNAi improves growth/yield traits, but explicit recommendation of 'knockdown/editing' as a breeding strategy is an extrapolation."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Transcriptome/RNA-seq is reported, and the Data availability statement lists BioProject SUB11096210 and the nine SRR accessions exactly."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 18,
+        "unsupported": 0,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "GmVTC2b",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GmVTC2b is a soybean gene studied in soybean."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Soybean is clear, but the exact Latin name 'Glycine max' is not explicitly written in the provided text."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The soybean variety is explicitly DongNong 50 (DN50)."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway-related functional work on GmVTC2b was performed in soybean."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Soybean is explicit, but the Latin binomial is not explicitly shown."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "DN50 is explicitly the soybean background used."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion identifies VTC2 as GDP-L-galactose phosphorylase, and GmVTC2b is the soybean VTC2 homolog under study."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "GmVTC2b is presented as a GGP/VTC2 family member."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links VTC2/GGP to AsA biosynthesis through the L-galactose pathway context and cites the GDP-L-galactose to L-galactose-1-P conversion."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is part of ascorbate biosynthesis, but the exact phrasing 'core ascorbate biosynthetic branch' does not appear."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion states increasing evidence shows GGP (VTC2) is a key rate-limiting step in the AsA biosynthesis pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "GDP-L-galactose is explicitly named as the substrate in the GGP assay and discussion of VTC2 activity."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion states recombinant VTC2 converts GDP-L-galactose to L-galactose-1-P."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This reaction is explicitly described in the Discussion as the specific conversion catalyzed by VTC2."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly places GmVTC2b/VTC2 in the AsA biosynthetic pathway, making it a direct intermediate-forming step toward ascorbic acid."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says GGP (VTC2) is a key rate-limiting step, and links altered GGP activity with altered AsA accumulation under high light."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AsA/ascorbic acid is directly measured and connected to GmVTC2b."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly classify AsA as a vitamin."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "AsA is explicitly described as enhancing ROS scavenging and high-light protection."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measurements were made in leaves."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "GmVTC2b overexpression increased AsA and high-light tolerance and reduced ROS accumulation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Stable overexpression, AsA assays, Fv/Fm, ROS assays, transient expression, interaction assays, and association with GGP activity changes via GmPLP1 backgrounds are all present in the paper."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Protein induction by HWL and by HBL/HRL is explicitly reported."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Same soybean system and direct measurement."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These high white/blue/red light treatments are directly tested."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "GmPLP1 interaction with GmVTC2b is directly shown."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed emphasizes GmVTC2b among the three homologs as the one functionally characterized for high-light tolerance and AsA/ROS phenotypes."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point matches Results: induction by high light, increased leaf AsA, improved resistance/lower ROS, and negative modulation by GmPLP1 via blue-light-sensitive interaction."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The experimental results support potential utility, but the explicit engineering recommendation is not directly stated in Results."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports proGmVTC2b:GmVTC2b-Flag and transient pCAMBIA3300-GmVTC2b-GFP constructs."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 25,
+        "unsupported": 0,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "GmVTC2b",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GmVTC2b is a soybean gene studied in soybean."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Soybean is clear, but the exact Latin name 'Glycine max' is not explicitly written in the provided text."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The soybean variety is explicitly DongNong 50 (DN50)."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway-related functional work on GmVTC2b was performed in soybean."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Soybean is explicit, but the Latin binomial is not explicitly shown."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "DN50 is explicitly the soybean background used."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion identifies VTC2 as GDP-L-galactose phosphorylase, and GmVTC2b is the soybean VTC2 homolog under study."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "GmVTC2b is presented as a GGP/VTC2 family member."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links VTC2/GGP to AsA biosynthesis through the L-galactose pathway context and cites the GDP-L-galactose to L-galactose-1-P conversion."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is part of ascorbate biosynthesis, but the exact phrasing 'core ascorbate biosynthetic branch' does not appear."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion states increasing evidence shows GGP (VTC2) is a key rate-limiting step in the AsA biosynthesis pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "GDP-L-galactose is explicitly named as the substrate in the GGP assay and discussion of VTC2 activity."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion states recombinant VTC2 converts GDP-L-galactose to L-galactose-1-P."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This reaction is explicitly described in the Discussion as the specific conversion catalyzed by VTC2."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly places GmVTC2b/VTC2 in the AsA biosynthetic pathway, making it a direct intermediate-forming step toward ascorbic acid."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says GGP (VTC2) is a key rate-limiting step, and links altered GGP activity with altered AsA accumulation under high light."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AsA/ascorbic acid is directly measured and connected to GmVTC2b."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly classify AsA as a vitamin."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "AsA is explicitly described as enhancing ROS scavenging and high-light protection."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measurements were made in leaves."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "GmVTC2b overexpression increased AsA and high-light tolerance and reduced ROS accumulation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Stable overexpression, AsA assays, Fv/Fm, ROS assays, transient expression, interaction assays, and association with GGP activity changes via GmPLP1 backgrounds are all present in the paper."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Protein induction by HWL and by HBL/HRL is explicitly reported."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Same soybean system and direct measurement."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These high white/blue/red light treatments are directly tested."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "GmPLP1 interaction with GmVTC2b is directly shown."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed emphasizes GmVTC2b among the three homologs as the one functionally characterized for high-light tolerance and AsA/ROS phenotypes."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point matches Results: induction by high light, increased leaf AsA, improved resistance/lower ROS, and negative modulation by GmPLP1 via blue-light-sensitive interaction."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The experimental results support potential utility, but the explicit engineering recommendation is not directly stated in Results."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports proGmVTC2b:GmVTC2b-Flag and transient pCAMBIA3300-GmVTC2b-GFP constructs."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 25,
+        "unsupported": 0,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "GmVTC2a",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GmVTC2a is described as a soybean homolog gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Soybean is explicit, but 'Glycine max' does not explicitly appear in the provided text."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The soybean material used is DN50, from which genes/plasmids were constructed."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Interaction assays involving GmVTC2a were performed using soybean-derived genes; in vivo BiFC/LCA used N. benthamiana leaves, but the gene application context remains soybean gene characterization."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact Latin name 'Glycine max' is not explicitly written."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The source soybean background in the study is DN50."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "GmVTC2a is only identified as a homolog of GmVTC2b; the paper does not directly demonstrate or explicitly name GmVTC2a itself as an active GDP-L-galactose phosphorylase enzyme in Results."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GmVTC2a is a homologous member of the GmVTC2 family."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "By homology to VTC2 this is plausible, but GmVTC2a itself is not directly functionally placed into the ascorbate pathway in the Results."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "This exact branch assignment is not explicitly made for GmVTC2a in the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No direct substrate is reported for GmVTC2a specifically in this paper."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No direct product is reported for GmVTC2a specifically in this paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not directly test or state the catalytic reaction of GmVTC2a; only homology and interaction are shown."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "A likely connection exists by homology to VTC2, but it is not directly shown for GmVTC2a in Results."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "AsA is central to VTC2b, but GmVTC2a is not directly tied to AsA measurements in this paper."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No direct metabolite classification is provided for GmVTC2a."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Antioxidant/ROS scavenging is established for AsA generally, but not directly for GmVTC2a in this paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Leaves are used for some interaction assays, but no GmVTC2a-specific metabolite accumulation site is shown."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Y2H is shown in main Results and supplementary interaction assays (pull-down/BiFC/LCA) are referenced for GmVTC2a with GmPLP1."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "GmPLP1 interaction with GmVTC2a is explicitly reported."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed identifies GmVTC2a as a homolog interacting with GmPLP1, but without direct metabolite/phenotype characterization."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points match the paper: homolog status, interaction with GmPLP1, and absence of direct metabolic phenotyping."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Substrate",
+          "old_value": "GDP-L-galactose",
+          "new_value": "NA",
+          "reason": "No direct substrate is reported for GmVTC2a specifically in this paper."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "L-galactose-1-phosphate",
+          "new_value": "NA",
+          "reason": "No direct product is reported for GmVTC2a specifically in this paper."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Homologous GDP-L-galactose phosphorylase predicted to catalyze conversion of GDP-L-galactose to L-galactose-1-phosphate.",
+          "new_value": "NA",
+          "reason": "The paper does not directly test or state the catalytic reaction of GmVTC2a; only homology and interaction are shown."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "vitamin",
+          "new_value": "NA",
+          "reason": "No direct metabolite classification is provided for GmVTC2a."
+        }
+      ],
+      "stats": {
+        "supported": 9,
+        "unsupported": 4,
+        "uncertain": 9
+      }
+    },
+    {
+      "gene_name": "GmVTC2c",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GmVTC2c is described as a soybean homolog gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Soybean is explicit, but the exact Latin name is not written in the provided text."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "DN50 is the soybean material used in the study."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Interaction assays characterize the soybean gene GmVTC2c; some in vivo assays were in N. benthamiana leaves but the gene itself is from soybean."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact Latin name 'Glycine max' is not explicitly shown."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The study's soybean background is DN50."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "GmVTC2c is identified as a homolog, but the paper does not directly demonstrate or explicitly state its catalytic enzyme activity."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places GmVTC2c within the GmVTC2 family as a homolog."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "Likely by homology, but GmVTC2c is not functionally placed into the pathway in Results."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "This exact pathway-branch assignment is not made for GmVTC2c."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No GmVTC2c-specific substrate test is reported."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No GmVTC2c-specific product is reported."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not directly test or state the catalytic reaction for GmVTC2c."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "Connection to AsA is only inferable by homology, not directly demonstrated for GmVTC2c."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "AsA is central for GmVTC2b, but no direct GmVTC2c-to-AsA evidence is shown."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No direct metabolite classification is provided for GmVTC2c."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "General AsA function is known, but not directly tested for GmVTC2c here."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "No GmVTC2c-specific metabolite accumulation data are presented."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Y2H is in main Results and supplementary interaction assays are cited for GmVTC2c with GmPLP1."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "GmPLP1 interaction with GmVTC2c is explicitly reported."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies GmVTC2c as a homolog interacting with GmPLP1 but not directly phenotyped for metabolite/trait effects."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are faithful to the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Substrate",
+          "old_value": "GDP-L-galactose",
+          "new_value": "NA",
+          "reason": "No GmVTC2c-specific substrate test is reported."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "L-galactose-1-phosphate",
+          "new_value": "NA",
+          "reason": "No GmVTC2c-specific product is reported."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Homologous GDP-L-galactose phosphorylase predicted to catalyze conversion of GDP-L-galactose to L-galactose-1-phosphate.",
+          "new_value": "NA",
+          "reason": "The paper does not directly test or state the catalytic reaction for GmVTC2c."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "vitamin",
+          "new_value": "NA",
+          "reason": "No direct metabolite classification is provided for GmVTC2c."
+        }
+      ],
+      "stats": {
+        "supported": 9,
+        "unsupported": 4,
+        "uncertain": 9
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 127,
+    "supported": 86,
+    "unsupported": 8,
+    "uncertain": 33,
+    "total_corrections": 8
+  }
+}

@@ -1,0 +1,676 @@
+{
+  "file": "MinerU_markdown_PMC13011381_2038799257426759690",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC13011381_2038799257426759690.md",
+  "timestamp": "2026-03-31T22:05:47.433846",
+  "genes": [
+    {
+      "gene_name": "CCR",
+      "category": "Common",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CCR is explicitly described as a key enzyme-encoding gene; the abbreviation conventionally denotes cinnamoyl-CoA reductase, consistent with Fig. 6a context."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism is pakchoi throughout the paper."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 5 caption explicitly states Brassica rapa (pakchoi)."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The susceptible variety Xialing (XL) and resistant variety Shenkang (SK) are explicitly named in Methods."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Validation and expression analyses were performed in pakchoi."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Brassica rapa (pakchoi), explicitly stated."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression comparisons involve XL_D, XL_H, and SK_H, corresponding to Xialing and Shenkang."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly links CCR with biosynthesis of p-coumaraldehyde and eudesmic acid in Fig. 6a/caption and Results text."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "p-Coumaraldehyde and eudesmic acid are explicitly discussed as phenolic acids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Conclusions state these phenolic acids suppress beneficial Rhizobium/Rhizobiaceae growth and promote P. brassicae infection; they are rhizosphere/root-exuded metabolites from rhizosphere soil analyses."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Absolute concentrations were measured in rhizosphere soil and described as higher there in susceptible plants."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CCR expression is reported as noticeably elevated in XL_D, and the paper associates elevated phenolic acids with suppression of Rhizobium sp. 25F3-mediated resistance."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point matches Results: CCR elevated in XL_D; p-coumaraldehyde/eudesmic acid higher in susceptible/diseased rhizosphere; these compounds inhibit Rhizobium sp. 25F3 and weaken biocontrol."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all explicitly described: qPCR expression analysis, absolute metabolite quantification, phenolic acid feeding/root drenching, and pathogen biomass qPCR."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state CCR did not differ significantly between XL_H and SK_H but was noticeably elevated in XL_D; thus higher in diseased susceptible roots than the others is supported."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Higher CCR expression in XL_D is explicitly described."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No promoter information is provided; there was no transgenic construct or promoter assay."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "P. brassicae infection is the central treatment, and phenolic acid root drenching was used in validation experiments."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports association with microbiome dysbiosis and enhanced disease via suppression of beneficial Rhizobium, though framed at pathway/metabolite level rather than direct CCR manipulation."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper suggests microbiome/genetic approaches broadly, but does not specifically propose editing/downregulating CCR; this is a plausible extrapolation, not directly stated."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the study: expression/correlation only, no direct genetic manipulation of CCR."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "CRA018547 (PRJCA029460) and MTBLS10976 are explicitly listed in Data availability."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Applied_Promoters",
+          "old_value": "Native promoter",
+          "new_value": "NA",
+          "reason": "No promoter information is provided; there was no transgenic construct or promoter assay."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "PAL1/2",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL1/2 refers to phenylalanine ammonia-lyase genes in the phenylalanine metabolic pathway context described in Results."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The EC number 4.3.1.24 does not appear in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "PAL1/2 are consistent with the PAL family, but 'PAL family lyase' wording is not explicitly stated in the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The genes were assayed in pakchoi."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Brassica rapa (pakchoi) is explicitly stated."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Xialing and Shenkang are the two varieties analyzed."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All validations concern pakchoi."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Brassica rapa is explicitly given."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied varieties are Xialing and Shenkang."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says p-coumaraldehyde and eudesmic acid biosynthesis involves the phenylalanine metabolic pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL1/2 are assayed as key enzyme genes in the pathway leading to p-coumaraldehyde and eudesmic acid; the upstream entry-step linkage is directly inferable from pathway context."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "As PAL1/2 are pathway entry genes in phenylalanine metabolism, 'upstream; committed entry step' is directly inferable though not phrased verbatim."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "L-phenylalanine is not explicitly mentioned in the paper for PAL1/2."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "trans-cinnamic acid is not stated in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not describe the PAL enzymatic reaction in biochemical detail."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL1/2 are used as pathway genes tied to biosynthesis of the final phenolic acids, so supplying precursors is inferable."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The value carefully states it is a key entry step but not shown rate-limiting; this is consistent with the paper's pathway treatment and does not overclaim."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly connects PAL1/2 expression analysis to p-coumaraldehyde and eudesmic acid biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These end products are explicitly called phenolic acids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The two phenolic acids are shown to inhibit Rhizobium sp. 25F3 and promote clubroot disease."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Their concentrations were measured in rhizosphere soil."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Upregulated PAL1/2 in susceptible roots is associated with increased phenolic acid biosynthesis and disease-promoting microbiome effects; this matches Results."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings reflect the Results text and Fig. 6: higher PAL1/2 in XL_D and XL_H than SK_H, higher phenolic acids in susceptible rhizospheres, and these metabolites inhibit Rhizobium/promote infection."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly used."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state PAL1/2 expression was significantly higher in susceptible variety (XL_D and XL_H) than resistant SK_H."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The exact XL_D and XL_H > SK_H pattern is directly stated."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization for PAL1/2 is given in the paper."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No promoter information is provided."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression was analyzed under P. brassicae infection context."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential effects on broad phenylpropanoid/lignin defenses are biologically plausible but not directly tested or stated for PAL manipulation in this paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper broadly mentions future genetic/microbiome-based approaches, but does not specifically nominate PAL1/2 as an engineering target."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Accurately states that PAL1/2 were only assayed for expression, with no mutant/transgenic validation."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The accession numbers are explicitly provided in Data availability."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "4.3.1.24",
+          "new_value": "NA",
+          "reason": "The EC number 4.3.1.24 does not appear in the paper."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "L-phenylalanine",
+          "new_value": "NA",
+          "reason": "L-phenylalanine is not explicitly mentioned in the paper for PAL1/2."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "trans-cinnamic acid",
+          "new_value": "NA",
+          "reason": "trans-cinnamic acid is not stated in the paper."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Deaminates L-phenylalanine to trans-cinnamic acid, initiating phenylpropanoid metabolism",
+          "new_value": "NA",
+          "reason": "The paper does not describe the PAL enzymatic reaction in biochemical detail."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "No subcellular localization for PAL1/2 is given in the paper."
+        },
+        {
+          "field": "Applied_Promoters",
+          "old_value": "Native promoter",
+          "new_value": "NA",
+          "reason": "No promoter information is provided."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 6,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "C4H",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "C4H is the standard abbreviation used in the paper for a key enzyme gene in the phenylalanine metabolic pathway; cinnamate 4-hydroxylase is directly inferable from the gene symbol."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The EC number 1.14.14.91 does not appear in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention cytochrome P450 or CYP73 family annotations."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Assayed in pakchoi."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Brassica rapa is explicitly given."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Xialing and Shenkang are explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments were performed in pakchoi."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Brassica rapa (pakchoi) is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Xialing and Shenkang are the varieties used."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states these genes are involved in the phenylalanine metabolic pathway for p-coumaraldehyde/eudesmic acid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "C4H is analyzed as part of the core phenylpropanoid route toward p-coumaraldehyde/eudesmic acid; this is inferable from the stated pathway context."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "An upstream-midstream role is consistent with C4H's placement in the named pathway and does not contradict the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "trans-cinnamic acid is not explicitly stated in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "p-coumaric acid is not explicitly stated in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not provide this biochemical reaction description."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "C4H is presented as a pathway gene linked to p-coumaraldehyde/eudesmic acid production, so an intermediate-precursor role is inferable."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The value only says not established in this paper, which is accurate."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly links C4H expression analysis to p-coumaraldehyde and eudesmic acid biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These metabolites are called phenolic acids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The metabolites are shown to inhibit beneficial Rhizobium and promote clubroot infection."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measured in rhizosphere soil."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Elevated C4H expression in susceptible roots is associated with increased disease-promoting phenolic acid accumulation; this aligns with Results."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All points match reported findings: higher C4H in susceptible varieties, higher p-coumaraldehyde/eudesmic acid in susceptible rhizospheres, and these suppress Rhizobium-mediated resistance."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all directly used and described."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state C4H expression was significantly higher in susceptible variety (XL_D and XL_H) than resistant SK_H."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The exact XL_D and XL_H > SK_H pattern is explicitly stated."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No ER/microsome localization is reported in the paper."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No promoter information is provided."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Assayed in the context of P. brassicae infection."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Broader phenylpropanoid/defense effects are plausible but not directly tested or specifically discussed for C4H manipulation."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Specific engineering of C4H is not proposed in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately notes that the role is inferred from canonical pathway logic and expression analysis in the paper."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The accession numbers are explicitly listed."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.14.91",
+          "new_value": "NA",
+          "reason": "The EC number 1.14.14.91 does not appear in the paper."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "Cytochrome P450 monooxygenase CYP73 family",
+          "new_value": "NA",
+          "reason": "The paper does not mention cytochrome P450 or CYP73 family annotations."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "trans-cinnamic acid",
+          "new_value": "NA",
+          "reason": "trans-cinnamic acid is not explicitly stated in the paper."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "p-coumaric acid",
+          "new_value": "NA",
+          "reason": "p-coumaric acid is not explicitly stated in the paper."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Hydroxylates trans-cinnamic acid at the 4-position to form p-coumaric acid",
+          "new_value": "NA",
+          "reason": "The paper does not provide this biochemical reaction description."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Endoplasmic reticulum/microsome",
+          "new_value": "NA",
+          "reason": "No ER/microsome localization is reported in the paper."
+        },
+        {
+          "field": "Applied_Promoters",
+          "old_value": "Native promoter",
+          "new_value": "NA",
+          "reason": "No promoter information is provided."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 7,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "4CL",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "4CL is the standard abbreviation for 4-coumarate-CoA ligase and is used in the paper as a key enzyme gene in the pathway."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The EC number 6.2.1.12 does not appear in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention 'acyl-activating enzyme family'."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was assayed in pakchoi."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Brassica rapa is explicit."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Xialing and Shenkang are the varieties used."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All assays/validations are in pakchoi."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Brassica rapa (pakchoi) is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied varieties are Xialing and Shenkang."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly places these genes in the phenylalanine metabolic pathway involved in p-coumaraldehyde and eudesmic acid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "4CL is analyzed as part of the hydroxycinnamoyl-CoA-producing phenylpropanoid route toward the assayed phenolic acids; this is inferable from pathway context."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "A midstream placement is consistent with its role in the named pathway and not contradicted by the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "p-coumaric acid is not explicitly mentioned in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "p-coumaroyl-CoA is not explicitly mentioned in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not provide a detailed biochemical reaction description for 4CL."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links 4CL expression to biosynthesis of p-coumaraldehyde/eudesmic acid, so an immediate precursor pool role is inferable."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The value only states this was not established in the paper, which is accurate."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The study directly connects 4CL expression with p-coumaraldehyde and eudesmic acid biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These metabolites are explicitly phenolic acids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows these phenolic acids suppress beneficial Rhizobium and facilitate infection."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measured in rhizosphere soil."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Higher 4CL expression in susceptible roots is associated with enhanced phenolic acid biosynthesis and disease-promoting microbiome changes, matching Results."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All points match the paper: 4CL higher in susceptible plants, increased p-coumaraldehyde/eudesmic acid in susceptible rhizospheres, and these metabolites antagonize Rhizobium sp. 25F3 and enhance infection."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are explicitly described and used."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state 4CL expression was significantly higher in susceptible variety (XL_D and XL_H) than in resistant SK_H."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The exact XL_D and XL_H > SK_H pattern is directly stated."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No cytosolic localization is reported in the paper."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No promoter information is given."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression and phenotypes were analyzed under P. brassicae infection; exogenous phenolic acid treatment was also tested downstream."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Broad impacts on lignin/flavonoid/defense metabolites are plausible but not directly tested in this paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not specifically propose 4CL as a breeding/engineering target."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately states the paper links 4CL to phenolic acid accumulation mainly through pathway logic and correlation, not direct biochemical assay."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The accession numbers are explicitly provided in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "6.2.1.12",
+          "new_value": "NA",
+          "reason": "The EC number 6.2.1.12 does not appear in the paper."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "Acyl-activating enzyme family",
+          "new_value": "NA",
+          "reason": "The paper does not mention 'acyl-activating enzyme family'."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "p-coumaric acid",
+          "new_value": "NA",
+          "reason": "p-coumaric acid is not explicitly mentioned in the paper."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "p-coumaroyl-CoA",
+          "new_value": "NA",
+          "reason": "p-coumaroyl-CoA is not explicitly mentioned in the paper."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Activates hydroxycinnamic acids to their CoA thioesters for downstream phenylpropanoid reactions",
+          "new_value": "NA",
+          "reason": "The paper does not provide a detailed biochemical reaction description for 4CL."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "No cytosolic localization is reported in the paper."
+        },
+        {
+          "field": "Applied_Promoters",
+          "old_value": "Native promoter",
+          "new_value": "NA",
+          "reason": "No promoter information is given."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 7,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 121,
+    "supported": 92,
+    "unsupported": 21,
+    "uncertain": 8,
+    "total_corrections": 21
+  }
+}

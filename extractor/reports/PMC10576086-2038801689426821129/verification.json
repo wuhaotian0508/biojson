@@ -1,0 +1,1729 @@
+{
+  "file": "MinerU_markdown_PMC10576086_2038801689426821129",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC10576086_2038801689426821129.md",
+  "timestamp": "2026-03-31T21:36:34.033554",
+  "genes": [
+    {
+      "gene_name": "AcBAHD3",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcBAHD3 is described from A. chinensis (horse chestnut)."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies Ac genes from Aesculus chinensis."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcBAHD3 was tested as recombinant protein from E. coli in in vitro enzyme assays."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "E. coli was the expression host for recombinant BAHD proteins."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The Methods mention BAHD genes were ligated into pET28a, but no promoter or IPTG-inducible detail is given specifically for AcBAHD3."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq showed AcBAHD3 was abundantly expressed in seeds and it is in AcCluster I."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AcBAHD3 is a BAHD and phylogenetically placed with clade IIIa BAHD acyltransferases."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "In vitro assays showed AcBAHD3 acetylated protoaescigenin and desacetylaescin I, with much lower conversion than AcBAHD6."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper compares AcBAHD3 with AcBAHD6 but does not show direct physical or functional interaction between them."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Validated by in vitro enzyme assays using recombinant proteins from E. coli and LC-MS analysis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AcBAHD3 acts on desacetylaescin I to form escin Ia, linking it directly to aescin biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Aescin/escin Ia is described as a triterpenoid saponin."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states medicinal uses of aescin generally, but does not specifically assign these activities as a field for AcBAHD3."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Escin Ia/Ib accumulated highest in seeds, and MALDI-MSI localized them to cotyledons near the testa."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points match the Results: acetylation of protoaescigenin and desacetylaescin I, weaker activity than AcBAHD6, and supportive role in escin Ia formation."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Lower activity than AcBAHD6 is supported, but the engineering implication is an interpretation not stated in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "AcBAHD3 was experimentally tested, but AcBAHD6 showed stronger activity and is emphasized as seed-specific."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Engineering preference for AcBAHD6 over AcBAHD3 is reasonable but not explicitly stated by the paper."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Genome accession CRA009101, transcriptome CRA009093, RNA-seq, and WGCNA are reported in the study."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "AcBAHD6",
+          "new_value": "NA",
+          "reason": "The paper compares AcBAHD3 with AcBAHD6 but does not show direct physical or functional interaction between them."
+        }
+      ],
+      "stats": {
+        "supported": 14,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "AcOSC6",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcOSC6 is from horse chestnut studied here."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Aesculus chinensis."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcOSC6 was functionally tested in Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "N. benthamiana is explicitly named as the transient expression host."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The construct pEAQ-HT-DEST1 is stated, but the promoter/constitutive expression wording is not explicitly given in the paper."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcOSC6 was abundantly expressed in seeds according to RNA-seq."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AcOSC6 is described as an OSC and specifically a β-amyrin synthase/BAS."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states full-length AcOSC6 is β-amyrin synthase (BAS)."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper for AcOSC6."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AcOSC6 is functionally linked to escin/aescin barrigenol-type triterpenoid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It catalyzes the triterpene scaffold-forming step from 2,3-oxidosqualene to β-amyrin."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "As β-amyrin synthase, it is the early scaffold-forming committed step in the pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states aescin is biosynthesized from 2,3-oxidosqualene by OSCs, and AcOSC6 is BAS producing β-amyrin."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "AcOSC6 produced β-amyrin in N. benthamiana."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Cyclization of 2,3-oxidosqualene to β-amyrin is consistent with the Results and pathway figure."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "β-amyrin is the core precursor for aescin biosynthesis in the proposed pathway."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AcOSC6 is directly connected to escin Ia/escin Ib biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Aescin is described as a triterpenoid saponin."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states aescin preparations are used clinically for chronic venous insufficiency, edema, and hemorrhoids."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Escin Ia/Ib accumulated highest in seeds and were imaged in cotyledons near the testa."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "AcOSC6 enables β-amyrin production, the dedicated triterpene precursor for aescin biosynthesis."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "AcOSC6 was co-expressed with AstHMGR and CYPs, but direct protein interaction was not tested."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Validated by transient expression in N. benthamiana, GC-MS/MS, and phylogenetic analysis."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are supported by the Results and Fig. 3."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "AcOSC6 is an entry/committed step enzyme, but the paper does not explicitly call it rate-limiting or control step."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "AcOSC6 is in AcCluster I, one of duplicated BAT BGCs arising from Aesculus-specific WGD."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Its value for engineering is plausible but not explicitly discussed as an application in the paper."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "These omics resources and accession numbers are reported in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "5.4.99.39",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper for AcOSC6."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "AcCYP716A275",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcCYP716A275 is an A. chinensis gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Aesculus chinensis."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was tested in N. benthamiana and engineered yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly used Nicotiana benthamiana and Saccharomyces cerevisiae."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Vectors pEAQ-HT-DEST1 and pESC-HIS are given, but promoter details are not explicitly stated."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcCYP716A275 was abundantly expressed in seeds."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly a CYP716A family cytochrome P450."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Its function as a β-amyrin 16α-hydroxylase is directly shown."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is linked to barrigenol-type triterpenoid/aescin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It performs early oxidative tailoring of β-amyrin."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It hydroxylates β-amyrin, an early intermediate."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Co-expression assays showed activity toward β-amyrin."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The product was identified as 16α-hydroxy-β-amyrin."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states AcCYP716A275 catalyzes region-specific C-16α oxidation of β-amyrin."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "This intermediate decoration is part of the route to protoaescigenin/aescin."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is presented as contributing to aescin biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Aescin is a triterpenoid saponin."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Medicinal activities of aescin are stated generally, but not as a specific validated property of AcCYP716A275."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Aescin accumulation in seeds/cotyledons near testa is shown."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results directly support C-16α hydroxyl introduction on β-amyrin."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Co-expression with AcOSC6 and AstHMGR occurred, but direct interaction was not tested."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by co-expression in N. benthamiana, yeast testing, and GC-MS/MS comparison with BfCYP716Y1 product."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three statements match the Results."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish this; 'Not established' accurately reflects the evidence."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper emphasizes region-specific CYP716A-mediated oxidation in the Aesculus BAT pathway."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Usefulness for reconstruction is inferable but not explicitly framed as application value by the paper."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Genome/transcriptome accessions and RNA-seq/WGCNA are reported."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "AcCYP716A278",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcCYP716A278 is from horse chestnut/A. chinensis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Aesculus chinensis."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was tested in N. benthamiana and engineered yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The hosts used were Nicotiana benthamiana and Saccharomyces cerevisiae."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Vectors are reported, but promoter details are not explicitly provided."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcCYP716A278 was abundantly expressed in seeds."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is a CYP716A subfamily cytochrome P450."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Its activity corresponds to β-amyrin 21β-hydroxylase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is placed in the aescin/BAT biosynthetic pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It performs early oxidative tailoring of β-amyrin."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an early-to-mid oxidation step on β-amyrin."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The substrate in co-expression assays is β-amyrin produced by AcOSC6."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The product was identified as 21β-hydroxy-β-amyrin."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows C-21β hydroxylation of β-amyrin by AcCYP716A278."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "This decorated intermediate is linked to protoaescigenin/aescin formation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is part of the experimentally verified aescin pathway."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Aescin is a triterpenoid saponin."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "General medicinal function of aescin is given, but not as specific evidence for this gene field."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Aescin accumulates in seeds and cotyledons near the testa."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results directly support introduction of the C-21β hydroxyl on β-amyrin."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Co-expression with AcOSC6 and AstHMGR was performed, but no interaction assay is shown."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by co-expression in N. benthamiana, yeast assays, and GC-MS/MS comparison to GmCYP72A69 product."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements accurately reflect the Results and Discussion."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish rate limitation; 'Not established' is faithful."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly highlights the independent evolution of C-21β hydroxylation in CYP716A versus CYP72A."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential synthetic biology value is plausible but not explicitly stated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Reported omics datasets include genome/transcriptome, RNA-seq, and WGCNA."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "AcCSL1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcCSL1 is an A. chinensis gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Aesculus chinensis."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcCSL1 was tested in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host species was Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The yeast strain WAT11 is explicitly named."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The vector pESC-HIS and galactose medium are described, but the exact promoter wording is not explicitly given."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "AcCSL1 is in AcCluster II and functionally relevant to the seed aescin pathway, but explicit seed-high expression for AcCSL1 itself is not stated in the quoted Results section."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AcCSL1 is described as a cellulose synthase-like/glucuronosyltransferase related to CSyGT/CslM proteins."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Its function is a triterpenoid C-3 glucuronosyltransferase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AcCSL1 is functionally linked to aescin/BAT biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It catalyzes triterpenoid glucuronidation/glycosylation."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a tailoring step after aglycone formation."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The substrate 1 used in assays is protoaescigenin."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The product was identified as 3-O-β-D-glucuronopyranosyl acid-protoaescigenin."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows transfer of glucuronic acid from UDPGA to substrate 1 at C-3."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "This glucuronidation is presented as a required step toward aescin formation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AcCSL1 is one of the genes the paper says are responsible for formation of aescin."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Aescin is a triterpenoid saponin."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "General medicinal role of aescin is stated, but not specifically tied to AcCSL1 in Results."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Aescin accumulation is highest in seeds and localized to cotyledons near testa."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Microsomal proteins were used for assays, but intrinsic subcellular localization of AcCSL1 was not directly determined."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results support glucuronic acid addition to form a glycosylated aescin intermediate."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "GmCSyGT1/GmCSL1 was used as a positive control, not an interacting protein."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Validated by yeast substrate-feeding, microsome assay, and LC-MS product detection."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements match the experimental Results and the evolutionary interpretation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish this; 'Not established' is accurate."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper frames AcCSL1 as a cellulose synthase-derived glycosyltransferase recruited into specialized metabolism."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Its essentiality for heterologous pathway assembly is inferable, but not explicitly discussed as application value."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Genome/transcriptome datasets and phylogenomic analyses are part of the study."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "GmCSyGT1/GmCSL1 (positive control, functional analog)",
+          "new_value": "NA",
+          "reason": "GmCSyGT1/GmCSL1 was used as a positive control, not an interacting protein."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 1,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "AcBAHD6",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcBAHD6 is from horse chestnut/A. chinensis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Aesculus chinensis."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcBAHD6 was assayed as recombinant protein from E. coli in vitro."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The recombinant protein was produced in Escherichia coli."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "pET28a is reported for BAHD cloning, but explicit promoter/IPTG details are not given specifically for AcBAHD6."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls AcBAHD6 seed-specific expressed."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AcBAHD6 is a BAHD acyltransferase in clade IIIa."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Its activity supports designation as protoaescigenin/desacetylaescin I 22-O-acetyltransferase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AcBAHD6 is directly linked to aescin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It catalyzes the late acylation step in triterpenoid saponin modification."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It acts late in the pathway on protoaescigenin and desacetylaescin I."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper tested protoaescigenin and desacetylaescin I as substrates."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Products identified were 22-O-acetylprotoaescigenin and escin Ia."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows acetyl transfer to C-22 using acetyl-CoA donor."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "AcBAHD6 directly forms escin Ia from desacetylaescin I."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Escin Ia/aescin is directly produced in the AcBAHD6 assay."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Aescin is a triterpenoid saponin."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The medicinal uses of aescin are stated, and pharmacodynamic studies about acylation increasing cytotoxicity are also cited in this section."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Aescin is highest in seeds and localized to cotyledons near testa."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly supports decisive C-22 acetylation leading to escin Ia formation."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "AcBAHD3 is compared functionally, but no interaction between AcBAHD6 and AcBAHD3 is shown."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Validated by recombinant E. coli enzyme assay, LC-MS, NMR for 22-O-acetylprotoaescigenin, and conversion of desacetylaescin I to escin Ia."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements match the Results exactly."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not formally call it rate-limiting; the wording reflects that."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states AcBAHD6 was identified from WGCNA and had stronger activity than AcBAHD3."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "High-value engineering target is a reasonable inference but not explicitly claimed."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Genome/transcriptome accession numbers and RNA-seq/WGCNA are reported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "AcBAHD3",
+          "new_value": "NA",
+          "reason": "AcBAHD3 is compared functionally, but no interaction between AcBAHD6 and AcBAHD3 is shown."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "Ac4CL1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL1 is from A. chinensis/horse chestnut."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Aesculus chinensis."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL1 was expressed in E. coli for in vitro enzyme assays."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host was Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL genes were inserted into pET-32a(+) and transformed into E. coli BL21(DE3)."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The vector pET-32a(+) is stated, but IPTG-inducible promoter details are not explicitly given as such."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states Ac4CL1 exhibited a broad expression pattern."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL1 is a 4-coumarate-CoA ligase family enzyme."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper refers to these as Ac4CL enzymes."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper for Ac4CL1."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL1 is functionally characterized in aesculin/coumarin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It activates caffeic acid for the coumarin branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an upstream activation step before esculetin and aesculin formation."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Enzyme assays showed affinity for caffeic acid (13)."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The product is caffeoyl-CoA (14)."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Spectrophotometric assays measured conversion of caffeic acid to caffeoyl-CoA."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeoyl-CoA is the immediate precursor for downstream esculetin/aesculin biosynthesis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL1 is linked to aesculin biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Aesculin is a coumarin glycoside."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states aesculin is used in eye drop solutions to alleviate asthenopia, eye pain, and diplopia."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Aesculin accumulated significantly higher in leaves and flowers than in pericarps and seeds."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL1 supplies caffeoyl-CoA precursor for the aesculin pathway."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No protein-protein interaction between Ac4CL1 and AcF6'H1/2 was tested."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Validation was by purified recombinant enzyme assay monitored spectrophotometrically."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three points match the Results."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish this; 'Not established' is faithful."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states Ac4CL1-3 were validated and Ac4CL2 showed superior catalytic properties, explaining selection."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Engineering usefulness is inferable but not explicitly stated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Genome/transcriptome data and RNA-seq are reported in the study."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "6.2.1.12",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper for Ac4CL1."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "AcF6'H1; AcF6'H2",
+          "new_value": "NA",
+          "reason": "No protein-protein interaction between Ac4CL1 and AcF6'H1/2 was tested."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "Ac4CL2",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL2 is from A. chinensis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Aesculus chinensis."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL2 was tested in recombinant E. coli assays and then used in engineered E. coli for de novo aesculin synthesis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host species was Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "BL21(DE3) is supported for recombinant assays, and BWΔpykAΔpykF/BW1 is supported for pathway assembly, but 'XC-6 context' is inconsistent with the text, which names strain XC-6 in the figure caption and BW1 in the Results."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Vectors pET-32a(+) and pZE-649T are reported, but promoter details are not explicit."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL2 was narrowly expressed in the pericarp."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL2 is a 4-coumarate-CoA ligase family enzyme."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper refers to it as Ac4CL2, one of the Ac4CL enzymes."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL2 was functionally identified in aesculin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It activates hydroxycinnamate precursor for the coumarin branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It acts upstream in precursor activation."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL2 acts on caffeic acid (13)."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The product is caffeoyl-CoA (14)."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This conversion is directly assayed and described."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeoyl-CoA is then used by F6'H to produce esculetin toward aesculin."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL2 was used in de novo aesculin production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Aesculin is a coumarin glycoside."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states aesculin medicinal use generally, but 'ophthalmic use' wording is a shortened interpretation."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Aesculin was highest in leaves and flowers."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "M9 medium supplemented with 5 g/L yeast extract was used for de novo production of 5."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL2 had superior catalytic properties and was selected for de novo aesculin production."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No direct interaction with AcF6'H1 or AcUGT92G7 was tested."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Validated by purified enzyme assay, kinetic comparison, and use in engineered E. coli."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points match the Results."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "Ac4CL2 had superior catalytic properties, but 'candidate key control point' is an interpretation not stated in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states Ac4CL2 was chosen for microbial reconstruction because of stronger catalytic properties."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Preference for synthetic biology is inferable but not explicitly stated as application value."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Genome/transcriptome accessions and RNA-seq are reported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "6.2.1.12",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "AcF6'H1; AcUGT92G7",
+          "new_value": "NA",
+          "reason": "No direct interaction with AcF6'H1 or AcUGT92G7 was tested."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 2,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "Ac4CL3",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL3 is from A. chinensis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Aesculus chinensis."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL3 was tested as recombinant enzyme expressed in E. coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host was Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL genes were expressed in E. coli BL21(DE3)."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "pET-32a(+) is given, but promoter/IPTG-inducible wording is not explicit."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL3 was narrowly expressed in the pericarp."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL3 is a 4-coumarate-CoA ligase family enzyme."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "It is one of the characterized Ac4CL enzymes."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL3 is linked to coumarin/aesculin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It performs precursor activation for the coumarin branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an upstream activation step."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL3 had catalytic affinity for caffeic acid."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The product measured is caffeoyl-CoA."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This reaction is directly supported by the enzyme assay."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeoyl-CoA is the precursor for downstream esculetin/aesculin synthesis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL3 is characterized in the aesculin biosynthetic pathway."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Aesculin is a coumarin glycoside."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "General aesculin medicinal use is stated, but this field phrasing is generalized."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Aesculin is highest in leaves and flowers."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL3 provides caffeoyl-CoA precursor for the aesculin pathway."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No interaction with AcF6'H1 or AcF6'H2 was tested."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "It was validated by purified recombinant enzyme assay monitored by spectrophotometry."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "Ac4CL3 activity and pericarp-biased expression are supported, but 'not top-performing' is only indirectly inferable because only Ac4CL2 is explicitly noted as superior."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish this; 'Not established' is accurate."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Ac4CL3 was not selected for the final de novo E. coli aesculin pathway; the pathway used Ac4CL2."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Alternative engineering resource is plausible but not explicitly discussed."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Genome/transcriptome and RNA-seq data are reported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "6.2.1.12",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "AcF6'H1; AcF6'H2",
+          "new_value": "NA",
+          "reason": "No interaction with AcF6'H1 or AcF6'H2 was tested."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "AcF6'H1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcF6'H1 is from A. chinensis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Aesculus chinensis."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcF6'H1 was tested in E. coli and used in engineered E. coli pathway assembly."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host species is Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "BL21(DE3) is supported for recombinant expression, and BWΔpykAΔpykF/BW1 is supported for pathway assembly, but 'XC-6 context' is not consistently described in the text."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Vectors are stated but promoter details are not explicit."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcF6'H1 expression was high in pericarp and branch, low in flower."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "F6'H enzymes are 2-oxoglutarate/Fe(II)-dependent dioxygenases; this is consistent with the assay conditions and known enzyme class."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "AcF6'H1 is a feruloyl-CoA 6'-hydroxylase-like enzyme; the paper names it AcF6'H1 and tests this activity."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is reported in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AcF6'H1 is characterized in aesculin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It catalyzes coumarin-forming conversion from caffeoyl-CoA to esculetin."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a midstream coumarin-forming step before final glucosylation."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The substrate used was caffeoyl-CoA (14)."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The product was identified as esculetin (4)."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states AcF6'H1 hydroxylates 14 and the product is 4."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Esculetin is the immediate aglycone precursor of aesculin."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AcF6'H1 was used in the de novo aesculin pathway."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Aesculin is a coumarin glycoside."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "General medicinal use is stated, but 'ophthalmic use' is summarizing rather than verbatim."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Aesculin is highest in leaves and flowers."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "M9 medium with 5 g/L yeast extract was used for microbial production."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "AcF6'H1 converted caffeoyl-CoA to esculetin and was used in de novo aesculin production."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No direct interaction with Ac4CL2 or AcUGT92G7 was tested."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Validated by recombinant E. coli cell assay, LC-MS/MS product verification, and use in engineered pathway."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements match the Results."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "Calling it a committed step is reasonable, but not explicitly stated in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states AcF6'H2 had higher catalytic efficiency, yet AcF6'H1 was selected for the E. coli pathway."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Engineering usefulness is inferable but not explicitly discussed."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Genome/transcriptome and RNA-seq data are reported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.11.-",
+          "new_value": "NA",
+          "reason": "No EC number is reported in the paper."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "Ac4CL2; AcUGT92G7",
+          "new_value": "NA",
+          "reason": "No direct interaction with Ac4CL2 or AcUGT92G7 was tested."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 2,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "AcF6'H2",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcF6'H2 is from A. chinensis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Aesculus chinensis."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcF6'H2 was functionally tested in recombinant E. coli assays."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host species was Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "AcF6'H genes were inserted into pET-32a(+) and transformed into BL21(DE3)."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "pET-32a(+) is given, but promoter/IPTG-inducible detail is not explicitly stated as such."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcF6'H2-4 were narrowly expressed in the flower."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AcF6'H enzymes are in the 2-oxoglutarate/Fe(II)-dependent dioxygenase family."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "AcF6'H2 is an F6'H-like enzyme acting in coumarin biosynthesis."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AcF6'H2 is functionally linked to aesculin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It acts in the coumarin-forming branch from hydroxycinnamoyl-CoA."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It is a midstream step producing the aglycone precursor esculetin."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The substrate used was caffeoyl-CoA (14)."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The product was esculetin (4)."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state AcF6'H2 hydroxylated 14 and yielded 4."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Esculetin is the immediate aglycone precursor of aesculin."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AcF6'H2 is directly linked to aesculin biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Aesculin is a coumarin glycoside."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The medicinal use of aesculin is stated generally, but the field wording is condensed."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Aesculin accumulation is highest in leaves and flowers."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "AcF6'H2 efficiently converts caffeoyl-CoA to esculetin; it showed the greatest catalytic efficiency."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No interaction with Ac4CL isoforms was tested."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Validated by recombinant E. coli assay, LC-MS/MS product verification, and kinetic comparison."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points match the Results."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows highest catalytic efficiency among tested F6'Hs, but does not call it a key control step."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states AcF6'H2 had the greatest catalytic efficiency but was not chosen for the final E. coli pathway assembly."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Promising engineering value is plausible but not explicitly stated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Genome/transcriptome and RNA-seq are part of the study."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.11.-",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "Ac4CL1-3",
+          "new_value": "NA",
+          "reason": "No interaction with Ac4CL isoforms was tested."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "AcUGT84A56",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcUGT84A56 is from A. chinensis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Aesculus chinensis."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcUGT84A56 was tested as recombinant protein expressed in E. coli for in vitro assay."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host species was Escherichia coli."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "pMAL-c2x or pET28a vectors are mentioned generally for UGTs, but exact construct/promoter for AcUGT84A56 is not specified."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AcUGT84A56 is a family 1 UDP-glycosyltransferase in the UGT84A family."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Its activity is glucosylation of esculetin to aesculin."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is part of the identified aesculin biosynthetic pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It catalyzes the terminal glycosylation step."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It acts at the terminal step converting esculetin to aesculin."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The assays used esculetin (4) as acceptor and UDP-glucose as donor."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzymatic product was confirmed to be aesculin (5)."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows addition of one glucose to esculetin to form aesculin."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "AcUGT84A56 directly forms the target metabolite aesculin."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Aesculin is the direct product."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Aesculin is a coumarin glycoside."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "General medicinal use of aesculin is stated, but not specifically for this gene entry."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Aesculin accumulated more in leaves and flowers."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly supports glucosylation of esculetin to aesculin."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "AcUGT92G7 is another enzyme with similar function, not an interacting protein."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Validated by recombinant enzyme assay with esculetin and UDP-glucose and product comparison to authentic aesculin by UPLC/LC-MS."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The three statements are directly supported, including weaker affinity than AcUGT92G7."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish this; 'not formally rate-limiting' is faithful."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The kinetic comparison supports a higher Km/weaker affinity than AcUGT92G7."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Alternative pathway reconstruction value is an inference, not explicitly stated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Genome/transcriptome and RNA-seq data are reported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.4.1.-",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "AcUGT92G7",
+          "new_value": "NA",
+          "reason": "AcUGT92G7 is another enzyme with similar function, not an interacting protein."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "AcUGT92G7",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcUGT92G7 is from A. chinensis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Aesculus chinensis."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcUGT92G7 was tested in recombinant E. coli assays and used in engineered E. coli pathway assembly."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host species was Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "BWΔpykAΔpykF/BW1 is supported for pathway assembly, but the exact 'BW1/XC-6 context' wording is not consistently presented in the paper."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Vectors are mentioned generally, but exact promoter details are not explicitly given."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AcUGT92G7 is a family 1 UDP-glycosyltransferase in the UGT92G family."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Its activity is esculetin glucosyltransferase producing aesculin."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is reported in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AcUGT92G7 is directly identified in aesculin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It catalyzes the terminal glycosylation step."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It acts at the terminal step converting esculetin to aesculin."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The substrate was esculetin (4) with UDP-glucose donor."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The product was confirmed as aesculin (5)."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows transfer of one glucose to esculetin."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "AcUGT92G7 directly forms aesculin."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Aesculin is the direct product and final metabolite of this branch."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Aesculin is a coumarin glycoside."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "General medicinal use is described for aesculin, but not as specific gene-level evidence."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Aesculin is highest in leaves and flowers."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "M9 medium with 5 g/L yeast extract was used for microbial production."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "AcUGT92G7 had stronger affinity than AcUGT84A56 and was selected for de novo aesculin production."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No direct interaction with Ac4CL2 or AcF6'H1 was tested."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Validated by recombinant assay with kinetic analysis and deployment in engineered E. coli pathway."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three statements are all directly supported by the Results."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not state rate limitation; this wording is faithful."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The lower Km/stronger affinity than AcUGT84A56 is explicitly reported and explains pathway selection."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Preferred engineering enzyme is a reasonable inference, but not explicitly claimed."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Genome/transcriptome and RNA-seq datasets are reported in the study."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.4.1.-",
+          "new_value": "NA",
+          "reason": "No EC number is reported in the paper."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "Ac4CL2; AcF6'H1",
+          "new_value": "NA",
+          "reason": "No direct interaction with Ac4CL2 or AcF6'H1 was tested."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 360,
+    "supported": 292,
+    "unsupported": 18,
+    "uncertain": 50,
+    "total_corrections": 18
+  }
+}

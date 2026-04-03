@@ -1,0 +1,437 @@
+{
+  "file": "MinerU_markdown_PMC6637149_2038795110795214863",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC6637149_2038795110795214863.md",
+  "timestamp": "2026-03-31T22:23:51.622329",
+  "genes": [
+    {
+      "gene_name": "AtNIT4",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Methods/Data availability explicitly give AtNIT4 as NP_197622.1 and the vector as AT5G22300."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly identifies AtNIT4 as Arabidopsis thaliana nitrilase 4."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "AtNIT4 was expressed and assayed recombinantly in E. coli, but the gene itself is from Arabidopsis; 'applied species' as Arabidopsis is not the experimental host in assays."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Same issue as Applied_Species; experiments used recombinant protein and E. coli expression rather than applying the gene in Arabidopsis."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme is explicitly called nitrilase 4 / Arabidopsis thaliana nitrilase 4."
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Introduction states plant nitrilase 4 is EC 4.2.1.65."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places AtNIT4 in the nitrilase superfamily/branch 1 nitrilases and describes the conserved CEEK catalytic tetrad; it is also a helical oligomeric enzyme."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states NIT4 is highly specific for β-cyano-L-alanine and nitrilases hydrolyze nitriles to acids and/or amides with ammonia release; this is consistent with AtNIT4 assays."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "β-cyano-L-alanine is explicitly stated as the substrate specific for NIT4 enzymes and used as the positive control for AtNIT4."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nitrile hydrolysis is supported, but 'β-cyanoalanine detoxification/catabolism' is not directly demonstrated in Results for AtNIT4 in planta; cyanide detoxification context is only inferential/background."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports β-cyano-L-alanine specificity, but does not explicitly define a named 'β-cyanoalanine-specific nitrilase branch'."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not describe AtNIT4 as a 'terminal step' in a pathway."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "AtNIT4 directly acts on β-cyano-L-alanine in the enzyme assay context."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "β-cyano-L-alanine is the substrate, not a terminal metabolite/product. The paper does not call it the terminal metabolite."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "β-cyano-L-alanine is explicitly a nitrile and can be reasonably classified as an amino acid-derived nitrile."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links β-cyano-L-alanine metabolism to plant NIT4 generally, but this exact function wording ('Cyanide detoxification-related metabolism in plants') is not directly demonstrated in Results."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish rate-limiting status; 'not established' accurately reflects the article."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show wild-type AtNIT4 has high specificity for β-cyano-L-alanine and no or very low activity for alternative nitriles, with adiponitrile noted as low but measurable."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all explicitly used in the study: cryo-EM, recombinant expression/purification, directed evolution comparison, activity assays, and negative-stain EM."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by Results: AtNIT4 is the main gene; filament twist ~−73°; wild type is highly specific for β-cyano-L-alanine; structural lid loop and R95-D317 interaction are described."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The work uses in vitro recombinant enzyme assays with nitrile substrates."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The construct is pET-21b(+) and induction with IPTG is explicit, implying T7/lac, but the promoter is not directly named in the paper text."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly frames AtNIT4 as a scaffold for semirational engineering/biocatalysis and chemoenzymatic synthesis."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper discusses an intraprotein charge-charge interaction between residues R95 and D317, not an interacting protein."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "PDB 6i00/EMD-0320 are explicitly supported. However 'about 50% of total activity of wild-type AtNIT4 may produce amide rather than acid' is discussed as interpretation/prior evidence, not directly measured here."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Metabolic_Step_Position",
+          "old_value": "terminal step",
+          "new_value": "NA",
+          "reason": "The paper does not describe AtNIT4 as a 'terminal step' in a pathway."
+        },
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "β-cyano-L-alanine",
+          "new_value": "NA",
+          "reason": "β-cyano-L-alanine is the substrate, not a terminal metabolite/product. The paper does not call it the terminal metabolite."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "D317-mediated intraprotein interaction with lid loop residue R95 across the active-site architecture",
+          "new_value": "NA",
+          "reason": "The paper discusses an intraprotein charge-charge interaction between residues R95 and D317, not an interacting protein."
+        }
+      ],
+      "stats": {
+        "supported": 16,
+        "unsupported": 3,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_name": "AtNIT4 R95T L169A S224Q",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "This mutant is explicitly an AtNIT4-derived variant, and AtNIT4 sequence NP_197622.1 is given."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The variant is derived from Arabidopsis thaliana AtNIT4."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant library and selection were conducted in BL21 Escherichia coli cells."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Escherichia coli is explicitly stated."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "It is an engineered/mutant AtNIT4 nitrilase 4 variant."
+        },
+        "EC_Number": {
+          "verdict": "UNCERTAIN",
+          "reason": "The parent NIT4 group is identified as EC 4.2.1.65, but the paper does not explicitly assign this EC number to the engineered triple mutant."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is clearly an engineered branch 1 nitrilase / nitrilase superfamily variant of AtNIT4."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Selection and activity assays show the mutant hydrolyzes several nitriles not measurably converted by wild-type AtNIT4, with ammonia production used as readout."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The mutant acts on multiple substrates; the listed set is supported as active substrates, but the paper does not define a single 'primary substrate' and includes fumaronitrile as a potential substrate from screening."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nitrile hydrolysis is supported, but 'engineered xenobiotic or alternative nitrile conversion' is an interpretive pathway label not used by the paper."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not define an 'engineered altered-specificity nitrilase branch'."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No pathway position such as 'terminal step' is established."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant directly converts the tested nitrile substrates in enzymatic assays."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The listed chemicals are substrates, not terminal metabolites/products, and the paper does not define them as terminal metabolites."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These compounds are nitriles; potassium cyanide is an exception chemically, so the blanket class is only partially accurate, but most listed are nitriles and the study groups them in the substrate set."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "BL21 E. coli expression induced with IPTG is described in Methods/Selection."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish any rate-limiting role; 'not established' is faithful."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Discussion explicitly state the triple mutant gained broad substrate specificity and showed no activity toward β-cyano-L-alanine."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly used for this mutant."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The three statements match Results: triple mutant identified by mutagenesis, broader specificity with substrates not catalyzed by wild type, and reduced helical twist from ~−73° to ~−65° with no β-cyano-L-alanine activity."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Minimal media selection with 42 nitriles and in vitro assays are explicitly described."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "BL21 is explicitly stated for the selection host."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "pET-21b(+) and IPTG induction are explicit, but 'T7/lac' is inferred rather than directly named."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of native β-cyano-L-alanine activity is explicitly reported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly highlights semirational engineering and chemoenzymatic synthesis applications."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly report a helical twist change to ~−65° and increased diameter resembling broader-specificity nitrilases/Nit6803 Δ291."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Pathway_Branch_or_Subpathway",
+          "old_value": "engineered altered-specificity nitrilase branch",
+          "new_value": "NA",
+          "reason": "The paper does not define an 'engineered altered-specificity nitrilase branch'."
+        },
+        {
+          "field": "Metabolic_Step_Position",
+          "old_value": "terminal step",
+          "new_value": "NA",
+          "reason": "No pathway position such as 'terminal step' is established."
+        },
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "alternative nitrile substrates including 2-cyanopyridine, 2-furonitrile, potassium cyanide, fluoroacetonitrile, 4-cyanopyridine, fumaronitrile",
+          "new_value": "NA",
+          "reason": "The listed chemicals are substrates, not terminal metabolites/products, and the paper does not define them as terminal metabolites."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 3,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "AtNIT4 R95T",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an AtNIT4-derived single mutant; parent accession NP_197622.1 is given."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Derived from Arabidopsis thaliana AtNIT4."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression/assays were done using E. coli host systems."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Escherichia coli is explicitly used."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "It is an engineered AtNIT4 variant."
+        },
+        "EC_Number": {
+          "verdict": "UNCERTAIN",
+          "reason": "The parent NIT4 group is EC 4.2.1.65, but the paper does not explicitly reassign that EC number to the single engineered mutant."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is clearly an engineered branch 1 nitrilase variant from the nitrilase superfamily."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Results report low activity for 3-phenylpropanenitrile and connect R95T to opening of the lid-loop interaction."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The only substrate with reported activity for AtNIT4 R95T is 3-phenylpropanenitrile."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Nitrile hydrolysis is the direct enzyme function studied."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not define an 'engineered altered-specificity nitrilase branch'."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No pathway step position is described."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme directly converts the tested nitrile substrate in the assay context."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "3-phenylpropanenitrile is the substrate, not a terminal metabolite/product."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "3-phenylpropanenitrile is indeed a nitrile."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Induced heterologous expression in E. coli is described in Methods."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "No rate-limiting status is established; 'not established' is accurate."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Discussion state R95T alone did not change helical twist, lacked activity for β-cyano-L-alanine and other nitriles, but showed low activity for 3-phenylpropanenitrile."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutagenesis, purified enzyme assay, and negative-stain EM are all explicitly reported for R95T."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are supported: proposed disruption of lock, unchanged twist, loss of β-cyano-L-alanine activity with only low 3-phenylpropanenitrile activity."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "In vitro enzyme assays were used."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "BL21 was used generally for expression/selection, but the specific R95T characterization sentence does not itself restate BL21."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "pET-21b(+) with IPTG induction is explicit for constructs generally, but 'T7/lac' is inferred."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of native β-cyano-L-alanine activity without broad gain is directly described."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion supports R95 as a key engineering position, though broader specificity required additional mutations."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper describes an intraprotein R95-D317 interaction, not protein-protein interaction."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "EMD-4804 and twist about −73.3° are explicitly listed in Data availability."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Pathway_Branch_or_Subpathway",
+          "old_value": "engineered altered-specificity nitrilase branch",
+          "new_value": "NA",
+          "reason": "The paper does not define an 'engineered altered-specificity nitrilase branch'."
+        },
+        {
+          "field": "Metabolic_Step_Position",
+          "old_value": "terminal step",
+          "new_value": "NA",
+          "reason": "No pathway step position is described."
+        },
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "3-phenylpropanenitrile",
+          "new_value": "NA",
+          "reason": "3-phenylpropanenitrile is the substrate, not a terminal metabolite/product."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "D317-mediated intraprotein interaction disrupted by R95T",
+          "new_value": "NA",
+          "reason": "The paper describes an intraprotein R95-D317 interaction, not protein-protein interaction."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 4,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 81,
+    "supported": 57,
+    "unsupported": 10,
+    "uncertain": 14,
+    "total_corrections": 10
+  }
+}

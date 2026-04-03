@@ -5,26 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nutriMaster - 基因问答系统</title>
     <link rel="stylesheet" href="/static/style.css">
+    <!-- Markdown 渲染（本地托管，避免 CDN 阻塞） -->
+    <script src="/static/marked.min.js"></script>
+    <!-- ===== Supabase JS SDK（本地托管） ===== -->
+    <script src="/static/supabase.min.js"></script>
 </head>
 <body>
+    <!-- ===== 登录/注册覆盖层（新增）===== -->
+    <div id="auth-overlay" class="auth-overlay" style="display: flex;">
+        <div class="auth-split">
+            <!-- 左侧：欢迎/品牌 -->
+            <div class="auth-welcome">
+                <div class="auth-welcome-inner">
+                    <div class="auth-logo auth-logo-large">
+                        <img class="auth-logo-icon" src="/static/logo-icon.png" alt="NutriMaster icon">
+                        <span class="auth-logo-text"><span class="logo-nutri">Nutri</span><span class="logo-master">Master</span></span>
+                    </div>
+                    <p class="auth-tagline" data-i18n="auth.tagline">智能植物营养基因问答平台</p>
+                    <ul class="auth-features">
+                        <li data-i18n="auth.feature1">基因数据库语义检索</li>
+                        <li data-i18n="auth.feature2">PubMed 文献联网搜索</li>
+                        <li data-i18n="auth.feature3">个人知识库管理</li>
+                        <li data-i18n="auth.feature4">AI 深度调研报告</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 右侧：表单 -->
+            <div class="auth-form-side">
+                <div class="auth-card">
+                    <div class="auth-tabs">
+                        <button id="tab-login" class="auth-tab active" data-i18n="auth.login">登录</button>
+                        <button id="tab-signup" class="auth-tab" data-i18n="auth.signup">注册</button>
+                    </div>
+
+                    <!-- 错误提示 -->
+                    <div id="auth-error" class="auth-error" style="display: none;"></div>
+
+                    <!-- 登录表单 -->
+                    <form id="login-form" class="auth-form">
+                        <input type="email" id="login-email" data-i18n-placeholder="auth.emailPlaceholder" placeholder="邮箱地址" required autocomplete="email">
+                        <input type="password" id="login-password" data-i18n-placeholder="auth.passwordPlaceholder" placeholder="密码" required autocomplete="current-password">
+                        <button type="submit" id="login-submit-btn" class="auth-submit-btn" data-i18n="auth.loginBtn">登 录</button>
+                    </form>
+
+                    <!-- 注册表单（默认隐藏） -->
+                    <form id="signup-form" class="auth-form" style="display: none;">
+                        <input type="email" id="signup-email" data-i18n-placeholder="auth.emailPlaceholder" placeholder="邮箱地址" required autocomplete="email">
+                        <input type="password" id="signup-password" data-i18n-placeholder="auth.signupPasswordPlaceholder" placeholder="密码（至少6位）" required autocomplete="new-password">
+                        <input type="password" id="signup-confirm-password" data-i18n-placeholder="auth.confirmPasswordPlaceholder" placeholder="确认密码" required autocomplete="new-password">
+                        <input type="text" id="signup-nickname" data-i18n-placeholder="auth.nicknamePlaceholder" placeholder="昵称（选填）" autocomplete="nickname" maxlength="30">
+                        <div class="avatar-picker" id="avatar-picker">
+                            <div class="avatar-preview" id="avatar-preview">
+                                <span class="avatar-preview-placeholder" data-i18n="auth.avatarPlaceholder">头像</span>
+                            </div>
+                            <label class="avatar-upload-label" for="avatar-file-input" data-i18n="auth.chooseAvatar">选择头像</label>
+                            <input type="file" id="avatar-file-input" accept="image/*" style="display:none;">
+                        </div>
+                        <button type="submit" id="signup-submit-btn" class="auth-submit-btn" data-i18n="auth.signupBtn">注 册</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <!-- 侧边栏 -->
         <div class="sidebar">
             <div class="logo-section">
-                <div class="logo">🧬 nutriMaster</div>
-            </div>
-
-            <div class="history-section">
-                <h3>历史会话</h3>
-                <div id="history-list">
-                    <div class="history-loading">查看全部...</div>
+                <div class="logo">
+                    <img class="logo-icon" src="/static/logo-icon.png" alt="NutriMaster icon">
+                    <span class="logo-text"><span class="logo-nutri">Nutri</span><span class="logo-master">Master</span></span>
                 </div>
             </div>
 
-            <!-- 底部知识库 -->
-            <div class="knowledge-base">
+            <div class="history-section">
+                <h3 data-i18n="sidebar.history">历史会话</h3>
+                <div id="history-list">
+                    <div class="history-loading" data-i18n="sidebar.viewAll">查看全部...</div>
+                </div>
+            </div>
+
+            <!-- 底部知识库入口 -->
+            <div class="knowledge-base" id="kb-toggle">
                 <div class="kb-icon">📚</div>
-                <span>我的知识库</span>
+                <span data-i18n="sidebar.myLibrary">我的知识库</span>
+                <span class="kb-badge" id="kb-file-count" style="display:none;">0</span>
+            </div>
+        </div>
+
+        <!-- ===== 知识库模态窗口 ===== -->
+        <div class="kb-modal-overlay" id="kb-modal-overlay" style="display:none;">
+            <div class="kb-modal">
+                <div class="kb-modal-header">
+                    <h3 data-i18n="kb.title">我的知识库</h3>
+                    <button class="kb-modal-close" id="kb-modal-close">✕</button>
+                </div>
+                <div class="kb-modal-body">
+                    <div class="kb-upload-area">
+                        <button class="kb-upload-btn" id="kb-upload-btn" data-i18n="kb.uploadBtn">+ 上传 PDF</button>
+                        <input type="file" id="kb-file-input" accept=".pdf" style="display:none;">
+                        <div class="kb-upload-progress" id="kb-upload-progress" style="display:none;">
+                            <div class="kb-upload-progress-bar" id="kb-upload-progress-bar"></div>
+                            <span class="kb-upload-status" id="kb-upload-status" data-i18n="kb.uploading">上传中...</span>
+                        </div>
+                    </div>
+                    <div class="kb-file-list" id="kb-file-list">
+                        <div class="kb-empty" data-i18n="kb.empty">暂无文件，点击上方按钮上传 PDF</div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -34,11 +122,15 @@
             <div class="header">
                 <div class="header-left">
                     <button class="menu-btn">☰</button>
-                    <button class="new-chat-btn" id="new-chat-btn">+ 新对话</button>
+                    <button class="new-chat-btn" id="new-chat-btn" data-i18n="header.newChat">+ 新对话</button>
                 </div>
                 <div class="header-right">
-                    <button class="lang-btn">简体中文</button>
-                    <button class="user-btn">👤</button>
+                    <button class="lang-btn" id="lang-btn">简体中文</button>
+                    <button class="admin-btn" id="admin-btn" style="display:none;" data-i18n="header.admin">管理后台</button>
+                    <div class="user-area" id="user-area">
+                        <div class="user-avatar" id="user-avatar">👤</div>
+                        <span class="user-nickname" id="user-nickname"></span>
+                    </div>
                 </div>
             </div>
 
@@ -52,10 +144,28 @@
                 <!-- 聊天区域 -->
                 <div id="chat-container" class="chat-container"></div>
 
+                <!-- 输入区域 -->
+                <div class="input-section">
+                    <div class="input-container">
+                        <textarea
+                            id="query-input"
+                            data-i18n-placeholder="input.placeholder"
+                            placeholder=""
+                            rows="1"
+                        ></textarea>
+                        <div class="input-actions">
+                            <button class="action-btn" id="personal-btn" data-i18n="input.personal">个人库</button>
+                            <button class="action-btn" id="depth-btn" data-i18n="input.depth">深度调研</button>
+                            <button class="attach-btn">📎</button>
+                            <button class="send-btn" id="send-btn">➤</button>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- 场景介绍 (底部) -->
                 <div id="scene-intro" class="scene-intro">
                     <div class="scene-category">
-                        <h2>场景介绍（类别）</h2>
+                        <h2 data-i18n="scene.category">场景介绍（类别）</h2>
                     </div>
                     <div class="scene-cards">
                         <div class="scene-card"></div>
@@ -64,7 +174,7 @@
                         <div class="scene-card"></div>
                     </div>
                     <div class="scene-detail">
-                        <h3>场景介绍（图片文字）</h3>
+                        <h3 data-i18n="scene.detail">场景介绍（图片文字）</h3>
                         <div class="detail-cards">
                             <div class="detail-card"></div>
                             <div class="detail-card"></div>
@@ -74,26 +184,11 @@
                     </div>
                 </div>
             </div>
-
-            <!-- 输入区域 -->
-            <div class="input-section">
-                <div class="input-container">
-                    <textarea
-                        id="query-input"
-                        placeholder="描述你的需求，例如：对衰老相关的Biomarker进行文献综述"
-                        rows="1"
-                    ></textarea>
-                    <div class="input-actions">
-                        <button class="action-btn" id="personal-btn">个人库</button>
-                        <button class="action-btn" id="depth-btn">深度调研</button>
-                        <button class="attach-btn">📎</button>
-                        <button class="send-btn" id="send-btn">➤</button>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 
+    <!-- ===== 认证模块（新增，必须在 app.js 之前加载） ===== -->
+    <script src="/static/auth.js"></script>
     <script src="/static/app.js"></script>
 </body>
 </html>

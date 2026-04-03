@@ -1,0 +1,515 @@
+{
+  "file": "MinerU_markdown_PMC6802118_2038795110795214853",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC6802118_2038795110795214853.md",
+  "timestamp": "2026-03-31T22:25:06.037635",
+  "genes": [
+    {
+      "gene_name": "ΔNtHMGCoAR",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The Methods state total RNA was extracted from YPH499 yeast cells and used as template to amplify the ΔNtHMGCoAR sequence, indicating a Saccharomyces cerevisiae source."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The yeast source is explicitly S. cerevisiae (YPH499 yeast cells)."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The sequence was amplified from YPH499 cDNA, and the engineering was performed in DD104; this combined description matches the paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ΔNtHMGCoAR was introduced into yeast strains for metabolic engineering experiments."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied host is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant engineered strain is DD104, explicitly stated in the yeast engineering section."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies ΔNtHMGCoAR as N-terminal-truncated hydroxymethylglutaryl-CoA reductase, a mevalonate-pathway enzyme."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "In the engineered yeast context, ΔNtHMGCoAR was used to support production of drupanin and artepillin C, the final measured prenylated products."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Drupanin and artepillin C are prenylated p-coumaric acid derivatives, i.e. phenylpropanoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses bioactivities of artepillin C, but does not specifically characterize ΔNtHMGCoAR through those functions; this is more contextual than gene-specific evidence."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 5 and text show drupanin/artepillin C were analyzed in both yeast cells and medium."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state reinforcement of DMAPP supply by overexpressing ΔNtHMGCoAR was implemented to support production of prenylated p-coumaric acid derivatives in yeast."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was overexpressed in engineered yeast and induced after switching carbon source to galactose."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state overexpression together with the p-coumaric acid biosynthetic gene set was under galactose-inducible GAL1 and GAL10 promoters; pESC vectors are GAL-based."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Galactose induction is explicitly the trigger for expression in engineered yeast."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Its role was assessed by yeast pathway engineering and metabolite profiling of drupanin/artepillin C production."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses ΔNtHMGCoAR as a support module to increase mevalonate flux, not as the central discovery."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses ΔNtHMGCoAR to reinforce prenyl donor supply in microbial engineering of prenylated phenylpropanoids."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are consistent with the Results: ΔNtHMGCoAR was used to raise DMAPP supply, this reinforcement was part of the setup enabling AcPT1-dependent prenylated products, and it functioned as an enabling engineering module rather than the main discovered gene."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 18,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "PAL",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper cites a prior COUM11 strain producing p-coumaric acid via PAL/C4H/CPR and later mentions DD104 harboring pESC-hybrid poplar PAL-Glycine max C4H, but does not explicitly identify PAL as from hybrid poplar in this paper text."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The Latin name Populus trichocarpa × Populus deltoides is explicitly given for CPR, not for PAL."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL is part of the engineered Saccharomyces cerevisiae pathway."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied host is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant engineered strain is DD104, explicitly used for the AcPT1 platform."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL is described as phenylalanine ammonia lyase in the p-coumaric acid pathway reconstruction."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "PAL directly supplies p-coumaric acid precursor rather than drupanin/artepillin C themselves; the phrasing 'p-coumaric acid precursor supply for drupanin and artepillin C' is an interpretive pathway role rather than an explicit terminal metabolite statement."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway products are phenylpropanoids, and p-coumaric acid/drupanin/artepillin C belong to this class."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL was used as part of the precursor supply pathway for prenylated phenylpropanoid biosynthesis in yeast."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state about 99% of p-coumaric acid was recovered from the medium in DAC-ΔSc yeast."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL was part of the reconstructed p-coumaric acid biosynthetic pathway that fed AcPT1-dependent drupanin/artepillin C production."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The heterologous biosynthetic genes were induced in yeast after switching to galactose medium."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The p-coumaric acid biosynthesis gene set was overexpressed under GAL1 and GAL10 promoters."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Galactose induction is explicitly described for the engineered yeast cultures."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL's contribution is inferred from yeast metabolic engineering and metabolite profiling used in this study."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper clearly presents the p-coumaric acid pathway module as adopted from prior work rather than newly characterized here."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly report that most p-coumaric acid was recovered from the medium, limiting intracellular substrate accessibility."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "As part of the precursor-supply module, PAL is used for microbial production of prenylated phenylpropanoids."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL is described together with C4H and CPR as the reconstructed p-coumaric acid pathway gene set."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary accurately reflects that PAL was part of the heterologous p-coumaric acid pathway enabling AcPT1-mediated products, while substrate compartmentation limited final yield."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Source_Species",
+          "old_value": "Hybrid poplar",
+          "new_value": "NA",
+          "reason": "The paper cites a prior COUM11 strain producing p-coumaric acid via PAL/C4H/CPR and later mentions DD104 harboring pESC-hybrid poplar PAL-Glycine max C4H, but does not explicitly identify PAL as from hybrid poplar in this paper text."
+        },
+        {
+          "field": "Source_Species_Latin_Name",
+          "old_value": "Populus trichocarpa × Populus deltoides",
+          "new_value": "NA",
+          "reason": "The Latin name Populus trichocarpa × Populus deltoides is explicitly given for CPR, not for PAL."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "C4H",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly mention pESC-hybrid poplar PAL-Glycine max C4H, identifying C4H as from Glycine max."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Glycine max is explicitly stated for C4H."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "C4H was used in engineered yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied host is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The engineered host for the final production platform is DD104."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "C4H is referred to as cinnamic acid 4-hydroxylase, a cytochrome P450 enzyme."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "C4H directly contributes to p-coumaric acid formation, while drupanin/artepillin C are downstream products; the wording is pathway-inferable but not explicit as a terminal metabolite assignment."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway products are phenylpropanoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "C4H serves in precursor supply for prenylated phenylpropanoid biosynthesis."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports p-coumaric acid is mostly in the medium in engineered yeast."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "C4H is part of the heterologous pathway converting cinnamic acid to p-coumaric acid, supporting AcPT1 product formation."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The heterologous genes were induced in yeast by galactose."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Results specify GAL1/GAL10 galactose-inducible promoters for the p-coumaric acid biosynthetic gene set."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Galactose induction is explicitly described."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Its role is evidenced through yeast metabolic engineering and metabolite profiling."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper treats C4H as a support-pathway gene from an earlier platform, not the primary discovery."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "It is used as a precursor-pathway component for microbial engineering of prenylated phenylpropanoids."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "C4H is deployed with CPR and PAL in the reconstructed p-coumaric acid pathway."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary matches the paper's depiction of C4H as a supportive component of the p-coumaric acid module rather than a primary target."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 18,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "CPR",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state the CPR gene was from hybrid poplar (Populus trichocarpa × P. deltoides)."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The Latin name Populus trichocarpa × Populus deltoides is explicitly given."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CPR was expressed in engineered Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied host is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The final yeast engineering platform uses DD104."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CPR is explicitly identified as NADPH-cytochrome P450 reductase."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "CPR supports precursor p-coumaric acid formation rather than directly producing drupanin/artepillin C; the stated link is indirect."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The downstream products are phenylpropanoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "CPR's function as electron donor support for C4H in the precursor pathway is consistent with the paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CPR was included to support C4H activity in the reconstructed yeast pathway supplying p-coumaric acid for AcPT1-dependent products."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CPR was overexpressed in engineered yeast under galactose induction via pESC constructs."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The engineered yeast expression system used galactose-inducible GAL promoters."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Galactose induction is explicitly described for gene expression in yeast."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Its role is part of the yeast metabolic engineering setup assessed by metabolite profiling."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses CPR as an auxiliary redox partner for C4H, not as a primary discovery target."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The study supports its use as a necessary component when deploying P450-based p-coumaric acid synthesis in yeast."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "CPR is directly paired with C4H in the reconstructed pathway."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary accurately reflects CPR's supportive role for C4H and precursor formation rather than a central discovery."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 17,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "AcPT1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability explicitly gives AcPT1 accession as LC425153."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcPT1 was isolated from Artemisia capillaris."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is explicitly Artemisia capillaris."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcPT1 was analyzed in A. capillaris, expressed in Nicotiana benthamiana, and engineered into Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "All three applied species names appear in the paper."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was identified from RNA-seq, and Data availability gives DRA007286 for the raw RNA-seq reads."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes AcPT1 as a phenylpropane-specific PT and an artepillin C synthase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AcPT1 is explicitly described as a UbiA superfamily membrane-bound PT with predicted N-terminal transit peptide and multiple transmembrane regions; Discussion mentions two Asp-rich motifs."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AcPT1 functions in prenylated phenylpropanoid/artepillin C biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly place it in p-coumaric acid prenylation yielding drupanin and artepillin C."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results demonstrate stepwise transfer of two dimethylallyl groups from DMAPP to p-coumaric acid via drupanin to artepillin C, and direct conversion of drupanin to artepillin C."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "p-Coumaric acid, drupanin, and DMAPP were all directly tested as substrates in vitro."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Drupanin and artepillin C were identified as products by HPLC and MS comparisons with standards."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Artepillin C is the final product emphasized throughout the paper."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Artepillin C is a prenylated phenylpropanoid/simple phenylpropane derivative."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The introduction explicitly lists reported bioactivities of artepillin C including antimicrobial, anti-inflammatory, antioxidative, immunomodulatory, anti-carcinogenesis, anti-obesity, and anti-diabetes-related effects."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2 shows artepillin C in leaves, stems, and flowers of A. capillaris; yeast experiments show p-coumaric acid and much drupanin in medium, while artepillin C is mostly in cells."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "AcPT1 directly catalyzes formation of the target product artepillin C."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "AcPT1 performs the terminal prenylation steps from p-coumaric acid to drupanin to artepillin C."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports AcPT1 as a key terminal determinant and notes limitations in yeast expression/substrate accessibility, but does not explicitly designate it as a formal rate-limiting step."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show AcPT1 enables biosynthesis of drupanin and artepillin C from p-coumaric acid, including production in engineered yeast."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR showed expression in leaves, stems, and flowers with no clear statistically significant differences, though stems tended to be higher."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper documents native expression in A. capillaris and recombinant expression in N. benthamiana and yeast."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Microscopy supports plastid localization in plant cells; enzymatic assays used microsomes from heterologous expression systems, consistent with membrane association."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "35S promoter was used for transient expression in N. benthamiana via pGWB vectors, and GAL1/GAL10 promoters were used in yeast."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Galactose induction, exogenous 1.0 mM p-coumaric acid feeding, and Mg2+ in vitro are all explicitly described experimental conditions affecting activity/yield."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are directly described in Results/Methods: RNA-seq screening, RT-PCR cloning, qRT-PCR, GFP localization, transient expression, microsome assays, HPLC/LC-MS identification, substrate specificity, kinetics, and yeast engineering."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports all listed points: first identified plant phenylpropane-specific PT, single-polypeptide sequential di-prenylation, DMAPP preference over GPP/FPP, acceptance of ferulic acid, improved yeast production by TP removal, little effect of codon optimization, and drupanin release as intermediate."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The yeast system showed poor intracellular p-coumaric acid availability and export of drupanin, limiting artepillin C productivity; no plant growth penalty is reported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The study explicitly positions AcPT1 as useful for microbial production/engineering of artepillin C, and shows TP truncation plus strengthened DMAPP supply improve output."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four summary points are directly supported by the Results and Data availability."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 30,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 107,
+    "supported": 100,
+    "unsupported": 2,
+    "uncertain": 5,
+    "total_corrections": 2
+  }
+}

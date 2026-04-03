@@ -1,0 +1,771 @@
+{
+  "file": "MinerU_markdown_PMC10401026_2038801740496666629",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC10401026_2038801740496666629.md",
+  "timestamp": "2026-03-31T21:29:57.225562",
+  "genes": [
+    {
+      "gene_name": "F5H",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper refers to F5H knockouts as fah1/fah1-2, and F5H is the well-known Arabidopsis FERULATE 5-HYDROXYLASE; however CYP84A1 is not explicitly printed in the paper text. Because the value combines FAH1 and CYP84A1, only FAH1 is explicit; accession-style synonym support is partial."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Plant materials are Arabidopsis and the study is in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods explicitly states A. thaliana / Arabidopsis thaliana."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods states ecotype Col-0."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All experiments were performed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species in experiments is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods states ecotype Col-0."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The title and text explicitly name FERULATE 5-HYDROXYLASE."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for F5H appears in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper cites prior work describing F5H as a cytochrome P450-dependent monooxygenase in references, but CYP84A1/family designation is not explicitly stated in this paper text."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "F5H is discussed throughout as part of the phenylpropanoid/monolignol pathway affecting lignin composition."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states F5H overexpression shifts lignin from G toward S units, supporting assignment to the syringyl monolignol branch."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and introduction describe F5H overexpression redirecting flux from G- to S-monomers and reducing CA while increasing sinapaldehyde/sinapyl alcohol, supporting this reaction description at a functional level."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports that F5H overexpression draws down coniferyl alcohol-related pools, but does not directly define the enzyme's exact substrate(s) here."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 and Results show F5H overexpression increases sinapaldehyde and sinapyl alcohol, consistent with 5-hydroxylated intermediates leading to these products."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper treats F5H as a downstream branch-switching step that alters G/S composition rather than an early core entry step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The central model in Results/Discussion is that F5H overexpression diverts flux away from coniferyl alcohol-derived products, contributing to pinoresinol deficiency."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports that F5H strongly controls G/S lignin composition, but does not explicitly call it rate-limiting or a key control step."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "ER/microsome localization is not stated in this paper."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods and Discussion state the C4H promoter drove the F5H overexpression construct."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The transgene is explicitly written as C4H:F5H and discussed as C4H promoter-driven."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Pinoresinol is directly tested and identified as a rescue metabolite."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states G(8-8)G, also known as pinoresinol, is a lignan."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show pinoresinol rescues growth and lateral root defects; CA rescues root hair morphology and the broader model links these metabolites to normal development."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly show F5H overexpression causes severe growth defects in ref3, ccr1, cadc/cadd backgrounds, reduces lateral roots in CAD-related backgrounds and F5H lines, and causes altered root hairs in cadd C4H:F5H/fah1-2 C4H:F5H."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all present in the Results: genetic comparisons, metabolite profiling, chemical complementation with CA and pinoresinol, and lateral root phenotyping."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "CA, pinoresinol and related dimers/lignans, and NAA auxin treatment were explicitly applied."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly reports untargeted LC-MS metabolomics, [12C6]/[13C6] CA labeling, PODIUM LC/MS, and LC-MS/MS."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable implication from the study, but not explicitly stated as an application claim in the Results."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly report dwarfism, sterility in some backgrounds, reduced lateral roots, and abnormal root hairs associated with F5H overexpression in mutant backgrounds."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states F5H overexpression alone mainly shifts lignin composition with little growth effect, but in phenylpropanoid mutants exacerbates defects; it also shows complementation is not due to major transgene suppression."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly consistent with Results and Discussion."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.-.-",
+          "new_value": "NA",
+          "reason": "No EC number for F5H appears in the paper."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Endoplasmic reticulum/microsome",
+          "new_value": "NA",
+          "reason": "ER/microsome localization is not stated in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "CADC",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "A. thaliana is explicitly stated."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Ecotype Col-0 is stated in Materials and Methods."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All experiments were in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the applied species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Ecotype Col-0 is explicitly given."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states CINNAMYL ALCOHOL DEHYDROGENASE-C and -D are the primary genes involved in lignin biosynthesis and uses cadc mutant nomenclature."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for CADC appears in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CADC is explicitly a cinnamyl alcohol dehydrogenase by name."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CADC is discussed within the phenylpropanoid/monolignol biosynthetic pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CADC functions in monolignol formation, as framed by the paper's pathway and mutant analyses."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper functionally supports that CAD mutants alter hydroxycinnamaldehyde/alcohol pools; CADC/CADD are treated as the alcohol dehydrogenases involved in monolignol biosynthesis."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 and discussion of CAD-deficient plants support coniferaldehyde and sinapaldehyde as relevant substrates/precursors affected by CAD loss."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 measures coniferyl alcohol and sinapyl alcohol and discusses CADC/CADD involvement in their synthesis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "CADC/CADD are discussed as downstream monolignol-producing enzymes."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper's model explicitly links reduced CA availability in CAD mutant/F5H backgrounds to reduced pinoresinol or downstream metabolite needed for growth."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The value is 'Not established,' which matches the paper because no such claim is made."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Cytosolic localization is not stated in the paper."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper cites prior work that CADC and CADD are the primary genes involved in lignin biosynthesis in the floral stem of Arabidopsis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Pinoresinol is the CA-derived metabolite directly tested for rescue."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Pinoresinol is identified as a lignan."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show pinoresinol rescues growth and lateral root development."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show severe defects in cadc cadd C4H:F5H and fewer lateral roots in cadc C4H:F5H; rescue by CA/PR supports deficient coniferyl-alcohol-derived metabolites."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These approaches are all explicitly used in the paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "CA and pinoresinol treatments were explicitly tested."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper studies combined genetics of CADC and CADD but does not report a physical protein interaction."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Targeted metabolite profiling and untargeted LC-MS were performed on CAD mutant backgrounds."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is an inference from the study, not an explicit application statement in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Combined CAD deficiency with F5H overexpression causes growth and root defects in Results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly notes cadc cadd still accumulates CA and suggests additional Arabidopsis CADs contribute residual activity."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These summary statements align with the Results and Discussion, though phrased as an interpretation rather than direct enzyme demonstration."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.1.1.195",
+          "new_value": "NA",
+          "reason": "No EC number for CADC appears in the paper."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "Cytosolic localization is not stated in the paper."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "CADD",
+          "new_value": "NA",
+          "reason": "The paper studies combined genetics of CADC and CADD but does not report a physical protein interaction."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 3,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "CADD",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly stated."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Ecotype Col-0 is stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the species used."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is explicitly given."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to CINNAMYL ALCOHOL DEHYDROGENASE-D and cadd mutants."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CADD is explicitly a cinnamyl alcohol dehydrogenase by name."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CADD is discussed as part of phenylpropanoid/monolignol biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The CAD step belongs to monolignol formation in the pathway discussed."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The CAD mutants are analyzed for altered aldehyde/alcohol pools, supporting a role in reduction of hydroxycinnamaldehydes to alcohols."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Coniferaldehyde and sinapaldehyde are directly quantified and discussed as relevant to CAD function."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Coniferyl alcohol and sinapyl alcohol are directly quantified and discussed as products affected by CAD mutation."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "CADD is treated as a downstream monolignol-producing enzyme."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper's mechanistic model ties CAD-dependent CA supply to pinoresinol-related growth rescue."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The value 'Not established' is consistent with the paper, which makes no such claim."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Cytosolic localization is not stated in the paper."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Referenced prior work and wording in the paper indicate CADC and CADD are primary genes involved in floral stem lignin biosynthesis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Pinoresinol is directly tested as the key rescue metabolite."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Pinoresinol is explicitly described as a lignan."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly show rescue of growth and lateral root development; CA rescues root hair morphology in cadd C4H:F5H."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly show reduced lateral roots and defective root hairs in cadd C4H:F5H, and severe dwarfism in cadc cadd C4H:F5H, with rescue by CA/PR."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods appear in the Results."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "CA, PR, MMPR, DMPR, and NAA were all explicitly tested."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "CADC is genetically combined with CADD, but no protein-protein interaction is shown."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Targeted metabolite profiling and untargeted LC-MS are reported for cadd-containing backgrounds."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "An engineering implication can be inferred, but this exact statement is not directly made in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "These phenotypes are directly observed in Results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly show methylated pinoresinol derivatives rescue LTR development, arguing against lignin incorporation as the mechanism."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These summary statements accurately reflect the cadd-related findings in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.1.1.195",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "Cytosolic localization is not stated in the paper."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "CADC",
+          "new_value": "NA",
+          "reason": "CADC is genetically combined with CADD, but no protein-protein interaction is shown."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 3,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "CCR1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "A. thaliana is explicitly stated."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Ecotype Col-0 is stated in Materials and Methods."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were carried out in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the applied species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is explicitly given."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly names cinnamoyl-CoA reductase 1 and ccr1."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for CCR1 appears in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "CCR1 is a reductase by name, but 'NADPH-dependent reductase' is not explicitly stated in this paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CCR1 is discussed as a phenylpropanoid/monolignol pathway enzyme."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CCR1 is positioned in monolignol precursor formation in the pathway."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Although not mechanistically detailed in Results, CCR is the cinnamoyl-CoA reductase step in the pathway and the paper situates it before CAD and monolignols."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "Hydroxycinnamoyl-CoA esters are expected from enzyme identity, but this exact substrate wording is not stated in the paper text."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "Hydroxycinnamaldehydes including coniferaldehyde are consistent with CCR identity, but the exact statement is not made here."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "CCR1 is presented as an upstream precursor-supplying step relative to CAD and monolignol alcohols."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links ccr1 plus F5H overexpression to reduced coniferyl alcohol pools and the broader model of deficient CA-derived growth metabolites."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The field says not established, and the paper does not establish this."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Cytosolic localization is not stated in the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Pinoresinol is the highlighted CA-derived terminal metabolite relevant to the study's rescue model."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Pinoresinol is described as a lignan."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows PR supports growth and lateral roots, but fertility support is not directly tested for PR in ccr1 specifically."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state ccr1 C4H:F5H plants have decreased rosette area and height and are sterile."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutant/transgene analysis, growth phenotyping, and targeted metabolite profiling are all reported."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The key tested factor here is F5H overexpression background."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "ccr1 was included in targeted metabolite profiling and untargeted metabolomics comparisons."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is an inference from the observed phenotypes, not an explicit application statement in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Dwarfism/growth reduction and sterility in ccr1 C4H:F5H are reported."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes ccr1 alone lacks severe growth defects but F5H overexpression reduces rosette area and height."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These summary points are consistent with the ccr1 results and overall model, though the metabolite-depletion phrasing is interpretive."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.2.1.44",
+          "new_value": "NA",
+          "reason": "No EC number for CCR1 appears in the paper."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "Cytosolic localization is not stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 2,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "C4H",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "UNCERTAIN",
+          "reason": "REF3 is explicit in the paper, but CYP73A5 is not explicitly written in the text."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly stated."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Ecotype Col-0 is stated in Materials and Methods."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were done in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the applied species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is explicitly given."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names CINNAMATE 4-HYDROXYLASE."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for C4H appears in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "CYP73A is not explicitly stated in the paper text."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "C4H is described as acting in the second step of the phenylpropanoid pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "As the second step of the phenylpropanoid pathway, C4H supplies entry flux to monolignols and related products."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state C4H catalyzes hydroxylation of cinnamic acid to p-coumaric acid in the second step of the pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Cinnamic acid is explicitly named as the substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "p-Coumaric acid is explicitly named as the product."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies C4H as the second step, i.e., an upstream entry step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that C4H deficiency limits precursor supply and that CA supplementation can rescue phenotypes, linking C4H flux to downstream CA/pinoresinol-related metabolites."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "C4H is clearly important upstream, but the paper does not explicitly call it rate-limiting or a key control step."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "ER/microsome localization is not stated in the paper."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly uses the C4H promoter to drive F5H overexpression."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "C4H promoter is explicit in the C4H:F5H construct."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Pinoresinol is directly implicated as a downstream rescue metabolite in the paper."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Pinoresinol is explicitly identified as a lignan."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows downstream phenylpropanoid products, especially CA and PR, support growth and root development."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly show ref3 alleles overexpressing F5H become more dwarfed, and ref3-2 C4H:F5H is partially rescued by CA."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "ref3 mutant analysis with/without F5H overexpression, growth phenotyping, and CA complementation are all in Results."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Exogenous coniferyl alcohol treatment was explicitly tested."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "ref3 lines were included in targeted metabolite profiling and untargeted metabolomics."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This engineering implication is reasonable but not directly stated in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show decreased rosette size and failure to bolt/stem in ref3-2 C4H:F5H, i.e., severe growth impairment when combined with F5H overexpression."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states the C4H promoter drove F5H and that CA treatment did not affect endogenous C4H mRNA levels."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points match the ref3/C4H-related Results and overall model."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.14.91",
+          "new_value": "NA",
+          "reason": "No EC number for C4H appears in the paper."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Endoplasmic reticulum/microsome",
+          "new_value": "NA",
+          "reason": "ER/microsome localization is not stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 155,
+    "supported": 128,
+    "unsupported": 12,
+    "uncertain": 15,
+    "total_corrections": 12
+  }
+}

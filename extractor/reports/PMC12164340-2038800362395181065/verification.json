@@ -1,0 +1,390 @@
+{
+  "file": "MinerU_markdown_PMC12164340_2038800362395181065",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12164340_2038800362395181065.md",
+  "timestamp": "2026-03-31T21:47:22.256908",
+  "genes": [
+    {
+      "gene_name": "ADIPOQ",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses Pekin duck tissues and primary myoblasts throughout, and ADIPOQ is studied in this species."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq methods state alignment to Anas platyrhynchos genome sequence; this is the Latin name associated with the Pekin duck used."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional assays were performed in duck primary myoblasts isolated from Pekin duck embryos."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper's species context is Pekin duck, and the genome cited is Anas platyrhynchos."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly states 'ADIPOQ is a hormone secreted by adipose tissue,' supporting adipokine/adiponectin family identity."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Describing ADIPOQ as a hormone secreted by adipose tissue supports a secreted protein localization."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results directly measure lipid droplet accumulation/IMCL and TG content, and discuss fatty acid metabolism broadly."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The measured products/traits are lipid-related: triglyceride, lipid droplets/IMCL, and fatty acid metabolism."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "In vivo RNA-seq was from breast muscle, and functional lipid deposition assays were in primary myoblasts."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The title and discussion connect fatty acid metabolism to meat quality, and the study examines energy/lipid metabolism."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show ADIPOQ overexpression promotes myotube differentiation; knockdown inhibits fatty acid oxidation and stimulates synthesis/transport, with ADIPOQ overexpression/ALA reducing lipid accumulation and TG relative to siADIPOQ conditions."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point is directly reflected in Results: RNA-seq/PPI prioritization, differentiation but not proliferation effects, opposite regulation of synthesis/transport/catabolism genes by overexpression vs knockdown, lipid/TG effects, and ALA-induced ADIPOQ with ADIPOQ/AMPK/CPT-1 pathway evidence."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods appear in Materials/Methods and Results for ADIPOQ: RNA-seq, qRT-PCR, PPI, siRNA, overexpression, ORO, TG assay, IF, and WB."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "PPI analysis states ADIPOQ plays a major regulatory role with PPARγ, CPT1A, CD36, FABP4, FASN, PPARα; WB also examines AMPK/CPT-1 with ADIPOQ. The paper uses FABP4 in PPI, not FABP5 there."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state ADIPOQ mRNA expression differed among control and three additive groups, and ALA significantly upregulated ADIPOQ mRNA/protein in primary myoblasts."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly say 60 μmol/L ALA for 48 h significantly upregulated ADIPOQ mRNA and protein in duck primary myoblasts."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states the CDS of duck ADIPOQ was inserted into pcDNA3.1 vector, but does not explicitly state the promoter used; 'pcDNA3.1 constitutive promoter' is inferred rather than stated."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The dietary treatments 1.5%, 3.0%, 4.5% Zanthoxylum seed powder and the selected ALA treatment of 60 μmol/L for 48 h are explicitly described."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq and qRT-PCR validation are explicitly reported; no accession is reported, matching the field wording."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The Discussion speculates that high-dose Zanthoxylum seed powder/high n-3 PUFA intake may cause abnormal ADIPOQ expression and affect obesity risk, meat quality, and muscle yield, but this is not directly demonstrated in Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper suggests theoretical basis for development/utilization of Zanthoxylum seed powder and discusses LG (1.5%) as possibly optimal, but explicit breeding/engineering utility and target deployment are interpretive."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly notes inconsistency between in vivo RNA-seq trends and in vitro ALA-induced ADIPOQ upregulation, proposing dose effects or mixed fatty acid composition as explanations."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 19,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "CPT-1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "CPT-1 is the standard expansion and is treated in the paper as a fatty acid oxidation enzyme; while full name is not spelled out in the text excerpt, it is directly inferable from gene nomenclature."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CPT-1 measurements were performed in Pekin duck primary myoblasts."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Species context is Pekin duck, with genome referred to as Anas platyrhynchos."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional analyses involving CPT-1 were in duck primary myoblasts."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental system is Pekin duck / Anas platyrhynchos."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly state that CPT-1 belongs to the carnitine acyltransferase family."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state mitochondrial outer membrane localization for CPT-1."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Discussion place CPT-1 in fatty acid catabolism/β-oxidation."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links CPT-1 to fatty acid oxidation but does not explicitly describe it as the mitochondrial long-chain fatty acid import/oxidation module."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says CPT-1 is a key regulator and rate-limiting enzyme for fatty acid β-oxidation, but 'committed entry step' is stronger wording not explicitly used."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No substrate details such as long-chain acyl-CoA and carnitine are given in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention long-chain acyl-carnitine as product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The transfer reaction from acyl-CoA to carnitine is not described in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The study associates increased CPT-1 with fatty acid catabolism and reduced lipid deposition/TG under ADIPOQ/ALA conditions."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states 'CPT-1 is the rate-limiting enzyme for fatty acid β-oxidation' and earlier 'key regulator of fatty acid oxidation'."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway is connected to lipid deposition/IMCL/TG/fatty acid metabolism in myoblasts."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The endpoint traits measured are lipid/fatty acid related."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The study concerns duck breast muscle and primary myoblasts."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Lipid deposition is linked to meat quality generally in the paper, but CPT-1 itself is not directly shown to modulate meat quality in Results."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show CPT-1 mRNA/protein increases with ADIPOQ overexpression and decreases with knockdown; these changes are discussed as promoting fatty acid catabolism and lowering lipid accumulation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by Results/Figures 5 and 6."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "CPT-1 was measured by qRT-PCR and western blot under ADIPOQ and ALA manipulations."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "CPT-1 is presented downstream of ADIPOQ and AMPK in the ADIPOQ/AMPK/CPT-1 pathway and in PPI/pathway analysis."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state inhibition of ADIPOQ reduced CPT-1 mRNA, while overexpression showed the opposite trend; WB showed increased CPT-1 when ADIPOQ protein increased."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state ALA promoted up-regulation of ADIPOQ, AMPK, p-AMPK, and CPT-1 protein levels."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "CPT-1 was evaluated under ALA treatment and ADIPOQ overexpression/knockdown."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly propose CPT-1 as an engineering target; this is a plausible extrapolation from pathway data."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The study indeed treats CPT-1 mainly as a downstream pathway component rather than a directly manipulated core gene."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Mitochondrial outer membrane",
+          "new_value": "NA",
+          "reason": "The paper does not state mitochondrial outer membrane localization for CPT-1."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "long-chain acyl-CoA; carnitine",
+          "new_value": "NA",
+          "reason": "No substrate details such as long-chain acyl-CoA and carnitine are given in the paper."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "long-chain acyl-carnitine",
+          "new_value": "NA",
+          "reason": "The paper does not mention long-chain acyl-carnitine as product."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Transfers the acyl group from long-chain acyl-CoA to carnitine to enable mitochondrial import for β-oxidation",
+          "new_value": "NA",
+          "reason": "The transfer reaction from acyl-CoA to carnitine is not described in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 4,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "AMPK",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AMPK protein was assayed in Pekin duck primary myoblasts."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study species is Pekin duck/Anas platyrhynchos."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional protein analyses were performed in duck primary myoblasts."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied system is Pekin duck (Anas platyrhynchos)."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "AMPK is treated in the paper as a signaling pathway kinase regulating metabolism; Discussion describes it as a heterotrimer with catalytic and regulatory subunits."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly describes AMPK as a heterotrimer with one catalytic α and two regulatory β and γ subunits; Table 4 lists anti-AMPKα-2 antibody."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state cytoplasmic localization of AMPK."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AMPK is linked to lipid deposition, IMCL/TG, and fatty acid metabolism in the study."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The endpoint metabolites/traits are lipid and fatty acid related."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant systems are duck breast muscle and primary myoblasts."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states AMPK regulates material and energy metabolism, and the paper links lipid deposition to meat quality."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results conclude that increased AMPK/p-AMPK accompanies reduced lipid accumulation via the ADIPOQ/AMPK/CPT-1 pathway after ALA treatment."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and abstract explicitly state AMPK/p-AMPK increase with ADIPOQ upregulation and with ALA, supporting the pathway conclusion."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "AMPK and p-AMPK were measured by western blot under ADIPOQ overexpression/knockdown and ALA treatment."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "AMPK is positioned between ADIPOQ and CPT-1 in the pathway and analyzed with both by WB."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show AMPK and p-AMPK protein levels were significantly increased when ADIPOQ increased and showed the opposite trend when ADIPOQ decreased."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract/Results state ALA promoted up-regulation of AMPK and p-AMPK protein levels."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "AMPK was studied under ALA treatment and ADIPOQ overexpression/knockdown."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results support ALA treatment and ADIPOQ abundance as upstream correlates of AMPK/p-AMPK increase in this study."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion and pathway model link AMPK to fatty acid oxidation and lipid deposition control."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states AMPK is a heterotrimeric complex."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly describes phosphorylation at Thr172 in the catalytic α-subunit as activating AMPK; the study measures p-AMPK."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states activation of AMPK phosphorylation inhibits ACC and promotes CPT-1 expression."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly names ACC and CPT-1 in the AMPK downstream logic."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper concludes ALA reduces lipid deposition through the ADIPOQ/AMPK/CPT-1 pathway, making AMPK a central connecting node in this context."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential engineering value is plausible but not directly proposed for AMPK in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The study does not genetically manipulate AMPK directly; evidence comes from downstream protein-level responses to ADIPOQ and ALA."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytoplasm",
+          "new_value": "NA",
+          "reason": "The paper does not state cytoplasmic localization of AMPK."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 77,
+    "supported": 63,
+    "unsupported": 5,
+    "uncertain": 9,
+    "total_corrections": 5
+  }
+}

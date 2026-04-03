@@ -1,0 +1,278 @@
+{
+  "file": "MinerU_markdown_PMC4701418_2038798819855994894",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC4701418_2038798819855994894.md",
+  "timestamp": "2026-03-31T22:10:13.379826",
+  "genes": [
+    {
+      "gene_name": "ToGAS2",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods states sequences were deposited in GenBank with accession KT898040 for ToGAS2."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism is the common dandelion, T. officinale."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly identifies the species as Taraxacum officinale (agg.)."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "ToGAS2 was identified from a pooled root/latex transcriptome made from genotype A34, but the paper does not explicitly label A34 as the source variety for the ToGAS2 accession itself."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression and specificity analyses involving ToGAS2 were performed in common dandelion."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied experiments are in Taraxacum officinale."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression analyses were done in A34 plants, and ToGAS2 was assessed in A34-derived RNAi lines/background."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "ToGAS2 is described as a putative/functional germacrene A synthase and compared phylogenetically with Asteraceae terpene synthases."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results frame ToGAS genes in the context of TA-G biosynthesis, and ToGAS2 is a germacrene A synthase candidate in this pathway."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "TA-G is explicitly described as a sesquiterpene lactone."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "TA-G is shown to accumulate predominantly in latex/laticifers and contributes to root TA-G levels."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "TA-G itself is supported to deter root herbivores and benefit fitness, but the paper does not directly establish ToGAS2 as contributing to those effects in planta."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 2D shows ToGAS2 expression in latex and entire main root, lower than ToGAS1 in those tissues; outer root cortex expression is lower."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 2D and expression methods report ToGAS2 expression in latex and main roots of A34 plants."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "ToGAS2 was characterized in the study's herbivory/TA-G context through transcriptome sequencing and biochemical assays."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper used transcriptome identification, heterologous expression in E. coli, FDP enzyme assays, RT-qPCR tissue expression, and RNAi specificity analysis showing ToGAS2 was unaffected in ToGAS1 RNAi lines."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper compares ToGAS2 with ToGAS1 but does not report a physical or functional protein-protein interaction."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point is supported: identification as a second GAS, production of (+)-germacrene A in E. coli assay, lower expression than ToGAS1, and unchanged ToGAS2 expression in ToGAS1 RNAi lines while TA-G depletion was linked mainly to ToGAS1 suppression."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This cautious statement matches the paper: ToGAS2 is functionally active biochemically, but the main in planta determinant of TA-G accumulation shown here is ToGAS1, not ToGAS2."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This is speculative application language not stated or directly supported by the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The study shows ToGAS2 is biochemically active, but ToGAS1 was the target whose silencing drove TA-G depletion under tested conditions."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports RNA-seq/transcriptome sequencing of latex and main root and deposits raw reads under BioProject PRJNA301484."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "ToGAS1",
+          "new_value": "NA",
+          "reason": "The paper compares ToGAS2 with ToGAS1 but does not report a physical or functional protein-protein interaction."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Potential backup or auxiliary enzyme for sesquiterpene engineering, but weaker evidence than ToGAS1 for direct use in TA-G improvement",
+          "new_value": "NA",
+          "reason": "This is speculative application language not stated or directly supported by the paper."
+        }
+      ],
+      "stats": {
+        "supported": 18,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "ToGAS1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods gives GenBank accession KT898039 for ToGAS1."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "ToGAS1 is explicitly identified as a germacrene A synthase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is common dandelion."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Taraxacum officinale."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Transcriptome sequencing and RNAi work used genotype A34, described as a triploid synthetic apomict."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional analyses were performed in common dandelion."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied experiments are in Taraxacum officinale."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly uses A34 and the listed RNAi-1, RNAi-12b, RNAi-16, RNAi-9, RNAi-15, and WT lines."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and methods state the ToGAS1 RNAi fragment was expressed under the constitutive 35S promoter; pFGC5941 contains the CaMV 35S promoter."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "ToGAS1 is described as a terpene synthase/germacrene A synthase and analyzed with Asteraceae terpene synthases."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ToGAS1 is identified as mediating the first committed step of TA-G biosynthesis, i.e., the sesquiterpene lactone/TA-G pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places ToGAS1 in the TA-G biosynthetic route from FDP-derived sesquiterpene metabolism."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly call germacrene A synthase the first committed step of TA-G biosynthesis."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Heterologous expression assays showed ToGAS1 produced (+)-germacrene A from FDP, and the paper states this is the first committed intermediate/step toward TA-G biosynthesis."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme assay incubated ToGAS1 with farnesyl diphosphate (FDP/FPP)."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The recombinant enzyme produced (+)-germacrene A."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway endpoint studied for ToGAS1 is TA-G."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "TA-G is explicitly called a sesquiterpene lactone."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states ToGAS1 catalyzes the first committed step of TA-G biosynthesis, linking it to precursor formation for TA-G."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "TA-G is shown to be concentrated in root latex/laticifers and contributes to root levels."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support TA-G as a root defense metabolite that deters M. melolontha and is associated with maintained vegetative and reproductive fitness under attack."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 2D shows ToGAS1 expression in latex and entire main root, stronger than ToGAS2, with low expression in outer root cortex."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression analyses were performed in A34 plants and show expression in latex and main root."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The first committed step is explicitly supported, but 'key control step' is stronger wording not directly demonstrated mechanistically beyond RNAi effects."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "ToGAS1-dependent TA-G function was studied in contexts of M. melolontha root herbivory, common garden infestation, and artificial diet assays involving TA-G."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are present: RNAi silencing in planta, heterologous expression in E. coli, FDP enzyme assay, RT-qPCR, TA-G metabolite profiling, and herbivore choice/no-choice assays."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No physical or direct protein interaction with ToGAS2 is reported."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All summary points match Results: identification from transcriptome, catalytic conversion to (+)-germacrene A, higher expression than ToGAS2, >90% TA-G reduction upon ToGAS1 RNAi without ToGAS2 suppression, and increased herbivore preference/root loss in silenced lines."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The study supports ToGAS1 as promoting TA-G accumulation and deterrence, reducing herbivore-caused root biomass loss; the fitness maintenance link is supported via TA-G in natural variation/common garden, though not directly by transgenic field lines."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "ToGAS1 is a plausible engineering target by inference, but the paper does not explicitly propose it as a breeding/engineering target; the caution about metabolic side effects is supported."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports TA-G-deficient lines had about 50% lower root mass in one experiment, altered total root protein levels, and lower PIE levels; Discussion suggests altered FDP pools may affect other metabolism and growth."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements are supported: TA-G is predominantly in laticifers, is constitutively produced rather than induced, and Discussion notes possible broader metabolic effects via FDP pool changes affecting sesquiterpene/triterpene/phytosterol/growth-related metabolism."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq/transcriptome sequencing of latex and main root is reported, with raw reads in BioProject PRJNA301484."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "ToGAS2",
+          "new_value": "NA",
+          "reason": "No physical or direct protein interaction with ToGAS2 is reported."
+        }
+      ],
+      "stats": {
+        "supported": 30,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 55,
+    "supported": 48,
+    "unsupported": 3,
+    "uncertain": 4,
+    "total_corrections": 3
+  }
+}

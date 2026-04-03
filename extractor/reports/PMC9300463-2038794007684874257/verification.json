@@ -1,0 +1,2092 @@
+{
+  "file": "MinerU_markdown_PMC9300463_2038794007684874257",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC9300463_2038794007684874257.md",
+  "timestamp": "2026-03-31T17:43:40.358092",
+  "genes": [
+    {
+      "gene_name": "AAE13",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'AAE13 (Arabidopsis thaliana)' was used."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly given as 'Arabidopsis thaliana'."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AAE13 was expressed in N. benthamiana leaves."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The heterologous host is explicitly Nicotiana benthamiana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "AAE13 was used to enhance formation of prestrychnine in N. benthamiana and was included in full pathway reconstruction yielding strychnine/brucine, but it is not itself shown to directly produce brucine. The combined listing is only partly supported."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These compounds are strychnos/monoterpene indole alkaloids in the paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states AAE13 raises cytosolic malonyl-CoA accessible to cytosolic SnvAT and, with malonate, caused a tenfold increase in malonylated product formation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are described: Arabidopsis AAE13 was co-expressed to raise malonyl-CoA, it increased malonylated product about tenfold with malonate, and it served as a host-support module rather than a native Strychnos enzyme."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper cites AAE13 as 'a cytosolic enzyme that produces malonyl-CoA'; the referenced enzyme is malonyl-CoA synthetase/acyl-activating enzyme."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "AAE13 function here was tested by transient co-expression in N. benthamiana with disodium malonate and LC–MS readout of product increase."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly calls AAE13 'a cytosolic enzyme'."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AAE13 was transiently expressed in N. benthamiana leaves."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Prestrychnine/other heterologous products were observed in N. benthamiana leaves in reconstruction experiments."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "AAE13 was assayed under Agrobacterium-mediated transient expression with co-infiltration of disodium malonate."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states strychnine is used as a pesticide because of neurotoxicity; it does not specifically assign such a function to brucine, but the wording about strychnos alkaloids being bioactive is consistent overall."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper frames the pathway as useful for metabolic engineering, and AAE13 clearly improves malonylated intermediate production in the heterologous host."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "AAE13 is said to make malonyl-CoA accessible to SnvAT, but no direct protein–protein interaction with SnvAT is shown."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed uses AAE13 as a non-native support gene to efficiently observe the malonylated intermediate in the heterologous system."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "SnvAT",
+          "new_value": "NA",
+          "reason": "AAE13 is said to make malonyl-CoA accessible to SnvAT, but no direct protein–protein interaction with SnvAT is shown."
+        }
+      ],
+      "stats": {
+        "supported": 16,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "SnvGO",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists SnvGO as OM304290."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvGO was identified from S. nux-vomica."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Strychnos nux-vomica."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Function was tested by transient expression in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Nicotiana benthamiana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvGO is part of the reconstructed pathway to strychnine/brucine, but its own assay directly shows only early intermediates, not terminal products by itself."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Strychnine and brucine are monoterpene indole alkaloids in this paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvGO is assigned to strychnos alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places SnvGO in the shared early pathway from geissoschizine to Wieland–Gumlich aldehyde."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Cluster 4032.29856 was named SnvGO, a geissoschizine oxidase homolog."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly CYP71AY6."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Geissoschizine 1 was infiltrated as substrate for SnvGO assays."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The text says CrGO converts geissoschizine to dehydropreakuammicine, with spontaneous deformylation to akuammicine; SnvGO yielded the deformylation product akuammicine, indicating the same intermediate. This is directly inferable."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This description matches the paper's interpretation of SnvGO activity."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvGO is an early/upstream step in the pathway."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper treats SnvGO as feeding the downstream pathway to strychnine/brucine."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish SnvGO as rate-limiting."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvGO initiates the characterized branch from geissoschizine toward strychnos alkaloids."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed points are stated: CrGO homolog, root expression/coexpression, akuammicine production in N. benthamiana, and role in the shared early pathway."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These are the methods actually used for SnvGO discovery and validation."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The geissoschizine-pathway homologs are preferentially expressed in S. nux-vomica roots; SnvGO also showed similar expression to upstream candidates in root-focused discovery."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvGO was transiently expressed in N. benthamiana leaves."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Strychnine/brucine accumulate in S. nux-vomica roots and pathway products were assayed in N. benthamiana leaves."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Geissoschizine infiltration was used in transient assays."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states strychnine is a neurotoxic alkaloid used as a pesticide and brucine is a related alkaloid."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvGO is necessary for heterologous pathway reconstruction described in the paper."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq was used, and S. nux-vomica raw reads are deposited under PRJNA825510."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "These enzymes were co-expressed in pathway reconstruction, but no direct protein–protein interactions are demonstrated."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The transcript cluster number 4032.29856 is explicitly given."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "SnvNS1; SnvNS2; SnvNO; SnvWS",
+          "new_value": "NA",
+          "reason": "These enzymes were co-expressed in pathway reconstruction, but no direct protein–protein interactions are demonstrated."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 1,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "SnvNS1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists SnvNS1 as OM304291."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvNS1 was identified from S. nux-vomica."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Strychnos nux-vomica."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Function was tested in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Nicotiana benthamiana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvNS1 is part of the reconstructed pathway to strychnine/brucine, though its direct assay measures intermediate formation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These end products are monoterpene indole alkaloids."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvNS1 is assigned to strychnos alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It functions in the early common pathway from geissoschizine to Wieland–Gumlich aldehyde."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper names cluster 4032.2064 norfluorocurarine synthase 1 (SnvNS1)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvNS1 is one of the selected alpha/beta hydrolases."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "Dehydropreakuammicine is the proposed substrate inferred from assay logic, but not directly supplied or isolated. It is a reasonable inference, not directly demonstrated."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Norfluorocurarine 4 production was observed in the assays."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper speculates the enzyme hydrolyses the ester of dehydropreakuammicine and thereby leads to decarboxylation before deformylation. This mechanism is proposed, not directly proven."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an upstream/early pathway step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Norfluorocurarine is the next direct intermediate toward Wieland–Gumlich aldehyde."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish SnvNS1 as rate-limiting."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Co-expression with SnvGO produced norfluorocurarine and decreased akuammicine, consistent with redirecting flux toward the strychnine route."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed points are stated in the Results."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These are the methods used to identify and test SnvNS1."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Candidates were selected from root-expressed, co-expressed genes in S. nux-vomica."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Transiently expressed in leaves of N. benthamiana."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Strychnine/brucine accumulate in roots of S. nux-vomica and heterologous products were detected in N. benthamiana leaves."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Geissoschizine infiltration was used in transient assays."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "This generic statement refers to bioactive alkaloid pathway product formation, which is consistent though broad."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme clearly channels flux away from akuammicine toward the strychnos pathway in the heterologous assays."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq under PRJNA825510 was part of the gene discovery pipeline."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "These enzymes were used in combination, but no direct protein interactions were shown."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Transcript cluster 4032.2064 is explicitly given, and SnvNS2 is described as a closely related functional paralogue."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "SnvGO; SnvNO; SnvWS",
+          "new_value": "NA",
+          "reason": "These enzymes were used in combination, but no direct protein interactions were shown."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "SnvNS2",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists SnvNS2 as OM304292."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvNS2 was identified from S. nux-vomica."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Strychnos nux-vomica."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Function was tested in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Nicotiana benthamiana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvNS2 belongs to the pathway reconstructed to strychnine/brucine, although direct assays measure intermediates."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These end products are monoterpene indole alkaloids."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvNS2 is part of strychnos alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It acts in the early common pathway toward Wieland–Gumlich aldehyde."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper names cluster 4032.2781 norfluorocurarine synthase 2 (SnvNS2)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvNS2 is one of the alpha/beta hydrolases identified."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "As with SnvNS1, dehydropreakuammicine is a proposed substrate inferred from pathway logic, not directly demonstrated."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Norfluorocurarine 4 formation was observed."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The mechanistic ester-hydrolysis/decarboxylation interpretation is plausible from the paper but not directly shown for isolated substrate."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an early/upstream step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Norfluorocurarine is the direct intermediate toward Wieland–Gumlich aldehyde."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish this."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports that SnvNS2 promotes norfluorocurarine production similarly to SnvNS1."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed claims are directly stated, including reduced akuammicine and 74% protein identity to SnvNS1."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These are the methods used in Results."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was selected from root-expressed co-expressed S. nux-vomica genes."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Transiently expressed in N. benthamiana leaves."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "End products accumulate in S. nux-vomica roots; heterologous products were measured in N. benthamiana leaves."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Geissoschizine infiltration was used."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "This generic link to bioactive alkaloid product formation is consistent with the paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes SnvNS2 has the same reactivity as SnvNS1, making it a plausible alternative for engineering, though later experiments used SnvNS1."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq under PRJNA825510 supported its discovery."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No direct protein–protein interactions with these partners were demonstrated."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Transcript cluster 4032.2781 is explicitly stated."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "SnvGO; SnvNO; SnvWS",
+          "new_value": "NA",
+          "reason": "No direct protein–protein interactions with these partners were demonstrated."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "SnvNO",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists SnvNO as OM304293."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvNO was identified from S. nux-vomica."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Strychnos nux-vomica."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Function was tested in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Nicotiana benthamiana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvNO is part of the pathway reconstructed to strychnine and brucine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These end products are monoterpene indole alkaloids."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvNO belongs to strychnos alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It acts in the common early pathway to Wieland–Gumlich aldehyde."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper names cluster 4032.6332 as norfluorocurarine oxidase (SnvNO)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly CYP71A144, a cytochrome P450."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "In the assay, norfluorocurarine 4 is the substrate converted by SnvNO."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "18-OH norfluorocurarine 5 was observed and matched the synthetic standard."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states C18 hydroxylation of norfluorocurarine to 18-OH norfluorocurarine."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a midstream step before Wieland–Gumlich aldehyde formation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "18-OH norfluorocurarine is the direct precursor to Wieland–Gumlich aldehyde and hence downstream end products."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish SnvNO as rate-limiting."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvNO introduces the required hydroxylation before reduction/cyclization, exactly as described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by the Results."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Combinatorial transient expression and LC–MS versus synthetic standard were used."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Candidate P450s were selected from highly co-expressed/root-relevant genes in S. nux-vomica."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Transiently expressed in N. benthamiana leaves."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Strychnine/brucine accumulate in S. nux-vomica roots; heterologous pathway products were measured in N. benthamiana leaves."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Geissoschizine infiltration in transient assays is part of the experiment."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The generic link to bioactive alkaloid pathway products is consistent with the paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvNO is required for reconstructing the core scaffold in the heterologous system."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq under PRJNA825510 was used in discovery."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No direct physical interactions with these enzymes were demonstrated."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Transcript cluster 4032.6332 is explicitly given."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "SnvGO; SnvNS1; SnvWS",
+          "new_value": "NA",
+          "reason": "No direct physical interactions with these enzymes were demonstrated."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 1,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "SnvWS",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists SnvWS as OM304294."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvWS was identified from S. nux-vomica."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Strychnos nux-vomica."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Function was tested in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Nicotiana benthamiana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvWS is part of the reconstructed pathway to strychnine/brucine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are monoterpene indole alkaloids."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvWS belongs to strychnos alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It functions in the common early pathway to Wieland–Gumlich aldehyde."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Cluster 4032.5004 was named Wieland–Gumlich aldehyde synthase (SnvWS)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies it as an MDR (medium-chain dehydrogenase/reductase)."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states SnvWS can reduce both norfluorocurarine 4 and 18-OH norfluorocurarine 5, with higher efficiency for 5."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Wieland–Gumlich aldehyde 6 is the observed main product; the text also states SnvWS can reduce 4 and 5, implying desoxy Wieland–Gumlich aldehyde 7 from 4 and 6 from 5. This field is consistent with the Results."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the paper's description of double-bond reduction enabling spontaneous cyclization to 6."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a midstream step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Wieland–Gumlich aldehyde is the branchpoint precursor to diaboline and prestrychnine/strychnine."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not formally establish rate control, so the cautious wording is acceptable."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly presents SnvWS as producing Wieland–Gumlich aldehyde, the shared central precursor."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported, including higher catalytic efficiency for 5 than for 4."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods were used: transient assays, in vitro assays, kinetics, LC–MS."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvWS was selected from co-expressed, root-relevant candidates in S. nux-vomica."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Transiently expressed in N. benthamiana leaves."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "End products accumulate in roots of S. nux-vomica and heterologous pathway products were measured in N. benthamiana leaves."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Geissoschizine infiltration in transient assays is accurate."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The generic link to bioactive alkaloid products is consistent with the paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvWS is central for generating the branchpoint intermediate in engineered hosts."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq under PRJNA825510 was used in its discovery."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "These are pathway partners in co-expression experiments, but direct protein interactions were not shown."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Transcript cluster 4032.5004 and the modeled roles of Thr95 and Ser309 are both explicitly mentioned."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "SnvGO; SnvNS1; SnvNO",
+          "new_value": "NA",
+          "reason": "These are pathway partners in co-expression experiments, but direct protein interactions were not shown."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 1,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "SnvAT",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists SnvAT as OM304295."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvAT is the S. nux-vomica orthologue identified in the study."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Strychnos nux-vomica."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Function was tested in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Nicotiana benthamiana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "SnvAT directly generates prestrychnine and enables eventual formation of strychnine in the reconstructed pathway; inclusion of brucine is only through later added enzymes in the full pathway, so the combined list is only partly direct."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These compounds belong to the monoterpene indole alkaloid/strychnos alkaloid class in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvAT acts in the strychnine/brucine branch from Wieland–Gumlich aldehyde."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly the late branch from Wieland–Gumlich aldehyde to the malonylated intermediate/prestrychnine."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "SnvAT is a BAHD acyltransferase with predominant malonyltransferase activity, but the exact phrase 'prestrychnine-forming malonyltransferase' is not used as its formal enzyme name."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvAT is explicitly a BAHD acyltransferase."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Wieland–Gumlich aldehyde is the substrate; malonyl-CoA is inferred as the donor and explicitly discussed in relation to AAE13 and selectivity."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies the product as N-malonyl Wieland–Gumlich aldehyde 9 (prestrychnine)."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This description matches the Results, including predominant formation of N-malonyl Wieland–Gumlich aldehyde."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a downstream/late pathway step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Prestrychnine 9 is described as the immediate precursor that converts to strychnine/isostrychnine."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper presents SnvAT as decisive for branch entry but does not formally prove it is the terminal determinant; this is a reasonable but somewhat interpretive summary."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvAT diverts Wieland–Gumlich aldehyde to prestrychnine, enabling later strychnine formation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points are explicitly supported, including root expression, malonyltransferase activity, AAE13/malonate enhancement, and Arg424 implication in malonyl-CoA selectivity."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient expression, LC–MS, derivatization with standards, homology modeling, and residue-swap analysis are all described. 'Mutational analysis inference from reciprocal residue comparison' is somewhat awkwardly phrased but reflects the reported residue swaps."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The text refers to 'cytosolic SnvAT', supporting cytosolic localization."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states SnvAT is highly expressed in roots and highly correlated with previous genes."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvAT was transiently expressed in N. benthamiana leaves."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states strychnine/brucine accumulate in S. nux-vomica roots and heterologous products were assayed in N. benthamiana leaves."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Disodium malonate and AAE13 enhanced SnvAT-dependent product formation exactly as stated."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states strychnine is a potent neurotoxic alkaloid used as a pesticide."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly shows slow conversion of prestrychnine to strychnine and that malonyl-CoA supply can limit conversion to the malonylated intermediate."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper emphasizes pathway engineering and the need to co-engineer malonyl-CoA supply for this branch."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq under PRJNA825510 was used in discovery."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "AAE13 supports SnvAT via metabolite supply, but no direct protein interaction is shown."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Transcript cluster 4032.2753 is explicitly given, and the paper states conversion from prestrychnine to strychnine appears largely non-enzymatic though modest enzymatic assistance cannot be excluded."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "AAE13",
+          "new_value": "NA",
+          "reason": "AAE13 supports SnvAT via metabolite supply, but no direct protein interaction is shown."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "SpAT",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists SpAT as OM304304."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SpAT was identified from the non-producer Strychnos sp."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper consistently refers to this plant as 'Strychnos sp.' and does not assign a fuller species name in the Results."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Function was tested in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Nicotiana benthamiana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SpAT directly generated diaboline 8 in N. benthamiana."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Diaboline is a strychnos-type monoterpene indole alkaloid in this pathway context."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SpAT is part of diaboline biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It catalyzes the late branch from Wieland–Gumlich aldehyde to diaboline."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly name SpAT 'diaboline-forming acetyltransferase', but it clearly functions as the BAHD acyltransferase completing diaboline biosynthesis. Formal naming is inferential."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "SpAT is one of the BAHD acyltransferase candidates."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Wieland–Gumlich aldehyde as substrate and acetyl-CoA as donor are directly inferred from the paper's discussion of the only remaining step and BAHD acyltransferases."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient expression of SpAT with upstream genes generated diaboline 8."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly hypothesizes and functionally validates acetylation of the indole amine of Wieland–Gumlich aldehyde to form diaboline."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a downstream/terminal branch step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "SpAT directly forms the target product diaboline."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper identifies it as the only remaining step to diaboline, but does not measure rate limitation; 'terminal step' is fine, 'key control step' is not directly shown."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "SpAT completes diaboline formation in the non-strychnine-producing Strychnos species, matching the Results."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are supported: co-expression-based identification, diaboline formation in N. benthamiana, and contrast with SnvAT explaining divergent alkaloid outputs."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods were used for SpAT."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SpAT was among BAHD acyltransferases co-expressed with all five common-pathway genes in Strychnos sp."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Transiently expressed in N. benthamiana leaves."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says diaboline was detected in roots and stems of Strychnos sp., and heterologous products were measured in N. benthamiana leaves."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Geissoschizine infiltration with transient expression was used in the upstream-plus-SpAT assays."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state a specific biological or applied function for diaboline; calling it a 'bioactive' alkaloid is not supported by explicit evidence here."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Engineering utility and pathway-divergence insight are reasonable inferences from the demonstrated function and the paper's metabolic engineering framing."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq from Strychnos sp. is deposited as PRJNA826736 and was used for discovery."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "These enzymes were co-expressed in pathway assays, but no direct protein–protein interactions are shown."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states SpAT contrasts with SnvAT despite 85% amino acid identity."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite_Function",
+          "old_value": "Bioactive strychnos-type alkaloid",
+          "new_value": "NA",
+          "reason": "The paper does not state a specific biological or applied function for diaboline; calling it a 'bioactive' alkaloid is not supported by explicit evidence here."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "SpGO; SpNS1; SpNS2; SpNO; SpWS",
+          "new_value": "NA",
+          "reason": "These enzymes were co-expressed in pathway assays, but no direct protein–protein interactions are shown."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "SpGO",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists SpGO accession as OM304299."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SpGO is described as identified from the non-producer transcriptome, Strychnos sp."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper refers to the non-producer as Strychnos sp."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SpGO was expressed in N. benthamiana leaves for functional testing."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species used for transient expression is Nicotiana benthamiana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SpGO is part of the reconstructed pathway leading to diaboline 8 in Strychnos sp."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Strychnine/diaboline are explicitly discussed as strychnos alkaloids and strychnine is a monoterpene indole alkaloid; diaboline is presented as a related strychnos alkaloid in the same pathway."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies biosynthesis of strychnine, brucine, and diaboline, i.e. strychnos alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly states S. nux-vomica and Strychnos sp. share the same biosynthetic pathway from geissoschizine 1 to Wieland–Gumlich aldehyde 6."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "SpGO is named as the orthologue of SnvGO/GO, i.e. geissoschizine oxidase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies SpGO as CYP71AY7."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "SpGO was tested in combinations with co-infiltration of geissoschizine 1."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows the SpGO-containing combinations produce Wieland–Gumlich aldehyde 6, but does not directly isolate the immediate product of SpGO alone in Strychnos sp.; 'early oxidized intermediate en route to Wieland–Gumlich aldehyde' is plausible but not explicitly demonstrated for SpGO."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states SpGO is an SnvGO orthologue in the shared pathway from geissoschizine 1 to Wieland–Gumlich aldehyde 6 and validates function in N. benthamiana."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "SpGO functions in the shared early pathway upstream of Wieland–Gumlich aldehyde and diaboline formation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly frames these Sp genes as constituting the shared pathway to Wieland–Gumlich aldehyde, the precursor to diaboline."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish SpGO as rate-limiting."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression of SpGO with partner enzymes produced Wieland–Gumlich aldehyde, supporting the common pathway in the diaboline-producing species."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summarized points are stated: orthology to SnvGO, production of Wieland–Gumlich aldehyde with partner enzymes in N. benthamiana, and support for a shared early pathway."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper used BLAST-based orthologue identification, transient expression in N. benthamiana, and LC–MS analysis."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2d and text describe co-expression analysis in Strychnos sp. using pathway genes as baits."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SpGO was transiently expressed in N. benthamiana leaves."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states diaboline was detected in roots and stems of Strychnos sp.; heterologous products were assayed from N. benthamiana leaves."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional assays involved co-infiltration of geissoschizine 1."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Diaboline is identified as a related strychnos alkaloid, but the paper does not explicitly state its biological function; 'bioactive' is not directly supported for diaboline here."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper broadly mentions metabolic engineering potential, but this specific comparative engineering value for SpGO is not explicitly stated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq data for Strychnos sp. are described and BioProject PRJNA826736 is given in Data availability."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "These proteins were co-expressed functionally with SpGO, but direct physical interaction is not shown."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states SpGO has 92% amino-acid identity to SnvGO."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 25,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "SpNS1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists SpNS1 accession as OM304300."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SpNS1 was identified from the Strychnos sp. non-producer transcriptome."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source is given as Strychnos sp."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SpNS1 was tested in N. benthamiana transient assays."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Nicotiana benthamiana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SpNS1 participates in the shared pathway leading to diaboline in Strychnos sp."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Diaboline is presented as a strychnos alkaloid within the monoterpene indole alkaloid pathway context."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is part of the strychnos alkaloid biosynthetic pathway analyzed in the paper."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states the two species share the common pathway from geissoschizine 1 to Wieland–Gumlich aldehyde 6."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "SpNS1 is named by orthology to SnvNS1, norfluorocurarine synthase 1."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "NS enzymes are described as α/β hydrolases."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "For SnvNS1 the substrate is inferred as dehydropreakuammicine 2; SpNS1 was validated only in multigene combinations, so the exact immediate substrate was not directly tested for SpNS1."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "SpNS1 was not shown alone to form norfluorocurarine; only multigene combinations to Wieland–Gumlich aldehyde were shown."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "By orthology and pathway reconstruction, SpNS1 supports the norfluorocurarine-forming hydrolase step in the shared early pathway."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "SpNS1 functions upstream in the common route before Wieland–Gumlich aldehyde and diaboline."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places SpNS1 in the shared precursor pathway to the diaboline branch."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "No rate-limiting role is assigned to SpNS1 in the paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "SpNS1 in combination with other Sp genes supported formation of Wieland–Gumlich aldehyde in the non-producer species pathway."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Orthology, combinatorial production of Wieland–Gumlich aldehyde in N. benthamiana, and support for pathway conservation are all stated."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Orthologue identification and transient combinatorial expression with LC–MS profiling were used."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2d shows co-expression analysis in Strychnos sp. including SpNS1 as a bait."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was transiently expressed in N. benthamiana leaves."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Diaboline was detected in roots and stems of Strychnos sp.; heterologous products were observed in N. benthamiana leaves."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Assays involved geissoschizine 1 co-infiltration."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly assign a biological function to diaboline beyond being a related alkaloid."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This specific engineering claim is not directly made for SpNS1."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Strychnos sp. RNA-seq and PRJNA826736 are explicitly provided."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Co-expression/co-use with SpGO, SpNO, and SpWS is shown, but direct protein interactions are not demonstrated."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states SpNS1 has 92% amino-acid identity to SnvNS1."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 24,
+        "unsupported": 0,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "SpNS2",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists SpNS2 accession as OM304301."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SpNS2 was identified from the Strychnos sp. transcriptome."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is given as Strychnos sp."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SpNS2 was tested in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied host is Nicotiana benthamiana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SpNS2 is part of the shared pathway leading to diaboline in Strychnos sp."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Diaboline is a related strychnos alkaloid within the monoterpene indole alkaloid pathway context."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper examines this gene in strychnos alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It belongs to the common geissoschizine 1 to Wieland–Gumlich aldehyde pathway shared between species."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "SpNS2 is named by orthology to SnvNS2, norfluorocurarine synthase 2."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "NS enzymes are α/β hydrolases in the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "As with SpNS1, the exact immediate substrate is inferred from SnvNS2/SnvNS1 chemistry, not directly assayed for SpNS2 alone."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "SpNS2 was validated via pathway reconstruction to Wieland–Gumlich aldehyde, not by direct demonstration of norfluorocurarine formation alone."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that SpNS2 can substitute in the shared early pathway as the hydrolase step orthologue."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It acts upstream of Wieland–Gumlich aldehyde and diaboline."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "It supplies the shared precursor route to the diaboline branch."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "No rate-limiting or key-control designation is given."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows SpNS2 can replace SpNS1 in the reconstructed pathway to Wieland–Gumlich aldehyde in N. benthamiana."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Orthology, substitution for SpNS1, and implication of pathway conservation are all supported."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Orthologue identification plus transient combinatorial expression and LC–MS were used."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SpNS2 is included among co-expressed pathway genes in Strychnos sp."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was transiently expressed in N. benthamiana leaves."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Diaboline accumulates in roots and stems of Strychnos sp.; heterologous products were detected in N. benthamiana leaves."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Geissoschizine 1 was co-infiltrated in transient assays."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "No explicit biological function for diaboline is given in the paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Specific application value as an alternative orthologue is an interpretation, not directly stated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq and PRJNA826736 for Strychnos sp. are explicitly reported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Functional co-use with SpGO, SpNO, and SpWS is shown, but no direct interaction assay is reported."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states SpNS2 has 88% amino-acid identity to SnvNS2."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 24,
+        "unsupported": 0,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "SpNO",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists SpNO accession as OM304302."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SpNO comes from the Strychnos sp. transcriptome."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Strychnos sp."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SpNO was functionally tested in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host species is Nicotiana benthamiana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SpNO is part of the pathway leading to diaboline in the non-producer species."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Diaboline is discussed as a strychnos alkaloid related to strychnine in the monoterpene indole alkaloid pathway."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is within the studied strychnos alkaloid biosynthetic pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states SpNO belongs to the common pathway to Wieland–Gumlich aldehyde."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "SpNO is explicitly named as the orthologue of SnvNO, norfluorocurarine oxidase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies SpNO as CYP71A145."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "For SnvNO the substrate norfluorocurarine is directly supported; for SpNO only pathway reconstruction is shown, so direct substrate assignment is by orthology rather than direct assay."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The immediate 18-OH norfluorocurarine product is directly shown for SnvNO, not directly for SpNO."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "SpNO is presented as the conserved hydroxylase orthologue in the shared pathway to Wieland–Gumlich aldehyde."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It is a mid-pathway oxidation step before Wieland–Gumlich aldehyde and diaboline."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper frames this step as producing the direct precursor stage toward Wieland–Gumlich aldehyde in the diaboline branch."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "No rate-limiting designation is given."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "SpNO with other Sp genes supported Wieland–Gumlich aldehyde biosynthesis in N. benthamiana."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Orthology to SnvNO, production of Wieland–Gumlich aldehyde in combination assays, and pathway conservation are all supported."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Orthologue identification, transient expression, and LC–MS metabolite profiling are described."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SpNO is included in the co-expression analysis in Strychnos sp."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was transiently expressed in N. benthamiana leaves."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Diaboline is detected in roots and stems of Strychnos sp.; heterologous products were from N. benthamiana leaves."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Geissoschizine 1 co-infiltration was used in the transient assays."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not state a specific biological function for diaboline."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This specific engineering usefulness is not directly stated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Strychnos sp. RNA-seq and BioProject PRJNA826736 are explicitly reported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Co-expression and combinatorial function are shown, but not direct molecular interactions."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states SpNO (CYP71A145) has 91% amino-acid identity to SnvNO."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 24,
+        "unsupported": 0,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "SpWS",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists SpWS accession as OM304303."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SpWS was identified from the Strychnos sp. transcriptome."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source is Strychnos sp."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SpWS was tested in N. benthamiana transient assays."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Nicotiana benthamiana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SpWS participates in the shared pathway leading to diaboline in Strychnos sp."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Diaboline is a related strychnos alkaloid in the monoterpene indole alkaloid pathway context."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It belongs to the strychnos alkaloid biosynthetic pathway studied here."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the species share the early pathway from geissoschizine 1 to Wieland–Gumlich aldehyde 6."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "SpWS is named by orthology to SnvWS, Wieland–Gumlich aldehyde synthase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "WS is described as an MDR, i.e. medium-chain dehydrogenase/reductase."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "For SnvWS, reduction of norfluorocurarine/18-OH norfluorocurarine is directly shown; for SpWS only pathway reconstruction is shown, so exact immediate substrate is inferred by orthology."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Combinations containing SpWS produced Wieland–Gumlich aldehyde 6 in N. benthamiana."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports SpWS as the reductive step orthologue leading to Wieland–Gumlich aldehyde in the shared pathway."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It is a midstream reductive step before diaboline formation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Wieland–Gumlich aldehyde is explicitly the branch-point precursor for diaboline."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "No rate-limiting role is assigned."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "SpWS functioned with SpGO, SpNS1/2 and SpNO to form Wieland–Gumlich aldehyde in N. benthamiana."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary matches the text and Extended Data Fig. 4."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Orthologue identification, transient combinatorial expression, and LC–MS were used."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SpWS is one of the pathway genes used as bait in Strychnos sp. co-expression analysis."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was transiently expressed in N. benthamiana leaves."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Diaboline was found in roots and stems of Strychnos sp.; heterologous pathway products were measured in N. benthamiana leaves."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Geissoschizine 1 infiltration was part of the transient assays."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly state a biological function for diaboline."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This specific engineering interpretation is not directly stated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq and PRJNA826736 for Strychnos sp. are explicitly provided."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Functional co-use is shown, but direct physical interactions are not tested."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states SpWS has 93% amino-acid identity to SnvWS."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 25,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "Snv10H",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists Snv10H accession as OM304296."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Snv10H is from S. nux-vomica."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is explicitly Strychnos nux-vomica."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Snv10H was expressed in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Nicotiana benthamiana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Snv10H is part of the pathway from strychnine to brucine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Brucine is described as a dimethoxylated derivative of strychnine, i.e. a strychnos/monoterpene indole alkaloid."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is characterized in brucine biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes conversion of strychnine to brucine via hydroxylation and methylation steps."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names cluster 4032.17050/CYP82D367 as strychnine-10-hydroxylase (Snv10H)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Snv10H is identified as CYP82D367, a cytochrome P450."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Snv10H was expressed in the presence of strychnine 10 and produced 10-OH strychnine 12."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The product 10-OH strychnine 12 is explicitly reported and shown in Fig. 3c and Extended Data Fig. 8."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states Snv10H hydroxylates strychnine to 10-OH strychnine."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a downstream late tailoring step from strychnine toward brucine."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "10-OH strychnine is the immediate precursor to β-colubrine, which lies on the route to brucine."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "No rate-limiting role is established in the paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The data show Snv10H initiates conversion of strychnine to brucine by hydroxylation at C10."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary statements match the Results section."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient expression in N. benthamiana with strychnine feeding and LC–MS comparison to standards are described."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was selected from co-expressed P450s and roots are the relevant accumulation site; this supports root-expressed/co-expressed wording."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Snv10H was transiently expressed in N. benthamiana leaves."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Brucine is reported to accumulate highly in roots of S. nux-vomica; heterologous products were measured in N. benthamiana leaves."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The assay involved strychnine infiltration into transiently expressing N. benthamiana leaves."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states brucine is a dimethoxylated derivative of strychnine."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper generally highlights synthetic biology promise, but this specific phrasing about module use for analogues is not explicit."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq for S. nux-vomica is described and BioProject PRJNA825510 is provided."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Snv10H was functionally combined with SnvOMT and Snv11H, but direct interactions are not shown."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies Snv10H as transcript cluster 4032.17050."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 27,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "SnvOMT",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists SnvOMT accession as OM304297."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvOMT is from S. nux-vomica."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Strychnos nux-vomica."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvOMT was tested in N. benthamiana and as purified recombinant protein from E. coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied systems are Nicotiana benthamiana and Escherichia coli."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvOMT is directly linked to β-colubrine and brucine formation in the late pathway."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are strychnos/monoterpene indole alkaloids in the pathway studied."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is characterized in the late brucine biosynthesis pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results support late O-methylation steps from hydroxylated strychnine derivatives toward β-colubrine/brucine."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper names cluster 4032.16453 as SnvOMT, a methyltransferase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly identified as one of the methyltransferases; O-methyltransferase is appropriate."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly supports activity on 10-OH strychnine and also on 11-OH strychnine and 10-deMe brucine; Extended Data Fig. 9 and Supplementary Figs. 26–27 support 11-deMe brucine/other substrates."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports formation of β-colubrine from 10-OH strychnine, brucine from 11-deMe brucine, α-colubrine from 11-OH strychnine, and brucine from 10-deMe brucine."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the Results: efficient methylation of 10-OH strychnine to β-colubrine and additional methylation of 11-deMe brucine to brucine, with alternative lower-efficiency substrates."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvOMT acts in late downstream tailoring steps toward β-colubrine and brucine."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvOMT forms both a direct precursor (β-colubrine) and the final methylated product brucine."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "No rate-limiting role is established."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows SnvOMT methylates hydroxylated strychnine intermediates to produce β-colubrine and brucine in concert with Snv11H."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are supported by Fig. 3c, Extended Data Figs. 8–9, and Supplementary Figs. 26–27."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient N. benthamiana assays, purified recombinant protein assays in E. coli, and LC–MS comparison to standards are reported."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states five methyltransferases were identified as highly expressed in roots, including the one named SnvOMT."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SnvOMT was transiently expressed in leaves and also produced recombinantly in E. coli."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Brucine is highly accumulated in roots of S. nux-vomica; heterologous products were measured in N. benthamiana leaves."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments used strychnine or β-colubrine infiltration in transient assays, and purified enzyme assays with defined substrates."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes brucine as a dimethoxylated derivative of strychnine."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states SnvOMT could methylate 11-OH strychnine and 10-deMe brucine, although with lower efficiency."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "General synthetic biology promise is stated, but this exact engineering-value wording is not explicit."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "S. nux-vomica RNA-seq and BioProject PRJNA825510 are provided."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "SnvOMT is functionally coupled with Snv10H and Snv11H, but no direct protein interaction data are shown."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies SnvOMT as cluster 4032.16453."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 28,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "Snv11H",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists Snv11H accession as OM304298."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Snv11H is from S. nux-vomica."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Strychnos nux-vomica."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Snv11H was expressed in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Nicotiana benthamiana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Snv11H is directly linked to brucine production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Brucine is a strychnos/monoterpene indole alkaloid derivative in this pathway."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is characterized as part of brucine biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports a late step from β-colubrine to brucine involving Snv11H followed by SnvOMT."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper names cluster 4032.16581/CYP71AH44 as Snv11H."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Snv11H is explicitly identified as cytochrome P450 CYP71AH44."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "β-colubrine 13 infiltration into Snv11H-expressing leaves formed 11-deMe brucine 14."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The direct product 11-deMe brucine 14 is explicitly observed when β-colubrine is fed to Snv11H-expressing leaves."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports hydroxylation of β-colubrine to 11-deMe brucine, followed by SnvOMT-mediated methylation to brucine."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a terminal precursor-forming late step toward brucine."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "11-deMe brucine is the immediate precursor to brucine."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "No rate-limiting role is established."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The data show Snv11H provides the second hydroxylation required for brucine biosynthesis."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings are directly supported by Fig. 3c and Extended Data Fig. 9."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient expression in N. benthamiana with substrate feeding and LC–MS comparison to standards are described."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the late P450 candidates were identified among proteins strongly expressed in roots; Snv11H was one of these."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Snv11H was transiently expressed in N. benthamiana leaves."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Brucine accumulates in roots of S. nux-vomica and heterologous products were assayed in N. benthamiana leaves."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Assays involved strychnine or β-colubrine infiltration."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says brucine is a dimethoxylated derivative of strychnine."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper broadly notes synthetic biology potential, but this exact module-focused application statement is not explicit."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq for S. nux-vomica and BioProject PRJNA825510 are explicitly reported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Functional coupling with SnvOMT and Snv10H is shown, but not direct physical interaction."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies Snv11H as transcript cluster 4032.16581."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 27,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 456,
+    "supported": 408,
+    "unsupported": 9,
+    "uncertain": 39,
+    "total_corrections": 9
+  }
+}

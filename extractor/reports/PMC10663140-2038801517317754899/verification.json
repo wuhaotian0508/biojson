@@ -1,0 +1,276 @@
+{
+  "file": "MinerU_markdown_PMC10663140_2038801517317754899",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC10663140_2038801517317754899.md",
+  "timestamp": "2026-03-31T21:30:36.997608",
+  "genes": [
+    {
+      "gene_name": "TOB1",
+      "category": "Common",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly defines TOB1 as TRANSPORTER OF IBA1 and states that IBA transport occurs via TOB1, supporting its identity as an IBA transporter."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses Arabidopsis throughout and states all plants used were Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The Materials and methods explicitly state Arabidopsis (A. thaliana)."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states all lines used in this study were in the Col-0 background."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TOB1 was tested genetically in Arabidopsis seedlings."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species in the experiments is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments were performed in the Col-0 background, including tob1-3 and gaut10-3."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links TOB1 to IBA transport and notes conversion of IBA to IAA requires TOB1 and functional peroxisomes, but it does not directly define a 'terminal metabolite' as 'IBA-derived auxin pool / IAA' for TOB1 in the Results."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "IBA and IAA are auxins, and TOB1 is discussed in the context of IBA-to-IAA-related auxin metabolism."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses root meristem size and primary root growth in relation to TOB1/IBA biology, but the exact phrasing 'controls root meristem size and primary root growth via auxin homeostasis' is not directly demonstrated for TOB1 alone in this paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show tob1-3 suppresses the gaut10-3 short-root phenotype, the double mutant resembles tob1-3 in IBA response, and the authors interpret this as epistasis linking GAUT10-dependent wall status to IBA/IAA metabolism."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings are directly stated in the Results: TOB1 transcript is elevated in gaut10-3, tob1-3 and gaut10-3 are IBA-insensitive while gaut10-3 responds normally to IAA, and the double mutant resembles tob1-3 and suppresses the short-root phenotype."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all described and used in Results: RNA-seq differential expression, construction of gaut10-3 tob1-3 double mutant, and IBA/IAA root growth assays."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly state that TOB1 transcript is elevated in gaut10-3 roots."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper supports a genetic interaction/epistatic relationship between GAUT10 and TOB1, not a protein-protein interaction. Listing GAUT10 under 'Interacting_Proteins' is not supported."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The study examines phenotypes on 15 mM sucrose medium and after exogenous 10 µM IBA or 10 µM IAA treatments."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The assays involving TOB1 were performed on primary roots, and the IBA/IAA response phenotypes were measured there."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This is a speculative application statement not presented or tested in the paper."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports transcriptomic profiling by 3' mRNA-seq and gives NCBI BioProject accession PRJNA694693."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "The statement that TOB1 is 'classified as Common Gene because it functions as a transporter rather than a biosynthetic enzyme or transcription factor in this study' is external categorization not from the paper; only the same-species part is supported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "GAUT10 (genetic epistasis)",
+          "new_value": "NA",
+          "reason": "The paper supports a genetic interaction/epistatic relationship between GAUT10 and TOB1, not a protein-protein interaction. Listing GAUT10 under 'Interacting_Proteins' is not supported."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Potential target for tuning root growth responses linked to peroxisomal IBA metabolism, but context dependent because tob1 mutation suppresses gaut10 short-root phenotype",
+          "new_value": "NA",
+          "reason": "This is a speculative application statement not presented or tested in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 15,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "GAUT10",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and methods explicitly state SALK_092577 corresponds to the gaut10-3 null allele."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "GAUT10 is repeatedly described as a pectin biosynthesizing enzyme and belongs to the GAUT galacturonosyltransferase family."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract explicitly names GALACTURONOSYLTRANSFERASE 10 (GAUT10)."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to Arabidopsis thaliana."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "All plants used were in the Col-0 background."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GAUT10 was tested in Arabidopsis seedlings and roots."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments used the Col-0 background and the gaut10-3 mutant in that background."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly frames GAUT10 as involved in pectin biosynthesis and affecting cell wall polysaccharide composition."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show altered HG and RG-I epitopes in gaut10-3 roots, supporting involvement in HG- and RG-I-associated pectin formation."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "GAUT10 functions in polymer biosynthesis, but the exact characterization as a 'midstream polymer biosynthesis step' is not stated in the paper."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The qualifier 'rate-limiting not established' is consistent with the paper, and the Results support GAUT10 being important for normal root pectin composition."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion cites prior work showing recombinant GAUT10 has catalytic activity when given UDP-GalA as substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that GAUT10 contributes to GalA-containing pectic polysaccharides and likely HG-related products in the cell wall."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is consistent with the enzyme class and the paper's description of GAUT10 as a galacturonosyltransferase contributing to pectin biosynthesis using UDP-GalA."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly links GAUT10-dependent cell wall composition to auxin metabolism/signaling and root growth."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support altered pectin polymers enriched in GalA and affected HG and RG-I-associated fractions in roots."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These end products are cell wall polysaccharides."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The study directly links GAUT10-dependent wall composition to primary root morphogenesis, meristem size, cell elongation, and auxin-related processes."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Each component of this summary is directly supported by Results: reduced GalA and xylose, altered epitopes, reduced meristem size and cell elongation, reduced DR5 signal, and altered auxin metabolite profiles."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four listed findings summarize the Results accurately and are directly supported by figures and text."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed approaches were used in the study and described in Results/Methods."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GAUT10 mRNA is enriched in several root stem cell types and that GAUT10 protein was previously identified as auxin downregulated."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the reported expression enrichment in Arabidopsis root stem cell types."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The study did not use a GAUT10 promoter construct; it used GAUT10 mutant background and DR5 synthetic promoter reporter for auxin signaling, as stated."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper demonstrates a genetic interaction/epistasis between GAUT10 and TOB1, not a protein-protein interaction. Thus 'Interacting_Proteins: TOB1' is not supported."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly show sucrose-dependent phenotypes with 0, 15 mM, and 30 mM sucrose, and include exogenous IBA/IAA assays."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The altered products were measured in primary root cell wall fractions, specifically pectin- and hemicellulose-enriched fractions."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "These negative consequences of loss of function are directly observed in Results: reduced root growth, smaller meristem, reduced elongation, altered auxin signaling, and many stress-related DEGs."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not propose or test breeding/engineering applications; this is speculative extrapolation."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports 3' mRNA-seq with PRJNA694693, auxin metabolite profiling by LC-MS/MS, and glycome profiling."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly cites prior work that recombinant GAUT10 had low catalytic activity with UDP-GalA and may have a specialized role in unique HG or HG linked to RG-I; the study itself focuses on root wall composition and downstream auxin/peroxisome phenotypes."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "TOB1 (genetic interaction/epistasis)",
+          "new_value": "NA",
+          "reason": "The paper demonstrates a genetic interaction/epistasis between GAUT10 and TOB1, not a protein-protein interaction. Thus 'Interacting_Proteins: TOB1' is not supported."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Potential target for engineering root cell wall composition and root architecture, but manipulation may perturb auxin homeostasis and cause sucrose-dependent growth defects",
+          "new_value": "NA",
+          "reason": "The paper does not propose or test breeding/engineering applications; this is speculative extrapolation."
+        }
+      ],
+      "stats": {
+        "supported": 30,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 53,
+    "supported": 45,
+    "unsupported": 4,
+    "uncertain": 4,
+    "total_corrections": 4
+  }
+}

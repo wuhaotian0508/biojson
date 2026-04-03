@@ -1,0 +1,650 @@
+{
+  "file": "MinerU_markdown_PMC6994220_2038795002078855175",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC6994220_2038795002078855175.md",
+  "timestamp": "2026-03-31T22:27:33.315464",
+  "genes": [
+    {
+      "gene_name": "CRTISO/CCR2",
+      "category": "Common",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "ccr2 is described as the carotenoid isomerase mutant/crtiso in the Results and Materials."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses Arabidopsis throughout."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials state Arabidopsis thaliana."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Most germplasm including ccr2 is in Columbia (Col-0); ccr2 is treated as Col-0 background in the study."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials specify Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Core ccr2 experiments are in Col-0 background."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper infers a cis-carotene-derived apocarotenoid signal/ACS generated in ccr2."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The inferred signal is explicitly described as an apocarotenoid."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Etiolated cotyledons and newly emerged juvenile leaves are the tissues where phenotypes/signaling are studied, but direct accumulation of the ACS itself is not measured."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and model figures state the apocarotenoid retrograde signal regulates PLB formation, etioplast/chloroplast development, and greening."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "ccr2 accumulates specific cis-carotenes, lacks PLBs, shows virescence under short photoperiods, and the phenotype is attributed to an apocarotenoid signal."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows CRTISO function becomes limiting under extended darkness/short photoperiod, but does not directly report CCR2 expression pattern here."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed approaches were used: mutant analysis, photoperiod shifts, HPLC, TEM, greening assays, RNA-seq, D15 treatment, and suppressor genetics with ziso and det1."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These conditions/treatments are central to the Results."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point matches Results: cis-carotene accumulation, absence of PLB despite POR, and restoration by ziso/det1/D15-based suppression logic."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "As a carotenoid biosynthetic enzyme affecting plastid carotenoids, CCR2/CRTISO is plastid-localized by direct pathway context; the paper studies plastid carotenoid biosynthesis."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq is reported and SRA PRJNA498324 is given in Data availability; DNA-seq/NGS mapping was also performed though no accession is given."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports genetic interactions/epistasis with ZISO and DET1, but not direct physical protein-protein interactions."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible application inference, but not explicitly claimed/tested in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "ccr2 shows leaf virescence, delayed greening, and impaired chloroplast ultrastructure under extended darkness/short photoperiod conditions."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly argues the decisive factor is a derived apocarotenoid signal rather than cis-carotene alone."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 18,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "ZISO",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 4A identifies ZISO as AT1G10830."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "ZISO is explicitly named ζ-carotene isomerase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is described as a carotenoid biosynthetic isomerase/ζ-carotene isomerase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Study organism is Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials specify Arabidopsis thaliana."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Germplasm are in Col-0 except where indicated; ziso alleles used are Arabidopsis lines in this context."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly stated."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The suppressor/complementation work is in Arabidopsis Col-0 background."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "ZISO loss is linked to blocking formation of cis-carotene precursors for the inferred ACS/apocarotenoid signal."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The terminal inferred product is an apocarotenoid signal."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "These tissues are where effects are assayed, but the ACS itself is not directly measured."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The inferred cleavage product regulates PLB formation and plastid development, and ZISO is upstream of its precursor pool."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of ZISO in ccr2 restores PLB formation, cotyledon greening, and leaf plastid development while blocking downstream cis-carotene accumulation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods appear in Figure 4 and text: mapping, complementation, double mutants, carotenoid profiling, TEM, and chlorophyll greening assays."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ZISO functions in carotenoid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results place ZISO in the early cis-carotene isomerization segment upstream of neurosporene and tetra-cis-lycopene accumulation."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The data support an upstream/midstream isomerization step before downstream cis-carotenes."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state ziso background accumulates only 9,15,9’-tri-cis-ζ-carotene, consistent with this substrate assignment."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper shows ZISO enables production of downstream cis-carotenes including di-cis-ζ-carotene, neurosporene isomers and tetra-cis-lycopene."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is directly consistent with the enzyme identity and Results describing blocked downstream products in darkness."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links the blocked downstream cis-carotenes or their cleavage products to ACS formation."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Dark growth, short photoperiod and de-etiolation are all used in the ZISO analyses."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "ZISO is clearly important in the dark, but the paper does not explicitly label it a rate-limiting step."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "As a carotenoid biosynthetic isomerase in plastid carotenoid pathway, plastid localization is directly inferable from pathway context."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper demonstrates genetic epistasis with CRTISO/CCR2, not direct physical interaction."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three findings are all directly supported by Figure 4 and accompanying text."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Application value is speculative and not directly evaluated in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "ziso alone shows delayed greening and a slight/partial virescent phenotype compared with WT."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state ZISO cDNA overexpression used the constitutive CaMV35S promoter in pEARLEY::ZISO-OE."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 4A states ziso-155 causes a premature stop and truncates the protein from 367 aa to 212 aa."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 27,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "DET1",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 5A identifies DET1 as AT4G10180."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 and Figure 5A describe DET1 as a nuclear repressor of photomorphogenesis, and exon 4 homology to IPR008928 is explicitly stated."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the study species."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials state Arabidopsis thaliana."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant det1 work is in Arabidopsis Col-0 background."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments are in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly stated."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The suppressor ccr2 det1-154 was generated in the Arabidopsis Col-0 ccr2 background."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "DET1 is linked to plastid-development outcome and chlorophyll accumulation, but calling ACS itself DET1's terminal metabolite is imprecise; ACS acts relative to DET1."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "DET1 is not itself shown to produce an apocarotenoid; this field conflates regulator with metabolite class."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Etiolated cotyledons and juvenile leaves are the assay tissues, but not direct DET1 metabolite accumulation sites."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "DET1 effects are linked to chlorophyll accumulation and plastid differentiation outcomes."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "DET1 is explicitly described as a nuclear repressor of photomorphogenesis/chromatin-associated regulator."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Results link DET1 to plastid development, chlorophyll biosynthesis capacity via PORA, and PhANG expression."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states DET1 post-transcriptionally regulates PIF3/HY5 protein levels and that det1 mutants affect PORA transcription and photomorphogenesis."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 describes DET1 as nuclear-localized."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "DET1 is specifically analyzed in etiolated seedlings and juvenile leaves by RNA-seq/qPCR and phenotype assays."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "det1-154 suppresses ccr2 virescence and restores PLB formation/greening while reducing specific cis-carotenes."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly analyze PORA, PIF3, HY5 and LHCB2/PhANGs in DET1-related contexts."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNCERTAIN",
+          "reason": "The first clause is supported, but 'enabling POR restoration in ccr2 by ACS' is a mechanistic interpretation rather than a direct DET1 action."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "DET1 is discussed as part of light/photomorphogenic signaling downstream of photoreceptors."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states DET1 interacts with COP1 and DDB1."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states DET1 acts with COP1 and DDB1/chromatin regulatory machinery."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper concludes DET1 acts in parallel with ACS to control PLB formation and chloroplast development."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are present in Figure 5/7 and related text."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Dark growth, short photoperiod, de-etiolation, and D15 are all used in DET1 analyses."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three points are directly supported by Figures 5 and 7 and accompanying text."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential application is plausible but not directly tested or proposed in Results."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "det1-154/det1 phenotypes include smaller rosette, shorter floral stem, reduced fertility, and constitutive photomorphogenic traits."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state DET1 overexpression used CaMV35S promoter in pEARLEY::DET1-OE."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 5A states det1-154 is alternatively spliced, skips exon 4, and produces a 521 aa protein."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 26,
+        "unsupported": 0,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "PIF3",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 lists PIF3 as At1g09530."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper calls PIF3 a transcription factor that interacts with photoreceptors, but does not explicitly state bHLH domain in the provided text."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the study species."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the organism used."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The study context is Arabidopsis Col-0 background."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PIF3 was analyzed in Arabidopsis materials."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Core experiments were in Col-0-derived backgrounds."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "PIF3 is linked to chlorophyll accumulation/PhANG output, but 'terminal metabolite' is indirect and not directly assigned in the paper."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "This class is an interpretive label not explicitly used in the paper for PIF3."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Cotyledons and juvenile leaves are the tissues where PIF3-related expression effects and chlorophyll phenotypes are analyzed."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results tie PIF3-regulated outputs to chlorophyll accumulation and chloroplast development indirectly."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 describes PIF3 as a transcription factor."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper links PIF3 to photomorphogenesis-associated regulation of PhANGs."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show ACS elevates PIF3 transcript and protein; Table 2 describes negative regulation of signaling."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nuclear localization is typical for transcription factors but is not explicitly stated for PIF3 in this paper text."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PIF3 is specifically discussed in etiolated tissues/skotomorphogenesis."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figures 7A, 8A and Table 2 show higher PIF3 in ccr2 etiolated/de-etiolated tissues and reversal by D15."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Elevated PIF3 in ccr2 correlates with reduced LHCB2/PhANG expression and delayed greening; D15 lowers PIF3."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "LHCB2/PhANGs are directly discussed as downstream of the PIF3/HY5 hub."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states higher PIF3/HY5 ratio represses PhANG expression."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "PIF3 is shown to be regulated by ACS, DET1 pathway context, and light."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Antagonism with HY5 is supported functionally; phytochrome interaction appears in annotation, but direct interaction is not experimentally tested here."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly frames the PIF3/HY5 ratio as a key hub controlling PhANG expression and greening."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "RNA-seq, qRT-PCR, westerns, D15, and det1 comparisons are supported, but 'genetic comparison with ziso suppressors' for PIF3 specifically is indirect via transcriptome datasets rather than dedicated genetics."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Etiolation, de-etiolation, short photoperiod and D15 treatment are all relevant to PIF3 analysis."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These findings are supported by Figures 7, 8 and Table 2."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This application statement is speculative and not directly tested in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Broad skotomorphogenesis/photomorphogenesis effects are consistent with the paper's discussion of PIF3 function."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed treats PIF3 as a regulated mechanistic output, not the causal suppressor mutation."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_name": "HY5",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 lists HY5 as At5g11260."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "HY5 is called a transcription factor, but the bZIP family designation is not explicitly stated in the paper text provided."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the study system."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly used."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Core analyses are in Col-0-derived Arabidopsis backgrounds."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HY5 was analyzed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental backgrounds are Col-0-derived."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "HY5 affects chlorophyll/PhANG output indirectly; the paper does not define a terminal metabolite for HY5."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is an inferred class label, not directly stated in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Cotyledons and juvenile leaves are the tissues where HY5 expression and chlorophyll-related phenotypes are analyzed."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results connect HY5-related outputs with chlorophyll accumulation and chloroplast differentiation indirectly."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 identifies HY5 as a transcription factor."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "HY5 is discussed as activating light-responsive/PhANG expression during photomorphogenesis."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show ACS represses HY5 transcript and protein in ccr2, and HY5 promotes light-responsive gene expression."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nuclear localization is expected for HY5 but not explicitly stated in the text provided."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HY5 is discussed in de-etiolation/light-responsive contexts."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figures 7A, 8A and Table 2 show reduced HY5 in ccr2 and restoration/increase with D15."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Reduced HY5 in ccr2 correlates with lower LHCB2 and delayed greening; D15 restores HY5."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "PhANGs including LHCB2 are directly discussed as downstream outputs."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 and text state HY5 promotes light-responsive gene expression/PhANG expression."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "HY5 is discussed as regulated by ACS, DET1/COP1 pathway context, and light."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "COP1 regulation is supported from annotation/discussion and antagonism with PIF3 is functional, but direct interaction tests are not in this study."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper frames HY5 as the counterbalance to PIF3 in the central regulatory hub affecting greening and PhANG output."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "RNA-seq, qRT-PCR, westerns, D15, and det1 comparisons are supported, but specific 'genetic comparison with ziso suppressors' is indirect rather than a direct HY5 genetics test."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Etiolation, de-etiolation, short photoperiod and D15 treatment are all used in HY5-related analyses."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three findings are directly supported by Figures 7, 8 and Table 2."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is speculative and not directly addressed experimentally."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses HY5 within broad photomorphogenesis/light response control, implying pleiotropic effects; this is a fair but somewhat generalized inference."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed treats HY5 as a mechanistic node regulated by the inferred apocarotenoid signal, not as the primary mutation discovered."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 7
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 144,
+    "supported": 117,
+    "unsupported": 0,
+    "uncertain": 27,
+    "total_corrections": 0
+  }
+}

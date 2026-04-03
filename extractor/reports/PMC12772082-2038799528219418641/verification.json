@@ -1,0 +1,117 @@
+{
+  "file": "MinerU_markdown_PMC12772082_2038799528219418641",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12772082_2038799528219418641.md",
+  "timestamp": "2026-03-31T22:00:48.717663",
+  "genes": [
+    {
+      "gene_name": "CMC (encoding Cmc)",
+      "category": "Common",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and methods states EcCMC expresses Cmc containing the glucan-binding domain of Clostridium cellulolyticum CipC (CBM_CipC), mCherry, and another CBM_CipC domain, matching an artificial polysaccharide-binding fusion protein with CBM_CipC domains and mCherry."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says the gene CMC was de novo synthesized using optimized codons of E. coli, and that Cmc contains the glucan-binding domain of Clostridium cellulolyticum CipC."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Clostridium cellulolyticum and E. coli/Escherichia coli are directly named in the paper in relation to Cmc/EcCMC construction."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study explicitly tests the system in Astragalus sinicus and later in Medicago sativa."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "These exact Latin names appear throughout the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper directly measures soil total nitrogen and discusses nitrogen nutrients supplied to plants, but does not define a specific terminal metabolite produced by CMC itself. 'Total nitrogen / nitrogen nutrients' is a broad outcome measure rather than a discrete metabolite."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Nitrogen is treated as an essential nutrient and total nitrogen is measured in soil; calling it a mineral nutrient is consistent with the paper's framing, though not stated in exactly those words."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show increased total nitrogen, chlorophyll a/b, biomass/fresh weight, plant height, leaf area, and soil fertility indicators in the NFBs + EcCMC treatment."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly measures increased total nitrogen in rhizosphere soil and increased N content in dry root and dry leaf, supporting rhizosphere soil and indirect enrichment in roots/leaves."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "EcCMC is described as expressing the surface-displayed/artificial polysaccharide-recognizing protein Cmc and as having high-degree surface exposure of the polysaccharide-binding protein Cmc."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Bacterium binding assays state IPTG was added to induce expression of Cmc or mCherry in the synthetic cells."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports IPTG-inducible expression and use of a pET-28a-based plasmid, but it does not explicitly name the promoter (e.g., T7). 'IPTG-inducible expression in pET-28a system' is inferable but not fully explicit."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper shows interaction with nitrogen-fixing bacteria surface polysaccharides and root-surface polysaccharides, not with proteins. The listed interactors are polysaccharides, not proteins."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The study includes 16S rDNA amplicon sequencing, ITS amplicon sequencing, and metabolomic analysis in the Results."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments involve co-inoculation with Sinorhizobium medicae NKN632 and Sphingomonas endophytica NKN643, and plants were grown with Fahraeus nitrogen-free nutrient solution/low-nitrogen conditions."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are described and used in the paper: engineered EcCMC expression, confocal microscopy with FITC-labeled polysaccharides and FITC-ConA, PCC analysis, CFU root binding, SEM, microbiome profiling, metabolomics, and soil nitrogenase/TN/SOM assays."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly show EcCMC promotes root recruitment/colonization of exogenous NFBs and is associated with increased nitrogenase activity, soil total nitrogen, soil organic matter, and improved plant growth in A. sinicus and M. sativa."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each numbered statement is directly reflected in the Results: specific binding to NFB polysaccharides/root-associated polysaccharides, increased root binding/colonization vs EcM, increased Rhizobiales and Sphingomonadales abundance, higher nitrogenase and soil TN, and improved growth in both legume species."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper mentions low potential ecological risk because EcCMC was not detectable after 14 days in a previous study, not shown in this paper's own Results. 'No growth penalty reported' is true by absence but not explicitly tested as a tradeoff analysis."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion and Conclusion explicitly present EcCMC as a synthetic biology/engineered bacteria tool to recruit beneficial microbes, improve biological nitrogen fixation, soil fertility, and plant yield, with possible broader application."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does support that EcCMC mainly functions as a bridge for microbial recruitment rather than as a catalytic or transcriptional regulator, but it does not use the label 'Common Gene' as a formal classification."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "Nitrogen-fixing bacteria surface polysaccharides; root surface polysaccharides",
+          "new_value": "NA",
+          "reason": "The paper shows interaction with nitrogen-fixing bacteria surface polysaccharides and root-surface polysaccharides, not with proteins. The listed interactors are polysaccharides, not proteins."
+        }
+      ],
+      "stats": {
+        "supported": 16,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 21,
+    "supported": 16,
+    "unsupported": 1,
+    "uncertain": 4,
+    "total_corrections": 1
+  }
+}

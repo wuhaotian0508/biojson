@@ -1,0 +1,526 @@
+{
+  "file": "MinerU_markdown_PMC7152610_2038794943153086473",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC7152610_2038794943153086473.md",
+  "timestamp": "2026-03-31T22:27:41.238454",
+  "genes": [
+    {
+      "gene_name": "NCED",
+      "category": "Common",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states abamine inhibits NCED enzymatic action and ABA biosynthesis; NCED is the known 9-cis-epoxycarotenoid dioxygenase in the text/discussion."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in tomato fruits."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The study is clearly tomato, but the full Latin binomial does not explicitly appear in the provided text."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NCED is discussed in the context of tomato fruits and abamine treatment of tomato fruits."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Tomato is the species used, but the exact Latin name is not explicitly shown in the provided paper text."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "NCED is explicitly linked to ABA biosynthesis; abamine treatment reduced ABA."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "ABA is clearly measured, but the exact phrase 'apocarotenoid-derived hormone' is not explicitly used."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show ABA increase is associated with altered ripening and extended shelf life; abamine reversal supports ABA regulating these traits."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "ABA was quantified from frozen pericarp tissues across ripening stages."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization of NCED is stated in the paper text."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "NCED itself was not transgenically expressed here. The statement mixes endogenous NCED, pharmacology, and discussion of E8-driven RNAi lines from other studies."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show abamine treatment reduced ABA, increased ethylene, and reverted firmness and water loss phenotypes in LCYb fruits."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes the abamine/NCED-inhibitor results and correctly notes NCED was not the manipulated transgene."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Abamine treatment, ABA quantification, and ethylene/firmness/water-loss assays are explicitly described in Results and Methods."
+        },
+        "Omics_Data": {
+          "verdict": "UNCERTAIN",
+          "reason": "ABA was measured by LC-HRMS, but no omics dataset was generated specifically for NCED."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Abamine treatment at mature green stage is explicitly stated."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Abamine-mediated ABA reduction increased ethylene and reversed firmness/water-loss phenotypes, consistent with accelerated ripening/reduced shelf life."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible interpretation, but such application value is not directly tested in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly interrogates NCED enzymatic action through abamine, but no specific NCED isoform is studied."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Plastid",
+          "new_value": "NA",
+          "reason": "No subcellular localization of NCED is stated in the paper text."
+        }
+      ],
+      "stats": {
+        "supported": 12,
+        "unsupported": 1,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "AtLCYb",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states overexpression of Arabidopsis LYCOPENE β-CYCLASE (LCYb)."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper text."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "LCYb is directly studied in the carotenoid pathway and linked to downstream ABA biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to increased flux through the β-branch of carotene biosynthesis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "LCYb is shown to divert flux from lycopene to cyclic carotenoids upstream of xanthophyll/ABA formation."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results describe decreases in linear carotenes and increases in β-carotene upon LCYb overexpression, consistent with lycopene as substrate; the discussion mentions conversion of lycopene into β-carotene."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "β-carotene is the central product increased by LCYb overexpression."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The description matches the paper's depiction that LCYb converts lycopene toward β-carotene and boosts cyclic carotenoids/xanthophylls/ABA."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly argues LCYb increases the precursor pool leading to higher ABA."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states data suggest that in tomato fruits β-cyclization is rate-limiting for ABA biosynthesis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Both β-carotene and ABA are central measured outputs of AtLCYb overexpression."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "β-carotene as carotenoid is explicit; 'hormone-derived apocarotenoid' for ABA is accurate biochemically but not stated in those exact words."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary/results explicitly state β-carotene is provitamin A and ABA is associated with ripening, firmness, water loss, and shelf life."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measurements are in tomato fruits/pericarp during ripening; chromoplast association is mentioned via promoter description."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The transgene was expressed in tomato fruits."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Tomato is clear, but the exact Latin binomial is not explicitly printed in the provided text."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says Arabidopsis LCYb."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Arabidopsis is explicit, but 'Arabidopsis thaliana' is not spelled out in the provided text."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state overexpression under the chromoplast-associated PDS promoter."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure S1 is described as showing AtLCYb expression peaking at breaker and B+4."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Chromoplast-associated promoter implies plastid context, but localization of AtLCYb protein itself is not directly shown in the paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed phenotypes—higher β-carotene/ABA, lower ethylene, longer shelf life, greater firmness, lower water loss—are directly reported in Results."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately reflects the main Results and the abamine rescue experiment."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are directly described in Results/Methods."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports EU-TOM3 microarray data deposited as GSE108415 and multiple metabolomics platforms including LC-HRMS and GC-MS."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Greenhouse growth, ripening stages, storage, and abamine treatment are all explicitly described."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports decreased linear carotenes/lycopene and reduced nonpolar antioxidant activity along with broader metabolic remodeling."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "LCYb function is clear, but 'Carotenoid cyclase family' is not explicitly stated in the paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary explicitly concludes manipulation of β-carotene can improve nutritional value and shelf life."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The discussion indeed argues β-cyclization may be decisive/rate-limiting for ABA production in tomato fruit late ripening."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "5.5.1.19",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper text."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 1,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "RIN",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states RIN encodes a MADS-box transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "MADS-box for RIN is explicitly stated in Discussion."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RIN expression was measured in tomato fruits."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Tomato is clear, but the exact Latin name is not explicitly shown in the provided text."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RIN analyzed here is the tomato ripening regulator."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Exact Latin binomial is not explicitly provided in the text."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "RIN is linked to ABA and ethylene correlation networks, but it is a ripening regulator rather than directly controlling a terminal metabolite accumulation shown here."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Hormonal classes are relevant, but the exact assignment to RIN is indirect."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "RIN is discussed as a key ripening regulator linked to fruit ripening and shelf life-related phenotypes."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression analyses and hormone measurements are in fruit/pericarp during ripening."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links RIN to ethylene biosynthesis/signaling and ripening-associated processes."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "RIN is explicitly a transcription factor analyzed at transcript level."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states RIN binds promoter elements of ripening-associated genes and qRT-PCR panel includes ethylene/ripening genes affected in LCYb fruits."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "RIN is presented as necessary for ripening-associated gene expression, and its transcript is strongly repressed in LCYb fruits from breaker onward."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show RIN repression coincides with reduced ethylene and delayed ripening/extended shelf life in LCYb fruits."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states both NAC-NOR and RIN are necessary for ethylene synthesis and fruit ripening."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "ABA co-regulation is shown in network analysis, and discussion cites NAC-NOR acting upstream of RIN."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "UNCERTAIN",
+          "reason": "RIN is placed in an ABA-ethylene network, but a specific feedback/feedforward mechanism for RIN is proposed rather than directly demonstrated."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Discussion notes RIN binds promoters in a CNR-dependent fashion, but not a direct protein-protein interaction."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly say RIN transcript was strongly repressed starting at breaker and throughout ripening in LCYb fruits."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RIN was analyzed across fruit ripening stages in tomato."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No nuclear localization experiment or explicit localization statement for RIN appears in the paper text."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR time course and correlation network analysis are explicitly reported."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary matches the Results and network analysis without overclaiming direct causality."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "RIN here is endogenous; no heterologous promoter manipulation of RIN was performed."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RIN was included in microarray/correlation analyses and directly measured by qRT-PCR; GEO accession is given for microarrays."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "RIN was studied across fruit ripening stages in the LCYb overexpression background."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Delaying a major ripening regulator is consistent with delayed softening and altered ripening metabolism, as shown in LCYb fruits."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This application statement is interpretive and not directly tested in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "RIN expression kinetics were directly tested in Results and integrated into the mechanistic model."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No nuclear localization experiment or explicit localization statement for RIN appears in the paper text."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 1,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_name": "NAC-NOR",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states NAC-NOR belongs to the NAC domain family of transcription factors."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "NAC domain family is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NAC-NOR expression was measured in tomato fruits."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Tomato is clear, but the exact Latin binomial is not explicitly shown in the provided text."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NAC-NOR analyzed here is the tomato ripening regulator."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Exact Latin species name is not explicitly printed in the text."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "NAC-NOR is linked to ABA and ethylene network behavior, but not directly tested as controlling terminal metabolite accumulation in this paper."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Hormone classes are relevant, but assignment is indirect rather than directly demonstrated for NAC-NOR."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "NAC-NOR is explicitly discussed as a key fruit ripening regulator associated with shelf-life-related phenotypes."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression and hormone data concern ripening fruit/pericarp tissues."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly links NAC-NOR with ripening control and ethylene biosynthesis crosstalk."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "NAC-NOR is explicitly a transcription factor."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states NAC-NOR acts upstream of RIN and is necessary for ethylene synthesis and fruit ripening, implying ripening-associated targets."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Its expression increased in LCYb fruits and network analysis shows strong positive co-regulation with ABA."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show NAC-NOR induction correlates with altered ripening network in LCYb fruits."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states NAC-NOR and RIN are necessary for ethylene synthesis and fruit ripening."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "ABA association is directly supported by the correlation network and discussion of ABA-regulatory relationships."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "UNCERTAIN",
+          "reason": "Positive association with ABA is supported, but a specific feedback/feedforward mechanism is not directly demonstrated."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses a genetic/regulatory relationship with RIN, not a demonstrated physical interaction."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly report a large increase in NAC-NOR expression at the breaker stage and upregulation in LCYb fruits."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NAC-NOR was analyzed across tomato fruit ripening stages."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization experiment or explicit nucleus localization statement appears in the paper text."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR time course and correlation network analysis are explicitly reported."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes the reported NAC-NOR expression and co-regulation results."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "NAC-NOR was assessed as an endogenous gene, not via promoter-driven transgenesis."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "NAC-NOR is part of transcriptomic/correlation analyses and was measured by qRT-PCR; GEO accession is provided for microarray data."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Studied across fruit ripening stages in LCYb-overexpressing background."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "As a major ripening regulator, altered NAC-NOR expression is associated with broad ripening changes in the study."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This application-oriented interpretation is not directly tested in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "NAC-NOR expression was directly assayed and incorporated into the mechanistic model in Results/Discussion."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No localization experiment or explicit nucleus localization statement appears in the paper text."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 1,
+        "uncertain": 7
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 109,
+    "supported": 80,
+    "unsupported": 4,
+    "uncertain": 25,
+    "total_corrections": 4
+  }
+}

@@ -1,177 +1,169 @@
 {
   "file": "Nat_Biotechnol_2001_Muir",
   "md_path": "/data/haotianwu/biojson/extractor/input/Nat_Biotechnol_2001_Muir.md",
-  "timestamp": "2026-03-28T11:49:32.650061",
+  "timestamp": "2026-03-30T00:13:26.425016",
   "genes": [
     {
       "gene_name": "chi",
       "category": "Pathway",
       "verification": {
-        "Species": {
-          "verdict": "SUPPORTED",
-          "reason": "The transformed host is tomato throughout the paper, including transformation of tomato var. FM6203."
-        },
-        "Species_Latin_Name": {
-          "verdict": "UNSUPPORTED",
-          "reason": "The paper says tomato but does not state the Latin name Solanum lycopersicum."
-        },
-        "Variety": {
-          "verdict": "SUPPORTED",
-          "reason": "Experimental protocol states tomato '(var. FM6203, Unilever commercial variety)'."
-        },
-        "Origin_Species": {
-          "verdict": "SUPPORTED",
-          "reason": "The transgene is described as the chi gene from Petunia."
-        },
-        "Origin_Species_Latin_Name": {
-          "verdict": "SUPPORTED",
-          "reason": "Experimental protocol specifies 'Petunia hybrida'."
-        },
-        "Origin_Species_Variety": {
-          "verdict": "SUPPORTED",
-          "reason": "The chi cDNA came from 'P. hybrida inbred line V30'."
-        },
-        "Expression_Pattern": {
-          "verdict": "SUPPORTED",
-          "reason": "Results state endogenous chi transcript was below detection in control peel at all developmental stages; in high-flavonol transgenics low chi transcript was detected in peel at all stages, and transcripts were relatively high in leaves and green/breaker/turning flesh."
-        },
-        "Promoters": {
-          "verdict": "SUPPORTED",
-          "reason": "pBBC50 contained the Petunia chi gene under the constitutive cauliflower mosaic virus double 35S promoter."
-        },
-        "Protein_Family_or_Domain": {
-          "verdict": "UNSUPPORTED",
-          "reason": "The paper identifies CHI as chalcone isomerase but does not mention 'Type IV chalcone isomerase family' or any domain classification."
-        },
         "Enzyme_Name": {
           "verdict": "SUPPORTED",
-          "reason": "The paper explicitly says the chi gene encodes chalcone isomerase."
+          "reason": "The paper explicitly states the Petunia chi-a gene encodes chalcone isomerase."
         },
         "EC_Number": {
           "verdict": "UNSUPPORTED",
-          "reason": "No EC number is given in the paper."
+          "reason": "No EC number is provided anywhere in the paper."
         },
         "Biosynthetic_Pathway": {
           "verdict": "SUPPORTED",
-          "reason": "The paper discusses CHI within the flavonoid biosynthetic pathway."
+          "reason": "The paper repeatedly discusses CHI within the flavonoid/flavonol biosynthetic pathway and Figure 1 is the flavonoid biosynthetic pathway."
         },
         "Pathway_Branch_or_Subpathway": {
           "verdict": "SUPPORTED",
-          "reason": "The study specifically frames CHI as involved in flavonol biosynthesis in tomato peel, and measures flavonol products there."
+          "reason": "The text states CHI is 'an enzyme involved in flavonol biosynthesis' and links its activity to increased flavonol accumulation."
         },
         "Metabolic_Step_Position": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper states naringenin chalcone is converted into the next compound in the pathway, naringenin, by CHI, placing it upstream of flavonols rather than terminal."
-        },
-        "Rate_Limiting_or_Key_Control_Step": {
-          "verdict": "SUPPORTED",
-          "reason": "Authors state the data 'suggested that one of the rate-limiting steps in flavonol biosynthesis in peel could lie at the level of chi gene expression'."
+          "verdict": "UNCERTAIN",
+          "reason": "CHI is clearly an intermediate pathway enzyme converting naringenin chalcone to naringenin, but the exact label 'upstream/midstream step' is not used in the paper."
         },
         "Primary_Substrate": {
           "verdict": "SUPPORTED",
-          "reason": "The paper identifies naringenin chalcone as a substrate for CHI."
+          "reason": "The paper states naringenin chalcone is converted into the next compound in the pathway, naringenin, by chalcone isomerase."
         },
         "Primary_Product": {
           "verdict": "SUPPORTED",
-          "reason": "The paper states naringenin chalcone is converted into naringenin by chalcone isomerase."
+          "reason": "The paper explicitly identifies naringenin as the product formed from naringenin chalcone by CHI."
         },
         "Catalyzed_Reaction_Description": {
           "verdict": "SUPPORTED",
-          "reason": "Directly consistent with the stated conversion of naringenin chalcone to naringenin and increased downstream flavonols."
+          "reason": "This reaction description matches the explicit statement that CHI converts naringenin chalcone into naringenin."
         },
         "End_Product_Connection_Type": {
           "verdict": "SUPPORTED",
-          "reason": "Results show depletion of naringenin chalcone and increase of downstream flavonols in chi transformants, supporting this connection."
+          "reason": "The Results state naringenin chalcone is an intermediate in flavonol biosynthesis and CHI converts it to the next compound, linking CHI to flavonol end products."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the undetectable endogenous chi transcript plus high naringenin chalcone accumulation 'suggested that one of the rate-limiting steps in flavonol biosynthesis in peel could lie at the level of chi gene expression.'"
         },
         "Terminal_Metabolite": {
           "verdict": "SUPPORTED",
-          "reason": "The paper reports accumulation mainly as rutin and other quercetin glycosides, plus kaempferol glycosides."
+          "reason": "Rutin is identified as the major quercetin glycoside, and increased quercetin and kaempferol glycosides are documented in transgenics."
         },
         "Terminal_Metabolite_Class": {
           "verdict": "SUPPORTED",
-          "reason": "These metabolites are explicitly discussed as flavonoids, specifically flavonols."
-        },
-        "Terminal_Metabolite_Accumulation_Site": {
-          "verdict": "SUPPORTED",
-          "reason": "Flavonol increases are shown in fruit peel, and processing experiments show flavonols retained in tomato paste due to leaching from peel."
+          "reason": "These metabolites are explicitly described as flavonols/flavonoids in the paper."
         },
         "Terminal_Metabolite_Function": {
           "verdict": "SUPPORTED",
-          "reason": "Introduction states flavonols are potent antioxidants and epidemiological data suggest protection against cardiovascular disease."
+          "reason": "The introduction states flavonols are potent antioxidants and epidemiological data suggest flavonoid intake is correlated with decreased risk for cardiovascular disease."
         },
         "Core_Phenotypic_Effect": {
           "verdict": "SUPPORTED",
-          "reason": "Paper reports up to 78-fold increase in peel flavonols mainly due to rutin accumulation, substantial quercetin/kaempferol increases, and severe depletion of naringenin chalcone in high-flavonol transformants."
+          "reason": "The abstract and Results report up to 78-fold increased peel flavonols, mainly rutin/quercetin glycosides, and Figure 4C/text state naringenin chalcone was severely depleted in high-flavonol transformants."
         },
         "Summary_Key_Findings_of_Core_Gene": {
           "verdict": "SUPPORTED",
-          "reason": "Each listed point matches Results/Conclusions: increased peel flavonols mainly rutin/quercetin glycosides, up to 66-fold quercetin and 57-fold kaempferol in hydrolyzed extracts, depleted naringenin chalcone, cosegregation and stability through fourth generation, and 65% retention in paste."
+          "reason": "All three points are directly supported: endogenous chi transcript below detection in peel with naringenin chalcone accumulation; Petunia chi overexpression increased quercetin/kaempferol glycosides and depleted naringenin chalcone; phenotype segregated with the transgene and was stable through fourth generation and in field trials."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention 'Type I chalcone isomerase family' or any protein family/domain classification."
         },
         "Core_Validation_Method": {
           "verdict": "SUPPORTED",
-          "reason": "All listed methods appear in the paper: transgenic overexpression, segregation analysis, HPLC of hydrolyzed/nonhydrolyzed extracts, Northern blotting, field trial evaluation, and processing assay."
+          "reason": "These methods are described in the paper: transgenic overexpression, Southern hybridization, Northern analysis, HPLC of hydrolyzed/nonhydrolyzed extracts, segregation across generations, and field trial evaluation."
         },
-        "Interacting_Proteins": {
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states low levels of chi transcript were detected in peel at all stages in high-flavonol transformants, no chi detected in control peel, and relatively high chi transcript levels in leaf and green/breaker/turning flesh of pBBC50 plants, while flavonoid increases were mainly in peel."
+        },
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism is tomato throughout the paper."
+        },
+        "Species_Latin_Name": {
           "verdict": "UNSUPPORTED",
-          "reason": "The paper measures expression of chs and fls alongside chi, but does not identify CHS and FLS as interacting proteins of CHI."
+          "reason": "The Latin name Solanum lycopersicum does not appear in the paper."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The Experimental protocol specifies tomato var. FM6203."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The transformed gene is described as coming from Petunia/Petunia hybrida."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The Experimental protocol explicitly states Petunia hybrida."
+        },
+        "Origin_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The chi cDNA is said to come from P. hybrida inbred line V30."
+        },
+        "Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the gene was under control of the constitutive cauliflower mosaic virus double 35S promoter."
         },
         "Environment_or_Treatment_Factor": {
           "verdict": "SUPPORTED",
-          "reason": "The study explicitly includes developmental stage/ripening, glasshouse growth, open field trial, and paste processing."
+          "reason": "Plants were grown in a glasshouse, field trial fruit were evaluated, and developmental stage effects on flavonoid accumulation are explicitly shown and discussed."
         },
-        "Omics_Data": {
+        "Terminal_Metabolite_Accumulation_Site": {
           "verdict": "SUPPORTED",
-          "reason": "No omics-scale dataset is reported; the paper presents targeted Northern blots and metabolite HPLC rather than omics."
-        },
-        "Potential_Tradeoffs": {
-          "verdict": "SUPPORTED",
-          "reason": "Results state no gross phenotypic differences, slight dullness of ripe fruit red tone, and unchanged lycopene concentration."
+          "reason": "Flavonoids accumulated mainly in fruit peel, and processing experiments showed peel-derived flavonols leached into paste and were partly retained."
         },
         "Breeding_or_Engineering_Application_Value": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper supports utility for generating high-flavonol tomatoes and functional food products without major phenotype penalty, but statements about deployment in breeding and especially 'stacking with downstream glycosylation capacity' are not directly tested and are speculative."
+          "verdict": "SUPPORTED",
+          "reason": "The paper frames the work as nutritional enhancement, reports stable inheritance, no gross phenotype differences, retention in paste, and concludes these lines may offer opportunities for tomato-based products with health benefit properties."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The claim about 'slight dullness in ripe fruit red color tone due to reduced yellow naringenin chalcone in peel' is not supported as written. The paper notes slight dullness in red tone and separately states peel did not accumulate significant yellow naringenin chalcone; it does not attribute dullness to reduced naringenin chalcone. The parts about no major vegetative phenotype change and unchanged lycopene are supported, but the full field combines unsupported causation."
         },
         "Other_Important_Info": {
           "verdict": "SUPPORTED",
-          "reason": "The paper indeed manipulates heterologous Petunia chi in tomato, reports isoquercitrin accumulation suggesting rhamnosyltransferase may be limiting, and presents alternative mechanistic ideas as speculation rather than proof."
+          "reason": "This accurately summarizes that the experimentally manipulated gene was the Petunia chi transgene, endogenous tomato chi was mainly background/limiting context, and increased isoquercitrin in strong lines suggested a rhamnosyltransferase may become rate limiting for rutin production."
         }
       },
       "corrections": [
         {
-          "field": "Species_Latin_Name",
-          "old_value": "Solanum lycopersicum",
-          "new_value": "NA",
-          "reason": "The paper says tomato but does not state the Latin name Solanum lycopersicum."
-        },
-        {
-          "field": "Protein_Family_or_Domain",
-          "old_value": "Type IV chalcone isomerase family enzyme",
-          "new_value": "NA",
-          "reason": "The paper identifies CHI as chalcone isomerase but does not mention 'Type IV chalcone isomerase family' or any domain classification."
-        },
-        {
           "field": "EC_Number",
           "old_value": "5.5.1.6",
           "new_value": "NA",
-          "reason": "No EC number is given in the paper."
+          "reason": "No EC number is provided anywhere in the paper."
         },
         {
-          "field": "Interacting_Proteins",
-          "old_value": "chs; fls",
+          "field": "Protein_Family_or_Domain",
+          "old_value": "Type I chalcone isomerase family",
           "new_value": "NA",
-          "reason": "The paper measures expression of chs and fls alongside chi, but does not identify CHS and FLS as interacting proteins of CHI."
+          "reason": "The paper does not mention 'Type I chalcone isomerase family' or any protein family/domain classification."
+        },
+        {
+          "field": "Species_Latin_Name",
+          "old_value": "Solanum lycopersicum",
+          "new_value": "NA",
+          "reason": "The Latin name Solanum lycopersicum does not appear in the paper."
+        },
+        {
+          "field": "Potential_Tradeoffs",
+          "old_value": "Slight dullness in ripe fruit red color tone due to reduced yellow naringenin chalcone in peel; no major vegetative phenotype change; lycopene concentration unchanged",
+          "new_value": "NA",
+          "reason": "The claim about 'slight dullness in ripe fruit red color tone due to reduced yellow naringenin chalcone in peel' is not supported as written. The paper notes slight dullness in red tone and separately states peel did not accumulate significant yellow naringenin chalcone; it does not attribute dullness to reduced naringenin chalcone. The parts about no major vegetative phenotype change and unchanged lycopene are supported, but the full field combines unsupported causation."
         }
       ],
       "stats": {
-        "supported": 27,
+        "supported": 25,
         "unsupported": 4,
         "uncertain": 1
       }
     }
   ],
   "summary": {
-    "total_fields": 32,
-    "supported": 27,
+    "total_fields": 30,
+    "supported": 25,
     "unsupported": 4,
     "uncertain": 1,
     "total_corrections": 4

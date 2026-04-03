@@ -5,7 +5,7 @@ import numpy as np
 from pathlib import Path
 from typing import List, Tuple, Optional
 
-from data_loader import GeneChunk, process_all_data
+from data_loader import GeneChunk, DataLoader
 from config import (
     JINA_API_KEY, JINA_EMBEDDING_URL, JINA_RERANK_URL,
     EMBEDDING_MODEL, RERANK_MODEL,
@@ -74,10 +74,11 @@ class JinaRetriever:
             return
 
         print("Building new index...")
-        self.chunks = process_all_data(data_dir)
+        loader = DataLoader(data_dir)
+        self.chunks = loader.load_all_genes()
 
         # 获取所有文本的向量
-        texts = [c.text for c in self.chunks]
+        texts = [c.content for c in self.chunks]
         print(f"Getting embeddings for {len(texts)} chunks...")
         self.embeddings = self.get_embeddings(texts)
 
@@ -112,7 +113,7 @@ class JinaRetriever:
         if not candidates:
             return []
 
-        documents = [c[0].text for c in candidates]
+        documents = [c[0].content for c in candidates]
 
         payload = {
             "model": RERANK_MODEL,

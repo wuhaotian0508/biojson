@@ -1,0 +1,161 @@
+{
+  "file": "MinerU_markdown_PMC12829780_2038799459512516624",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12829780_2038799459512516624.md",
+  "timestamp": "2026-03-31T22:01:29.166146",
+  "genes": [
+    {
+      "gene_name": "CrTAA1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly identify CrTAA1 as 'Ceric.10G039800' in the phylogenetic/domain analysis section."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper defines TAA1 as 'TRYPTOPHAN AMINOTRANSFERASE OF ARABIDOPSIS 1' and states CrTAA1 is the sole Ceratopteris gene in the AtTAA1/AtTAR1/AtTAR2 lineage, supporting it as a TAA1 homolog."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study repeatedly states the gene is from Ceratopteris, specifically C. richardii."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is explicitly given as 'Ceratopteris richardii' in Methods and Results."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state that Ceratopteris richardii strain 'Hn-n' was used as the WT for generating transgenic plants."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All functional tests, reporters, chemical perturbations, and CRISPR experiments were performed in Ceratopteris."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species throughout the experiments is Ceratopteris richardii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify the WT strain used in the study was Hn-n; the experiments were conducted in this background."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly concerns auxin/IAA biosynthesis, defines IAA as indole-3-acetic acid, and links CrTAA1 to TAA1-mediated auxin biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA is explicitly referred to as auxin, which is a phytohormone."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show auxin signaling/maxima are associated with MPC establishment, proliferation, de novo meristem formation, and male-to-hermaphrodite conversion; CrTAA1 inhibition/knockout blocks these processes."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows DR5 auxin signaling maxima at the new proliferation site and later notch center, but this is a reporter of auxin response/signaling, not direct measurement of IAA accumulation. The location is supported for signaling maxima, not unequivocally for metabolite accumulation."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly discusses TAA1-YUC-mediated auxin biosynthesis and identifies CrTAA1 as part of the canonical IAA/IPyA-related pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CrTAA1 is described as the sole gene in the TAA clade, distinct from TAR3/4-like genes, supporting assignment to the TAA branch of the canonical IPyA auxin pathway."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "The study supports CrTAA1 acting upstream in auxin biosynthesis, but it does not explicitly state 'committed step.' That wording is stronger than what is shown directly in the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "By identification as a TAA1 homolog in the canonical pathway, CrTAA1 is inferably the tryptophan aminotransferase step; the acronym/function supports tryptophan as substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper defines IPA as indole-3-pyruvic acid in abbreviations and discusses TAA1-YUC canonical auxin biosynthesis, allowing direct inference that the TAA1 step produces IPA."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Although not experimentally assayed biochemically here, the paper frames CrTAA1 as the canonical TAA1 homolog in the TAA1-YUC auxin biosynthesis pathway, supporting conversion of tryptophan to IPA supplying downstream YUC-mediated IAA production."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Within the canonical TAA1-YUC pathway presented in the paper, TAA1 forms the immediate precursor (IPA) for downstream IAA synthesis."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not use 'rate-limiting,' but strongly supports CrTAA1 as a key control point for local auxin biosynthesis required for de novo meristem formation and sex-type conversion via inhibitor and knockout phenotypes."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state CrTAA1 is the sole Ceratopteris gene in the TAA clade and that this clade is characterized by exclusive presence of the Alliinase-C domain (IPR006948)."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed elements are supported: qPCR detected transcripts at 4, 5, 8, and 10 DAG; expression was significantly higher in hermaphrodites from 5 DAG onward; reporter localized to meristem initiation/notch center; during conversion it localized to the new proliferation site by 3 DAT and de novo meristem center by 9 DAT."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the reporter observations in Ceratopteris gametophytes during hermaphrodite development and male-to-hermaphrodite conversion."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly describe pCrTAA1::H2B-GFP::3′CrTAA1, CrU6 promoters driving gRNAs, and CrUBQ10 driving Cas9 in the CRISPR construct."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed conditions are directly described: antheridiogen-free FM induces conversion, CFM/antheridiogen promotes male development, L-kynurenine inhibits TAA1-mediated auxin biosynthesis, and exogenous IAA broadly activates DR5."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed method is reported in the paper and used to test CrTAA1 function or related auxin dynamics: Kyn inhibition, CRISPR knockout, pCrTAA1 reporter, qPCR, DR5 imaging, time-lapse confocal imaging, and lineage/division analyses."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper includes phylogenetic/domain analysis using genome resources and supplementary datasets; no new omics accession for transcriptome/metabolome is reported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Chemical inhibition and CRISPR knockout both block new auxin maxima/signaling dynamics, MPC lineage establishment/proliferation, de novo meristem formation, and male-to-hermaphrodite conversion."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state CrTAA1 loss prevents sex-type conversion and new meristem formation, and Kyn-treated samples show reduced growth/minimal proliferation."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not discuss crop breeding, engineering applications, or nutritional value. This is an extrapolative interpretation, not a paper-supported finding."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state CrTAA1 is the sole Ceratopteris gene within the TAA clade, others group with TAR3/4, and knockout phenocopies Kyn inhibition."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four summary points are directly supported by the Results: sole canonical TAA1 homolog/domain placement, localized expression pattern, Kyn inhibition effects on DR5/MPC/conversion, and CRISPR knockout phenocopy demonstrating essentiality."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Limited direct crop nutritional value; demonstrates that manipulating localized auxin biosynthesis can control developmental reprogramming and de novo meristem formation in seed-free plants",
+          "new_value": "NA",
+          "reason": "The paper does not discuss crop breeding, engineering applications, or nutritional value. This is an extrapolative interpretation, not a paper-supported finding."
+        }
+      ],
+      "stats": {
+        "supported": 29,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 32,
+    "supported": 29,
+    "unsupported": 1,
+    "uncertain": 2,
+    "total_corrections": 1
+  }
+}

@@ -1,0 +1,806 @@
+{
+  "file": "MinerU_markdown_PMC11638483_2038801160713838596",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC11638483_2038801160713838596.md",
+  "timestamp": "2026-03-31T21:40:10.019940",
+  "genes": [
+    {
+      "gene_name": "MdPGT1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MdPGT1 is an apple gene used/referenced in this study."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper concerns apple, identified as Malus × domestica."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "The study uses 'Royal Gala' for transgenic apple lines, but MdPGT1 itself is referenced from prior work and not explicitly stated here as cloned from 'Royal Gala'."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MdPGT1 was used in transient assays and referenced in apple transgenic context."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Apple in this paper is Malus × domestica."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Transgenic apple analyses in this paper were performed in 'Royal Gala'."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "MdPGT1 is described as converting phloretin into stable glycosylated phlorizin."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Phlorizin is discussed as a dihydrochalcone/flavonoid product; DHCs are stated to be flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states DHCs broadly have health benefits and says phlorizin affects glucose absorption/excretion, but does not directly assign all listed functions specifically to MdPGT1-derived phlorizin in Results."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "In transient assays, pHEX2_PGT1 was used to convert reactive phloretin to stable phlorizin for detection."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are stated: MdPGT1 was co-expressed in N. benthamiana to convert phloretin to phlorizin; this enabled DHC detection; MdPGT1 expression was not consistently affected in NCR RNAi lines."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper used transient co-expression in N. benthamiana and HPLC/UPLC metabolite analyses involving MdPGT1 context."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Phlorizin/DHCs are reported in leaves, roots, stems, and young fruit."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is interpretive/meta commentary, not a factual statement directly made by the paper."
+        },
+        "Omics_Data": {
+          "verdict": "UNCERTAIN",
+          "reason": "Comparative transcriptomics is in the paper, but not specifically for MdPGT1; metabolite profiling is supported."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states prior MdPGT1 downregulation caused severe developmental abnormalities."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "MdPGT1 functions as a glycosyltransferase converting phloretin to phlorizin; UDP-glucosyltransferase designation is consistent with the gene name and function, though domain not deeply characterized here."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "MdPGT1 was used in transient expression in Nicotiana benthamiana leaves."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "pHEX2 is described as CaMV 35S:ORF:nos-3′ for transient constructs including pHEX2_PGT1."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports engineering DHC biosynthesis generally, but does not explicitly single out MdPGT1 in this exact application statement within Results."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 15,
+        "unsupported": 0,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "MdNCR1a",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1a is explicitly assigned to MD05G1167400 and accession PP495130."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1a is an apple gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Apple is given as Malus × domestica."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Although transgenic work used 'Royal Gala', the gene model itself is not explicitly said to originate from Royal Gala."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1a was tested in apple and N. benthamiana assays, with apple as the focal species."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied apple species is Malus × domestica."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Apple transgenic lines were generated in 'Royal Gala'."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies MdNCR1 genes as candidate naringenin chalcone reductases (NCRs), i.e. naringenin chalcone carbon double-bond reductases."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1a functions in the phenylpropanoid/flavonoid side branch producing dihydrochalcones."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper centers on DHC biosynthesis as a branch of the flavonoid pathway."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1a is implicated at the branch toward DHC formation via reduction of naringenin chalcone."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies naringenin chalcone as the substrate of NCR activity; MdNCR1a is included among highly active NCR1 genes."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "NCR activity is described as producing phloretin from naringenin chalcone."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This reaction is the central proposed function of MdNCR1 genes, supported by transient assays and MdNCR1b biochemistry."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Phloretin is converted to phlorizin and other DHC glycosides; this direct precursor relationship is explicit."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion states MdNCR1 fulfills the requirements to be the missing enzyme required for DHC biosynthesis in apple leaves."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1a activity was linked to phlorizin accumulation in transient assays and NCR knockdown reduced phlorizin in apple."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Phlorizin belongs to DHCs, and DHCs are described as flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses DHC/phlorizin roles in defense and human health largely in Discussion, but not as a direct Results-supported function of MdNCR1a."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient MdNCR1a expression produced very high phlorizin in N. benthamiana."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points match the Results, though RNAi was against NCR genes collectively rather than MdNCR1a alone."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Comparative transcriptomics, transient expression, RNAi knockdown, and metabolite profiling were all used."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1a-GFP localized to the vacuolar membrane in N. benthamiana."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient pHEX2 constructs and RNAi pTKO2 used CaMV 35S promoter."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states MdNCR1a-c share >98% amino acid identity and identical substrate-binding pockets."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "RT-qPCR measured MdNCR1a-c together, not MdNCR1a individually; the pattern applies to combined MdNCR1 expression."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "Same issue: expression was measured collectively for MdNCR1 genes, not specifically MdNCR1a."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Leaf developmental stage and transient expression in N. benthamiana were examined."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Comparative transcriptomics and metabolite profiling methods were used to identify/test MdNCR1a."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1a is described as a quinone-oxidoreductase homolog in the NCR1 clade."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "DHC/phlorizin accumulation is reported in leaves, roots, stems, and young fruit."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly highlights opportunities to manipulate DHC content in apple and other fruits and applications in biopharming/biofermentation."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 28,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "MdNCR1b",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1b is explicitly assigned to MD05G1167600 and PP495131."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1b is an apple gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Apple is Malus × domestica."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "The gene itself is not explicitly tied to Royal Gala origin, though functional work used Royal Gala plants."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1b was assayed in apple context and in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied apple species is Malus × domestica."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Transgenic apple validation was in Royal Gala."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1b is part of the MdNCR1 naringenin chalcone reductase group."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It acts in the flavonoid side branch leading to DHCs."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant branch is DHC biosynthesis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1b diverts naringenin chalcone toward DHC formation."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Recombinant MdNCR1b readily reduced naringenin chalcone."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The product phloretin was identified by LC-MS/MS."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly shows NADPH-dependent reduction of naringenin chalcone to phloretin and weaker p-coumaroyl-CoA reduction."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Phloretin is the aglycone precursor to phlorizin and related DHC glycosides."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The study positions MdNCR1 enzymes as the missing key enzyme for leaf DHC biosynthesis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1b transient expression produced high phlorizin; NCR knockdown reduced leaf phlorizin."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Phlorizin is a DHC/flavonoid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "These functions are discussed for DHC/phlorizin generally, not demonstrated specifically for MdNCR1b in Results."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1b strongly promoted DHC accumulation and directly formed phloretin in vitro."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by Results."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods were used for MdNCR1b or the NCR group."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1b-GFP localized to the vacuolar membrane."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Construct systems used CaMV 35S promoter."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "All kinetic values and substrate scope statements are explicitly reported for recombinant MdNCR1b."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "MdNCR1b-specific expression was not separated from MdNCR1a/c; RT-qPCR was for pooled MdNCR1 expression."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "Same issue: expression measured for combined MdNCR1 genes, not MdNCR1b specifically."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The temperature and pH behavior and transient expression conditions are explicitly reported."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Comparative transcriptomics plus LC-MS, GC-MS, HPLC, and UPLC are all in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1b is a quinone oxidoreductase-like reductase in the NCR1 clade."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Phlorizin/DHCs were measured in leaves, roots, stems, and young fruit tissues."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper proposes engineering DHC production, including in biofermentation and biopharming."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "NCR downregulation redirected flux to flavonol glycosides and reduced total phenolics to 33%–39% of WT."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 29,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "MdNCR1c",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1c is explicitly assigned to MD05G1168200 and PQ045267."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1c is an apple gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Apple is Malus × domestica."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "The gene itself is not explicitly sourced from Royal Gala, though Royal Gala was used for apple transgenics."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1c was tested in apple pathway context and transiently in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied apple species is Malus × domestica."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Apple transgenic analyses were in Royal Gala."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1c belongs to the naringenin chalcone reductase NCR1 group."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is part of the DHC-producing phenylpropanoid/flavonoid branch."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant subpathway is DHC biosynthesis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1c acts at the branch toward DHC formation from naringenin chalcone."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1c is included among NCR1 genes inferred to use naringenin chalcone; transient assay supports this function."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The inferred product is phloretin, captured as phlorizin in planta."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is the central reaction assigned to NCR1 genes, with MdNCR1c showing strong in planta activity."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Phloretin is the immediate precursor to phlorizin and other DHC glycosides."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The NCR1 group is presented as the missing key enzyme required for DHC production in leaves."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1c transient expression yielded high phlorizin in N. benthamiana."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Phlorizin is within the flavonoid DHC class."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Defense/health relevance is discussed generally for DHCs/phlorizin, not specifically demonstrated for MdNCR1c."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1c strongly promoted DHC accumulation in planta in transient assays."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The three statements align with Results, though RNAi targeted NCR genes collectively rather than MdNCR1c alone."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Comparative transcriptomics, transient expression, RNAi, and metabolite profiling all support the NCR1 clade including MdNCR1c."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The transient and RNAi vectors used CaMV 35S promoter systems."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states MdNCR1a-c had essentially identical activity and identical substrate-binding pocket residues, explaining lack of separate biochemical characterization."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "Expression was measured as combined MdNCR1a-c, not MdNCR1c individually."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "Same issue: only pooled MdNCR1 expression was quantified."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1c was tested by transient expression in N. benthamiana."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Comparative transcriptomics and metabolite profiling were used for identification and validation."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR1c is a quinone oxidoreductase-like reductase in the NCR1 clade."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "DHC/phlorizin accumulation sites reported include leaves, roots, stems, and young fruit."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses using NCR for manipulating DHC content and in synthetic biology/biotech contexts."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 27,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "MdNCR101",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR101 is explicitly assigned to MD10G1157200 and PP495132."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR101 is an apple gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Apple is Malus × domestica."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "The gene model is not explicitly said to originate from Royal Gala."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR101 was tested in apple context and N. benthamiana assays."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied apple species is Malus × domestica."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Apple transgenic work used Royal Gala."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR101 is designated an NCR-related gene and showed weak NCR activity."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is discussed in the DHC biosynthesis branch."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "This is within the DHC biosynthetic branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "As a weaker paralog, MdNCR101 is reasonably described as a potential auxiliary branch enzyme."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "MdNCR101 produced phlorizin in planta, consistent with naringenin chalcone reduction, but its substrate was not directly assayed biochemically."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "Phloretin is inferred because phlorizin accumulated with PGT1, but direct phloretin production by recombinant MdNCR101 was not shown."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "Weak support from transient in planta phlorizin accumulation, but no direct enzymology for MdNCR101 reducing naringenin chalcone is shown."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Its transient activity links it to phlorizin formation via the phloretin intermediate, albeit inferentially."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish MdNCR101 as the major control point and instead emphasizes NCR1 genes."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Phlorizin is the quantified terminal product in transient assays."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Phlorizin is a flavonoid/DHC."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "General DHC function statements are not specifically demonstrated for MdNCR101."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR101 produced >20× more phlorizin than GUS control, less than MdNCR1a-c."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "First two statements are supported; the third ('may contribute to residual DHC production in fruit') is presented as a Discussion possibility, not a demonstrated Result."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient expression, localization, and expression analysis were performed for MdNCR101."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR101-GFP localized to the vacuolar membrane."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant constructs were under CaMV 35S promoter systems."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states that 7 of 15 substrate-pocket residues differ from MdNCR1a-c in MdNCR101."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RT-qPCR showed low expression of MdNCR101 in all tissues."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Same as above; low expression in all tissues including fruit is directly reported."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient expression in N. benthamiana is explicitly reported."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Comparative transcriptomics and metabolite profiling were used."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "MdNCR101 is a quinone oxidoreductase-like reductase homolog."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Phlorizin/DHCs were measured in leaves, roots, stems, and young fruit overall, but attributing low-level fruit accumulation specifically to MdNCR101 is speculative."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This exact 'secondary candidate for fruit engineering' claim is speculative and not directly stated in Results."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 24,
+        "unsupported": 0,
+        "uncertain": 8
+      }
+    },
+    {
+      "gene_name": "MdHCDBR",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "MdHCDBR is explicitly identified as MD15G1145700."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MdHCDBR is an apple gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Apple is Malus × domestica."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "The gene itself is not explicitly assigned to Royal Gala, though experiments used Royal Gala plants."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MdHCDBR was tested in apple and referenced in N. benthamiana transient assays."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied apple species is Malus × domestica."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "RNAi lines were generated in Royal Gala."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls MdHCDBR a hydroxycinnamoyl CoA double-bond reductase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "MdHCDBR is discussed as part of a proposed alternative DHC biosynthetic route."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It belongs to the proposed p-coumaroyl-CoA reduction route."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "MdHCDBR acts upstream in the proposed alternative branch by reducing p-coumaroyl-CoA."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "p-Coumaroyl-CoA is the described substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The product dihydro-p-coumaroyl-CoA is explicitly stated."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows recombinant MdHCDBR reduced p-coumaroyl-CoA but did not reduce naringenin chalcone to phloretin."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "MdHCDBR is presented as supplying a proposed precursor for an alternative DHC route, but not the major leaf pathway."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper concludes MdHCDBR and related ARLs are not responsible for high DHC concentrations in apple leaves."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway context is phlorizin/DHC production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Phlorizin is a flavonoid DHC."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Possible defense/health roles are discussed generally, and the specific tissue-conditional contribution of MdHCDBR remains unresolved."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "RNAi downregulation did not reduce foliar phlorizin, supporting this statement."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by Results and Discussion of the present experiments."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "RNAi, RT-qPCR, HPLC, and recombinant enzyme/LC-MS assays were used."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "RNAi construct used pTKO2 with CaMV 35S promoter; transient expression constructs used pHEX2 with CaMV 35S."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "MdCHS, MdPGT1 and MdPGT2 are mentioned only in prior co-expression context from cited work, not as direct protein interactions demonstrated in this paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "Possible contribution to fruit DHC production is posed as a future possibility, not demonstrated."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MdHCDBR is stated to be expressed in apple leaves, and fruit expression is discussed in Discussion."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Same expression context is given for leaves and fruit."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Leaf tissue, transient N. benthamiana context, and in vitro assays are all described."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RT-qPCR and metabolite profiling were used; no broader omics claim is made here."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is described as an NADPH-dependent double-bond reductase."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Leaves are clearly relevant; possible fruit contribution is speculative and not resolved by the paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper's data support that MdHCDBR is less suitable than NCR1 for high foliar DHC engineering, while retaining interest for alternative pathway studies."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 27,
+        "unsupported": 0,
+        "uncertain": 5
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 180,
+    "supported": 150,
+    "unsupported": 0,
+    "uncertain": 30,
+    "total_corrections": 0
+  }
+}

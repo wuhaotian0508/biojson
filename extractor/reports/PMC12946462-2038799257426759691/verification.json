@@ -1,0 +1,928 @@
+{
+  "file": "MinerU_markdown_PMC12946462_2038799257426759691",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12946462_2038799257426759691.md",
+  "timestamp": "2026-03-31T22:05:38.939708",
+  "genes": [
+    {
+      "gene_name": "NtabCBTSs1/2/3",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies CBTS orthologs cloned from the tobacco genome and designates them NtabCBTSs1/2/3, i.e., from tobacco."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tobacco is identified in the paper as Nicotiana tabacum."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Genome editing and transgenic experiments were performed in tobacco."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species throughout the study is Nicotiana tabacum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods states wild-type cultivar 'K326'."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CBTS is discussed as the gene family responsible for endogenous CBT-diol biosynthesis; figure/discussion identify them as cembratriene synthase-related diterpenoid metabolism genes."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Editing CBTS genes is directly tested for its effect on heterologous forskolin accumulation in Section 2.6."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Forskolin is explicitly described as a labdane-type diterpenoid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract explicitly states forskolin activates the cAMP signaling pathway and is used for treatment of heart complications, respiratory disorders, high blood pressure, obesity and asthma."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Sections 2.4-2.6 show CRISPR/Cas9 disruption of CBTS abolishes CBT-diols, increases GGPP, and greatly boosts forskolin accumulation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all directly reported in Results/Methods: CRISPR/Cas9 editing, GC-MS for CBT-diols, LC-MS/MS for GGPP/GPP/FPP and forskolin, stable transformation, and RNA-seq."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point matches Results: cbts mutant lacking CBT-diols, ~4.8-fold GGPP increase in GTs, minimal transcriptomic disturbance, and increased forskolin in engineered lines."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify greenhouse growth under 16 h light/8 h dark at 25°C for tobacco plants."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links CBT-diols and CBTS promoter activity to glandular trichomes and aerial tissues; GT-specific CBTS promoter expression is explicit."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says plastids are appropriate compartments for diterpene synthases in general, but does not directly demonstrate subcellular localization of NtabCBTSs1/2/3."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper provides NM_001325450.1 for one NsylCBTS ortholog and HM241151.1/HM241152.1/HM241153.1 for NsylCBTS2a/2b/3, but does not give accession numbers specifically for NtabCBTSs1/2/3."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq was performed and Data Availability gives GSA accession CRA028876."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Forskolin accumulation is reported in leaves and GTs of transgenic tobacco in Table 1 and Figures 2 and 5."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states CBTS editing creates a platform with increased GGPP and reduced endogenous diterpenoid interference for heterologous terpenoid production."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state no significant morphology or GT density alterations and only minor transcriptomic changes in cbts."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state only NtabCBTSs1/2/3 were targeted; NtabCBTSt was inferred dysfunctional and not included, and the effect on forskolin is through flux redirection rather than direct catalysis."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 19,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "CfTPS2",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CfTPS2 is described as a full-length C. forskohlii gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly identifies the source species as Coleus forskohlii."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CfTPS2 was tested in N. benthamiana transient expression and in transgenic tobacco."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The stable engineering host is Nicotiana tabacum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify tobacco cultivar K326 for WT/cbts/transgenic plants."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CfTPS2 is explicitly grouped among the diterpene synthases."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene itself, CfTPS2, is explicitly named as one of the diterpene synthases used."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CfTPS2 is explicitly included in the reconstructed forskolin biosynthetic pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Forskolin is identified as a labdane-type diterpenoid, so placing CfTPS2 in the forskolin/labdane branch is consistent with the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Co-expression including CfTPS2 led to forskolin detection in N. benthamiana and tobacco."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Forskolin is explicitly called a diterpenoid/labdane-type diterpenoid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract gives these pharmacological functions/uses for forskolin."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show CfTPS2 is one member of the six-gene set sufficient in combination for forskolin production in plants."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient co-expression, stable transformation, and LC-MS/MS detection of forskolin are all explicitly described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows CfTPS2 was part of the sufficient six-gene module, included in stable constructs, and that pathway yields increased with GT-specific expression and cbts editing."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "This paper does not experimentally define the precise scaffold-forming reaction of CfTPS2; that role is only inferable from prior literature and its identity as a diterpene synthase."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "GGPP as substrate for CfTPS2 is plausible for a diterpene synthase, but this specific substrate is not directly stated for CfTPS2 in this paper."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No specific product such as a manoyl oxide-related intermediate is stated anywhere in the paper text."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "CfTPS2 is clearly upstream in the pathway as a diterpene synthase, but 'committed scaffold-forming step' is not directly established in this paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "As part of the six-gene module sufficient for forskolin production, CfTPS2 is directly linked to formation of a precursor for the target product."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish CfTPS2 as rate-limiting; therefore 'Not established' is faithful."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper mentions plastids as appropriate compartments for diterpene synthases generally, but does not directly localize CfTPS2."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods and Results describe transgenic expression under 35Spro or CBTSpro in tobacco."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The pForskolin-35S and pForskolin-CBTS constructs used 35Spro and CBTSpro, respectively, for the biosynthetic genes including CfTPS2."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly show higher forskolin accumulation with GT-specific expression and in the cbts background."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Forskolin in engineered tobacco accumulated in leaves and GTs, as shown in Figures 2 and 5 and Table 1."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "CfTPS2 is indeed a core scaffold-forming pathway component in the stacked multigene engineering strategy."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not dissect individual contribution of CfTPS2 beyond pathway reconstitution; this statement is accurate."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Product",
+          "old_value": "Manoyl oxide-related diterpene intermediate",
+          "new_value": "NA",
+          "reason": "No specific product such as a manoyl oxide-related intermediate is stated anywhere in the paper text."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "CfTPS3",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CfTPS3 is described as a C. forskohlii gene used in the pathway."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is explicitly Coleus forskohlii."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CfTPS3 was tested in transient N. benthamiana assays and stable tobacco lines."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The stable host is Nicotiana tabacum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Tobacco cultivar K326 is specified in Methods."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CfTPS3 is explicitly identified as a diterpene synthase."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names CfTPS3 among the diterpene synthases."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CfTPS3 is part of the reconstituted forskolin biosynthetic pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Linking it to the labdane/forskolin branch is consistent with the paper's description of forskolin as a labdane-type diterpenoid."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Co-expression including CfTPS3 resulted in forskolin production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Forskolin is explicitly a diterpenoid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "These functions/uses of forskolin are explicitly stated in the abstract."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CfTPS3 is part of the six-gene module enabling forskolin production in plant hosts."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient co-expression, stable transformation, and LC-MS/MS detection of forskolin are reported."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are supported at the pathway-module level in Results."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not experimentally resolve CfTPS3's exact enzymatic conversion step."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "A specific substrate such as 'labdane diterpene precursor generated from GGPP' is not stated in this paper."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No specific intermediate product for CfTPS3 is reported in the paper text."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "CfTPS3 is clearly an upstream pathway component, but 'midstream scaffold elaboration step' is not directly shown here."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "As part of the sufficient six-gene module, CfTPS3 is directly connected to formation of precursor(s) leading to forskolin."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish CfTPS3 as rate-limiting, so 'Not established' is accurate."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Plastid localization is only generally implied for diterpene synthases, not directly shown for CfTPS3."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CfTPS3 was expressed transgenically under 35Spro or CBTSpro in tobacco constructs."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Both promoters are explicitly used for all biosynthetic genes including CfTPS3."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows higher final forskolin accumulation with GT-specific expression and cbts background."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Forskolin accumulation was measured in leaves and GTs of engineered tobacco."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "CfTPS3 is an essential pathway component within the engineering strategy used."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper relies on prior studies for individual enzymology and does not characterize CfTPS3's individual step here."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Substrate",
+          "old_value": "Labdane diterpene precursor generated from GGPP",
+          "new_value": "NA",
+          "reason": "A specific substrate such as 'labdane diterpene precursor generated from GGPP' is not stated in this paper."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "Manoyl oxide-related diterpene intermediate",
+          "new_value": "NA",
+          "reason": "No specific intermediate product for CfTPS3 is reported in the paper text."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "CYP76AH15",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP76AH15 is described as a C. forskohlii gene used in the pathway."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to full-length C. forskohlii genes including CYP76AH15."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was tested in N. benthamiana transient assays and in transgenic tobacco."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The stable plant host is Nicotiana tabacum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "K326 is specified as the tobacco cultivar used."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP76AH15 is explicitly listed among cytochrome P450s."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names CYP76AH15."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP76AH15 is part of the forskolin biosynthetic gene set."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "As one of the P450s in the forskolin pathway, assigning it to oxidative tailoring of the labdane diterpenoid pathway is consistent with the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Co-expression including CYP76AH15 enabled forskolin detection."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Forskolin is explicitly a diterpenoid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract states these functions/uses for forskolin."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP76AH15 is one of the six genes sufficient in combination for plant forskolin production."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient co-expression, stable transformation, and LC-MS/MS forskolin detection are directly reported."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These findings are supported at the module level: six-gene sufficiency, stable expression in tobacco, and higher yields with GT-specific expression/cbts background."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not specify the exact oxidation/hydroxylation reaction catalyzed by CYP76AH15 in this study."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No specific substrate for CYP76AH15 is identified in the paper text."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No specific oxidized intermediate product is stated for CYP76AH15 in the paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "As a cytochrome P450 in the pathway, describing it as a midstream oxidative tailoring enzyme is consistent with the pathway reconstitution, though not resolved more precisely."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "It is directly connected to forskolin production as part of the sufficient six-gene module."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish this P450 as rate-limiting; 'Not established' is accurate."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the ER is the appropriate compartment for P450s, and these full-length genes retained targeting signals for proper localization."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was transgenically expressed in tobacco under 35Spro or CBTSpro."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Both 35Spro and CBTSpro are explicitly used for all biosynthetic genes including this one."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes endogenous CPRs support P450 activity and that GT-specific expression improves production."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Forskolin was measured in leaves and GTs of engineered tobacco plants."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "As one of the necessary pathway P450s in the six-gene module, this value is supported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Section 2.1 explicitly mentions endogenous CPRs support electron transfer for P450s."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed notes endogenous CPR support for P450 activity."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Substrate",
+          "old_value": "Labdane diterpene intermediate",
+          "new_value": "NA",
+          "reason": "No specific substrate for CYP76AH15 is identified in the paper text."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "Oxidized forskolin precursor",
+          "new_value": "NA",
+          "reason": "No specific oxidized intermediate product is stated for CYP76AH15 in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "CYP76AH11",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP76AH11 is identified as a C. forskohlii gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to C. forskohlii genes including CYP76AH11."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was used in transient expression and stable tobacco transformation."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The stable host species is Nicotiana tabacum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state cultivar K326."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP76AH11 is explicitly categorized among cytochrome P450s."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene name CYP76AH11 explicitly appears in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is one of the genes used to reconstruct the forskolin biosynthetic pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "As a P450 in forskolin formation, assigning it to oxidative tailoring is consistent with the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The six-gene combination including CYP76AH11 produced forskolin."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Forskolin is explicitly a diterpenoid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "These functions/uses are stated in the abstract."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP76AH11 is part of the six-gene module sufficient in combination for forskolin biosynthesis in plants."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant methods are directly described in Results and Methods."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points are supported at the module level by the transient and stable expression experiments and improved yields in GT/cbts contexts."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "No specific oxidation step catalyzed by CYP76AH11 is resolved in this paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specify the substrate for CYP76AH11."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specify the product of CYP76AH11."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "As a P450 in the pathway, 'midstream oxidative tailoring step' is consistent with the paper, though not specified in greater detail."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "It is directly tied to forskolin formation as part of the sufficient pathway module."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish this, so 'Not established' is supported."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states P450s localize to the ER and retained targeting signals were used."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was transgenically driven in tobacco using 35S or CBTS promoters."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Both promoters are explicitly used for biosynthetic genes in the constructs."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states endogenous CPRs support P450 activity and GT-specific expression improves production."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Forskolin accumulation was reported in leaves and GTs."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "It is a necessary P450 component of the engineered forskolin pathway."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Endogenous CPRs are explicitly mentioned as supporting P450 electron transfer."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not resolve the specific oxidation order for CYP76AH11."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Substrate",
+          "old_value": "Oxidizable labdane diterpene intermediate",
+          "new_value": "NA",
+          "reason": "The paper does not specify the substrate for CYP76AH11."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "Oxidized forskolin precursor",
+          "new_value": "NA",
+          "reason": "The paper does not specify the product of CYP76AH11."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "CYP76AH16",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP76AH16 is described as a C. forskohlii gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is explicitly Coleus forskohlii."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was tested by transient expression and stable transformation in tobacco systems."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The stable host species is Nicotiana tabacum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Cultivar K326 is specified in Methods."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP76AH16 is explicitly listed among cytochrome P450s."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names CYP76AH16."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is part of the forskolin biosynthetic pathway reconstructed in plants."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "As a P450 in the pathway, oxidative tailoring assignment is consistent with the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Co-expression including CYP76AH16 enabled forskolin production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Forskolin is explicitly called a diterpenoid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states these functions/uses for forskolin."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP76AH16 is part of the six-gene combination sufficient in plants for forskolin production."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient expression, stable transformation, and LC-MS/MS detection are directly reported."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points are supported at the multigene-module level in Results."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact oxidation/hydroxylation step for CYP76AH16 is not defined in this paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No specific substrate is provided for CYP76AH16 in the paper text."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No specific intermediate product is stated for CYP76AH16."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is a pathway P450, but labeling it specifically as midstream/downstream is not directly established in this paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "It is directly connected to forskolin production as part of the sufficient six-gene pathway set."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish this, so 'Not established' is accurate."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states P450s use the ER and retained organelle-targeting signals were preserved for proper localization."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was transgenically expressed in tobacco under 35Spro or CBTSpro."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Both promoters are explicitly used in the constructs for all biosynthetic genes."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper notes endogenous CPR support and improved production under GT-specific expression."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Forskolin was quantified in leaves and GTs of tobacco transgenic plants."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "It is a necessary oxidative tailoring enzyme in the engineering strategy."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly mentions endogenous CPRs support P450 activity."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not specify oxidation position/order for CYP76AH16."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Substrate",
+          "old_value": "Oxidizable labdane diterpene intermediate",
+          "new_value": "NA",
+          "reason": "No specific substrate is provided for CYP76AH16 in the paper text."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "Oxidized forskolin precursor",
+          "new_value": "NA",
+          "reason": "No specific intermediate product is stated for CYP76AH16."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "CfACT1-8",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CfACT1-8 is described as a gene from C. forskohlii."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is explicitly Coleus forskohlii."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was used in transient N. benthamiana assays and stable tobacco engineering."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The stable host species is Nicotiana tabacum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state tobacco cultivar K326."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CfACT1-8 is explicitly identified as the acetyltransferase."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names CfACT1-8 as the acetyltransferase gene used."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CfACT1-8 is one of the six genes in the forskolin biosynthetic pathway reconstructed in plants."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "As the acetyltransferase in the pathway to forskolin, assigning it to a terminal acylation step is consistent with the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The six-gene pathway including CfACT1-8 produced forskolin in plants."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Forskolin is explicitly a diterpenoid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract states the cAMP/signaling and medicinal uses of forskolin."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CfACT1-8 is part of the six-gene module sufficient for forskolin biosynthesis in plants."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient co-expression, stable transformation, and LC-MS/MS detection are directly described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These pathway-level findings are directly supported by Results."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "Although CfACT1-8 is an acetyltransferase, this paper does not directly demonstrate its exact substrate/product reaction step."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "A specific hydroxylated precursor and acetyl-CoA substrate are not explicitly stated in this paper."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "As the pathway's acetyltransferase within a module sufficient for forskolin production, formation of the final product forskolin is directly supported at the pathway level."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Calling it the terminal step is supported by its designation as the acetyltransferase producing the final acetylated product in the known pathway context used here."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CfACT1-8 is directly connected to final product formation as the pathway acetyltransferase."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish this, so 'Not established' is accurate."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was expressed transgenically under 35Spro or CBTSpro in tobacco."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Both 35Spro and CBTSpro are explicitly used for all biosynthetic genes including CfACT1-8."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show GT-specific expression and cbts background enhance final forskolin accumulation."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Forskolin is measured in leaves and GTs in engineered tobacco."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "As an essential terminal pathway enzyme in the six-gene stack, this engineering value is supported."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies CfACT1-8 as the acetyltransferase and does not provide accession number or subcellular localization."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Substrate",
+          "old_value": "Hydroxylated forskolin precursor; acetyl-CoA",
+          "new_value": "NA",
+          "reason": "A specific hydroxylated precursor and acetyl-CoA substrate are not explicitly stated in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 191,
+    "supported": 167,
+    "unsupported": 10,
+    "uncertain": 14,
+    "total_corrections": 10
+  }
+}

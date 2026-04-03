@@ -1,0 +1,823 @@
+{
+  "file": "MinerU_markdown_PMC12219392_2038800224591323141",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12219392_2038800224591323141.md",
+  "timestamp": "2026-03-31T21:51:23.092730",
+  "genes": [
+    {
+      "gene_name": "AtHMGRt",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state truncated A. thaliana HMGR1 used with GenBank accession AT1G76490."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says truncated HMGR sequence is from A. thaliana."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "AtHMGRt was clearly co-expressed in N. benthamiana, but in yeast the paper uses a truncated S. cerevisiae HMG1 chromosomal background, not AtHMGRt itself."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Supported for Nicotiana benthamiana; unsupported as written for Saccharomyces cerevisiae because yeast used tHMG1 from S. cerevisiae rather than AtHMGRt."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "HMGR is explicitly described as 3-hydroxy-3-methylglutaryl coenzyme A reductase, a key mevalonate-pathway enzyme, and a truncated form was used."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Co-expression with peplusol synthases increased peplusol; HMGRt is also discussed as increasing precursor supply affecting squalene/other triterpenes."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Peplusol and squalene are triterpenes/triterpenoids in the paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state HMGRt increased precursor supply and strongly enhanced peplusol accumulation when co-expressed with EpSS-L1/ElSS-L1 in N. benthamiana."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings are in Results: HMGRt used to boost FPP supply; 35-fold increase with EpSS-L1 to >2.5% DW; 20-fold increase with ElSS-L1 to 1.4% DW."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the reported transient co-expression assays in N. benthamiana with LC-MS and GC-MS metabolite profiling."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "EpSS-L1/EpSS-L2 were cloned into pEAQ-HT under CaMV-35S promoter; AtHMGRt synthetic fragment was also inserted into pEAQ-HT for transient expression."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant experiments are transient heterologous expression in N. benthamiana leaves."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly inferable from the demonstrated enhancement of peplusol production in heterologous hosts, although phrased as an application interpretation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses HMGRt as an enabling precursor-boosting component rather than discovery target; it also separately notes tHMG1 background increased peplusol in yeast."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses altered metabolite pools when pathway genes are expressed, but does not directly test or state broad HMGR-specific tradeoffs in endogenous sterol/triterpenoid pools."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper notes truncation removed the N-terminal membrane-binding region of HMGR, supporting native membrane/ER association and deregulated truncated activity."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "N. benthamiana leaves are directly supported; for yeast, increased peplusol in cell pellets/cultures is due to EpSS-L1 with yeast tHMG1, not AtHMGRt itself."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states peplusol has reported antifungal activity and potential applications, and squalene is used in cosmetics and vaccine adjuvants."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 15,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "EpSS-L1 (EpPS)",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2/3 list EpSS-L1 locus tag M5689_021805; phylogenetic methods list EpSS-L1 protein as WCJ40906.1."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "EpSS-L1 was identified from E. peplus genome/cDNA."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Euphorbia peplus is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is studied in E. peplus context and heterologously tested in N. benthamiana, S. cerevisiae, and as recombinant protein in E. coli lysate assays."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed species appear in the paper in connection with this gene."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly a squalene synthase-like enzyme; divalent metal-ion dependence and conserved DXXED motifs are discussed."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Results conclude EpSS-L1 encodes a functional peplusol synthase, later renamed EpPS."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes peplusol biosynthesis as linear triterpenoid biosynthesis from FPP via head-to-head condensation."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "EpSS-L1 is directly assigned to the peplusol branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "EpSS-L1 directly forms the terminal product peplusol."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is clearly a key product-determining branch enzyme, but the paper does not establish it as rate-limiting."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "FPP is the proposed substrate and was used in vitro; mechanism begins with two FPP molecules."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Peplusol is the main product; minor squalene under some in vitro and heterologous conditions is also reported."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This paraphrases the mechanistic proposal in Results/Fig. 1B and subsequent discussion for peplusol formation by EpSS-L1."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "EpSS-L1 directly produces peplusol in heterologous systems and in vitro."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Peplusol is the target metabolite directly linked to EpSS-L1."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Peplusol is explicitly described as a linear triterpene/triterpenoid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports moderate antifungal activity and discusses crop-care, skin-care and pharmaceutical potential."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Peplusol is reported in E. peplus latex and produced in N. benthamiana leaves and S. cerevisiae cell pellets by EpSS-L1."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "ER association is inferable from discussion of conserved C-terminal membrane anchor and truncation for soluble E. coli assays."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq analysis showed EpSS-L1 is highly expressed in latex and latex-specific."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly describes heterologous expression in infiltrated N. benthamiana leaves and S. cerevisiae cultures."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "CaMV-35S in pEAQ-HT for N. benthamiana and Gal10 in pBEVY-L for yeast are explicitly stated."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "S. cerevisiae strain CEN.PK2-1C is explicit; no cultivar for N. benthamiana is given, so 'NA' is acceptable as not asserting a specific unsupported variety."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are described in Results/Methods for EpSS-L1, including genome mining, RNA-seq expression analysis, heterologous expression, in vitro assay, LC-MS/GC-MS, HRMS, and NMR-verified standard comparison."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each numbered claim matches Results, except yeast titer is summarized as ~30 mg/L whereas Results give 23 mg/L in cell pellets and conclusion says 30 mg/L culture; overall consistent with paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly show strong peplusol accumulation and reductions in squalene and 2,3-oxidosqualene in N. benthamiana."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These factors are all explicitly used: AtHMGRt/tHMG1 co-expression/background and in vitro NADPH/NADP+/Mg2+/pH conditions."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says an existing RNA-seq dataset was used for expression profiling, without giving accession in the provided text."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly supported by demonstrated high peplusol production in plant and yeast hosts."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly reports decreased squalene and 2,3-oxidosqualene in plants, indicating competition with the sterol pathway."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "All statements are supported: later renamed EpPS, latex-specific expression, and six to seven amino acid positions affecting product specificity."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 31,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "EpSS-L2 (EpSS)",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2/3 list M5689_021806; phylogenetic methods list WCJ40907.1."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "EpSS-L2 is from E. peplus."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Euphorbia peplus is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Studied in E. peplus context and tested in N. benthamiana, S. cerevisiae, and E. coli lysate assays."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed species are explicitly used."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is assigned as a functional squalene synthase; conserved DXXED motifs and divalent metal-ion dependence are discussed for the family."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Results strongly indicate EpSS-L2 encodes a functional squalene synthase; later renamed EpSS."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper text."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Squalene formation in sterol/triterpene biosynthesis is explicitly described."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "EpSS-L2 functions in the core squalene/sterol precursor branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Squalene is the common upstream precursor to sterols and other triterpenes."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The value explicitly says not established as rate-limiting, which is consistent with the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "FPP is the substrate for squalene synthase and is used in the assays."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Squalene is the major product supported by heterologous expression and in vitro assays."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is the canonical squalene synthase reaction described in the Introduction and confirmed functionally for EpSS-L2."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "EpSS-L2 supports squalene/oxidosqualene formation and competes with the peplusol branch."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Squalene is directly connected to EpSS-L2 activity."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Squalene is a linear triterpene/triterpenoid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes squalene's commodity uses and vaccine adjuvant relevance."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Heterologous N. benthamiana leaves and yeast cell pellets are supported; 'broadly in E. peplus tissues' is not directly shown, only more ubiquitous expression than EpSS-L1."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "ER-associated membrane anchoring is inferable for squalene synthases; truncated soluble form used in E. coli assays is stated."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq showed EpSS-L2 is highly expressed in latex but more ubiquitous than EpSS-L1."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly described for heterologous N. benthamiana and yeast expression."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "CaMV-35S and Gal10 are explicitly reported."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "S. cerevisiae strain CEN.PK2-1C is explicit; no specific N. benthamiana variety is given."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All methods listed are used for EpSS-L2."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point matches Results: ancestral squalene synthase activity retained, no peplusol, increased oxidosqualene/squalene, in vitro squalene, and conversion via residue swaps."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by increased squalene in yeast and increased 2,3-oxidosqualene in plants, with no peplusol detected."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These co-expression/background and cofactor conditions are explicitly described."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression profiling used an existing E. peplus RNA-seq dataset without accession in this text."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a reasonable direct inference from the demonstrated squalene synthase function and reprogrammability discussed by the authors."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not directly test host sterol/triterpenoid tradeoffs caused specifically by EpSS-L2 overexpression."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Authors later rename EpSS-L2 as EpSS and use it as ancestral-function comparator."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.5.1.21",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper text."
+        }
+      ],
+      "stats": {
+        "supported": 30,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "ElSS-L1 (ElPS)",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability and Fig. 4 state ElSS-L1 accession PP978604."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ElSS-L1 is identified from E. lateriflora."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Euphorbia lateriflora is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Studied in E. lateriflora context and heterologously in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both listed species are explicitly used."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "ElSS-L1 is described as a peplusol synthase homologue, i.e. squalene synthase-like enzyme."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state ElSS-L1 encodes a functional peplusol synthase; later renamed ElPS."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Peplusol biosynthesis from FPP as a linear triterpenoid pathway is the pathway examined."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ElSS-L1 is explicitly the peplusol-producing branch enzyme."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It directly forms peplusol, the terminal product measured."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is product-determining, but the paper does not establish it as rate-limiting."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Inferred from homology/mechanism shared with EpSS-L1 and overall pathway; FPP is the substrate basis used in this study."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Peplusol production by ElSS-L1 in N. benthamiana is explicitly shown."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly inferable from its demonstrated peplusol synthase activity and the mechanistic model proposed for peplusol synthases."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "ElSS-L1 directly forms the target product peplusol."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Peplusol is directly linked to ElSS-L1 function."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Peplusol is a triterpenoid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Peplusol's moderate antifungal activity and potential applications are discussed in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Peplusol is found in E. lateriflora latex and produced in N. benthamiana leaves by ElSS-L1."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "ER association is plausible by homology but not directly shown for ElSS-L1."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ElSS-L1 was identified from RNA-seq of latex-containing stems; no more specific expression pattern is claimed."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states transient expression in infiltrated N. benthamiana leaves."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Cloned into pEAQ-HT for transient expression as described for E. peplus constructs; pEAQ-HT use under CaMV-35S promoter is stated earlier."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods give the E. lateriflora source specimen GH-0-BR-2014067883."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are reported for ElSS-L1."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point is explicitly reported in Results/Fig. 4."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show peplusol accumulation and reduced squalene/2,3-oxidosqualene in N. benthamiana."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Co-expression with AtHMGRt in N. benthamiana is directly stated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The E. lateriflora RNA-seq BioProject PRJNA1131357 is given in Data availability."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly inferable from successful heterologous peplusol production."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Likely competition for FPP is directly supported by decreased squalene and oxidosqualene in N. benthamiana."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says authors hereinafter refer to ElSS-L1 as ElPS."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 30,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "ElSS-L2",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability and Fig. 4 state ElSS-L2 accession PP978605."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ElSS-L2 was identified from E. lateriflora transcriptome."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Euphorbia lateriflora is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Studied in E. lateriflora context and transiently expressed in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both listed species appear explicitly."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is presented as a squalene synthase homologue / squalene synthase-like prenyltransferase."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper suggests ElSS-L2 likely encodes a squalene synthase; 'putative squalene synthase' matches that level of certainty."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper for ElSS-L2 or other enzymes."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "As a likely squalene synthase homologue, placement in sterol/triterpene precursor biosynthesis is consistent with Results."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Its inferred role is in the core squalene branch, opposite the peplusol branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Squalene synthesis is an upstream precursor-forming step."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The value says not established, which is consistent with the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "FPP is directly inferable as substrate from homology to squalene synthases and the pathway context."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper only says ElSS-L2 likely encodes a squalene synthase based on oxidosqualene increase and homology; direct squalene production by ElSS-L2 was not shown."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible inference but remains 'likely' rather than directly demonstrated for ElSS-L2 in this paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Its inferred role as supplying sterol precursor pool and competing with peplusol branch follows from the Results."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "Squalene is inferred but not directly measured as ElSS-L2 product; only 2,3-oxidosqualene increase is shown."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Squalene is a triterpenoid, though assignment to ElSS-L2 is inferential."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses industrial/cosmetic/pharmaceutical value of squalene."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Only increased 2,3-oxidosqualene in N. benthamiana leaves is directly shown; squalene accumulation site for ElSS-L2 is not directly demonstrated."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "ER-associated membrane localization is plausible by homology but not directly shown for ElSS-L2."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was identified from RNA-seq of latex-containing stems; no stronger claim is made."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was heterologously expressed in infiltrated N. benthamiana leaves."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "ElSS-L2 was cloned into pEAQ-HT; the transient expression system under CaMV-35S is described."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods provide the source specimen GH-0-BR-2014067883."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are indeed those used for ElSS-L2."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the paper's cautious conclusion that ElSS-L2 likely encodes a squalene synthase based on no peplusol plus increased oxidosqualene and homology."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports the cautious wording 'likely promotes squalene formation rather than peplusol biosynthesis.'"
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression with or without AtHMGRt in N. benthamiana is explicitly tested."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "BioProject PRJNA1131357 is provided in Data availability."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is speculative and not discussed specifically for ElSS-L2 in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Competition with peplusol branch for FPP is plausible but not directly tested for ElSS-L2."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This exactly matches the paper's caution that assignment is suggested/likely rather than directly confirmed by purified in vitro assay."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.5.1.21",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper for ElSS-L2 or other enzymes."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 1,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_name": "AtSS",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods give GenBank accession AT4G34640; figures also cite BT003419.1."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AtSS is from A. thaliana."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AtSS was tested in N. benthamiana, S. cerevisiae, and as recombinant protein in E. coli lysate assays."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed species are explicitly used."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AtSS is explicitly a squalene synthase and belongs to the prenyltransferase family context used throughout the paper."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "AtSS is described as previously characterised A. thaliana squalene synthase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is stated in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Squalene biosynthesis as sterol/triterpene precursor formation is central background and tested for AtSS."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AtSS functions in the core squalene branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Squalene formation is an upstream precursor-forming step."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The value says not established here and used as control, which matches the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "FPP is the substrate for AtSS, consistent with the enzyme assays and known reaction described in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "AtSS produces squalene as shown in vitro and inferred in heterologous hosts."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes the canonical squalene synthase reaction from two FPP molecules to squalene."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "AtSS supplies the squalene precursor pool for sterol metabolism."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Squalene is the directly relevant metabolite."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Squalene is a triterpenoid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Industrial/pharmaceutical value is explicitly discussed for squalene."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "AtSS-driven effects are measured in N. benthamiana leaves and S. cerevisiae cell pellets."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "ER membrane association is inferable for squalene synthase; truncated soluble E. coli assay form is explicitly described in methods for AtSS."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Heterologous expression in N. benthamiana and S. cerevisiae is directly described."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "CaMV-35S in pEAQ-HT and Gal10 in pBEVY-L are explicitly stated."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "S. cerevisiae strain CEN.PK2-1C is explicit; no N. benthamiana variety is specified."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These are indeed the methods used to validate AtSS as control."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "AtSS served as validated control, did not produce peplusol, and promoted squalene/in vitro squalene production."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by significant squalene accumulation in N. benthamiana and yeast."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "AtSS was tested with or without HMGR boost and under in vitro cofactor conditions."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "As a benchmark squalene synthase used for comparison, this is a fair inference from the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "AtSS is indeed a control/comparator rather than the focal discovery gene, but central experimentally."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.5.1.21",
+          "new_value": "NA",
+          "reason": "No EC number is stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 29,
+        "unsupported": 1,
+        "uncertain": 0
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 179,
+    "supported": 160,
+    "unsupported": 3,
+    "uncertain": 16,
+    "total_corrections": 3
+  }
+}

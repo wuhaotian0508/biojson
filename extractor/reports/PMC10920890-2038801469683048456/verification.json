@@ -1,0 +1,282 @@
+{
+  "file": "MinerU_markdown_PMC10920890_2038801469683048456",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC10920890_2038801469683048456.md",
+  "timestamp": "2026-03-31T21:33:32.160518",
+  "genes": [
+    {
+      "gene_name": "RamR",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states in Data availability: 'Protein sequence information was retrieved from the NCBI database: RamR, 3VVX_A' and Fig. 1c cites 'PDB: 3VVX_A'."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly describe RamR as a 'TetR-family Salmonella typhimurium repressor RamR'."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The full taxonomic name 'Salmonella enterica subsp. enterica serovar Typhimurium' does not appear in the paper; only 'Salmonella typhimurium' is stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study repeatedly states engineering and assays were performed in E. coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names Escherichia coli as the host organism."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "RamR is explicitly described as a 'TetR-family' repressor/transcription factor."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The target analyte for the evolved biosensor is explicitly 4′-O-methylnorbelladine (4NB)."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "4NB is described as an amaryllidaceae alkaloid branchpoint intermediate, so alkaloid is supported."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 4NB is the 'branchpoint intermediate for the entire amaryllidaceae alkaloid family' and links this family to therapeutic alkaloids such as galantamine."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show engineered RamR variants provide sensitive/selective detection of 4NB in E. coli and are used to monitor pathway activity rather than synthesize product themselves."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed points are in Results: WT RamR weakly responds to norbelladine and 4NB; 4NB2.1 reaches ~2.5 μM detection limit and >80-fold preference; sensor is used to track Nb4OMT activity and is ~10-fold more sensitive than HPLC."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all described in Results/Methods: SELIS-directed evolution, fluorescence dose-response, GNINA docking, flow cytometry, and HPLC comparison."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Methods state the wild-type RamR sensor was 'constitutively expressed on one plasmid (pReg-RamR)' in E. coli during assays."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says RamR was on pReg-RamR and the cognate promoter Pramr drove sfGFP on the reporter plasmid."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The assays used induction with 4NB or norbelladine in LB and were mainly conducted at 37°C, as described in Results/Methods."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Interactions with 4NB and norbelladine are supported, and RamR by function binds its cognate promoter DNA, but 'PramR promoter DNA' is not directly characterized as an interacting partner in Results figures; wording mixes ligands and DNA rather than proteins."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No explicit subcellular localization for RamR is reported in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports RamR as a biosensor scaffold rather than AA pathway enzyme, and reports mutations K63T/L66M then C134D/S137G in the evolved variants."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Discussion support RamR-derived 4NB biosensor as a high-throughput screening tool for pathway/enzyme engineering in microbes."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The statement is consistent with Results showing RamR is a sensor, not a production enzyme, and its utility depends on assay range/specificity; while phrased generally, it is directly inferable from the paper."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state E. coli DH10B was used for biosensor characterization and directed evolution."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Source_Species_Latin_Name",
+          "old_value": "Salmonella enterica subsp. enterica serovar Typhimurium",
+          "new_value": "NA",
+          "reason": "The full taxonomic name 'Salmonella enterica subsp. enterica serovar Typhimurium' does not appear in the paper; only 'Salmonella typhimurium' is stated."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytoplasm",
+          "new_value": "NA",
+          "reason": "No explicit subcellular localization for RamR is reported in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 18,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "Nb4OMT",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods/Data availability explicitly give 'Nb4OMT, A0A077EWA5'."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results describe Nb4OMT as from 'the wild daffodil Narcissus sp. aff. pseudonarcissus' and elsewhere from 'Narcissus pseudonarcissus'."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly uses 'Narcissus pseudonarcissus' when introducing Nb4OMT engineering."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Nb4OMT was heterologously expressed and tested in E. coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host organism is explicitly Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods report DH10B for biosensor-linked assays and BL21(DE3) for protein expression/purification."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is clearly a plant O-methyltransferase and methyltransferase, and the crystal structure shows a homodimer, but the exact phrase 'SAM-dependent methyltransferase; homodimeric enzyme' is partly inferential rather than explicitly stated as a family/domain label."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names it norbelladine 4′-O-methyltransferase (Nb4OMT)."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for Nb4OMT is provided in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Nb4OMT is explicitly placed in amaryllidaceae alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 4NB is the last common intermediate/branchpoint and Nb4OMT directly forms it in the early common pathway."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is directly inferable from statements that 4NB is the last common intermediate before pathway branches diverge and Nb4OMT makes 4NB from norbelladine."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Norbelladine is explicitly the substrate in vivo and in vitro; SAM is explicitly included in kinetic reactions as methyl donor."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "4′-O-methylnorbelladine is explicitly the product; SAH is supported by the methyltransferase reaction context and by structural complexes with SAH, though product-side SAH is not directly measured."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly say Nb4OMT is directly responsible for 4NB production from norbelladine, i.e., 4′-O-methylation of norbelladine."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Nb4OMT directly forms the target product 4NB in the experiments."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows Nb4OMT is inefficient and a target for improvement, but it does not explicitly call it rate-limiting; 'key control/bottleneck' is an interpretation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimentally monitored product of Nb4OMT is 4′-O-methylnorbelladine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "4NB is described as an amaryllidaceae alkaloid intermediate."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 4NB is the branchpoint intermediate for the AA family including therapeutically relevant compounds such as galantamine."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly show WT Nb4OMT enables 4NB biosynthesis in E. coli and that engineered variants improve product titer, catalytic efficiency, thermostability, and regioselectivity while reducing off-product."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each item is supported by Results/Table 1: E. coli conversion to 4NB; WT inefficiency and off-product; A53M improves titer ~60%, kcat/Km about 2-fold via >2.1-fold higher kcat, residual substrate 17-fold lower, off-product about 3-fold lower, Tm +1.7°C; triple mutant Tm 58.4°C, +5.6°C over WT."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed approaches are directly used in Results: heterologous expression, biosensor fluorescence, HPLC, LC-MS, kinetics, DSF, and X-ray crystallography."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state constitutive plasmid expression, and Results say fluorescence correlated positively with enzyme expression strength."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Methods describe supplied norbelladine, tests at 25/30/37°C with 37°C improved product formation, and Ca2+ in kinetic/crystallographic context."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The listed entities SAH, SAM, norbelladine, and Ca2+ are ligands/cofactor/ion, not proteins; this field label is not accurately matched to paper evidence."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No explicit subcellular localization for Nb4OMT in E. coli is reported."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "All points are supported: substrate inhibition evidence in improved variants, PDB 8UKE for engineered structure, A53M prediction dependence on ligand/cofactor docking, and mixed source-species wording in text."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion strongly supports Nb4OMT as an important engineering target for microbial AA/galantamine pathway optimization."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly support off-target 3′-O-methylation, substrate inhibition in improved variants, and dependence of microbial performance on precursor supply is inferable from supplementation-based assays and pathway discussion."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state Nb4OMT was expressed with the P150-RBS(riboJ) promoter-RBS cassette."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly describe the enzyme as from 'wild Narcissus sp. aff. pseudonarcissus'."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.1.1.-",
+          "new_value": "NA",
+          "reason": "No EC number for Nb4OMT is provided in the paper."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "SAH; SAM; norbelladine; Ca2+",
+          "new_value": "NA",
+          "reason": "The listed entities SAH, SAM, norbelladine, and Ca2+ are ligands/cofactor/ion, not proteins; this field label is not accurately matched to paper evidence."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytoplasm",
+          "new_value": "NA",
+          "reason": "No explicit subcellular localization for Nb4OMT in E. coli is reported."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 3,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 53,
+    "supported": 45,
+    "unsupported": 5,
+    "uncertain": 3,
+    "total_corrections": 5
+  }
+}

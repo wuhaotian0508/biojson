@@ -1,0 +1,551 @@
+{
+  "file": "MinerU_markdown_PMC11588082_2038801031273422860",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC11588082_2038801031273422860.md",
+  "timestamp": "2026-03-31T21:38:42.666132",
+  "genes": [
+    {
+      "gene_name": "PDAT1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PDAT1 expression was measured in pennycress developing seeds; pennycress is Thlaspi arvense in this paper."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies pennycress as Thlaspi arvense L."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state the pennycress ecotype used was 'Spring-32'."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PDAT1 was analyzed in pennycress lines."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species for PDAT1 analysis was pennycress, given as Thlaspi arvense."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify pennycress 'Spring-32'."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PDAT1 was examined in the context of acetyl-TAG-producing transgenic pennycress seeds."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Acetyl-TAG is a lipid and is the central product studied."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses acetyl-TAG as designer oil with reduced viscosity/freezing point, but the exact phrase 'designer oil composition context' is paraphrased rather than stated."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The study concerns seed storage lipids, and acetyl-TAG/TAG were analyzed in seeds."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 4 and text state PDAT1 expression was quantified in developing pennycress seeds at 20 DAF and was not affected by EfDAcT expression or the fae1 mutation."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state that PDAT1 was driven by a native promoter; PDAT1 was only assayed as an endogenous gene."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PDAT1 is explicitly expanded as PHOSPHOLIPID DIACYLGLYCEROL ACYLTRANSFERASE1."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Developing seeds were analyzed from plants grown under standard growth chamber conditions described in Methods."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "PDAT1 was assessed by quantitative real-time PCR in developing pennycress seeds (Fig. 4B)."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state PDAT1 expression was not affected; no positive role in the acetyl-TAG phenotype was established."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary matches the Results: PDAT1 transcript levels were measured, unchanged by EfDAcT or fae1, and not implicated as a main determinant."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is an interpretation based on lack of effect; the paper does not explicitly say PDAT1 is 'currently not prioritized'."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "PDAT1 was indeed experimentally examined in Results and not shown to causally drive acetyl-TAG accumulation."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "PDAT1 data came from RT-qPCR."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Applied_Promoters",
+          "old_value": "native",
+          "new_value": "NA",
+          "reason": "The paper does not state that PDAT1 was driven by a native promoter; PDAT1 was only assayed as an endogenous gene."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "EfDAcT",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "EfDAcT is explicitly described as isolated from Euonymus fortunei."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper names the source species as Euonymus fortunei."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "EfDAcT was expressed in camelina and pennycress."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses Camelina sativa and Thlaspi arvense."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods list camelina 'Suneson' and pennycress 'Spring-32'."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "EfDAcT mediates acetyl-TAG synthesis throughout the paper."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Acetyl-TAG is a lipid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The introduction and abstract state acetyl-TAG oils have reduced viscosity and lower freezing temperatures for industrial and biofuel uses."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "MALDI imaging showed acetyl-TAG in cotyledons and embryonic axis, but 'seed oil bodies' specifically is not stated in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "EfDAcT is discussed as part of acetyl-TAG/TAG biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states DAcT transfers acetate to the sn-3 position of DAG to synthesize acetyl-TAG."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "EfDAcT acts directly on DAG to make the final acetyl-TAG product, i.e., a terminal step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "EfDAcT directly synthesizes acetyl-TAG from DAG and acetyl-CoA."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "EfDAcT is described as a high-activity diacylglycerol acetyltransferase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "This paper does not explicitly state EfDAcT belongs to the MBOAT family; that comes from prior literature cited, not from Results here."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "EfDAcT was transgenically expressed in seeds, and Fig. 4D assayed EfDAcT expression in pennycress developing seeds at 20 DAF."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact promoter(s) for EfDAcT constructs are not stated in the provided text; saying seed-specific promoter(s) is plausible from prior work but not documented here."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Plants were grown under standard growth chamber conditions and developing/mature seeds were analyzed."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states DAcT uses DAG and acetyl-CoA substrates."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states DAcT synthesizes 3-acetyl-1,2-diacylglycerol (acetyl-TAG)."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 7 and text describe transfer of an acetate group from acetyl-CoA to the sn-3 position of DAG to produce acetyl-TAG."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports metabolic competition with DGAT1 for DAG pools, but does not demonstrate direct protein-protein interactions; FAE1 is connected metabolically, not as an interacting protein."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports EfDAcT as key for acetyl-TAG synthesis and as higher activity than earlier enzymes, but does not explicitly define it as rate-limiting."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "EfDAcT function was validated by stable transgenics in camelina and pennycress with lipid profiling, ESI-MS, MALDI-MS imaging, and RT-qPCR."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show EfDAcT strongly increased acetyl-TAG, reaching up to 93 mol% in camelina and 98 mol% in pennycress when combined with fae1 and DGAT1 RNAi."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately reflects the main EfDAcT Results and figures."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper frames EfDAcT as a valuable engineering enzyme for designer low-viscosity oils, especially with fae1 and DGAT1 suppression."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results report slightly reduced fatty acid content, slower germination in some transgenic pennycress lines, and otherwise minimal growth penalties."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper includes RT-qPCR of EfDAcT and lipidomics/imaging by ESI-MS and MALDI-MSI."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Text under Fig. 4 states no apparent correlation between EfDAcT expression and acetyl-TAG levels, consistent with previous findings."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 25,
+        "unsupported": 0,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "FAE1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "FAE1 mutants from camelina and pennycress were directly studied."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper names Camelina sativa and Thlaspi arvense."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify camelina 'Suneson' and pennycress 'Spring-32'."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "FAE1 was tested in both camelina and pennycress."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species are Camelina sativa and Thlaspi arvense."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods list 'Suneson' and 'Spring-32'."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "FAE1 mutation was tested for its effect on acetyl-TAG accumulation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Acetyl-TAG is a lipid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links FAE1 mutation to redirecting acetyl-CoA/substrate availability toward designer acetyl-TAG oil production."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The study examines seed storage lipids in camelina and pennycress."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "FAE1 is discussed in VLCFA elongation linked to seed oil biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly frames VLCFA synthesis as competing with acetyl-TAG synthesis for acetyl-CoA."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "FAE1 functions in a competing side-route rather than directly in acetyl-TAG synthesis."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "FAE1 competes with the target-product branch via use of acetyl-CoA for fatty acid elongation."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper names FAE1 as FATTY ACID ELONGASE1 and discusses its role in elongating oleic acid to VLCFAs."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact phrase 'fatty acid elongase condensing enzyme / KCS family' is not explicitly stated in this paper's Results; it is background knowledge."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion cites prior evidence that FAE1 expression is predominantly concentrated in cotyledons versus embryonic axis."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 4C shows greatly reduced FAE1 transcript in pennycress fae1 mutants, measured in developing seeds."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "FAE1 was an endogenous gene altered by CRISPR-generated fae1 mutant backgrounds, not a transgene with a new promoter."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Seeds were studied under standard growth chamber conditions."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states FAE1-mediated elongation of oleic acid to VLCFAs and competition for acetyl-CoA, but does not explicitly specify 'oleoyl-CoA and malonyl-CoA-derived elongation system'."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states VLCFAs such as 20:1 and 22:1 are products of the elongation pathway."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the fatty acid elongase complex elongates oleic acid to VLCFAs such as 20:1 and 22:1."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "DGAT1 and EfDAcT are metabolically related to FAE1 effects, but no direct interacting proteins are demonstrated."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show mutating FAE1 nearly eliminates VLCFA and strongly alters acetyl-TAG accumulation, supporting it as a key control point for seed VLCFA synthesis."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "FAE1 was validated through CRISPR knockout backgrounds, acetyl-CoA quantification, fatty acid profiling, and crosses into transgenic EfDAcT lines."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of FAE1 reduced VLCFAs and increased acetyl-TAG accumulation, with pennycress showing a 57% acetyl-CoA increase and up to 98 mol% acetyl-TAG with EfDAcT+DGAT1 RNAi."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary matches the Results for camelina and pennycress fae1 mutants."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper clearly presents fae1 as a useful genetic background edit to boost acetyl-TAG, especially in pennycress."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results report slightly reduced seed weight and fatty acid content in camelina fae1, minimal seed penalties in pennycress fae1, and about 2 days later flowering for fae1 plants."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The study includes RT-qPCR of FAE1 in pennycress, acetyl-CoA metabolite analysis, and lipid profiling."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states camelina has three active FAE1 homeologs and shows species-specific efficacy depending on VLCFA background."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "DGAT1; EfDAcT (metabolic competition via substrate pools)",
+          "new_value": "NA",
+          "reason": "DGAT1 and EfDAcT are metabolically related to FAE1 effects, but no direct interacting proteins are demonstrated."
+        }
+      ],
+      "stats": {
+        "supported": 29,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "DGAT1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT1 was studied in camelina and pennycress backgrounds."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses Camelina sativa and Thlaspi arvense."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods list 'Suneson' and 'Spring-32'."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT1 was functionally addressed in both camelina and pennycress via DGAT1 RNAi and expression analysis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species are Camelina sativa and Thlaspi arvense."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify the ecotypes used."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT1 suppression was tested for effects on acetyl-TAG accumulation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Acetyl-TAG is a lipid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper frames acetyl-TAG as a designer oil trait and DGAT1 suppression as a way to reduce competing TAG synthesis."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The study concerns seed storage lipids."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT1 is explicitly described as catalyzing the final step of endogenous TAG synthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT1 belongs to the canonical TAG assembly branch competing with acetyl-TAG formation."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states DGAT1 catalyzes the final step of TAG synthesis."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT1 is presented as a competing pathway to acetyl-TAG synthesis."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT1 is expanded as DIACYLGLYCEROL ACYLTRANSFERASE1."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for DGAT1 appears in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "Although DGAT1 is generally an MBOAT family enzyme, this paper does not explicitly state that classification."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 4A shows DGAT1 expression in pennycress developing seeds; it is reduced in DGAT1-RNAi lines and also reduced in EfDAcT lines, especially in fae1 background."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The promoter(s) driving the RNAi constructs are not stated in the provided paper text."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Seeds were analyzed from plants under standard growth chamber conditions."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 7 and text state DGAT1 transfers an acyl group to DAG; thus DAG and acyl-CoA are the relevant substrates."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT1 produces TAG."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 7 explicitly describes transfer of an acyl group to the sn-3 position of DAG to produce TAG."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper supports substrate competition with EfDAcT and metabolic relation to FAE1, but not direct protein-protein interactions."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT1 is repeatedly described as the main/endogenous final TAG-synthesizing enzyme whose suppression enhances acetyl-TAG."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT1 was tested by RNAi in stable transgenics, RT-qPCR in pennycress, lipid profiling, crosses, and MALDI-MS imaging."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show DGAT1 suppression increased acetyl-TAG accumulation, enabling up to 93 mol% in camelina and 98 mol% in pennycress with EfDAcT and fae1."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately reflects the presented Results and Discussion, except that 'main' is inferential but well supported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents DGAT1 suppression as an important strategy to maximize acetyl-TAG purity together with EfDAcT and fae1."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Some slower germination and minor seed/oil changes were reported in transgenic lines, particularly those expressing EfDAcT+DGAT1 RNAi."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT1 was measured by RT-qPCR and associated lipid data came from ESI-MS and MALDI-MSI."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly states the mechanism of DGAT1 down-regulation is unknown and speculates about regulation by activity/VLCFA substrate availability."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.3.1.20",
+          "new_value": "NA",
+          "reason": "No EC number for DGAT1 appears in the paper."
+        },
+        {
+          "field": "Applied_Promoters",
+          "old_value": "RNAi construct promoter(s) not stated in provided text",
+          "new_value": "NA",
+          "reason": "The promoter(s) driving the RNAi constructs are not stated in the provided paper text."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "EfDAcT; FAE1",
+          "new_value": "NA",
+          "reason": "The paper supports substrate competition with EfDAcT and metabolic relation to FAE1, but not direct protein-protein interactions."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 3,
+        "uncertain": 1
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 114,
+    "supported": 99,
+    "unsupported": 5,
+    "uncertain": 10,
+    "total_corrections": 5
+  }
+}

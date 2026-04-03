@@ -1,0 +1,300 @@
+{
+  "file": "MinerU_markdown_PMC12205856_2038800151832727564",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12205856_2038800151832727564.md",
+  "timestamp": "2026-03-31T21:48:31.664701",
+  "genes": [
+    {
+      "gene_name": "ZmPEBP15",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmPEBP15 was studied in maize systems; the paper identifies ZmPEBP15 as an interactor of ZmGCH1 in maize protoplasts and tobacco assays."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is on maize, i.e., Zea mays, and ZmPEBP15 is a maize gene ('Zm' prefix; maize context throughout paper)."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "ZmPEBP15 was tested in maize protoplasts and transient assays, but the paper does not explicitly state that the cloned ZmPEBP15 sequence specifically came from B73."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional assays involving ZmPEBP15 were performed in maize-related context and transient expression systems; the gene is from maize."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied crop context is maize (Zea mays)."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNSUPPORTED",
+          "reason": "ZmPEBP15 was not directly tested in Zhengdan 958 or Xianyu 335. Its expression/interaction was discussed for B73/bm6_NIL and transient systems, not those introgression backgrounds."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "ZmPEBP15 is mechanistically linked to precursor partitioning affecting anthocyanin and lignin via interaction with ZmGCH1, but no direct in planta perturbation of ZmPEBP15 alone was tested for final metabolite outcomes."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanin is a flavonoid and lignin is a phenylpropanoid polymer; these classes are consistent with the paper's pathway framing."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Anthocyanin and lignin changes were measured in leaves/midrib for bm6 contexts, but no ZmPEBP15-specific metabolite accumulation site was directly established."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The Summary and Discussion explicitly describe anthocyanins as antioxidants with health benefits and lignin as affecting digestibility/biomass use."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state that ZmGCH1 interacts with ZmPEBP15, that this interaction partially reduces CHS activity, and that disruption of the interaction in bm6 is associated with increased anthocyanin flux."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods appear in Results/Methods: IP-MS, co-localization in tobacco, BiFC, Y2H, Co-IP, luciferase complementation, and transient tobacco CHS activity assay."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'The expression of ZmPEBP15 was significantly reduced in bm6_NIL' (Figure S8a,b, Table S1)."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq/qRT-PCR support reduced ZmPEBP15 expression in bm6_NIL leaves relative to B73."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmGCH1-GFP and ZmPEBP15-mCherry were confirmed to co-localize in the cytoplasm in tobacco leaves (Figure 4d)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly identify ZmPEBP15 as 'a phosphatidylethanolamine-binding protein'."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Multiple assays in Figure 4e-h confirmed interaction with ZmGCH1."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper includes field growth for maize materials and transient expression in tobacco leaves and maize protoplasts."
+        },
+        "Omics_Data": {
+          "verdict": "UNCERTAIN",
+          "reason": "RNA-seq and IP-MS are directly relevant to ZmPEBP15, but untargeted metabolomics was performed on bm6 vs B73 and not specifically on ZmPEBP15 perturbation."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Tradeoffs in lignin/agronomic traits are shown for bm6/ ZmGCH1-related backgrounds, but not directly for ZmPEBP15 manipulation."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses application value for bm6/ZmGCH1, not direct deployment of ZmPEBP15 as a breeding target."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point matches Results except that the association with elevated CHS and anthocyanin is indirect through disrupted interaction in bm6; overall this summary is faithful."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not report a direct ZmPEBP15 mutant/metabolite phenotype in planta; ZmPEBP15 is presented as an interacting partner."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly mention constructs under the 35S promoter for localization assays involving ZmPEBP15-RFP and related transient assays."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Applied_Species_Variety",
+          "old_value": "B73; bm6_NIL; Zhengdan 958; Xianyu 335",
+          "new_value": "NA",
+          "reason": "ZmPEBP15 was not directly tested in Zhengdan 958 or Xianyu 335. Its expression/interaction was discussed for B73/bm6_NIL and transient systems, not those introgression backgrounds."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 1,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "ZmGCH1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results identify the candidate gene as Zm00001d001959."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmGCH1 is a maize gene studied in this maize paper."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism is maize, Zea mays."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Comparisons and cloning/analysis of ZmGCH1 were performed between B73 and bm6_NIL, with B73 as the reference inbred line."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was studied and introgressed in maize."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is maize, Zea mays."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly involve B73, bm6_NIL, Zhengdan 958, and Xianyu 335."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state ZmGCH1 functions upstream in the tetrahydrofolate synthesis pathway and link this to phenylpropanoid partitioning."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion connects ZmGCH1/THF one-carbon metabolism with methyl-donor supply and precursor allocation between lignin and flavonoid/anthocyanin pathways."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly say ZmGCH1 functions upstream in the THF synthesis pathway."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "ZmGCH1 is clearly important/causal for bm6, but the paper does not explicitly demonstrate or state that it is rate-limiting."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmGCH1 is named GTP cyclohydrolase1 throughout the paper."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number 3.5.4.16 appears in the paper text."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "As a GTP cyclohydrolase this is biochemically plausible, but the paper text does not explicitly state the substrate is GTP."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Dihydroneopterin triphosphate is not stated in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The detailed reaction converting GTP to dihydroneopterin triphosphate/first committed step is not explicitly described in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports an indirect connection: ZmGCH1 affects THF/one-carbon metabolism and precursor partitioning toward lignin versus anthocyanin."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and conclusion directly link bm6/ZmGCH1 to lignin and anthocyanin changes."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Lignin is a phenylpropanoid polymer and anthocyanin is a flavonoid; this matches pathway descriptions in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Lignin changes were examined in leaf midrib and leaves; anthocyanin content was measured in leaves (Figure 4a), making 'leaf midrib and leaves' broadly consistent."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly discusses lignin's role in cell walls/digestibility and anthocyanins as antioxidants with health benefits."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show bm6/ ZmGCH1 mutation reduces lignin monomers and increases flavonoid/anthocyanin accumulation, consistent with redirected precursor flux."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed approaches are described in Results/Methods and used to support ZmGCH1 as bm6 and its metabolic/agronomic effects."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR showed expression in roots, stems, leaves, midribs, tassel, ears and seeds; Results also show reduced expression in bm6_NIL leaves relative to B73."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Broad tissue expression and significant downregulation in bm6_NIL leaves at V8 are directly reported."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient assays in maize protoplasts showed ZmGCH1 localized in the cytoplasm."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state ZmGCH1 contains two GTP cyclohydrolase domains."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmPEBP15 was identified and validated as an interactor of ZmGCH1."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Field conditions in Tai'an and Suihua, V8 sampling, and introgression into Zhengdan 958 and Xianyu 335 are all stated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper includes RNA-seq with SRA accession PRJNA1185680 and untargeted metabolomics for bm6/B73 comparisons."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show dwarfing in bm6_NIL and genotype/environment-dependent agronomic penalties, especially in Xianyu 335."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly highlights improved silage digestibility and discusses value for feed and bioethanol, with genotype-dependent caution inferable from reported penalties."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four summary points are directly supported by the Results and Conclusion."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Discussion state total lignin did not significantly decrease and suggest tricin compensation; Discussion notes reduced THF without methionine/SAM changes."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly mention 35S promoter and pCAMBIA1300-based transient expression constructs used for localization/interaction assays."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "3.5.4.16",
+          "new_value": "NA",
+          "reason": "No EC number 3.5.4.16 appears in the paper text."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "Dihydroneopterin triphosphate",
+          "new_value": "NA",
+          "reason": "Dihydroneopterin triphosphate is not stated in the paper."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Catalyzes the first committed step of tetrahydrofolate/pterin biosynthesis by converting GTP to dihydroneopterin triphosphate",
+          "new_value": "NA",
+          "reason": "The detailed reaction converting GTP to dihydroneopterin triphosphate/first committed step is not explicitly described in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 30,
+        "unsupported": 3,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 59,
+    "supported": 47,
+    "unsupported": 4,
+    "uncertain": 8,
+    "total_corrections": 4
+  }
+}

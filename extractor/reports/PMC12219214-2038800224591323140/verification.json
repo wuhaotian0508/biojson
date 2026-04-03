@@ -1,0 +1,694 @@
+{
+  "file": "MinerU_markdown_PMC12219214_2038800224591323140",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12219214_2038800224591323140.md",
+  "timestamp": "2026-03-31T21:49:54.622585",
+  "genes": [
+    {
+      "gene_name": "AcoCYP93A1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoCYP93A1 is described as from A. coreanum; Aco prefix and Results explicitly name AcoCYP93A1 among functional P450s from A. coreanum."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses the Latin name Aconitum coreanum."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional validation was performed by transient coexpression in Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana is explicitly stated throughout Results/Methods."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Genes were cloned into pEAQ-HT vectors and analyzed by transient expression in N. benthamiana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoCYP93A1 contributes to production of oxidized ent-atiserene products/atiserenoids; the paper frames these as cryptic atiserenoids."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These products are diterpenoids/atiserenoids."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Heterologous production in N. benthamiana is supported, but the statement broadly saying 'Aconitum tissues and heterologous N. benthamiana production system' is only partially supported because specific AcoCYP93A1 products are not directly shown as accumulated in Aconitum tissues."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports some atiserenoids showed allelopathic root-growth inhibition activity."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Candidate P450s were identified from coexpression analysis/SOM nodes with functional TPSs in A. coreanum."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was transiently expressed in N. benthamiana leaves."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoCYP93A1 is explicitly assigned to the CYP93A subfamily of cytochrome P450s."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Coexpression with CfDXS, AtGGPPS, AcaCPS and ent-atiserene biosynthesis genes is supported experimentally, and combination with CYP725A is discussed, but direct physical/protein interaction is not shown; these are pathway coexpression partners only."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Results include coexpression in N. benthamiana, GC-MS/LC-MS, large-scale purification with NMR, AlphaFold2 docking, and site-directed mutagenesis for AcoCYP93A1."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states AcoCYP93A1 oxidizes ent-atiserene at three distinct sites to generate A8-A10, i.e. multifunctional oxidation producing diverse atiserenoids."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four summary points are directly supported: multifunctionality on ent-atiserene, three oxidation sites producing A8-A10, key residues I404/I241 from mutagenesis, and products contributing to atiserenoid chemical space with some atiserenoids showing allelopathy."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states this is the first report of CYP93A family members oxidizing labdane-related diterpene scaffolds."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "A. coreanum RNA-seq de novo transcriptome was used; BioProject PRJNA1187874 is given in Data availability."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly discusses promiscuity/mixed product profiles and improved specificity when coexpressed with partner P450s."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion supports use of these enzymes as toolkit parts for designer oxidation and synthetic biology diversification of diterpenoids."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 18,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "AcoCYP725A1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoCYP725A1 is explicitly from A. coreanum."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Aconitum coreanum is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional validation was in Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana is explicitly stated."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Genes were cloned into pEAQ-HT vectors and transiently expressed."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoCYP725A1 is part of combinatorial biosynthesis generating oxidized ent-atiserene products/cryptic atiserenoids."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These metabolites are diterpenoids."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Its products are demonstrated in the heterologous N. benthamiana production system."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows some atiserenoids are allelopathic, but it does not specifically assign the assayed allelopathic compounds as downstream products of AcoCYP725A1 alone."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was identified from A. coreanum coexpression analysis with diterpene synthases."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was transiently expressed in N. benthamiana leaves."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoCYP725A1 is explicitly assigned to CYP725A subfamily."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Combinatorial coexpression with AcoCYP716B1, AcaCYP93A1 and AcoCYP72A1 is supported functionally, but direct protein interactions are not demonstrated."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was validated by transient coexpression in N. benthamiana with LC-MS/GC-MS, and products from pathway combinations were structurally characterized by NMR."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state AcoCYP725A1 could oxidize ent-atiserene at four distinct sites and combinations with other P450s raised A13 or A15 yields."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The statements match Results: highly multifunctional, generates A7/13/15-related products, and boosts dominant products in combinations."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state AcoCYP725A1 is derived from A. coreanum only and lacks an obvious homologous pair among the functional P450s."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "A. coreanum transcriptome/RNA-seq with BioProject PRJNA1187874 is provided."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses promiscuity causing mixed products and improved specificity when paired with additional P450s."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion supports use for combinatorial biosynthesis and oxidation engineering of diterpenoids."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 18,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "AcoTPS3",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoTPS3 is from A. coreanum."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Aconitum coreanum is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Function was tested in Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana is explicitly stated."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Genes were cloned into pEAQ-HT and transiently expressed."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoTPS3-derived product 4 was used for combinatorial biosynthesis of guan-fu diterpenoid A and tripterifordin."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are diterpenoids."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The work concerns labdane-related diterpenoid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoTPS3 makes 16α-hydroxy-ent-kaurene, establishing the 16α-hydroxy-ent-kaurene branch toward these products."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoTPS3 is described as capable of generating 16α-hydroxy-ent-kaurene/16α-hydroxy-ent-kaurane synthase activity."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is clearly a terpene synthase, but the paper does not explicitly assign AcoTPS3 itself to TPS-e/f in the text provided."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state AcoTPS11 and AcoTPS3 are in node 4 in A. coreanum coexpression/SOM analysis."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was transiently expressed in N. benthamiana leaves."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "As a class I diTPS coexpressed with AcaCPS, it acts on ent-copalyl diphosphate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Compound 4 was assigned as 16α-hydroxy-ent-kaurene and produced by AcoTPS3."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results describe AcoTPS3 as a functional class I diTPS ionizing ent-CPP to yield 16α-hydroxy-ent-kaurene."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is the scaffold-forming upstream diterpene synthase step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states guan-fu diterpenoid A and tripterifordin are oxidative products derived from 4."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Tripterifordin was detected in A. coreanum tuber."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Tripterifordin is described as having anti-HIV activity, and guan-fu diterpenoid A is described as a bioactive diterpenoid in context."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "These genes were coexpressed together functionally (CfDXS, AtGGPPS, AcaCPS, AcaCYP71A1, Aco/AcaCYP701A2), but direct protein-protein interactions were not tested."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state discovery of AcoTPS3 suggests 4 may be an alternative precursor scaffold and that such activity had not been found from Aconitum spp. before."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary statements are supported by the Results."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "A. coreanum RNA-seq/de novo transcriptome and BioProject PRJNA1187874 are stated."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoTPS3 enabled production of the 16α-hydroxy-ent-kaurene scaffold that was converted to tripterifordin and guan-fu diterpenoid A."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by transient expression in N. benthamiana, GC-MS, large-scale expression, and NMR structural elucidation of downstream products/compound 4."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The value is 'not established', which is consistent because the paper does not claim rate-limiting status."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly emphasizes synthetic biology access to tripterifordin and derivatives using discovered TPSs/P450s."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 26,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "AcaCYP71A1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcaCYP71A1 is from A. carmichaelii."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Aconitum carmichaelii is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional testing was in Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana is explicitly named."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Genes were cloned into pEAQ-HT vectors and transiently expressed."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AcaCYP71A1 was used in biosynthesis of guan-fu diterpenoid A and, with a C19 oxidase, tripterifordin."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are diterpenoids."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper concerns labdane-related diterpenoid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AcaCYP71A1 functions in the C20 oxidation branch of 16α-hydroxy-ent-kaurene metabolism toward target products."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "It is a cytochrome P450 monooxygenase designated CYP71A1."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly a cytochrome P450 in the CYP71A subfamily."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "Coexpression with functional TPSs is supported generally, but the specific phrase 'fibrous-root associated diterpene module' is not directly assigned to AcaCYP71A1 in Results."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was transiently expressed in N. benthamiana leaves."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is clearly a validated C20 oxidase on 16α-hydroxy-ent-kaurene and also described as a C20 oxidase of ent-kaurene in Discussion, but ent-atiserene as a primary substrate is not directly established in the tripterifordin section and 'primary substrate' is ambiguous."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "On 4 it generated C20-oxygenated products T1/T2, leading toward guan-fu diterpenoid A and tripterifordin pathway intermediates."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states AcaCYP71A1 is a validated C20 oxidase and on 4 generates C20-oxygenated products leading to guan-fu diterpenoid A and, with C19 oxidase, tripterifordin."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an oxidative tailoring step downstream of scaffold formation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "C20 oxidation is explicitly required for guan-fu diterpenoid A and tripterifordin biosynthesis from 4."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Tripterifordin was detected in A. coreanum tuber and T1/T2/T7 in tissues of both plants, but the paper text provided does not explicitly say guan-fu diterpenoid A itself was detected in plant tissues."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Tripterifordin anti-HIV activity is supported; linking guan-fu diterpenoid A to 'guan-fu base-related diterpenoids antiarrhythmic context' is contextual rather than directly stated for guan-fu diterpenoid A itself."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "These genes were coexpressed in pathway reconstruction, but no direct physical interactions were shown."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly compares AcaCYP71A1/AcoCYP71A1 to TwCYP71BE271 and interprets this as convergent evolution for tripterifordin biosynthesis."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are supported by Results and Discussion."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "A. carmichaelii RNA-seq/de novo transcriptome and BioProject PRJNA1187837 are stated."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "It promotes C20 oxidation leading to guan-fu diterpenoid A and tripterifordin formation in the reconstructed pathway."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by coexpression in N. benthamiana, LC-MS/GC-MS, NMR, and combinatorial biosynthesis."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is clearly a key pathway enzyme, but the paper does not explicitly designate it a 'key control step'."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper emphasizes synthetic biology access to tripterifordin and derivatives using these enzymes, supporting engineering value."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 22,
+        "unsupported": 0,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "AcoCYP701A2",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoCYP701A2 is explicitly from A. coreanum."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Aconitum coreanum is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Function was tested in Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana is explicitly stated."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Genes were cloned into pEAQ-HT and transiently expressed."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoCYP701A2 was part of the reconstructed pathway producing tripterifordin."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Tripterifordin is a diterpenoid."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "This work concerns labdane-related diterpenoid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoCYP701A2 functions in the C19 oxidation branch of 16α-hydroxy-ent-kaurene metabolism."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "It is a cytochrome P450 monooxygenase designated CYP701A2."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It belongs to the CYP701A subfamily."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was identified from A. coreanum coexpression analysis associated with functional TPSs."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was transiently expressed in N. benthamiana leaves."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "In the tripterifordin section AcoCYP701A2 was coexpressed with genes for 4 synthesis and oxidized 16α-hydroxy-ent-kaurene."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states it generated T3 and T4 corresponding to C19 alcohol and aldehyde products."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly described as oxidizing 16α-hydroxy-ent-kaurene at C19 to alcohol and aldehyde products."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a downstream oxidative tailoring step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "C19 oxidation is directly required for tripterifordin formation with the C20 oxidase."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Tripterifordin was detected from A. coreanum tuber."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Tripterifordin is described as having anti-HIV activity in the paper context."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "These are coexpressed pathway partners, not demonstrated physical interactors."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows it acts similarly to AcaCYP701A2-1 in the reconstituted pathway for C19 oxidation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by Results."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "A. coreanum RNA-seq/de novo transcriptome and BioProject PRJNA1187874 are stated."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "It enables C19 oxidation needed for tripterifordin biosynthesis."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by coexpression in N. benthamiana, LC-MS/GC-MS, authentic standard comparison for T7, and NMR for related products."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly say this enzyme is rate-limiting or a control point."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Use in synthetic assembly toward tripterifordin/C19-oxidized kauranoids is a direct inference from the demonstrated pathway reconstruction."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 26,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "AcaCYP701A2-1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcaCYP701A2-1 is explicitly from A. carmichaelii."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Aconitum carmichaelii is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Function was tested in Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana is explicitly stated."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Genes were cloned into pEAQ-HT and transiently expressed."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AcaCYP701A2-1 was used in reconstitution of the tripterifordin pathway."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Tripterifordin is a diterpenoid."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "This is within labdane-related diterpenoid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It acts in the C19 oxidation branch from 16α-hydroxy-ent-kaurene."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "It is designated cytochrome P450 monooxygenase CYP701A2-1."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It belongs to the CYP701A subfamily."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was identified through A. carmichaelii coexpression mining for functional TPS-associated P450s."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was transiently expressed in N. benthamiana leaves."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The tripterifordin section states AcaCYP701A2-1 coexpressed with 4-biosynthesis genes generated C19 oxidation products from 16α-hydroxy-ent-kaurene."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "It generated T3/T4 corresponding to C19 alcohol and aldehyde intermediates."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly described as oxidizing 16α-hydroxy-ent-kaurene at C19 to alcohol/aldehyde states."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a midstream oxidative tailoring step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Its C19 oxidation is directly connected to tripterifordin formation in the reconstructed pathway."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Tripterifordin was detected in A. coreanum tuber."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Tripterifordin is described as anti-HIV-active in context."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "These are functional coexpression partners rather than demonstrated physical interactors."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support it as an A. carmichaelii homolog functioning similarly to the A. coreanum C19 oxidase in pathway reconstruction."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary statements are supported by Results."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "A. carmichaelii transcriptome/RNA-seq and BioProject PRJNA1187837 are stated."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "It enables C19 oxidation in the route to tripterifordin."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by coexpression in N. benthamiana and LC-MS/GC-MS analyses."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly define it as rate-limiting or a control step."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Its utility as an alternative C19 oxidase for engineered tripterifordin biosynthesis is directly supported by successful pathway reconstruction."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 26,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 152,
+    "supported": 136,
+    "unsupported": 0,
+    "uncertain": 16,
+    "total_corrections": 0
+  }
+}

@@ -1,0 +1,425 @@
+{
+  "file": "MinerU_markdown_PMC12435212_2038799925810077715",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12435212_2038799925810077715.md",
+  "timestamp": "2026-03-31T21:53:16.712927",
+  "genes": [
+    {
+      "gene_name": "miR444b.2",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies miR444b.2 in rice throughout, including rice mutant and overexpression lines."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice is explicitly identified as Oryza sativa in the paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All functional analyses of miR444b.2 were performed in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is rice, i.e., Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Fig. 5 explicitly mentions Xu3 (Xudao 3) for miR444b.2 assays, but Zhonghua 11 is not clearly stated as the background for the miR444b.2 mutant/OE functional lines in the Results."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "miR444b.2 is explicitly described as a temperature-responsive miRNA, and its name supports membership in the miR444 family."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Fig. 4B state miR444b.2 expression is suppressed under 40°C pretreatment and M. oryzae infection."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports lower miR444b.2 under 40°C versus 22°C and an inverse correlation with HsfA1 transcript levels under heat pretreatment and blast infection."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The study places miR444b.2 upstream of HsfA1-AOC1-mediated jasmonic acid accumulation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "JA is central in the paper, but the class 'oxylipin phytohormone' is biochemical background knowledge and not explicitly stated in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "JA was quantified in rice plants/seedlings in this study, but the exact phrase 'seedling leaves' for JA accumulation is not explicitly stated in the Results."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly presents JA as mediating blast resistance downstream of HsfA1-AOC1."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of miR444b.2 enhances resistance and overexpression increases susceptibility, with the module acting through HsfA1 and JA-associated heat-priming-enhanced blast resistance."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all described in Results/Methods: knockout, overexpression, RT-qPCR, dual-luciferase, immunoblotting, target-site mutagenesis, RNA pull-down, RACE, polysome profiling, disease assay, and fungal biomass quantification."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "miR444b.2 is shown to bind HsfA1 mRNA, not a protein. The stated value incorrectly labels the interactor as a protein."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "miR444b.2 was analyzed under 40°C pretreatment for 24 h and M. oryzae inoculation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are consistent with the Results: heat/pathogen responsiveness, direct targeting of HsfA1 mRNA, and opposite resistance phenotypes in loss- and gain-of-function lines within the HsfA1/JA pathway."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper proposes target-site-edited HsfA1 lines reducing miR444b.2 repression and discusses potential breeding strategies for improved blast resistance."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "The mHsfA1 target-site-edited lines indeed phenocopy reduced miR444b.2 repression, but the schema-classification comment about why it is placed as a 'common gene' is external to the paper."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly lists miRNA-seq accession PRJNA1234785 in Data Availability."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "HsfA1 mRNA",
+          "new_value": "NA",
+          "reason": "miR444b.2 is shown to bind HsfA1 mRNA, not a protein. The stated value incorrectly labels the interactor as a protein."
+        }
+      ],
+      "stats": {
+        "supported": 15,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "AOC1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "AOC1 is explicitly expanded as allene oxide cyclase 1 in the Results."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for AOC1 is given anywhere in the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AOC1 is studied in rice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice is Oryza sativa."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional assays for AOC1 were carried out in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is rice, Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and figure text for AOC1 downstream analyses refer to ZH11 background and comparison to ZH11 in mpAOC1 lines."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "AOC1 is clearly an allene oxide cyclase by name, but 'family enzyme' wording is not explicitly stated in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AOC1 is explicitly described as a key jasmonic acid biosynthesis gene."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention the octadecanoid pathway or define the cyclization subpathway."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not classify AOC1 as 'midstream'."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No substrate chemistry is given in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "OPDA is not mentioned in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The specific catalytic reaction is not described in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly links AOC1 to JA biosynthesis and downstream JA accumulation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls AOC1 'a key jasmonic acid biosynthesis gene' and 'the key JA biosynthetic enzyme' in Discussion."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AOC1 expression is reported to be reduced in hsfa1 and activated by HsfA1."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show lower AOC1 in hsfa1 mutants and direct HsfA1 promoter binding/activation by ChIP-qPCR and luciferase assay."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AOC1 is linked to jasmonic acid accumulation in the study."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The class 'oxylipin phytohormone' is not explicitly stated in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "JA is measured in rice plants after treatments, but the precise site 'seedling leaves' is not explicitly specified for the JA assay in Results."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "JA is explicitly presented as promoting blast resistance."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states knockout of AOC1 abolishes heat-priming-enhanced JA accumulation and blast resistance."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed approaches are reported: knockout, hsfa1/AOC1 overexpression, RT-qPCR, Y1H, EMSA, ChIP-qPCR, luciferase assay, disease assay, fungal biomass, JA quantification, and promoter motif editing."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "HsfA1 is shown to bind the AOC1 promoter directly, establishing a direct regulatory interaction."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "AOC1 function was assayed under 40°C pretreatment, M. oryzae infection, and MeJA rescue conditions."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements match the Results: AOC1 is a direct HsfA1 target, aoc1 mutants lose heat-priming-enhanced resistance, and AOC1 overexpression/promoter editing affect JA and resistance phenotypes."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "AOC1 clearly has functional relevance, but the paper's explicit breeding emphasis is stronger for HsfA1 natural alleles and uORF editing than for direct AOC1 engineering."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states HI-LOX was tested but did not show the same functional requirement as AOC1 for heat-priming-enhanced blast resistance."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed accessions PRJNA1234290, PRJNA1234552, and PRJNA1234705 are all explicitly given in the paper."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses the native AOC1 promoter and CRISPR-edited HsfA1-binding motif lines (mpAOC1)."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "5.3.99.6",
+          "new_value": "NA",
+          "reason": "No EC number for AOC1 is given anywhere in the paper."
+        },
+        {
+          "field": "Pathway_Branch_or_Subpathway",
+          "old_value": "Octadecanoid pathway, cyclization step",
+          "new_value": "NA",
+          "reason": "The paper does not mention the octadecanoid pathway or define the cyclization subpathway."
+        },
+        {
+          "field": "Metabolic_Step_Position",
+          "old_value": "midstream",
+          "new_value": "NA",
+          "reason": "The paper does not classify AOC1 as 'midstream'."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "12,13-epoxy-octadecatrienoic acid (allene oxide)",
+          "new_value": "NA",
+          "reason": "No substrate chemistry is given in the paper."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "12-oxo-phytodienoic acid (OPDA)",
+          "new_value": "NA",
+          "reason": "OPDA is not mentioned in the paper."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Cyclizes unstable allene oxide to form OPDA in the octadecanoid/JA biosynthetic pathway",
+          "new_value": "NA",
+          "reason": "The specific catalytic reaction is not described in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 6,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "HsfA1",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HsfA1 is studied in rice throughout the paper."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice is Oryza sativa."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional tests for HsfA1 were performed in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is rice, Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper includes HsfA1-related experiments across ZH11, NIP, TP309, and CO39 in the heat/blast framework."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "HsfA1 is explicitly a heat shock transcription factor in the HSF pathway."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "HsfA1 is directly shown to act as a transcription factor activating target gene expression."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The Results mention subcellular localization analysis confirming transcriptional activation activity, but the excerpt does not explicitly state 'nucleus' for HsfA1."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state HsfA1 is induced by M. oryzae at 72 hpi and by 40°C within 20 min."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly reports higher HsfA1 after 20 min heat treatment and 72 hpi, and altered expression in mir444b.2 knockout and overexpression lines."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "HsfA1 responds to 40°C heat, M. oryzae infection, and is repressed by miR444b.2."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "AOC1 and HI-LOX are identified as JA-pathway genes downstream of HsfA1, with direct promoter binding evidence."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct activation of AOC1 is shown; HI-LOX promoter binding is reported, but functional evidence points mainly to AOC1 as decisive for resistance."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The study directly links HsfA1 to regulation of JA biosynthesis."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "HsfA1 acts through transcriptional activation of AOC1."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "HsfA1 regulates JA accumulation in the paper."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The class 'oxylipin phytohormone' is not explicitly stated in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "JA was quantified in rice plants, but the exact accumulation site 'seedling leaves' is not clearly specified in the Results."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "JA is explicitly linked to blast resistance."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Knockout of HsfA1 abolishes heat-priming-enhanced JA accumulation and blast resistance, whereas overexpression enhances resistance."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly states HsfA1 is a key positive regulator linking heat sensing to JA-mediated blast resistance, and hsfa1 reduces JA accumulation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed approaches are reported in the paper, including mutants, overexpression, RNA-seq, CUT&Tag, RT-qPCR, Y1H, EMSA, ChIP-qPCR, luciferase, disease/fungal biomass assays, JA measurement, rescue tests, uORF editing, and haplotype analysis."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This field mixes unlike entities: miR444b.2 is not a protein, and AOC1/HI-LOX promoters are DNA elements, not proteins."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These treatments are all explicitly used for HsfA1-related assays."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three summary points are all directly supported by the Results and figures."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly proposes favorable HsfA1 alleles and CRISPR uORF editing as strategies for breeding disease-resistant, climate-resilient rice."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports no significant agronomic-trait changes in knockout/OE lines and shows hsfa1 mutants are more heat sensitive, supporting the stated tradeoff summary."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows HsfA1-OE has reduced lesion area under 22°C pretreatment and states AOC1 promoter occupancy was not affected by 40°C pretreatment or infection."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "All four listed accessions are explicitly provided in Data Availability."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes native-context HsfA1 regulation and CRISPR editing of the HsfA1 uORF in the native 5′ leader/promoter region in mu-HsfA1 lines."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "miR444b.2; AOC1 promoter; HI-LOX promoter",
+          "new_value": "NA",
+          "reason": "This field mixes unlike entities: miR444b.2 is not a protein, and AOC1/HI-LOX promoters are DNA elements, not proteins."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 81,
+    "supported": 62,
+    "unsupported": 8,
+    "uncertain": 11,
+    "total_corrections": 8
+  }
+}

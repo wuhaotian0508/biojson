@@ -1,0 +1,547 @@
+{
+  "file": "MinerU_markdown_PMC8944845_2038794276388765707",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC8944845_2038794276388765707.md",
+  "timestamp": "2026-03-31T17:30:17.864470",
+  "genes": [
+    {
+      "gene_name": "tHMGR",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods states the truncated HMG-CoA reductase gene (tHMGR) was from oat."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies oat as Avena strigosa and states tHMGR is from oat."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "tHMGR was coinfiltrated in transient expression assays in Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The transient assay host is explicitly Nicotiana benthamiana."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls it a truncated 3-hydroxy-3-methyl glutaryl-coenzyme A reductase gene."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "tHMGR was used by coinfiltration/coexpression in transient N. benthamiana expression assays."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses tHMGR as a supporting gene to enhance heterologous production and does not test it as the causal determinant of oat wax hopane composition or product specificity."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects that tHMGR was included as metabolic support and was not a primary Results focus."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "tHMGR was coexpressed in assays producing hopenol B and hop-17(21)-en-3β-ol, but the paper does not assign these as direct terminal metabolites of tHMGR itself."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The products in the assay are triterpenoids, but tHMGR is not directly shown to make a terminal triterpenoid product."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says constructs were transferred into pEAQ-HT-DEST1, but does not explicitly describe this as a promoter for tHMGR."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as a helper that supports heterologous triterpene production context rather than a direct phenotype gene."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Hopenol B and hop-17(21)-en-3β-ol are surface wax components, but this function is linked to AsHS genes/products, not directly to tHMGR."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Panicles and sheathes are accumulation sites of the hopane products in oat, but not specifically a field attributable to tHMGR."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Agrobacterium-mediated transient expression in N. benthamiana leaves is explicitly described."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "tHMGR was coexpressed with AsHS1, AsHS2, and AcHS1, but physical or functional protein interaction is not demonstrated."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 10,
+        "unsupported": 0,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "AsHS1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data Availability gives accession range OM401318–OM401331 for 13 AsOSC genes and AcHS1; AsHS1 corresponds to AsOSC7, so OM401324 is consistent with the ordered 14-accession series, though not individually spelled out. Directly inferable."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AsHS1 is from oat."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Avena strigosa."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods refers to the A. strigosa S75 genome and cDNA source."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AsHS1 was analyzed in oat tissues and expressed in Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly uses Avena strigosa and Nicotiana benthamiana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "S75 is stated for A. strigosa; no variety is given for N. benthamiana."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "AsOSC7 was renamed AsHS1 and identified as a hopenol B synthase; it is an oxidosqualene cyclase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number 5.4.99.- appears in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AsHS1 is one of the OSCs and thus an oxidosqualene cyclase/triterpene synthase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places AsHS1 in triterpenoid biosynthesis, specifically hopane-type triterpene formation from oxidosqualene."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The results connect AsHS1 to hopane-type pentacyclic triterpenes and wax components."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "AsHS1 catalyzes the cyclization of 2,3-oxidosqualene to the hopane scaffold/product, a branch-determining cyclization step."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states triterpene precursor is (3S)-2,3-oxidosqualene and AsHS1 is an OSC acting on it."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "AsHS1 product was identified as hopenol B by GC-MS and NMR."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states oxidosqualene passes through dammarane and hopyl C22 cation and is directly deprotonated at C29 to form hopenol B."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "AsHS1 directly forms the target product hopenol B."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "AsHS1 is clearly a key branch/product-determining cyclase, but the paper does not explicitly call it rate-limiting."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR showed AsHS1 is expressed in young and mature panicles, highest in mature panicles."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports panicle-enriched expression in oat and heterologous expression in N. benthamiana leaves."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AsHS1 directly produces hopenol B, also detected in oat wax."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Hopenol B is described as a pentacyclic triterpene/triterpene alcohol."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Hopenol B is shown as a surface wax component; contribution to drought/cold protection is proposed in Discussion, not directly tested."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Trace amounts of hopenol B were detected in mature panicle surface wax."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support that AsHS1 is linked to hopenol B accumulation in panicle wax."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are present in the study: transient expression, GC-MS, NMR, qRT-PCR, wax extraction/GC-MS, mutagenesis, and QM/MM."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point is supported in Results: AsHS1 identified as hopenol B synthase, mature-panicle expression, residue substitutions alter specificity, and C366 acts as general base supported by modeling/mutation."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "AsHS1 was coexpressed with tHMGR, but protein interaction was not shown."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Transcriptome sequencing/RNA-seq and A. strigosa S75 genome v8.0 are explicitly referenced; accession is not provided in this paper text."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Both 2-mo-old oat tissue wax analysis and transient Agrobacterium expression in N. benthamiana are described."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The construct vector pEAQ-HT/pEAQ-HT-DEST1 is stated, but a specific promoter is not named."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Engineering utility is a reasonable implication, but this application value is not directly demonstrated in Results."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No tradeoffs or cuticle property effects were experimentally reported."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "AsHS1 corresponds to AsOSC7; Y410, F257, F729, and C366 roles, plus C366D/C366G behavior, are all described in Results and figures/SI."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "5.4.99.-",
+          "new_value": "NA",
+          "reason": "No EC number 5.4.99.- appears in the paper."
+        },
+        {
+          "field": "Potential_Tradeoffs",
+          "old_value": "Potential wax-composition shifts may affect cuticle properties; no direct growth penalty reported",
+          "new_value": "NA",
+          "reason": "No tradeoffs or cuticle property effects were experimentally reported."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 2,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "AsHS2",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data Availability gives OM401318–OM401331 for 13 AsOSC genes plus AcHS1; AsHS2 corresponds to AsOSC8, so OM401325 is inferable from the ordered series though not individually listed."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AsHS2 is from oat."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Avena strigosa."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "A. strigosa S75 is the source used in the study."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AsHS2 was studied in oat tissues and transiently expressed in Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Avena strigosa and Nicotiana benthamiana are explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "S75 applies to A. strigosa and no variety is given for N. benthamiana."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "AsOSC8 was renamed AsHS2 and identified as a hop-17(21)-en-3β-ol synthase/OSC."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number 5.4.99.- appears in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AsHS2 is an oxidosqualene cyclase/triterpene synthase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places AsHS2 in hopane-type triterpene biosynthesis from oxidosqualene."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AsHS2 is directly tied to the hopane-type pentacyclic triterpene/wax branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "AsHS2 catalyzes the branch-determining cyclization/rearrangement leading to hop-17(21)-en-3β-ol."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "OSC substrate is the triterpene precursor (3S)-2,3-oxidosqualene."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "AsHS2 product was identified as hop-17(21)-en-3β-ol by GC-MS and NMR."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the hopyl C22 cation undergoes proton/hydride rearrangement and deprotonation to generate hop-17(21)-en-3β-ol."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "AsHS2 directly forms the target product."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is clearly a key branch/product-determining cyclase, but not explicitly described as rate-limiting."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR showed AsHS2 is very strongly expressed in sheathes and also in shoots."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports sheath/shoot-enriched expression in oat and ectopic transient expression in N. benthamiana leaves."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AsHS2 directly produces hop-17(21)-en-3β-ol and this compound was detected in oat wax."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Hop-17(21)-en-3β-ol is described as a pentacyclic triterpene/triterpene alcohol."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Its role as surface wax component is shown, but contribution to drought/cold protection is only proposed in Discussion."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Trace amounts were detected in sheath surface wax."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support AsHS2 involvement in biosynthesis of hop-17(21)-en-3β-ol in oat sheath wax."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are indeed used for AsHS2."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four summary points are supported by Results and figures, including product identity, sheath expression, A410 importance, and incomplete reverse conversion with side products."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Coexpression with tHMGR is shown, but no direct protein interaction is demonstrated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Transcriptome/RNA-seq and A. strigosa S75 genome v8.0 are explicitly referenced."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Both oat wax analysis from 2-mo-old tissues and transient Agrobacterium expression in N. benthamiana are described."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The vector pEAQ-HT/pEAQ-HT-DEST1 is given, but not a specific promoter."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Engineering utility is an implication, not directly validated in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No agronomic penalty or wax-function tradeoff was experimentally reported."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "AsHS2 corresponds to AsOSC8, and the mutation outcomes described here match the Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "5.4.99.-",
+          "new_value": "NA",
+          "reason": "No EC number 5.4.99.- appears in the paper."
+        },
+        {
+          "field": "Potential_Tradeoffs",
+          "old_value": "Potential off-target alteration of wax chemistry and side-product isomotiol formation; no direct agronomic penalty reported",
+          "new_value": "NA",
+          "reason": "No agronomic penalty or wax-function tradeoff was experimentally reported."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 2,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "AcHS1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data Availability states AcHS1 is included among GenBank accessions OM401318–OM401331; as the additional gene after 13 AsOSC genes, OM401331 is directly inferable."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcHS1 is from Aquilegia coerulea."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The Latin name Aquilegia coerulea is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcHS1 was expressed in Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana is explicitly used as the host."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies AcHS1 as a hopenol B synthase from A. coerulea and it is an OSC."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number 5.4.99.- appears in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AcHS1 is explicitly discussed as an oxidosqualene cyclase/hopenol B synthase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AcHS1 is tested in the same hopane-type triterpene branch of oxidosqualene cyclization."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places AcHS1 in the hopane-type pentacyclic triterpene branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It catalyzes the branch-determining cyclization to hopenol B."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "As an OSC in this study, AcHS1 acts on 2,3-oxidosqualene; this is directly inferable from the shared reaction framework."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "AcHS1 is described as a hopenol B synthase."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that AcHS1 predominantly forms hopenol B and discusses L413 as analogous to AsHS1 Y410 in constraining geometry."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "AcHS1 directly forms hopenol B."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "Branch-determining is supported, but rate-limiting is not stated."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcHS1 was transiently expressed in N. benthamiana leaves."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AcHS1 produces hopenol B, and mutants can produce hop-17(21)-en-3β-ol; both are directly measured in the heterologous system."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are hopane-type triterpenoid products."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The statement is cautious and matches the paper: hopane-type triterpenes are the products, while a specific native biological role for AcHS1 in Aquilegia was not tested."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows AcHS1 produces hopenol B and that L413A-containing mutants gain hop-17(21)-en-3β-ol production, supporting conservation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "AcHS1 was predicted/synthesized and tested by transient expression, GC-MS, and site-directed mutagenesis."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed points are supported by the AcHS1 mutagenesis results in Results/Fig. 4."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "AcHS1 was coexpressed with tHMGR, but no direct interaction was shown."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "AcHS1 was predicted from the Phytozome A. coerulea genome version 3.1."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient Agrobacterium-mediated expression in N. benthamiana is described."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The expression vector pEAQ-HT-DEST1 is given, but no specific promoter is named."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Comparative engineering value is plausible but not directly tested as an application."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects that AcHS1 was mainly used to validate conservation of residue logic rather than Aquilegia native wax function."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "5.4.99.-",
+          "new_value": "NA",
+          "reason": "No EC number 5.4.99.- appears in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 113,
+    "supported": 88,
+    "unsupported": 5,
+    "uncertain": 20,
+    "total_corrections": 5
+  }
+}

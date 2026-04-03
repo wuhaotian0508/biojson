@@ -1,0 +1,392 @@
+{
+  "file": "MinerU_markdown_PMC12095047_2038800362395181072",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12095047_2038800362395181072.md",
+  "timestamp": "2026-03-31T21:46:23.197230",
+  "genes": [
+    {
+      "gene_name": "PIN8",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PIN8 is repeatedly identified as Arabidopsis thaliana PIN8, including in Results and Methods ('A. thaliana PIN8', 'AtPIN8 protein')."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states Arabidopsis thaliana PIN8."
+        },
+        "Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "Arabidopsis thaliana PIN8 was purified and tested in vitro and in Xenopus oocytes; 'Arabidopsis' alone is partly supported, but this field conflates source organism and assay systems."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Arabidopsis thaliana is clearly involved, but PIN8 functional assays were also done in Xenopus oocytes; the exact restricted value 'Arabidopsis thaliana' alone does not capture all applied systems."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Col-0 is mentioned for stem assays and seed stocks, but PIN8-specific experiments used purified protein and oocytes; no PIN8-specific applied variety is stated."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PIN8 is directly tested with 2,4-D, 4-CPA, and IAA, and the paper broadly states phenoxyacetic acid herbicides are transported by PINs."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "2,4-D and 4-CPA are described as synthetic auxin herbicides, and IAA as the principal endogenous auxin/phytohormone."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The Introduction explicitly states auxins control plant growth and development and synthetic auxins act as herbicides."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show PIN8 binds/transports 2,4-D, transports 4-CPA, and responses are NPA-sensitive; this is directly supported by SSM/oocyte data and structural analyses."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly reflected in Results: 2,4-D transport/binding comparable to IAA, 4-CPA transport with five structural states, and mutagenesis defining substrate recognition residues."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are used for PIN8 in the paper: SSM electrophysiology, oocyte efflux (for PIN8), cryo-EM, mutagenesis, and molecular dynamics."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "NPA is not a protein but a chemical inhibitor, so that part is misclassified. PID was tested with PIN3, not PIN8, which the value itself notes. Thus only partial support exists."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes PIN8 as a PIN-FORMED auxin transporter with 10 transmembrane helices, long cytoplasmic loop, dimeric architecture, and elevator mechanism."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper establishes PIN8 as a membrane transporter but does not explicitly assign 'plasma membrane/endomembrane' localization for PIN8 in this study."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Exogenous 2,4-D and 4-CPA treatments and NPA inhibition are directly used throughout the PIN8 experiments."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Asynchronous protomer conformations and the listed key residues (N117, S146, Y150, N223, S55, S266) are all discussed in Results."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state AtPIN8 protein with UniProt: Q9LFP6."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states the findings may be useful for engineering herbicide-resistant crops and structure-guided design."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is biologically plausible and consistent with auxin transport roles, but the paper does not directly test or demonstrate these tradeoffs."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Applied_Species_Variety",
+          "old_value": "Col-0",
+          "new_value": "NA",
+          "reason": "Col-0 is mentioned for stem assays and seed stocks, but PIN8-specific experiments used purified protein and oocytes; no PIN8-specific applied variety is stated."
+        }
+      ],
+      "stats": {
+        "supported": 13,
+        "unsupported": 1,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "PIN3",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly test Arabidopsis thaliana PIN3 in Xenopus oocyte assays."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "PIN3 is identified as A. thaliana PIN3."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PIN3 was tested in Xenopus oocytes, and the source gene is Arabidopsis; the combined value is consistent with the study context."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana PIN3 was assayed in Xenopus oocytes; Xenopus is referenced throughout the oocyte assay methods."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PIN3 is directly tested for 2,4-D export and IAA export; 4-CPA export by PIN3 is shown in Extended Data Fig. 5c."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These compounds are described as synthetic auxin herbicides (2,4-D, 4-CPA) and phytohormone/endogenous auxin (IAA)."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies transport/distribution of auxin herbicides and auxin in plants; this function statement matches the Results context."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show PIN3 exports 2,4-D in an NPA-sensitive manner, is activated by PID, and Extended Data shows 4-CPA export by PIN3."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point is directly supported by Fig. 1c, Extended Data Fig. 2d-f, and Extended Data Fig. 5c."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "PIN3 was tested by Xenopus oocyte radiotracer efflux assays with/without PID and NPA."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "PID is directly coexpressed with PIN3 and functionally activates it."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PIN3 is explicitly part of the PIN-FORMED auxin transporter family."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Although PIN3 is a membrane exporter, this paper does not explicitly state 'plasma membrane' for PIN3 in the Results."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "NPA inhibition and PID coexpression are directly tested for PIN3."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "PIN3 is indeed used mainly to corroborate family-level conclusions, while PIN8 is the structural focus."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper generally argues that understanding PIN-mediated herbicide transport can support engineering altered herbicide movement/resistance."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Likely true biologically, but not directly tested in this study."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 15,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "PIN1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PIN1 is discussed as Arabidopsis thaliana PIN1, including pin1 mutant stem assays and prior structural context."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The stem transport assays were performed in Arabidopsis plants."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The stem assays are explicitly in Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Seed stocks list wildtype Arabidopsis Col-0 and pin1 (SALK_047613), matching the field."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Stem assays directly measured [3H]-IAA and [3H]-2,4-D transport."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA is the endogenous auxin and 2,4-D is a synthetic auxin herbicide."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results specifically concern basipetal auxin/herbicide transport in stems."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Extended Data Fig. 2g-i measured substrate content in inflorescence stem segments."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state 2,4-D transport is completely abolished in pin1 mutants, showing PIN1 is required in this organ."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly stated in Results and Extended Data Fig. 2g-i."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed methods match the Arabidopsis stem transport assay with radiolabeled IAA/2,4-D, pin1 mutant comparison, and NPA treatment."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "NPA is a chemical inhibitor, not a protein; only NPA sensitivity is shown."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PIN1 is explicitly a PIN-FORMED auxin efflux transporter."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The study does not directly establish PIN1 plasma membrane localization in the Results, even though this is generally known."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The assay context shows function in inflorescence stems, but the paper does not directly present expression pattern data for PIN1."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied assay context is inflorescence stem tissue, directly stated for the stem assay."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "NPA treatment and stem transport assay conditions are explicitly described."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states PIN1 is the transporter responsible for auxin transport in this organ and that PIN1 is not the structural focus."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant line SALK_047613 is explicitly listed in the seed stocks and used for pin1."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "General application to altering herbicide translocation is consistent with the paper's concluding statements."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Developmental defects from PIN1 perturbation are plausible and consistent with known biology, but not directly tested in this paper."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 18,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "PID",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PID is the Arabidopsis PINOID kinase referenced in the PIN3 assay context and cited from prior work."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Within the study context PID refers to Arabidopsis thaliana PINOID used with A. thaliana PIN3."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PID function was tested in the Xenopus oocyte system by coexpression with PIN3."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods and Results explicitly use Xenopus oocytes."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PID's effect is directly tested on PIN3-mediated transport of 2,4-D and IAA; 4-CPA with PIN3 is shown in Extended Data though PID effect is also compared there."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These compounds are synthetic auxin herbicides and endogenous auxin."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "PID is tested in the context of auxin/herbicide export via PIN3."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PID is explicitly called the activating PINOID kinase."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "In this paper PID is functionally tested on PIN3."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state PIN3 is activated by kinase, indicating activation of transporter function by kinase-dependent regulation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 1c and Extended Data Fig. 2d-f show PID enhances PIN3-mediated 2,4-D and IAA export in oocytes."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes PID's inclusion as a directly tested coexpression regulator rather than the main focus."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings are supported by the PIN3 +/- PID oocyte assays."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "UNCERTAIN",
+          "reason": "A functional regulator-target relationship is supported, but no physical protein complex is shown."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "PID modulates auxin/herbicide transport through PIN3 in the assays."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper shows activation of PIN3 transport activity, not regulation of target genes/gene expression."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible extrapolation from the paper's broader implications, but PID-specific engineering value is not directly discussed."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Likely broad developmental effects are plausible but not directly tested."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "PID was tested by coexpression in Xenopus oocytes, with NPA inhibition conditions."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "PIN3 is the direct functional target tested with PID."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The assays show condition-dependent activation of PIN3-mediated 2,4-D/IAA export by PID."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Regulatory_Effect_on_Target_Genes",
+          "old_value": "Activates PIN3 transport activity",
+          "new_value": "NA",
+          "reason": "The paper shows activation of PIN3 transport activity, not regulation of target genes/gene expression."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 79,
+    "supported": 63,
+    "unsupported": 2,
+    "uncertain": 14,
+    "total_corrections": 2
+  }
+}

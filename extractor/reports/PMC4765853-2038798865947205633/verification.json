@@ -1,0 +1,165 @@
+{
+  "file": "MinerU_markdown_PMC4765853_2038798865947205633",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC4765853_2038798865947205633.md",
+  "timestamp": "2026-03-31T22:10:07.549014",
+  "genes": [
+    {
+      "gene_name": "CKS1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies CKS1 as MGG_04857 throughout the Results and supporting figures."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CKS1 is studied in the rice blast fungus; this common name appears repeatedly in the title, abstract, and Results."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The organism is explicitly named Magnaporthe oryzae throughout the paper."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "GY11 is explicitly the genetic background/strain used to generate mutants, but calling it a 'variety' is not the terminology used for the fungus."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was manipulated in the rice blast fungus itself."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species for the gene manipulation is Magnaporthe oryzae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "GY11 is the fungal wild-type strain/genetic background, not explicitly a 'variety'."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The complemented strain carried the genomic sequence of MGG_04857 under control of its own promoter, but 'constitutive/native context' is not explicitly stated and overextends beyond the complementation description."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "S2E and the Results state that MGG_04857 expression was similar between wild type and complemented isolates and not detected in cks1 mutants by qRT-PCR in vitro."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "This restates the experimentally verified in vitro expression pattern: detected in GY11 and complemented strain, absent in deletion mutant."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "MGG_04857 is described as a putative tRNA-IPT, and the paper states no other gene containing the IPT domain was identified."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper infers MGG_04857 likely encodes an active tRNA-IPT and calls it a putative tRNA-IPT, but says the activity still needs to be established."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given anywhere in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly places CKS1 in cytokinin biosynthesis through the tRNA-related pathway, contrasting it with de novo biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results specifically describe MGG_04857/CKS1 as a tRNA-IPT candidate in the tRNA-mediated CK production branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states that in this pathway the first step of CK production involves tRNA-isopentenyl transferases."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion abolishes detectable cytokinin production, so CKS1 is directly linked to supplying the precursor route for CK production."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "Conserved ATP, DMAPP, and tRNA binding sites are discussed, supporting likely substrates/interactions, but the exact substrate wording 'tRNA-bound adenine residues' is inferred rather than directly stated for M. oryzae."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports a tRNA-IPT role and CK production via tRNA degradation, but does not directly identify the immediate enzymatic product as isopentenylated tRNA in M. oryzae."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "This reaction is consistent with known tRNA-IPT function and motif conservation, but the paper does not biochemically demonstrate this exact reaction for CKS1."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 directly reports cytokinins as the products affected, with detected forms cisZR, cisZNT, iPR, and iPNT."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Cytokinins are explicitly described as plant hormone/phytohormone compounds."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show fungal CKs alter host CK signaling, reduce defense/oxidative burst, and affect sugar and amino-acid contents during infection."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 shows CKs in fungal mycelia and culture supernatant; nutrient effects are measured at and around infection sites in rice."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results show cks1 deletion abolishes detectable CKs, reduces virulence and penetration, causes slight oxidative-stress sensitivity, and alters host nutrient-associated responses."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is supported that CKS1 is the only identified IPT-domain protein and deletion abolishes detectable CKs, but 'rate-limiting' is not tested directly."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed factors are explicitly described: minimal medium without yeast extract for CK measurement, 1 mM H2O2, kinetin/cis-zeatin rescue, infection assays, and high nitrogen fertilization experiments."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows no obvious in vitro growth or appressorium defects under standard conditions, but slight hypersensitivity to oxidative stress and reduced virulence."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all explicitly used in the study: knockout, complementation under own promoter, qRT-PCR, LC-MS/MS CK measurements, rice virulence assays, CK rescue, oxidative-stress tests, and infected-leaf metabolite profiling."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately reflects the central Results: unique IPT-domain candidate, loss of CK production in knockout, virulence and host-response defects, and rescue by exogenous CKs."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed infers enzyme activity from motifs/structure and mutant phenotype rather than direct enzymology, and reports cis-zeatin forms as major CKs detected."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper includes targeted LC(ESI+)-MS/MS cytokinin profiling, targeted sugar/amino-acid profiling, and qRT-PCR; it does not report an omics accession number."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The antifungal target rationale is a reasonable implication from the Results, but this translational application is not explicitly stated or tested in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.5.1.75",
+          "new_value": "NA",
+          "reason": "No EC number is given anywhere in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 1,
+        "uncertain": 9
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 33,
+    "supported": 23,
+    "unsupported": 1,
+    "uncertain": 9,
+    "total_corrections": 1
+  }
+}

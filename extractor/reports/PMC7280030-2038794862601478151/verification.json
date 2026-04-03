@@ -1,0 +1,300 @@
+{
+  "file": "MinerU_markdown_PMC7280030_2038794862601478151",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC7280030_2038794862601478151.md",
+  "timestamp": "2026-03-31T22:27:44.033286",
+  "genes": [
+    {
+      "gene_name": "rpoN1",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the double mutant deleted rpoN1 (XCC2802) and rpoN2 (XCC1935)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1 and Results 2.1 describe rpoN1 as an RNA polymerase σ54 factor and state that RpoN1 contains an RNAP core-binding domain and an RpoN domain."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "rpoN1 is explicitly described as an RNA polymerase σ54 factor, i.e. a transcriptional regulator/sigma factor."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq showed rpoN1 affects transcription of many basal metabolism genes, while the paper does not show direct binding of RpoN1 to metabolic genes; thus indirect/likely indirect transcriptional regulation is consistent with the Results and Discussion."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "The Discussion says RNA-seq affected leuA and rpfB expression (Figure S6, Tables S3 and S5), but these are not established as primary or direct targets in the Results."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states rpoN1 mutation significantly affected expression of leuA and rpfB, but does not establish direct targeting or a fixed direct direction for each as stated here."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.6 directly show rpoN1 deletion affected branched-chain fatty acid synthesis and DSF family signal production."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 7 and Results 2.6 explicitly measure branched-chain fatty acids and DSF-family signals DSF, BDSF, and IDSF."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "BCFAs are fatty acids and DSF-family signals are fatty-acid-derived quorum-sensing signals, matching the paper's descriptions."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.6 show deletion of rpoN1 decreased BCFAs and increased DSF-family signals, especially DSF; this supports that rpoN1 normally promotes BCFA accumulation and restrains DSF overproduction."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each component is supported: BCFA decrease with iso-C15:0 and anteiso-C15:0 reduction plus n-C15:0 increase; DSF-family signal increase in ΔrpfCΔrpoN1 background; RNA-seq effects on basal metabolism genes including leuA and rpfB; distinction from rpoN2 is central to the paper."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all described and used for rpoN1-related findings: in-frame knockout, double mutant, GC-MS, HPLC, and RNA-seq."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism is Xanthomonas campestris pv. campestris throughout."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The title and text identify the organism as Xanthomonas campestris pv. campestris."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were conducted in Xanthomonas campestris pv. campestris strain Xc1 derivatives."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Same species is used experimentally throughout the paper."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The wild-type strain is Xc1 and mutant derivatives are from Xc1."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The source strain used is Xc1."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not experimentally determine subcellular localization. Cytoplasmic association with RNA polymerase is biologically plausible for a sigma factor but not explicitly shown."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not demonstrate physical interaction of RpoN1 with RNA polymerase core, leuA, or rpfB proteins. leuA and rpfB are genes whose expression changed, not interacting proteins."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.6 support that rpoN1 is a condition-dependent regulator of BCFA and DSF-family signal balance under the tested culture conditions."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "UNCERTAIN",
+          "reason": "As a sigma-54 factor, functioning with RNA polymerase holoenzyme is standard biology, but the paper does not directly test or state holoenzyme complex involvement for rpoN1."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Fatty acid analysis was done in NYG at 28°C, and DSF-family signals were measured after 36 h liquid culture using ΔrpfC-derived strains as described in Results and Methods."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows rpoN1 did not significantly affect virulence, motility, biofilm, or EPS, while altering fatty acid composition and DSF output."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This is an application inference not discussed or tested in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion states fatty acids and DSF family QS signals are critical secondary metabolites for physiological metabolism, and DSF-family signals mediate quorum sensing."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "BCFAs were measured in total lipid extracts/cellular lipids, and DSF-family signals were detected from culture supernatants."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq was performed, and the Data Availability statement says data are available from the corresponding author upon request; no accession is provided."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states RpoN1 and RpoN2 are not functionally interchangeable, and direct promoter binding to metabolic genes was not shown."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "RNA polymerase core; leuA; rpfB",
+          "new_value": "NA",
+          "reason": "The paper does not demonstrate physical interaction of RpoN1 with RNA polymerase core, leuA, or rpfB proteins. leuA and rpfB are genes whose expression changed, not interacting proteins."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Potential microbial engineering target to modulate BCFA composition and DSF-family quorum-sensing output; not directly relevant to crop nutrient breeding",
+          "new_value": "NA",
+          "reason": "This is an application inference not discussed or tested in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "rpoN2",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results identify rpoN2 as XCC1935."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.1 and Figure 1 identify RpoN2 as an RNA polymerase σ54 factor containing an RNAP core-binding domain and an RpoN domain."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "RpoN2 is explicitly described as a sigma-54 factor/transcriptional regulator."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.4 show RpoN2 directly binds promoters of fliC and fliQ and positively regulates these genes."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "fliC and fliQ are explicitly identified as genes directly regulated by RpoN2."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "EMSA plus RT-qPCR/lacZ data support direct promoter binding and positive regulation/activation of fliC and fliQ by RpoN2."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "UNCERTAIN",
+          "reason": "Flagellar biosynthesis, EPS production, and biofilm formation are supported, but labeling this as a 'metabolic process' is imprecise because the principal validated role is flagellar synthesis/virulence traits rather than metabolism."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "EPS is directly measured and reduced in the rpoN2 mutant in Results 2.5."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "EPS is an extracellular polysaccharide."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly shows rpoN2 promotes EPS and biofilm formation and is required for full virulence, swimming motility, and flagellar biogenesis."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four listed findings are supported by Figures 2, 4, 5, 6, RNA-seq, TEM, EMSA, RT-qPCR, and reporter assays."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are described and used for rpoN2 characterization in the Results."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The organism studied is Xanthomonas campestris pv. campestris."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The title and text explicitly identify Xanthomonas campestris pv. campestris."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All experiments use X. campestris pv. campestris strain Xc1 derivatives."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Same as above."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental strain background is Xc1."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The source strain is Xc1."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not experimentally determine RpoN2 localization. Cytoplasmic association with RNA polymerase is plausible but not directly shown."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not show physical interaction of RpoN2 with RNA polymerase core, fliC, or fliQ proteins; it shows DNA binding to fliC/fliQ promoters, not protein-protein interactions."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "RpoN2 clearly influences EPS-associated virulence traits, but 'essential activator for flagellar gene expression' is too broad because direct activation is only shown for fliC and fliQ, not all flagellar genes."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "UNCERTAIN",
+          "reason": "As a sigma factor, involvement with RNA polymerase holoenzyme is expected, but this specific complex involvement is not directly demonstrated in the paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states growth in NYG medium at 28°C for many assays and virulence testing on Brassica oleracea 'Jingfeng No. 1' by leaf clipping."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The native promoters of fliC and fliQ were used in EMSA, and a fliC-lacZ transcriptional fusion reporter was constructed."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of rpoN2 caused severe defects in motility, flagellar assembly, biofilm, EPS production, and virulence, as directly shown."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This translational application is not discussed or experimentally addressed in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states EPS is a critical virulence factor and matrix material essential for biofilm formation and host colonization/pathogenicity."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "EPS is extracellular, but the exact phrase 'extracellular matrix / culture supernatant' is not explicitly stated; EPS was precipitated from culture supernatant, and matrix role is discussed."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq was performed, and the Data Availability statement says data are available on request without an accession number."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says RpoN1 and RpoN2 are non-interchangeable, and that flagellar phenotypes are the main directly validated downstream outputs, with EPS reduction also shown."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "RNA polymerase core; fliC; fliQ",
+          "new_value": "NA",
+          "reason": "The paper does not show physical interaction of RpoN2 with RNA polymerase core, fliC, or fliQ proteins; it shows DNA binding to fliC/fliQ promoters, not protein-protein interactions."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Potential antimicrobial target to reduce Xanthomonas pathogenicity by suppressing motility/EPS-associated virulence; not a crop nutrient-improvement gene",
+          "new_value": "NA",
+          "reason": "This translational application is not discussed or experimentally addressed in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 2,
+        "uncertain": 5
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 59,
+    "supported": 47,
+    "unsupported": 4,
+    "uncertain": 8,
+    "total_corrections": 4
+  }
+}

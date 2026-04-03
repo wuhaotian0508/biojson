@@ -1,0 +1,118 @@
+{
+  "file": "MinerU_markdown_PMC12427440_2038799925810077714",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12427440_2038799925810077714.md",
+  "timestamp": "2026-03-31T21:52:07.131020",
+  "genes": [
+    {
+      "gene_name": "FvMdm10",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The strain construction section explicitly identifies FvMdm10 as FVEG_09107."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism throughout is Fusarium verticillioides."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names the organism Fusarium verticillioides."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The wild-type strain used is M3125, stated in Materials and Methods."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "FvMdm10 is the endogenous gene studied in Fusarium verticillioides."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is from Fusarium verticillioides, explicitly stated."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The source strain/background is M3125, the wild-type strain from which mutants were derived."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "FB1 and ergosterol were directly measured as products affected by FvMdm10. Lipid droplets were examined and quantified, but they are storage organelles rather than terminal metabolites, so inclusion is only partially aligned with the paper."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Mycotoxin for FB1 and sterol for ergosterol are supported. Calling lipid droplets a 'neutral lipid storage organelle' matches the paper's biology, but again they are organelles rather than terminal metabolites."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper reports ergosterol as mg/g mycelia and FB1 as mg/g mycelia in Discussion, supporting mycelial association. However, lipid droplets were observed in both hyphae and conidia, so restricting the site to fungal mycelia is incomplete."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly treats FB1 as a toxic metabolite, ergosterol as part of fungal membrane/ER-related sterol metabolism, and links lipid droplet accumulation to oxidative stress tolerance."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show deletion lowers FB1 production and ergosterol, causes abnormal vacuoles, increases lipid droplets, and decreases sensitivity to H2O2 (greater oxidative stress tolerance). This summary is consistent with the reported phenotypes."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed finding is directly supported in the Results: reduced growth/germination/virulence/FB1, reduced ergosterol with unchanged ATP, increased lipid droplets, abnormal vacuoles, increased H2O2 tolerance, and reduced QoI sensitivity."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly described in Materials and Methods and used in Results: deletion, complementation, qRT-PCR, FB1 ELISA, ergosterol and ATP assays, Nile Red, CMAC, TEM, and maize kernel pathogenicity assay."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The Abstract and Discussion describe FvMdm10 as a core component/subunit of ERMES; Discussion also frames Mdm10 as linked to mitochondrial outer membrane/ERMES biology."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies Mdm10 as an ERMES subunit, and ERMES is defined as tethering mitochondria and ER. Discussion links Mdm10 with mitochondrial morphology and ERMES; mitochondrial outer membrane localization is consistent with the paper's stated biology."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed treatments/conditions are explicitly used: Myro medium, H2O2, NaCl, SDS, azoxystrobin, and pyraclostrobin."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper places FvMdm10 within the ERMES complex, implying interaction with ERMES components, but no individual interacting proteins are identified or experimentally tested in this study."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The complementation construct is described as containing the whole FvMdm10 gene plus GEN marker, but the promoter used is not specified. 'Native gene complementation construct' is plausible but not explicitly stated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR data are explicitly reported, and the Data availability statement provides the ScienceDB DOI 10.57760/sciencedb.21882."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The concluding sentence says the work provides insights into potential targets to manage F. verticillioides contamination on crops, supporting a potential application. But the specific engineering/breeding framing and detailed claim about reducing contamination is more interpretive than directly tested."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly show deletion reduces growth, virulence, ergosterol, and FB1 while increasing oxidative stress tolerance and resistance/low sensitivity to QoI fungicides."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper suggests decreased FB1 is associated with abnormal vacuolar morphology and altered organelle functions, but the statement that regulation is 'indirect' and not via direct transcription-factor action is an interpretation not directly demonstrated."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 16,
+        "unsupported": 0,
+        "uncertain": 7
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 23,
+    "supported": 16,
+    "unsupported": 0,
+    "uncertain": 7,
+    "total_corrections": 0
+  }
+}

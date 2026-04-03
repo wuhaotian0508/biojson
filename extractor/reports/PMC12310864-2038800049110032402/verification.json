@@ -1,0 +1,289 @@
+{
+  "file": "MinerU_markdown_PMC12310864_2038800049110032402",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12310864_2038800049110032402.md",
+  "timestamp": "2026-03-31T21:51:18.291547",
+  "genes": [
+    {
+      "gene_name": "ZmCAAX",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly maps ZmCAAX to Zm00001d025860 and repeats this accession in the Data availability statement."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments are in maize, explicitly stated throughout the paper."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The title and Summary identify the species as Zea mays."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "RP125 is the mutant/wild-type background, B73 is used for mapping crosses, and B104 is the overexpression background, all explicitly described in Materials and Results."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmCAAX is a maize gene identified and tested in maize."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is explicitly maize, Zea mays."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The native mutant alleles are from RP125 background and crossed with B73 for mapping; both varieties are explicitly mentioned in relation to the gene."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly measures and discusses ABA and carotenoids as outputs modulated by ZmCAAX."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "ABA is a phytohormone and carotenoids are carotenoids; this classification is standard and consistent with the paper's context."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results and Discussion explicitly connect ABA to drought response/stomatal closure and carotenoids to leaf pigmentation and ABA precursor status."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Leaves are clearly the tissue assayed. Chloroplast localization of ZmCAAX and chloroplast interaction with ZmNCED3 are shown, but the paper does not directly state metabolite accumulation sites as 'chloroplasts' for ABA/carotenoids."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss-of-function mutants are yellow, have reduced carotenoid/chlorophyll, elevated ABA, and enhanced drought tolerance; overexpression increases drought sensitivity; ZmCAAX promotes ZmNCED3 degradation and thereby restrains ABA accumulation under normal conditions."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point is directly supported by Results: map-based cloning, chloroplast localization/high leaf expression, mutant and overexpression drought phenotypes with ABA changes, and physical interaction/degradation of ZmNCED3."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states ZmCAAX encodes a CAAX amino-terminal protease family protein with a CAAX domain and two transmembrane domains."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 3c shows ZmCAAX-GFP colocalizing with chlorophyll autofluorescence, confirming chloroplast localization."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR shows highest expression in leaves, and Figure S6 shows ZmCAAX is downregulated by ABA and by 300 mM mannitol."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Because source and applied species are both maize here, the leaf-high expression pattern is supported by Figure 3b."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The overexpression construct uses the maize ZmUbi promoter, and transient localization assays use the 35S CaMV promoter."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed factors appear in the paper: drought stress, 300 mM mannitol, exogenous ABA, and constant light for chloroplast ultrastructure observation."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmCAAX is shown to physically interact with ZmNCED3 by Y2H, Co-IP, BiFC, and LCI."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly used in Results/Methods for ZmCAAX."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutants show impaired chloroplast development, yellowing, delayed flowering, and the Discussion explicitly states elevated ABA/drought tolerance is accompanied by reduced photosynthetic efficiency and likely reduced grain yield; overexpression increases drought sensitivity."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The Summary and Discussion explicitly propose knockout/downregulation, natural allele selection, CRISPR/Cas9, RNAi, EMS, haplotype selection, and drought-repressed promoters to improve drought tolerance while balancing yield/carotenoid traits."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq is reported and NGDC accession CRA022233 is explicitly given; MaizeGDB accession Zm00001d025860 is also explicitly stated."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows tobacco homolog silencing (NTAB0984080 RNAi) enhances drought tolerance and clearly frames ZmCAAX as regulating metabolite levels via ZmNCED3 protein stability rather than being an ABA biosynthetic enzyme itself."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 24,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "ZmNCED3",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The Data availability statement explicitly lists ZmNCED3 as Zm00001d041319."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is studied in maize."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper is on maize, Zea mays."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "RP125 is clearly used for mutant analyses and B104 for ZmCAAX overexpression, but ZmNCED3 itself is not directly assigned to these varieties as a tested locus in a variety-specific manner; B73 also appears in source constructs/cDNA context. The exact pair 'RP125; B104' is not cleanly established for ZmNCED3."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmNCED3 is a maize gene used in the study."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is maize, Zea mays."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmNCED3 is directly linked to ABA biosynthesis throughout the Results."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "ABA is a phytohormone."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes ABA as mediating drought adaptation including stomatal closure and enhanced drought resistance."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "ABA was measured in leaves/seedlings and the interaction occurs in chloroplasts, but the paper does not explicitly define ABA accumulation site as 'chloroplast-associated plastid compartment'."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly places ZmNCED3 in ABA biosynthesis from carotenoids."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "NCED is described as the key carotenoid-cleavage step in ABA biosynthesis; this branch connection is directly supported by the pathway figure and text."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The name cis-epoxycarotenoid dioxygenase/NCED3 is explicitly used for ZmNCED3."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided anywhere in the paper. Specific identifiers not present in the paper must be marked unsupported."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to ZmNCED3 as part of the ZmNCED gene family and as an ABA biosynthetic enzyme; NCED is a carotenoid cleavage dioxygenase family designation."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC shows interaction with ZmCAAX primarily in chloroplasts, and the Discussion explicitly refers to the chloroplast-localized ABA biosynthetic enzyme ZmNCED3."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper identifies ZmNCED3 as an NCED enzyme in ABA biosynthesis from carotenoids, but it does not explicitly state the detailed reaction 'cleaves 9-cis-epoxycarotenoids to produce xanthoxin' in the provided text."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The specific substrate '9-cis-epoxycarotenoids' is not explicitly named in the paper text provided."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The specific product 'xanthoxin' is not explicitly named in the paper text provided."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says NCED is a key rate-limiting enzyme in ABA biosynthesis and links carotenoid degradation to ABA, but does not explicitly use the wording 'committed step' or 'branch point from carotenoid pool'."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show coexpression with ZmCAAX lowers ABA and raises carotenoids, and the model states ZmNCED3 promotes conversion of carotenoids into ABA under drought."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly state that NCED is a key rate-limiting enzyme in ABA biosynthesis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that higher ZmNCED3 protein abundance is associated with increased ABA biosynthesis and drought resistance, while ZmCAAX-mediated degradation lowers ABA and increases carotenoid accumulation/retention."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The interaction specificity, unchanged transcript but altered protein abundance, and metabolite consequences of coexpression are all directly supported; describing ZmNCED3 as a central positive determinant of drought-responsive ABA accumulation is consistent with the Results and model."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows ZmNCED3 transcript levels are unchanged among genotypes, while protein levels are increased in zmcaax mutants and decreased in overexpression lines; drought-associated accumulation is inferred through reduced ZmCAAX under drought and model statements."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states use of the 35S promoter in transient assays/coexpression context."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed treatments—drought stress, 300 mM mannitol, CHX, MG132, and E64d—are explicitly used in assays involving ZmNCED3 behavior or downstream effects."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmNCED3 is shown to interact with ZmCAAX in multiple assays."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed method is explicitly reported for ZmNCED3-related validation in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses ABA-associated drought resistance versus growth/yield tradeoffs mainly in the context of ZmCAAX mutants, not direct manipulation of ZmNCED3 itself. The inference is biologically plausible but not directly tested for ZmNCED3."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper's breeding proposals are centered on ZmCAAX; ZmNCED3 is discussed in domestication/selection analysis, but explicit engineering recommendations to stabilize ZmNCED3 are not directly stated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The MaizeGDB accession for ZmNCED3 is explicitly given in the Data availability statement."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Specificity versus ZmVP14 is directly shown in Figure S8, and enzyme activity not differing among genotypes is reported in Figure S9, supporting stability rather than catalytic alteration as the mechanism."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.13.11.51",
+          "new_value": "NA",
+          "reason": "No EC number is provided anywhere in the paper. Specific identifiers not present in the paper must be marked unsupported."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "9-cis-epoxycarotenoids",
+          "new_value": "NA",
+          "reason": "The specific substrate '9-cis-epoxycarotenoids' is not explicitly named in the paper text provided."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "xanthoxin",
+          "new_value": "NA",
+          "reason": "The specific product 'xanthoxin' is not explicitly named in the paper text provided."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 3,
+        "uncertain": 6
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 58,
+    "supported": 48,
+    "unsupported": 3,
+    "uncertain": 7,
+    "total_corrections": 3
+  }
+}

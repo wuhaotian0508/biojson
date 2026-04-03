@@ -1,0 +1,497 @@
+{
+  "file": "MinerU_markdown_PMC11869193_2038800739391803397",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC11869193_2038800739391803397.md",
+  "timestamp": "2026-03-31T21:42:15.088021",
+  "genes": [
+    {
+      "gene_name": "NAC2",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NAC2 is described as a native nuclear gene in Chlamydomonas mutant nac2-26 and WT gene sequence was used for complementation."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies Chlamydomonas reinhardtii and NAC2 is one of its nucleus-encoded factors."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All engineering and testing were done in Chlamydomonas strains."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The transformed host throughout the paper is Chlamydomonas reinhardtii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "NAC2 was tested in nac2-26 complemented line METE_N#5, crossed into MN_dc#1, and used in CSB195#1 derivatives as described in Results."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The NAC2 coding sequence was cloned under the vitamin B12-repressible METE promoter in construct pMETE_N."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Results test vitamin B12 across pM to higher concentrations and use thiamine as an orthogonality control with no effect on NAC2 regulation."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NAC2 was synthetically expressed from the nucleus in complemented lines, with function read out through psbD transcript levels, photosynthetic growth, and psbD-5'UTR reporter transgenes."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "NAC2 regulation was later used to control JcCS expression and thereby modulate casbene production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Casbene is explicitly described as a diterpenoid."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Casbene was quantified from engineered cultures using a dodecane overlay; chloroplast engineering is the production platform."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Casbene is stated to be a precursor to certain/pharmaceutical molecules."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly presents NAC2 as an orthogonal trans-acting factor for fine-tuning chloroplast transgenes and combining with MRL1 for metabolic engineering."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "NAC2 is described as a nucleus-encoded chloroplast regulating/trans-acting factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "In Discussion, Chlamydomonas is said to encode just one TPR protein, NAC2."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "B12 repression of NAC2 reduced psbD transcript/photosynthetic growth, repressed psbD-UTR reporters, and reduced casbene when JcCS was under psbD/NAC2 control."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods appear in Results: complementation, vitamin dose-response growth assays, RT-qPCR, reporter assays, and casbene quantification."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper describes NAC2 as stabilizing the psbD transcript/5' UTR, not as interacting with a protein. This field names an RNA target but labels it as a protein interaction."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed finding matches Results: selective repression of psbD-dependent expression, orthogonality with MRL1, and reduced casbene via NAC2-controlled JcCS."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Incomplete repression/basal expression under PMETE is explicitly discussed and linked to residual expression at high B12."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses NAC2 primarily as a synthetic regulator rather than a metabolic enzyme, and its effect on casbene is indirect via control of JcCS."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "psbD transcript/5' UTR",
+          "new_value": "NA",
+          "reason": "The paper describes NAC2 as stabilizing the psbD transcript/5' UTR, not as interacting with a protein. This field names an RNA target but labels it as a protein interaction."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 1,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "MRL1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MRL1 is a native Chlamydomonas gene disrupted in mutant mrl1-5 and complemented with the WT gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper concerns Chlamydomonas reinhardtii and MRL1 is one of its nucleus-encoded factors."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The engineered strains are Chlamydomonas."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "All experiments were performed in Chlamydomonas reinhardtii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "MRL1 was tested in mrl1-5-derived T4M#5, then in MN_dc#1 and CSB195#1 derivatives."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "MRL1 was placed under control of the THI4_4N riboswitch in nuclear construct pT4M, while target transgenes used rbcL or wendy1 5' UTRs."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Thiamine dose responses and vitamin B12 orthogonality controls are directly shown."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MRL1 was synthetically expressed in complemented lines and assayed via rbcL/wendy1-UTR-dependent reporters and pathway transgenes."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "MRL1 regulation was used to control JcCS and SpDXS, affecting casbene output."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Casbene is identified as a diterpenoid."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Casbene was measured from engineered cultures with dodecane overlay extraction."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Casbene is described as precursor to certain pharmaceutical molecules."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly positions MRL1 as an orthogonal regulator for rbcL/wendy1 5'UTR transgenes in pathway engineering."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "MRL1 is described as a nucleus-encoded chloroplast-targeted/trans-acting factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly states MRL1 use and contrasts NAC2 as TPR with other PPR proteins; MRL1 is treated as a PPR factor."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Thiamine repression of MRL1 reduced rbcL transcript/growth, fully repressed reporters under rbcL/w1 contexts, and reduced casbene/precursor effects."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Complementation, vitamin assays, RT-qPCR, reporter assays, CFP monitoring, and casbene GC-MS all appear in Results."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper supports interaction with/stabilization of rbcL and wendy1 transcripts/5' UTRs, not protein-protein interactions. The field label is inaccurate."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These summary points all match reported Results and Discussion supported by figures."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says this is the first demonstration of using MRL1 this way and that its metabolic effects are indirect through regulation of JcCS or SpDXS."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "rbcL transcript/5' UTR; wendy1 transcript/5' UTR",
+          "new_value": "NA",
+          "reason": "The paper supports interaction with/stabilization of rbcL and wendy1 transcripts/5' UTRs, not protein-protein interactions. The field label is inaccurate."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 1,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "JcCS",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is referred to as JcCS in the text."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "JcCS is described as encoding casbene synthase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places JcCS in diterpenoid/casbene biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 6a and text indicate casbene formation from GGPP, i.e. the casbene-forming branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Casbene synthase directly forms casbene, making it the terminal product-forming step in the engineered pathway."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states casbene synthase is responsible for synthesis of casbene from precursor pathway context; Figure 6a shows GGPP to casbene."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 6a identifies GGPP as the immediate precursor for casbene synthase."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Casbene is the direct product measured."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "JcCS directly forms the target product casbene."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states increased expression did not further increase casbene in some contexts, suggesting precursor limitation rather than establishing JcCS as rate-limiting."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "JcCS is from Jatropha curca."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly gives Jatropha curca (JcCS)."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Chlamydomonas."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host species is Chlamydomonas reinhardtii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "JcCS was tested in CSB195#1-derived transformants including CSB339, CSB340, CSB341, CSB342, CSB353, and CSB354."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Results describe constructs using rbcL, wendy1, and psbD promoter/5' UTR combinations."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Vitamin B12 or thiamine supplementation was used for repression, and cultures were grown in TAP."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "JcCS-mVenus was detected under psbD and w1 control but not under the tested rbcL configuration."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "JcCS was codon-optimized for chloroplast expression and introduced into the chloroplast genome."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "JcCS is clearly a plant diterpene/casbene synthase in the study context."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The target product assayed is casbene."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Casbene is described as a diterpenoid."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Casbene was quantified from the dodecane overlay after production in cultures."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states casbene is a precursor to certain pharmaceutical molecules."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression of JcCS enabled casbene production, and vitamin repression of JcCS reduced casbene titre."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed evidence types are all present: chloroplast transgenics, mVenus fluorescence, regulated expression assays, and GC-MS casbene quantification."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by Figure 6 and accompanying Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The study presents JcCS as the key product-forming enzyme and notes precursor-supply engineering is needed because more expression alone did not maximize titre."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly shows increased expression/copy number did not increase casbene titre, consistent with substrate limitation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state JcCS was a codon-optimized mVenus fusion and suggest failure of the rbcL construct may reflect translation start context incompatibility."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 30,
+        "unsupported": 0,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "SpDXS",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The text names the introduced gene as SpDXS."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "DXS is explicitly expanded as 1-deoxy-D-xylulose 5-phosphate synthase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper text."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SpDXS is described as an enzyme in the MEP pathway/isoprenoid precursor pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes DXS as increasing flux of precursor to isoprenoids, i.e. an upstream precursor-supply step."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "DXS is presented as the entry/upstream step making DXP in the MEP pathway."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "Figure 6a shows DXS leading to DXP from pathway precursors, but the full condensation reaction wording is not explicitly stated in text."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "Figure 6a shows G3P as one precursor in the pathway, but pyruvate is not explicitly named in the text excerpt; exact substrate listing is not fully stated."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 6a labels DXP as the product of DXS."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "DXS is used to supply precursor flux toward casbene rather than form casbene directly."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper chose DXS because prior work suggested it can increase diterpenoid titres and their own data showed SpDXS boosts casbene, supporting a pathway-flux control role in this system."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The coding sequence is stated to be from Salvia pomifera."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Salvia pomifera is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The engineered host is Chlamydomonas."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host species is Chlamydomonas reinhardtii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "SpDXS was tested in CSB195#1-derived transformants, especially CSB353 and CSB354."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The reciprocal constructs place SpDXS-CFP under wendy1 or psbD promoter/5' UTR depending on construct."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Vitamin treatment with thiamine or B12 depending on configuration and TAP cultivation were used in Results."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CFP-tagged SpDXS was detected in CSB353 under the w1/MRL1 module, but not detectably in reciprocal CSB354."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "SpDXS was introduced into the chloroplast genome for chloroplast expression."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly describe SpDXS as a ThDP-dependent enzyme or specify a protein family/domain."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The downstream measured product affected by SpDXS was casbene."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Casbene is a diterpenoid."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Casbene was quantified from dodecane overlay after culture growth."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Casbene is described as precursor to certain pharmaceutical molecules."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "SpDXS expression increased casbene about twofold and repression reduced it back to baseline."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Dual transgene chloroplast expression, CFP proxy measurements, vitamin repression, and GC-MS casbene analysis are all in Results."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three points match Figure 7 and corresponding text."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results support SpDXS as a useful precursor-supply engineering target that should be co-optimized with JcCS and regulatory context."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper notes no obvious growth penalty and clearly shows strong context dependence with one construct lacking detectable expression."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The study explicitly says SpDXS was introduced in addition to the endogenous enzyme and uses the data to support precursor limitation toward casbene."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.2.1.7",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper text."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "ThDP-dependent enzyme of MEP pathway",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly describe SpDXS as a ThDP-dependent enzyme or specify a protein family/domain."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 102,
+    "supported": 96,
+    "unsupported": 4,
+    "uncertain": 2,
+    "total_corrections": 4
+  }
+}

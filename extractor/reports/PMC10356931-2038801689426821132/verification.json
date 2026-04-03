@@ -1,0 +1,947 @@
+{
+  "file": "MinerU_markdown_PMC10356931_2038801689426821132",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC10356931_2038801689426821132.md",
+  "timestamp": "2026-03-31T21:29:12.316373",
+  "genes": [
+    {
+      "gene_name": "bz1",
+      "category": "Common",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results and Fig. 8 describe bz1 as deficiency of a UDP-glucose: flavonoid 3-O-glucosyltransferase (UFGT), a key enzyme in anthocyanidin glycosylation."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "bz1 is a maize mutant line analyzed in this study."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies maize, Zea mays."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "bz1/BZ1 were analyzed in maize seeds."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is maize, Zea mays."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state BZ1 and bz1 maize seeds were both in the W23 (C1, R-r) genetic background."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "bz1 is directly linked in Results to anthocyanin reduction and increased PA-related metabolites/procyanidin dimers."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins and proanthocyanidins are flavonoids in the context of this paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The introduction states PAs are involved in plant defense and beneficial to human health and ruminant nutrition; anthocyanins determine seed pigmentation."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "bz1/BZ1 effects were measured in seeds, and Fig. 8 states anthocyanins accumulate in aleurone cells."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state bz1 blocks anthocyanin biosynthesis/deposition due to UFGT deficiency, dramatically lowers cyanidin 3-O-glucoside and anthocyanins, and increases epicatechin and iso-B2/iso-B4 dimers in seeds."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point is supported by the Results section: substrate competition with ANR is explicitly proposed; bz1 shows higher epicatechin confirmed as (+)-epicatechin by chiral-HPLC; and higher iso-B2/especially iso-B4 in Fig. 7."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The bz1 analysis used mutant comparison (bz1 vs BZ1), LC-MS, anthocyanin quantification, chiral-HPLC, and dimer analysis in Fig. 7."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper discusses metabolic competition between ANR and UFGT for common substrates, but does not show a physical or direct protein interaction between bz1/UFGT and ANR."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state anthocyanin accumulation was almost abolished in bz1 seeds."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the paper's framing of bz1 as a competing anthocyanidin-utilization step rather than a PA-pathway catalyst, with direct mutant evidence for flux partitioning."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability states LC-MS data are in MetaboLights accession MTBLS7920."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The flux-redirection concept is inferable from bz1 results, but this specific engineering recommendation and wording are not explicitly presented in the paper."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify BZ1 and bz1 are in the W23 genetic background."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "ANR (competes for common anthocyanidin substrates)",
+          "new_value": "NA",
+          "reason": "The paper discusses metabolic competition between ANR and UFGT for common substrates, but does not show a physical or direct protein interaction between bz1/UFGT and ANR."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "ZmANR1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results identify ZmANR1 as GRMZM2g097854."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmANR1 is explicitly named maize anthocyanidin reductase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number 1.3.1.77 appears in the paper text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "ANR identity is supported, but the specific 'short-chain dehydrogenase-reductase family' designation is not explicitly stated in this paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmANR1 is a maize gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Maize is Zea mays in the paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmANR1 was examined in maize and heterologously in tobacco; Arabidopsis ban expression is referenced from prior work, not newly tested here."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Zea mays and Nicotiana tabacum are directly used; Arabidopsis thaliana is referenced in prior work and used for protoplast localization."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Suntava and Black Mexican were used for expression analysis; B104 for SbTT2/SbMYB5 induction of endogenous ZmANR1; bz1/BZ1 context discusses maize ANR-related metabolites; tobacco cv Xanthi is used; Arabidopsis ban mutant is referenced from earlier work."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state Suntava and Black Mexican were used for ZmANR1/2 transcriptional analysis."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmANR1 is discussed as a key enzyme in the proanthocyanidin/flavan-3-ol pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places ANR at the PA branch producing starter and extension units from anthocyanidin-derived intermediates."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "ANR is discussed as competing with anthocyanin formation and thus occupying a branch point."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states ZmANR1 converts cyanidin and more generally anthocyanidins."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states ZmANR1 major product is (+)-epicatechin rather than typical (-)-epicatechin; catechin is also produced at lower level; formation of 4β-(S-cysteinyl)-epicatechin is weakly associated."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches Results/Discussion: ZmANR1 reduces anthocyanidins to flavan-3-ols, preferentially producing (+)-epicatechin and poorly facilitating extension-unit precursor formation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "ANR products are immediate precursors/building blocks of PAs according to the paper."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly conclude endogenous ANR is a bottleneck for PA biosynthesis in maize."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmANR1 is linked to proanthocyanidin production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "PAs are flavonoids in this paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Introduction states PAs function in plant defense and have human health/ruminant nutrition benefits."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmANR1-related effects are analyzed mainly in seeds."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 1a shows ZmANR1 expressed in 14 DAP Suntava and Black Mexican seeds at much higher levels than ZmANR2."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 5a shows endogenous ZmANR1 upregulated in developing seeds of SbTT2-OX and SbMYB5-OX maize."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This summarizes the paper's core conclusion that endogenous maize ANR yields low unconventional PA output, favors (+)-epicatechin and unusual dimers, and does not support efficient polymerization."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points are directly supported by Fig. 1, Fig. 5, Fig. 6, and the text's bottleneck conclusion."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR, PAP1-OX tobacco expression, LC-MS, localization, and integration of previous in vitro/Arabidopsis findings are all used or cited in Results."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 1b shows ZmANR1 localizes to the cytosol."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Results indicate substrate/active flavonoid background influences whether ANR expression yields detectable PA products."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports inefficient PA polymerization and poor diversion from anthocyanins by ZmANR1; the suggestion that unconventional products may hinder long-chain PA formation is discussed as likely/important."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper references prior Arabidopsis ban complementation with only slight epicatechin increase/no B2 and emphasizes distinct stereochemistry from dicot ANRs."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "MetaboLights MTBLS7920 is listed in Data availability."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "This conclusion is directly aligned with the paper's engineering implications that native maize pathway is insufficient and heterologous ANR/regulation will be needed."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.3.1.77",
+          "new_value": "NA",
+          "reason": "No EC number 1.3.1.77 appears in the paper text."
+        }
+      ],
+      "stats": {
+        "supported": 31,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "ZmANR2",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results identify ZmANR2 as GRMZM2g097841."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is called a candidate ANR gene/ANR homolog, but direct enzyme activity is not shown; 'anthocyanidin reductase-like protein' is a reasonable inference, not explicit wording."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number 1.3.1.77 is provided for ZmANR2 in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "Homology to ANR is supported, but the specific SDR-family designation is not explicitly stated."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmANR2 is a maize gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Maize is Zea mays."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmANR2 expression was analyzed in maize."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is maize, Zea mays."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression was assayed in Suntava, Black Mexican, and B104 transgenic backgrounds."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Suntava and Black Mexican were used for expression analysis."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "The gene is a putative ANR homolog linked to PA biosynthesis by homology and expression, but direct pathway function is not established."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "Putative PA branch assignment is plausible but not directly validated."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "As a putative ANR homolog it would be at a branch point, but no functional test confirms this for ZmANR2."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies it by sequence similarity only and provides no direct catalytic characterization."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "Putative immediate precursor role is based on homology, not direct evidence."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish ZmANR2 as rate-limiting or key control."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "Association with PAs is inferred from homology/expression, but no direct metabolite effect is shown for ZmANR2 alone."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "If linked, PAs are flavonoids; this classification is correct."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "General PA functions are stated in the introduction."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The related analyses were in seeds."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 1a shows ZmANR2 expression is much lower than ZmANR1 in 14 DAP colored seeds."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 5a shows ZmANR2 is upregulated in SbTT2-OX and SbMYB5-OX seeds but remains much lower than ZmANR1."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately states that ZmANR2 is a minor homolog with low transcript abundance and no direct demonstrated metabolic effect."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by Results."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper used BLAST homology and qRT-PCR expression profiling for ZmANR2."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a fair summary of why ZmANR2 is included despite limited causal evidence."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "MetaboLights MTBLS7920 is provided for LC-MS data, although not specific to ZmANR2."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly state engineering priority for ZmANR2; this is an extrapolative recommendation."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.3.1.77",
+          "new_value": "NA",
+          "reason": "No EC number 1.3.1.77 is provided for ZmANR2 in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 1,
+        "uncertain": 8
+      }
+    },
+    {
+      "gene_name": "GmANR1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "GmANR1 is explicitly soybean anthocyanidin reductase 1."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not provide EC 1.3.1.77."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "ANR identity is supported, but the explicit SDR-family label is not given."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GmANR1 is from soybean."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Soybean is Glycine max."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GmANR1 was expressed in maize and tobacco."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species are Zea mays and Nicotiana tabacum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods/Results specify source soybean cv Clark, transformed maize HiII crossed into Suntava and Osage, and tobacco cv Xanthi."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state GmANR1 was cloned from soybean cv Clark."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GmANR1 is studied as an ANR in the PA/flavan-3-ol pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ANR products are described as PA starter and extension units."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "ANR is discussed as a branch point enzyme competing with anthocyanin formation."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports anthocyanidins and discusses flaven-3,4-diol-derived intermediates in prior mechanistic context, but this exact combined substrate wording is broader than directly shown here."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports conventional (-)-epicatechin-linked PA chemistry and direct involvement in formation of 4β-(S-cysteinyl)-epicatechin extension units."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show GmANR1 efficiently promotes PA precursor and dimer formation in tobacco and maize, consistent with this description."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "GmANR1 forms immediate PA precursors."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "In maize backgrounds with active flavonoid biosynthesis, introducing GmANR1 relieves the endogenous ANR bottleneck, supporting a key control role."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "GmANR1 is linked to proanthocyanidins."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "PAs are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "General PA functions are stated in the introduction."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "GmANR1 effects were measured in maize seeds and tobacco flowers."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GmANR1 was transgenically expressed in maize and tobacco."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This is directly supported by Fig. 1, 3, and 6: GmANR1 increases 4β-(S-cysteinyl)-epicatechin and conventional B2/B4 dimers in maize with active flavonoid backgrounds."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four listed findings are directly supported by Results."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods were used for GmANR1 analyses."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 1b shows GmANR1 localizes to the cytosol."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly shows a substrate-limited effect in HiII and stronger effect in colored backgrounds."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "In tobacco red pigmentation was lost/reduced by flux diversion, and in maize long-chain PA accumulation remained limited."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly supports that ANR product stereochemistry determines dimer stereochemistry in planta."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "MetaboLights MTBLS7920 is listed."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "This inference is strongly aligned with the paper's conclusions about engineering PA-enriched maize using effective heterologous ANR plus additional factors."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Maize Ubiquitin promoter in maize is explicitly stated. For tobacco, the paper states pB7WG2D vector was used but does not explicitly restate the promoter there, though pB7WG2D commonly uses 35S; 'vector expression' is too vague to verify as a promoter claim."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.3.1.77",
+          "new_value": "NA",
+          "reason": "The paper does not provide EC 1.3.1.77."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "AtANR",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "AtANR is explicitly Arabidopsis anthocyanidin reductase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The EC number is not stated in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "ANR identity is supported, but the explicit SDR-family classification is not stated."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AtANR is from Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AtANR was expressed in tobacco."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species was Nicotiana tabacum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Results specify tobacco cv Xanthi in PAP1-OX background."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 1 legend states AtANR was cloned from Arabidopsis thaliana Col-0."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AtANR is used as a PA pathway enzyme benchmark."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ANR products are PA starter/extension unit precursors."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "ANR diverts anthocyanin precursors toward PA biosynthesis in the tobacco assay."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper generally states ANR converts anthocyanidins to flavan-3-ols."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "In tobacco AtANR led to accumulation of epicatechin, cysteinyl-epicatechin, and procyanidin B2."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the demonstrated tobacco phenotype."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "AtANR forms immediate PA precursors."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The field says not established, which matches the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AtANR is linked to PA production in tobacco flowers."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "PAs are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "General PA functions are stated in the introduction."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The measured site was tobacco flowers/petals."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AtANR was transgenically expressed in PAP1-OX tobacco flowers."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show AtANR efficiently diverted flux from anthocyanins to PAs in tobacco, unlike ZmANR1."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly shown in Fig. 1c-e and text."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods were all used in the tobacco comparison."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments were in a high-anthocyanin PAP1-OX tobacco background."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results describe loss of red floral pigmentation when AtANR diverted flux to PAs."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "AtANR is indeed used mainly as a dicot benchmark; only GmANR1 was moved into maize."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "MetaboLights MTBLS7920 is listed for LC-MS data."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper uses AtANR as a benchmark but does not explicitly discuss it as an engineering target for maize; that is extrapolative."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states AtANR was cloned into pB7WG2D for tobacco, but does not explicitly name the promoter in this section."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.3.1.77",
+          "new_value": "NA",
+          "reason": "The EC number is not stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "SbTT2",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results identify SbTT2 as Sb01g032770."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "SbTT2 is described as a TT2-type MYB transcription factor; TT2s are R2R3-MYBs."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies SbTT2 as a TT2-type MYB homolog."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SbTT2 is from sorghum."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Sorghum bicolor is explicitly given."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SbTT2 was tested in maize, soybean hairy roots, and Arabidopsis protoplast transactivation assays."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "These species are Zea mays, Glycine max, and Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "B104 maize and soybean cv Clark hairy roots are explicitly used."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SbTT2 is directly linked to both PA and anthocyanin accumulation in Results."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These metabolites are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "General PA and anthocyanin functions stated in the paper support this field."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "SbTT2 effects are shown in maize seeds, coleoptiles, silks, and soybean hairy root vascular tissues."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SbTT2 was transgenically expressed in B104 maize and soybean hairy roots."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes the strong activation of PA precursor/PA/anthocyanin pathways by SbTT2 and the implication that maize retains responsive machinery despite lacking endogenous TT2."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points are directly supported by Supplementary Fig. 9 and Figs. 4-6."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods were used for SbTT2."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No nucleus localization experiment for SbTT2 is presented in this paper."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "As a MYB transcription factor, and based on promoter activation/qRT-PCR results, transcriptional activation is directly supported."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly shows activation/upregulation of GmANR1 promoter and increased GmANR1, GmLAR2, GmANS, ZmANR1, and ZmANR2 transcript levels."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "These genes are directly shown as responsive to SbTT2 in the paper."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support control over PA precursor/PA accumulation and anthocyanin biosynthesis."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a fair summary of the paper's conclusion that SbTT2 can activate latent PA pathway activity in maize lacking endogenous TT2."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "In the transactivation assay, SbTT2 was tested in combination with GmTT8 and GmWD40."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses MBW complexes for PA regulation and uses SbTT2 with bHLH/WD40 partners in assays."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "SbTT2 transgenic maize had smaller seeds and lower seed weight."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Discussion explicitly note unexpected anthocyanin accumulation in B104 deficient in C1 and B-peru activities."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "MetaboLights MTBLS7920 is listed."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "This is well supported by the paper's conclusions and engineering perspective."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state maize Ubiquitin promoter for maize and p35S promoter in soybean hairy roots."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No nucleus localization experiment for SbTT2 is presented in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 1,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "SbMYB5",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "SbMYB5 is a MYB5-type MYB transcription factor; MYB5 proteins are R2R3-MYBs in this context."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to SbMYB5 as a MYB5-type transcription factor."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SbMYB5 is from sorghum."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Source species is Sorghum bicolor."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SbMYB5 was tested in maize, soybean hairy roots, and Arabidopsis protoplasts."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "These species are Zea mays, Glycine max, and Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "B104 maize and soybean cv Clark hairy roots are explicitly used."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SbMYB5 is directly linked to anthocyanin and PA accumulation in Results."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These metabolites are flavonoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "General PA and anthocyanin functions are supported by the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Maize seeds, coleoptiles, and silks are shown; soybean hairy roots were also tested though the field omits them."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SbMYB5 was transgenically expressed in B104 maize and soybean hairy roots."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support activation of anthocyanin and PA precursor accumulation in maize, less strongly than SbTT2 for PA output."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four listed findings are directly supported by Supplementary Fig. 9, Figs. 4-5, and Supplementary Fig. 14."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These approaches were used for SbMYB5."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization data for SbMYB5 are presented in the paper."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Promoter activation and transcript induction support transcriptional activation."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly shows induction of GmANR1, GmLAR2, GmANS, ZmANR1 and ZmANR2."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "These genes are directly measured as responsive."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports control of PA precursor formation and anthocyanin biosynthesis."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a supported summary that SbMYB5 is effective but weaker than SbTT2 for robust PA induction."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "SbMYB5 was tested with GmTT8 and GmWD40 in the transactivation assay."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper frames PA regulation via MBW-like complexes and tests SbMYB5 with bHLH/WD40 partners."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "SbMYB5 transgenic maize showed smaller/lower-weight seeds."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Supplementary Fig. 14c supports greater catechin-cyanidin-3,5-O-diglucoside accumulation in SbMYB5-OX than SbTT2-OX."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "MetaboLights MTBLS7920 is listed."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "This reflects the paper's comparative conclusion that SbMYB5 is less effective than SbTT2 for PA engineering in maize."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state maize Ubiquitin promoter in maize and p35S promoter in soybean hairy roots."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No localization data for SbMYB5 are presented in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 0
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 200,
+    "supported": 177,
+    "unsupported": 7,
+    "uncertain": 16,
+    "total_corrections": 7
+  }
+}

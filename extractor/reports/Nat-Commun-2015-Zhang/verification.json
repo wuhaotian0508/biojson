@@ -1,276 +1,102 @@
 {
   "file": "Nat_Commun_2015_Zhang",
   "md_path": "/data/haotianwu/biojson/extractor/input/Nat_Commun_2015_Zhang.md",
-  "timestamp": "2026-03-28T11:53:08.661772",
+  "timestamp": "2026-03-30T00:18:32.875566",
   "genes": [
     {
-      "gene_name": "AtMYB12",
+      "gene_name": "SlMYB12",
       "category": "Common",
       "verification": {
-        "Gene_Accession_Number": {
-          "verdict": "SUPPORTED",
-          "reason": "Methods state AtMYB12 cDNA as At2g47460."
-        },
         "Species": {
           "verdict": "SUPPORTED",
-          "reason": "The gene was expressed and tested in tomato fruit throughout the paper."
+          "reason": "The paper studies tomato and explicitly identifies SlMYB12 as the tomato homologue."
         },
         "Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "Methods and text identify tomato as Solanum lycopersicum."
-        },
-        "Variety": {
-          "verdict": "SUPPORTED",
-          "reason": "Methods describe WT and AtMYB12 MicroTom fruit."
+          "reason": "Methods explicitly refer to tomato as Solanum lycopersicum."
         },
         "Origin_Species": {
           "verdict": "SUPPORTED",
-          "reason": "Text identifies AtMYB12 as from Arabidopsis thaliana."
+          "reason": "SlMYB12 is described as the tomato functional homologue; origin is tomato."
         },
         "Origin_Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "The introduction explicitly names Arabidopsis thaliana."
+          "reason": "Tomato is explicitly given as Solanum lycopersicum in Methods."
         },
-        "Expression_Pattern": {
+        "Gene_Accession_Number": {
           "verdict": "SUPPORTED",
-          "reason": "AtMYB12 is fruit-specific under the E8 promoter; ChIP used fruit at 3–4 days after breaker, RNA-seq at 7 days after breaker, and flux work at 10 dpb."
-        },
-        "Omics_Data": {
-          "verdict": "SUPPORTED",
-          "reason": "Paper reports RNA-seq (GSE61014), ChIP-seq (GSE62462), LC-MS metabolite analyses, and 14C/13C glucose labeling experiments."
-        },
-        "Interacting_Proteins": {
-          "verdict": "UNSUPPORTED",
-          "reason": "The listed items are promoter target genes, not interacting proteins. The paper shows DNA binding to promoters, not protein-protein interactions."
-        },
-        "Terminal_Metabolite": {
-          "verdict": "SUPPORTED",
-          "reason": "Results show AtMYB12 increases flavonols and chlorogenic acid/hydroxycinnamates, and when stacked enhances anthocyanins, resveratrol derivatives, and isoflavones."
-        },
-        "Terminal_Metabolite_Accumulation_Site": {
-          "verdict": "UNCERTAIN",
-          "reason": "Fruit pericarp and whole fruit are supported, but explicit 'flesh' accumulation for all listed products is not consistently shown; peel/flesh distinction is mainly for SlMYB12 expression."
-        },
-        "Breeding_or_Engineering_Application_Value": {
-          "verdict": "SUPPORTED",
-          "reason": "Discussion explicitly presents AtMYB12 as a general tool for engineering phenylpropanoids and shows stacking with Del/Ros1, VvStSy, and LjIFS."
-        },
-        "Environment_or_Treatment_Factor": {
-          "verdict": "SUPPORTED",
-          "reason": "Experiments are tied to fruit developmental stages from breaker to 10 dpb and to the E8 fruit-specific promoter context."
-        },
-        "Other_Important_Info": {
-          "verdict": "SUPPORTED",
-          "reason": "Results/Discussion state AtMYB12 reprograms primary metabolism unlike Del/Ros1; Discussion notes 35S-driven expression gave more modest flavonol effects and reduced growth in tobacco."
-        },
-        "Subcellular_Localization": {
-          "verdict": "UNSUPPORTED",
-          "reason": "The paper does not explicitly state nuclear localization for AtMYB12."
-        },
-        "Summary_Key_Findings_of_Core_Gene": {
-          "verdict": "SUPPORTED",
-          "reason": "All three summary points are directly reflected in Results: activation of primary and secondary genes, direct binding to ENO/DAHPS and flux changes, and enhanced engineered products in stacked lines."
-        },
-        "Potential_Tradeoffs": {
-          "verdict": "SUPPORTED",
-          "reason": "Discussion reports reduced growth in tobacco with 35S:AtMYB12; Results state flavonols are not high in AtMYB12 StSy tomatoes due to competition; no tomato yield penalty is reported."
-        },
-        "Promoters": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper repeatedly refers to fruit-specific expression of AtMYB12 using the E8 promoter."
-        },
-        "Core_Validation_Method": {
-          "verdict": "SUPPORTED",
-          "reason": "All listed approaches are used in the paper for AtMYB12 analysis."
-        },
-        "Core_Phenotypic_Effect": {
-          "verdict": "SUPPORTED",
-          "reason": "This is the main result: AtMYB12 enhances multiple phenylpropanoid products by increasing precursor supply and pathway gene expression."
+          "reason": "Methods list SlMYB12 as Solyc01g079620."
         },
         "Protein_Family_or_Domain": {
           "verdict": "UNCERTAIN",
-          "reason": "AtMYB12 is clearly a MYB transcription factor, but 'R2R3-MYB' is not explicitly stated in this paper text."
+          "reason": "The paper calls SlMYB12 a functional homologue of AtMYB12, but does not explicitly state the R2R3-MYB domain for SlMYB12 in the text."
         },
-        "Terminal_Metabolite_Function": {
+        "Expression_Pattern": {
           "verdict": "SUPPORTED",
-          "reason": "Discussion describes these compounds as polyphenolic phytonutrients/bioactives with health benefits; resveratrol is also called a phytoalexin."
-        }
-      },
-      "corrections": [
-        {
-          "field": "Interacting_Proteins",
-          "old_value": "Promoter targets: SlENO; SlDAHPS; SlPAL5A; SlPAL5C; SlPAL5D; SlCHS1; SlF3H",
-          "new_value": "NA",
-          "reason": "The listed items are promoter target genes, not interacting proteins. The paper shows DNA binding to promoters, not protein-protein interactions."
+          "reason": "Results state SlMYB12 is not expressed in tomato flesh and Fig. 3b shows expression predominantly in peel."
         },
-        {
-          "field": "Subcellular_Localization",
-          "old_value": "Nucleus",
-          "new_value": "NA",
-          "reason": "The paper does not explicitly state nuclear localization for AtMYB12."
-        }
-      ],
-      "stats": {
-        "supported": 18,
-        "unsupported": 2,
-        "uncertain": 2
-      }
-    },
-    {
-      "gene_name": "SlDAHPS",
-      "category": "Pathway",
-      "verification": {
-        "Species": {
+        "Expression_Pattern_of_Origin_Species": {
           "verdict": "SUPPORTED",
-          "reason": "SlDAHPS is a tomato gene examined in tomato fruit."
-        },
-        "Species_Latin_Name": {
-          "verdict": "SUPPORTED",
-          "reason": "Tomato is identified as Solanum lycopersicum in Methods."
-        },
-        "Variety": {
-          "verdict": "SUPPORTED",
-          "reason": "The study uses MicroTom tomato background for WT and transgenic lines."
-        },
-        "Origin_Species": {
-          "verdict": "SUPPORTED",
-          "reason": "SlDAHPS is described as a tomato gene."
-        },
-        "Origin_Species_Latin_Name": {
-          "verdict": "SUPPORTED",
-          "reason": "Tomato species is Solanum lycopersicum."
+          "reason": "Fig. 3b and text support predominant peel expression in WT tomato fruit."
         },
         "Terminal_Metabolite": {
-          "verdict": "SUPPORTED",
-          "reason": "DAHPS is linked in Results to shikimate/aromatic amino acid supply for downstream phenylpropanoid accumulation."
+          "verdict": "UNCERTAIN",
+          "reason": "SlMYB12 is linked in the paper to peel flavonoid accumulation and shares targets with AtMYB12, but direct evidence here is strongest for flavonol/flavonoid accumulation, not explicitly hydroxycinnamates for SlMYB12 itself."
         },
         "Terminal_Metabolite_Class": {
           "verdict": "SUPPORTED",
-          "reason": "Phenylpropanoid is the downstream metabolite class discussed throughout."
+          "reason": "SlMYB12 is discussed in the context of flavonoid accumulation, a phenylpropanoid class metabolite group."
         },
         "Terminal_Metabolite_Accumulation_Site": {
           "verdict": "SUPPORTED",
-          "reason": "The phenylpropanoid engineering and analyses are in tomato fruit pericarp."
+          "reason": "Results and cited prior work indicate peel-specific SlMYB12 expression associated with flavonoid accumulation in peel."
         },
-        "Biosynthetic_Pathway": {
+        "Core_Phenotypic_Effect": {
           "verdict": "SUPPORTED",
-          "reason": "Introduction states DAHPS is a key determinant of carbon flow into the shikimate pathway supplying phenylalanine for phenylpropanoid metabolism."
-        },
-        "Pathway_Branch_or_Subpathway": {
-          "verdict": "SUPPORTED",
-          "reason": "DAHPS is described as entry into shikimate/aromatic amino acid biosynthesis."
-        },
-        "Enzyme_Name": {
-          "verdict": "SUPPORTED",
-          "reason": "DAHPS is expanded as 3-deoxy-D-arabino-heptulosonate 7-phosphate synthase."
-        },
-        "EC_Number": {
-          "verdict": "UNSUPPORTED",
-          "reason": "No EC number is given in the paper."
-        },
-        "Catalyzed_Reaction_Description": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper identifies DAHPS as key for entry into shikimate pathway but does not explicitly state the reaction substrates/products."
-        },
-        "Primary_Substrate": {
-          "verdict": "UNCERTAIN",
-          "reason": "PEP and erythrose-4-phosphate are identified as shikimate precursors generally, but not explicitly as DAHPS substrates in this paper."
-        },
-        "Primary_Product": {
-          "verdict": "UNSUPPORTED",
-          "reason": "The product DAHP is not explicitly stated in the paper text."
-        },
-        "End_Product_Connection_Type": {
-          "verdict": "SUPPORTED",
-          "reason": "Paper directly links DAHPS to aromatic amino acid supply and downstream phenylpropanoid production."
-        },
-        "Metabolic_Step_Position": {
-          "verdict": "SUPPORTED",
-          "reason": "DAHPS is described as a key determinant of flow of carbon into the shikimate pathway, supporting upstream/entry-step characterization."
-        },
-        "Rate_Limiting_or_Key_Control_Step": {
-          "verdict": "SUPPORTED",
-          "reason": "Introduction explicitly says DAHPS is a key determinant of carbon flow into the shikimate pathway."
-        },
-        "Expression_Pattern": {
-          "verdict": "SUPPORTED",
-          "reason": "RNA-seq and qRT-PCR/ChIP data show higher expression in AtMYB12 fruit and elevated expression in WT peel where SlMYB12 is present."
-        },
-        "Subcellular_Localization": {
-          "verdict": "UNSUPPORTED",
-          "reason": "Although ENO is explicitly called plastidial, DAHPS localization is not explicitly stated in the paper."
-        },
-        "Protein_Family_or_Domain": {
-          "verdict": "SUPPORTED",
-          "reason": "It is directly identified as the DAHPS enzyme."
-        },
-        "Interacting_Proteins": {
-          "verdict": "UNSUPPORTED",
-          "reason": "AtMYB12 and SlMYB12 are transcription factors binding the DAHPS promoter, not protein interaction partners."
-        },
-        "Omics_Data": {
-          "verdict": "SUPPORTED",
-          "reason": "DAHPS is included in RNA-seq and ChIP-seq analyses, with GEO accessions provided."
+          "reason": "Fig. 3b-c and discussion support that SlMYB12 in peel is associated with elevated ENO, DAHPS, CHS1, F3H, FLS expression and flavonoid accumulation in peel."
         },
         "Core_Validation_Method": {
           "verdict": "SUPPORTED",
-          "reason": "Results include RNA-seq, ChIP-qPCR, ChIP-seq, and peel/flesh qRT-PCR evidence for DAHPS."
-        },
-        "Core_Phenotypic_Effect": {
-          "verdict": "UNCERTAIN",
-          "reason": "Association with enhanced aromatic amino acid supply and phenylpropanoid accumulation is supported, but DAHPS itself was not individually manipulated to establish causality in this paper."
-        },
-        "Breeding_or_Engineering_Application_Value": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper discusses DAHPS as a direct target and key gene, but does not directly propose SlDAHPS itself as an engineering target in tomato."
-        },
-        "Other_Important_Info": {
-          "verdict": "SUPPORTED",
-          "reason": "Results support direct promoter binding by AtMYB12 and SlMYB12."
-        },
-        "Environment_or_Treatment_Factor": {
-          "verdict": "SUPPORTED",
-          "reason": "Its analyses are within fruit ripening stages, including 3–5 days after breaker and ripe fruit RNA-seq."
+          "reason": "Results explicitly describe ChIP-qPCR for SlMYB12 binding in peel and qRT-PCR expression analysis."
         },
         "Summary_Key_Findings_of_Core_Gene": {
           "verdict": "SUPPORTED",
-          "reason": "Each summary point is directly supported by Results."
+          "reason": "All three points are directly supported by Results describing functional homology, shared promoter binding, and peel-associated gene expression."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the paper's use of SlMYB12 mainly as comparative evidence for AtMYB12 target conservation."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable implication but is not directly claimed or tested in Results."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "General health-promoting properties of polyphenols are discussed broadly, but not specifically assigned to SlMYB12-derived products."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly compare peel versus flesh at defined ripening stages."
+        },
+        "Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "MicroTom is used in some transgenic work, but WT peel/flesh SlMYB12 experiments are not explicitly tied to this field for SlMYB12 in the Results."
+        },
+        "Origin_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly state the SlMYB12 source variety as MicroTom."
         },
         "Promoters": {
           "verdict": "SUPPORTED",
-          "reason": "The native tomato promoter is examined by ChIP and shown to be activated/bound by AtMYB12 and SlMYB12."
+          "reason": "No transgenic promoter is used for SlMYB12; endogenous expression in WT peel is what is measured."
         }
       },
-      "corrections": [
-        {
-          "field": "EC_Number",
-          "old_value": "2.5.1.54",
-          "new_value": "NA",
-          "reason": "No EC number is given in the paper."
-        },
-        {
-          "field": "Primary_Product",
-          "old_value": "3-deoxy-D-arabino-heptulosonate 7-phosphate",
-          "new_value": "NA",
-          "reason": "The product DAHP is not explicitly stated in the paper text."
-        },
-        {
-          "field": "Subcellular_Localization",
-          "old_value": "Plastid",
-          "new_value": "NA",
-          "reason": "Although ENO is explicitly called plastidial, DAHPS localization is not explicitly stated in the paper."
-        },
-        {
-          "field": "Interacting_Proteins",
-          "old_value": "AtMYB12; SlMYB12",
-          "new_value": "NA",
-          "reason": "AtMYB12 and SlMYB12 are transcription factors binding the DAHPS promoter, not protein interaction partners."
-        }
-      ],
+      "corrections": [],
       "stats": {
-        "supported": 22,
-        "unsupported": 4,
-        "uncertain": 4
+        "supported": 15,
+        "unsupported": 0,
+        "uncertain": 6
       }
     },
     {
@@ -279,155 +105,469 @@
       "verification": {
         "Species": {
           "verdict": "SUPPORTED",
-          "reason": "SlENO is a tomato gene tested in tomato fruit."
+          "reason": "SlENO is a tomato gene examined in tomato fruit."
         },
         "Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "Tomato is Solanum lycopersicum in the paper."
-        },
-        "Variety": {
-          "verdict": "SUPPORTED",
-          "reason": "The work uses MicroTom background."
+          "reason": "Methods explicitly identify tomato as Solanum lycopersicum."
         },
         "Origin_Species": {
           "verdict": "SUPPORTED",
-          "reason": "SlENO is a tomato gene."
+          "reason": "SlENO is a tomato endogenous gene."
         },
         "Origin_Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "Tomato species is Solanum lycopersicum."
+          "reason": "Tomato is explicitly Solanum lycopersicum."
         },
-        "Terminal_Metabolite": {
-          "verdict": "SUPPORTED",
-          "reason": "ENO is linked to precursor and energy supply for downstream phenylpropanoid accumulation in AtMYB12 fruit."
+        "Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper includes MicroTom in some experiments, but SlENO-specific assays are not explicitly all assigned to MicroTom in Results."
         },
-        "Terminal_Metabolite_Class": {
-          "verdict": "SUPPORTED",
-          "reason": "Downstream products are phenylpropanoids."
-        },
-        "Terminal_Metabolite_Accumulation_Site": {
-          "verdict": "SUPPORTED",
-          "reason": "Phenylpropanoid accumulation is measured in tomato fruit pericarp."
+        "Origin_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "No explicit statement that the endogenous SlENO allele originates from MicroTom."
         },
         "Biosynthetic_Pathway": {
           "verdict": "SUPPORTED",
-          "reason": "ENO is discussed as part of glycolysis linked to shikimate and phenylpropanoid biosynthesis."
+          "reason": "Results and Fig. 1/4 place ENO in primary metabolism linking glycolysis to shikimate/phenylpropanoid precursor supply."
         },
         "Pathway_Branch_or_Subpathway": {
           "verdict": "SUPPORTED",
-          "reason": "The paper presents ENO as part of primary carbon metabolism/glycolysis."
+          "reason": "ENO is described as a primary metabolism gene and plastidial enolase supplying precursor flow from glycolysis."
         },
         "Enzyme_Name": {
           "verdict": "SUPPORTED",
-          "reason": "Results explicitly identify ENO as enolase and specifically plastidial enolase."
+          "reason": "Results explicitly state ENO encodes plastidial enolase."
         },
         "EC_Number": {
           "verdict": "UNSUPPORTED",
-          "reason": "No EC number appears in the paper."
+          "reason": "No EC number for ENO appears in the paper."
         },
-        "Catalyzed_Reaction_Description": {
-          "verdict": "UNSUPPORTED",
-          "reason": "The specific 2-phosphoglycerate to phosphoenolpyruvate reaction is not stated in the paper."
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is explicitly identified as enolase."
         },
         "Primary_Substrate": {
           "verdict": "UNSUPPORTED",
-          "reason": "2-phosphoglycerate is not explicitly mentioned."
+          "reason": "The specific substrate 2-phosphoglycerate is not stated in the paper."
         },
         "Primary_Product": {
-          "verdict": "UNCERTAIN",
-          "reason": "PEP is discussed as a glycolytic precursor for the shikimate pathway, but not explicitly as the direct ENO product in this paper."
+          "verdict": "UNSUPPORTED",
+          "reason": "The specific product phosphoenolpyruvate is not explicitly assigned to ENO in the text, though PEP is discussed as glycolytic precursor."
         },
-        "End_Product_Connection_Type": {
-          "verdict": "SUPPORTED",
-          "reason": "Results connect ENO induction with increased glycolytic flux and precursor supply to shikimate-derived phenylpropanoids."
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The exact reaction description is not stated in the paper."
         },
         "Metabolic_Step_Position": {
           "verdict": "SUPPORTED",
-          "reason": "As a glycolytic enzyme supplying precursor upstream of shikimate/phenylpropanoid metabolism, this is consistent with the paper."
+          "reason": "ENO is discussed as an upstream primary metabolism gene supplying phenylpropanoid precursors."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links ENO to precursor supply rather than direct end-product formation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AtMYB12 directly activates ENO and uses this precursor-supply system to enhance flavonols, hydroxycinnamates, anthocyanins, stilbenes, and isoflavones in tomato fruit."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These downstream products are all presented as phenylpropanoid compounds."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper measures these phenylpropanoids in tomato fruit/pericarp."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper broadly frames these phenylpropanoids as bioactives/high-value ingredients with health-related value."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show ENO is induced in AtMYB12 fruit and elevated in peel relative to flesh in WT."
+        },
+        "Expression_Pattern_of_Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 3b supports elevated ENO expression in WT peel."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly refer to the gene encoding plastidial enolase."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "AtMYB12 and SlMYB12 are shown to bind the ENO promoter, but not to physically interact with ENO protein."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper proposes ENO contributes to precursor supply, but ENO itself was not independently manipulated; effect is inferred through AtMYB12 activation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq, ChIP-qPCR, ChIP-seq, qRT-PCR, and isotope flux analyses are all used in the AtMYB12 context involving ENO."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point is supported: higher transcripts, promoter binding by AtMYB12 and SlMYB12, and association with increased carbon flux/phenylpropanoid output."
         },
         "Rate_Limiting_or_Key_Control_Step": {
           "verdict": "SUPPORTED",
           "reason": "Results state ENO and DAHPS are key genes linking primary metabolism to specialized metabolism of aromatic amino acids."
         },
-        "Expression_Pattern": {
+        "Environment_or_Treatment_Factor": {
           "verdict": "SUPPORTED",
-          "reason": "RNA-seq and peel/flesh qRT-PCR show elevated ENO in AtMYB12 fruit and WT peel."
-        },
-        "Subcellular_Localization": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper explicitly calls ENO 'plastidial enolase'."
-        },
-        "Protein_Family_or_Domain": {
-          "verdict": "SUPPORTED",
-          "reason": "It is identified as enolase."
-        },
-        "Interacting_Proteins": {
-          "verdict": "UNSUPPORTED",
-          "reason": "AtMYB12 and SlMYB12 bind the promoter; protein-protein interactions are not shown."
+          "reason": "These factors are all explicitly part of the experiments."
         },
         "Omics_Data": {
           "verdict": "SUPPORTED",
-          "reason": "ENO appears in RNA-seq and ChIP-seq datasets."
-        },
-        "Core_Validation_Method": {
-          "verdict": "SUPPORTED",
-          "reason": "RNA-seq, ChIP-qPCR, ChIP-seq, and peel/flesh qRT-PCR are all used."
-        },
-        "Core_Phenotypic_Effect": {
-          "verdict": "UNCERTAIN",
-          "reason": "Association with increased glycolytic flux and precursor provision is supported, but ENO itself was not directly overexpressed/knocked out to prove its individual effect."
-        },
-        "Breeding_or_Engineering_Application_Value": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper implies importance of supply-side genes but does not directly test SlENO as an engineering target."
+          "reason": "Methods list GEO GSE61014 for RNA-seq and GSE62462 for ChIP-seq."
         },
         "Other_Important_Info": {
           "verdict": "SUPPORTED",
-          "reason": "Results support direct promoter targeting by AtMYB12 and SlMYB12."
+          "reason": "The paper indeed emphasizes ENO as one of the primary metabolism genes directly activated by AtMYB12."
         },
-        "Environment_or_Treatment_Factor": {
-          "verdict": "SUPPORTED",
-          "reason": "Evidence is at fruit ripening stages."
-        },
-        "Summary_Key_Findings_of_Core_Gene": {
-          "verdict": "SUPPORTED",
-          "reason": "All three statements match Results."
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible interpretation, but ENO itself was not directly proposed as a standalone engineering target in Results."
         },
         "Promoters": {
           "verdict": "SUPPORTED",
-          "reason": "The native promoter is analyzed by ChIP and activated by AtMYB12/SlMYB12."
+          "reason": "ENO is endogenous and its promoter is activated by E8-driven AtMYB12 according to Results."
         }
       },
       "corrections": [
         {
           "field": "EC_Number",
-          "old_value": "4.2.1.11",
+          "old_value": "EC 4.2.1.11",
           "new_value": "NA",
-          "reason": "No EC number appears in the paper."
-        },
-        {
-          "field": "Catalyzed_Reaction_Description",
-          "old_value": "Converts 2-phosphoglycerate to phosphoenolpyruvate",
-          "new_value": "NA",
-          "reason": "The specific 2-phosphoglycerate to phosphoenolpyruvate reaction is not stated in the paper."
+          "reason": "No EC number for ENO appears in the paper."
         },
         {
           "field": "Primary_Substrate",
           "old_value": "2-phosphoglycerate",
           "new_value": "NA",
-          "reason": "2-phosphoglycerate is not explicitly mentioned."
+          "reason": "The specific substrate 2-phosphoglycerate is not stated in the paper."
         },
         {
-          "field": "Interacting_Proteins",
-          "old_value": "AtMYB12; SlMYB12",
+          "field": "Primary_Product",
+          "old_value": "Phosphoenolpyruvate",
           "new_value": "NA",
-          "reason": "AtMYB12 and SlMYB12 bind the promoter; protein-protein interactions are not shown."
+          "reason": "The specific product phosphoenolpyruvate is not explicitly assigned to ENO in the text, though PEP is discussed as glycolytic precursor."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Converts 2-phosphoglycerate to phosphoenolpyruvate in glycolysis",
+          "new_value": "NA",
+          "reason": "The exact reaction description is not stated in the paper."
         }
       ],
       "stats": {
-        "supported": 23,
+        "supported": 24,
         "unsupported": 4,
-        "uncertain": 3
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "SlDAHPS",
+      "category": "Pathway",
+      "verification": {
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SlDAHPS is an endogenous tomato gene studied in tomato fruit."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is explicitly Solanum lycopersicum in Methods."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SlDAHPS is a tomato gene."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is Solanum lycopersicum."
+        },
+        "Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "The DAHPS experiments are in tomato fruit, but the specific variety is not always explicitly attached to this gene in Results."
+        },
+        "Origin_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "No explicit source-variety statement for the endogenous DAHPS gene."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states DAHPS is a key determinant of flow of carbon into the shikimate pathway supplying phenylalanine."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "DAHPS is explicitly described as part of the entry into the shikimate pathway."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "DAHPS is explicitly expanded as 3-deoxy-D-arabino-heptulosonate 7-phosphate synthase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for DAHPS appears in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper clearly identifies the enzyme as DAHPS."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The text states erythrose-4-phosphate and phosphoenolpyruvate are precursors for the shikimate pathway and discusses DAHPS as the entry enzyme, allowing direct inference of its substrates."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The product DAHP is implied by the enzyme name but not explicitly stated in the text."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact condensation reaction is biochemical knowledge and not explicitly described in the paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "DAHPS is explicitly called a key determinant of flow into the shikimate pathway, i.e. an upstream/entry step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links DAHPS to precursor supply for aromatic amino acid and phenylpropanoid biosynthesis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "DAHPS activation by AtMYB12 is part of the system used to raise flavonols, hydroxycinnamates, anthocyanins, stilbenes, and isoflavones."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are treated as phenylpropanoid products in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measurements are made in tomato fruit/pericarp."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents these compounds as bioactives/high-value ingredients with health-related value."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show DAHPS is induced in AtMYB12 fruit and elevated in WT peel relative to flesh."
+        },
+        "Expression_Pattern_of_Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 3b supports higher DAHPS expression in peel."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "AtMYB12 and SlMYB12 bind the DAHPS promoter, but this is not protein-protein interaction."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper infers DAHPS contributes to increased carbon flow and phenylpropanoid accumulation, but DAHPS was not directly engineered alone."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq, ChIP-qPCR, ChIP-seq, qRT-PCR and isotope-label experiments are all used in the context involving DAHPS."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed points are directly supported by Results and introductory biochemical framing."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says DAHPS is a key determinant of the flow of carbon into the shikimate pathway."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These factors are explicitly part of the performed experiments."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods provide GEO IDs GSE61014 and GSE62462."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The authors specifically emphasize DAHPS as a direct target explaining enhanced aromatic amino acid supply."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential is inferable, but the paper does not directly test DAHPS as an engineering target by itself."
+        },
+        "Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "DAHPS is endogenous and its promoter is shown to be activated by E8-driven AtMYB12."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "EC 2.5.1.54",
+          "new_value": "NA",
+          "reason": "No EC number for DAHPS appears in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 1,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_name": "SlF3H (are)",
+      "category": "Pathway",
+      "verification": {
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The are mutant is in tomato and used in tomato engineering experiments."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is identified as Solanum lycopersicum."
+        },
+        "Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The are mutation affects an endogenous tomato gene."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is Solanum lycopersicum."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "LjIFS was transformed into Solanum lycopersicum cv. MicroTom, and the are crosses are in this tomato engineering context."
+        },
+        "Origin_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly state the original source variety of the are allele in this field format."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly frames F3H/are in competition with IFS for substrate between flavonoid and isoflavone synthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state IFS competes directly with F3H for naringenin, placing F3H in the competing flavonol branch."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states are is deficient in flavanone 3-hydroxylase activity."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for F3H appears in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state the 2-oxoglutarate-dependent dioxygenase family."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly say IFS competes directly with F3H for substrate, naringenin."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper identifies F3H activity but does not explicitly state the product as dihydroflavonols."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The precise hydroxylation reaction is not explicitly described in the paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "F3H is clearly described as a branch competition point with IFS."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly frames F3H as competing with isoflavone synthesis for naringenin."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The are mutation is directly connected to increased isoflavones/genistin in the LjIFS AtMYB12 background."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These target products are explicitly isoflavones."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "All measurements are in tomato fruit/pericarp."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses genistein/genistin as phytoestrogenic compounds with health relevance."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not discuss expression pattern, but explicitly states a functional deficiency in the are mutant used for engineering."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Competition with LjIFS is metabolic substrate competition, not evidence of protein interaction."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly show reduced flavonols and strongly increased isoflavones in are-containing engineered lines."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "This was tested by genetics with are-/- plus transgenes and LC-MS metabolite profiling."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed points are explicitly supported by Results and Fig. 6/Supplementary Fig. 6."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports branch switching/competition, but does not explicitly use the term key control step for F3H."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These are the exact experimental contexts in Results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects that are is a naturally occurring mutant used in the study instead of F3H overexpression."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly show flavonol reduction in are backgrounds."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results directly demonstrate that reducing F3H activity boosts isoflavone accumulation in stacked engineering strategies."
+        },
+        "Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The are mutation affects the endogenous allele, not a transgene promoter."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "EC 1.14.11.9",
+          "new_value": "NA",
+          "reason": "No EC number for F3H appears in the paper."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "2-oxoglutarate-dependent dioxygenase",
+          "new_value": "NA",
+          "reason": "The paper does not state the 2-oxoglutarate-dependent dioxygenase family."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "LjIFS (substrate competition)",
+          "new_value": "NA",
+          "reason": "Competition with LjIFS is metabolic substrate competition, not evidence of protein interaction."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 3,
+        "uncertain": 4
       }
     },
     {
@@ -436,145 +576,145 @@
       "verification": {
         "Species": {
           "verdict": "SUPPORTED",
-          "reason": "The gene is studied as a transgene in tomato fruit."
+          "reason": "The gene is expressed in tomato fruit as a transgene."
         },
         "Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "Tomato is Solanum lycopersicum."
+          "reason": "The study species is tomato, Solanum lycopersicum."
         },
         "Origin_Species": {
           "verdict": "SUPPORTED",
-          "reason": "Text states stilbene synthase is from grape."
+          "reason": "Results explicitly say stilbene synthase is from grape."
         },
         "Origin_Species_Latin_Name": {
           "verdict": "UNCERTAIN",
-          "reason": "The paper says 'from grape' and uses VvStSy, but does not explicitly spell out Vitis vinifera in the provided text."
-        },
-        "Terminal_Metabolite": {
-          "verdict": "SUPPORTED",
-          "reason": "Results directly quantify resveratrol and resveratrol derivatives from VvStSy lines."
-        },
-        "Terminal_Metabolite_Class": {
-          "verdict": "SUPPORTED",
-          "reason": "Resveratrol/stilbenes are presented as phenylpropanoid compounds."
-        },
-        "Terminal_Metabolite_Accumulation_Site": {
-          "verdict": "SUPPORTED",
-          "reason": "Measured in tomato fruit."
+          "reason": "The paper says grape but does not explicitly give the Latin name Vitis vinifera in the provided text."
         },
         "Biosynthetic_Pathway": {
           "verdict": "SUPPORTED",
-          "reason": "Figure 6 and text show a stilbene branch from phenylpropanoid/flavonoid precursor metabolism."
+          "reason": "The paper uses StSy to engineer resveratrol/stilbene biosynthesis in tomato."
         },
         "Pathway_Branch_or_Subpathway": {
           "verdict": "SUPPORTED",
-          "reason": "The paper states stilbene synthase competes with chalcone synthase, matching a stilbene branch."
+          "reason": "Fig. 6a presents the stilbene branch arising from the flavonoid-related pathway context."
         },
         "Enzyme_Name": {
           "verdict": "SUPPORTED",
-          "reason": "The text explicitly says stilbene synthase."
+          "reason": "Results explicitly refer to a gene encoding stilbene synthase (StSy)."
         },
         "EC_Number": {
           "verdict": "UNSUPPORTED",
-          "reason": "No EC number is given."
-        },
-        "Catalyzed_Reaction_Description": {
-          "verdict": "UNCERTAIN",
-          "reason": "Figure 6 implies resveratrol biosynthesis by StSy, but the specific substrates/products are not explicitly written in text."
-        },
-        "Primary_Substrate": {
-          "verdict": "UNSUPPORTED",
-          "reason": "p-Coumaroyl-CoA and malonyl-CoA are not explicitly stated as VvStSy substrates in this paper."
-        },
-        "Primary_Product": {
-          "verdict": "SUPPORTED",
-          "reason": "Results directly state that the line produces trans-resveratrol."
-        },
-        "End_Product_Connection_Type": {
-          "verdict": "SUPPORTED",
-          "reason": "StSy directly forms the target stilbene product branch."
-        },
-        "Metabolic_Step_Position": {
-          "verdict": "SUPPORTED",
-          "reason": "The competition with CHS supports a branch-point role."
-        },
-        "Rate_Limiting_or_Key_Control_Step": {
-          "verdict": "UNCERTAIN",
-          "reason": "It clearly introduces the branch, but the paper does not explicitly call it rate-limiting or a decisive branch-switch enzyme."
-        },
-        "Expression_Pattern": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper analyzes an original 35S:VvStSy tomato line and its cross with E8:AtMYB12."
+          "reason": "No EC number is provided in the paper."
         },
         "Protein_Family_or_Domain": {
           "verdict": "UNSUPPORTED",
-          "reason": "Type III polyketide synthase is not stated in the paper."
+          "reason": "The paper does not mention type III polyketide synthase family/domain."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "Fig. 6a implies pathway branching, but the paper does not explicitly state p-coumaroyl-CoA and malonyl-CoA as StSy substrates in text."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says StSy overexpression results in accumulation of resveratrol in tomato fruit."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The exact condensation reaction is not described in the paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "StSy is used as the product-forming branch enzyme for stilbene synthesis in Fig. 6a and Results."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "StSy directly produces the target stilbene product resveratrol."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly measure resveratrol, polydatin, and other resveratrol derivatives."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Resveratrol compounds are described as stilbenes/phenylpropanoid specialty compounds."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measurements are in tomato fruit/pericarp."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states resveratrol is a phytoalexin with therapeutic potential and reported lifespan-extending effects."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly refer to the original 35S:VvStSy tomato line."
         },
         "Interacting_Proteins": {
           "verdict": "UNSUPPORTED",
-          "reason": "Competition with CHS is a metabolic relationship, not a demonstrated protein interaction."
-        },
-        "Omics_Data": {
-          "verdict": "SUPPORTED",
-          "reason": "LC-MS profiling is used to quantify resveratrol compounds."
-        },
-        "Core_Validation_Method": {
-          "verdict": "SUPPORTED",
-          "reason": "Transgenic expression, crossing, and LC-MS quantification are directly described."
+          "reason": "Competition with CHS is metabolic competition, not protein interaction."
         },
         "Core_Phenotypic_Effect": {
           "verdict": "SUPPORTED",
-          "reason": "Results directly show VvStSy enables resveratrol accumulation and AtMYB12 strongly enhances it."
+          "reason": "Results directly show StSy produces resveratrol and AtMYB12 co-expression raises derivatives to 5–6 mg g^-1 DW."
         },
-        "Breeding_or_Engineering_Application_Value": {
+        "Core_Validation_Method": {
           "verdict": "SUPPORTED",
-          "reason": "The paper presents co-expression with AtMYB12 as an effective route to high-resveratrol tomato."
-        },
-        "Other_Important_Info": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper gives ~0.5 mg g^-1 DW for original line, 5–6 mg g^-1 DW with AtMYB12, and notes reduced flavonol phenotype due to competition."
-        },
-        "Environment_or_Treatment_Factor": {
-          "verdict": "SUPPORTED",
-          "reason": "The comparison is between original 35S:VvStSy and co-expression with fruit-expressed AtMYB12, with fruit developmental stage noted."
+          "reason": "These approaches are explicitly described in Results."
         },
         "Summary_Key_Findings_of_Core_Gene": {
           "verdict": "SUPPORTED",
-          "reason": "All three statements are directly supported by Results."
+          "reason": "All three points are directly supported by Results and Fig. 6b,c."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is clearly a branch-switch enzyme, but the paper does not explicitly label it rate-limiting or key control step."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Fruit ripening and AtMYB12 co-expression are explicitly part of the experiment."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes its role as a grape transgene used in tomato engineering."
         },
         "Potential_Tradeoffs": {
           "verdict": "SUPPORTED",
-          "reason": "Reduced flavonol accumulation due to competition is explicitly reported."
+          "reason": "Results explicitly note high flavonols were not observed in AtMYB12 StSy tomatoes, suggesting competition with CHS."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The study directly demonstrates strong enhancement of resveratrol biofortification in tomato by stacking VvStSy with AtMYB12."
         },
         "Promoters": {
           "verdict": "SUPPORTED",
-          "reason": "The text explicitly refers to the original 35S:VvStSy line."
+          "reason": "The paper explicitly states the original line is 35S:VvStSy, i.e. CaMV 35S-driven."
         }
       },
       "corrections": [
         {
           "field": "EC_Number",
-          "old_value": "2.3.1.95",
+          "old_value": "EC 2.3.1.95",
           "new_value": "NA",
-          "reason": "No EC number is given."
-        },
-        {
-          "field": "Primary_Substrate",
-          "old_value": "p-Coumaroyl-CoA; malonyl-CoA",
-          "new_value": "NA",
-          "reason": "p-Coumaroyl-CoA and malonyl-CoA are not explicitly stated as VvStSy substrates in this paper."
+          "reason": "No EC number is provided in the paper."
         },
         {
           "field": "Protein_Family_or_Domain",
           "old_value": "Type III polyketide synthase",
           "new_value": "NA",
-          "reason": "Type III polyketide synthase is not stated in the paper."
+          "reason": "The paper does not mention type III polyketide synthase family/domain."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Condenses p-coumaroyl-CoA with malonyl-CoA units to form resveratrol",
+          "new_value": "NA",
+          "reason": "The exact condensation reaction is not described in the paper."
         },
         {
           "field": "Interacting_Proteins",
-          "old_value": "Competes functionally with CHS",
+          "old_value": "Competes with CHS",
           "new_value": "NA",
-          "reason": "Competition with CHS is a metabolic relationship, not a demonstrated protein interaction."
+          "reason": "Competition with CHS is metabolic competition, not protein interaction."
         }
       ],
       "stats": {
@@ -587,554 +727,550 @@
       "gene_name": "LjIFS",
       "category": "Pathway",
       "verification": {
-        "Gene_Accession_Number": {
-          "verdict": "SUPPORTED",
-          "reason": "Methods state LjIFS cDNA GB ID AB024931."
-        },
         "Species": {
           "verdict": "SUPPORTED",
-          "reason": "LjIFS is tested as a transgene in tomato fruit."
+          "reason": "LjIFS is expressed in tomato as an engineered transgene."
         },
         "Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "Tomato is Solanum lycopersicum."
-        },
-        "Variety": {
-          "verdict": "SUPPORTED",
-          "reason": "Transformation was in Solanum lycopersicum cv. MicroTom."
+          "reason": "Methods explicitly state Solanum lycopersicum cv. MicroTom for tomato transformation."
         },
         "Origin_Species": {
           "verdict": "SUPPORTED",
-          "reason": "Text states LjIFS is from Lotus japonicus."
+          "reason": "Results and Methods explicitly identify LjIFS as from Lotus japonicus."
         },
         "Origin_Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "Methods explicitly give Lotus japonicus."
+          "reason": "The paper explicitly gives Lotus japonicus."
         },
-        "Terminal_Metabolite": {
+        "Gene_Accession_Number": {
           "verdict": "SUPPORTED",
-          "reason": "Results measure genistein/genistin and total isoflavones in LjIFS lines."
-        },
-        "Terminal_Metabolite_Class": {
-          "verdict": "SUPPORTED",
-          "reason": "Isoflavones are treated as phenylpropanoid-derived compounds in this study."
-        },
-        "Terminal_Metabolite_Accumulation_Site": {
-          "verdict": "SUPPORTED",
-          "reason": "Measured in tomato fruit."
+          "reason": "Methods list LjIFS cDNA with GB ID AB024931."
         },
         "Biosynthetic_Pathway": {
           "verdict": "SUPPORTED",
-          "reason": "Figure 6 shows an isoflavone biosynthesis branch from flavonoid pathway."
+          "reason": "The paper directly describes engineering isoflavone biosynthesis in tomato using LjIFS."
         },
         "Pathway_Branch_or_Subpathway": {
           "verdict": "SUPPORTED",
-          "reason": "Text explicitly states IFS competes directly with F3H for substrate naringenin."
+          "reason": "Fig. 6a shows the isoflavone branch from the flavonoid pathway."
         },
         "Enzyme_Name": {
           "verdict": "SUPPORTED",
-          "reason": "It is explicitly called isoflavone synthase."
+          "reason": "Results explicitly call LjIFS an isoflavone synthase gene."
         },
         "EC_Number": {
           "verdict": "UNSUPPORTED",
-          "reason": "No EC number is given."
-        },
-        "Catalyzed_Reaction_Description": {
-          "verdict": "UNCERTAIN",
-          "reason": "The exact conversion to isoflavone skeleton is not explicitly described in detail, though Figure 6 implies the branch."
-        },
-        "Primary_Substrate": {
-          "verdict": "SUPPORTED",
-          "reason": "Text explicitly says IFS competes directly with F3H for substrate naringenin."
-        },
-        "Primary_Product": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper shows end products genistein/genistin, but does not explicitly state the immediate enzymatic product of LjIFS."
-        },
-        "End_Product_Connection_Type": {
-          "verdict": "SUPPORTED",
-          "reason": "LjIFS directly introduces the isoflavone target-product branch."
-        },
-        "Metabolic_Step_Position": {
-          "verdict": "SUPPORTED",
-          "reason": "Competition with F3H establishes a branch-point role."
-        },
-        "Rate_Limiting_or_Key_Control_Step": {
-          "verdict": "UNCERTAIN",
-          "reason": "It clearly introduces the branch, but the paper does not explicitly define it as rate-limiting."
-        },
-        "Expression_Pattern": {
-          "verdict": "SUPPORTED",
-          "reason": "Methods state LjIFS was expressed under the fruit-specific E8 promoter."
+          "reason": "No EC number is reported in the paper."
         },
         "Protein_Family_or_Domain": {
           "verdict": "UNSUPPORTED",
-          "reason": "Cytochrome P450 is not stated in the paper text."
+          "reason": "The CYP93C family/domain is not stated in the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state IFS competes directly with F3H for substrate, naringenin."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states genistein is the major isoflavone and after synthesis both genistein and genistin are detected, with genistein then glycosylated to genistin in Fig. 6a."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The general conversion to isoflavones is inferable from Fig. 6a, but the exact wording given is not explicitly stated."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "LjIFS is clearly used as the branch/product-forming step for isoflavone production."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "LjIFS directly enables formation of the target isoflavone product."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly measure genistein, genistin, and genistein-di-glucosides."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are explicitly isoflavones."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measurements are in tomato fruit/pericarp."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses genistein/genistin as phytoestrogenic compounds with potential benefits and risks in hormone-related diseases."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Methods explicitly state LjIFS was expressed under the fruit-specific E8 promoter."
         },
         "Interacting_Proteins": {
           "verdict": "UNSUPPORTED",
-          "reason": "Competition with F3H is a pathway relationship, not protein interaction evidence."
-        },
-        "Omics_Data": {
-          "verdict": "SUPPORTED",
-          "reason": "LC-MS metabolite profiling was used."
-        },
-        "Core_Validation_Method": {
-          "verdict": "SUPPORTED",
-          "reason": "Transgenic expression, crossing with AtMYB12 and are, and LC-MS quantification are directly described."
+          "reason": "Competition with SlF3H is substrate competition, not demonstrated protein interaction."
         },
         "Core_Phenotypic_Effect": {
           "verdict": "SUPPORTED",
-          "reason": "Results show low genistin with LjIFS alone and much higher isoflavones with AtMYB12 and are."
+          "reason": "Results directly show LjIFS enables genistin accumulation and, with AtMYB12 plus are, strongly increases total isoflavones up to about 78 mg g^-1 DW."
         },
-        "Breeding_or_Engineering_Application_Value": {
+        "Core_Validation_Method": {
           "verdict": "SUPPORTED",
-          "reason": "The paper explicitly presents this stacking strategy as effective for high-isoflavone tomato."
-        },
-        "Other_Important_Info": {
-          "verdict": "SUPPORTED",
-          "reason": "The specific values ~0.3, ~11, and ~78 mg g^-1 DW are reported in Results."
-        },
-        "Environment_or_Treatment_Factor": {
-          "verdict": "SUPPORTED",
-          "reason": "Fruit-specific E8 expression and genetic background with are are directly described."
+          "reason": "These methods are explicitly described in Results and Methods."
         },
         "Summary_Key_Findings_of_Core_Gene": {
           "verdict": "SUPPORTED",
-          "reason": "All three summary points match the Results."
+          "reason": "All three summary statements are directly supported by the Results and Fig. 6d,e."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "LjIFS is a branch-switch enzyme in the engineering design, but the paper does not explicitly call it rate-limiting."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These exact contexts are tested."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately describes LjIFS as a core engineering gene for novel phenylpropanoid/isoflavone biosynthesis in tomato fruit."
         },
         "Potential_Tradeoffs": {
           "verdict": "SUPPORTED",
-          "reason": "Results explicitly show competition with flavonol branch via F3H substrate competition."
+          "reason": "The paper explicitly discusses competition with the endogenous flavonoid branch and context-dependent health impacts of dietary isoflavones in Discussion."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The study directly shows LjIFS plus AtMYB12 and are creates highly isoflavone-enriched tomato fruit."
         },
         "Promoters": {
           "verdict": "SUPPORTED",
-          "reason": "Methods explicitly state the E8 promoter."
+          "reason": "Methods explicitly describe the E8 fruit-specific promoter driving LjIFS."
         }
       },
       "corrections": [
         {
           "field": "EC_Number",
-          "old_value": "1.14.14.87",
+          "old_value": "EC 1.14.14.87",
           "new_value": "NA",
-          "reason": "No EC number is given."
+          "reason": "No EC number is reported in the paper."
         },
         {
           "field": "Protein_Family_or_Domain",
-          "old_value": "Cytochrome P450 isoflavone synthase",
+          "old_value": "Cytochrome P450 CYP93C",
           "new_value": "NA",
-          "reason": "Cytochrome P450 is not stated in the paper text."
+          "reason": "The CYP93C family/domain is not stated in the paper."
         },
         {
           "field": "Interacting_Proteins",
-          "old_value": "Competes functionally with F3H for naringenin",
+          "old_value": "Competes with SlF3H for naringenin",
           "new_value": "NA",
-          "reason": "Competition with F3H is a pathway relationship, not protein interaction evidence."
+          "reason": "Competition with SlF3H is substrate competition, not demonstrated protein interaction."
         }
       ],
       "stats": {
         "supported": 25,
         "unsupported": 3,
-        "uncertain": 3
+        "uncertain": 2
       }
     },
     {
-      "gene_name": "SlMYB12",
+      "gene_name": "AtMYB12",
       "category": "Regulation",
       "verification": {
-        "Gene_Accession_Number": {
-          "verdict": "SUPPORTED",
-          "reason": "Methods give SlMYB12 as Solyc01g079620."
-        },
         "Species": {
           "verdict": "SUPPORTED",
-          "reason": "SlMYB12 is the endogenous tomato homolog studied in tomato fruit."
+          "reason": "AtMYB12 is expressed and tested in tomato fruit in this study."
         },
         "Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "Tomato is Solanum lycopersicum."
-        },
-        "Variety": {
-          "verdict": "UNCERTAIN",
-          "reason": "WT peel/flesh analyses are in tomato, likely MicroTom context, but 'WT/MicroTom background' is not explicitly stated for SlMYB12 experiments."
+          "reason": "Tomato is explicitly Solanum lycopersicum in Methods."
         },
         "Origin_Species": {
           "verdict": "SUPPORTED",
-          "reason": "SlMYB12 is explicitly the tomato homologue."
+          "reason": "The introduction explicitly identifies AtMYB12 as from Arabidopsis thaliana."
         },
         "Origin_Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "Tomato species is Solanum lycopersicum."
+          "reason": "Arabidopsis thaliana is explicitly stated."
         },
-        "Regulation_Mode": {
+        "Variety": {
           "verdict": "SUPPORTED",
-          "reason": "ChIP-qPCR shows direct binding by SlMYB12 to promoters; expression in peel is associated with elevated target-gene expression."
+          "reason": "The paper uses MicroTom transgenic tomatoes, including AtMYB12 lines, in the main experiments."
         },
-        "Interacting_Proteins": {
-          "verdict": "UNSUPPORTED",
-          "reason": "These are promoter targets, not interacting proteins."
-        },
-        "Terminal_Metabolite": {
+        "Gene_Accession_Number": {
           "verdict": "SUPPORTED",
-          "reason": "SlMYB12 is discussed as controlling flavonoid accumulation in tomato peel and associated with flavonol biosynthesis genes."
-        },
-        "Terminal_Metabolite_Class": {
-          "verdict": "SUPPORTED",
-          "reason": "Flavonols/phenylpropanoids are the relevant class."
-        },
-        "Terminal_Metabolite_Accumulation_Site": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper states flavonoid accumulation in peel is controlled by SlMYB12-regulated network, and SlMYB12 is predominantly expressed in peel."
-        },
-        "Subcellular_Localization": {
-          "verdict": "UNSUPPORTED",
-          "reason": "No explicit nuclear localization is provided."
-        },
-        "Metabolic_Process_Controlled": {
-          "verdict": "SUPPORTED",
-          "reason": "Results show association with both flavonol biosynthesis genes and upstream genes ENO/DAHPS."
-        },
-        "Core_Validation_Method": {
-          "verdict": "SUPPORTED",
-          "reason": "Peel/flesh qRT-PCR, ChIP-qPCR, and immunodetection are all described."
-        },
-        "Promoters": {
-          "verdict": "SUPPORTED",
-          "reason": "The endogenous/native promoter context is what is studied for SlMYB12."
-        },
-        "Terminal_Metabolite_Function": {
-          "verdict": "UNCERTAIN",
-          "reason": "General protective/nutritional roles of phenylpropanoids are discussed, but specific functional assignment for SlMYB12-controlled peel metabolites is not directly tested."
-        },
-        "Summary_Key_Findings_of_Core_Gene": {
-          "verdict": "SUPPORTED",
-          "reason": "All three points are supported by Results and Discussion."
-        },
-        "Core_Phenotypic_Effect": {
-          "verdict": "SUPPORTED",
-          "reason": "The association with peel phenylpropanoid production via activation of target genes is supported, though causality here relies partly on prior cited work."
-        },
-        "Protein_Family_or_Domain": {
-          "verdict": "UNCERTAIN",
-          "reason": "MYB identity is clear, but 'R2R3-MYB' is not explicitly stated in this paper text."
-        },
-        "Upstream_Signals_or_Inputs": {
-          "verdict": "UNCERTAIN",
-          "reason": "Peel developmental/ripening context is inferable from expression pattern, but not explicitly established as an upstream regulatory signal."
-        },
-        "Environment_or_Treatment_Factor": {
-          "verdict": "SUPPORTED",
-          "reason": "Experiments compare peel versus flesh at 5 days after breaker."
-        },
-        "Primary_Regulatory_Targets": {
-          "verdict": "SUPPORTED",
-          "reason": "ChIP-qPCR confirms SlMYB12 binding to SlENO, SlDAHPS, and SlCHS1 promoters."
-        },
-        "Other_Important_Info": {
-          "verdict": "SUPPORTED",
-          "reason": "Results explicitly identify SlMYB12 as functional homologue and state it is not expressed in flesh, which served as control."
-        },
-        "Decisive_Influence_on_Target_Product": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper supports SlMYB12 as a positive peel regulator coordinating flavonol accumulation with precursor-supply genes."
+          "reason": "Methods list AtMYB12 as At2g47460."
         },
         "Regulator_Type": {
           "verdict": "SUPPORTED",
-          "reason": "SlMYB12 is a transcription factor/homologue of AtMYB12."
+          "reason": "The paper explicitly states AtMYB12 is a transcription factor."
         },
-        "Breeding_or_Engineering_Application_Value": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper does not directly propose engineering with SlMYB12, only characterizes it as endogenous homologue."
-        },
-        "Regulatory_Effect_on_Target_Genes": {
+        "Protein_Family_or_Domain": {
           "verdict": "SUPPORTED",
-          "reason": "Peel expression correlates with elevated SlENO, SlDAHPS, and SlCHS1, and ChIP shows binding."
+          "reason": "The introduction identifies AtMYB12 as an MYB transcription factor regulating flavonol biosynthesis; AtMYB12 is known and treated here as MYB-type, though R2R3 is not spelled out in the text. Still this is directly inferable from the cited Arabidopsis factor identity."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly state nuclear localization."
         },
         "Expression_Pattern": {
           "verdict": "SUPPORTED",
-          "reason": "Figure 3b states SlMYB12 is predominantly in fruit peel, not flesh."
+          "reason": "The paper explicitly states fruit-specific expression under the E8 promoter and Methods note strong induction at 3–4 days after breaker for ChIP."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show direct binding and activation of target promoters by AtMYB12."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "AtMYB12 is under control of the fruit-specific E8 promoter, associated with fruit ripening."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly identify PAL5A, PAL5C, PAL5D, CHS1, F3H, ENO, and DAHPS as significantly enriched targets in ChIP-qPCR."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq and qPCR data support activation of glycolysis, PPP, shikimate, and flavonoid biosynthetic genes."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "This is the central conclusion of the paper."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "AtMYB12 binds promoters containing the TACCTACC motif and shares targets with SlMYB12, but this field mixes DNA motif binding and homology rather than protein interactions."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly shows increases in flavonols, hydroxycinnamates/CGA, anthocyanins in Indigo, resveratrol derivatives, and isoflavones with AtMYB12-containing lines."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are all discussed as phenylpropanoid compounds."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "All metabolite measurements are in tomato fruit/pericarp."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper broadly discusses these as dietary bioactives and health-related compounds."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes the central experimentally supported phenotype of AtMYB12."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly used in the study."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points are directly supported by Results figures and text."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly contrasts AtMYB12 with Del/Ros1 as controlling both supply and demand for phenylpropanoid production."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is discussed speculatively in Discussion and not directly established in Results."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These factors are explicitly part of the experiments."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly provide GEO accessions GSE61014 and GSE62462."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the paper's main comparative conclusion about AtMYB12 versus Del/Ros1."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly mentions reduced growth in tobacco with 35S:AtMYB12 and argues E8 fruit-specific expression is more effective."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly presents AtMYB12 as a general tool for metabolic engineering and biofortification of phenylpropanoids in fruit."
         }
       },
       "corrections": [
         {
-          "field": "Interacting_Proteins",
-          "old_value": "Promoter targets: SlENO; SlDAHPS; SlCHS1",
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
           "new_value": "NA",
-          "reason": "These are promoter targets, not interacting proteins."
+          "reason": "The paper does not explicitly state nuclear localization."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "Delila (Del)",
+      "category": "Regulation",
+      "verification": {
+        "Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Del is expressed in transgenic tomato fruit lines used in this study."
+        },
+        "Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study species is tomato, Solanum lycopersicum."
+        },
+        "Origin_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper refers to the purple Del/Ros1 tomato line but does not explicitly state in the provided text that Del derives from snapdragon."
+        },
+        "Origin_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Antirrhinum majus does not appear in the provided text."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses MicroTom tomato background for transgenic lines, including crosses with AtMYB12."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Del is discussed as one of the transcription factors used to enhance anthocyanin biosynthesis."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state that Del is a bHLH transcription factor in the provided text."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Nuclear localization is not stated in the paper."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "Del is present in the transgenic purple Del/Ros1 tomato line used in the experiments."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Results describe Del/Ros1 as enhancing anthocyanin biosynthesis by activating expression of anthocyanin biosynthetic genes."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Its activity here depends on transgenic expression in tomato fruit."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state Del and Ros1 principally activate anthocyanin biosynthetic genes and mainly genes late in flavonoid biosynthesis."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 5b and text support activation mainly of late flavonoid/anthocyanin genes."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly contrasts Del/Ros1 as creating anthocyanin biosynthesis demand without upregulating primary metabolism."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper treats Del and Ros1 as co-expressed regulators but does not explicitly state they function as a complex."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Co-use with Ros1 is clear, but direct interaction is not demonstrated in this paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Del/Ros1 tomato is explicitly described as accumulating high levels of anthocyanins."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are discussed as part of flavonoid/phenylpropanoid metabolism."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The accumulation is in tomato fruit/pericarp."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pigmentation is explicit; antioxidant/dietary value is plausible but not directly stated specifically for Del-derived anthocyanins in Results."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly show Del/Ros1 enhances anthocyanins and Indigo fruit with AtMYB12 has still higher anthocyanins."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Crossing, qRT-PCR, and metabolite profiling are explicitly used."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary statements are directly supported by Fig. 5 and accompanying text."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly portrays Del/Ros1 as anthocyanin-branch activators less broad than AtMYB12."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Fruit ripening and co-expression with AtMYB12 are explicit experimental contexts."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately captures its comparative role in the study."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state Del/Ros1 did not increase aromatic amino acids or primary metabolism."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper demonstrates utility of Del/Ros1 for anthocyanin-rich fruit and improved performance when stacked with AtMYB12."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Origin_Species_Latin_Name",
+          "old_value": "Antirrhinum majus",
+          "new_value": "NA",
+          "reason": "Antirrhinum majus does not appear in the provided text."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "bHLH transcription factor",
+          "new_value": "NA",
+          "reason": "The paper does not state that Del is a bHLH transcription factor in the provided text."
         },
         {
           "field": "Subcellular_Localization",
           "old_value": "Nucleus",
           "new_value": "NA",
-          "reason": "No explicit nuclear localization is provided."
+          "reason": "Nuclear localization is not stated in the paper."
         }
       ],
       "stats": {
         "supported": 21,
-        "unsupported": 2,
-        "uncertain": 5
-      }
-    },
-    {
-      "gene_name": "Delila",
-      "category": "Regulation",
-      "verification": {
-        "Species": {
-          "verdict": "SUPPORTED",
-          "reason": "Delila is studied as a transgene in tomato fruit in the Del/Ros1 line."
-        },
-        "Species_Latin_Name": {
-          "verdict": "SUPPORTED",
-          "reason": "Tomato is Solanum lycopersicum."
-        },
-        "Variety": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper refers to the purple Del/Ros1 tomato line."
-        },
-        "Origin_Species": {
-          "verdict": "UNCERTAIN",
-          "reason": "Delila is known from snapdragon, but the provided text here does not explicitly state Antirrhinum majus."
-        },
-        "Origin_Species_Latin_Name": {
-          "verdict": "UNSUPPORTED",
-          "reason": "Antirrhinum majus is not explicitly given in this paper text."
-        },
-        "Regulation_Mode": {
-          "verdict": "SUPPORTED",
-          "reason": "Results show Del/Ros1 enhanced anthocyanin biosynthesis principally by activating anthocyanin biosynthetic genes."
-        },
-        "Interacting_Proteins": {
-          "verdict": "UNCERTAIN",
-          "reason": "Delila is always discussed together with Ros1, but a direct protein-protein interaction is not demonstrated in this paper."
-        },
-        "Terminal_Metabolite": {
-          "verdict": "SUPPORTED",
-          "reason": "Del/Ros1 fruit accumulate high levels of anthocyanins."
-        },
-        "Terminal_Metabolite_Class": {
-          "verdict": "SUPPORTED",
-          "reason": "Anthocyanins are part of phenylpropanoid/flavonoid metabolism discussed in the paper."
-        },
-        "Terminal_Metabolite_Accumulation_Site": {
-          "verdict": "SUPPORTED",
-          "reason": "Anthocyanins are measured in tomato fruit."
-        },
-        "Subcellular_Localization": {
-          "verdict": "UNSUPPORTED",
-          "reason": "Nuclear localization is not stated."
-        },
-        "Metabolic_Process_Controlled": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper explicitly says Del and Ros1 enhanced anthocyanin biosynthesis."
-        },
-        "Core_Validation_Method": {
-          "verdict": "SUPPORTED",
-          "reason": "The study uses transgenic lines/crosses, RT-qPCR and metabolite profiling."
-        },
-        "Terminal_Metabolite_Function": {
-          "verdict": "SUPPORTED",
-          "reason": "Anthocyanins are associated with pigmentation; the paper also frames phenylpropanoids as phytonutrients."
-        },
-        "Summary_Key_Findings_of_Core_Gene": {
-          "verdict": "SUPPORTED",
-          "reason": "These statements match Results: activation of anthocyanin genes, no major activation of primary metabolism/aromatic amino acids, and enhancement in Indigo with AtMYB12."
-        },
-        "Omics_Data": {
-          "verdict": "SUPPORTED",
-          "reason": "RT-qPCR and metabolite profiling data are presented."
-        },
-        "Core_Phenotypic_Effect": {
-          "verdict": "SUPPORTED",
-          "reason": "Delila with Ros1 promotes anthocyanin accumulation and this is enhanced in Indigo."
-        },
-        "Protein_Family_or_Domain": {
-          "verdict": "UNCERTAIN",
-          "reason": "Delila is widely known as a bHLH TF, but that is not explicitly stated in this paper text."
-        },
-        "Upstream_Signals_or_Inputs": {
-          "verdict": "SUPPORTED",
-          "reason": "Its role here is in a transgenic expression context."
-        },
-        "Environment_or_Treatment_Factor": {
-          "verdict": "SUPPORTED",
-          "reason": "The work concerns fruit ripening stages/fruit analyses."
-        },
-        "Potential_Tradeoffs": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper contrasts Del/Ros1 as demand-only regulators without increased amino acid supply, explaining lower output than AtMYB12-based engineering."
-        },
-        "Primary_Regulatory_Targets": {
-          "verdict": "SUPPORTED",
-          "reason": "Results say Del/Ros1 mainly activate genes encoding enzymes late in flavonoid/anthocyanin biosynthesis."
-        },
-        "Other_Important_Info": {
-          "verdict": "SUPPORTED",
-          "reason": "Delila is used as a co-engineering TF rather than the mechanistic focus."
-        },
-        "Decisive_Influence_on_Target_Product": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper supports strong activation of anthocyanin branch but not multilevel metabolic reprogramming."
-        },
-        "Regulator_Type": {
-          "verdict": "SUPPORTED",
-          "reason": "Delila is used as a transcription factor in the paper."
-        },
-        "Breeding_or_Engineering_Application_Value": {
-          "verdict": "SUPPORTED",
-          "reason": "Stacking Del/Ros1 with AtMYB12 generated Indigo fruit with higher anthocyanins."
-        },
-        "Regulatory_Effect_on_Target_Genes": {
-          "verdict": "SUPPORTED",
-          "reason": "Results indicate activation of late anthocyanin biosynthetic genes."
-        },
-        "Expression_Pattern": {
-          "verdict": "SUPPORTED",
-          "reason": "Delila is present through transgenic expression in tomato fruit line."
-        },
-        "Protein_Complex_Involvement": {
-          "verdict": "UNCERTAIN",
-          "reason": "Functional pairing with Ros1 is supported, but explicit complex formation is not shown."
-        }
-      },
-      "corrections": [
-        {
-          "field": "Origin_Species_Latin_Name",
-          "old_value": "Antirrhinum majus",
-          "new_value": "NA",
-          "reason": "Antirrhinum majus is not explicitly given in this paper text."
-        },
-        {
-          "field": "Subcellular_Localization",
-          "old_value": "Nucleus",
-          "new_value": "NA",
-          "reason": "Nuclear localization is not stated."
-        }
-      ],
-      "stats": {
-        "supported": 23,
-        "unsupported": 2,
+        "unsupported": 3,
         "uncertain": 4
       }
     },
     {
-      "gene_name": "Rosea1",
+      "gene_name": "Rosea1 (Ros1)",
       "category": "Regulation",
       "verification": {
         "Species": {
           "verdict": "SUPPORTED",
-          "reason": "Rosea1 is studied as a transgene in tomato fruit in the Del/Ros1 line."
+          "reason": "Ros1 is expressed in transgenic tomato fruit lines used in this study."
         },
         "Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "Tomato is Solanum lycopersicum."
-        },
-        "Variety": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper refers to the purple Del/Ros1 tomato line."
+          "reason": "The study species is tomato, Solanum lycopersicum."
         },
         "Origin_Species": {
           "verdict": "UNCERTAIN",
-          "reason": "Rosea1 is known from snapdragon, but the provided text does not explicitly state this origin."
+          "reason": "The provided text names Ros1 but does not explicitly state snapdragon as origin."
         },
         "Origin_Species_Latin_Name": {
           "verdict": "UNSUPPORTED",
-          "reason": "Antirrhinum majus is not explicitly stated in the text provided."
+          "reason": "Antirrhinum majus does not appear in the provided text."
         },
-        "Regulation_Mode": {
+        "Variety": {
           "verdict": "SUPPORTED",
-          "reason": "Results show Del/Ros1 activate anthocyanin biosynthetic genes."
-        },
-        "Interacting_Proteins": {
-          "verdict": "UNCERTAIN",
-          "reason": "Rosea1 is functionally paired with Delila, but direct physical interaction is not demonstrated."
-        },
-        "Terminal_Metabolite": {
-          "verdict": "SUPPORTED",
-          "reason": "Del/Ros1 fruit accumulate anthocyanins."
-        },
-        "Terminal_Metabolite_Class": {
-          "verdict": "SUPPORTED",
-          "reason": "Anthocyanins are a phenylpropanoid/flavonoid class in this study."
-        },
-        "Terminal_Metabolite_Accumulation_Site": {
-          "verdict": "SUPPORTED",
-          "reason": "Measured in tomato fruit."
-        },
-        "Subcellular_Localization": {
-          "verdict": "UNSUPPORTED",
-          "reason": "No explicit nuclear localization is given."
-        },
-        "Metabolic_Process_Controlled": {
-          "verdict": "SUPPORTED",
-          "reason": "Rosea1 with Delila controls anthocyanin biosynthesis in the paper."
-        },
-        "Core_Validation_Method": {
-          "verdict": "SUPPORTED",
-          "reason": "Transgenic expression/crossing, RT-qPCR and metabolite profiling are used."
-        },
-        "Terminal_Metabolite_Function": {
-          "verdict": "SUPPORTED",
-          "reason": "Anthocyanin pigmentation and phytonutrient context are supported by the paper."
-        },
-        "Summary_Key_Findings_of_Core_Gene": {
-          "verdict": "SUPPORTED",
-          "reason": "These three points agree with Results."
-        },
-        "Omics_Data": {
-          "verdict": "SUPPORTED",
-          "reason": "RT-qPCR and metabolite profiling are presented."
-        },
-        "Core_Phenotypic_Effect": {
-          "verdict": "SUPPORTED",
-          "reason": "The Del/Ros1 module enhances anthocyanin accumulation in fruit."
-        },
-        "Protein_Family_or_Domain": {
-          "verdict": "UNCERTAIN",
-          "reason": "Rosea1 is likely a MYB TF, but this is not explicitly stated in the paper text here."
-        },
-        "Upstream_Signals_or_Inputs": {
-          "verdict": "SUPPORTED",
-          "reason": "Its role is analyzed in a transgenic expression context."
-        },
-        "Environment_or_Treatment_Factor": {
-          "verdict": "SUPPORTED",
-          "reason": "Fruit ripening stages are the context of analysis."
-        },
-        "Potential_Tradeoffs": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper contrasts Del/Ros1 as demand-side activation without precursor-supply enhancement."
-        },
-        "Primary_Regulatory_Targets": {
-          "verdict": "SUPPORTED",
-          "reason": "Results state Del/Ros1 mainly activate anthocyanin biosynthetic genes/late flavonoid genes."
-        },
-        "Other_Important_Info": {
-          "verdict": "SUPPORTED",
-          "reason": "Rosea1 is included as a co-engineering TF rather than mechanistic focus."
-        },
-        "Decisive_Influence_on_Target_Product": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper supports strong anthocyanin activation when paired with Delila."
+          "reason": "The study uses MicroTom tomato background for these transgenic analyses."
         },
         "Regulator_Type": {
           "verdict": "SUPPORTED",
-          "reason": "Rosea1 is used as a transcription factor in the study."
+          "reason": "Ros1 is one of the transcription factors used to induce anthocyanins."
         },
-        "Breeding_or_Engineering_Application_Value": {
-          "verdict": "SUPPORTED",
-          "reason": "Combining Del/Ros1 with AtMYB12 yielded Indigo fruit with higher anthocyanins/flavonols/CGA."
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly identify Ros1 as an R2R3-MYB in the provided text."
         },
-        "Regulatory_Effect_on_Target_Genes": {
-          "verdict": "SUPPORTED",
-          "reason": "Activation of anthocyanin biosynthetic genes with Delila is directly described."
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Nuclear localization is not stated in the paper."
         },
         "Expression_Pattern": {
           "verdict": "SUPPORTED",
-          "reason": "Rosea1 is present via transgenic expression in tomato fruit."
+          "reason": "Ros1 is present in the transgenic purple Del/Ros1 tomato line used experimentally."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Results indicate Del/Ros1 activates anthocyanin biosynthetic genes."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Its action here is via transgenic expression in tomato fruit."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state Del/Ros1 principally activates anthocyanin biosynthetic genes, especially late flavonoid genes."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 5b supports this description."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly frames Del/Ros1 as controlling anthocyanin biosynthesis demand."
         },
         "Protein_Complex_Involvement": {
           "verdict": "UNCERTAIN",
-          "reason": "Functional co-action with Delila is shown, but explicit protein complex evidence is absent."
+          "reason": "Co-function with Del is clear, but explicit complex formation is not shown in this paper."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Ros1 is used together with Del, but direct interaction is not demonstrated here."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Del/Ros1 fruit are explicitly described as accumulating high anthocyanin levels."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins are part of flavonoid/phenylpropanoid metabolism in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Accumulation is measured in tomato fruit/pericarp."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pigment role is implicit, but antioxidant/dietary value is not specifically attributed to Ros1-driven anthocyanins in Results."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly support anthocyanin enhancement and further increase in Indigo with AtMYB12."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Crossing, qRT-PCR, and metabolite profiling are explicitly used."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points are directly supported by Results and Fig. 5."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Ros1 is clearly part of the Del/Ros1 anthocyanin-branch activation module described in Results."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Fruit ripening and co-expression with AtMYB12 are explicit contexts."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately describes its role as an experimentally used regulator but not the main mechanistic focus."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results indicate Del/Ros1 does not enhance precursor supply from primary metabolism."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The study demonstrates utility for anthocyanin biofortification, especially in combination with AtMYB12."
         }
       },
       "corrections": [
@@ -1142,27 +1278,33 @@
           "field": "Origin_Species_Latin_Name",
           "old_value": "Antirrhinum majus",
           "new_value": "NA",
-          "reason": "Antirrhinum majus is not explicitly stated in the text provided."
+          "reason": "Antirrhinum majus does not appear in the provided text."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "R2R3-MYB transcription factor",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly identify Ros1 as an R2R3-MYB in the provided text."
         },
         {
           "field": "Subcellular_Localization",
           "old_value": "Nucleus",
           "new_value": "NA",
-          "reason": "No explicit nuclear localization is given."
+          "reason": "Nuclear localization is not stated in the paper."
         }
       ],
       "stats": {
-        "supported": 23,
-        "unsupported": 2,
+        "supported": 21,
+        "unsupported": 3,
         "uncertain": 4
       }
     }
   ],
   "summary": {
-    "total_fields": 228,
-    "supported": 177,
-    "unsupported": 23,
-    "uncertain": 28,
-    "total_corrections": 23
+    "total_fields": 262,
+    "supported": 203,
+    "unsupported": 22,
+    "uncertain": 37,
+    "total_corrections": 22
   }
 }

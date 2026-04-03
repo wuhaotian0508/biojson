@@ -1,0 +1,1327 @@
+{
+  "file": "MinerU_markdown_PMC10761944_2038801469683048466",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC10761944_2038801469683048466.md",
+  "timestamp": "2026-03-31T21:37:13.045289",
+  "genes": [
+    {
+      "gene_name": "BsSfp",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods states BsSfp was amplified from the genome of Bacillus subtilis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names Bacillus subtilis."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "BsSfp was used in E. coli BL21 (DE3) and engineered IAA strains."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied host is explicitly E. coli / Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states plasmids for protein expression were transformed into E. coli BL21 (DE3), and plasmids for PEIA synthesis into engineered strain IAA."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1 legend defines Sfp as phosphopantetheine transferase, matching 4'-phosphopantetheinyl transferase."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2a legend says CAR activated by Sfp is holo-CAR; text states holo-TpCAR enables conversion toward PEIA formation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "BsSfp is part of the cascade used for biosynthesis of (S)-autumnaline and derivatives."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "PEIAs/(S)-autumnaline are alkaloids in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Paper shows products such as (S)-1b are mainly in supernatant, but does not directly state this specifically for all terminal metabolites attributable to BsSfp."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are consistent with Methods/Fig. 2a/Fig. 3 showing coexpression with TpCAR, activation to holo-TpCAR, and inclusion in productive PEIA module."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "BsSfp function is supported through module coexpression, in vitro/in vivo biocatalysis, and HPLC-based product analysis in the cascade context."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "BsSfp is indeed presented as an accessory activation enzyme, not the main engineered determinant."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 12,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "EcMAT",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods states EcMAT was amplified from the genome of E. coli."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly E. coli / Escherichia coli."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "EcMAT was integrated into the MT module in engineered E. coli strain IAA."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied host is Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The MT/OMT modules were introduced into another engineered strain IAA."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Text explicitly calls EcMAT methionine adenosyltransferase."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly say a SAM supply system was integrated by coexpressing EcMAT and MmSAHH; EcMAT synthesizes SAM from ATP and L-methionine to support methyltransferase reactions."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "EcMAT was part of modules used to produce (S)-1d and (S)-autumnaline/PEIA derivatives."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These products are alkaloids."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Supernatant use is described for reaction handling, but not explicitly asserted as the accumulation site for EcMAT-linked terminal metabolites in a gene-specific way."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point is explicitly stated or directly supported in Results for the SAM supply system and methylated PEIA production."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "EcMAT was validated in module construction and whole-cell biotransformation with HPLC product analysis."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "EcMAT is clearly a support/cofactor-supply gene, not the main engineering focus."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 12,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "MmSAHH",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods lists MmSAHH accession number NP_001291457.1."
+        },
+        "Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper names Mus musculus, but not the common name Mouse."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly states MmSAHH from Mus musculus."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MmSAHH was used in engineered E. coli strain IAA."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied host is Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Results place the MT module with MmSAHH in engineered strain IAA."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Text explicitly identifies MmSAHH as S-adenosylhomocysteine hydrolase."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results say MmSAHH hydrolyzes SAH, an inhibitor of OMT, thereby supporting methylation in the MT module."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "MmSAHH was used in the pathway for PEIA derivatives and autumnaline production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are alkaloids."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Supernatant is used in the workflow, but gene-specific accumulation site for final products is not explicitly stated."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points match explicit Results text on the SAM supply system and methylation-dependent PEIA synthesis."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by module construction, whole-cell biotransformation, and HPLC analysis in Results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "MmSAHH is indeed an accessory cofactor-balancing enzyme in the study."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 12,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "TpCAR",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods lists TpCAR accession WP_013126039.1."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Methods identify TpCAR from Tsukamurella paurometabola."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated in Methods."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TpCAR was expressed in E. coli BL21 (DE3) and engineered IAA."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied host is Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly uses BL21 (DE3) for expression and IAA for production strains."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "CAR stands for carboxylic acid reductase in Fig. 1 legend."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Same as above; CAR is carboxylic acid reductase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "TpCAR is part of the artificial PEIA biosynthetic cascade designed in the study."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results place TpCAR in the PEIA moiety module."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "TpCAR acts upstream to generate aldehyde precursor before NCS action."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Text states CAR was introduced to convert phenylpropionic acids to aldehydes in situ."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Text explicitly states conversion of PP acids to desired aldehydes."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly stated in Results."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Aldehydes produced by TpCAR feed directly into NCS-catalyzed PEIA scaffold formation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies o-methylation, not TpCAR, as the bottleneck; thus 'not established' is consistent."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "TpCAR is part of the cascade producing (S)-autumnaline and derivatives."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper describes PEIAs as pharmaceuticals and autumnaline as colchicine precursor."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Supernatant localization is shown clearly for (S)-1b; extension to all final metabolites specifically for TpCAR is not explicit."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly state cytosolic localization for TpCAR."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show TpCAR enables aldehyde generation required for efficient (S)-1b and downstream PEIA synthesis."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TpCAR was heterologously expressed in E. coli whole-cell catalysts."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Purified enzyme assays, in vitro reconstitution, whole-cell biocatalysis, and HPLC are all described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are stated in Results: broad substrate scope reason for selection, efficient conversion with NCS, and upstream role in vitro/in vivo."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Plasmids include T7 elements in constructs, but a specific promoter assignment for TpCAR across all contexts is not fully and explicitly detailed beyond vector names and one construct description."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "BsSfp activates TpCAR and TpCAR operates with TfNCS in the module; these functional interactions are explicit."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly inferable from its demonstrated use as upstream aldehyde-supplying biocatalyst for modular alkaloid synthesis."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Whole-cell and one-pot cascade conditions with Mg2+, ATP, and NADPH-regeneration components are explicitly described."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly notes PP aldehydes are easily converted to alcohols in microorganisms and host engineering was needed to reduce this."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state purified TpCAR was named holo-TpCAR after activation by BsSfp."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly state cytosolic localization for TpCAR."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "TfNCS",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods lists TfNCS accession ACO90248.1."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Methods state TfNCS from Thalictrum flavum."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicit in Methods."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TfNCS was expressed in E. coli BL21 (DE3) and engineered IAA."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied host is Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "BL21 (DE3) used for protein expression and IAA for production strains."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "NCS is defined as norcoclaurine synthase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Same explicit naming in text/figure."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "TfNCS is part of the artificial PEIA biosynthetic cascade."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Placed in PEIA moiety module in Results/Fig. 2a."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "TfNCS performs the scaffold-forming condensation step after aldehyde formation; 'upstream/committed scaffold-forming step' is consistent."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Text states PEIA backbone is produced from PP aldehyde and dopamine by NCS."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show production of PEIA intermediate such as (S)-1b."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Text explicitly references the Pictet-Spengler condensation reaction."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "TfNCS forms the core scaffold leading to final PEIA products."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "TfNCS is certainly key for scaffold formation, but the paper does not explicitly designate it as a 'key control step'."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "TfNCS is part of the cascade producing autumnaline and derivatives."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper describes PEIAs as biologically active/pharmaceutical alkaloids and autumnaline as colchicine precursor."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Supernatant accumulation is explicitly shown for (S)-1b, but not directly generalized for all terminal products attributable to TfNCS."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No cytosolic localization is stated."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show TfNCS forms PEIA core efficiently and the platform later shows broad substrate scope."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results say TfNCS had better expression than CjNCS in E. coli."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Purified enzyme assay, comparison with CjNCS, whole-cell biocatalysis, and chiral/HPLC analyses are present."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by Results and Discussion."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Likely T7-based vectors were used, but promoter assignment for TfNCS is not directly stated in the gene-level Results."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "TfNCS functions together with TpCAR in the PEIA module."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by demonstrated role as core scaffold-forming enzyme for diverse PEIAs."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "One-pot biocatalysis and exogenous dopamine feeding are explicitly described."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Dependence on upstream aldehyde supply and downstream module compatibility is directly inferable from pathway design/results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states NCSs strictly recognize the amine moiety and accept diverse aldehydes."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "No cytosolic localization is stated."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "RnCOMT",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods lists NP_036663.1 for RnCOMT."
+        },
+        "Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "Paper states Rattus norvegicus, but not the common name Rat."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RnCOMT was heterologously expressed in engineered E. coli strains."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied host is Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Used in engineered IAA strains/modules."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "COMT is identified as catechol O-methyltransferase in context from R. norvegicus."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is an OMT using SAM; description as SAM-dependent O-methyltransferase is supported by function."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "RnCOMT is part of artificial PEIA cascade."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is the OMT module enzyme."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Acts after (S)-1b formation and before N-methylation."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper directly tests (S)-1b and later discusses poor conversion of (S)-12b; related PEIA intermediates are supported broadly."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper shows conversion to (S)-1c and analogous O-methylated intermediates."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "O-methylation of PEIA intermediates using SAM is directly described."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "RnCOMT forms immediate precursor for CNMT/CNMT* to generate final PEIAs."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly identifies o-methylation as rate-limiting for autumnaline production and shows RnCOMT is unsuitable for (S)-12b due to poor activity/regioselectivity."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "RnCOMT contributes to PEIA derivatives and was initially used for autumnaline pathway as well."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Autumnaline is colchicine precursor and PEIAs are pharmaceutical alkaloids."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Supernatant-based workflow is shown, but gene-specific accumulation site for all terminal products is not explicitly stated."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No cytosolic localization is directly stated."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly show efficient O-methylation of many intermediates, necessity before N-methylation, and poor performance on (S)-12b."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Used as heterologously expressed whole-cell catalyst in E. coli."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Screening, one-pot cascades, strain optimization, time-course biotransformation, HPLC, and NMR are all reported."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements are directly supported by Results."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Vectors imply T7-based expression, but the paper does not explicitly assign promoter details to RnCOMT in Results."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "RnCOMT was coexpressed/functionally linked with EcMAT, MmSAHH, and CNMT* in the modules."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly inferable from successful broad derivative synthesis and replacement need for autumnaline precursor."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "One-pot two-/three-step whole-cell biocatalysis and SAM supply dependence are explicitly described."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly mentions side effects on dopamine and poor regioselectivity, including 7-methoxyl positional isomer formation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/discussion explicitly identify o-methylation as the bottleneck later addressed by plug-and-play replacement."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "No cytosolic localization is directly stated."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "CNMT",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods lists CNMT accession BAB71802.1."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper names Coptis japonica."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CNMT was expressed in E. coli BL21 (DE3) and engineered strains."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied host is Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "BL21 (DE3) for expression and engineered IAA for production modules."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods/data availability identify CNMT as coclaurine N-methyltransferase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "N-methyltransferase using SAM is directly supported by function and naming."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CNMT is part of the artificial PEIA cascade."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It belongs to the NMT module."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Acts downstream after O-methylation."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "(S)-1c is directly tested; related O-methylated intermediates are consistent with role though only some are explicitly shown."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "(S)-1d is directly measured and analogous final PEIAs are produced in the cascade."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper discusses N-methylation of (S)-1c using SAM-dependent NMTs."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CNMT directly forms final PEIA product from immediate precursor."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Wild-type activity was weak and required engineering; not identified as the main bottleneck versus O-methylation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CNMT/CNMT* participates in synthesis of PEIA derivatives and autumnaline pathway."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These products are alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "PEIAs/pharmaceutical scaffold and autumnaline as colchicine precursor are supported in paper context."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Product supernatants are part of workflow, but gene-specific terminal accumulation site is not explicitly assigned."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No cytosolic localization is stated."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly show weak WT activity and strong enhancement after engineering."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CNMT was heterologously expressed in E. coli whole-cell catalysts."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Screening, structure-guided mutagenesis, docking, and whole-cell assays are described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are explicitly in Results."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Likely T7-based vectors, but not explicitly gene-assigned in Results."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional dependence on prior RnCOMT O-methylation is explicitly shown."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly supported by successful engineering to improve alkaloid N-methylation."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Dependence on prior O-methylation and SAM supply is shown in Results."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states further engineering may be needed for higher autumnaline titer."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly says CNMT* only catalyzes substrate with 6-OMe and 7-OH."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "No cytosolic localization is stated."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "CNMT*",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "CNMT* is an engineered variant of CNMT, whose accession BAB71802.1 is given in Methods for the parent gene."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Parent CNMT is from Coptis japonica."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicit for parent CNMT."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CNMT* was used in vitro and in engineered E. coli modules."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied host is Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "CNMT* was expressed in BL21 (DE3) for purification and in IAA-derived production strains."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper names CNMT-N92A/F332A as CNMT*."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It remains an N-methyltransferase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CNMT* is part of the artificial PEIA cascade."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Belongs to NMT module."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Acts downstream after O-methylation."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "(S)-1c is directly the engineered target substrate; related correctly O-methylated intermediates are consistent with stated specificity."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "(S)-1d is directly measured; final N-methylated PEIAs are part of the cascade outputs."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly supported as engineered N-methyltransferase catalyzing amine methylation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CNMT* directly forms final PEIA products from immediate precursors."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "CNMT* is key improved step, but the paper does not explicitly call N-methylation the bottleneck; O-methylation is emphasized as bottleneck."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper directly links CNMT* to (S)-1d and broader PEIA synthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "PEIA products are pharmaceutical alkaloid scaffolds; autumnaline context is stated in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Supernatant-based process exists, but gene-specific accumulation site not directly stated."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No cytosolic localization is explicitly given."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly show CNMT* strongly improves N-methylation and enables efficient final product formation."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was heterologously expressed in E. coli catalysts."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Alanine scanning, semi-rational design, combinatorial mutagenesis, docking, and biocatalysis/HPLC are all described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are explicitly stated in Results."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Promoter not explicitly assigned to CNMT* despite likely T7-based vectors."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional interaction with RnCOMT is directly shown because O-methylation must precede CNMT* activity."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The study explicitly demonstrates structure-guided engineering to improve weak NMT activity for synthetic cascades."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "One-pot three-step whole-cell system with SAM supply is described."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states further engineering may be needed for better autumnaline production."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly names CNMT* and states it accepts only the 6-OMe/7-OH regioisomer."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "No cytosolic localization is explicitly given."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "GsOMT1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods lists GsOMT1 accession QLI49050.1."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper identifies GsOMT1 from Gloriosa superba."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GsOMT1 was heterologously expressed in E. coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied host is Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Used in engineered IAA strain modules."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper uses the name GsOMT1 and identifies it as an OMT from G. superba."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Its function as SAM-dependent O-methyltransferase is explicit."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "GsOMT1 is studied in the artificial PEIA cascade, specifically autumnaline branch."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is used in the OMT module for autumnaline precursor conversion."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Midstream O-methylation before N-methylation."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper directly tests GsOMT1 on (S)-1b and later on (S)-12b."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper shows conversion to (S)-1c and (S)-12c."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "O-methylation of PEIA intermediates using SAM is directly described."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "GsOMT1 forms immediate precursor of autumnaline for downstream N-methylation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper identifies o-methylation as the bottleneck for autumnaline pathway; GsOMT1 WT is better than RnCOMT on (S)-12b but still insufficient."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "GsOMT1 is specifically linked to (S)-autumnaline production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Autumnaline is an alkaloid precursor."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly calls (S)-autumnaline the colchicine precursor."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Supernatant handling is described, but gene-specific accumulation site for final autumnaline is not explicitly assigned."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No cytosolic localization is stated."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly say WT GsOMT1 is better than RnCOMT toward (S)-12b but still too low for high titer production."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly note low expression in E. coli without SUMO tag."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Purified enzyme assays, AlphaFold2 docking, mutant construction, and whole-cell biotransformation are all described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements are directly supported by Results."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Likely T7-based vectors but not explicitly assigned to this gene in Results."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "GsOMT1 was used in the OMT module with EcMAT and MmSAHH in the SAM supply system."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly supported by its use as native starting point for engineering autumnaline branch OMT."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "One-pot three-step biocatalysis with SAM supply is explicitly described."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly notes low activity and low expression, requiring engineering and SUMO fusion."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "It is indeed the original OMT from the natural colchicine pathway context."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "No cytosolic localization is stated."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "GsOMT1V125Q",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "This engineered variant derives from GsOMT1, whose accession QLI49050.1 is provided."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Parent GsOMT1 is from Gloriosa superba."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicit for parent gene."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GsOMT1V125Q was expressed in engineered E. coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied host is Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Used in engineered IAA strain modules."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly refers to mutant V125Q of GsOMT1."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It remains an O-methyltransferase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is the engineered autumnaline-branch OMT in the artificial cascade."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Used in OMT module for autumnaline precursor conversion."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Midstream bottleneck-relieving O-methylation step is directly supported."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper directly evaluates mutant activity toward (S)-12b."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper directly measures (S)-12c production."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Improved O-methylation of (S)-12b via better binding is directly supported by docking/kinetics discussion."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Forms immediate precursor for (S)-autumnaline synthesis."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The variant was introduced specifically as plug-and-play replacement for rate-limiting o-methylation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Variant was used to improve (S)-autumnaline production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Autumnaline is an alkaloid precursor."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper calls autumnaline the colchicine precursor."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Supernatant use is described, but explicit gene-specific accumulation site claim is not made."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No cytosolic localization is stated."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state replacement with GsOMT1V125Q increased autumnaline yield 2.25-fold."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly says expression in E. coli was low and improved by SUMO fusion."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Rational design, docking, mutant screening, kinetic assay, whole-cell biotransformation, and scale-up are all described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by Results, including 2.14 mM small scale and 709.06 mg/L scale-up."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Likely T7-based vectors but not explicitly assigned."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Variant functions in module with EcMAT and MmSAHH."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly supported by successful scale-up-focused engineering of autumnaline production."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Plug-and-play one-pot three-step cascade, pH adjustment, and SAM supply are explicitly described."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly notes low expression without SUMO and need for further engineering."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state V125Q creates a new hydrogen-bonding network involving substrate, N181, and Q125."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "No cytosolic localization is stated."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "yqhC",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods lists yqhC accession number B21_02833."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "yqhC is an endogenous gene of E. coli BL21 (DE3) in the host engineering section."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Host species is Escherichia coli."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion was performed in E. coli to make IAA strain."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied host is Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA strain was constructed from E. coli BL21 (DE3) background."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Fig. 3a identify yqhC as a transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls it a transcription factor, though no finer family is given."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion was intended to impair rapid conversion of aldehyde intermediate to alcohol by-product; this supports control of endogenous aldehyde reduction side reactions."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA host engineering supports PEIA derivative and autumnaline-related production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are alkaloids."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Supernatant accumulation is shown for (S)-1b, but not specifically assigned to terminal metabolites in a yqhC-specific way."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show seven knockouts including yqhC increased (S)-1b by reducing by-product 1a' formation."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The study explicitly uses genetic deletion of yqhC."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not specify direct yqhC targets, though it is grouped with aldehyde-reduction genes including yqhD-related system by implication only."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNCERTAIN",
+          "reason": "Loss of yqhC likely affects aldehyde detoxification, but this exact regulatory effect is not experimentally shown in the paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "This was host engineering for whole-cell biocatalysis."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "As an endogenous host factor in E. coli, this is supported."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA host gene knockouts were made and product/by-product titers compared by HPLC in whole-cell assays."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements accurately summarize the explicit host-engineering results, though not individually dissected for yqhC alone."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an accurate characterization of yqhC as supportive host engineering rather than principal catalytic focus."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not dissect individual tradeoffs of yqhC deletion; stating 'not individually dissected' is faithful, while possible altered stress responses are a reasonable caution but not directly shown."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as a host engineering target within a knockout set to minimize aldehyde loss."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Background strain is BL21 (DE3) in Methods."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported broadly because target PEIAs are pharmaceutical alkaloid products."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly knocked out yqhC as part of the productive host engineering strategy."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 283,
+    "supported": 252,
+    "unsupported": 7,
+    "uncertain": 24,
+    "total_corrections": 7
+  }
+}

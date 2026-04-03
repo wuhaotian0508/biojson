@@ -1,0 +1,123 @@
+{
+  "file": "MinerU_markdown_PMC3744755_2038799084189425668",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC3744755_2038799084189425668.md",
+  "timestamp": "2026-03-31T22:07:04.498430",
+  "genes": [
+    {
+      "gene_name": "NbGSTU4",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state the isolated N. benthamiana gene sequence had accession number JF915552."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was isolated from and studied in Nicotiana benthamiana."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names Nicotiana benthamiana throughout."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments including VIGS, protoplast assays, and transient expression were performed in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species in the experiments is explicitly Nicotiana benthamiana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "GSH is discussed as a cofactor/redox molecule affecting viral replication, not as a final nutrient/metabolic product trait linked to the gene."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "GSH is indeed a tripeptide redox metabolite, and the paper discusses it as glutathione involved in redox conditions."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GSH provides a reduced/antioxidative condition and enhances BaMV minus-strand RNA synthesis."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Summary and Results state this GST homolog/NbGSTU4 is upregulated after BaMV infection."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is also N. benthamiana, and the paper says the gene is upregulated following BaMV infection."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper designates NbGSTU4 as the fourth tau GST gene identified from N. benthamiana, i.e. a tau-class GST."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are described and used in Results: TRV-VIGS, transient expression, S13A mutant analysis, UV-crosslinking, in vitro RdRp, qRT-PCR/Northern/Western."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show knockdown reduces BaMV RNA accumulation, transient expression increases BaMV coat protein, NbGSTU4 binds BaMV 3' UTR, and GSH enhances minus-strand synthesis at early replication."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the GST homolog was identified as an upregulated cDNA fragment by cDNA-AFLP in a previous study; no accession for that AFLP fragment is given here."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point appears in Results: reduced BaMV/PVX but not CMV/TMV in knockdown plants; specific binding to BaMV 3' UTR not Ba-77; GSH-enhanced binding; S13A mutant loses enhancement of BaMV accumulation."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential engineering resistance by reducing NbGSTU4 is a reasonable implication, but this application is not directly tested in the paper; the cautionary note is consistent."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Fig. 4b/c explicitly mention infectious BaMV cDNA clone pKB driven by 35S promoter, but the promoter for transient NbGSTU4-GFP/NbGSTU4-S13A-GFP constructs is not stated in the provided text."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The listed interactors are not proteins: the paper shows interaction with BaMV 3' UTR RNA and functional association with GSH, not protein-protein interactions."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state no significant morphological changes in NbGSTU4-knockdown plants were observed compared with controls."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an accurate synthesis of the main Results: BaMV-induced tau GST, knockdown lowers viral RNA, transient expression increases accumulation, and recombinant protein binds 3' UTR in a GSH-enhanced manner linked to minus-strand synthesis."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These factors are all directly tested: BaMV infection, GSH treatment, and reducing/oxidizing agents in the RdRp assay."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "glutathione (GSH)",
+          "new_value": "NA",
+          "reason": "GSH is discussed as a cofactor/redox molecule affecting viral replication, not as a final nutrient/metabolic product trait linked to the gene."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "BaMV 3' UTR RNA; glutathione (GSH)",
+          "new_value": "NA",
+          "reason": "The listed interactors are not proteins: the paper shows interaction with BaMV 3' UTR RNA and functional association with GSH, not protein-protein interactions."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 21,
+    "supported": 17,
+    "unsupported": 2,
+    "uncertain": 2,
+    "total_corrections": 2
+  }
+}

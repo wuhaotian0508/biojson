@@ -1,0 +1,423 @@
+{
+  "file": "MinerU_markdown_PMC12146776_2038800362395181061",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12146776_2038800362395181061.md",
+  "timestamp": "2026-03-31T21:47:48.697488",
+  "genes": [
+    {
+      "gene_name": "HLS1",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state HLS1 is a histone acetyltransferase and functions through histone acetylation; as such 'chromatin modifier; histone acetyltransferase' is directly supported."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies Arabidopsis seedlings and HLS1 is Arabidopsis HOOKLESS1."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly used throughout the paper and references."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the WT control used throughout the Results."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental system is Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper is on Arabidopsis thaliana seedlings."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the applied WT background in experiments."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Chlorophyll content, chlorophyll a, and chlorophyll b were directly measured and linked to HLS1 function."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Chlorophyll is directly supported, but the classification 'tetrapyrrole pigment' is not explicitly stated in the paper text."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The introduction explicitly links greening/chlorophyll to acquisition of photosynthetic capacity and initiation of autotrophic life cycle during de-etiolation."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Greening is assessed in cotyledons, and chloroplast development in cotyledon mesophyll/chloroplasts is directly examined."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly show HLS1 promotes cotyledon greening, chlorophyll accumulation, Pchlide-to-Chlide transition, reduced ROS, and chloroplast development; loss causes ROS burst and photobleaching."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly concludes HLS1 regulates chlorophyll biosynthesis, chloroplast development, and ROS-scavenge-related genes during greening."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show HLS1 deposits H3K9ac/H3K27ac and activates greening-related gene expression."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "ChIP-qPCR shows HA-HLS1 enrichment at PORA, PORB, GRF2, GRF7, and LIL3:2 regulatory regions."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show HLS1 promotes H3K9ac/H3K27ac at greening genes and facilitates EIN3 binding to PORA/PORB loci."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of HLS1 sharply reduces greening and chlorophyll; overexpression rescues, supporting an essential positive role in chlorophyll accumulation/greening."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Ethylene signaling via EIN3/EIL1 and ACC context are supported; however 'light-to-dark transition state' is directionally inaccurate relative to this paper, which studies dark-to-light transition/de-etiolation."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "HOOKLESS1 identity and acetyltransferase activity are supported, but 'HOOKLESS1 family protein' is not specifically discussed as a family/domain annotation in Results."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No explicit subcellular localization of HLS1 is stated in the provided paper text/Results, even though nuclear chromatin association is implied."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The Discussion notes HLS1 is strongly upregulated in darkness and downregulated after light irradiation, citing prior studies; this is not directly demonstrated by new Results in this paper."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Function during early de-etiolation is directly shown; high in dark-grown seedlings is discussed based on prior knowledge rather than measured here, so support is partial but the functional half is direct."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "35S constitutive promoter and ER8 β-estrogen-inducible promoter are explicitly described for HLS1 transgenics."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed treatments appear explicitly: 4–6 d darkness then white light, ACC 10 μM, and β-estrogen induction."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Severe photobleaching and ROS burst on loss of function are directly shown; 'no other yield penalty reported' is consistent with the paper not reporting other penalties."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly used in Results or figure legends: hls1-1 mutant, overexpression/complementation, inducible expression, metabolite/ROS assays, mRNA-seq, ChIP-seq/qPCR, and acetylation assays."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Functional linkage to EIN3/EIL1 is supported, but direct physical interaction of HLS1 with EIN3 or EIL1 is not shown in this paper."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "mRNA-seq and ChIP-seq are directly reported, and BioProject PRJCA033523 is explicitly given in Data Availability."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "This is directly shown: HLS1 is the effector promoting H3K9ac/H3K27ac at greening loci, and loss of HLS1 reduces these marks genome-wide."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point is directly supported by Results: greening requirement, chlorophyll/Pchlide-Chlide/chloroplast effects, histone acetyltransferase activity affecting PORA/PORB, and requirement for ethylene-promoted POR activation via EIN3 binding."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is an extrapolated application statement not tested in the paper; it is plausible but not directly supported by Results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly show HLS1 acetyltransferase activity is required using HLS1(LV), and atg18a does not phenocopy the greening defect, indicating ATG18a is not required here."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No explicit subcellular localization of HLS1 is stated in the provided paper text/Results, even though nuclear chromatin association is implied."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 1,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "EIN3",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "EIN3 is explicitly described as a key transcription factor in ethylene signaling."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the species studied."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the WT background used for comparison."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the experimental species."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is in Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the applied WT background."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "EIN3 is connected here to PORA/PORB regulation and ethylene-promoted greening leading to chlorophyll accumulation; chlorophyll is the final nutrient/product measured in the greening process."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly label chlorophyll as a 'tetrapyrrole pigment' in Results."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Greening/chlorophyll is explicitly tied to photosynthetic capacity and autotrophic life during de-etiolation."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Greening is assessed in cotyledons and chloroplast development in cotyledon cells; this localization is inferable from Results."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show ACC-promoted greening and POR expression depend on EIN3/EIL1, and EIN3 binding to PORA/PORB is reduced in hls1-1."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "EIN3 is directly linked to ethylene-responsive POR activation and thus chlorophyll biosynthetic transition during greening."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "EIN3 binding to target regions and activation of PORA/PORB expression are directly discussed."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "PORA and PORB are directly assayed by ChIP-qPCR and RT-qPCR as EIN3 target genes in this study."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly say EIN3 enrichment at EBS-containing regions of PORA/PORB is reduced in hls1-1, and previous/confirmed context is activation of their expression."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Within this paper, ethylene/EIN3-dependent promotion of greening via PORs is directly tested using ein3 eil1 and ACC assays."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Ethylene/ACC are explicitly the upstream signals assayed."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper consistently treats EIN3/EIL1 as functioning together in ethylene signaling; ein3 eil1 double mutant is directly analyzed."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "EIN3/EIL family designation is explicit in the text."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Although EIN3 is a nuclear transcription factor by general knowledge, the provided paper text does not directly state EIN3 localization in Results."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "ACC treatment and dark-grown seedlings shifted to light are explicitly used in Figure 5 experiments."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are directly present for EIN3-related claims: ACC assays, ein3 eil1 mutant phenotyping, ChIP-qPCR at PORA/PORB, and RT-qPCR of PORA/PORB."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Functional dependence with HLS1 and partnership with EIL1 are supported, but direct physical interaction between EIN3 and HLS1 or EIL1 is not tested here."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly shows EIN3 binding to PORA/PORB is facilitated by HLS1-mediated histone acetylation at these loci."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by Figure 5 and accompanying text, though the first point partly relies on the ein3 eil1 module rather than EIN3 alone."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is speculative application language not experimentally evaluated in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately states why EIN3 is included: its binding to POR genes was directly tested in Results in the HLS1 mechanism section."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "Although EIN3 is a nuclear transcription factor by general knowledge, the provided paper text does not directly state EIN3 localization in Results."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "EIL1",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "EIL1 is part of the explicitly named EIN3/EIL1 transcription factor module."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments are in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the species studied."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the WT comparator background."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the applied species."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The work is in Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the WT background used in the study."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Through the ein3 eil1 mutant phenotype, EIL1 is linked to the greening/chlorophyll endpoint in this study."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The class 'tetrapyrrole pigment' is not explicitly stated in Results."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Greening/chlorophyll is explicitly linked to photosynthetic capacity and autotrophic growth during de-etiolation."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Cotyledons/chloroplasts are the tissue and organelles monitored during greening, making this inferable."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The ein3 eil1 double mutant is directly analyzed for ACC-promoted greening and ROS response, supporting contribution of EIL1 with EIN3."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Through the double mutant phenotype, EIL1 is linked to ethylene-responsive regulation of greening/chlorophyll biosynthesis."
+        },
+        "Regulation_Mode": {
+          "verdict": "UNCERTAIN",
+          "reason": "Transcriptional activation is likely for the EIN3/EIL1 module and based on prior work, but EIL1-specific activation is not directly tested in this paper."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "PORA/PORB are targets of the EIN3/EIL1 module by prior context, but this paper directly assays EIN3 binding, not EIL1 binding."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states EIN3/EIL1 promote POR expression in background context, but the mechanistic assays here are centered on EIN3 rather than EIL1 specifically."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The ein3 eil1 mutant data support a positive role for the module in ethylene-promoted greening, though EIL1 is less directly characterized than EIN3."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "ACC/ethylene are explicitly the upstream signals in Figure 5."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper treats EIL1 as functioning with EIN3 in the EIN3/EIL1 module; the double mutant is directly used."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "EIL1 belongs to the explicitly mentioned EIN3/EIL family."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No explicit statement of EIL1 nuclear localization is provided in the Results text."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "ACC treatment and dark-to-light transfer are directly used in the ein3 eil1 experiments."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The ein3 eil1 mutant phenotyping under ACC during greening is directly shown in Figure 5."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Association with EIN3 as a functional module is supported, but direct interaction with EIN3 or HLS1 is not tested here."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "UNCERTAIN",
+          "reason": "Dependence on HLS1-mediated acetylation is plausible for the EIN3/EIL1 module, but EIL1-specific dependence is not directly tested."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately reflects that EIL1 participation is inferred from the ein3 eil1 mutant and that mechanistic focus is mainly on EIN3."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is speculative and not experimentally addressed in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Accurately states that ein3 eil1 was directly analyzed, while direct molecular assays centered on EIN3."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No explicit statement of EIL1 nuclear localization is provided in the Results text."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 1,
+        "uncertain": 7
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 88,
+    "supported": 69,
+    "unsupported": 3,
+    "uncertain": 16,
+    "total_corrections": 3
+  }
+}

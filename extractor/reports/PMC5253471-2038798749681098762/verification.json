@@ -1,0 +1,407 @@
+{
+  "file": "MinerU_markdown_PMC5253471_2038798749681098762",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC5253471_2038798749681098762.md",
+  "timestamp": "2026-03-31T22:13:19.043254",
+  "genes": [
+    {
+      "gene_name": "siOLEOSIN",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states sesame OLEOSIN and gives species as Sesamum indicum L."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated as Sesamum indicum L. in Results and Experimental procedures."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Transgene introduced into potato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states potato is Solanum tuberosum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Transformation performed in S. tuberosum cv Atlantic."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Study centers on increasing triacylglycerol (TAG) in potato tubers and leaves."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "TAG is not classified in the paper as a 'fatty acid'; it is a triacylglycerol/lipid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Energy reserve/storage oil is supported, but explicit relevance for food and industrial uses is discussed mainly for the transgenic product and applications, not as a direct functional annotation of TAG in this field wording."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Lipid droplets were directly shown in tuber cells, and lipid increases were measured in leaves, but leaf lipid droplets were not directly shown."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "OLEOSIN is discussed as a lipid body-associated/packaging protein; this description is consistent with the paper."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Oleosin function on lipid droplet surface is inferable, but this paper did not directly localize siOLEOSIN to LD surface or ER monolayer."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR showed siOLEOSIN was highest among the three transgenes in most tuber lines and expressed in leaves despite patatin promoter."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "siOLEOSIN was under control of tuber-specific patatin class I promoter B33."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Plants were grown in greenhouse/glasshouse and developing tubers and leaves were examined."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "Paper only tests siOLEOSIN in a three-gene stack, so enhancement of TAG/retention by siOLEOSIN specifically is inferred, not directly isolated."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Study used stable transgenic stack, qRT-PCR, Nile Red staining, TEM, and lipid profiling."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "Statements about Protect role and association with high TAG are supported, but assigning abundant LDs specifically to siOLEOSIN rather than the whole stack is not directly demonstrated."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper presents oleosin as part of Push-Pull-Protect engineering and discusses future engineering utility of packaging proteins."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly notes oleosin may not be the optimal packaging protein in nonseed tissues and suggests LDAPs may be better."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly discussed: oleosin may be suboptimal in nonseed oleaginous tissues and LDAP is suggested for future work."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "fatty acid",
+          "new_value": "NA",
+          "reason": "TAG is not classified in the paper as a 'fatty acid'; it is a triacylglycerol/lipid."
+        }
+      ],
+      "stats": {
+        "supported": 14,
+        "unsupported": 1,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "atDGAT1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states Arabidopsis DGAT1 (atDGAT1)."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1 and methods state Arabidopsis thaliana DGAT1."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Gene was transformed into potato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Potato is given as Solanum tuberosum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Transformation performed in S. tuberosum cv. Atlantic."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT1 is linked to increased triacylglycerol accumulation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "TAG is not a fatty acid class in the paper; it is a neutral lipid/triacylglycerol."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion and concluding remarks mention food, feed, oleochemical and biodiesel-related applications of increased oil/TAG."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "TAG increases were measured in both tubers and leaves."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT1 is explicitly stated to catalyse the final step in the Kennedy pathway for TAG biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "Acyl-CoA-dependent TAG assembly is biochemically correct for DGAT1 but not explicitly phrased this way in the paper."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT1 is diacylglycerol acyltransferase 1."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "MBOAT family is not mentioned in the paper."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "ER association of LDs is shown and DGAT1 biology implies ER localization, but this paper does not directly localize atDGAT1."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly states DGAT1 catalyses the final step in the Kennedy pathway."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT1 directly forms TAG in the final biosynthetic step according to the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "Paper mentions DGAT1 uses DAG as substrate, but acyl-CoA is not explicitly stated here."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "DGAT1 is described as producing TAG."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "Final step of Kennedy pathway and DAG substrate are supported, but the full acyl-CoA reaction wording is not explicitly stated in the paper."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly states DGAT1 catalyses the final step and is considered rate limiting in oilseeds."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR showed expression in tubers and leaves; leaves of lines #68, #149 and #69 had relatively high expression, and line #69 had highest tuber TAG with highest atDGAT1 expression."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "atDGAT1 was driven by the CaMV-35S promoter."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Greenhouse growth, mature tubers and postanthesis fully expanded leaves were analyzed."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "Strong TAG increase and altered FA composition are shown for the stacked transgenics, but the specific contribution of atDGAT1 alone is not dissected in this paper."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Stable transformation, qRT-PCR, TLC-GC lipid profiling, and fatty acid composition analyses were used."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "Association of atDGAT1 expression with high TAG and its pathway role are supported, but claiming major contribution of atDGAT1 specifically is limited because only the triple stack was tested."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper presents DGAT1 as the Pull component in an oil-engineering stack for potato tubers."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Reduced starch, increased sugars, altered lipids, and leaf oil are shown in the stacked lines, but attributing these tradeoffs specifically to atDGAT1 is not directly demonstrated."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states the paper studies atDGAT1 in a three-gene stack and its individual contribution is not clear."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "fatty acid",
+          "new_value": "NA",
+          "reason": "TAG is not a fatty acid class in the paper; it is a neutral lipid/triacylglycerol."
+        },
+        {
+          "field": "EC_Number",
+          "old_value": "2.3.1.20",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "MBOAT family acyltransferase",
+          "new_value": "NA",
+          "reason": "MBOAT family is not mentioned in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 3,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_name": "atWRI1",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states Arabidopsis WRI1 (atWRI1)."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1 and methods indicate A. thaliana WRI1."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Gene introduced into potato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Potato is Solanum tuberosum in the paper."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Transformation used cv. Atlantic."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "atWRI1 is part of the engineering strategy to increase TAG."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "TAG is not a fatty acid; it is a lipid/triacylglycerol."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion/conclusion mention storage oil and applications in food, feed, and industrial oil production."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "TAG increases were measured in tubers and leaves."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "WRI1 is explicitly discussed as a transcription factor gene."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states WRI1 has two APETALA2 domains."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Nuclear localization is not stated or tested in this paper."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states WRI1 is a positive regulator of genes involved in late glycolysis and fatty acid biosynthesis."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states WRI1 binds promoters/AW box and activates/enhances transcription."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion lists BCCP of ACCase, ACP, enoyl-ACP reductase, beta-ketoacyl-ACP reductase, plastidial pyruvate kinase, pyruvate dehydrogenase and FAD2 as possible targets; FAE1 is also discussed later."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by discussion that WRI1 activates genes for fatty acid synthesis and precursor generation."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper frames WRI1 as the Push component boosting fatty acid production for TAG accumulation."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR showed atWRI1 in developing tubers at generally lower levels than DGAT1/OLEOSIN and detectable in leaves of high-lipid lines despite B33 promoter."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "atWRI1 was driven by patatin B33 promoter."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Greenhouse growth; developing tubers and postanthesis leaves analyzed; leaf expression from B33 discussed, possibly related to sugar effects."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Patatin promoter sucrose responsiveness is discussed, but linking this specifically as an upstream input for atWRI1 expression in the construct is inferential."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "AW-box-containing target promoters are DNA elements, not interacting proteins; no interacting proteins are identified."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "WRI1's indirect promotion of TAG accumulation is biologically plausible and discussed, but this paper does not isolate atWRI1 effects apart from the gene stack."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Stable gene stack, qRT-PCR, and lipid profiling were used; target-gene logic is literature-based discussion."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "WRI1 as Push regulator, moderate expression sufficient in tubers, and detectable leaf expression due to promoter leakiness are all described in the paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper presents WRI1 as a useful component of Push-Pull-Protect stacking to boost oil."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Carbon reallocation and possible selection against high WRI1 expression are discussed, but tradeoffs are not assigned exclusively to atWRI1 because only stacked lines were tested."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper does not experimentally dissect direct potato target genes of atWRI1; this role is inferred from the stack and prior literature."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "fatty acid",
+          "new_value": "NA",
+          "reason": "TAG is not a fatty acid; it is a lipid/triacylglycerol."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "Nuclear localization is not stated or tested in this paper."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "AW-box-containing target promoters",
+          "new_value": "NA",
+          "reason": "AW-box-containing target promoters are DNA elements, not interacting proteins; no interacting proteins are identified."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 3,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 78,
+    "supported": 56,
+    "unsupported": 7,
+    "uncertain": 15,
+    "total_corrections": 7
+  }
+}

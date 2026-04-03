@@ -1,0 +1,1045 @@
+{
+  "file": "MinerU_markdown_PMC12684958_2038799590873927698",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12684958_2038799590873927698.md",
+  "timestamp": "2026-03-31T22:01:55.997085",
+  "genes": [
+    {
+      "gene_name": "AaF26G1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AaF26G1 is described as a candidate/identified gene from A. asphodeloides."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper consistently studies genes from Anemarrhena asphodeloides."
+        },
+        "Applied_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "AaF26G1 was functionally assayed by recombinant expression in E. coli and in vitro; it was not tested in A. asphodeloides itself as an applied species."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Functional validation was done in E. coli BL21(DE3), not in Anemarrhena asphodeloides."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Conclusions state identified genes were deposited under PP163422 to PP163430; AaF26G1 fits PP163430 in the provided set and this is consistent with nine genes total, though the paper does not map each accession explicitly in the main text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AaF26G1 is explicitly identified as a furostanol-type steroid sapogenin 26-O-β-glucosidase (F26G); β-glucosidase activity is directly shown. The broader 'glycoside hydrolase' wording is inferable but not explicitly stated."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state that, except AaOSC unigenes, remaining candidate unigenes including AaF26G1 were highly expressed in rhizomes and lateral roots and less expressed in leaves."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states F26G is highly expressed in rhizomes; however this refers to source tissue expression, not an applied species experiment."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AaF26G1 converts furostanol-type timosaponins to spirostanol-type timosaponins, specifically timosaponin II to timosaponin III."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Timosaponins are described as steroidal saponins."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states A. asphodeloides stores a significant amount of furostanol-type steroidal saponins in its rhizome; timosaponin II/III are predominant compounds in A. asphodeloides, supporting rhizome as accumulation site context."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show timosaponin III has stronger antifungal activity, especially against R. solani, and link this to AaF26G1-mediated conversion/defense."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports in vitro enzyme assays and antifungal PDA plate assays with R. solani, F. oxysporum, and A. solani at 50 mg/L plus dose-response assays."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "AaF26G1 cleaves C-26 glucose from furostanol-type timosaponins to form corresponding spirostanol products including timosaponin III, which is more antifungal than timosaponin II."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are reported: recombinant protein in E. coli BL21(DE3), in vitro assays with protodioscin/protogracillin/timosaponin II/timosaponin N, UPLC-MS, and antifungal comparison of timosaponin II vs III."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by the Results and antifungal section."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Candidate genes were screened from transcriptome data from a published study [23]; no accession is given here."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses stronger bioactivity/antifungal activity of spirostanol forms and storage of weaker furostanol forms, but does not directly discuss cytotoxicity tradeoffs or plant growth penalties for AaF26G1 manipulation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states AaF26G1 shows high catalytic activity toward different furostanol-type steroidal saponins, supporting broad substrate tolerance."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible application inferred from the study, but explicit breeding/engineering deployment recommendations with upstream precursor-supply genes are not stated in Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Applied_Species",
+          "old_value": "Anemarrhena asphodeloides",
+          "new_value": "NA",
+          "reason": "AaF26G1 was functionally assayed by recombinant expression in E. coli and in vitro; it was not tested in A. asphodeloides itself as an applied species."
+        },
+        {
+          "field": "Applied_Species_Latin_Name",
+          "old_value": "Anemarrhena asphodeloides",
+          "new_value": "NA",
+          "reason": "Functional validation was done in E. coli BL21(DE3), not in Anemarrhena asphodeloides."
+        }
+      ],
+      "stats": {
+        "supported": 16,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "AaOSCR12",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AaOSCR12 was identified from A. asphodeloides transcriptome."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Anemarrhena asphodeloides throughout the paper."
+        },
+        "Applied_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Functional tests were performed in yeast and tobacco, not in A. asphodeloides as an applied species."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Validation used S. cerevisiae and N. benthamiana, not Anemarrhena asphodeloides."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Conclusions give accession range PP163422 to PP163430 for identified genes; PP163422 for AaOSCR12 is consistent with the provided set, though the mapping is not explicitly shown in the main text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AaOSCR12 is explicitly identified as a 2,3-oxidosqualene cyclase and cycloartenol synthase."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "AaOSCR12 is directly characterized as cycloartenol synthase (CAS)."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number appears in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AaOSCR12 is placed at the entry to both phytosterol and timosaponin/steroidal saponin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper and graphical abstract describe it as the skeleton cyclization step upstream of phytosterol and cholesterol/timosaponin branches."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "AaOSCR12 catalyzes the upstream cyclization of 2,3-oxidosqualene to cycloartenol."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The Discussion calls CAS a pivotal enzyme and a rate-limiting step, but this is not directly demonstrated in the Results."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "OSC/CAS uses 2,3-oxidosqualene; this is stated in Results and figures."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Cycloartenol was identified as product (1) by standard comparison."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly states AaOSCR12 catalyzes 2,3-oxidosqualene to produce cycloartenol."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Cycloartenol is explicitly described as precursor of phytosterols and steroidal saponins/timosaponins."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AaOSCR12 is linked to downstream timosaponin biosynthesis as common precursor-forming step."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Timosaponins are steroidal saponins."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper gives tissue expression and mentions steroid sapogenin accumulation patterns/underground tissues, but this exact combined wording 'Root bark/rhizome-associated pathway' is an inference rather than explicit statement for terminal metabolites."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Medicinal bioactivity is stated for timosaponins broadly, and antifungal defense is shown downstream for timosaponin III, but AaOSCR12 itself is not directly tested for those terminal functions."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "AaOSCR12 was tested by heterologous expression in yeast p24 and transient tobacco expression, plus mutagenesis and docking."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state the three AaOSC unigenes had highest expression in root bark."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Same tissue-expression result applies, though again this is not an applied species context."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify P_GAL1-AaOSCR12-TCYC1 in yeast and pEAQ-HT-DEST1 for tobacco expression."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "AaOSCR12 enabled cycloartenol production and is presented as determining subsequent timosaponin synthesis capacity."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast expression, tobacco transient expression, GC-MS, NMR, site-directed mutagenesis, and molecular docking are all reported."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are supported: only AaOSCR12 active among OSCs, identified CAS, and six essential residues."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Genes were screened from transcriptome data from a published study [23]."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Loss of CAS activity would logically reduce downstream steroidal saponins, and mutational loss of cycloartenol is shown, but actual saponin accumulation tradeoffs were not directly measured."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "31-norcycloartenol formation due to endogenous yeast SMO complex is explicitly discussed; geographic variation via OSC mutation is only hypothesized, but the first clause is supported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses breeding superior cultivars and enzyme engineering generally, but the strong prioritization wording is inferential rather than directly demonstrated."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Applied_Species",
+          "old_value": "Anemarrhena asphodeloides",
+          "new_value": "NA",
+          "reason": "Functional tests were performed in yeast and tobacco, not in A. asphodeloides as an applied species."
+        },
+        {
+          "field": "Applied_Species_Latin_Name",
+          "old_value": "Anemarrhena asphodeloides",
+          "new_value": "NA",
+          "reason": "Validation used S. cerevisiae and N. benthamiana, not Anemarrhena asphodeloides."
+        },
+        {
+          "field": "EC_Number",
+          "old_value": "5.4.99.8",
+          "new_value": "NA",
+          "reason": "No EC number appears in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 3,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "AaSMT1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AaSMT1 was identified from A. asphodeloides transcriptome."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Anemarrhena asphodeloides."
+        },
+        "Applied_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Functional validation was performed in yeast strain R12, not in A. asphodeloides."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The actual assay species was S. cerevisiae, not Anemarrhena asphodeloides."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Within the reported accession range PP163422 to PP163430, PP163425 for AaSMT1 is consistent with the provided set, though not individually mapped in main text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AaSMT1 is explicitly described as sterol C-24 methyltransferase type 1."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The function as sterol 24-C-methyltransferase/SMT1 is directly stated."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AaSMT1 is characterized in the phytosterol biosynthesis pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes SMT1 as directing the phytosterol branch from cycloartenol."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "AaSMT1 acts at the bifurcation/branch point from cycloartenol."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper cites SMT1 generally as a critical slow enzyme controlling phytosterol composition, but this is background/referential and not directly demonstrated for AaSMT1 in Results."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Cycloartenol is the natural substrate used to infer AaSMT1 function."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Product (3) was identified as 24-methylenecycloartanol."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "AaSMT1 methylates cycloartenol at C-24 to form 24-methylenecycloartanol."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "SMT1 is described as competing with SSR2 and leading toward phytosterol rather than cholesterol/timosaponin biosynthesis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway outcome is phytosterols."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Phytosterols are sterols."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "General sterol function in membrane composition is standard biology but not explicitly stated in the paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "AaSMT1 was expressed in cycloartenol-producing yeast strain R12."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Non-OSC candidate unigenes including AaSMT1 were highly expressed in rhizomes and lateral roots and less in leaves."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Same expression pattern is reported for the source plant tissues, though not an applied-species context."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The vector is pESC-LEU-AaSMT1 and pESC vectors are galactose-inducible, but the specific promoter for AaSMT1 is not explicitly stated in the text."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "AaSMT1 promoted phytosterol-branch formation and competes conceptually with SSR2 for cycloartenol."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast expression in R12 with GC-MS metabolite profiling is exactly how the function was tested."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are supported: conversion to 24-methylenecycloartanol, phytosterol branch role, and methylation of 31-norcycloartenol indicating promiscuity."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Screened from transcriptome data from published study [23]."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Because SMT1 and SSR2 compete for the same precursor at a bifurcation point, increased SMT1 would reasonably reduce flux to cholesterol/timosaponin branch; this is directly aligned with Results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Product (4) was hypothesized to derive from methylation of 31-norcycloartenol, supporting this statement."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Engineering/breeding utility is plausible but not directly tested or stated in Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Applied_Species",
+          "old_value": "Anemarrhena asphodeloides",
+          "new_value": "NA",
+          "reason": "Functional validation was performed in yeast strain R12, not in A. asphodeloides."
+        },
+        {
+          "field": "Applied_Species_Latin_Name",
+          "old_value": "Anemarrhena asphodeloides",
+          "new_value": "NA",
+          "reason": "The actual assay species was S. cerevisiae, not Anemarrhena asphodeloides."
+        },
+        {
+          "field": "EC_Number",
+          "old_value": "2.1.1.41",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 3,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "AaSSR2-1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AaSSR2-1 was identified from A. asphodeloides transcriptome."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Anemarrhena asphodeloides."
+        },
+        "Applied_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Functional validation was in yeast strains, not in A. asphodeloides."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The actual test system was S. cerevisiae."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "PP163423 is consistent with the accession range assignment provided, though not individually mapped in the main text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AaSSR2-1 is explicitly described as sterol side-chain reductase 2."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "SSR2 function/name is directly given."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number appears in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AaSSR2-1 is placed in cholesterol biosynthesis as precursor route to timosaponins."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states SSR2 is at the crucial bifurcation point leading to cholesterol branch from cycloartenol."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly a branch-point enzyme acting on cycloartenol."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls SSR2, together with SMT1, the branching point/divergence step controlling phytosterol and cholesterol biosynthesis, while not calling it rate-limiting."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "AaSSR2-1 acts on cycloartenol."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Cycloartanol (6) was produced and confirmed by mass spectra."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states AaSSR2-1 catalyzes Δ24(25) reduction of cycloartenol side chain to cycloartanol."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "This branch leads toward cholesterol, the supposed precursor to timosaponins."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The cholesterol branch is presented as feeding timosaponin biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Timosaponins are steroidal saponins."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Timosaponin-related genes are highly expressed in rhizomes/lateral roots, but this exact tissue assignment for terminal metabolite accumulation is not directly shown for AaSSR2-1."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Downstream timosaponins have medicinal/antifungal roles, but AaSSR2-1 itself was not directly tied to those phenotypes experimentally."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "AaSSR2-1 was expressed in yeast strain R12 and in erg4-knockout complemented strains."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Non-OSC candidate unigenes including SSR2 were highly expressed in rhizomes and lateral roots and less in leaves."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Same tissue-expression statement applies, though not an applied-species context."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The specific promoter for AaSSR2-1 is not explicitly stated in the paper text, only the vector name pESC-LEU-AaSSR2-1."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "AaSSR2-1 channels cycloartenol into cholesterol-branch precursor cycloartanol."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast heterologous expression, erg4 replacement/complementation, and GC-MS/mass spectra are all reported."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported for AaSSR2-1."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Screened from transcriptome data from published study [23]."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Because SSR2 and SMT1 compete for the same precursor at the bifurcation point, more SSR2 would be expected to reduce phytosterol formation; this is directly inferable from Results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The small amount of cycloartanol in control was attributed to endogenous yeast erg4, and function was confirmed after erg4 replacement."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This application is plausible but not directly tested in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Applied_Species",
+          "old_value": "Anemarrhena asphodeloides",
+          "new_value": "NA",
+          "reason": "Functional validation was in yeast strains, not in A. asphodeloides."
+        },
+        {
+          "field": "Applied_Species_Latin_Name",
+          "old_value": "Anemarrhena asphodeloides",
+          "new_value": "NA",
+          "reason": "The actual test system was S. cerevisiae."
+        },
+        {
+          "field": "EC_Number",
+          "old_value": "1.3.1.-",
+          "new_value": "NA",
+          "reason": "No EC number appears in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 3,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "AaSSR2-2",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AaSSR2-2 was identified from A. asphodeloides transcriptome."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Anemarrhena asphodeloides."
+        },
+        "Applied_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Functional validation was in yeast, not in A. asphodeloides."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The assay system was S. cerevisiae."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "PP163424 is consistent with the reported accession range assignment provided, though not individually mapped in the main text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AaSSR2-2 is explicitly described as sterol side-chain reductase 2."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "SSR2 function/name is directly given."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is listed in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AaSSR2-2 is placed in cholesterol biosynthesis feeding timosaponin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SSR2 is described as the cholesterol branch from cycloartenol."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It acts at the branch point on cycloartenol."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents SSR2 as a branch/divergence control point, though not rate-limiting."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Cycloartenol is the substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Cycloartanol (6) was the identified product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "AaSSR2-2 catalyzes Δ24(25) side-chain reduction of cycloartenol to cycloartanol."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "This directs flux toward cholesterol and then timosaponins."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The cholesterol branch is linked to timosaponins."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Timosaponins are steroidal saponins."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact terminal metabolite accumulation site is not directly shown for AaSSR2-2."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Only downstream products are discussed for medicinal/antifungal function, not AaSSR2-2 directly."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "AaSSR2-2 was tested in R12 and erg4-knockout complemented yeast strains."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Non-OSC candidate genes including SSR2 homologs were highly expressed in rhizomes and lateral roots, less in leaves."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Same source tissue-expression pattern applies."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Specific promoter is not explicitly named for AaSSR2-2 in the paper text."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "AaSSR2-2 channels cycloartenol into the cholesterol branch via cycloartanol formation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast heterologous expression, erg4 complementation, and GC-MS/mass spectra are reported."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are supported for AaSSR2-2."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Screened from transcriptome data from published study [23]."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Competition with SMT1 for cycloartenol supports this tradeoff inference directly."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows both AaSSR2-1 and AaSSR2-2 had similar functional outcomes in the assays."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Reasonable inference but not directly tested/stated."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Applied_Species",
+          "old_value": "Anemarrhena asphodeloides",
+          "new_value": "NA",
+          "reason": "Functional validation was in yeast, not in A. asphodeloides."
+        },
+        {
+          "field": "Applied_Species_Latin_Name",
+          "old_value": "Anemarrhena asphodeloides",
+          "new_value": "NA",
+          "reason": "The assay system was S. cerevisiae."
+        },
+        {
+          "field": "EC_Number",
+          "old_value": "1.3.1.-",
+          "new_value": "NA",
+          "reason": "No EC number is listed in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 3,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "AaCYP90B27",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AaCYP90B27 was cloned from A. asphodeloides candidate genes."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Anemarrhena asphodeloides."
+        },
+        "Applied_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Functional tests were in engineered yeast strains RH6829 and cam1, not in A. asphodeloides."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The assay species was S. cerevisiae."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "PP163428 is consistent with the reported accession range assignment provided, though not individually mapped in main text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AaCYP90B27 is explicitly a CYP450 in the CYP90 family."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show it catalyzes cholesterol C-22 oxidation to 22(R)-hydroxycholesterol, supporting 'cholesterol 22-hydroxylase' as functional name."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AaCYP90B27 is placed in cholesterol downstream modification toward timosaponin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It belongs to cholesterol oxidation/modification branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a downstream modification after cholesterol formation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish it as rate-limiting, matching the field value."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Cholesterol was the substrate in RH6829 assays."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The product was confirmed as 22(R)-hydroxycholesterol."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states C-22 oxidation/hydroxylation of cholesterol to 22(R)-hydroxycholesterol."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "This is presented as a downstream precursor-forming step in timosaponin biosynthesis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway context is timosaponin biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Timosaponins are steroidal saponins."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact accumulation site for terminal metabolites is not directly established for this gene."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Medicinal and antifungal roles belong to downstream timosaponins generally, but AaCYP90B27 was not directly linked to those phenotypes in Results."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "It was expressed in high-cholesterol yeast RH6829 and also tested in high-campesterol strain cam1."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "As a non-OSC candidate unigene, it falls under the group highly expressed in rhizomes/lateral roots and less in leaves."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Same source tissue-expression pattern applies, though not an applied-species context."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The specific promoter for AaCYP90B27 is not explicitly named in the text, only the pESC-LEU vector."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "AaCYP90B27 produced 22(R)-hydroxycholesterol from cholesterol."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Phylogenetic prediction, yeast expression in RH6829, purification, and NMR are all described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported: specific conversion of cholesterol, no campesterol activity, and dedicated cholesterol C-22 oxidation role as likely pathway function."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Candidates were screened from transcriptome data from published study [23]."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The statement about limiting broader sterol perturbation is plausible but not directly discussed in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly contrasts AaCYP90B27 specificity with broader AaCYP90B2 activity."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Engineering utility and off-target minimization are reasonable inferences, not direct experimental findings."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Applied_Species",
+          "old_value": "Anemarrhena asphodeloides",
+          "new_value": "NA",
+          "reason": "Functional tests were in engineered yeast strains RH6829 and cam1, not in A. asphodeloides."
+        },
+        {
+          "field": "Applied_Species_Latin_Name",
+          "old_value": "Anemarrhena asphodeloides",
+          "new_value": "NA",
+          "reason": "The assay species was S. cerevisiae."
+        },
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.-.-",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 3,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "AaCYP90B2",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AaCYP90B2 was cloned from A. asphodeloides candidate genes."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Anemarrhena asphodeloides."
+        },
+        "Applied_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Functional validation was performed in yeast strains RH6829 and cam1, not in A. asphodeloides."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The assay species was S. cerevisiae."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "PP163427 is consistent with the reported accession range assignment provided, though not individually mapped in the paper main text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AaCYP90B2 is explicitly a CYP450 in the CYP90 family."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The stated functional name reflects the observed broad sterol hydroxylation with major 16(S),22(S)-dihydroxycholesterol product."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is listed in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AaCYP90B2 is placed in cholesterol downstream modification toward timosaponin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It clusters with C-16,22-modifying enzymes and functions in this oxidation module."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a downstream post-cholesterol modification step."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish AaCYP90B2 as rate-limiting."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Cholesterol was the tested substrate, and campesterol was also tested later with activity observed."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Major product P2 (9) was identified as 16(S),22(S)-dihydroxycholesterol."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports multiple oxidized products from cholesterol, with major identified product 16(S),22(S)-dihydroxycholesterol."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "These oxidized products are presented as intermediates/precursors in downstream timosaponin biosynthesis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway context is timosaponin biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Timosaponins are steroidal saponins."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact terminal metabolite accumulation site is not directly shown for AaCYP90B2."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Downstream medicinal/antifungal functions are general to timosaponins, not experimentally tied to AaCYP90B2."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was expressed in RH6829 and also tested in high-campesterol strain cam1."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "As a non-OSC candidate unigene, it is included in the group highly expressed in rhizomes/lateral roots and less in leaves."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Same source tissue-expression pattern applies, though not an applied-species context."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Specific promoter is not explicitly named for AaCYP90B2 in the text, only pESC-LEU vector usage."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "AaCYP90B2 broadly oxidized sterols and formed 16(S),22(S)-dihydroxycholesterol as major identified product."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Phylogenetic prediction, yeast expression in RH6829 and cam1, comparison with positive control, purification, and NMR for major product are reported."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by Results."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Candidates were screened from transcriptome data from published study [23]."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Because AaCYP90B2 also transforms campesterol and may be involved in both plant sterol and steroidal saponin pathways, broader metabolic perturbation is a fair direct inference from Results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says minor products were hard to purify and highlights pathway complexity/broad specificity."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Engineering recommendation with metabolite monitoring is sensible but not directly stated in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Applied_Species",
+          "old_value": "Anemarrhena asphodeloides",
+          "new_value": "NA",
+          "reason": "Functional validation was performed in yeast strains RH6829 and cam1, not in A. asphodeloides."
+        },
+        {
+          "field": "Applied_Species_Latin_Name",
+          "old_value": "Anemarrhena asphodeloides",
+          "new_value": "NA",
+          "reason": "The assay species was S. cerevisiae."
+        },
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.-.-",
+          "new_value": "NA",
+          "reason": "No EC number is listed in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 3,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 205,
+    "supported": 157,
+    "unsupported": 20,
+    "uncertain": 28,
+    "total_corrections": 20
+  }
+}

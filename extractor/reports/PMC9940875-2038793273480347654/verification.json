@@ -1,0 +1,173 @@
+{
+  "file": "MinerU_markdown_PMC9940875_2038793273480347654",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC9940875_2038793273480347654.md",
+  "timestamp": "2026-03-31T22:41:28.919336",
+  "genes": [
+    {
+      "gene_name": "PRK",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "PRK is explicitly identified as locus AT1G32060/AT1G32060.1 in Results, Materials and Accession numbers."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study gene is from Arabidopsis; the paper repeatedly states Arabidopsis and A. thaliana."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly stated in the abstract and Materials and methods."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The two mutant alleles are in Columbia (Col-0) and Nossen (No-0) backgrounds, explicitly stated for prk-1 and prk-2."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All experiments are in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Arabidopsis thaliana throughout the paper."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 and No-0 are explicit backgrounds; prkCOMP and PRKOX are explicit transgenic lines used for seed analyses."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results directly measure mature embryo fatty acids/FAMEs as a proxy for seed lipids/oil, and discuss reduced lipid accumulation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The measured endpoint is total lipid/oil quantified as fatty acid methyl esters from multiple fatty acids. Calling the class simply 'fatty acid' is only partially accurate because the paper frames the endpoint as seed oil/lipids, not free fatty acids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Seeds/oil as storage compounds are implicit background knowledge, but the paper does not explicitly state this function in Results."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Fatty acids were quantified in dissected mature embryos, and seed oil accumulation is discussed in embryos/seeds."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly connects PRK/Rubisco shunt with seed glycolysis, nonoxidative PPP, and fatty acid/lipid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The PRK/Rubisco shunt in green seeds is the central pathway studied and is described as operating outside the Calvin cycle."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "PRK is explicitly defined as phosphoribulokinase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number 2.7.1.19 appears in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports that PRK has a predicted chloroplast transit peptide, but does not describe a protein family/domain as 'chloroplast transit peptide-containing kinase'."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "PRK is treated as a chloroplast/plastid Calvin-cycle enzyme and a transit peptide of 54 aa is predicted, supporting chloroplast localization."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state PRK phosphorylates ribulose-5-phosphate to generate the Rubisco substrate RuBP; ATP dependence is stated in the abstract/background."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "RuBP as the PRK product is explicitly stated; ADP is directly implied by phosphorylation with ATP but not explicitly written, so support is acceptable by biochemical inference from the described reaction."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This reaction description closely matches the text: PRK phosphorylates Ru5P to generate RuBP, the Rubisco substrate."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "The gene clearly supplies RuBP to the shunt, but 'midstream' and 'key control step' are interpretive labels not explicitly assigned in Results."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show loss of PRK lowers RuBP, 3PGA/PEP/Pyr, and final fatty acids, directly linking PRK to precursor supply for fatty acid biosynthesis."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows PRK is required for shunt operation and that PRK overexpression raises RuBP without raising oil, suggesting PRK alone is not the sole limiting step for final oil accumulation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed effects are reported in Results: ~34% lower total FA, depleted RuBP/downstream glycolytic intermediates, increased upstream PPP metabolites and starch, lower chlorophyll, and no oil increase in PRKOX."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly used: mutants, PRKpro:PRK-YFP complementation, PRKOX line, LC-MS, GC-FID, chlorophyll and starch assays, TEM, immunoblotting, and light treatments."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "PRK-YFP is detected in developing seeds and seedlings, but endogenous expression 'in green tissues and developing green seeds' is not directly characterized comprehensively in the paper."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PRK-YFP fluorescence/immunoblot signals are shown in developing green seeds and seedlings; Supplemental Figure 1 mentions rosette leaves in complemented lines."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Light intensity during seed development is explicitly manipulated, and lipid accumulation depends on light in PRK-containing but not PRK-deficient embryos."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Rubisco is functionally linked downstream of PRK, but the paper does not demonstrate a physical protein-protein interaction."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The complementation construct uses the endogenous PRK promoter, explicitly described as a 1.9-kb upstream sequence."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "These outcomes are all reported: complete loss is seedling-lethal with pale arrested seedlings, PRK deficiency lowers chlorophyll and perturbs starch/lipid balance, and increased PRK alone does not raise oil."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "LC-MS metabolomics and Illumina whole-genome sequencing of insertion lines are explicitly described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately reflects the main Results and Discussion conclusions, including essentiality, ~34% oil reduction, starch/chlorophyll effects, light dependence, and insufficiency of PRK overexpression alone."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper suggests increased precursor supply via PRK could help when combined with other interventions and notes knockout is not viable, but calling PRK 'a useful engineering target' is more forward-looking interpretation than direct Results evidence."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly presents genetic validation of the PRK/Rubisco shunt and discusses that the oil effect exceeds prior theoretical estimates, with likely contributions from secondary effects on photosynthesis/chlorophyll, starch partitioning, and resource allocation."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.7.1.19",
+          "new_value": "NA",
+          "reason": "No EC number 2.7.1.19 appears in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 7
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 35,
+    "supported": 27,
+    "unsupported": 1,
+    "uncertain": 7,
+    "total_corrections": 1
+  }
+}

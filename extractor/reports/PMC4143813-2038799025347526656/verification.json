@@ -1,0 +1,662 @@
+{
+  "file": "MinerU_markdown_PMC4143813_2038799025347526656",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC4143813_2038799025347526656.md",
+  "timestamp": "2026-03-31T22:08:36.706593",
+  "genes": [
+    {
+      "gene_name": "COX-2",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper uses the name COX-2 and describes its role, but does not explicitly state the full enzyme name 'Prostaglandin-endoperoxide synthase 2'."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "COX-2 is discussed functionally, but 'Cyclooxygenase/peroxidase family' is not explicitly stated in the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses murine RAW 264.7 macrophages, so mouse is supported."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper says 'murine' and RAW 264.7 cells, but does not explicitly state 'Mus musculus'."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RAW 264.7 is a murine macrophage cell line, so mouse is supported by the paper."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The Latin name 'Mus musculus' does not appear in the paper."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly uses RAW 264.7 macrophage cells."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly studies arachidonate metabolism and prostaglandin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states COX-2 produces PGH2 that serves as substrate for downstream prostaglandin synthases, i.e. the common upstream branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "COX-2 is described as central and upstream of mPGES-1 and H-PGDS, supplying PGH2."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses arachidonate/AA metabolism and places COX-2 in that pathway; arachidonic acid as substrate is directly inferable."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states that COX-2 produces PGH2."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports that COX-2 forms PGH2 from arachidonate, but does not explicitly describe the dual cyclooxygenase and peroxidase activities."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper measures downstream 15-deoxy-PGJ2 and links indicaxanthin-modulated COX-2 pathway changes to its production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "15-deoxy-PGJ2 is measured as a prostaglandin/eicosanoid mediator, but the class label 'Eicosanoid' is not explicitly stated."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "PG mediators were measured in cell-free supernatants."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly places COX-2 upstream by producing PGH2 for downstream synthases, i.e. supplying the immediate precursor pool."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "LPS stimulation caused a remarkable increase of COX-2 mRNA and protein in RAW 264.7 macrophages."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states COX-2 was strongly induced by LPS and further up-regulated by indicaxanthin in LPS-stimulated RAW 264.7 macrophages."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization for COX-2 is given in the paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show indicaxanthin further increases COX-2 expression in LPS-treated cells while PG output shifts toward PGD2 and 15-deoxy-PGJ2."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings are consistent with the Results: LPS induced COX-2, indicaxanthin further up-regulated it, and this occurred alongside reduced PGE2 and increased PGD2/15-deoxy-PGJ2 when downstream enzyme balance changed."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses qRT-PCR, Western blotting, and prostaglandin metabolite quantification."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The qualification 'key upstream control point' is supported by the paper's description of COX-2 as central; the note that it was not explicitly established as rate-limiting is also accurate."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "mPGES-1 and H-PGDS are described as downstream enzymes sharing the COX-2 product PGH2, but direct protein-protein interactions are not shown."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an interpretive summary consistent with the paper's finding that COX-2 up-regulation under indicaxanthin occurs together with anti-inflammatory PG redirection rather than increased PGE2."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These treatments are explicitly used in the study."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a contextual statement and accurately reflects that the paper is biomedical rather than crop breeding focused."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes 15-deoxy-PGJ2 as anti-inflammatory/cyclopentenone involved in resolution."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The study indeed concerns murine macrophages and phytochemical modulation, not plant gene engineering."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.99.1",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper."
+        },
+        {
+          "field": "Source_Species_Latin_Name",
+          "old_value": "Mus musculus",
+          "new_value": "NA",
+          "reason": "The paper says 'murine' and RAW 264.7 cells, but does not explicitly state 'Mus musculus'."
+        },
+        {
+          "field": "Applied_Species_Latin_Name",
+          "old_value": "Mus musculus",
+          "new_value": "NA",
+          "reason": "The Latin name 'Mus musculus' does not appear in the paper."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Endoplasmic reticulum/nuclear envelope membrane",
+          "new_value": "NA",
+          "reason": "No subcellular localization for COX-2 is given in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 4,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "mPGES-1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to 'PGE2 synthase-1 (mPGES-1)' / 'microsomal prostaglandin E synthase-1'."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is reported in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The MAPEG family is not mentioned in the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments were performed in murine RAW 264.7 macrophages."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly state 'Mus musculus'."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RAW 264.7 is a murine macrophage cell line used in the study."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The Latin species name is not explicitly given."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "RAW 264.7 macrophage cell line is explicitly stated."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly studies prostaglandin biosynthesis within arachidonate metabolism."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "mPGES-1 is explicitly presented as the downstream enzyme forming PGE2, i.e. the PGE2 branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "mPGES-1 is described as downstream of COX-2."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states COX-2-derived PGH2 may serve as substrate for mPGES-1."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly links mPGES-1 with formation of PGE2."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact reaction wording 'isomerizes PGH2 to PGE2' is not stated, though that function is directly inferable from the pathway description."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PGE2 is directly measured and linked to mPGES-1."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "PGE2 is clearly a prostaglandin mediator in the paper, but the class term 'Eicosanoid' is not explicitly used for this field."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "PGE2 was measured in cell-free supernatants."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "mPGES-1 is explicitly the enzyme producing PGE2 downstream of PGH2."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states LPS caused a remarkable increase of mPGES-1 mRNA and protein."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states mPGES-1 was strongly induced by LPS and down-regulated by indicaxanthin in LPS-stimulated RAW 264.7 cells."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state 'microsome' as localization."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Indicaxanthin suppressed mPGES-1 expression and lowered PGE2 production in LPS-stimulated macrophages."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by the Results and figures."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR, Western blot, and PGE2 quantification were used."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports mPGES-1 as a key downstream branch enzyme for PGE2 formation, but does not explicitly call it 'key branch-selecting' or rate-limiting."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "COX-2 is functionally upstream and connected by substrate flow, but direct protein interaction is not shown."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable biological interpretation, but such tradeoff language is not directly addressed in the paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "LPS stimulation and indicaxanthin pre-treatment are explicit experimental factors."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "This contextual statement is consistent with the paper's biomedical focus rather than plant engineering."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes PGE2 as pro-inflammatory."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper proposes that NF-κB inhibition may account for mPGES-1 down-regulation, but presents this as an interpretation rather than direct mechanistic proof."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "5.3.99.3",
+          "new_value": "NA",
+          "reason": "No EC number is reported in the paper."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "MAPEG family",
+          "new_value": "NA",
+          "reason": "The MAPEG family is not mentioned in the paper."
+        },
+        {
+          "field": "Source_Species_Latin_Name",
+          "old_value": "Mus musculus",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly state 'Mus musculus'."
+        },
+        {
+          "field": "Applied_Species_Latin_Name",
+          "old_value": "Mus musculus",
+          "new_value": "NA",
+          "reason": "The Latin species name is not explicitly given."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Microsome",
+          "new_value": "NA",
+          "reason": "The paper does not state 'microsome' as localization."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 5,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "H-PGDS",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names H-PGDS as PGD2 synthase / H-PGDS."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number appears in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The sigma class glutathione S-transferase family is not mentioned."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses murine RAW 264.7 macrophages."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The Latin name 'Mus musculus' is not stated in the paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RAW 264.7 is a murine macrophage line used here."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly state the Latin species name."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "RAW 264.7 macrophage cell line is explicitly stated."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies prostaglandin biosynthesis in arachidonate metabolism."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "H-PGDS is explicitly linked to PGD2 production, which then leads to 15-deoxy-PGJ2."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "H-PGDS is described as a downstream enzyme using COX-2-derived PGH2."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states PGH2 serves as substrate for H-PGDS."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly links H-PGDS to formation of PGD2."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact wording 'isomerizes PGH2 to PGD2' is not given, but the function is directly inferable from the pathway description."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "15-deoxy-PGJ2 is measured downstream of PGD2 and linked to H-PGDS-mediated branch activation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper clearly treats these as prostaglandin/eicosanoid mediators, but the exact class label is not explicitly attached to this field."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "PGD2 and 15-deoxy-PGJ2 were measured in cell-free supernatants."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports H-PGDS as forming PGD2, the immediate precursor of 15-deoxy-PGJ2 via spontaneous dehydration."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states LPS caused only a modest elevation of H-PGDS."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Indicaxanthin up-regulated H-PGDS in LPS-stimulated RAW 264.7 macrophages."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not provide subcellular localization for H-PGDS."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Indicaxanthin increased H-PGDS expression, with increased PGD2 and downstream 15-deoxy-PGJ2 production."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points match the Results section and the measured metabolites."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR, Western blotting, PGD2 and 15-deoxy-PGJ2 quantification, and DPI/α-tocopherol intervention context are all in the paper."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports H-PGDS as a branch-directing enzyme, but does not explicitly define it as a rate-limiting or key control step."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "COX-2 is functionally connected upstream, but direct protein interaction is not demonstrated."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "LPS, indicaxanthin, DPI, and α-tocopherol are explicit treatments in the study."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a contextual summary consistent with the paper's non-plant-engineering focus."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly treats PGD2 and 15-deoxy-PGJ2 as anti-inflammatory/resolution-associated mediators."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states 15-deoxy-PGJ2 is a spontaneous dehydration product downstream of PGD2, not directly formed by H-PGDS."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "5.3.99.2",
+          "new_value": "NA",
+          "reason": "No EC number appears in the paper."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "Sigma class glutathione S-transferase family",
+          "new_value": "NA",
+          "reason": "The sigma class glutathione S-transferase family is not mentioned."
+        },
+        {
+          "field": "Source_Species_Latin_Name",
+          "old_value": "Mus musculus",
+          "new_value": "NA",
+          "reason": "The Latin name 'Mus musculus' is not stated in the paper."
+        },
+        {
+          "field": "Applied_Species_Latin_Name",
+          "old_value": "Mus musculus",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly state the Latin species name."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "The paper does not provide subcellular localization for H-PGDS."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 5,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "NF-κB",
+      "category": "Regulation",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper refers to NF-κB as a transcription factor pathway, but does not explicitly say 'Rel family transcription factor complex'."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "NF-κB is explicitly studied as a transcriptional regulator using a luciferase reporter assay."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in murine RAW 264.7 macrophages."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The Latin species name 'Mus musculus' is not explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RAW 264.7 is a murine macrophage line used in the study."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly state 'Mus musculus'."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "RAW 264.7 macrophage cell line is explicitly used."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "These prostaglandin products were measured and discussed in relation to NF-κB-associated pathway remodeling."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "They are prostaglandin/eicosanoid mediators, but the exact class term is not explicitly attached in this way."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The prostaglandins were measured in cell-free supernatants."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows LPS activates NF-κB reporter activity and indicaxanthin inhibits that activation."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports an association between NF-κB inhibition and prostaglandin branch remodeling, especially mPGES-1/PGE2, but 'decisive influence' and broader branch control are interpretive."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper explicitly says NF-κB controls genes including COX-2 and mPGES-1 in general, but only mechanistically links its inhibition mainly to mPGES-1 down-regulation in this study."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state LPS activates NF-κB, indicaxanthin inhibits NF-κB activation, and this may account for mPGES-1 down-regulation; COX-2 as an NF-κB-controlled gene is also cited."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses NF-κB in the context of regulating genes involved in prostaglandin biosynthesis during inflammatory activation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Indicaxanthin inhibited NF-κB activation in LPS-stimulated macrophages, associated with reduced mPGES-1 expression and decreased PGE2."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "LPS increased reporter activity about fourfold, indicaxanthin inhibited it dose-dependently, and the paper proposes this accounts for mPGES-1 down-regulation and reduced PGE2."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "NF-κB luciferase reporter assay was used, and conclusions are integrated with gene/protein expression and prostaglandin measurements."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization for NF-κB is stated in the paper."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "mPGES-1 and COX-2 are target genes/pathway components, not demonstrated interacting proteins of NF-κB in this paper."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links LPS-induced redox signaling/ROS and indicaxanthin pre-treatment to NF-κB activation status."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "NF-κB is explicitly treated as the NF-κB transcription factor pathway/complex, albeit without subunit detail."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows NF-κB activation is increased in LPS-stimulated macrophages."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Reporter activity increased with LPS and was suppressed by indicaxanthin."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states use of pTAL-NF-κB luciferase reporter plasmid."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "LPS stimulation and indicaxanthin pre-treatment are explicit experimental factors."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible general interpretation, but such broader immune tradeoffs are not directly examined in the paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "This contextual statement accurately reflects that the work is mechanistic/biomedical, not plant breeding."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes PGE2 as pro-inflammatory and PGD2/15-deoxy-PGJ2 as anti-inflammatory/resolution-associated."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The study indeed measures NF-κB as a host regulatory pathway in macrophages, not as a plant gene from Opuntia."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Source_Species_Latin_Name",
+          "old_value": "Mus musculus",
+          "new_value": "NA",
+          "reason": "The Latin species name 'Mus musculus' is not explicitly stated."
+        },
+        {
+          "field": "Applied_Species_Latin_Name",
+          "old_value": "Mus musculus",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly state 'Mus musculus'."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No subcellular localization for NF-κB is stated in the paper."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "mPGES-1; COX-2",
+          "new_value": "NA",
+          "reason": "mPGES-1 and COX-2 are target genes/pathway components, not demonstrated interacting proteins of NF-κB in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 4,
+        "uncertain": 5
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 122,
+    "supported": 84,
+    "unsupported": 18,
+    "uncertain": 20,
+    "total_corrections": 18
+  }
+}

@@ -1,0 +1,712 @@
+{
+  "file": "MinerU_markdown_PMC11784291_2038800739391803408",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC11784291_2038800739391803408.md",
+  "timestamp": "2026-03-31T21:40:43.305638",
+  "genes": [
+    {
+      "gene_name": "MRPL1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism is Arabidopsis; MRPL1 is studied in Arabidopsis mutants."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state Arabidopsis thaliana ecotype Col-0 was used as WT and background for mutants/transgenics."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is explicitly stated as the WT ecotype/background."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments on mrpl1-3 were performed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly the experimental species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 background is explicitly used."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1C and text explicitly show increased jasmonic acid (JA) in Dox-treated WT and mrpl1-3."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "JA is a phytohormone; the paper repeatedly treats JA as a hormone/signaling pathway."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "JA content was measured in whole 7-day-old seedlings, and Jas9-Venus changes were shown in root tips, but direct JA quantification in roots was not reported."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract/discussion state MRPL1 mutation increases JA accumulation, reduces growth, and enhances biotic stress resistance, reflecting a growth-defense balance."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly show mrpl1-3 has higher JA, shorter roots/root meristem, and enhanced resistance to Spodoptera exigua and Botrytis cinerea."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by Results: elevated JA and JA biosynthetic gene expression in mrpl1-3; root defects partially rescued by coi1-2 or erf109; enhanced insect/pathogen resistance in mrpl1-3."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods appear in Results/Methods: mrpl1-3 mutant, JA quantification, RT-qPCR, crosses with coi1-2 and erf109, Jas9-Venus, insect feeding, and Botrytis assays."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly studies mitochondrial translational stress using doxycycline, and compares with the mrpl1-3 mutant."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper shows genetic/functional dependence on COI1 and ERF109 downstream, but no direct physical interaction of MRPL1 with COI1 or ERF109 is reported."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "MRPL1 is described as mitochondrial ribosomal protein L1, supporting mitochondrial ribosome association by name/background, but this study does not directly localize the protein."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "MRPL1 is explicitly named mitochondrial ribosomal protein L1."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible implication from growth-defense tradeoff data, but the paper does not explicitly discuss breeding/engineering applications."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "mrpl1-3 shows reduced growth/shorter roots and developmental retardation while increasing defense, directly supporting growth penalties."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq and BioProject PRJNA1025135 are explicitly stated."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "MRPL1 is indeed presented as an upstream mitochondrial translational component, not a JA biosynthetic enzyme or TF."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "COI1; ERF109",
+          "new_value": "NA",
+          "reason": "The paper shows genetic/functional dependence on COI1 and ERF109 downstream, but no direct physical interaction of MRPL1 with COI1 or ERF109 is reported."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "COI1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "COI1 was studied in Arabidopsis mutants/transgenics."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly the species used."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 background is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "coi1 mutants were assayed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the experimental species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the WT comparator/background."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "COI1 is analyzed in the context of jasmonic acid signaling under mitochondrial translational stress."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "JA is a phytohormone in this study."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "JA signaling/readouts are shown in roots and seedlings, but direct JA accumulation was measured only in whole seedlings, not specifically roots."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show COI1 mediates Dox-induced growth inhibition and contributes to retrograde/defense-related signaling."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "coi1-1/coi1-2 are less sensitive to Dox for root/shoot/stem growth, and marker induction is attenuated in coi1-2."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly reported in Results and figures: Dox tolerance of coi1 alleles, partial rescue of mrpl1-3 and anthocyanin attenuation, and reduced ERF109/UPRmt marker induction plus requirement for H2O2-induced ERF109."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly used for COI1 in the study."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Doxycycline, antimycin A, H2O2, and DIECA are all used in COI1-related experiments/discussion."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supplemental Figure 5A and 5B are described as increased COI1-Venus signals in root tips after Dox treatment."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "MYC2/3/4 and JAZ proteins are canonical JA-pathway partners and discussed/cited, but this paper itself does not directly test physical interactions with COI1."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The study explicitly uses pCOI1:COI1-Venus."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "COI1 is explicitly called the JA receptor, and cited literature identifies SCFCOI1 ubiquitin ligase complexes; however 'F-box' is background knowledge rather than directly stated. Still broadly supported by cited context."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly propose breeding/engineering use of COI1 manipulation."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Growth alleviation is shown, but weakened defense/retrograde adaptation is more inferential than directly demonstrated in coi1 in this paper."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq BioProject PRJNA1025135 is explicitly reported for the study."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "COI1 is indeed treated as a hormone receptor/signaling component rather than a biosynthetic enzyme or TF."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 18,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "AOS",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AOS was studied in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly used."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 background is the experimental WT."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AOS reporter and transcript analyses were in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the species used."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the WT background used to generate/compare transgenics."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AOS is explicitly called a JA biosynthesis gene, placing it in jasmonic acid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention the octadecanoid pathway by name."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "AOS is the established gene symbol and the paper treats it as a JA biosynthesis gene; the full enzyme name is directly inferable."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Specific substrate is not stated in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Specific product/intermediate is not stated in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "AOS is identified as a JA biosynthetic gene, but the specific reaction description is not provided in this paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not describe AOS as 'midstream'."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Because AOS is explicitly a JA biosynthesis gene, connection to JA production is supported."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The field explicitly says not established in this paper, which matches the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AOS is examined as a JA biosynthesis gene and linked to JA accumulation changes."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "JA is a phytohormone in the study."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "JA was measured in seedlings; root-related JA action was shown by reporters, but no direct AOS-derived JA accumulation site was established for both seedlings and roots."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly frames JA as a stress hormone coordinating growth inhibition and defense."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly show Dox induces AOSpro:GUS and AOS transcript, and AOS expression is elevated in mrpl1-3."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly shown in Figure 1B, 1D, 1E and Figure 4E."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "AOSpro:GUS, RT-qPCR, mutant comparisons, and Dox treatment are all explicitly used."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "AOS induction is examined under Dox-mediated mitochondrial translational stress."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Short-term Dox induction in seedlings is directly shown by GUS and RT-qPCR."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "MYC2/3/4 regulate AOS expression genetically/transcriptionally, but no protein-protein interaction with AOS is shown."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "AOSpro:GUS is explicitly generated and used."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state chloroplast localization for AOS."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "CYP74A family/domain is not mentioned in the paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Possible application is inferential; not explicitly discussed."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Higher JA biosynthesis is associated in this study with growth inhibition/reduced biomass under stress."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq BioProject PRJNA1025135 is explicitly given for the study."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed uses AOS as a representative major JA biosynthetic gene."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Pathway_Branch_or_Subpathway",
+          "old_value": "octadecanoid pathway",
+          "new_value": "NA",
+          "reason": "The paper does not mention the octadecanoid pathway by name."
+        },
+        {
+          "field": "EC_Number",
+          "old_value": "4.2.1.92",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "13-hydroperoxy-octadecatrienoic acid",
+          "new_value": "NA",
+          "reason": "Specific substrate is not stated in the paper."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "unstable allene oxide precursor to 12-oxo-phytodienoic acid",
+          "new_value": "NA",
+          "reason": "Specific product/intermediate is not stated in the paper."
+        },
+        {
+          "field": "Metabolic_Step_Position",
+          "old_value": "midstream",
+          "new_value": "NA",
+          "reason": "The paper does not describe AOS as 'midstream'."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "MYC2; MYC3; MYC4",
+          "new_value": "NA",
+          "reason": "MYC2/3/4 regulate AOS expression genetically/transcriptionally, but no protein-protein interaction with AOS is shown."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "chloroplast",
+          "new_value": "NA",
+          "reason": "The paper does not state chloroplast localization for AOS."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "CYP74A cytochrome P450 family enzyme",
+          "new_value": "NA",
+          "reason": "CYP74A family/domain is not mentioned in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 8,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "MYC2",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MYC2 was tested in Arabidopsis mutants and transgenic assays."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly the species used."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the WT background."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MYC2 mutant analyses were performed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the experimental species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the comparator/background."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "MYC2 is explicitly discussed as a master regulator/transcription factor in JA signaling."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly state that MYC2 is a bHLH transcription factor, though this is known background."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Nuclear localization of MYC2 is not stated or tested in this paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "MYC2 is linked to jasmonic acid biosynthesis/signaling under mitochondrial translational stress."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "JA is a phytohormone."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Root and seedling phenotypes are studied, but direct JA accumulation under MYC2 control is not quantified spatially."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "MYC2 is shown to coordinate JA-linked growth inhibition under translational stress, and the paper links JA to defense balance."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "MYC2/3/4 positively regulate Dox-induced JA biosynthetic genes and JA-responsive transcription including ERF109."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "ChIP, Y1H, and dual-LUC support transcriptional activation of ERF109 by MYC2."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "ERF109, AOS, LOX2, and LOX3 are directly named as genes whose induction depends on MYC2/3/4; ERF109 direct targeting by MYC2 is demonstrated."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct ERF109 promoter binding/activation and positive effects on JA biosynthesis gene induction are explicitly shown."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Reduced AOS/LOX2/LOX3 induction in myc2/myc234 supports a positive feedback role of MYC2/3/4 on JA biosynthesis under Dox."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows Dox-induced ERF109 requires COI1 and MYC2/3/4, placing MYC2 in COI1-dependent JA signaling activated by mitochondrial translational stress."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "UNCERTAIN",
+          "reason": "JAZ1 antagonism is shown functionally and SCFCOI1 context is known, but this paper does not directly demonstrate MYC2 as part of a defined complex."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "JAZ1 functional antagonism is directly shown in dual-LUC assays; MYC3 and MYC4 are functionally redundant partners repeatedly analyzed with MYC2."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "MYC2 is shown as a major JA-responsive regulator mediating Dox-induced growth inhibition and ERF109 activation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "myc2 and myc234 are more tolerant to Dox; MYC2 promotes JA biosynthetic gene induction and ERF109 activation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each summary point is directly backed by Figures 4 and 5."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed assays and phenotyping were used."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "MYC2 is studied under Dox-mediated mitochondrial translational stress."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not report MYC2 expression pattern itself, and the field correctly says activity inferred rather than expression specifically reported."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "35S::MYC2-GFP and ProERF109:LUC are explicitly used."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential application is inferential, not explicitly proposed in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Improved growth under stress is shown in myc2/myc234, but impaired defense outputs from reduced MYC2 are not directly tested in this paper."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq BioProject PRJNA1025135 is explicitly reported for the study."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly validates MYC2 binding to ERF109 and notes redundancy with MYC3/MYC4."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "bHLH transcription factor",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly state that MYC2 is a bHLH transcription factor, though this is known background."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "nucleus",
+          "new_value": "NA",
+          "reason": "Nuclear localization of MYC2 is not stated or tested in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "ERF109",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ERF109 was studied in Arabidopsis mutants/transgenics."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the experimental species."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the WT background."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ERF109 phenotyping and expression assays were performed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly used."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the comparator/background."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "ERF109 is treated as a transcriptional regulator downstream of JA signaling."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly state AP2/ERF domain/family, despite the gene name implying it."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Nuclear localization is not stated or tested in this paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "ERF109 is placed downstream of JA signaling in the mitochondrial stress response."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "JA is a phytohormone."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Roots and seedlings are the tissues analyzed for expression/phenotypes, but direct JA accumulation in these tissues specifically via ERF109 is not measured."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The study shows ERF109 mediates JA-linked root growth inhibition and stress adaptation via ROS-related mechanisms."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "ERF109 is shown to participate in retrograde stress transcription and ROS-associated growth regulation downstream of JA signaling."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Dox induction of ERF109 requires COI1/MYC2 and ERF109 overexpression promotes H2O2 accumulation, supporting the stated downstream activation/positive feedback description."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not define exact direct metabolic targets and the field correctly says exact direct targets are not defined."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "ERF109 is shown to act downstream of MYC2 and promote H2O2 production; stress-induced transcriptional role is supported."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "H2O2 induces ERF109, and ERF109 overexpression increases H2O2 accumulation, explicitly supporting a positive feedback loop."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly show dependence on MYC2/3/4, COI1, ETR2/EIN2/EIN3/EIN4, and induction by H2O2."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "MYC2 directly binds the ERF109 promoter, but this is DNA-level regulation, not protein-protein interaction with ERF109."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies ERF109 as an essential downstream node linking JA signaling to H2O2-mediated growth repression under mitochondrial stress."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "erf109 mutants are less sensitive to Dox and partially rescue mrpl1-3 root defects; overexpression reduces growth and raises H2O2."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by Figures 5, 6, and 7."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss-of-function, overexpression, RT-qPCR, promoter-GUS, genetic crosses, DAB staining, and KI treatment are all explicitly used."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Doxycycline, H2O2, KI, and mitochondrial translational stress are directly used in ERF109 experiments."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states rapid transient induction peaking at 20 min and returning to basal by 2 h, with root tip GUS induction after Dox."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "ERF109pro:ERF109-GUS and 35S-ERF109-GFP/35S-ERF109 lines are explicitly described."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Possible application is inferential, not explicitly proposed."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Overexpression causes reduced growth and elevated ROS, while loss reduces stress-induced growth inhibition."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "ERF109 upregulation is also referenced in the RNA-seq dataset PRJNA1025135."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The study indeed presents ERF109 as a downstream TF linking JA signaling to ROS-mediated developmental outcomes rather than a JA biosynthetic regulator."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "AP2/ERF transcription factor",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly state AP2/ERF domain/family, despite the gene name implying it."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "nucleus",
+          "new_value": "NA",
+          "reason": "Nuclear localization is not stated or tested in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 139,
+    "supported": 109,
+    "unsupported": 13,
+    "uncertain": 17,
+    "total_corrections": 13
+  }
+}

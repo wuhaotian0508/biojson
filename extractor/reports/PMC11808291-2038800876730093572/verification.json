@@ -1,0 +1,360 @@
+{
+  "file": "MinerU_markdown_PMC11808291_2038800876730093572",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC11808291_2038800876730093572.md",
+  "timestamp": "2026-03-31T21:40:52.379961",
+  "genes": [
+    {
+      "gene_name": "lor1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "lor1 is explicitly described as a mutant of Chlamydomonas reinhardtii in Results and Experimental Procedures."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names the species as Chlamydomonas reinhardtii."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental Procedures list the strains as 'lor1 mt+ (ASX1-1b)' and 'lor1 mt- (ASX2-11d)'."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant crosses and zygospore analyses were performed in Chlamydomonas reinhardtii."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is explicitly Chlamydomonas reinhardtii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state that zygospores were generated from homozygous lor1 crosses and analyzed by HPLC."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports 4-ketolutein acyl esters being absent and astaxanthin mono-/diacyl esters being present in lor1 zygospores, but the exact phrasing '4-ketolutein esters; astaxanthin esters' is somewhat compressed and omits that free ketocarotenoids were also discussed elsewhere."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These metabolites are carotenoids/ketocarotenoids in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant metabolites were analyzed in zygospores."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state lor1 is defective in lycopene-ε-cyclase and lacks α-carotene/lutein derivatives; all peaks assigned as 4-ketolutein acyl esters were absent in lor1 zygospores, while astaxanthin ester complement remained as in wild type, supporting origin from the α-carotene/lutein branch."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The study used homozygous lor1 crosses and HPLC pigment profiling of zygospores to test the phenotype."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points match the Results: absence of 4-ketolutein ester peaks in lor1, persistence of astaxanthin ester peaks, and inference that most ketocarotenoids derive from the α-carotene branch."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper calls lor1 a mutant defective in lycopene-ε-cyclase, but does not define 'lor1' itself as a protein family/domain or locus with that exact annotation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the role of lor1 in this paper: a genetic probe for precursor origin rather than the cloned enzyme under main study."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The zygospore maturation experiments were carried out in the dark at 22°C."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The final sentence is a forward-looking application statement. The paper does state pigment mutants can be exploited to investigate substrate availability effects, but does not specifically frame lor1 as a breeding/engineering tool."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 13,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "BKT",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental Procedures give the cDNA accession GenBank AY860820, and Sequence data mining states the BKT protein sequence as GenBank accession AAX54908."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The BKT studied was from Chlamydomonas reinhardtii."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The full species name Chlamydomonas reinhardtii is explicit."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says a 1.3 kb cDNA fragment containing the complete ORF of BKT from C. reinhardtii was cloned, and elsewhere uses CC-620/CC-621 for zygospore crosses, but it does not explicitly state that the cloned BKT cDNA was derived from CC-620/CC-621."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "BKT was studied in C. reinhardtii and heterologously expressed in Escherichia coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Chlamydomonas reinhardtii and Escherichia coli are explicitly named."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "C. reinhardtii zygospores are correct, and E. coli TOP10 is explicitly used in Experimental Procedures, but XL1-Blue appears only in Results for certain strain backgrounds, creating inconsistency in the exact variety field."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The cDNA was cloned into the arabinose-inducible expression vector pBAD-TOPO, and induction with arabinose is described."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly supports formation/detection of 4-ketolutein, canthaxanthin, and astaxanthin."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are carotenoids/ketocarotenoids."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Ketocarotenoids accumulated in C. reinhardtii and V. carteri zygospores, and products formed in engineered bacterial cells."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show zygospore-specific ketocarotenoid accumulation in C. reinhardtii and that full-length CrBKT ketolates α-carotene, β-carotene, lutein, zeaxanthin, and related substrates in E. coli to generate the listed products."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "BKT is explicitly referred to as β-carotene ketolase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper text."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "BKT is directly placed in ketocarotenoid biosynthesis within carotenoid metabolism."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly discusses α-carotene/lutein-derived and β-carotene/zeaxanthin-derived ketocarotenoid branches."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "BKT is shown as a downstream branch-modifying enzyme converting existing carotenoids into ketocarotenoids."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The E. coli assays support activity on α-carotene, lutein, β-carotene, zeaxanthin, zeinoxanthin, and oxolutein-related substrates."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports formation of 4-keto-α-carotene, 4-ketolutein, echinenone, canthaxanthin, astaxanthin, and putative ketozeinoxanthin and keto-oxolutein."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states BKT ketolates β-ionone rings and discusses keto groups at C4/C4′ in products."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "BKT is directly responsible for forming the ketocarotenoid products rather than only affecting them indirectly."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is fair to call BKT a key enzyme, but the paper does not establish it as a 'key control step' experimentally and explicitly does not test rate limitation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are present: heterologous expression of full-length cDNA in carotenogenic E. coli, HPLC profiling, semiquantitative RT-PCR, and comparative pigment analyses."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These four summary points are all supported by Results and Discussion, with the caveat that the predictive statement about homologs is based on sequence mining plus inference rather than direct testing in all species."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "BKT as a carotenoid ketolase is supported, and extended C-termini/poly-Ala repeats in several homologs are discussed, but the exact label 'fatty acid hydroxylase-like' is not explicitly used in the paper."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports low BKT transcript in vegetative cells and much higher transcript level in 5-day zygospores."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes the zygospore association in C. reinhardtii and arabinose induction in E. coli."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Predicted chloroplast transit peptide is supported, and ER localization in zygospores is proposed in Discussion, but the proposed site is explicitly not directly proven in this paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows dark maturation at 22°C promotes ketocarotenoid accumulation, 9°C suppresses it, and norflurazon does not significantly block ketocarotenoid accumulation in zygospores."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Sequence mining from PhycoCosm is explicitly described, and there is indeed no separate omics submission accession for this study."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Antioxidant protection against lipid peroxidation in storage lipids is proposed in Discussion, but it is a hypothesis rather than directly demonstrated."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper argues that the single BKT gene likely explains both α- and β-derived ketocarotenoids in C. reinhardtii and V. carteri, that the full-length enzyme is active, and that C-terminal regulatory ideas remain speculative."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports BKT as promising for ketocarotenoid engineering and shows product profile depends on substrate availability, but the specific recommendation about 'stacking with precursor-supplying modules' is not stated."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.99.63",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper text."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 1,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_name": "CVDE",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CVDE is discussed in the context of Chlamydomonas reinhardtii."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is explicitly Chlamydomonas reinhardtii."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway model concerns C. reinhardtii zygospores."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Chlamydomonas reinhardtii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The inferred role is specifically discussed for zygospores."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CVDE is linked in the Discussion model to supplying zeaxanthin for astaxanthin formation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Astaxanthin is a carotenoid/ketocarotenoid."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The astaxanthin accumulation being discussed is in zygospores."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper proposes this role in Discussion, but CVDE itself was not directly tested or manipulated in Results."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1 legend explicitly expands CVDE as chlorophycean violaxanthin de-epoxidase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "Its function in the xanthophyll cycle is implied, and connection to ketocarotenoid biosynthesis is proposed, but not directly tested as a pathway role in this paper."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable inference from the Discussion model but not experimentally established."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "Upstream precursor-supplying role is only inferred, not directly shown by gene-specific data."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "CVDE by definition acts on violaxanthin, and the Discussion explicitly states zeaxanthin is generated from violaxanthin by CVDE."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly states zeaxanthin is generated from violaxanthin by CVDE; antheraxanthin is also consistent with the β-xanthophyll pool description."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes CVDE generating zeaxanthin from violaxanthin in the chlorophycean violaxanthin de-epoxidase step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents CVDE as supplying the precursor pool for astaxanthin, not directly catalyzing astaxanthin formation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The field says 'not established,' which matches the paper since no rate-limiting role was tested."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately states that the CVDE role is inferred from pigment time-course and pathway logic in Discussion rather than direct gene manipulation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary correctly reflects that CVDE's role is proposed from metabolite trends and not directly validated experimentally."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "Calling CVDE a xanthophyll cycle enzyme is generally correct, but the paper does not discuss its protein family/domain."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No direct interaction between CVDE and BKT is reported."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant inference concerns dark maturation of zygospores."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately notes that CVDE appears in the pathway model but is not a primary experimentally manipulated gene like BKT."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible application inference, but the paper does not explicitly discuss engineering CVDE for astaxanthin branch optimization."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "BKT",
+          "new_value": "NA",
+          "reason": "No direct interaction between CVDE and BKT is reported."
+        }
+      ],
+      "stats": {
+        "supported": 18,
+        "unsupported": 1,
+        "uncertain": 6
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 74,
+    "supported": 56,
+    "unsupported": 2,
+    "uncertain": 16,
+    "total_corrections": 2
+  }
+}

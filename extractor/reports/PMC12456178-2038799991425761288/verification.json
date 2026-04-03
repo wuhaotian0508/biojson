@@ -1,0 +1,380 @@
+{
+  "file": "MinerU_markdown_PMC12456178_2038799991425761288",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12456178_2038799991425761288.md",
+  "timestamp": "2026-03-31T21:53:48.705125",
+  "genes": [
+    {
+      "gene_name": "LCI2",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies the locus as Cre16.g673001_4532 (v6.1) and states that LCI2-specific transcripts are similar to model v5.6 Cre16.g673001.t2.1."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is on Chlamydomonas reinhardtii."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names Chlamydomonas reinhardtii."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutant and expression analyses were performed in Chlamydomonas."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental work was conducted in Chlamydomonas reinhardtii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the CLiP mutant was back-crossed against CC4533 (PL-1) and CRISPR mutants were generated in CC425 (PL-2)."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "LCI2 itself is not shown to direct synthesis of 16:1Δ3trans; the paper specifically states only the FAD4 splice product is responsible for 16:1Δ3trans. 'Lipid peroxidation-related membrane redox protection' is a function/phenotype, not a terminal metabolite."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Because the listed terminal metabolite for LCI2 is not faithfully supported as a metabolite product of LCI2, assigning the class 'fatty acid' is not supported for this gene."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that LCI2 recruits membrane-associated peroxidase activity and is linked to ROS protection/mitigation in photosynthetic membranes."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports chloroplast/thylakoid membrane association for LCI2 and states 16:1Δ3trans is in phosphatidylglycerol of chloroplast membranes, but that fatty acid localization pertains to FAD4 product rather than an LCI2 terminal metabolite."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show lci2 mutants have reduced membrane APX activity, altered fatty acid composition including decreased 18:2 in LCI2-disrupted lines, and increased sensitivity/oxidative damage under ROS-generating conditions."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point is reflected in Results: alternative splicing from the shared locus, higher LCI2 transcript accumulation especially at night/low CO2, reduced membrane APX in lci2 mutants but not fad4, APX1 membrane recruitment in E. coli, and altered stress/lipid phenotypes when LCI2 is lost."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states LCI2 has similarity to membrane APXs and to the C-termini of canonical plant thylakoid-bound APXs."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "LCI2 is described and experimentally interpreted as a membrane anchor associated with plastid/thylakoid membranes."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports LCI2 peaks 0.5–1 h after lights-on, is produced about 10× more than FAD4 at night and about 20× early in the night, and increases strongly under CO2 limitation."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "These same expression patterns were analyzed in Chlamydomonas cultures used for the study."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed factors appear in the paper: diurnal cycle, low CO2, mixotrophic growth, and DCMU treatment."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are described and used in Results/Methods for LCI2-related analyses."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "APX1 is the direct mechanistic protein tested for LCI2-dependent membrane recruitment in E. coli assays."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reanalyzes RNA-seq datasets from Strenkert et al. 2019, Brueggeman et al. 2012, Fang et al. 2012, and ChIP-seq data from Strenkert et al. 2022; no accession numbers are given in the text."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Results indicate LCI2 and FAD4 share a single TSS and promoter at the native locus."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows no obvious photoautotrophic growth defect under standard conditions, but reduced growth under DCMU and increased lipid peroxidation in mutants affecting LCI2/FAD4."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible application extrapolation, but the paper does not explicitly present breeding/engineering value as an experimentally supported conclusion."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The locus is shown to have promoter-associated H3K4me3 enrichment and H3K4me1 depletion consistent with a single TSS."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states LCI2 is not the desaturase, is an alternatively spliced product from the same locus as FAD4, and proposes that it recruits APX1 near FAD4."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "16:1Δ3trans fatty acid; lipid peroxidation-related membrane redox protection",
+          "new_value": "NA",
+          "reason": "LCI2 itself is not shown to direct synthesis of 16:1Δ3trans; the paper specifically states only the FAD4 splice product is responsible for 16:1Δ3trans. 'Lipid peroxidation-related membrane redox protection' is a function/phenotype, not a terminal metabolite."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "fatty acid",
+          "new_value": "NA",
+          "reason": "Because the listed terminal metabolite for LCI2 is not faithfully supported as a metabolite product of LCI2, assigning the class 'fatty acid' is not supported for this gene."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "APX1",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly lists CrAPX1 as Cre02.g087700.t1.2."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "APX1 discussed here is from Chlamydomonas reinhardtii."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly concerns Chlamydomonas reinhardtii APX1."
+        },
+        "Applied_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The direct recruitment assay for APX1 was performed in heterologous Escherichia coli BL21, not in Chlamydomonas. Listing only 'Chlamydomonas' as the applied species is therefore not faithful to the tested context."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The APX1 recruitment experiment was carried out in E. coli BL21, so 'Chlamydomonas reinhardtii' is not the applied experimental species for the core APX1 test."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "APX1 is an ascorbate peroxidase and is discussed in the context of ROS detoxification/peroxidase activity."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper proposes and supports that APX1 is recruited to membrane fractions by LCI2, i.e. the thylakoid/plastid membrane vicinity."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the paper's mechanistic conclusion that APX1 is the likely stromal APX recruited by LCI2 for membrane ROS mitigation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by the APX1 section and Fig. 4D."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "APX1 is explicitly identified as L-ascorbate peroxidase."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reasons APX1 is probably targeted to the chloroplast stroma and can be recruited to membranes by LCI2."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The core APX1 evidence comes from heterologous co-expression in E. coli."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are exactly those used for APX1-LCI2 recruitment assays."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "LCI2 is the directly tested recruitment partner of APX1."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The constructs were inserted into pDEST14 overexpression plasmids and expressed in E. coli."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a speculative application; the paper does not explicitly state APX1 as an engineering target."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed treats APX1 as a mechanistic interactor rather than the primary mutated lipid-metabolism gene, and the recruitment assay is central to the mechanism."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Applied_Species",
+          "old_value": "Chlamydomonas",
+          "new_value": "NA",
+          "reason": "The direct recruitment assay for APX1 was performed in heterologous Escherichia coli BL21, not in Chlamydomonas. Listing only 'Chlamydomonas' as the applied species is therefore not faithful to the tested context."
+        },
+        {
+          "field": "Applied_Species_Latin_Name",
+          "old_value": "Chlamydomonas reinhardtii",
+          "new_value": "NA",
+          "reason": "The APX1 recruitment experiment was carried out in E. coli BL21, so 'Chlamydomonas reinhardtii' is not the applied experimental species for the core APX1 test."
+        }
+      ],
+      "stats": {
+        "supported": 14,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "FAD4",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies the shared locus as Cre16.g673001_4532 (v6.1) and states FAD4-specific transcripts are similar to model v5.6 Cre16.g673001.t1.1."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "FAD4 is explicitly named Fatty Acid Desaturase4."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study concerns Chlamydomonas reinhardtii FAD4."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names Chlamydomonas reinhardtii."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional tests of FAD4 mutants were carried out in Chlamydomonas."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in Chlamydomonas reinhardtii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses CC4533-derived PL-1 and CC425-derived PL-2 backgrounds."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "FAD4 is studied as a plastid membrane fatty acid desaturase affecting phosphatidylglycerol-associated 16:1Δ3trans."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the trans fatty acid product is found exclusively in phosphatidylglycerol of chloroplast membranes, supporting this specialized branch description."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "FAD4 catalyzes a specialized downstream membrane lipid desaturation step producing 16:1Δ3trans."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies 16:0 as the precursor that increases in mutants lacking FAD4, supporting 16:0 as substrate/precursor."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly show FAD4 is required for 16:1Δ3trans production."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract and Results describe FAD4 as producing a 16-carbon trans double bond-containing fatty acid, specifically 16:1Δ3trans in chloroplast phosphatidylglycerol."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The study directly links FAD4 to formation of the target product 16:1Δ3trans."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "16:1Δ3trans is the direct lipid product assigned to FAD4 in the paper."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "16:1Δ3trans is a fatty acid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links FAD4 loss to oxidative stress phenotypes and discusses possible protective relevance, but the specific functional claim that this lipid feature is associated with membrane protection is partly interpretive rather than directly demonstrated."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract states the fatty acid is found exclusively in phosphatidylglycerol of chloroplast membranes."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed effects are shown in Results: loss of 16:1Δ3trans, increased 16:0, more lipid peroxidation, and reduced growth under DCMU stress."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point is directly supported by Results and figures."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states FAD4 contains the fully conserved lipid desaturase domain PF10520 and mentions high sequence identity including four transmembrane helices with Arabidopsis FAD4."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Because its product is in chloroplast phosphatidylglycerol and the locus is discussed in plastid membrane context, chloroplast/plastid membrane localization is supported."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states FAD4 peaks early in the day, is lower than LCI2, relatively more abundant in light, and does not respond strongly to low CO2."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "These expression observations were made in Chlamydomonas cultures used in the study."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed conditions are part of the study."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods were all used to validate FAD4 function and phenotypes."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "LCI2 is linked through shared locus and possible functional association, but direct protein-protein interaction is not shown. APX1 proximity is explicitly hypothesized, not demonstrated biochemically."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed reanalyzes published RNA-seq and ChIP-seq datasets without giving accession numbers in the main text excerpt."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Results indicate a shared endogenous promoter/single TSS for LCI2 and FAD4."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "FAD4 is clearly necessary for 16:1Δ3trans production, but the paper does not explicitly demonstrate or state it is rate-limiting."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a forward-looking application inference not explicitly established by the paper."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Shared promoter/TSS with H3K4me3 enrichment and H3K4me1 depletion is directly supported."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows no obvious standard photoautotrophic growth defect but increased lipid peroxidation and DCMU sensitivity when FAD4 is disrupted."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states only the FAD4 splice product is responsible for 16:1Δ3trans synthesis and does not provide any EC number."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 30,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 76,
+    "supported": 65,
+    "unsupported": 4,
+    "uncertain": 7,
+    "total_corrections": 4
+  }
+}

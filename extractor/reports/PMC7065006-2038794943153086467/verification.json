@@ -1,0 +1,441 @@
+{
+  "file": "MinerU_markdown_PMC7065006_2038794943153086467",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC7065006_2038794943153086467.md",
+  "timestamp": "2026-03-31T22:27:51.922929",
+  "genes": [
+    {
+      "gene_name": "Chitinase genes",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly list the four chitinase genes as TuG1812G0100002418, TuG1812G0200004053, TuG1812G0200004054 and TuG1812G0300003072."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The four chitinase genes were analyzed in einkorn wheat in this study."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments identifying and validating these genes were performed in Triticum urartu."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Transcriptome assays and qRT-PCR validations for the chitinase genes used the T. urartu accession G1812."
+        },
+        "Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "Direct expression analyses of the four chitinase genes were shown in einkorn wheat; common wheat was used only indirectly for TuACO3/TuMYB46L overexpression and total chitinase activity, not individual chitinase gene testing."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Triticum urartu is directly supported, but Triticum aestivum was not directly used for individual chitinase gene expression analysis."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "G1812 is directly supported; KN199 is only indirectly involved via transgenic lines measuring total chitinase activity, not the four specific genes."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to them as four chitinase genes; chitinase is a recognized pathogenesis-related protein class in the Discussion."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The study reports RNA-seq of G1812 leaves with/without Bgt and with/without ET treatment; no accession is provided in the paper text, so 'accession NA' is consistent."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "These chitinase genes are downstream defense genes and do not produce the terminal metabolite ethylene."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Assigning phytohormone ethylene as the terminal metabolite of the chitinase genes is not supported; they are not biosynthetic genes for ethylene."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Ethylene functions in defense signaling in the paper, but this field ties that function to the chitinase genes' own terminal metabolite, which is not directly applicable."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Leaf tissues are the assay site for ET/chitinase measurements, but the chitinase genes themselves are not linked to a metabolite accumulation site."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state that the four chitinase genes were upregulated in G1812 leaves by both Bgt infection and ET treatment, confirmed by qRT-PCR."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state that in T. urartu leaves expression of all four genes was repressed when TuACO3 was silenced and promoted when TuMYB46L was silenced."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly tests Bgt infection and exogenous ET treatment for these genes."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq, qRT-PCR, total chitinase enzyme assay, and analyses in TuACO3/TuMYB46L silenced or overexpression backgrounds are all described in Results."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports that these genes act downstream of the module and correlate with defense-associated chitinase activity, but it does not directly test individual chitinase genes for causal antifungal phenotypic effects."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No physical protein-protein interaction between the chitinase proteins and TuACO3 or TuMYB46L is shown; only downstream genetic relationships are inferred."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summarized points are directly supported by Fig. 7 and accompanying text, with the caveat that activity measurements are total chitinase activity rather than individual gene function."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible implication, but the paper does not explicitly propose these chitinase genes as breeding markers or engineering targets."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper treats them as downstream genes identified from transcriptomics and does not dissect the individual function of each gene separately."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "ethylene",
+          "new_value": "NA",
+          "reason": "These chitinase genes are downstream defense genes and do not produce the terminal metabolite ethylene."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "phytohormone",
+          "new_value": "NA",
+          "reason": "Assigning phytohormone ethylene as the terminal metabolite of the chitinase genes is not supported; they are not biosynthetic genes for ethylene."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "TuACO3; TuMYB46L (genetic downstream relationship)",
+          "new_value": "NA",
+          "reason": "No physical protein-protein interaction between the chitinase proteins and TuACO3 or TuMYB46L is shown; only downstream genetic relationships are inferred."
+        }
+      ],
+      "stats": {
+        "supported": 12,
+        "unsupported": 3,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_name": "TuACO3",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly identify TuACO3 as TuG1812G0600003491."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TuACO3 is from einkorn wheat in this study."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is explicitly Triticum urartu."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Core experiments on TuACO3 were performed in the T. urartu accession G1812."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TuACO3 was tested in both einkorn wheat and common wheat transgenic/silencing contexts."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study directly uses Triticum urartu and common wheat, i.e. Triticum aestivum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly uses G1812 and common wheat cultivar Kenong 199 (KN199)."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "TuACO3 is described as an ACC oxidase functioning in ethylene biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states ACO catalyzes the last step of ethylene biosynthesis, but does not explicitly mention the 'Yang cycle' terminology."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states ACO catalyzes the last/final step of ET biosynthesis."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The JSON misspells the enzyme name as '1-aminocyclopane-1-carboxylic acid oxidase'; the paper states '1-aminocyclopropane-1-carboxylic acid oxidase'."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided anywhere in the paper text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "ACC oxidase is supported, but 'Fe(II)/2-oxoglutarate-dependent oxygenase family' is not stated in the paper text."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states that ACO catalyzes the last step of ET biosynthesis and ACC is the precursor; conversion of ACC to ethylene is directly inferable."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "ACC is explicitly identified as the precursor in ET biosynthesis and substrate of ACO by context."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Ethylene is explicitly the biosynthetic product discussed for ACO function."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports that TuACO3 is critical for infection-induced ET increase and is the last step enzyme, but does not explicitly call it rate-limiting."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "TuACO3 is directly linked to ethylene production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Ethylene is treated throughout the paper as a phytohormone."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show ethylene promotes wheat defense against Bgt, including exogenous ET and ACC treatments increasing resistance."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "ET measurements were made from seedlings/leaf infection contexts; TuACO3 expression and pathogen phenotypes were analyzed in leaves."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "ACO directly forms the target product ethylene from ACC."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TuACO3 was induced after Bgt infection in G1812 and five other T. urartu accessions, with 24 hpi highlighted."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "In common wheat overexpression lines, ET production increased relative to controls; infection-induced expression/silencing effects in wheat ortholog are also shown."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Bgt infection, ET, ACC and AVG treatments are all directly examined in relation to TuACO3/ET-mediated defense."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly used in Results or Methods for TuACO3 functional validation."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Stable overexpression used the maize ubiquitin promoter via pHZ206, and transient assays used pUbi constructs."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "TuMYB46L is shown to bind the TuACO3 promoter and regulate TuACO3 transcription, but no protein-protein interaction with TuACO3 protein is demonstrated."
+        },
+        "Omics_Data": {
+          "verdict": "UNCERTAIN",
+          "reason": "RNA-seq of G1812 with/without Bgt and ET is supported, but TuACO3 itself is not presented as an RNA-seq target in the core Results section here; 'accession NA' is acceptable."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point is directly supported by the Results and corresponding figures."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Silencing lowers ET and increases susceptibility, while overexpression elevates ET and enhances defense."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the transgenic lines resembled WT in growth and development in the glasshouse."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper suggests the possibility of controlling powdery mildew by manipulating ET concentration, but does not explicitly advocate transgenic stacking or activation editing."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The common wheat ortholog TaACO3 (TraesCS6A02G325600), negative regulation by TuMYB46L, and downstream effects on chitinase genes/activity are all described."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Enzyme_Name",
+          "old_value": "1-aminocyclopane-1-carboxylic acid oxidase",
+          "new_value": "NA",
+          "reason": "The JSON misspells the enzyme name as '1-aminocyclopane-1-carboxylic acid oxidase'; the paper states '1-aminocyclopropane-1-carboxylic acid oxidase'."
+        },
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.17.4",
+          "new_value": "NA",
+          "reason": "No EC number is provided anywhere in the paper text."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 2,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "TuMYB46L",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly identify TuMYB46L as TuG1812G0500001166."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TuMYB46L is characterized from einkorn wheat."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is explicitly Triticum urartu."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Core experiments on TuMYB46L use the T. urartu accession G1812."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TuMYB46L was functionally tested in einkorn wheat and common wheat."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Triticum urartu and Triticum aestivum are directly involved."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "G1812 and KN199 are explicitly used."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies TuMYB46L as a MYB transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state it encodes a MYB TF carrying a putative R2R3 MYB domain."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states TuMYB46L was targeted to the nucleus in transient expression assays."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state TuMYB46L expression was strongly and rapidly decreased by Bgt infection."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Y1H, EMSA, ChIP-qPCR, and promoter-reporter assays support direct promoter binding and repression of TuACO3 transcription."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "TuACO3 is the directly tested regulatory target."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows TuMYB46L represses TuACO3 transcription by binding MYB46 cis-elements in its promoter."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The TuMYB46L-TuACO3 module is concluded to regulate ethylene biosynthesis."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support that downregulation of TuMYB46L is required for enhanced TuACO3 expression and ET accumulation after infection."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "TuMYB46L is linked through TuACO3 to regulation of ethylene content."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Ethylene is a phytohormone in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Ethylene is shown to promote defense against powdery mildew/Bgt."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "ET was measured in seedling/leaf infection contexts, consistent with this field."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state TuMYB46L was strongly and rapidly decreased in leaves after Bgt infection across six T. urartu accessions."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study shows pathogen-induced reduction in einkorn wheat and that overexpression in common wheat suppresses infection-induced ET increase."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Bgt infection is the direct factor regulating TuMYB46L in the paper."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are directly used for TuMYB46L in Results/Methods."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The field says 'TuACO3 promoter DNA' but is named Interacting_Proteins; the paper shows DNA binding, not protein interaction."
+        },
+        "Omics_Data": {
+          "verdict": "UNCERTAIN",
+          "reason": "RNA-seq datasets are present in the paper, but TuMYB46L itself is not presented as a core RNA-seq-identified DEG in the main Results; accession is not provided."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by the Results, including downstream chitinase effects."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Silencing TuMYB46L increases ET and resistance; overexpression decreases ET response and resistance."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "No obvious growth defects were reported for transgenic lines, and possible growth-defense tradeoffs are discussed as future considerations."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The notion of knockout or promoter editing is not explicitly proposed in the paper, though derepression logic is consistent with the findings."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Its relation to AtMYB46, the common wheat ortholog TaMYB46L (TraesCS5A02G101000), and effects on downstream chitinase genes/activity are all reported."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Stable overexpression used maize ubiquitin promoter, reporter assay used 35S effector constructs, and transient assays used pUbi constructs."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "TuACO3 promoter DNA",
+          "new_value": "NA",
+          "reason": "The field says 'TuACO3 promoter DNA' but is named Interacting_Proteins; the paper shows DNA binding, not protein interaction."
+        }
+      ],
+      "stats": {
+        "supported": 29,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 88,
+    "supported": 67,
+    "unsupported": 6,
+    "uncertain": 15,
+    "total_corrections": 6
+  }
+}

@@ -1,0 +1,522 @@
+{
+  "file": "MinerU_markdown_PMC3320592_2038799138543407110",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC3320592_2038799138543407110.md",
+  "timestamp": "2026-03-31T22:07:30.958614",
+  "genes": [
+    {
+      "gene_name": "MIG-21",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MIG-21 was identified from methanol-treated Nicotiana benthamiana SSH libraries and described as a novel EST/gene in N. benthamiana."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states the SSH libraries and MIG identification were from Nicotiana benthamiana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional assays for MIG-21 transient expression and methanol response were performed in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental species for MIG-21 assays is explicitly N. benthamiana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Methanol is the central volatile metabolite inducing MIG-21 expression."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Methanol is treated throughout the paper as a volatile organic compound/airborne volatile."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Methanol was measured in leaf headspace and discussed as emitted into intercellular air space/air."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show airborne methanol induces antibacterial resistance, increases plasmodesmata gating, and facilitates viral spread; MIG-21 is one methanol-inducible gene linked to the gating/viral effects."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states MIG-21 is a previously unidentified gene unrelated to known nucleotide sequences and encodes a protein with a repetitive amino acid sequence."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly gives novel EST FN432041 and GenBank accession GU128961 for MIG-21."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MIG-21 is methanol inducible and Figure 6 shows a wave of accumulation peaking after methanol exposure followed by attenuation."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 7 and related text show MIG-21 induction in methanol-treated plants and receiver plants exposed to wounded or PME-transgenic emitters."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These exact factors are tested: gaseous methanol, wounded neighboring plants, and PME-transgenic neighboring plants."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient MIG-21 expression increased 2xGFP movement and enhanced crTMV:GFP accumulation, supporting roles in Pd dilation/cell-to-cell transport and TMV reproduction."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods appear in Results/Methods: SSH identification, qRT-PCR, 2xGFP movement assay after agroinjection, and crTMV:GFP co-agroinjection with GFP fluorimetry."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Methods say pMIG-21 was made as a 35S-based binary vector in pBin19, supporting 35S use, but the exact phrase '35S constitutive promoter in pBin19 for transient expression' is inferential from vector construction rather than directly stated for this gene in Results."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "SSH cDNA libraries were constructed and MIG-21/EST FN432041 was identified from them and deposited in dbEST."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point matches Results: identification as methanol-inducible, induction in receivers, and functional enhancement of 2xGFP movement and crTMV:GFP accumulation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says MIG-21 is previously unidentified and notes its role in trafficking/gating remains unclear."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper concludes methanol/MIG induction enhances antibacterial resistance but also facilitates viral spread/TMV reproduction."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible interpretation but not a claim directly made or tested in the paper; the work does not discuss nutritional value or application recommendations in these terms."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 19,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "PME",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "PME is explicitly defined as pectin methylesterase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number 3.1.1.11 is given in the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly tests endogenous PME in N. benthamiana and also discusses/uses PME-transgenic tobacco with a fungal PME transgene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "N. benthamiana is explicit, but the combined statement including the fungal transgene is not captured by the Latin name field alone; the field value omits the fungal source for the transgene mentioned in text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PME-related experiments involve N. benthamiana and tobacco/PME-transgenic tobacco."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses Nicotiana benthamiana and Nicotiana tabacum in PME-related experiments."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The PME-transgenic tobacco line pro1 is explicitly named."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly describes pectin demethylation/cell wall methylester metabolism as the source of methanol emission."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a faithful description of the pectin demethylation branch discussed in the paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "PME is presented as the direct source step for methanol release from pectin demethylation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states PME-catalyzed demethylation releases methanol directly."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "PME acts on methyl-esterified pectin/cell wall pectin, as described."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly links pectin demethylation by PME to methanol release; demethylesterified pectin is implied by the reaction."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately paraphrases the reaction described in the Introduction/Discussion."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports PME as important/key for wound-induced methanol emission, but it does not rigorously establish PME as a rate-limiting step."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Methanol is the metabolite produced downstream of PME action and measured in the paper."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Methanol is treated as a VOC."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Methanol was measured in leaf headspace and discussed as emitted into air/intercellular space."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly support methanol as airborne signal inducing antibacterial resistance and associated with increased plasmodesmata gating and viral spread."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PME is explicitly a cell wall pectin methylesterase."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1A shows the 1.7-kb PME transcript was undetectable in intact leaves, induced by 1 h after Celite rubbing, increased by 8 h, and enhanced after TMV inoculation."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Wounded N. benthamiana leaves show induced PME; PME-transgenic tobacco constitutively overexpresses PME."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly describes PME as deposited in the cell wall/CW and acting there."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Leaf wounding, TMV inoculation, and cis-3-hexen-1-ol/GLV stimulation of PME-related methanol emission are all described."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Increased PME expression/activity is linked to elevated methanol emission and receiver antibacterial resistance."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all present: Northern blot/RNA gel blot, methanol quantification in water-drop and flow-through systems, transgenic overexpression, and bacterial growth assays."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "PMEi is discussed as likely suppressing PME enzymatic activity and is listed among MIGs."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper names the PME-transgenic line pro1 but does not report promoter details for that line here."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements are directly supported by the Results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed focuses on defense signaling, treats methanol as wound-induced volatile, and explicitly says PME is not a MIG because methanol treatment did not significantly alter PME mRNA."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports facilitation of TMV spread in neighbors and cites prior dwarf phenotype/altered CW metabolism for PME-transgenic plants."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable extrapolation, but it is not directly tested or proposed as an engineering strategy in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "3.1.1.11",
+          "new_value": "NA",
+          "reason": "No EC number 3.1.1.11 is given in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "BG",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "BG is explicitly identified as β-1,3-glucanase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number 3.2.1.39 is given in the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "BG was identified as a methanol-inducible gene in N. benthamiana."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly uses N. benthamiana for BG identification and testing."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional BG assays were performed in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "N. benthamiana is explicitly the assay species."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links BG to plasmodesmata gating and cites prior work, but it does not explicitly describe a 'callose/β-1,3-glucan turnover pathway' in these terms."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "Plasmodesmatal callose degradation is biologically plausible and supported by cited literature, but not directly demonstrated in this paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "BG is treated as a downstream methanol-inducible effector gene rather than a producer of methanol."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "BG affects methanol-associated phenotypes rather than directly producing methanol."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "As a β-1,3-glucanase this is plausible, but the paper does not directly test or state substrate specificity in the Results."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state 'shorter β-1,3-glucan oligosaccharides/glucose equivalents' as products."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is consistent with enzyme identity and cited literature, but the reaction itself is not directly assayed in this paper."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The field says not established, which matches the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Methanol is the inducer metabolite linked to BG expression."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Methanol is treated as a VOC."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Methanol was measured in headspace/air."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows methanol induces BG expression and links this to defense/viral movement phenotypes."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 identifies β-1,3-glucanase including vacuolar isoform/basic PR-2 protein."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 shows ~398-fold induction after 18 h methanol treatment, and Figure 6 shows prolonged elevated BG expression up to 5 days."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 7 shows induction in receiver plants exposed to wounded or PME-transgenic emitters, and methanol treatment induces BG."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed treatments are directly tested."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "BG expression enhanced 2xGFP movement and increased crTMV:GFP accumulation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "SSH, qRT-PCR, 2xGFP movement assay, and crTMV:GFP co-agroinjection/fluorimetry are all used."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Methods state pBG was a 35S-based binary vector in pBin19, but the exact promoter usage for all transient assays is inferential rather than explicitly restated in Results."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "BG was identified through SSH cDNA libraries."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements match the Results and Table 2/Figures 6, 7, 9, and 10."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "BG was selected as one of the most abundant MIGs for follow-up and is linked to trafficking/virus-favoring communication."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The data show increased viral spread/TMV reproduction associated with BG-related gating effects."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This application-oriented caution is not explicitly discussed in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "3.2.1.39",
+          "new_value": "NA",
+          "reason": "No EC number 3.2.1.39 is given in the paper."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "shorter β-1,3-glucan oligosaccharides/glucose equivalents",
+          "new_value": "NA",
+          "reason": "The paper does not state 'shorter β-1,3-glucan oligosaccharides/glucose equivalents' as products."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 2,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "NCAPP",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "NCAPP is explicitly named non-cell-autonomous pathway protein and linked to cell-to-cell movement/trafficking."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NCAPP was identified as a methanol-inducible gene in N. benthamiana."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states N. benthamiana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NCAPP functional assays were performed in N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "N. benthamiana is the assay species."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Methanol is the volatile inducing NCAPP expression."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Methanol is treated as a volatile organic compound."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Methanol was measured in leaf headspace/air."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support methanol as airborne wound signal inducing defense-related gene expression and altered cell-to-cell communication."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "NCAPP is explicitly identified as non-cell-autonomous pathway protein."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The text gives NCAPP GenBank accession FN432039."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 shows nearly 50-fold induction after 18 h methanol treatment and text says NCAPP had the highest level among BG and MIG-21 after 6 h."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 7 and text show induction in methanol-treated plants and in receiver plants exposed to wounded or PME-transgenic emitters."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These treatments are directly tested."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly links NCAPP to cell-to-cell movement/plasmodesmata gating in the methanol response context."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Airborne methanol from wounded or PME-overexpressing plants is the tested upstream signal."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "NCAPP transient expression increased 2xGFP movement, supporting positive regulation of cell-to-cell communication/Pd gating."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "While molecular targets are not pinpointed, the paper directly tests and supports impact on plasmodesmata transport capacity/cell-to-cell movement machinery."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The wording accurately reflects that NCAPP conditionally links methanol signaling to increased intercellular transport and viral spread."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "NCAPP enhanced cell-to-cell movement and crTMV:GFP accumulation after transient expression."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "SSH, qRT-PCR, 2xGFP assay, and crTMV:GFP co-agroinjection/fluorimetry are all documented."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Methods indicate a 35S-based pNCAPP construct in pBin19, but the exact promoter wording is not explicitly tied to every assay in Results."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "NCAPP was identified from SSH cDNA libraries."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary statements are directly supported by the Results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes NCAPP was represented by only three SSH clones but was highly inducible by qRT-PCR."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Enhanced viral spread/TMV reproduction is supported by the NCAPP co-expression experiments and overall model."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is an application extrapolation not directly discussed in the paper."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 25,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 110,
+    "supported": 93,
+    "unsupported": 3,
+    "uncertain": 14,
+    "total_corrections": 3
+  }
+}

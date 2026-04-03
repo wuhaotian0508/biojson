@@ -1,0 +1,1950 @@
+{
+  "file": "MinerU_markdown_PMC4935968_2038798749681098764",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC4935968_2038798749681098764.md",
+  "timestamp": "2026-03-31T22:19:16.821808",
+  "genes": [
+    {
+      "gene_name": "AtATR1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states a cytochrome P450 reductase partner from Arabidopsis thaliana (AtATR1) was used. 'Arabidopsis' is supported as the common genus-level name."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated as Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Engineered host throughout the study is yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated as Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state all engineered yeast strains were constructed in a haploid W303α background."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AtATR1 is included in strains reconstituting the pathway to noscapine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is described as an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Paper states noscapine is a potential anticancer medicine/drug and discusses noscapinoid derivatives, but does not describe noscapine itself as a 'noscapinoid precursor platform.' That added phrasing is not a paper-stated function."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Discussion state extracellular titres were measured and most metabolites, including noscapine, were found in the growth medium/culture medium."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AtATR1 was heterologously introduced into engineered yeast strains used in galactose-based assays."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "AtATR1 is identified as a cytochrome P450 reductase partner, but the paper does not state its subcellular localization or ER association for AtATR1 specifically."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "AtATR1 was co-expressed with CYP82Y1 and used broadly with plant P450s; strains in figures also include AtATR1 with CYP82X1 and CYP82X2. However direct physical interaction is not shown."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "AtATR1 was used in heterologous co-expression with plant P450s in yeast and pathway intermediates were detected by LC/MS, with key products confirmed by NMR."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper shows AtATR1 supported activity of CYP82Y1/CYP82X1/CYP82X2 in the reconstructed pathway, but its individual effect was not directly isolated as a tested variable."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly described as a cytochrome P450 reductase partner."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Assays used galactose as carbon source, 25 or 30 °C, and feeding with canadine or norlaudanosoline in strains containing AtATR1."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly says AtATR1 from A. thaliana was used because it was previously shown to function with diverse plant P450s. Calling it a 'necessary' auxiliary factor is somewhat interpretive but consistent with its role."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The three summary points match the paper at a high level: AtATR1 functioned with plant P450s, enabled CYP82Y1/X1/X2-containing pathway activity in yeast, and was present in noscapine-producing strains from canadine/norlaudanosoline."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable engineering implication, but the paper does not explicitly present AtATR1 in terms of 'application value' for broader pathway engineering."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Endoplasmic reticulum-associated P450 reductase",
+          "new_value": "NA",
+          "reason": "AtATR1 is identified as a cytochrome P450 reductase partner, but the paper does not state its subcellular localization or ER association for AtATR1 specifically."
+        }
+      ],
+      "stats": {
+        "supported": 15,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "PsTNMT",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsTNMT is from opium poppy."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper names PsTNMT as from Papaver somniferum."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was expressed in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Host is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify W303α background."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly named tetrahydroprotoberberine cis-N-methyltransferase from P. somniferum (PsTNMT)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "TNMT is clearly an N-methyltransferase, but the paper does not explicitly state the SAM-dependent family/domain wording."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PsTNMT is part of the noscapine pathway reconstruction."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "This wording is a high-level interpretation; the paper discusses conversion from protoberberine-derived intermediates toward noscapine but does not label a formal 'protoberberine alkaloid to phthalideisoquinoline alkaloid pathway' branch for PsTNMT."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "PsTNMT acts early, before CYP82Y1, in the reconstructed pathway from canadine."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states canadine, 2, is converted to N-methylcanadine, 3, by PsTNMT."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated as N-methylcanadine, 3."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly states PsTNMT converts canadine to N-methylcanadine by N-methylation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PsTNMT forms a pathway intermediate en route to noscapine."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper does not identify PsTNMT as rate-limiting or a key control step."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PsTNMT is used in full pathway reconstruction to noscapine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states noscapine is a potential anticancer medicine/drug."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Extracellular/culture medium titres were measured for pathway metabolites including noscapine."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsTNMT was heterologously expressed in engineered yeast strains."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Stepwise pathway reconstitution in yeast with LC/MS and NMR-verified downstream intermediates supports this gene's function in vivo."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "PsTNMT supplied N-methylcanadine for CYP82Y1 and enabled downstream intermediate and noscapine synthesis."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Assays used galactose medium, fed canadine or norlaudanosoline, and 25 or 30 °C conditions."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 3d/Methods indicate PGPD-PsTNMT-TCYC1 integration cassettes in some constructs, so GPD in some optimized constructs is supported."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states 16 heterologous plant enzymes were used for the full 14-step pathway; PsTNMT is among the plant enzymes used."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary statements are consistent with the Results and full pathway reconstruction."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible application statement, but the paper does not explicitly discuss PsTNMT in those engineering-value terms."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 24,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "CYP82Y1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82Y1 is from opium poppy."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "From Papaver somniferum."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expressed in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Host is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify W303α background."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly named 1-hydroxy-N-methylcanadine synthase from P. somniferum (CYP82Y1)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper lists CYP82Y1 among the cytochrome P450 monooxygenases."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82Y1 is part of noscapine biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "The branch wording is interpretive; paper does not formally name a 'protoberberine alkaloid oxidation branch.'"
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82Y1 acts early/upstream after PsTNMT."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states N-methylcanadine, 3, is hydroxylated by CYP82Y1."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated as 1-hydroxy-N-methylcanadine, 4."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated hydroxylation of N-methylcanadine to form 4."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "4 is an early pathway intermediate toward noscapine."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states synthesis of 4 was inefficient and limited by the CYP82Y1-catalysed step before optimization."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82Y1 is part of strains producing noscapine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper describes noscapine as a potential anticancer medicine/drug."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measured in culture medium/extracellular fraction."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper shows heterologous expression in yeast and states highest activity for CYP82Y1A from GPD or HXT7 at 25 °C. Inclusion of MSH N-terminus swap is accurate for CYP82Y1A."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Although CYP82Y1 is a plant P450, the paper does not explicitly state ER localization for CYP82Y1."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "AtATR1 was co-expressed as the reductase partner for CYP82Y1."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Promoter/N-terminal engineering in yeast, LC/MS metabolite profiling, and NMR verification of product 4 are all reported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper shows CYP82Y1 catalyses 4 production and strongly affects pathway flux."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "25 °C improved activity relative to 30 °C; galactose medium and fed canadine were used."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "GAL1, GPD and HXT7 were explicitly tested; other promoters were also tested, but these listed ones are correct."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly reports MSH N-terminus-swapped CYP82Y1A improved activity and also notes CYP82Y1 can produce off-pathway 1-hydroxycanadine (10) from canadine in strains lacking TNMT."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points match the Results, including the ~96.5 μM optimized titre."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Discussion states adding more heterologous P450s decreases conversion efficiency of each P450. This is a pathway-level statement, not CYP82Y1-specific, but still relevant."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper identifies CYP82Y1 as a bottleneck and optimizes it, supporting its importance for engineering flux."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Endoplasmic reticulum-associated P450",
+          "new_value": "NA",
+          "reason": "Although CYP82Y1 is a plant P450, the paper does not explicitly state ER localization for CYP82Y1."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "CYP82X2",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82X2 is from opium poppy."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "From Papaver somniferum."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expressed in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Host is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify W303α background."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly one of the cytochrome P450 monooxygenases."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Part of noscapine biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "The named branch is interpretive and not explicitly defined in the paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Acts after CYP82Y1 and before PsAT1, i.e. midstream."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states CYP82X2 converts 4 to 5."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated as 1,13-dihydroxy-N-methylcanadine, 5."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly states CYP82X2 catalyses the step subsequent to CYP82Y1, converting 4 to 5, consistent with hydroxylation at C13."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "5 is the precursor for acetylation by PsAT1 before secoberberine formation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper identifies CYP82X2 as a bottleneck; increased copy number raised 5 and noscapine titres strongly."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82X2 is part of the reconstructed pathway to noscapine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper describes noscapine as a potential anticancer medicine/drug."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine and intermediates were measured in culture medium/extracellularly."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states highest activity when CYP82X2 was expressed from HXT7 at 25 °C, and additional copies further increased activity."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly state ER localization for CYP82X2."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "AtATR1 was used as reductase partner with plant P450s including CYP82X2-containing strains."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast pathway reconstitution, promoter and copy-number optimization, LC/MS, and NMR verification of 5 are all reported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper shows CYP82X2 converts 4 to 5 and is a major control point for increasing noscapine output."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "25 °C, galactose medium, and fed canadine or norlaudanosoline were used in CYP82X2-containing strains."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "HXT7, GAL1 and GPD were tested/used for CYP82X2."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states increased CYP82X2 expression raised extracellular noscapine from 2.2 ± 0.3 to 14.8 ± 0.9 μM in canadine-fed strains and that CYP82X2 was one of two bottlenecks from norlaudanosoline."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These summary points are accurate and directly supported by the Results."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Discussion mentions general burden from multiple heterologous P450s, but this is not shown specifically for CYP82X2."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper strongly supports copy-number/promoter engineering of CYP82X2 as a prime target for improving production."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Endoplasmic reticulum-associated P450",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly state ER localization for CYP82X2."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "PsAT1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsAT1 is from opium poppy."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "From Papaver somniferum."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expressed in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Host is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify W303α background."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper refers to PsAT1 as an acetyl transferase, but does not explicitly name it 'Acetyltransferase 1' as a full enzyme name beyond the gene symbol PsAT1."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "Explicitly described as an acetyl transferase; 'acyltransferase' is close but not the exact wording used."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Part of noscapine biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "The stated subpathway wording is interpretive rather than explicitly named in the paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Acts after CYP82X2 and before CYP82X1, i.e. midstream."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states PsAT1 acetylates 5."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated as 1-hydroxy-13-O-acetyl-N-methylcanadine, 6."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly states PsAT1 acetylates the 13-hydroxy of 5 to form 6."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "6 is the immediate substrate for CYP82X1 scaffold rearrangement."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper does not identify PsAT1 as rate-limiting; 'not established' fits."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PsAT1 is part of noscapine-producing pathway strains."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper describes noscapine as a potential anticancer medicine/drug."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measured in culture medium/extracellular fraction."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states expression of PsAT1 from the GPD promoter in the optimal 5-producing strain led to 6 production."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast co-expression plus LC/MS and NMR confirmation of 6 are reported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper supports that PsAT1 specifically acetylates 5 and that this precedes efficient CYP82X1 function."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "25 °C, galactose medium, fed canadine or norlaudanosoline apply to PsAT1-containing assays."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "GPD is explicitly reported for PsAT1 in optimized strains."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly states acetylation was highly specific toward 5 and 6 was the only detectable acetylated product."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by the Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable implication, but the paper does not explicitly frame PsAT1 with that engineering-value wording."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "CYP82X1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82X1 is from opium poppy."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "From Papaver somniferum."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expressed in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Host is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify W303α background."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly one of the cytochrome P450 monooxygenases."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Part of noscapine biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "Secoberberine-forming branch is an accurate interpretation, but not a formal paper label."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Acts mid-to-downstream at the branch-switch/scaffold-conversion stage."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly shows CYP82X1 acts on 6 to form 7 and promiscuously on 4 to form 5′."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly identifies 7 as 4'-O-desmethyl-3-O-acetylpapaveroxine and 5′ as 4'-O-desmethylmacrantaldehyde."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly states CYP82X1 catalyses structural conversion from protoberberine scaffold of 6 to secoberberine scaffold of 7, and also forms 5′ from 4 due to promiscuity."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "7 is a direct secoberberine precursor for final steps toward noscapine."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper optimized CYP82X1 by promoter and shows promoter sensitivity for 7 production, but does not declare it rate-limiting overall."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82X1 is part of the reconstructed noscapine pathway."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper describes noscapine as a potential anticancer medicine/drug."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measured extracellularly/in culture medium."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper reports highest 5′ production with PGK1 at 25 °C and highest 7 production with ADH1, CYC1 or HXT7 at 25 °C."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Paper does not explicitly state ER localization for CYP82X1."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "AtATR1 served as the reductase partner in CYP82X1-containing strains."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Stepwise yeast reconstitution, promoter optimization, LC/MS, and NMR verification of both 5′ and 7 are reported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper shows CYP82X1 performs the key scaffold rearrangement enabling downstream conversion to narcotoline and noscapine."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "25 °C, galactose medium, and fed canadine were used for the main CYP82X1 assays."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "GAL1, PGK1, ADH1, CYC1 and HXT7 were tested/used for CYP82X1."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly states NMR established the structure of 7, that PsAT1 is required for efficient CYP82X1-mediated noscapine synthesis, and that spontaneous cyclization from 7 to 8 was observed."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper shows promoter requirements differ for off-pathway versus native activities, supporting this statement."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper discusses accessibility of rare secoberberines via the yeast platform; this engineering value for CYP82X1 is well supported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Endoplasmic reticulum-associated P450",
+          "new_value": "NA",
+          "reason": "Paper does not explicitly state ER localization for CYP82X1."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "PsCXE1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsCXE1 is from opium poppy."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "From Papaver somniferum."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expressed in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Host is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify W303α background."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Paper refers to PsCXE1 as the carboxylesterase encoded in the cluster; 'Carboxylesterase 1' is an expanded naming not explicitly given, though consistent with the gene symbol."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly described as a carboxylesterase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Part of noscapine biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "The 'late secoberberine conversion module' wording is interpretive, not a formal paper term."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Acts in the downstream late part of the pathway after 7 formation."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "Data indicate PsCXE1 acts on 7 and that 7 is likely a native substrate, but the paper notes uncertainty because the m/z 402 peak could contain both 6′ and 8."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "Paper says expression of PsCXE1 led to synthesis of 8 with MS/MS matching narcotolinehemiacetal, but they could not purify it for NMR and do not fully exclude mixed identity."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This carefully reflects the paper: PsCXE1 facilitates conversion of 7 to an m/z 402 intermediate consistent with narcotolinehemiacetal and likely enhances cyclization/deacetylation, but exact structure remains not fully proven."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "8 is treated as the immediate precursor for PsSDR1-mediated narcotoline formation, though some uncertainty remains around the exact m/z 402 species."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states PsSDR1 is much more efficient than PsCXE1 and removing PsCXE1 dramatically decreases but does not abolish 9 formation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PsCXE1 is part of full pathway reconstruction to noscapine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper describes noscapine as a potential anticancer medicine/drug."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measured in culture medium/extracellular fraction."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states PsCXE1 was expressed in 7-producing strains downstream of strong promoters PYK1 and GPD."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "PsCXE1 and PsSDR1 act sequentially in the late pathway, but direct interaction is not shown."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast expression in 7-producing strains, LC/MS detection of 8, and with/without PsCXE1 effects on 9 are reported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper supports that PsCXE1 enhances formation of the m/z 402 intermediate and promotes downstream 9 production."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "25 °C, galactose medium, fed canadine were used in these assays."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "PYK1 and GPD are explicitly stated."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly states 8 could not be purified for NMR, 7 cyclizes spontaneously, PsCXE1 increases this rate, and low efficiency limited accumulation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These summary points closely match the Results, while preserving the spontaneous background cyclization observation."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Low efficiency/incomplete conversion limiting flux is supported by the low 8 titre and comparison with PsSDR1."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Reasonable engineering implication, but the paper does not explicitly present PsCXE1 as a tunable target in those terms."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 22,
+        "unsupported": 0,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_name": "PsSDR1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsSDR1 is from opium poppy."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "From Papaver somniferum."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expressed in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Host is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify W303α background."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper describes PsSDR1 as the noscapine synthase encoded in the cluster and also as a short-chain dehydrogenase/reductase. The combined label given here is consistent with the text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly described as a short-chain dehydrogenase/reductase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Part of noscapine biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "Late oxidation module is an interpretation, not a formal term used in the paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper discusses PsSDR1 as one of the final two steps in yeast and possibly final in planta, so 'terminal or penultimate depending on route' is supported."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "Paper supports PsSDR1 converts the m/z 402 intermediate interpreted as narcotolinehemiacetal (8) to narcotoline, but exact identity of 8 was not fully NMR-confirmed."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated and NMR-confirmed as narcotoline, 9."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states PsSDR1 catalyses conversion of 8 to narcotoline, i.e. dehydrogenation/oxidation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Narcotoline is the immediate precursor of noscapine."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper does not call PsSDR1 rate-limiting and explicitly indicates it is more efficient than PsCXE1."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PsSDR1 is part of the pathway to noscapine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper describes noscapine as a potential anticancer medicine/drug."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measured in culture medium/extracellular fraction."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states only PsSDR1 is enriched in laticifers among noscapine pathway enzymes."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsSDR1 was expressed in engineered yeast strains producing 8 or related m/z 402 intermediates."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "PsSDR1 acts sequentially with PsCXE1 in the pathway, but no direct interaction is shown."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast co-expression with upstream enzymes, LC/MS detection, and NMR verification of narcotoline production are reported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper shows PsSDR1 efficiently converts 8 to 9 and drives flux toward final methylation."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "25 °C, galactose medium, fed canadine or norlaudanosoline were used in strains containing PsSDR1."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly proposes PsSDR1 and PsMT2/PsMT3 as the final two steps in yeast, while plant ordering may differ."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by the Results and Discussion."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Reasonable implication, but the paper does not explicitly frame PsSDR1 in that engineering-value language."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 24,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "PsMT1 (PsS9OMT)",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsMT1/PsS9OMT is described as from P. somniferum (opium poppy)."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies the source as Papaver somniferum."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Genes were introduced into yeast strains for pathway reconstruction."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is explicitly Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state all engineered yeast strains were constructed in haploid W303α background."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state PsMT1 is the scoulerine 9-O-methyltransferase (S9OMT)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PsMT1 is one of the methyltransferases; as an O-methyltransferase using SAM this is consistent with the text, though SAM dependence is not spelled out for PsMT1 specifically here."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PsMT1 is used in the noscapine biosynthetic route from norlaudanosoline/canadine to noscapine."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PsMT1 functions in the upstream precursor module before canadine in the extended pathway."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Its role is upstream of canadine and downstream noscapine-cluster reactions."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Scoulerine is explicitly named as the substrate for PsMT1/S9OMT."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says PsMT1 converts scoulerine toward canadine and calls it scoulerine 9-O-methyltransferase, but the specific product name 'tetrahydrocolumbamine / 9-O-methylscoulerine' is not explicitly stated in this paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states PsMT1 catalyses conversion of scoulerine as the scoulerine 9-O-methyltransferase, i.e. methylation at the 9-O position en route to canadine."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PsMT1 provides upstream precursor flux into the downstream noscapine pathway from norlaudanosoline."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state 'CYP82X2 and PsS9OMT are enzymes associated with two bottleneck points in the pathway' in the norlaudanosoline-to-noscapine system."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The terminal product measured is noscapine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is described as an alkaloid/phthalideisoquinoline alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is described as a potential anticancer drug/medicine."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly reports extracellular titre and medium analysis of noscapine."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsS9OMT/PsMT1 was expressed in the extended strains synthesizing noscapine from norlaudanosoline (CSYN16/18 context)."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The extended pathway was assembled in yeast and increased PsS9OMT expression raised noscapine titre from norlaudanosoline."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Increasing PsS9OMT expression improved final noscapine production, indicating enhanced upstream flux."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The norlaudanosoline assay used 2 mM norlaudanosoline, 25 °C, and galactose-containing medium."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies PsS9OMT together with CYP82X2 as pathway bottlenecks in the full route from norlaudanosoline."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary matches the paper: PsMT1/PsS9OMT is the upstream S9OMT, and increasing its expression improved noscapine titre in the extended pathway."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The results support PsS9OMT as an engineering target to improve microbial noscapine production."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 25,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "Ps6OMT",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Ps6OMT is from opium poppy/P. somniferum."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Papaver somniferum."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Ps6OMT was expressed in yeast strains."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify W303α background for engineered strains."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Ps6OMT is described as a norcoclaurine 6-O-methyltransferase from P. somniferum."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "As an O-methyltransferase, assignment to a SAM-dependent O-methyltransferase family is consistent with the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Ps6OMT is used both in the upstream benzylisoquinoline module and as alternative terminal methylation partner in noscapine reconstruction."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses Ps6OMT in the upstream precursor supply module and as an alternative partner with PsMT2 for final methylation."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It is used upstream in the extended pathway and also in an alternative terminal activity with PsMT2."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not directly test or state the native upstream substrate here; it does support activity on narcotoline when paired with PsMT2. 'Norcoclaurine-related upstream substrate' is background knowledge not directly shown here."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "Noscapine production with PsMT2/Ps6OMT is supported, but the specific upstream product in the precursor pathway is not explicitly demonstrated in this paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows Ps6OMT can replace PsMT3 with PsMT2 to convert narcotoline to noscapine in yeast, and it is included in the upstream extension from norlaudanosoline."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Ps6OMT contributes both to upstream precursor supply and, with PsMT2, directly to final noscapine formation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish Ps6OMT as rate-limiting."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant terminal metabolite is noscapine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is described as a potential anticancer drug."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine was measured in growth medium/extracellular titre."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Ps6OMT was expressed in full-pathway strains from norlaudanosoline and tested with PsMT2 in 9-producing yeast strains."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports functional interaction/heterodimer formation between Ps6OMT and PsMT2."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "Yeast co-expression and purified PsMT2/Ps6OMT heterodimer are supported, but the paper does not clearly present direct in vitro LC/MS product data in the main text figure for Ps6OMT as fully as for PsMT2/PsMT3; it refers to Supplementary Fig. 11."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Ps6OMT can act as an alternative partner with PsMT2 for final narcotoline methylation and is used in upstream pathway assembly."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "UNCERTAIN",
+          "reason": "25 °C and galactose medium are supported; 'fed norlaudanosoline or narcotoline-producing context' is partly inferential because the 9-producing strains are generated from canadine feeding rather than direct narcotoline feeding."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says activity on narcotoline for 6OMT was unexpected and that Tf6OMT could not substitute, indicating uniqueness of the P. somniferum variant."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary matches the results: Ps6OMT can replace PsMT3 with PsMT2 in yeast, this activity is unique to the poppy variant, and Ps6OMT was used in the extended pathway."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states in vitro conversion of narcotoline to noscapine is lower for PsMT2/Ps6OMT than for PsMT2/PsMT3 despite similar yeast titres."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The data support Ps6OMT as an alternative enzyme module for pathway design."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 24,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "Ps4'OMT",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Ps4'OMT is described as from P. somniferum."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species name Papaver somniferum is explicitly given."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Ps4'OMT was expressed in yeast strains."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods list W303α as the background of all engineered strains."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names it 3'-hydroxy-N-methylcoclaurine-4'-O-methyltransferase from P. somniferum."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "As an O-methyltransferase, classification as SAM-dependent O-methyltransferase is consistent."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is part of the upstream benzylisoquinoline pathway used to feed noscapine biosynthesis from norlaudanosoline."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It belongs to the precursor supply module in the extended pathway."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Ps4'OMT is only used in the upstream module before canadine."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme name itself specifies 3'-hydroxy-N-methylcoclaurine as substrate."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact product is not explicitly named in this paper, though it is inferable from the enzyme name."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme name directly supports 4'-O-methylation of 3'-hydroxy-N-methylcoclaurine in upstream precursor formation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Its role is to supply upstream precursor flux toward noscapine."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "No rate-limiting role is established for Ps4'OMT in this paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The final product in the engineered pathway is noscapine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is described as a potential anticancer drug."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine titres are reported in medium/extracellular space."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Ps4'OMT is listed among genes expressed in the extended strains from norlaudanosoline."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Its support comes from inclusion in the full pathway strains that produced noscapine from norlaudanosoline."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not isolate Ps4'OMT's individual effect; only its inclusion in a productive strain is shown."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant assay conditions were 2 mM norlaudanosoline feeding, 25 °C, and galactose."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Ps4'OMT is only mentioned in the extended pathway from norlaudanosoline and not in the stepwise canadine-fed reconstitution."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately reflects that Ps4'OMT was included in the upstream module and not individually dissected."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Its inclusion in the complete pathway supports utility as an upstream methylation module."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 24,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "PsCNMT",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsCNMT is from opium poppy/P. somniferum."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Papaver somniferum is explicitly given."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsCNMT was expressed in yeast strains."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied host is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "W303α is the background for all engineered yeast strains."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names coclaurine N-methyltransferase from P. somniferum (PsCNMT)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "As an N-methyltransferase, assignment to SAM-dependent N-methyltransferase family is consistent with the named enzyme type."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PsCNMT is part of the upstream benzylisoquinoline pathway used to feed noscapine biosynthesis from norlaudanosoline."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is used in the precursor supply module."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Its role is upstream in precursor formation, before canadine/noscapine-cluster reactions."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper names the enzyme coclaurine N-methyltransferase, implying coclaurine substrate, but does not explicitly state 'coclaurine-related intermediate' in the Results."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact product is not explicitly described in this paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme name supports an upstream N-methylation step in precursor formation toward noscapine."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PsCNMT supplies precursor flux for noscapine production from norlaudanosoline."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish PsCNMT as rate-limiting."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant end product is noscapine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is presented as a potential anticancer drug."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine was quantified in culture medium."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsCNMT was expressed in the extended pathway strains from norlaudanosoline."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Support comes from its inclusion in multi-enzyme strains that produced noscapine from norlaudanosoline."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "Its individual effect was not directly tested or quantified in this paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant conditions were 2 mM norlaudanosoline, 25 °C, galactose."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "It was used in full pathway assembly and not individually validated, matching the paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes that PsCNMT was part of the precursor module and not individually dissected here."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Its use in the successful complete pathway supports engineering relevance."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "PsBBE",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsBBE is from P. somniferum."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Papaver somniferum is explicitly indicated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsBBE was expressed in yeast strains."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify W303α background."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names berberine bridge enzyme from P. somniferum (PsBBE)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Classification as berberine bridge enzyme family oxidase is consistent with the enzyme name, though family wording is not elaborated in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PsBBE is part of the upstream benzylisoquinoline pathway feeding noscapine biosynthesis from norlaudanosoline."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Its role is in the upstream bridge-forming/scoulerine-forming module."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It acts upstream before canadine and noscapine formation."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly state the substrate for PsBBE in this study; 'reticuline-like intermediate' is background inference."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact product is not explicitly stated in the Results of this paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme name and pathway context support berberine bridge formation en route to scoulerine/canadine precursors, but this is not directly assayed here."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PsBBE contributes upstream precursor flux to final noscapine synthesis from norlaudanosoline."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "No bottleneck or control-step claim is made for PsBBE in this paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The end metabolite is noscapine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is described as a potential anticancer drug."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Extracellular/culture-medium noscapine titres were measured."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsBBE was expressed in the extended strains from norlaudanosoline."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Its support derives from inclusion in the extended multi-enzyme pathway that produced noscapine from norlaudanosoline."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The individual contribution of PsBBE was not directly dissected in this paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The extended pathway assay used 2 mM norlaudanosoline, 25 °C, galactose."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper connects the upstream canadine pathway to previous engineering work; PsBBE was included but not individually studied."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary matches the paper's level of support: included in the upstream module enabling noscapine from norlaudanosoline, not individually analyzed."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Its inclusion in successful full pathway reconstruction supports engineering value."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "CjCAS",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CjCAS is explicitly from Coptis japonica."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names Coptis japonica."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CjCAS was expressed in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "All engineered strains were in W303α background."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "CAS is identified as canadine synthase; CjCAS is the Coptis japonica enzyme used in the extended pathway."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CAS is a cytochrome P450 monooxygenase in this pathway context; this is consistent with prior description of CAS/CYP719A21 and use with AtATR1."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CjCAS functions in upstream formation of canadine for noscapine precursor biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is part of the canadine formation module upstream of the noscapine gene-cluster steps."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Its role is upstream, producing canadine before downstream noscapine-pathway enzymes act."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact substrate name '9-O-methylscoulerine/tetrahydrocolumbamine' is not explicitly stated in this paper for CjCAS, though CAS function toward canadine is established contextually."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "CjCAS is used specifically to produce canadine in the extended pathway."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports CAS as converting the methylated scoulerine intermediate to canadine, but does not explicitly describe 'methylenedioxy bridge formation' for CjCAS in this study."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CjCAS supplies the direct precursor canadine for the downstream noscapine pathway."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "No rate-limiting role is established for CjCAS in this paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The final product measured is noscapine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is described as a potential anticancer drug."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is measured in culture medium/extracellular titre."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CjCAS is listed among enzymes expressed in the extended yeast strains synthesizing noscapine from norlaudanosoline."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "As a P450, ER association is biologically plausible, but the paper does not explicitly state CjCAS subcellular localization."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "AtATR1 is co-expressed in the extended strains and serves as the CPR partner for plant P450s in yeast; interaction is reasonably supported at the functional level."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Support comes from inclusion in full pathway strains producing noscapine from norlaudanosoline."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CjCAS provides canadine needed to connect the upstream module to the downstream noscapine pathway, as inferred from pathway design and productive strains."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The assay conditions were 2 mM norlaudanosoline, 25 °C, galactose induction medium."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes use of CAS from Coptis japonica in the extended pathway rather than the poppy CAS."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary matches the paper: CjCAS linked the upstream route to the canadine-fed module and functioned in the extended pathway with AtATR1."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The discussion mentions increasing total P450 load can reduce conversion efficiency, but it does not specifically attribute this tradeoff to CjCAS."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Use of CjCAS in the successful modular assembly supports engineering value."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 25,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "PsMT2",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsMT2 is from opium poppy/P. somniferum."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Papaver somniferum is explicitly identified."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsMT2 was heterologously expressed in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied host is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "All engineered strains were in W303α."
+        },
+        "Regulator_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "PsMT2 is an enzyme, not described as a regulator per se. The heterodimeric terminal enzyme complex component part is supported, but 'regulator' wording is not used in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PsMT2 is an O-methyltransferase; plant O-methyltransferase family description is supported."
+        },
+        "Regulation_Mode": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows terminal pathway methylation via heterodimeric enzyme complex, but not as 'regulation mode' terminology."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "PsMT2 with PsMT3 catalyses the final 4'-O-methylation step of noscapine biosynthesis."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows narcotoline is methylated to noscapine by the PsMT2/PsMT3 complex; PsMT2 can also pair with Ps6OMT."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper provides yeast, in vitro, western blot, and SEC evidence that PsMT2 forms a functional heterodimer with PsMT3; it also can pair with Ps6OMT."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "PsMT3 and Ps6OMT are supported interaction/complex partners."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The final product is noscapine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is described as a potential anticancer drug."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine was quantified in culture medium."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsMT2 was expressed in narcotoline-producing yeast strains and alone showed no conversion of narcotoline to noscapine."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast co-expression, purified protein assays, SDS-PAGE/western blot, and SEC are all reported for PsMT2/PsMT3."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "PsMT2 is required as one subunit of the functional heterodimer producing noscapine."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports PsMT2 as essential within the heterodimer catalysing the final methylation to noscapine."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast assays used 25 °C, galactose medium, in 9-producing/narcotoline-producing background."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly contrasts previous assignment of PsMT2 as S9OMT with current evidence showing no solo activity on narcotoline and support for heterodimeric terminal methylation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by the Results."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows PsMT2 alone is inactive on narcotoline, so function depends on partner enzyme and standalone annotation can mislead."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support deploying PsMT2 with PsMT3 or Ps6OMT rather than alone for final-step engineering."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "PsMT3",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsMT3 is from opium poppy/P. somniferum."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Papaver somniferum is explicitly given."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsMT3 was expressed in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify W303α background."
+        },
+        "Regulator_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "As with PsMT2, PsMT3 is an enzyme component of a heterodimer, but 'regulator' is not terminology used in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PsMT3 is an O-methyltransferase and is described as sharing high sequence similarity with Ps6OMT."
+        },
+        "Regulation_Mode": {
+          "verdict": "UNCERTAIN",
+          "reason": "Terminal methylation via heterodimeric enzyme complex is supported, but not as a regulation mode per se."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "PsMT3 with PsMT2 catalyses the final 4'-O-methylation step to noscapine."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "Narcotoline is the substrate for the PsMT2/PsMT3 complex."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports formation of a functional PsMT2/PsMT3 heterodimer."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "PsMT2 is the demonstrated interaction partner."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The final metabolite is noscapine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine is described as a potential anticancer drug."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Noscapine accumulation was measured in culture medium."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsMT3 was heterologously expressed in 9-producing yeast strains and alone was inactive on narcotoline."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast co-expression, purified heterodimer assay, western blot, and SEC are explicitly reported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "PsMT3 acts with PsMT2 to produce noscapine and alone cannot catalyse the final step."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The active final-step O-methyltransferase requires PsMT3 as partner with PsMT2."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant yeast assays were performed at 25 °C with galactose in a narcotoline-producing background."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states high sequence similarity to Ps6OMT and shows heterodimer-specific activity absent from individual enzymes."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three points are directly supported by the Results."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Partner dependence is supported because PsMT3 alone is inactive and only functions with PsMT2."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results support co-deploying PsMT3 with PsMT2 for efficient terminal methylation."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 429,
+    "supported": 378,
+    "unsupported": 4,
+    "uncertain": 47,
+    "total_corrections": 4
+  }
+}

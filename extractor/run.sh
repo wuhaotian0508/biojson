@@ -13,6 +13,8 @@
 #   FORCE_RERUN=1 bash extractor/run.sh       # force re-run
 #
 # ═══════════════════════════════════════════════════════════
+#nohup bash extractor/run.sh pipeline 2>&1 | tee extractor/reports/pipeline_run_$(date +%Y%m%d_%H%M%S).md &
+
 
 set -euo pipefail
 
@@ -31,14 +33,14 @@ fi
 
 # ─── Directory config ────────────────────────────────────
 export MD_DIR="${MD_DIR:-${EXTRACTOR_DIR}/input}"
-export JSON_DIR="${JSON_DIR:-${EXTRACTOR_DIR}/output}"
+export JSON_DIR="${JSON_DIR:-${BASE_DIR}/rag/data}"
 export REPORTS_DIR="${REPORTS_DIR:-${EXTRACTOR_DIR}/reports}"
 export TOKEN_USAGE_DIR="${TOKEN_USAGE_DIR:-${EXTRACTOR_DIR}/reports/token-usage}"
 export PROCESSED_DIR="${PROCESSED_DIR:-${MD_DIR}/processed}"
 
 # ─── Prompt/Schema ───────────────────────────────────────
-export PROMPT_PATH="${PROMPT_PATH:-${EXTRACTOR_DIR}/prompts/nutri_gene_prompt_v4.txt}"
-export SCHEMA_PATH="${SCHEMA_PATH:-${EXTRACTOR_DIR}/prompts/nutri_gene_schema_v4.json}"
+export PROMPT_PATH="${PROMPT_PATH:-${EXTRACTOR_DIR}/prompts/nutri_gene_prompt_v5.txt}"
+export SCHEMA_PATH="${SCHEMA_PATH:-${EXTRACTOR_DIR}/prompts/nutri_gene_schema_v5.json}"
 
 # ─── Model ───────────────────────────────────────────────
 export MODEL="${MODEL:-Vendor2/Claude-4.6-opus}"
@@ -50,7 +52,7 @@ export FALLBACK_BASE_URL="${FALLBACK_BASE_URL:-}"
 export FALLBACK_MODEL="${FALLBACK_MODEL:-}"
 
 # ─── Concurrency ─────────────────────────────────────────
-export MAX_WORKERS="${MAX_WORKERS:-3}"
+export MAX_WORKERS="${MAX_WORKERS:-20}"
 
 # ─── Run mode ────────────────────────────────────────────
 MODE="${1:-pipeline}"

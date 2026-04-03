@@ -1,0 +1,2182 @@
+{
+  "file": "MinerU_markdown_PMC12675981_2038799590873927694",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12675981_2038799590873927694.md",
+  "timestamp": "2026-03-31T22:03:03.040087",
+  "genes": [
+    {
+      "gene_name": "LHP1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism is Arabidopsis, specifically Arabidopsis thaliana."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly stated throughout the paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly uses Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is explicitly stated as the wild type/ecotype background."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "LHP1 is described as an essential component of the PRC2 complex that binds H3K27me3, but the exact phrase 'LIKE HETEROCHROMATIN PROTEIN 1; PRC2-associated chromatin protein' is not given."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly uses lhp1-4 loss-of-function, 35S::LHP1/lhp1-4 complementation/overexpression, UHPLC GSL profiling, qRT-PCR, ChIP-qPCR, and public ChIP-seq reanalysis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results sections 2.1 and 2.4 explicitly show that lhp1-4 increases aliphatic and indolic GSLs and that 35S::LHP1/lhp1-4 restores GSL levels and represses pathway gene expression."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The phenotype is linked directly to glucosinolates."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Glucosinolates are the metabolite class studied."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measurements were made in 2-week-old seedlings; the paper states seedlings were used for GSL extraction and profiling."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly state nuclear localization for LHP1 in this study."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses wounding and 2-week-old seedlings under long-day conditions."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "CLF and SWN are discussed as PRC2 components with LHP1, and Discussion mentions LHP1 can interact with PRC1 components citing prior studies, but direct interaction evidence is not shown here."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states LHP1 binds H3K27me3-marked chromatin and is required for proper H3K27me3 enrichment at GSL pathway genes."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq GEO accession GSE239725 is explicitly given; public ChIP-seq reanalysis and PRJNA305274/PRJNA301697 for active histone marks are explicitly mentioned."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point is directly supported by Results sections 2.1, 2.3, 2.4, and 2.7."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the paper's focus on epigenetic repression of GSL metabolism by PRC2/LHP1 rather than single-enzyme biochemistry."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The Discussion mentions crop resilience and breeding strategies generally, but does not specifically validate LHP1 as an engineering target; this is a forward-looking inference."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly state nuclear localization for LHP1 in this study."
+        }
+      ],
+      "stats": {
+        "supported": 15,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "CLF",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All analyses are in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the experimental species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the wild type background used for comparisons."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CLF is explicitly described as one of the major H3K27 methyltransferase genes in the PRC2 complex."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly uses public ChIP-seq comparison of Col-0 and clf;swn mutant backgrounds to assess H3K27me3 occupancy."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows H3K27me3 depletion on GSL genes in clf;swn, supporting a role in repression, but CLF was not independently tested for GSL metabolite phenotypes."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CLF is discussed in relation to repression of glucosinolate pathway genes."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant metabolites are glucosinolates."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Seedlings are the experimental material overall, but no CLF-specific metabolite accumulation measurement in seedlings was performed."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly state nuclear localization for CLF."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "UNCERTAIN",
+          "reason": "The clf;swn chromatin analysis is not presented specifically as a wounding treatment assay; it is mainly non-stressed chromatin profiling context."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "CLF, SWN, and LHP1 are all described as PRC2-related components, but direct interaction testing is not performed in this study."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "CLF is explicitly named as a major H3K27 methyltransferase in PRC2."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Public H3K27me3 ChIP-seq reanalysis and RNA-seq GSE239725 are both mentioned in the paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed summary matches the reported loss of H3K27me3 on GSL genes in clf;swn mutants and the inferred PRC2 repression role."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "CLF is indeed analyzed mainly as a PRC2 component rather than through independent manipulation."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses breeding implications broadly, but not CLF-specific application value."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly state nuclear localization for CLF."
+        }
+      ],
+      "stats": {
+        "supported": 13,
+        "unsupported": 1,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "SWN",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All experiments concern Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the applied species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is explicitly used as wild type background."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "SWN is explicitly described as one of the major H3K27 methyltransferase genes in PRC2."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly analyzes H3K27me3 occupancy in clf;swn mutants using public ChIP-seq data."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "SWN is only tested jointly with CLF for H3K27me3 depletion, not independently for GSL phenotype or direct repression output."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SWN is linked to glucosinolate pathway gene repression in the study."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The target metabolites are glucosinolates."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The material is seedlings overall, but SWN-specific metabolite accumulation was not directly measured."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No explicit subcellular localization of SWN is stated in the paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "UNCERTAIN",
+          "reason": "The SWN evidence comes from chromatin profiling, not specifically from wound-treatment experiments."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "SWN is discussed as part of PRC2 with CLF/LHP1, but direct protein interaction evidence is not presented here."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "SWN is explicitly described as an H3K27 methyltransferase in PRC2."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Public H3K27me3 ChIP-seq reanalysis and RNA-seq GSE239725 are stated."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary matches the clf;swn H3K27me3 depletion result and inferred PRC2 repression role."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "SWN was analyzed mainly as part of PRC2 rather than by standalone manipulation."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is an inference beyond direct experimental support in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No explicit subcellular localization of SWN is stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 13,
+        "unsupported": 1,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "MAM1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper names MAM1 but does not spell out 'Methylthioalkylmalate synthase 1'."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were conducted in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the experimental species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the stated wild type."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "MAM1 is explicitly listed among aliphatic GSL biosynthetic genes."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "MAM1 is explicitly categorized under the 'side-chain elongation' phase."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "MAM1 is in the side-chain elongation phase, so upstream is inferable, but the exact term 'upstream' is not used."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "Being in side-chain elongation implies precursor supply, but the paper does not explicitly use this wording."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly state the protein family/domain for MAM1."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "MAM1 was tested by qRT-PCR in lhp1-4 and 35S::LHP1/lhp1-4, alongside pathway metabolite profiling."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "MAM1 was prominently upregulated in lhp1-4 in a context where aliphatic GSLs increased."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "MAM1 is linked to aliphatic glucosinolate biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The endpoint metabolite class is glucosinolate."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments were done in seedlings."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "UNCERTAIN",
+          "reason": "MAM1 was examined in lhp1-4 background, but its specific wound response is not described in the Results text here."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The three listed points match sections 2.3 and 2.4."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The text does not detail MAM1 catalytic chemistry."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states 35S::LHP1/lhp1-4; 35S is used for the LHP1 transgene, not for MAM1."
+        },
+        "Omics_Data": {
+          "verdict": "UNCERTAIN",
+          "reason": "Public ChIP-seq reanalysis is mentioned generally, but no specific MAM1 ChIP-seq result is described in the text; RNA-seq GSE239725 is present for wound course overall."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 15,
+        "unsupported": 0,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "MAM3",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper names MAM3 but does not spell out 'Methylthioalkylmalate synthase 3'."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the species used."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the stated background."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "MAM3 is explicitly listed in aliphatic GSL biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "MAM3 is explicitly assigned to the side-chain elongation phase."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is inferable from pathway position but not explicitly stated as 'upstream'."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "This wording is inferential rather than explicit in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly give the MAM3 protein family/domain."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "MAM3 was examined by qRT-PCR in lhp1-4 and 35S::LHP1/lhp1-4 with pathway metabolite profiling in the study."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "MAM3 was prominently upregulated in lhp1-4 while aliphatic GSLs were increased."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "MAM3 is tied to aliphatic glucosinolates."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The metabolite class is glucosinolate."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Seedlings are the experimental tissue."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "UNCERTAIN",
+          "reason": "lhp1-4 background is supported, but specific wound time-course behavior of MAM3 is not described in the text provided."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary matches the qRT-PCR and complementation results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Specific catalytic reaction details for MAM3 are not provided in the paper."
+        },
+        "Omics_Data": {
+          "verdict": "UNCERTAIN",
+          "reason": "RNA-seq GSE239725 is present generally, but no gene-specific omics statement for MAM3 is directly given; public ChIP-seq support for MAM3 is not explicitly stated."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 14,
+        "unsupported": 0,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "CYP79F1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper gives the gene symbol CYP79F1 but does not explicitly spell out 'Cytochrome P450 79F1'."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the study species."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments were performed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the applied species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the wild type used."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP79F1 is explicitly an aliphatic GSL pathway gene."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly listed under 'core structure formation' for aliphatic GSLs."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "Core structure formation suggests a midstream role, but the exact term is not used in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "The wording 'forms precursor to target product' is not explicitly stated."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "While CYP implies cytochrome P450, the paper does not explicitly spell out the family/domain."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP79F1 was tested by qRT-PCR, shown in H3K27me3/LHP1 ChIP-seq reanalysis, and assessed again in 35S::LHP1/lhp1-4 complementation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports prominent upregulation in lhp1-4 and H3K27me3/LHP1 enrichment, with repression restored in complementation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is linked to aliphatic glucosinolates."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Glucosinolate is the metabolite class."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Seedlings were used for gene expression and metabolite measurements."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "UNCERTAIN",
+          "reason": "The study includes wounding time course globally, but the text here does not specifically mention CYP79F1 wound-time behavior."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly consistent with sections 2.3, 2.4, and 2.5."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq GSE239725 and public ChIP-seq reanalysis are explicitly part of the study."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 14,
+        "unsupported": 0,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "CYP79F2",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper uses CYP79F2 but does not spell out 'Cytochrome P450 79F2'."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study species is Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments are in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the experimental species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the wild type background."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP79F2 is explicitly listed in the aliphatic GSL pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly in the 'core structure formation' phase."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "Midstream is plausible but not explicitly stated."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact phrasing is not given in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "Cytochrome P450 family is inferable from the name but not explicitly stated in the text."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly includes qRT-PCR and H3K27me3/LHP1 ChIP-seq reanalysis for CYP79F2."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP79F2 was prominently upregulated in lhp1-4 and enriched with H3K27me3/LHP1."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP79F2 is linked to aliphatic glucosinolates."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The metabolite class is glucosinolate."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Seedlings are the experimental material."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed summary matches sections 2.3 and 2.5."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The study includes RNA-seq GSE239725 and public ChIP-seq reanalysis."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 14,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "CYP83A1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper gives the gene symbol CYP83A1 but does not spell out 'Cytochrome P450 83A1'."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments are in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the applied species."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the experimental species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the wild-type background."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP83A1 is explicitly listed in aliphatic GSL biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly a 'core structure formation' gene."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "Midstream is inferable but not explicitly stated."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact phrasing is not used in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "Cytochrome P450 is inferable from the gene symbol but not explicitly stated."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper includes qRT-PCR, H3K27me3/LHP1 ChIP-seq reanalysis, and qRT-PCR wound-course validation for CYP83A1."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP83A1 is upregulated in lhp1-4, enriched with H3K27me3/LHP1, and included among aliphatic genes showing delayed wound induction."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "It is connected to aliphatic glucosinolate biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Glucosinolate is the metabolite class."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Seedlings are the tested tissue."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Wounding is explicitly part of the CYP83A1 validation set in Supporting Information Figure S14, as described in Results 2.10."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements are supported by sections 2.3, 2.5, and 2.10."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq GSE239725 and public ChIP-seq reanalysis are part of the study and applied to this gene."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 15,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "SOT18",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper uses SOT18 but does not explicitly spell out 'Sulfotransferase 18'."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were conducted in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the applied species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the wild type used."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SOT18 is explicitly an aliphatic GSL pathway gene."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly listed in the 'core structure formation' phase."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "Downstream is a plausible inference within core structure formation but is not explicitly stated."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The statement 'required for storage/modification of target product' is not stated and does not accurately reflect how the paper describes SOT18."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly name the protein family/domain beyond the gene symbol SOT18."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "SOT18 was tested by qRT-PCR and included in H3K27me3/LHP1 ChIP-seq reanalysis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states SOT18 was upregulated in lhp1-4, while its genic region displayed little H3K27me3 and LHP1 enrichment."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SOT18 is tied to aliphatic glucosinolate biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The metabolite class is glucosinolate."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments used seedlings."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed three points match sections 2.3 and 2.5."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "SOT18 is explicitly discussed as an exception to direct PRC2/H3K27me3 regulation."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Public ChIP-seq reanalysis supports the H3K27me3/LHP1 observation; RNA-seq GSE239725 exists in the paper, though SOT18 wound-course DEG status is not specified."
+        }
+      },
+      "corrections": [
+        {
+          "field": "End_Product_Connection_Type",
+          "old_value": "required for storage/modification of target product",
+          "new_value": "NA",
+          "reason": "The statement 'required for storage/modification of target product' is not stated and does not accurately reflect how the paper describes SOT18."
+        }
+      ],
+      "stats": {
+        "supported": 15,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "FMOGS-OX1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper uses FMO GS-OX1/FMOGS-OX1 but does not explicitly spell out 'Flavin-monooxygenase glucosinolate S-oxygenase 1'."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were conducted in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the species used."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the wild-type background."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "FMOGS-OX1 is explicitly listed in the aliphatic GSL pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly placed in the 'secondary modification' phase."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "As a secondary modification gene after core formation, a downstream role is directly inferable from the pathway description."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes oxidation of methylthioalkyl GSLs to methylsulfinylalkyl GSLs, i.e. changing product composition."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes FMO GS-OX1 as part of a subset of flavin monooxygenase enzymes."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "FMOGS-OX1 was tested by qRT-PCR, public H3K27me3/LHP1 ChIP-seq reanalysis, and complementation in 35S::LHP1/lhp1-4."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states FMOGS-OX1 is significantly upregulated in lhp1-4 and its locus is enriched with H3K27me3/LHP1."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "It contributes to aliphatic glucosinolate biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The metabolite class is glucosinolate."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments used seedlings."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Section 2.5 explicitly states methylthioalkyl GSLs are oxidized to methylsulfinylalkyl GSLs by FMO GS-OX1 and FMO GS-OX3."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed points are directly supported by sections 2.3, 2.4, and 2.5."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper includes RNA-seq GSE239725 and public ChIP-seq reanalysis relevant to this gene."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 18,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "CYP79B3",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper gives CYP79B3 but does not explicitly spell out 'Cytochrome P450 79B3'."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism is Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments are in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the experimental species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the wild-type background used."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP79B3 is explicitly an indolic GSL pathway gene."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly listed as a 'core structure formation' gene in the indolic pathway."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "Midstream is inferable but not explicitly stated."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact phrase is not used in the paper, though pathway linkage is clear."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "Cytochrome P450 is implied by the gene name but not explicitly written out."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly analyzes CYP79B3 by qRT-PCR and H3K27me3/LHP1 ChIP-seq reanalysis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states CYP79B3 was upregulated in lhp1-4 and enriched with H3K27me3 in the locus analysis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP79B3 is linked to indolic glucosinolate biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The metabolite class is glucosinolate."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The work was conducted in seedlings."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary statements are directly consistent with sections 2.3 and 2.6."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq GSE239725 and public ChIP-seq reanalysis are explicitly part of the study."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 14,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "SUR1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "SUR1 is explicitly named in the paper; the full name SUPERROOT1 is the standard expansion of SUR1 and is directly inferable from the gene symbol."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is in Arabidopsis, stated repeatedly as Arabidopsis and Arabidopsis thaliana."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly stated in the title/abstract/methods."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify Arabidopsis thaliana reference genome and all plants are Col-0 background."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is explicitly the wild type used."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SUR1 is listed among genes in the indolic GSL pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SUR1 is explicitly included among six indolic 'core structure formation' genes."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper places SUR1 in core structure formation, but does not explicitly call it midstream."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "As part of indolic GSL biosynthesis, SUR1 is connected to production of indolic glucosinolates rather than being the terminal product itself."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not describe SUR1 as a C-S lyase-related enzyme or provide domain/family annotation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "SUR1 was directly tested by qRT-PCR in lhp1-4 versus Col-0."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state SUR1 was upregulated in lhp1-4, and Figure 5B states SUR1 had little H3K27me3/LHP1 enrichment."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is discussed in relation to indolic glucosinolate production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The terminal metabolite class is glucosinolate, explicitly central to the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Metabolites and gene expression were measured in 2-week-old seedlings."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points match Results: SUR1 upregulated in lhp1-4, little H3K27me3 in browser analysis, and authors emphasize complexity of indolic regulation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states indolic pathway regulation is more complicated/complex and needs further clarification."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "GSE239725 is explicitly the GEO accession for RNA-seq raw files generated in this study."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "C-S lyase-related glucosinolate biosynthetic enzyme",
+          "new_value": "NA",
+          "reason": "The paper does not describe SUR1 as a C-S lyase-related enzyme or provide domain/family annotation."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "CYP81F4",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene symbol CYP81F4 denotes cytochrome P450 81F4; CYP81F4 is explicitly named in the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Study species is Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments are in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the experimental species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is explicitly the wild type used."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP81F4 is listed in the indolic GSL pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP81F4 is explicitly listed among indolic 'secondary modification' genes."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Secondary modification is downstream relative to core structure formation and final profile shaping."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP81F4 is described as modifying indolic GSL intermediates toward hydroxy/methoxy indolic products."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The CYP designation and text describing CYP81F2~CYP81F4 enzymes support cytochrome P450 family assignment."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP81F4 was tested by qRT-PCR and shown in H3K27me3/LHP1 ChIP-seq browser analysis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state CYP81F4 was upregulated in lhp1-4 and all five secondary modification genes including CYP81F4 were heavily enriched with H3K27me3/LHP1."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP81F4 is linked to indolic glucosinolates."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The metabolite class is glucosinolate."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measurements were in seedlings."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states I3M is hydroxylated to 1OHI3M or 4OHI3M by CYP81F2~CYP81F4 enzymes."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary claims match the Results text."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "GSE239725 is the study RNA-seq GEO accession, and public ChIP-seq reanalysis is explicitly described."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 19,
+        "unsupported": 0,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "IGMT1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "IGMT1 is explicitly named and the text describes IGMT1/2 as enzymes methylating hydroxyindole GSLs."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the study species."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental system is Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the experimental species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is explicitly used as wild type."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "IGMT1 is placed in the indolic GSL pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "IGMT1 is explicitly listed among indolic 'secondary modification' genes."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Secondary modification is downstream in the pathway."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "IGMT1 modifies hydroxyindole glucosinolates toward methoxyindole glucosinolates."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The name IGMT and text describing methylation support O-methyltransferase assignment."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "IGMT1 was included in qRT-PCR and H3K27me3/LHP1 ChIP-seq analysis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state IGMT1 was upregulated in lhp1-4, and Figure 5C states IGMT1 is enriched with H3K27me3/LHP1."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "IGMT1 is tied to indolic glucosinolate production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The metabolite class is glucosinolate."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Analyses were in seedlings."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Text explicitly states hydroxyindole GSLs are further methylated by IGMT1 and IGMT2 to form methoxyindole GSLs."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary accurately reflects Results for IGMT1."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "GSE239725 and public ChIP-seq reanalysis are explicitly described."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 19,
+        "unsupported": 0,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "IGMT2",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "IGMT2 is explicitly named and described as mediating methylation with IGMT1."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the study species."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were done in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the experimental species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is explicitly the wild type."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "IGMT2 is part of indolic GSL biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "IGMT2 is explicitly listed among indolic 'secondary modification' genes."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Secondary modification is a downstream step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "IGMT2 modifies hydroxyindole GSLs toward methoxyindole products."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The name/function given in text supports O-methyltransferase."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "IGMT2 was directly examined by qRT-PCR and ChIP-seq reanalysis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state IGMT2 was upregulated in lhp1-4 and enriched with H3K27me3/LHP1."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "IGMT2 is linked to indolic glucosinolates."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Glucosinolate class is explicit."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Analyses were conducted in seedlings."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes IGMT1/2-mediated methylation to methoxyindole GSLs."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed points are directly consistent with Results."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "GSE239725 and public ChIP-seq reanalysis are explicitly given."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 19,
+        "unsupported": 0,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "MYB28",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the study species."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments used Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is explicitly used."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB28 is explicitly described as a MYB TF gene."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper calls it a MYB TF but does not specify R2R3-MYB."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents MYB28 as a regulator promoting aliphatic GSL biosynthesis, implying positive transcriptional control."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB28 is explicitly involved in aliphatic GSL biosynthesis."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links MYB28 to aliphatic pathway genes generally, but does not directly map MYB28 specifically to the listed target set in this study."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The text indicates increased MYB28 expression could lead to increased aliphatic GSL compounds and pathway gene upregulation."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB28 is presented as a key upstream regulator of aliphatic GSL production and its locus is H3K27me3/LHP1 enriched."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB28 was tested by qRT-PCR in lhp1-4 and complementation, shown in ChIP-seq reanalysis, and examined in wound time-course qRT-PCR/RNA-seq context."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB28 is upregulated in lhp1-4, associated with increased aliphatic GSLs, and qRT-PCR under wounding was performed showing delayed aliphatic induction pattern."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB28 is linked to aliphatic glucosinolates."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Metabolite class is glucosinolate."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "GSLs were measured in seedlings."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Wounding is a major treatment explicitly tested."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state nucleus localization for MYB28."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 4A/6 show H3K27me3 and LHP1 enrichment at MYB28 and reduced H3K27me3 in lhp1-4 and clf;swn backgrounds."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "GSE239725 RNA-seq and public ChIP-seq reanalyses are explicitly described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are consistent with Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This is an application interpretation not directly supported in Results; breeding utility and pleiotropy are not tested."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "R2R3-MYB transcription factor",
+          "new_value": "NA",
+          "reason": "The paper calls it a MYB TF but does not specify R2R3-MYB."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "The paper does not state nucleus localization for MYB28."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Useful regulatory target to enhance inducible aliphatic glucosinolate defenses, but chromatin-level derepression via PRC2 may have pleiotropic effects.",
+          "new_value": "NA",
+          "reason": "This is an application interpretation not directly supported in Results; breeding utility and pleiotropy are not tested."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 3,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "MYB29",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the study species."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were done in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is explicitly used."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB29 is explicitly described as a MYB TF."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specify R2R3-MYB."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB29 is presented as positively regulating aliphatic GSL biosynthesis."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly listed for aliphatic GSL biosynthesis."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper ties MYB29 to aliphatic GSL pathway genes generally, though not gene-by-gene."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Context supports activation of aliphatic biosynthetic genes."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB29 is one of the core aliphatic MYB regulators and is directly H3K27me3/LHP1 enriched."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR in lhp1-4 and 35S::LHP1/lhp1-4 plus ChIP-seq reanalysis are explicitly shown."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show MYB29 upregulated in lhp1-4 and repressed in the complementation line with restoration of GSL levels overall."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Linked to aliphatic glucosinolates."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Glucosinolate class is explicit."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measured in seedlings."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "UNCERTAIN",
+          "reason": "Wounding is the paper context overall, but MYB29 itself was not explicitly highlighted in wound qRT-PCR validation."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Nucleus localization is not stated in the paper."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 4A shows direct H3K27me3/LHP1 enrichment at MYB29."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq GEO and public ChIP-seq reanalysis are explicit."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary matches Results and Discussion."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly notes stronger repression by 35S::LHP1 than Col-0 for targets including MYB29."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "R2R3-MYB transcription factor",
+          "new_value": "NA",
+          "reason": "The paper does not specify R2R3-MYB."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "Nucleus localization is not stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "MYB76",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the study species."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments are in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the wild type."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB76 is explicitly listed as a MYB TF gene."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specify R2R3-MYB."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB76 is presented as positively associated with aliphatic GSL biosynthesis."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated to be involved in aliphatic GSL biosynthesis."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links MYB76 to aliphatic pathway genes generally, though not as a direct target list."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Context supports activation of aliphatic GSL biosynthetic genes."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB76 is one of the main aliphatic MYB regulators and directly H3K27me3/LHP1 enriched."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR and ChIP-seq reanalysis are explicit."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show MYB76 upregulated in lhp1-4 and suppressed in 35S::LHP1/lhp1-4."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Linked to aliphatic glucosinolates."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Glucosinolate class is explicit."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measured in seedlings."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "UNCERTAIN",
+          "reason": "Wounding is central to the paper, but MYB76 itself was not explicitly used in wound validation assays."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Nucleus localization is not stated."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 4A shows direct H3K27me3/LHP1 enrichment at MYB76."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "GSE239725 and public ChIP-seq reanalysis are explicit."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary is consistent with Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "R2R3-MYB transcription factor",
+          "new_value": "NA",
+          "reason": "The paper does not specify R2R3-MYB."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "Nucleus localization is not stated."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "MYB34",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the study species."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the wild type used."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB34 is explicitly a MYB TF gene for indolic GSL regulation."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specify R2R3-MYB."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB34 is presented as participating in regulation of indolic GSL production."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated for indolic GSL biosynthesis."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "Discussion cites a previous study about these specific downstream genes, but this paper itself does not directly test MYB34 targets."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes MYB34 as participating in regulation of indolic GSL production and discusses expected activation of downstream genes."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB34 is treated as an important indolic regulator; qRT-PCR wound validation included MYB34 and indolic genes are early inducible."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB34 was tested by qRT-PCR in lhp1-4, ChIP-seq reanalysis, and wound qRT-PCR/RNA-seq context."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results say MYB34 was moderately increased in lhp1-4; Figure 5A shows H3K27me3/LHP1 enrichment; wound validation included MYB34 among indolic genes."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Linked to indolic glucosinolates."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Glucosinolate class is explicit."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measured in seedlings."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Wounding is explicitly tested, and MYB34 is included in wound qRT-PCR validation."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Nucleus localization is not stated."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "UNCERTAIN",
+          "reason": "Direct H3K27me3/LHP1 enrichment is supported, but the specific statement that MYB34 is in a bivalent H3K27me3/H3ac context is not shown explicitly for this individual gene."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq GEO and public ChIP-seq reanalysis are explicit."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary aligns with the Results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly contrasts MYB34 and MYB51 behavior/function in lhp1-4."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "R2R3-MYB transcription factor",
+          "new_value": "NA",
+          "reason": "The paper does not specify R2R3-MYB."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "Nucleus localization is not stated."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "MYB51",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the study species."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments used Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the wild type used."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB51 is explicitly a MYB TF gene involved in indolic GSL production."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specify R2R3-MYB."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB51 is presented as participating in regulation of indolic GSL biosynthesis."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper generally links MYB51 to indolic GSL biosynthetic genes, though not a direct target list from this study."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "It is presented as a regulator of indolic GSL biosynthetic genes."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "Discussion says MYB51 is the most dominantly expressed MYB gene in the indolic pathway, but this is interpretive and not directly tested as decisive influence in Results."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB51 was assessed by qRT-PCR in lhp1-4 and by H3K27me3/LHP1 ChIP-seq reanalysis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state MYB51 was downregulated in lhp1-4 despite indolic TF loci being H3K27me3/LHP1 enriched."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Linked to indolic glucosinolates."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Glucosinolate class is explicit."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measurements were in seedlings."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "UNCERTAIN",
+          "reason": "Wounding is the overall context, but no MYB51 wound-specific result is reported in Results."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Nucleus localization is not stated."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 5A shows MYB51 among TF loci enriched with H3K27me3/LHP1."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "GSE239725 and public ChIP-seq reanalysis are explicit."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately reflects the Results and Discussion."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed treats MYB51 as an important exception illustrating indolic pathway complexity."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "R2R3-MYB transcription factor",
+          "new_value": "NA",
+          "reason": "The paper does not specify R2R3-MYB."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "Nucleus localization is not stated."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "MYB122",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the study species."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the wild type used."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB122 is explicitly listed as an indolic GSL MYB TF."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specify R2R3-MYB."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB122 is described as participating in regulation of indolic GSL production."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated as indolic GSL biosynthesis."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links MYB122 generally to indolic GSL pathway genes, though without direct target mapping here."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Context supports a positive regulatory role in indolic GSL biosynthesis."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "It is part of the indolic glucosinolate regulatory module and Figure 5A shows enrichment with H3K27me3/LHP1."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "MYB122 was tested by qRT-PCR in lhp1-4 and appears in H3K27me3/LHP1 ChIP-seq reanalysis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state MYB122 did not show significant change in lhp1-4, while Figure 5A indicates H3K27me3/LHP1 enrichment of indolic TF genes."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Linked to indolic glucosinolates."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Glucosinolate class is explicit."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Analyses were in seedlings."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state nucleus localization."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 5A shows MYB122 among TF loci enriched with H3K27me3/LHP1."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq GEO accession and public ChIP-seq reanalyses are explicit."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are consistent with the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "R2R3-MYB transcription factor",
+          "new_value": "NA",
+          "reason": "The paper does not specify R2R3-MYB."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "The paper does not state nucleus localization."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 2,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "OBP2",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the study species."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments are in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the wild type."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "OBP2 is explicitly listed among TF genes participating in indolic GSL regulation."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not identify OBP2 as DOF-related."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "OBP2 is presented as participating in regulation of indolic GSL production, implying positive regulatory role."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "OBP2 is explicitly placed in indolic GSL regulation."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not specify OBP2 target genes."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Participation in regulation of indolic GSL production is stated, but without detailed target mapping."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "OBP2 is included in the PRC2-repressed indolic TF module, supported by H3K27me3/LHP1 enrichment."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "OBP2 is shown in H3K27me3/LHP1 ChIP-seq reanalysis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state three MYB and OBP2 TFs in the indolic pathway are highly enriched with H3K27me3; Figure 5A includes LHP1 as well."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Linked to indolic glucosinolates."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Glucosinolate class is explicit."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Metabolite profiling was done in seedlings."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Nucleus localization is not stated in the paper."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 5A explicitly shows H3K27me3 and LHP1 enrichment on OBP2."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Public ChIP-seq reanalysis is explicit; RNA-seq GEO GSE239725 is the study dataset though OBP2 expression change is not highlighted."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary matches the paper: OBP2 is in the H3K27me3/LHP1-marked indolic TF set."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not explicitly report OBP2 expression change in the main Results text."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "DOF-related transcription factor",
+          "new_value": "NA",
+          "reason": "The paper does not identify OBP2 as DOF-related."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "Nucleus localization is not stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 443,
+    "supported": 368,
+    "unsupported": 20,
+    "uncertain": 55,
+    "total_corrections": 20
+  }
+}

@@ -35,6 +35,10 @@ from .utils import (
     GENE_ARRAY_KEYS, ensure_list, safe_parse_json, stem_to_dirname,
 )
 
+# ─── 可配置参数 ────────────────────────────────────────────────────────────
+# 每批验证的基因数阈值，Admin Panel 可在运行时修改此值
+GENES_PER_BATCH = int(os.getenv("VERIFY_GENES_PER_BATCH", "12"))
+
 
 # ─── Verify FC schema (inline) ──────────────────────────────────────────────
 
@@ -182,13 +186,15 @@ def _apply_corrections(gene_data: dict, field_verdicts_list: list) -> Tuple[dict
 def _compute_batches(total_genes: int) -> List[Tuple[int, int]]:
     """动态分批策略：根据基因数量决定批次。
 
-    < 10 个基因 → 1 批；10-19 → 2 批；20-29 → 3 批，以此类推。
+    阈值由模块级变量 GENES_PER_BATCH 控制（默认 12），可在运行时修改。
+    < threshold 个基因 → 1 批；threshold ~ 2*threshold-1 → 2 批，以此类推。
     返回 [(start, end), ...] 索引范围列表。
     """
-    if total_genes < 10:
+    threshold = GENES_PER_BATCH
+    if total_genes < threshold:
         return [(0, total_genes)]
 
-    num_batches = (total_genes // 10) + 1
+    num_batches = (total_genes // threshold) + 1
     batch_size = (total_genes + num_batches - 1) // num_batches
     batches = []
     for start in range(0, total_genes, batch_size):

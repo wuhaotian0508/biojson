@@ -1,0 +1,290 @@
+{
+  "file": "MinerU_markdown_PMC12159408_2038800362395181064",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12159408_2038800362395181064.md",
+  "timestamp": "2026-03-31T21:47:20.068313",
+  "genes": [
+    {
+      "gene_name": "KRS1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "UNCERTAIN",
+          "reason": "AtKRS1 UniProt Q9ZPI1 and HsKRS UniProt D32053 are explicitly stated in Methods. ScKRS1 is named but no accession is given; inclusion of 'ScKRS1: NA' is metadata rather than a paper-stated field."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly identifies KRS1 as lysyl-tRNA synthetase 1 / lysyl-tRNA synthetase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number 6.1.1.6 is stated anywhere in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state AtKRS1 is a typical class II synthetase and the crystal structure contains an N-terminal anticodon-binding domain and C-terminal catalytic domain."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AtKRS1 is from Arabidopsis; the paper specifically uses Arabidopsis thaliana KRS1."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly named throughout."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The biochemical target tested is Arabidopsis KRS1."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana KRS1 is the enzyme tested."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links KRS1 function to protein biosynthesis and aminoacylation/tRNA charging."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states KRS1 forms lysyl-tRNA and that 1a binds the ATP binding site of AtKRS1."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "KRS1 is described as a key step of protein biosynthesis, i.e. amino acid activation/tRNA charging."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "L-lysine and ATP are explicitly discussed as substrates. tRNA(Lys) is implied by KRS function but was not directly used in the reported assay and not explicitly written as 'tRNA(Lys)' in Results."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "Lysyl-tRNA formation is the canonical function implied by KRS, but the Results mainly directly demonstrate noncanonical Ap4A formation and do not explicitly list lysyl-tRNA(Lys), AMP, and PPi together as products."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states KRS1 is a key protein biosynthesis enzyme, discusses tRNA acylation as canonical activity, and directly shows lysine-dependent noncanonical Ap4A formation in the presence of Zn2+."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the paper's context: KRS1 is treated as a herbicidal target involved in lysine use in protein biosynthesis, not nutrient biofortification."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "ScKRS1 was validated as a key contributor to biochemical MoA, and AtKRS1 was validated as the aminoisothiazolamide target."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to plant cytoplasmic KRS isoenzymes in the sequence analysis discussion."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states plant sequences refer to cytoplasmic isoenzymes and gives no tissue-expression detail, matching 'detailed tissue pattern NA'."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "L-lysine is a substrate rather than terminal metabolite here; Ap4A is directly measured. The combined field mixes one supported assay product (Ap4A) with a less appropriate/substrate term."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Lysine as amino acid and Ap4A as nucleotide derivative are chemically correct and consistent with the paper's content, though the paper does not explicitly label them as classes."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Lysine being proteinogenic is standard and consistent; Ap4A being 'signaling/stress-associated' is not stated in this paper, which only mentions a noncanonical function."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Zn2+ was included to enable detection of noncanonical Ap4A formation, and pre-emergence herbicide treatments were central to glasshouse assays."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The listed items L-lysine, ATP, and tRNA(Lys) are substrates/ligands, not proteins. This field is incorrectly populated relative to the paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each summarized point is supported by Results: ScKRS1 overexpression reduced yeast sensitivity; AtKRS1 thermal shift/Kd values are given; AtKRS1 Ap4A assay was developed; AtKRS1 inhibition correlated with herbicidal activity; conservation and toxicological implications are discussed with supporting data."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are reported in the paper and used to validate KRS1 as target."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper concludes KRS1 inhibition underlies herbicidal activity and poor plant/mammal selectivity halted development."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements match the paper: focus is herbicide MoA; 1a occupies the adenosine portion of ATP site; active-site conservation across taxa is emphasized."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Acute mammalian toxicity, limited crop selectivity, and likely developmental/neuro liabilities from mammalian KRS inhibition are all discussed in Results/TSA."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a fair synthesis of the paper's conclusion that KRS1 is not a viable herbicide target without strong selectivity; nutrient engineering is not the focus."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "6.1.1.6",
+          "new_value": "NA",
+          "reason": "No EC number 6.1.1.6 is stated anywhere in the paper."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "L-lysine; ATP; tRNA(Lys)",
+          "new_value": "NA",
+          "reason": "The listed items L-lysine, ATP, and tRNA(Lys) are substrates/ligands, not proteins. This field is incorrectly populated relative to the paper."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 2,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "KRS2",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "AtKRS2 UniProt ID Q9LJE2 is explicitly stated in Methods."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper refers to AtKRS2 as a KRS enzyme; 'lysyl-tRNA synthetase 2' is directly inferable from the gene name AtKRS2 and study context."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number 6.1.1.6 is provided in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "AtKRS2 is clearly a KRS enzyme and thus a class II aminoacyl-tRNA synthetase by family inference, but the Results only explicitly describe class II/domain architecture for AtKRS1, not AtKRS2."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AtKRS2 is from Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly the species used."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AtKRS2 from Arabidopsis was purified and tested."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly stated."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "As a KRS enzyme, AtKRS2 is part of protein biosynthesis/aminoacyl-tRNA charging; this is consistent with the study context."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Lysyl-tRNA formation is the relevant subpathway implied for KRS2."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "KRS enzymes are described as key steps of protein biosynthesis; applying this to AtKRS2 is directly inferable."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "L-lysine and ATP are canonical KRS substrates by inference, but the paper does not directly characterize AtKRS2 catalytic substrates in Results."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "Canonical lysyl-tRNA/AMP/PPi products are inferred from enzyme identity, but not explicitly shown for AtKRS2."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The description accurately states canonical KRS function and that AtKRS2 was assayed as an additional plant isoform for inhibitor sensitivity."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "This is consistent with the role of KRS2 in amino acid utilization for protein biosynthesis."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish AtKRS2 as the primary key control step, but it was used as an auxiliary profiled isoform; the field reflects that."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "L-lysine is a substrate, not a terminal metabolite produced by KRS2 in the paper."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "L-lysine is indeed an amino acid, but since the preceding terminal metabolite assignment is inappropriate for this enzyme context, support is only partial."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Lysine contributes to protein biosynthesis generally, but as used here it is substrate-level context rather than a demonstrated terminal metabolite function for AtKRS2."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pre-emergence herbicide treatment applies to plant assays overall, but AtKRS2 itself was only used in biochemical inhibition assays, not specifically linked to glasshouse treatment in Results."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "L-lysine, ATP, and tRNA(Lys) are not proteins; this field content is inappropriate."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "AtKRS2 was purified and used in inhibition assays; AtKRS2 inhibition values were compared across the compound set and correlation with HsKRS/AtKRS1 trends is presented."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Protein purification, enzymatic inhibition assays across series, and comparative correlation analysis are all supported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that AtKRS2 is inhibited but not the primary mechanistic focus versus AtKRS1."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects AtKRS2's supporting role in target family sensitivity/conservation rather than primary causal target assignment."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Given the conservation and cross-species sensitivity data, the same selectivity concern is a reasonable supported inference from the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "6.1.1.6",
+          "new_value": "NA",
+          "reason": "No EC number 6.1.1.6 is provided in the paper."
+        },
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "L-lysine",
+          "new_value": "NA",
+          "reason": "L-lysine is a substrate, not a terminal metabolite produced by KRS2 in the paper."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "L-lysine; ATP; tRNA(Lys)",
+          "new_value": "NA",
+          "reason": "L-lysine, ATP, and tRNA(Lys) are not proteins; this field content is inappropriate."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 3,
+        "uncertain": 6
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 55,
+    "supported": 39,
+    "unsupported": 5,
+    "uncertain": 11,
+    "total_corrections": 5
+  }
+}

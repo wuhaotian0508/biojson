@@ -1,0 +1,278 @@
+{
+  "file": "MinerU_markdown_PMC8136890_2038794519322853376",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC8136890_2038794519322853376.md",
+  "timestamp": "2026-03-31T22:34:16.901378",
+  "genes": [
+    {
+      "gene_name": "FMO1",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Accession numbers section lists FMO1 as AT1G19250."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names FMO1 as FLAVIN-DEPENDENT MONOOXYGENASE 1."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is on Arabidopsis and refers to Arabidopsis FMO1 throughout."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies the species as Arabidopsis thaliana."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Materials mention WT A. thaliana accession Columbia, but not specifically that the source species/sequence for FMO1 is from 'Columbia' beyond use of Col/Col-0 background plants."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "FMO1 was analyzed in Arabidopsis plants and mutants."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species in experiments is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials list Col/Col-0 WT, fmo1-1, and fmo1 ugt76b1 lines; these backgrounds were directly used."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states FMO1 catalyzes conversion of Pip to N-hydroxypipecolic acid and fmo1 is incapable of NHP biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "NHP is described as lysine-derived and important to pathogen defense/SAR, matching an amino acid-derived defense metabolite."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "NHP is described as the actual SAR-inducing compound, and the abstract states NHP-triggered immunity is SA-dependent."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states NHP accumulates in leaves systemically after pathogen attack and presents local/distal leaf data."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show fmo1 abolishes NHP accumulation, reduces SA-pathway markers/metabolites in ugt76b1 background, and suppresses the enhanced resistance/constitutive SAR-like phenotype."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all used in Results: fmo1 ugt76b1 genetics, resistance and SAR assays, LC-MS/GC-MS metabolite profiling, and RT-qPCR."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point appears in Results: FMO1 required for NHP/NHP-H1/NHP-H2, fmo1 suppresses ugt76b1 phenotypes, and FMO1 transcript is induced by ILA and elevated in ugt76b1."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports FMO1 is induced by pathogen/Pip-related defense contexts from prior transcriptome analyses, induced by exogenous ILA, and constitutively elevated in ugt76b1."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Defense inducibility of FMO1 is explicitly described."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper links FMO1 functionally with UGT76B1, ALD1, and SARD4 in a pathway, but does not show or claim direct protein-protein interactions."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "FMO1-related phenotypes/expression are examined or discussed under Pseudomonas infection, exogenous ILA, and exogenous Pip/defense activation."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of FMO1 compromises SAR and basal/acquired resistance in the assays."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports that FMO1 promotes SAR and that SA pathway is required, but it does not explicitly discuss breeding/engineering applications or frame FMO1 as a resistance-engineering target."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "In this paper fmo1 is indeed mainly used genetically to establish that ugt76b1 phenotypes depend on NHP biosynthesis."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "UGT76B1; ALD1; SARD4",
+          "new_value": "NA",
+          "reason": "The paper links FMO1 functionally with UGT76B1, ALD1, and SARD4 in a pathway, but does not show or claim direct protein-protein interactions."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "UGT76B1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Accession numbers section lists UGT76B1 as AT3G11340."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "UGT76B1 is described as a glucosyltransferase; the expanded name UDP-dependent glycosyltransferase 76B1 is consistent with the UGT nomenclature used in the paper."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper clearly supports that UGT76B1 is a glucosyltransferase/UGT, but does not explicitly state 'Family 1 UDP-glycosyltransferase' or 'plant secondary product glycosyltransferase fold' in the text provided."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "UGT76B1 studied here is from Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper species is Arabidopsis thaliana."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "WT accession Columbia/Col-0 is used, but the source of the cloned UGT76B1 coding sequence is not explicitly tied to 'Columbia' in the relevant gene-specific statement."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "UGT76B1 was directly tested in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials/results use Col-0/WT, ugt76b1-1 mutant, and a UGT76B1-OE line."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper demonstrates UGT76B1 glucosylates NHP, SA, and ILA in immune metabolism."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support that UGT76B1 produces O-β-glucosides for NHP-H2 and SA (SAG), i.e. the O-β-glucoside branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "UGT76B1 acts on existing small-molecule signals to form conjugates, i.e. a terminal modification step toward NHP-H2/SAG/ILA glucoside."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies the UGT76B1-dependent product as NHP-H2 and supports it as NHP-O-β-glucoside."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "NHP-H2 is a conjugated form of the amino acid-derived defense metabolite NHP."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper argues NHP-H2/O-β-glucosides are homeostatic, likely inactive forms attenuating immune signaling and balancing SAR/basal immunity."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Figures/results show NHP-H2 in leaves, including local inoculated and distal systemic leaves."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "In vitro and in vivo data support NHP, SA, and ILA as substrates, and UDP-glucose is used as the sugar donor in enzyme assays."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports formation of NHP-H2/NHP-O-β-glucoside, SAG, and ILA-O-β-glucoside by UGT76B1."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This reaction description matches the Results and Discussion: UGT76B1 transfers glucose from UDP-glucose to NHP, SA, and ILA to form O-β-glucosides."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The study shows UGT76B1 is required for glucoside formation/modification of the target metabolites rather than biosynthesis of NHP itself."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract and discussion repeatedly describe UGT76B1 as a common metabolic hub controlling active NHP/SA/ILA pools and balancing immunity."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "These phenotypes are directly shown: LOF increases NHP, SA, Pip and constitutive SAR-like resistance; OE shifts pools to glucosides and abolishes SAR. Elevated ILA in ugt76b1 is referenced from prior work and discussed here."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are used in this paper's Results except isotope feeding does not directly validate UGT76B1 enzymatic action alone but supports NHP-H identity; overall the method list is faithful."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each numbered claim is directly supported by the Results and figures."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states UGT76B1 is induced by Pip/systemic SAR from prior transcriptome analyses, slightly induced by ILA, repressed in sid2, and enhanced by exogenous SA from cited prior analyses; defense inducibility is supported."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Defense/SAR-associated induction of UGT76B1 is described."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The listed items SA, NHP, and ILA are metabolites/substrates, not proteins; the field label asks for interacting proteins."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Pseudomonas infection, BTH, exogenous Pip, and exogenous ILA are directly tested contexts."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses a constitutive UGT76B1 overexpression line and does not specify the promoter; 'specific promoter not stated' is accurate."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports slightly reduced rosette size in ugt76b1 and that constitutive UGT76B1 overexpression lowers basal immunity and abolishes SAR."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The mechanistic basis for fine-tuning immunity is supported, but the breeding/engineering framing and recommendations are not explicitly made in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly distinguishes UGT76B1-dependent NHP-H2 from UGT76B1-independent NHP-H1 and supports that UGT76B1 forms O-β-glucosides, not glucose esters."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.4.1.-",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "SA; NHP; ILA (competing substrates)",
+          "new_value": "NA",
+          "reason": "The listed items SA, NHP, and ILA are metabolites/substrates, not proteins; the field label asks for interacting proteins."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 55,
+    "supported": 47,
+    "unsupported": 3,
+    "uncertain": 5,
+    "total_corrections": 3
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "file": "MinerU_markdown_PMC8126189_2038794466281693198",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC8126189_2038794466281693198.md",
+  "timestamp": "2026-03-31T22:33:54.678207",
+  "genes": [
+    {
+      "gene_name": "CcPmk1",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper centers on CcPmk1 from Cytospora chrysosperma and explicitly states this species throughout."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Cytospora chrysosperma is explicitly named in the title, abstract, and Results."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental Procedures 4.1 states the wild-type C. chrysosperma strain used was CFCC 89981."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "For the core CcPmk1 experiments, the tested organism was Cytospora chrysosperma."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The wild type and ΔCcPmk1 mutant compared by RNA-seq are both Cytospora chrysosperma."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The wild-type strain is given as CFCC 89981, and the ΔCcPmk1 mutant derives from this background."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CcPmk1 is described as a Pmk1 homolog in the MAPK signalling pathway, i.e. a MAP kinase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.1 explicitly identifies Fus3/Kss1/Pmk1 homologs, the protein kinase domain PF00069, and a conserved TEY phosphorylation site."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "UNCERTAIN",
+          "reason": "MAPK signalling pathway membership is explicit, and transcriptomics was performed under simulated infection conditions with poplar twigs. However, these are experimental context and pathway assignment, not directly demonstrated upstream activating signals for CcPmk1."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.3 and 2.4 show many secondary metabolism genes/clusters, transcription factor genes, and putative effector genes were downregulated in the ΔCcPmk1 mutant, supporting positive regulatory influence on these transcriptional programs."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly reports RNA-seq comparing wild type and ΔCcPmk1, RT-qPCR after asiRNA treatment, in vitro asiRNA feeding, growth phenotype assays, and TRV-VIGS assays involving conserved Pmk1 fragments."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion mutant transcriptomics showed reduced expression of pathogenicity-associated genes, and asiRNA silencing reduced fungal growth. Prior work cited and discussion state CcPmk1 is required for pathogenicity, though this paper's new direct phenotype assay is growth plus transcriptomics."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper discusses secondary metabolite biosynthetic gene clusters broadly but does not identify a specific final metabolite product for CcPmk1 in Results."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is fair that multiple classes of secondary metabolism core genes were identified, but the claimed endpoint 'Mixed secondary metabolites' is a synthesis by the extractor rather than an explicit paper term."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Discussion links fungal toxins/secondary metabolites generally to pathogenicity, but no specific metabolite(s) regulated by CcPmk1 were identified or functionally tested in Results."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not measure metabolite accumulation or specify accumulation sites; it only measures gene expression in cultures mimicking infection."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.3 directly show CcPmk1 regulates expression of secondary metabolism gene clusters, and the paper broadly supports pathogenicity-associated gene regulation."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly mention 11 secondary metabolite core biosynthesis genes; terpene cluster GME3317_g-GME3324_g; hybrid-NRPS/T1PKS cluster GME3437_g-GME3444_g; many TF genes; and putative effectors as regulated by CcPmk1."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 3 explicitly states 11 of 68 secondary metabolite core biosynthesis genes were downregulated in the ΔCcPmk1 mutant, supporting a positive effect on their expression."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "CcPmk1 is presented as a global regulator of pathogenicity-associated processes, but no specific target product/metabolite output was directly measured to establish decisive influence on a defined product."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental Procedures 4.3 states transcriptome samples were prepared during a mimetic infection process in PDB supplemented with sterilized poplar twigs."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.2 explicitly compare gene expression between wild type and ΔCcPmk1 during the simulated infection process."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper clearly places CcPmk1 in the MAPK signalling pathway/cascade, while not defining specific complex partners."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed treatments/contexts appear in the paper: simulated infection with sterilized poplar twigs, in vitro asiRNA treatment, and TRV-based VIGS in N. benthamiana for cross-species testing."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.2 provides RNA-seq and the six SRA accessions SRR12262932-37, and the reference genome accession JAEQMF000000000."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract, Results 2.7, and Discussion explicitly propose Pmk1 homologs as potential broad-spectrum disease-control targets via gene silencing, with cautions about unintended effects."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract and discussion explicitly warn that unintended effects/off-target silencing in nonpathogenic or beneficial fungi should be avoided."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the paper: the main focus is pathogenicity rather than nutrient-quality traits; metabolite identities were not resolved; ribosome biogenesis and rRNA processing were also affected."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point matches Results/Discussion: conserved MAPK role, 11/68 secondary metabolism genes downregulated, regulation of TFs/effectors, and asiRNA silencing inhibiting growth."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "Secondary metabolites",
+          "new_value": "NA",
+          "reason": "The paper discusses secondary metabolite biosynthetic gene clusters broadly but does not identify a specific final metabolite product for CcPmk1 in Results."
+        },
+        {
+          "field": "Terminal_Metabolite_Accumulation_Site",
+          "old_value": "Fungal secondary metabolism gene clusters in mycelia during simulated infection",
+          "new_value": "NA",
+          "reason": "The paper does not measure metabolite accumulation or specify accumulation sites; it only measures gene expression in cultures mimicking infection."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "BcPmk1",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "BcPmk1 refers to the Botrytis cinerea homolog tested in Results 2.7."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Botrytis cinerea is explicitly named in Results 2.7 and elsewhere."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The TRV-VIGS assay was performed in Nicotiana benthamiana leaves challenged with B. cinerea."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana is explicitly stated as the plant used for the VIGS assay."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "BcPmk1 is treated as a conserved Pmk1 homolog, i.e. a MAP kinase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 lists BMP1 from Botrytis cinerea as a highly similar Pmk1 homolog, and Results 2.7 states conserved CcPmk1/BcPmk1 fragments were used. Exact domain architecture for BcPmk1 itself is not separately shown, but Pmk1-family identity/conservation is supported."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.7 explicitly describes TRV-based VIGS using conserved CcPmk1 or BcPmk1 fragments in N. benthamiana followed by B. cinerea infection."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Silencing BcPmk1 reduced lesion area, supporting that BcPmk1 positively regulates fungal virulence."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.7 explicitly reports TRV-based VIGS in N. benthamiana, lesion area measurement after B. cinerea inoculation, and RT-qPCR of BcPmk1 expression."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states BcPmk1 transcript levels were significantly reduced and fungal virulence was compromised on N. benthamiana leaves."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No nutrient or metabolite product endpoint was tested for BcPmk1; only virulence phenotype was measured."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental Procedures 4.3 states B. cinerea was isolated from infected N. benthamiana leaves and BcPmk1 expression was then measured."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "BcPmk1 is presented as a Pmk1 homolog in the MAPK signalling cascade, though no specific complex partners are tested."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "This exactly matches Results 2.7: TRV-based VIGS in N. benthamiana followed by B. cinerea infection."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper uses TRV1/TRV2 viral vectors but does not describe 'promoters' named TRV vectors; this field is imprecisely phrased and not explicitly supported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly argues that conserved Pmk1 homologs can be targeted for broad-spectrum disease control using RNA-silencing approaches."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract/discussion note off-target or unintended effects on non-target/nonpathogenic fungi due to conservation of Pmk1 homologs."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately notes that BcPmk1 was directly tested in Results but not linked to nutrient metabolism in this paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by Results 2.7 and Figure 8."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Decisive_Influence_on_Target_Product",
+          "old_value": "Decisive for virulence, but no nutrient-metabolite endpoint was directly tested",
+          "new_value": "NA",
+          "reason": "No nutrient or metabolite product endpoint was tested for BcPmk1; only virulence phenotype was measured."
+        },
+        {
+          "field": "Applied_Promoters",
+          "old_value": "TRV vectors",
+          "new_value": "NA",
+          "reason": "The paper uses TRV1/TRV2 viral vectors but does not describe 'promoters' named TRV vectors; this field is imprecisely phrased and not explicitly supported."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 2,
+        "uncertain": 0
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 48,
+    "supported": 40,
+    "unsupported": 4,
+    "uncertain": 4,
+    "total_corrections": 4
+  }
+}

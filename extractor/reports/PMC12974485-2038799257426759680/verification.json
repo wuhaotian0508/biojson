@@ -1,0 +1,169 @@
+{
+  "file": "MinerU_markdown_PMC12974485_2038799257426759680",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12974485_2038799257426759680.md",
+  "timestamp": "2026-03-31T22:04:02.624260",
+  "genes": [
+    {
+      "gene_name": "OsDAAT1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Map-based cloning identified the causative gene as LOC_Os03g24460."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is in rice and describes a rice gene, OsDAAT1."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice is explicitly referenced throughout, and the reference genome/database uses Oryza sativa."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The daat1 mutant was isolated from the japonica rice cultivar Nipponbare."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All functional tests and transgenic analyses were performed in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is rice, i.e., Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "CRISPR/Cas9 knockouts and RNAi constructs were generated in Nipponbare; the mutant background is also Nipponbare."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly mentions native promoter for genomic complementation, Ubi promoter for constitutive RNAi, Glutelin C promoter for endosperm-specific RNAi, and CaMV 35S promoter for OsDAAT1-GFP localization."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show OsDAAT1 is primarily expressed in vegetative tissues, especially node; in situ hybridization localizes transcripts to node vascular tissue; immunoblot shows protein abundant in nodes and endosperm but lower in leaves and stems."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Same rice system as source species; the reported expression pattern is directly shown in the tested plants."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper explicitly states OsDAAT1 has a conserved D-amino acid aminotransferase domain/DAAT-like domain. However, 'PLP-dependent aminotransferase' is not directly assigned as a family/domain label for OsDAAT1 in Results; PLP is used in assays and PLP-binding residues are discussed later."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The title and Results identify OsDAAT1 as D-amino acid aminotransferase1."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number 2.6.1.21 is stated anywhere in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly places OsDAAT1 in D-amino acid metabolism."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show OsDAAT1 interconverts D-amino acids and regulates D-amino acid homeostasis, matching an interconversion/homeostasis module."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "In vitro assays showed D-Ala production from D-Glu, D-Met, or D-Ser with pyruvate as acceptor, and D-Glu production from D-Ala with α-ketoglutarate as acceptor."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "These donors/acceptors were explicitly tested in the in vitro enzyme assays."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The assay explicitly measured D-Ala and D-Glu as products."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports OsDAAT1 functioning in interconversion/homeostasis of D-amino acids rather than terminal synthesis, so 'midstream interconversion step' is a fair inference."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Results connect OsDAAT1 loss to elevated D-Ala, ER stress, altered starch/protein accumulation, and grain chalkiness; this is an indirect effect on final grain-quality traits."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "D-Ala is the metabolite most consistently elevated in mutant stems, nodes, and developing seeds and is the focal metabolite linked to phenotype."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "D-alanine is an amino acid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results and Discussion link D-amino acid accumulation, especially elevated D-Ala in daat1, with altered protein isomerization, ER stress, impaired starch/protein accumulation, and chalkiness."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly reports elevated D-Ala in stems, nodes, and developing seeds of daat1."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient expression, stable GFP complementation, and fractionation all showed OsDAAT1 is cytosolic."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly includes 9-DAF developing grains, exogenous D-Ala/D-Ser/D-Met treatments, field grain-filling stage injections, and hydroponic seedling treatments."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods were used in the paper: map-based cloning, complementation, CRISPR knockout, RNAi, enzyme assay, LC/MS amino acid quantification, localization, RNA-seq, proteomics, and reciprocal crosses."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports OsDAAT1 as a key regulator/control point for D-Ala homeostasis affecting chalkiness, but does not test or establish biochemical rate-limiting status."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "These effects are directly supported: OsDAAT1 loss elevates D-Ala in stems/nodes/developing seeds, induces ER stress, affects storage reserve accumulation, causes maternally controlled chalkiness, and a higher-expression promoter haplotype is associated with lower chalkiness."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant showed reduced 1,000-grain weight, plant height, tiller number, panicle length, branch number, seed setting rate, starch, amylose, and protein; overexpression of Hap1 in Nipponbare did not further reduce chalkiness."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "Most statements are supported: maternal control, endosperm-specific silencing not causing chalkiness, constitutive silencing causing chalkiness, inference that OsDAAT1 mainly affects D-Ala, and wsd1 being allelic. However, the exact label 'OsDAAT1Hap1' is supported, while 'Hap1a' appears only in the abstract wording and is not clearly used consistently in Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports Hap1 as a low-chalkiness promoter haplotype useful for grain appearance improvement. However, recommendations such as 'prioritize promoter/haplotype selection or editing in maternal vascular tissues rather than simple overexpression in endosperm' are interpretive rather than directly stated as application guidance."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper gives RNA-seq accession PRJNA1426511 and proteomics dataset PXD059692."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately reflects the main Results: gene identification as LOC_Os03g24460, cytosolic D-amino acid aminotransferase activity, elevated D-Ala with downstream isomerization/ER-stress/chalkiness effects, maternal regulation, and promoter haplotype association with lower chalkiness."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.6.1.21",
+          "new_value": "NA",
+          "reason": "No EC number 2.6.1.21 is stated anywhere in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 29,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 34,
+    "supported": 29,
+    "unsupported": 1,
+    "uncertain": 4,
+    "total_corrections": 1
+  }
+}

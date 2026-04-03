@@ -1,0 +1,935 @@
+{
+  "file": "MinerU_markdown_PMC10700139_2038801572992946180",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC10700139_2038801572992946180.md",
+  "timestamp": "2026-03-31T21:34:38.318454",
+  "genes": [
+    {
+      "gene_name": "PtABH-1",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists PtABH-1 accession as OR538097."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study enzymes characterized here are from the HupA-producing clubmoss Phlegmariurus tetrastichus."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly given as Phlegmariurus tetrastichus."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PtABH-1 was tested by transient expression in Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana is explicitly the transient host used."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PtABH-1 is part of the established route from 10 to huperzine A (17)."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Huperzine A is a Lycopodium alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states HupA reversibly inhibits acetylcholinesterase and discusses it as a potential anti-herbivory compound and dementia therapeutic lead."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states new growth leaves are biosynthetically active for HupA and compares them with mature shoot tissue inactive for HupA production, but the exact wording 'new growth leaves/shoot tissues biosynthetically active for HupA' is not given as a metabolite accumulation site for HupA itself."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PtABH-1 is explicitly described as an α/β hydrolase family enzyme."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show PtABH-1 deacetylates 13 to 14 and enables the downstream sequence leading to huperzine B/C/A."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by transient co-expression/substrate feeding in N. benthamiana and LC–MS/MS; authentic standards were used for 14 and 18."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are stated in Results/Extended Data: PtABH-1 converts 13 to 14, converts 11 to 18, and this supports upstream structural assignments and the route toward HupA."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PtABH-1 was found in cluster131; cluster131 is the co-expression cluster associated with HupA biosynthesis and enriched transcripts were identified in new growth leaves."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PtABH-1 was transiently co-expressed in N. benthamiana leaves."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "These enzymes act sequentially in pathway reconstruction, but the paper does not demonstrate direct protein–protein interactions between PtABH-1 and Pt2OGD-4/5/3/1/2."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods cite PacBio Iso-Seq and Illumina expression data for P. tetrastichus, with raw RNA-seq in BioProject PRJNA731132."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly inferable from the demonstrated multigene reconstruction of HupA biosynthesis in heterologous N. benthamiana."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Genes were cloned into pEAQ-HT for transient expression, but the specific promoter type is not stated here."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "PtABH-1 assays used co-infiltration of flabellidine (10) into N. benthamiana leaves."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not classify genes into 'Common Gene' versus a requested enzyme class; this is external annotation."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Other_Important_Info",
+          "old_value": "Classified as Common Gene because it performs deacetylation/hydrolase tailoring rather than core scaffold-forming oxidoreduction typical of pathway enzyme class requested here.",
+          "new_value": "NA",
+          "reason": "The paper does not classify genes into 'Common Gene' versus a requested enzyme class; this is external annotation."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "PtCAL-1a",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability gives PtCAL-1a accession OR538099."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PtCAL-1a was identified from Phlegmariurus tetrastichus."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PtCAL-1a was tested in Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated in Methods and figure captions."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PtCAL-1a is part of the biosynthetic route to HupA precursor formation and thus linked to huperzine A biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Huperzine A is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "HupA is described as an acetylcholinesterase inhibitor; anti-herbivory is discussed as a likely ecological role."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "New growth leaves are described as biosynthetically active for HupA production, but the exact accumulation-site phrasing is not directly provided."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The study concerns Lycopodium alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PtCAL-1a/PtCAL-2a produce proposed phlegmarane scaffold 9, an early scaffold-generation branch."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "PtCAL-1a is a carbonic anhydrase-like protein functioning in scaffold generation; while the exact label 'scaffold-forming enzyme' is paraphrased, it matches Results."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CAL proteins are neofunctionalized α-carbonic anhydrase-like proteins; Methods mention CAH domain and predicted N-terminal signal peptides."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Apoplast localization is supported by localization experiments and apoplast protein isolation/activity assays."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Extended Data support use of 3 and 8 as required substrates, specifically indicating (S)-3 as the productive enantiomer."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "PtCAL-1a/PtCAL-2a produce proposed phlegmarane scaffold intermediate 9."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the CAL proteins catalyse a stereospecific Mannich-like condensation and subsequent bicyclic scaffold generation; for PtCAL-1a/PtCAL-2a this is condensation of (S)-3 and 8 to 9."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is the scaffold-generation step in the pathway."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "9 is described as an upstream scaffold precursor connecting to downstream HupA biosynthesis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Extended Data show 9 production requires PtCAL-1a with PtCAL-2a."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by co-expression in N. benthamiana, apoplast in vitro assays, LC–MS/MS, chiral LC–MS, and substrate deconvolution."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is clearly a key scaffold-generation step, but the paper does not establish rate limitation or formally designate it a control step."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements reflect Results and Extended Data for PtCAL-1a/PtCAL-2a."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PtCAL-1a was identified in cluster131; the cluster comes from transcripts enriched in new growth leaves."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient expression in N. benthamiana leaves is explicit."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "PtCAL-2a is functionally required with PtCAL-1a, and heterocomplex formation is only given modest, not definitive, structural support."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "PacBio Iso-Seq and Illumina RNA-seq with BioProject PRJNA731132 are stated."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Reasonably supported by its essential role in reconstructing the pathway in heterologous hosts."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Low-pH apoplast activity and Zn2+ chelation/supplementation tests are described."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "pEAQ-HT vector is stated, but not the promoter identity/type."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows PtCAL-1a alone is inactive, mixed individually expressed proteins are ineffective, and only co-expressed apoplast is active; possible heterocomplex formation is suggested but not definitive."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 27,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "PtCAL-2a",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability gives PtCAL-2a accession OR538101."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PtCAL-2a is from Phlegmariurus tetrastichus."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Tested in Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PtCAL-2a is linked to the upstream pathway leading to huperzine A."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Huperzine A is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes HupA as an acetylcholinesterase inhibitor and discusses anti-herbivory."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Only biosynthetically active tissues are specified clearly, not the exact accumulation-site wording used here."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Lycopodium alkaloid biosynthesis is the pathway studied."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PtCAL-2a works in early scaffold generation to form 9."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "As with PtCAL-1a, this paraphrases the demonstrated carbonic anhydrase-like scaffold-forming role."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as neofunctionalized α-carbonic anhydrase-like protein with signal peptide."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by apoplast localization/activity work."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "3 and 8 are the required substrates for PtCAL-1a/PtCAL-2a activity; (S)-3 is the productive enantiomer."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Primary product is proposed scaffold 9."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Matches the paper's model for PtCAL-1a/PtCAL-2a catalysis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Scaffold-generation step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "9 is a key upstream precursor to HupA biosynthesis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show PtCAL-2a is required with PtCAL-1a to produce 9."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by co-expression, apoplast assays, LC–MS/MS, chiral LC–MS, substrate deconvolution."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The study establishes importance but not rate limitation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Consistent with Results and Extended Data."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Identified in cluster131 from transcripts enriched in new growth leaves."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient expression in N. benthamiana leaves is explicit."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Functional co-requirement with PtCAL-1a is shown, but direct physical interaction is only tentatively modeled."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by Methods and data availability."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Inferable from essential function in pathway engineering/reconstitution."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Low-pH and Zn2+ tests are explicitly described."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "pEAQ-HT is given, but promoter details are not."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Extended Data tested homolog combinations and the PtCAL-1a/PtCAL-2a combination showed the key activity."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 27,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "PtCAL-3",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists PtCAL-3 accession OR538103."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PtCAL-3 is from Phlegmariurus tetrastichus."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PtCAL-3 was tested in Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PtCAL-3 feeds the precursor pool for the pathway leading to huperzine A."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Huperzine A is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "HupA as AChE inhibitor and candidate anti-herbivory metabolite is discussed."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Biosynthetically active tissues are specified, but exact accumulation-site wording is not directly given."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "This is within Lycopodium alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PtCAL-3 acts upstream to supply stereodefined precursor for scaffold generation."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "PtCAL-3 is a carbonic anhydrase-like protein involved in precursor formation; 'stereoselective precursor-forming enzyme' is a fair paraphrase of its demonstrated activity."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as neofunctionalized α-carbonic anhydrase-like protein with predicted N-terminal signal peptide."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Apoplast localization/activity supported by experiments."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "In vitro PtCAL-3 assays used 1 and 2 as substrates."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support stereoselective formation of (S)-3, observed via enrichment of (S)-4 after decarboxylation."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Extended Data propose PtCAL-3 catalyses stereoselective condensation of 1 and 2 to form (S)-3, enriching (S)-4 and productive 9 diastereomer."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Upstream precursor-forming step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "This enzyme supplies stereodefined precursor pool feeding scaffold formation toward HupA."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show PtCAL-3 enriches (S)-4 and increases the major 9 diastereomer."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by transient expression, chiral LC–MS of N-acetylated 4, apoplast assays, and pH/Zn2+ tests."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is clearly a stereochemical control point, but the paper does not formally establish it as rate-limiting."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements match Extended Data Fig. 5 and text."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Identified in cluster131 from transcripts enriched in new growth leaves."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Transiently expressed in N. benthamiana leaves."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "PtCAL-3 affects pathway output with PtCAL-1a/PtCAL-2a present, but direct physical interaction is not shown."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods support PacBio/Illumina datasets and BioProject PRJNA731132."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Inferable from its demonstrated stereochemical effect on pathway flux in engineered systems."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Low-pH apoplast activity and Zn2+ chelation/supplementation tests are explicitly described."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "pEAQ-HT vector is stated, but not promoter identity/type."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes spontaneous formation of 3 from 1 and 2 and that PtCAL-3 biases stereochemistry toward the productive branch."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 27,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "PtCYP782C1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists four PtCYP782C1 homolog accessions: OR538104, OR538105, OR538106, OR538107."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PtCYP782C1 is from Phlegmariurus tetrastichus."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Tested in Nicotiana benthamiana and heterologously expressed in Saccharomyces cerevisiae microsomes."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both species are explicitly stated in Methods."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PtCYP782C1 generates the cosubstrate required for upstream scaffold formation leading toward HupA."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Huperzine A is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states HupA is an AChE inhibitor and discusses anti-herbivory potential."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "New growth leaves are biosynthetically active for HupA production, but exact accumulation-site wording is not directly stated."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "This gene functions in Lycopodium alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PtCYP782C1 generates oxidized partner 8 for scaffold condensation, an early branch."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is explicitly named PtCYP782C1."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is a cytochrome P450, CYP782 family member."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Microsomal assays imply membrane association consistent with ER localization, but the paper does not explicitly state endoplasmic reticulum localization for PtCYP782C1."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "PtCYP782C1 activity was assayed on 6."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results identify putative products 7 and 8 from PtCYP782C1 activity."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Extended Data state PtCYP782C1 converts 6 into 7 and 8, with 8 corresponding to oxidation and elimination of the O-acetyl group."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an upstream precursor activation step before CAL-mediated condensation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "8 is required as cosubstrate for PtCAL-1a/PtCAL-2a to produce 9, linking the gene to HupA biosynthesis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows 8 is required for CAL-mediated scaffold formation and is generated by PtCYP782C1."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by N. benthamiana transient expression, yeast microsomal assays with NADPH, LC–MS/MS, time course, and pH profiling."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not establish rate limitation, only pathway necessity."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points are directly supported by Extended Data Fig. 2 and CAL follow-up assays."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PtCYP782C1 is among genes analyzed from the co-expression-guided transcriptomics and associated with the HupA-active cluster131 module used in screening."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was transiently expressed in N. benthamiana and expressed in yeast microsomes."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "PacBio Iso-Seq, Illumina RNA-seq, and PRJNA731132 are reported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Inferable from its required role in generating the coupling partner for pathway reconstruction."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "NADPH dependence, cold/acidic extraction for unstable products, and pH profiling are described."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state pEAQ-HT for N. benthamiana and pYeDP60 for yeast expression."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The instability of 7 and 8 and the functional importance of 8 are directly described."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 27,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "Pt2OGD-4",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists Pt2OGD-4 accession OR538095."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Pt2OGD-4 is from Phlegmariurus tetrastichus."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Pt2OGD-4 was tested by transient expression in Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Pt2OGD-4 is part of the established downstream route from 10 to huperzine A (17)."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Huperzine A is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states HupA is an AChE inhibitor and discusses anti-herbivory potential."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact phrasing is not directly stated, though HupA-active new growth leaves are described."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "This gene belongs to Lycopodium alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Pt2OGD-4 acts in downstream lycodane scaffold oxidation from 10 toward 17."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Pt2OGD-4 is explicitly a 2OGD enzyme."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is a 2-oxoglutarate-dependent dioxygenase/2OGD oxygenase."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Flabellidine (10) was used as substrate in transient expression experiments."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Pt2OGD-4 produced a molecule consistent with proposed intermediate 11."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states Pt2OGD-4 oxidized 10 to a product consistent with carbonyl installation and the authors suspected A-ring carbonyl formation."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a downstream tailoring step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "11 is an immediate precursor for later steps toward HupA."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Pt2OGD-4 introduces the oxidation needed in the main route leading to HupA."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by transient expression with 10 feeding, LC–MS/MS, and pathway reconstruction with downstream enzymes."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not establish this field at all; 'Not established' is meta-commentary, not a paper-supported value."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are supported by Results and Extended Data Figs. 7–9."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pt2OGD-4 was identified among oxidase candidates from cluster131, but the precise phrasing 'Cluster131 candidate; expressed in HupA-active tissues' is partially inferable rather than explicitly stated for Pt2OGD-4 alone."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Transiently expressed in N. benthamiana leaves."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Sequential pathway relationship with Pt2OGD-5 and PtABH-1 is shown, but direct protein interaction is not demonstrated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods report PacBio/Illumina datasets and BioProject PRJNA731132."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Inferable from successful heterologous pathway reconstruction to HupA."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "10 was co-infiltrated as substrate in N. benthamiana experiments."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "pEAQ-HT vector use is likely, but promoter details are not specified."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Extended Data Fig. 7 explicitly reports minor hydroxylated side products."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Rate_Limiting_or_Key_Control_Step",
+          "old_value": "Not established",
+          "new_value": "NA",
+          "reason": "The paper does not establish this field at all; 'Not established' is meta-commentary, not a paper-supported value."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "Pt2OGD-5",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists Pt2OGD-5 accession OR538096."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Pt2OGD-5 is from Phlegmariurus tetrastichus."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Pt2OGD-5 was tested by transient expression in Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Pt2OGD-5 is part of the downstream route to huperzine A."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Huperzine A is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes HupA as an AChE inhibitor and possible anti-herbivory compound."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Only HupA-active tissues are given, not the exact accumulation-site wording."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "This gene functions in Lycopodium alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It acts in downstream lycodane scaffold desaturation."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Pt2OGD-5 is explicitly a 2OGD enzyme."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is a 2OGD oxygenase."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show Pt2OGD-5 consumes 11 to make 13 and can also act on 10 to make 12."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported as proposed 13 from 11 and 12 from direct action on 10."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states Pt2OGD-5 consumed 11 and produced desaturated 13, likely installing the 8,15-double bond, and also made 12 from 10."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Downstream tailoring step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "13 is the immediate precursor to deacetylation and later transformations toward HupA."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Pt2OGD-5 introduces the necessary double bond in downstream HupA biosynthesis."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by transient expression with 10 feeding, LC–MS/MS, sequential reconstruction, and comparison of 10 consumption."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not establish this field; 'Not established' is not a paper-supported biological value."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are supported by Results and Extended Data Figs. 8–9."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pt2OGD-5 was identified among cluster131 oxidase candidates, but the exact phrasing is only partially inferable."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient expression in N. benthamiana leaves is explicit."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Sequential functional relationship to Pt2OGD-4 and PtABH-1 is shown, but not direct physical interaction."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by Methods/data availability."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Inferable from its role in full heterologous HupA production."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments used co-infiltration of flabellidine (10)."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "pEAQ-HT vector use is likely but promoter details are not explicitly given."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The authors explicitly infer Pt2OGD-5 installs the 8,15-double bond."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Rate_Limiting_or_Key_Control_Step",
+          "old_value": "Not established",
+          "new_value": "NA",
+          "reason": "The paper does not establish this field; 'Not established' is not a paper-supported biological value."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 204,
+    "supported": 175,
+    "unsupported": 3,
+    "uncertain": 26,
+    "total_corrections": 3
+  }
+}

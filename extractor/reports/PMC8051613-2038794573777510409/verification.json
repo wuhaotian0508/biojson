@@ -1,0 +1,813 @@
+{
+  "file": "MinerU_markdown_PMC8051613_2038794573777510409",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC8051613_2038794573777510409.md",
+  "timestamp": "2026-03-31T22:33:11.697556",
+  "genes": [
+    {
+      "gene_name": "nisT",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly links nisin production to Lactococcus sp. and analyzes nisin-related genes in that context."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Lactococcus sp. is explicitly named in Results and Discussion."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism is cassava throughout the paper."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The common name cassava is used throughout, but the Latin name Manihot esculenta does not explicitly appear in the provided text."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods and figures list R01 (SC7), R02 (SC124), R03 (ZM9710), R04 (KU50), R05 (SC5), R06 (SC11), R07 (SC6), R08 (Nanzhi199), R09 (SC9), and R10 (GR911)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper states nisT is involved in transport, but does not identify it as an ABC transporter or specify a protein family/domain."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper focuses on nisin as the product associated with Lactococcus sp. and the analyzed nisin-related genes."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Nisin is explicitly described as a lantibiotic and as a peptide antibiotic."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show nisin inhibits Xam growth in vitro and improves cassava disease resistance in vivo."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nisin content was measured in cassava roots/root surface-related samples, but the exact phrase 'root surface/rhizosphere-associated root samples' is not consistently stated in Results."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state nisin metabolism-related genes were significantly higher in resistant cultivars and root nisin was higher in relatively resistant samples, linking this module with disease resistance."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed approaches appear in the paper: metagenomic abundance analysis, disease-resistance correlation, nisin measurement, in vitro Xam inhibition assay, and in vivo nisin treatment assay."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These conditions are described in Methods and Results: field-grown cassava rhizosphere microbiome, Xam infection assays, and exogenous nisin treatment."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper suggests microbiome-based biocontrol potential, but does not explicitly describe nisT as a marker for identifying functional microbiomes."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The study used 16S rRNA amplicon sequencing, ITS sequencing, shotgun metagenomics with SRA PRJNA565326, and cassava resequencing."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "nisT was among six genes quantified, and nisin-related genes were higher in resistant cultivars, but the paper does not present a nisT-specific result separated from the other five genes."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states nisT is involved in transport of nisin."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "ABC transporter involved in lantibiotic export",
+          "new_value": "NA",
+          "reason": "The paper states nisT is involved in transport, but does not identify it as an ABC transporter or specify a protein family/domain."
+        }
+      ],
+      "stats": {
+        "supported": 12,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "nisB",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Nisin production is associated with Lactococcus sp. in the paper."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Lactococcus sp. is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Cassava is the plant studied."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The text uses cassava, but does not explicitly show Manihot esculenta in the provided paper text."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "All ten varieties and aliases are explicitly listed in Methods."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "nisB is explicitly included among six genes associated with nisin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not describe a 'post-translational modification module' as such."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not name nisB specifically as 'nisin dehydratase'."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No LanB family/domain annotation is given in the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention prenisin precursor peptide as substrate."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention a dehydrated prenisin intermediate."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No biochemical reaction for nisB is described in the paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not classify nisB as a midstream step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "nisB is presented as one of the genes closely involved in nisin biosynthesis, supporting a required biosynthetic connection."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The target metabolite discussed is nisin."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Nisin is described as a lantibiotic and peptide antibiotic."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Nisin inhibited Xam and improved disease resistance according to Results."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nisin content was measured in cassava roots, but the exact 'root surface/rhizosphere-associated root samples' wording is not clearly established for accumulation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports higher abundance of nisin-related genes in resistant cultivars and higher nisin content in relatively resistant samples."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper reports higher relative abundance of the group of nisin-related genes, especially in R03, but not a nisB-specific expression/abundance value."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The statement says 'Not established,' and the paper indeed does not establish nisB as rate-limiting."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all described in Results/Methods."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These factors are directly part of the study design."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports potential microbiome-based biocontrol, but does not specifically propose nisB as a marker/module for engineering or selection."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed omics/platform elements are explicitly stated."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "nisB was among the six tracked genes and nisin-related genes were elevated in resistant cultivars, but no gene-specific nisB result is shown independently."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says the six genes were obtained from UniProt, but the specific modification role for nisB appears only in Discussion as background from prior literature, not from direct analysis in this paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Pathway_Branch_or_Subpathway",
+          "old_value": "Post-translational modification module of lantibiotic biosynthesis",
+          "new_value": "NA",
+          "reason": "The paper does not describe a 'post-translational modification module' as such."
+        },
+        {
+          "field": "Enzyme_Name",
+          "old_value": "Nisin dehydratase",
+          "new_value": "NA",
+          "reason": "The paper does not name nisB specifically as 'nisin dehydratase'."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "LanB family lantibiotic dehydratase",
+          "new_value": "NA",
+          "reason": "No LanB family/domain annotation is given in the paper."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "Prenisin precursor peptide",
+          "new_value": "NA",
+          "reason": "The paper does not mention prenisin precursor peptide as substrate."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "Dehydrated prenisin intermediate",
+          "new_value": "NA",
+          "reason": "The paper does not mention a dehydrated prenisin intermediate."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Dehydrates specific Ser/Thr residues in the nisin precursor peptide during nisin maturation",
+          "new_value": "NA",
+          "reason": "No biochemical reaction for nisB is described in the paper."
+        },
+        {
+          "field": "Metabolic_Step_Position",
+          "old_value": "Midstream modification step",
+          "new_value": "NA",
+          "reason": "The paper does not classify nisB as a midstream step."
+        }
+      ],
+      "stats": {
+        "supported": 14,
+        "unsupported": 7,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "nisC",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper associates nisin production with Lactococcus sp."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Lactococcus sp. is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Cassava is the applied species studied."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Manihot esculenta is not explicitly shown in the provided text."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "All ten varieties are explicitly listed."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "nisC is explicitly listed among six genes associated with nisin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention a 'post-translational cyclization module'."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly call nisC 'nisin cyclase'."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No LanC family/domain is given."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specify dehydrated prenisin intermediate as substrate."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specify cyclized prenisin with lanthionine bridges as product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No nisC-specific catalytic reaction is described."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No step position is assigned in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "nisC is presented as one of the genes closely involved in nisin biosynthesis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Nisin is the metabolite in question."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Nisin is described as a lantibiotic/peptide antibiotic."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results demonstrate antibacterial activity against Xam and improved disease resistance."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nisin was measured in cassava roots, but the exact accumulation site phrasing is stronger than the paper directly states."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Higher abundance of the nisin-related gene set is linked to resistant cultivars and higher nisin content in relatively resistant samples."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The enrichment is shown for the collective nisin-related genes, not nisC alone."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish this; thus 'Not established' is faithful."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed methods are used in the paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These experimental contexts are directly described."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Biocontrol implications are discussed generally, but nisC-specific marker/module utility is not explicitly stated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed omics data types and accession appear in the paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports enrichment of the six-gene set and links nisin to resistance, but does not isolate nisC-specific findings."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "The genes were obtained from UniProt, but the claimed specific modification role for nisC is background knowledge not directly demonstrated in Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Pathway_Branch_or_Subpathway",
+          "old_value": "Post-translational cyclization module of lantibiotic biosynthesis",
+          "new_value": "NA",
+          "reason": "The paper does not mention a 'post-translational cyclization module'."
+        },
+        {
+          "field": "Enzyme_Name",
+          "old_value": "Nisin cyclase",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly call nisC 'nisin cyclase'."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "LanC family lantibiotic cyclase",
+          "new_value": "NA",
+          "reason": "No LanC family/domain is given."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "Dehydrated prenisin intermediate",
+          "new_value": "NA",
+          "reason": "The paper does not specify dehydrated prenisin intermediate as substrate."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "Cyclized prenisin containing lanthionine/methyllanthionine bridges",
+          "new_value": "NA",
+          "reason": "The paper does not specify cyclized prenisin with lanthionine bridges as product."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Catalyzes thioether ring formation in the modified nisin precursor peptide",
+          "new_value": "NA",
+          "reason": "No nisC-specific catalytic reaction is described."
+        },
+        {
+          "field": "Metabolic_Step_Position",
+          "old_value": "Midstream modification step",
+          "new_value": "NA",
+          "reason": "No step position is assigned in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 14,
+        "unsupported": 7,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "nisP",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Nisin production is attributed to Lactococcus sp. in the study."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Lactococcus sp. is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Cassava is the host species studied."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The Latin name Manihot esculenta is not explicitly shown in the provided text."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The ten variety names are explicitly listed in Methods."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "nisP is one of six genes closely associated with nisin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not use the phrase 'processing/activation module of lantibiotic biosynthesis'."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly call nisP 'nisin leader peptidase'."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subtilisin-like serine protease family/domain is stated."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Modified prenisin precursor peptide is not specified in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Active mature nisin is not explicitly stated as the nisP product in Results/Methods."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "Discussion says nisP is involved in activation of nisin via processing, but does not provide the detailed leader-peptide cleavage reaction stated here."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not label nisP as the terminal step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states nisP is involved in activation of nisin via processing, directly connecting it to product formation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Nisin is the metabolite discussed."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Nisin is described as a lantibiotic peptide antibiotic."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Nisin's activity against Xam and enhancement of cassava disease resistance are shown in Results."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nisin was measured in cassava roots, but the exact accumulation site wording is not directly established."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Higher abundance of nisin-related genes and higher root nisin content are associated with resistant cultivars."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The result is for the pooled nisin-related genes, not specifically nisP."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish this; 'Not established' is appropriate."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These approaches are all used in the paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These conditions are explicitly part of the experiments."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses beneficial microbes and biocontrol generally, but not nisP specifically as a candidate marker."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed data types and accession are explicitly reported."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "nisP was tracked within the six-gene set, but no nisP-specific abundance result is individually presented."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states nisP is involved in activation of nisin via processing."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Pathway_Branch_or_Subpathway",
+          "old_value": "Processing/activation module of lantibiotic biosynthesis",
+          "new_value": "NA",
+          "reason": "The paper does not use the phrase 'processing/activation module of lantibiotic biosynthesis'."
+        },
+        {
+          "field": "Enzyme_Name",
+          "old_value": "Nisin leader peptidase",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly call nisP 'nisin leader peptidase'."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "Subtilisin-like serine protease involved in lantibiotic processing",
+          "new_value": "NA",
+          "reason": "No subtilisin-like serine protease family/domain is stated."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "Modified prenisin precursor peptide",
+          "new_value": "NA",
+          "reason": "Modified prenisin precursor peptide is not specified in the paper."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "Active mature nisin",
+          "new_value": "NA",
+          "reason": "Active mature nisin is not explicitly stated as the nisP product in Results/Methods."
+        },
+        {
+          "field": "Metabolic_Step_Position",
+          "old_value": "Terminal step",
+          "new_value": "NA",
+          "reason": "The paper does not label nisP as the terminal step."
+        }
+      ],
+      "stats": {
+        "supported": 15,
+        "unsupported": 6,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "nisR",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links Lactococcus sp. with nisin production and the analyzed nisin-related genes."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Lactococcus sp. is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Cassava is the host species studied."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Manihot esculenta is not explicitly stated in the provided text."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "All ten cassava varieties are explicitly listed."
+        },
+        "Regulator_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states nisRK is a two-component system involved in autoregulation, but does not explicitly label nisR alone as the response regulator."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper mentions the two-component system nisRK, but not the specific domain/family wording given here."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Nisin is the metabolite linked to these genes."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Nisin is described as a lantibiotic peptide antibiotic."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Nisin inhibits Xam and improves cassava disease resistance according to Results."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly says the operon exhibits autoregulation via the two-component system nisRK."
+        },
+        "Regulation_Mode": {
+          "verdict": "UNCERTAIN",
+          "reason": "Autoregulation via nisRK is stated, but the explicit phrase 'transcriptional regulation' is not directly used in Results/Methods."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper refers to the nisin biosynthesis operon, but does not assign nisR-specific direct targets."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNCERTAIN",
+          "reason": "Autoregulation via nisRK is stated from background literature, but specific nisR-promoted expression is not directly shown here."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Autoregulation via nisRK is explicitly mentioned in Discussion."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links the collective nisin-related genes with resistance and nisin, but does not demonstrate a nisR-specific decisive influence."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The abundance of nisin-related genes is higher in resistant cultivars and correlates with higher nisin and resistance."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is true only for the combined set of nisin-related genes, not specifically for nisR."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed methods are indeed used in the paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These factors are directly described."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential biocontrol utility is discussed broadly, but nisR-specific use as a regulatory marker is not explicit."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed omics datasets and accession are reported."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "nisR is among the six genes analyzed and nisRK autoregulation is discussed, but there is no gene-specific experimental evidence for nisR beyond the pooled abundance pattern."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not perform direct regulator-target binding assays, and the nisRK role is inferred from cited literature/background."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 14,
+        "unsupported": 0,
+        "uncertain": 10
+      }
+    },
+    {
+      "gene_name": "nisK",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Nisin-related genes are discussed in association with Lactococcus sp."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Lactococcus sp. is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Cassava is the host species in the study."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The provided text does not explicitly state Manihot esculenta."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The ten varieties with codes and names are explicitly provided."
+        },
+        "Regulator_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper mentions nisRK as a two-component system but does not explicitly define nisK alone as a histidine kinase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper mentions the nisRK two-component system but not the exact 'sensor kinase' family/domain wording."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Nisin is the metabolite associated with these genes."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Nisin is explicitly described as a lantibiotic peptide antibiotic."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Nisin inhibited Xam and promoted disease resistance in the reported experiments."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the operon exhibits autoregulation via nisRK."
+        },
+        "Regulation_Mode": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No signal sensing or phosphorylation mechanism for nisK is described in the paper text."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state that nisK targets nisR or define explicit targets for nisK."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNCERTAIN",
+          "reason": "Autoregulation via nisRK is mentioned, but the specific effect phrasing for nisK is not directly stated."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Autoregulation for nisRK is explicitly mentioned."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "Only the combined nisin-related gene set is linked to resistance and nisin; nisK-specific influence is not directly shown."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports higher abundance of nisin-related genes in resistant cultivars and higher nisin content in relatively resistant samples."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The statement is supported only at the level of pooled nisin-related genes, not nisK individually."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all part of the study."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These factors are directly described in Methods/Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "General biocontrol potential is discussed, but nisK-specific deployment as a marker is not explicitly stated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed omics datasets and SRA accession are present in the paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "nisK was included in the six-gene set and that set was enriched in resistant varieties, but no nisK-specific result is shown separately."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed performs no direct signaling assay, and nisRK function is presented via background literature."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Regulation_Mode",
+          "old_value": "Signal sensing and phosphorylation-mediated activation of response regulator",
+          "new_value": "NA",
+          "reason": "No signal sensing or phosphorylation mechanism for nisK is described in the paper text."
+        },
+        {
+          "field": "Primary_Regulatory_Targets",
+          "old_value": "nisR and nisin biosynthesis operon via NisRK system",
+          "new_value": "NA",
+          "reason": "The paper does not state that nisK targets nisR or define explicit targets for nisK."
+        }
+      ],
+      "stats": {
+        "supported": 14,
+        "unsupported": 2,
+        "uncertain": 8
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 146,
+    "supported": 83,
+    "unsupported": 23,
+    "uncertain": 40,
+    "total_corrections": 23
+  }
+}

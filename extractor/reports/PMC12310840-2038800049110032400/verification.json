@@ -1,0 +1,801 @@
+{
+  "file": "MinerU_markdown_PMC12310840_2038800049110032400",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12310840_2038800049110032400.md",
+  "timestamp": "2026-03-31T21:52:06.662774",
+  "genes": [
+    {
+      "gene_name": "CPK27",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Accession numbers section lists CPK27 as Solyc11g065660."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Plant material states tomato was used."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Plant material identifies tomato as Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Plant material states cv. Condine Red (CR)."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in tomato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato in this paper is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "WT background used was Condine Red."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 8 and text show cpk27 mutants had reduced JA contents rescued by erf.d2 mutation, linking CPK27 to jasmonic acid."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "JA is explicitly described as jasmonic acid, a phytohormone."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states ABA and JA work synergistically to increase plant drought tolerance and shows JA accumulation associated with tolerance."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state CPK27 phosphorylates ERF.D2, promotes its degradation, and cpk27 mutants show reduced AOC/OPR3 expression and JA contents that are rescued in cpk27 erf.d2."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are supported in Results: direct interaction enhanced by ABA, phosphorylation mainly at Ser-52, and downstream effects on ubiquitination/degradation with JA output inferred from Figure 8."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods appear in Results/Methods for CPK27: Y2H, pull-down, LCI, co-IP, in vitro phosphorylation, Phos-tag, LC-MS/MS, cell-free degradation, transient N. benthamiana expression, and cpk27 erf.d2 genetics."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These treatments are all used in experiments involving CPK27/ERF.D2 regulation."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The drought/ABA/mannitol-induced transcript increase described in Figure S1 is for ERF.D2, not CPK27."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CPK27 is explicitly described as a calcium-dependent protein kinase."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Direct interaction with ERF.D2 is shown, but direct interaction between CPK27 and PUB22 is not reported in this paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results indicate ERF.D2 acts downstream of ABA-regulated CPK27 and JA changes are indirect through ERF.D2 control."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible application inferred from the study, but it is not explicitly tested or stated as an engineering target for CPK27 specifically."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Expression_Pattern_of_Applied_Species",
+          "old_value": "Transcript induced by drought, ABA, and mannitol treatments (as referenced from prior study/background in this paper).",
+          "new_value": "NA",
+          "reason": "The drought/ABA/mannitol-induced transcript increase described in Figure S1 is for ERF.D2, not CPK27."
+        }
+      ],
+      "stats": {
+        "supported": 16,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "PUB22",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Accession numbers section lists PUB22 as Solyc03g082690."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Study organism is tomato."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is Solanum lycopersicum in the paper."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "WT background is Condine Red."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PUB22 was studied in tomato plants."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato variety used was Condine Red."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 8 shows pub22 mutants have reduced JA contents under drought, rescued by erf.d2 mutation, linking PUB22 to jasmonic acid."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "JA is a phytohormone as used throughout the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly frames JA as promoting drought tolerance."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show PUB22 ubiquitinates phosphorylated ERF.D2, promoting degradation, and pub22 mutation lowers drought tolerance and JA-related outputs."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "PUB22 was identified by IP-MS, interaction was confirmed in supplementary assays, ubiquitination was shown in vitro/in vivo, and phosphomimic ERF.D2 was preferentially ubiquitinated."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are reported, though Y2H/LCI/co-IP interaction confirmation is in supplementary figures."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Drought, ABA, and MG132 are all used in PUB22-related experiments."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PUB22 is explicitly called a U-box E3 ligase protein."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Direct interaction with ERF.D2 is shown, but direct PUB22-CPK27 interaction is not demonstrated."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper supports PUB22 acting with ABA/CPK27-mediated phosphorylation to target ERF.D2 for proteasomal degradation, indirectly affecting JA."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential application is inferential and not directly tested."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Drought sensitivity of pub22 mutants is shown, but 'broader ubiquitination targets and pleiotropic effects not resolved' is not specifically discussed as a tradeoff."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 16,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "AOC",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Accession numbers section lists AOC as Solyc02g085730."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AOC studied is tomato AOC."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Species is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Plant background is Condine Red."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional analyses were in tomato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments used Condine Red background."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "AOC is explicitly expanded as allene oxide cyclase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AOC is explicitly described as a JA biosynthesis gene."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Octadecanoid pathway is not mentioned in the paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not classify AOC as 'midstream'."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Substrate identity is not stated in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Product identity is not stated in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This biochemical reaction description is not given in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "AOC is presented as a JA biosynthesis gene contributing to JA accumulation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AOC is linked to jasmonic acid accumulation in drought response."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "JA is a phytohormone."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "JA is stated to positively regulate plant drought tolerance."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show AOC expression is repressed by ERF.D2, higher in erf.d2 under drought, and VIGS of AOC in erf.d2 reduces JA accumulation and drought tolerance."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summarized findings are directly supported by Figures 6 and 7."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed assays were used for AOC in the paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Drought directly tested; ABA effect is indirect via ERF.D2 degradation as discussed."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 6f shows drought induction and stronger induction in erf.d2 mutants."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "JA measurements were performed in leaves."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Native AOC promoter was cloned and studied; however 'inducible by drought' for the promoter itself was not directly assayed as promoter activity in tomato."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "AOC is a target gene; no protein-protein interaction between AOC and ERF.D2 is shown."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "AOC is an enzyme/gene in JA biosynthesis, but no family/domain designation is provided in the paper."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish rate-limiting status but does state AOC showed exceptionally high expression and might play a dominant role; this wording matches the field."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential use is an inference, not directly tested."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct repression via GCC motif-containing promoter region is supported by EMSA, ChIP-qPCR, Y1H, and dual-LUC."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "5.3.99.6",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper."
+        },
+        {
+          "field": "Pathway_Branch_or_Subpathway",
+          "old_value": "Octadecanoid pathway",
+          "new_value": "NA",
+          "reason": "Octadecanoid pathway is not mentioned in the paper."
+        },
+        {
+          "field": "Metabolic_Step_Position",
+          "old_value": "midstream",
+          "new_value": "NA",
+          "reason": "The paper does not classify AOC as 'midstream'."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "allene oxide derived from 13-hydroperoxylinolenic acid",
+          "new_value": "NA",
+          "reason": "Substrate identity is not stated in the paper."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "12-oxo-phytodienoic acid (OPDA)",
+          "new_value": "NA",
+          "reason": "Product identity is not stated in the paper."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Cyclizes an unstable allene oxide intermediate to form 12-oxo-phytodienoic acid in the jasmonate biosynthetic pathway.",
+          "new_value": "NA",
+          "reason": "This biochemical reaction description is not given in the paper."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "ERF.D2",
+          "new_value": "NA",
+          "reason": "AOC is a target gene; no protein-protein interaction between AOC and ERF.D2 is shown."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 7,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "OPR3",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Accession numbers section lists OPR3 as Solyc07g007870."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OPR3 studied is from tomato."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Species is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Background is Condine Red."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional tests were done in tomato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Condine Red background was used."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "OPR3 is explicitly expanded as 12-oxophytodienoic acid reductase 3."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number appears in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "OPR3 is explicitly described as a JA biosynthesis gene."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Octadecanoid pathway is not mentioned."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not describe OPR3 as 'downstream'."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "OPDA as substrate is not stated in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "OPC-8:0/reduced derivative is not stated."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Detailed reaction description is absent from the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "OPR3 is presented as a JA biosynthesis gene contributing to JA accumulation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "OPR3 is linked to jasmonic acid accumulation under drought."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "JA is a phytohormone."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states JA positively regulates drought tolerance."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show OPR3 is directly repressed by ERF.D2, elevated in erf.d2 under drought, and silencing OPR3 in erf.d2 reduces JA accumulation and drought tolerance."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly shown in Figures 6 and 7."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods were used for OPR3."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Drought was directly tested; ABA linkage is indirect via ERF.D2 degradation."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 6g shows drought induction and greater expression in erf.d2 mutants."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "JA was measured in leaves."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Native OPR3 promoter was cloned and analyzed, but promoter drought inducibility per se was not directly demonstrated."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "ERF.D2 binds the OPR3 promoter DNA; no protein-protein interaction with OPR3 is shown."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state that OPR3 belongs to the Old yellow enzyme family."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not claim rate-limiting status but does identify OPR3 as one of the dominant drought-responsive JA biosynthesis genes."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Application value is inferential rather than directly tested."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Promoter binding residues including Lys-115, Arg-117, Arg-132, Arg-166, and Lys-168 are described, with effects on OPR3 repression analyzed."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.3.1.42",
+          "new_value": "NA",
+          "reason": "No EC number appears in the paper."
+        },
+        {
+          "field": "Pathway_Branch_or_Subpathway",
+          "old_value": "Octadecanoid pathway",
+          "new_value": "NA",
+          "reason": "Octadecanoid pathway is not mentioned."
+        },
+        {
+          "field": "Metabolic_Step_Position",
+          "old_value": "downstream",
+          "new_value": "NA",
+          "reason": "The paper does not describe OPR3 as 'downstream'."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "12-oxo-phytodienoic acid (OPDA)",
+          "new_value": "NA",
+          "reason": "OPDA as substrate is not stated in the paper."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "OPC-8:0 / reduced OPDA derivative en route to jasmonic acid",
+          "new_value": "NA",
+          "reason": "OPC-8:0/reduced derivative is not stated."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Reduces 12-oxo-phytodienoic acid in the jasmonate pathway to generate a downstream precursor required for jasmonic acid production.",
+          "new_value": "NA",
+          "reason": "Detailed reaction description is absent from the paper."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "ERF.D2",
+          "new_value": "NA",
+          "reason": "ERF.D2 binds the OPR3 promoter DNA; no protein-protein interaction with OPR3 is shown."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "Old yellow enzyme family oxidoreductase",
+          "new_value": "NA",
+          "reason": "The paper does not state that OPR3 belongs to the Old yellow enzyme family."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 8,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "ERF.D2",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "ERF.D2 accession Solyc12g056590 is listed."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ERF.D2 is from tomato."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Species is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Condine Red is the variety used."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Main experiments were in tomato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Condine Red background used."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "ERF.D2 is a transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AP2/ERF family and AP2 domain are supported; EAR-like LxL motif is discussed."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Nuclear localization is shown."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "ERF.D2 is directly linked to JA as output; ABA is an upstream signal rather than a terminal metabolite product controlled by ERF.D2."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Both ABA and JA are phytohormones."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper supports ABA as upstream drought signal and JA as positive for drought tolerance."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper repeatedly frames ERF.D2 as integrating ABA signaling with JA biosynthesis."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support downstream action from ABA signaling and repression of JA biosynthetic gene expression until ERF.D2 is degraded."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "AOC and OPR3 are direct targets."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Repression of AOC and OPR3 and indirect suppression of JA are shown."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This integrator role is the main conclusion of Figure 8 and the model."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "ERF.D2 is presented as a vital hub at the ABA-JA intersection in drought response."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed points are supported by Results in Figures 4, 5, and 8."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all used to support the integrator role."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Drought and ABA treatment are central to these experiments."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Transcript induction and protein destabilization under ABA/drought are both shown."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "ABA, CPK27, and PUB22 are supported upstream regulators."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct interactions with CPK27 and PUB22 are demonstrated."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This application is a reasonable implication but not directly tested."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly emphasizes the ABA-JA integrator role of ERF.D2."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 25,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "ERF.D2",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "ERF.D2 accession Solyc12g056590 is listed."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ERF.D2 is from tomato."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Species is Solanum lycopersicum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Condine Red is the variety used."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Main experiments were in tomato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Solanum lycopersicum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Condine Red background used."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "ERF.D2 is a transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AP2/ERF family and AP2 domain are supported; EAR-like LxL motif is discussed."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Nuclear localization is shown."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "ERF.D2 is directly linked to JA as output; ABA is an upstream signal rather than a terminal metabolite product controlled by ERF.D2."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Both ABA and JA are phytohormones."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper supports ABA as upstream drought signal and JA as positive for drought tolerance."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper repeatedly frames ERF.D2 as integrating ABA signaling with JA biosynthesis."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support downstream action from ABA signaling and repression of JA biosynthetic gene expression until ERF.D2 is degraded."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "AOC and OPR3 are direct targets."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Repression of AOC and OPR3 and indirect suppression of JA are shown."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This integrator role is the main conclusion of Figure 8 and the model."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "ERF.D2 is presented as a vital hub at the ABA-JA intersection in drought response."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed points are supported by Results in Figures 4, 5, and 8."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all used to support the integrator role."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Drought and ABA treatment are central to these experiments."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Transcript induction and protein destabilization under ABA/drought are both shown."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "ABA, CPK27, and PUB22 are supported upstream regulators."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct interactions with CPK27 and PUB22 are demonstrated."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This application is a reasonable implication but not directly tested."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly emphasizes the ABA-JA integrator role of ERF.D2."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 25,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 154,
+    "supported": 124,
+    "unsupported": 16,
+    "uncertain": 14,
+    "total_corrections": 16
+  }
+}

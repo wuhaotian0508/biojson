@@ -1,0 +1,505 @@
+{
+  "file": "MinerU_markdown_PMC11390486_2038801160713838604",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC11390486_2038801160713838604.md",
+  "timestamp": "2026-03-31T21:37:38.359941",
+  "genes": [
+    {
+      "gene_name": "Tdr1",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies Tdr1 as Zm00004b012122."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Tdr1 is discussed as a maize gene in the W22 genome/background and broader Zea surveys; maize is supported."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is in maize, Zea mays, and Tdr1 is a maize gene."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "W22 is the reference/background used in the experiments, and B73 plus broader Zea populations are explicitly surveyed for Tdr1 haplotypes in Fig. 5/text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional tests were performed in maize/maize-teosinte hybrid backgrounds derived from maize."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied system is Zea mays."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly uses W22-derived TPD lines and also tests B73 for the deletion haplotype effect."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The text states Zm00004b012122 encodes a GDSL triacylglycerol lipase/esterase with a core catalytic GDSxxDxG motif."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says the antibody peptide choice reflected endoplasmic reticulum localization, implying predicted ER localization, but it does not directly demonstrate subcellular localization experimentally."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper links Tdr1 to esterase/lipase activity and pollen viability, but 'pollen lipid metabolism / esterase activity' is not a specific final metabolite product."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Tdr1 is a lipase affecting lipid metabolism, but no specific terminal metabolite class/product is established beyond a general lipid-related function."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly states Tdr1 is required for pollen viability and male fertility."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Protein accumulation is reported in 5-mm anthers and mature pollen from wild-type plants."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states Tdr1 mRNA begins post-meiotically at the 3-mm tetrad stage, peaks in 5-mm anthers and mature pollen, and is highly pollen specific relative to other targets."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "In TPD experiments, TDR1 protein is present in wild-type anthers/pollen and absent from TPD anthers/pollen, as stated from immunoblotting."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CRISPR tdr1 mutants caused developmental arrest and pollen abortion phenocopying Tpd1; the text explicitly supports this."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly described: target prediction, iPARE-seq, immunoblotting, esterase assay, CRISPR-Cas9 mutants, and pollen viability phenotyping."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately reflects the Results: Tdr1 is a pollen-expressed GDSL lipase, a main responder to Tpd1-derived 22-nt siRNAs, protein is reduced without mRNA reduction, and CRISPR mutants phenocopy sterility."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results analyze Tdr1 in the TPD hybrid background across pollen developmental stages."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Loss of Tdr1 clearly causes severe male sterility, but delayed anthesis was shown directly for tdr1 mutant T0 tassels qualitatively rather than framed as a broader tradeoff; partially supported but not stated as a tradeoff."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows regulation by Tpd1-derived hp-siRNAs and DCL2-dependent secondary siRNA machinery, but these are not protein-protein interactions and the field wording is imprecise."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents natural immune haplotypes/target-site variants in Tdr1 that avoid silencing and discusses implications for introgression and domestication; application value is a reasonable inference from Results."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq, small RNA-seq, iPARE-seq, western blotting, and resequencing of 1,483 genomes/GEO accession are all described in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly reports natural in-frame deletion/SNP haplotypes at Tpd1 hp-siRNA target sites in Tdr1 that spread in maize and are predicted to confer resistance to silencing."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "pollen lipid metabolism / esterase activity",
+          "new_value": "NA",
+          "reason": "The paper links Tdr1 to esterase/lipase activity and pollen viability, but 'pollen lipid metabolism / esterase activity' is not a specific final metabolite product."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "Tpd2",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Tpd2 is described as a mexicana-derived introgression locus from teosinte mexicana."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies introgression from Zea mays ssp. mexicana."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods trace TPD material to mexicana collection 107; Tpd2 is part of that introgression background."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional work is in maize-teosinte hybrids/backcross maize lines."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied system is Zea mays."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results use W22-derived TPD backcross lines."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Tpd2 is linked to suppression of secondary small RNAs from Tdr1 and fertility, but 'secondary 22-nt siRNAs from Tdr1 / pollen viability' is not a terminal nutrient/metabolite product."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "'small RNA-related fertility trait' is a trait/process, not a metabolite class."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results support that Tpd2 suppresses toxic secondary silencing from Tdr1 and helps preserve pollen viability."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Its effect is analyzed in pollen; suppression of secondary small RNAs from Tdr1 is described in pollen."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper maps Tpd2 to a 1.5-Mb interval on chromosome 6L and notes that the interval contains pollen-expressed candidate genes."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly states Tpd2 is an unlinked antidote associated with fertility, required with dcl2T to suppress pollen abortion and suppress secondary small RNA biogenesis from Tdr1."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Genetic segregation, bulk segregant analysis, mapping, and small RNA profiling are all explicitly used."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary matches the Results: Tpd2 is an unlinked antidote on chromosome 6, insufficient alone, and acts downstream by suppressing secondary small RNAs from Tdr1."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Its effect is described specifically in male gametophytic transmission in TPD hybrids."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that loss/recombination away from Tpd1 leads to sterility and that the molecular identity of Tpd2 remains unknown."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Relevance to fertility and introgression barriers is a reasonable inference, but no direct breeding/engineering application is explicitly tested."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Whole-genome sequencing, bulk segregant analysis, single-pollen sequencing, small RNA-seq, GEO GSE234925, and SRA PRJNA937229 are all reported."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states that the molecular identity of Tpd2 is unknown and mentions an Rdm1 homologue only as a speculative candidate, not functionally confirmed."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "secondary 22-nt siRNAs from Tdr1 / pollen viability",
+          "new_value": "NA",
+          "reason": "Tpd2 is linked to suppression of secondary small RNAs from Tdr1 and fertility, but 'secondary 22-nt siRNAs from Tdr1 / pollen viability' is not a terminal nutrient/metabolite product."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "small RNA-related fertility trait",
+          "new_value": "NA",
+          "reason": "'small RNA-related fertility trait' is a trait/process, not a metabolite class."
+        }
+      ],
+      "stats": {
+        "supported": 16,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "Dcl2",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Dcl2 is explicitly identified as Dicer-like 2."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies a mexicana-derived dcl2T allele and the maize W22 dcl2-mu1 allele."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Zea mays ssp. mexicana and Zea mays ssp. mays contexts are explicitly described."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods identify mexicana collection 107 plant 4 as the source lineage and W22 as the dcl2-mu1 background."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional tests are in maize-teosinte hybrid and maize backgrounds."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Zea mays."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly uses W22-derived TPD BC11-BC13 material and W22."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies Dcl2 as a Dicer-like protein and discusses the DExD/H RNA helicase domain and dsRBD."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Dcl2 is directly linked to 22-nt siRNA biogenesis/RNA interference."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states Dcl2 produces 22-nt siRNAs from hairpins and secondary small RNAs from dsRNA templates."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This description matches the stated Dcl2 role in generating 22-nt siRNAs from hairpin and dsRNA precursors."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Hairpin RNA and double-stranded RNA templates are explicitly described as Dcl2 substrates."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states Dcl2 produces 22-nt siRNAs."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Dcl2 functions upstream in generating the small RNAs that drive downstream silencing of Tdr1."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results directly connect Dcl2-dependent 22-nt siRNAs to Tdr1 repression and pollen viability outcomes."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "22-nt siRNAs targeting Tdr1 are explicitly described as the relevant downstream product."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are small RNAs."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly links these siRNAs to repression of Tdr1 and pollen abortion."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper analyzes 22-nt siRNAs in pollen and anthers."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The mexicana dcl2T introgression is described, and published single-cell data are cited showing Dcl2 expression pre-meiotically and in mature pollen."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says Dcl2 is not expressed in bicellular microspores but is expressed pre-meiotically and in mature pollen according to cited scRNA-seq data."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show Dcl2 activity promotes Tpd1-mediated pollen abortion, dcl2T acts as a partial antidote, and dcl2-mu1 strongly suppresses sterility."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Recombination analysis, dcl2-mu1 mutant tests, small RNA-seq, pollen viability assays, and seed-set rescue are all explicitly reported."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately reflects the Results on pseudolinkage, 22-nt siRNA accumulation, and suppression by dcl2-mu1 with partial antidote behavior of dcl2T."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "Dcl2 is clearly important and controlling, but the paper does not explicitly call it rate-limiting."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The effects are analyzed in male transmission through pollen and in the maize-teosinte hybrid background."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The statement that reduced Dcl2 may alter endogenous RNA silencing functions is biologically plausible and discussed via Arabidopsis comparisons, but not directly demonstrated in this paper's maize experiments."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly places Dcl2 in coordinated action with RDR6 and SGS3/RGD1 and discusses AGO proteins as relevant small RNA effectors."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Whole-genome sequencing, single-pollen sequencing, small RNA-seq, RNA-seq, use of a published scRNA-seq dataset, GEO GSE234925, and SRA PRJNA937229 are all supported."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly emphasizes allele-specific behavior: dcl2T is partially functional/hypomorphic and acts as a linked antidote, while Dcl2 activity is also needed for toxin-associated 22-nt siRNA biogenesis."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 28,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "Tpd1",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies Tpd1 as a long non-coding hairpin RNA/small-RNA-generating distorter locus."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Tpd1 is described as a non-coding RNA hairpin."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Tpd1 is a mexicana-derived introgression locus."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source is Zea mays ssp. mexicana."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods trace the TPD lineage to mexicana collection 107-derived introgression."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Tpd1 was tested in maize-teosinte hybrid/maize backcross lines."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied system is Zea mays."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results use W22-derived TPD backcross lines."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports action through AGO-loaded hp-siRNAs and RNAi machinery including DCL2 and RGD1/SGS3; however, 'protein complex involvement' is not directly shown as a defined complex."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Tpd1 controls post-transcriptional/translational silencing of Tdr1, a pollen lipid-metabolism-related gene."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results directly support 22-nt hp-siRNA-mediated cleavage and translational repression in trans."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "Tdr1 is explicitly identified as the primary target/responding gene."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows hp-siRNA-guided cleavage/translational inhibition of Tdr1 and promotion of secondary siRNA production from Tdr1."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "'Tdr1-dependent lipase activity / pollen lipid metabolism' describes an activity/process, not a specific terminal metabolite product."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The downstream biology is lipid-metabolism related, but no specific metabolite class/product is measured as the terminal output."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The downstream function supported by the paper is maintenance of pollen viability and fertility."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The downstream Tdr1 protein/activity is discussed in anthers and pollen."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the Tpd1 hairpin is expressed pre-meiotically in 1–3 mm anthers and in microspores, but not mature pollen."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "These expression observations are made in the TPD hybrid background itself."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "The causal input is the presence of the mexicana Tpd1 haplotype; this is how the paper frames the system."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly proposes sequential targeting of Tdr1 followed by Dcl2-mediated secondary small RNA production, consistent with amplification/feedforward."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Bulk segregant analysis and genetics show Tpd1 is necessary and sufficient for dominant male sterility in the absence of antidotes."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results directly support that Tpd1 triggers pollen abortion and segregation distortion by silencing Tdr1."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods—genetic mapping, bulk segregant analysis, small RNA-seq, iPARE-seq, genome assembly comparison, and phenotype correlation—are described in Results."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately matches the Results on the mexicana hairpin, 22-nt hp-siRNAs, targeting of Tdr1, and role as the toxin/distorter."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The phenotype is specifically observed during male transmission in maize-teosinte hybrids."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "DCL2, AGO2, AGO5, AGO1, and RGD1/SGS3 are implicated in the pathway, but direct physical interaction with Tpd1 is not demonstrated; functional involvement is supported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results/discussion support importance for introgression barriers and domestication, and the caution about sterility is consistent with observed phenotypes."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly shows severe male fertility defects and segregation distortion associated with Tpd1 activity."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Whole-genome sequencing, de novo assembly, small RNA-seq, iPARE-seq, GEO GSE234925, and SRA PRJNA937229 are all reported."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states W22 carries transposon insertions disrupting the hairpin, rendering it non-functional in maize."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "Tdr1-dependent lipase activity / pollen lipid metabolism",
+          "new_value": "NA",
+          "reason": "'Tdr1-dependent lipase activity / pollen lipid metabolism' describes an activity/process, not a specific terminal metabolite product."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 104,
+    "supported": 90,
+    "unsupported": 4,
+    "uncertain": 10,
+    "total_corrections": 4
+  }
+}

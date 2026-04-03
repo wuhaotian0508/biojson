@@ -1,0 +1,809 @@
+# Engineering anthocyanin biosynthesis in plants
+
+# Yang Zhang, Eugenio Butelli and Cathie Martin
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/d0c29ac44051da6d17184fd27ef8fbde2321abcdec5a97c64b3e826ce71b073b.jpg)
+
+
+CrossMark 
+
+Anthocyanins are water-soluble pigments giving the red, purple and blue colours of many flowers and fruit. In addition to their physiological roles in plants, to attract pollinators and seed dispersers, dietary anthocyanins are associated with protection against certain cancers, cardiovascular diseases and other chronic human disorders. Enhanced supplies of pure anthocyanins would service the demands of research to investigate these health-promoting effects and would also prove a valuable resource for the colourants and cosmetic industries to investigate the effects of chemical modifications, co-pigments, and pH on colour and stability for developing new plant sources of natural colourants, and new natural colours. 
+
+# Addresses
+
+John Innes Centre, Norwich Research Park, Norwich NR4 7UH, United Kingdom 
+
+Corresponding author: Martin, Cathie (cathie.martin@jic.ac.uk) 
+
+Current Opinion in Plant Biology 2014, 19:81–90 
+
+This review comes from a themed issue on Physiology and metabolism 
+
+Edited by Sarah E O’Connor and Thomas P Brutnell 
+
+For a complete overview see the Issue and the Editorial 
+
+Available online 5th June 2014 
+
+http://dx.doi.org/10.1016/j.pbi.2014.05.011 
+
+1369-5266/ $©$ Published by Elsevier Ltd. 
+
+# Introduction
+
+As water-soluble, natural pigments, anthocyanins are responsible for the red, purple and blue colours of many flowers and fruit, that attract pollinators and seed dispersers [1]. Anthocyanin production is also induced under stress conditions [2–6] or infection by pathogens [7] and may serve to protect plants against oxidative damage such as that caused by high irradiation when the capacity for carbon fixation is low. Anthocyanins protect photosynthetic tissues by absorbing light in the visible range, so reducing light stress, and also by serving as antioxidants. 
+
+In addition to their physiological roles in plants, dietary anthocyanins are associated with protection against certain cancers [8], cardiovascular diseases [9], as well as other chronic human disorders [9]. Although many studies attribute the protective effects of dietary anthocyanins to their antioxidant capacity, their bioavailability is low and they likely promote health by suppressing specialized signalling pathways involved in inflammation and disease 
+
+development [10]. Enhanced supplies of pure anthocyanins would service the demands of research to investigate these effects and would also prove a valuable resource for the colourants and cosmetic industries to investigate the effects of chemical modifications, co-pigments, and pH on colour and stability for developing new plant sources of natural colourants, and new natural colours. 
+
+There are therefore excellent reasons for engineering anthocyanin biosynthesis in plants for a diversity of applications. Understanding the enzymes that determine their chemical features and the factors that influence their functional properties, should lead to more efficient breeding efforts to generate novelty in colours and patterns as well as to the engineering of colour changes beyond the limits of natural variation. 
+
+# Synthesis of anthocyanins
+
+Anthocyanins are synthesized from three molecules of malonyl CoA derived from fatty acid metabolism and one of p-coumaroyl CoA synthesized from phenylalanine via the general phenylpropanoid pathway (Figure 1). Malonyl CoA and p-coumaroyl CoA are condensed by chalcone synthase, the first committed enzyme of flavonoid biosynthesis. The activity of four further enzymes in flavonoid biosynthesis (Chalcone Isomerase [CHI], Flavanone 3-Hydroxylase [F3H], Dihydroflavonol 4-Reductase [DFR] and Anthocyanidin Synthase [ANS, also known as LDOX]) are required to synthesize a coloured anthocyanidin (pelargonidin) (Figure 1). However most plants further hydroxylate the B-ring using either the enzyme Flavonoid 30 Hydroxylase $[ \mathrm { F } 3 ^ { \prime } \mathrm { H } ]$ which forms cyanidin, or the enzyme Flavonoid $3 ^ { \prime } 5 ^ { \prime }$ Hydroxylase $[ \mathrm { F } 3 ^ { \prime } 5 ^ { \prime } \mathrm { H } ]$ which forms delphinidin. Differences in the hydroxylation of the B-ring confer differences in the colour range of anthocyanidins, pelargonidin being orange to red, cyanidin red to red-purple and delphinidin being redpurple to blue depending on many other factors. Anthocyanidin structure is inherently unstable and in nature these pigments accumulate exclusively as glycosylated forms (anthocyanins) where carbon 3 is linked through oxygen to a sugar residue, which is most frequently, but not exclusively, glucose. Post synthesis, cyanidin may be methylated on its $3 ^ { \prime }$ hydroxyl group to form peonidin, and delphinidin may be methylated on its $3 ^ { \prime }$ hydroxyl group to form petunidin or on both its $3 ^ { \prime }$ and $5 ^ { \prime }$ hydroxyl groups to form malvidin. Pelargonidin, cyanidin, peonidin, delphinidin, petunidin and malvidin constitute the core anthocyanidins predominant in nature. The $6 0 0 +$ natural anthocyanins identified to date differ in their side chain decorations of these core 
+
+
+Figure 1
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/442151bad3cd2c0b4a44d248a5581f9f55b55dd1637c6c6c55cd2ceea2b80bdf.jpg)
+
+
+Core pathway for anthocyanin biosynthesis, showing related pathways for flavonol and flavone synthesis. The general phenylpropanoid pathway is catalysed by phenylalanine ammonia lyase (PAL), cinnamate 4-hydroxylase (C4H) and 4-coumaryol CoA ligase (4CL). Enzymes involved in flavonoid biosynthesis are chalcone synthase (CHS), chalcone isomerise (CHI), flavanone 3-hydroxylase (F3H), flavanone $3 ^ { \prime } 5 ^ { \prime }$ - hydroxylase, $( \mathsf { F } 3 ^ { \prime } 5 ^ { \prime } \mathsf { H } )$ and flavanone ${ \mathfrak { z } } ^ { \prime }$ -hydroxylase (F30 H). Anthocyanins are synthesized by dihydroflavonol 4-reductase (DFR) and anthocyanidin synthase (ANS). Flavonols are synthesized by flavonol synthase (FLS) and flavones are synthesized by flavone synthase (FNS). 
+
+anthocyanidins. Side chain decorations affect anthocyanin functionalities including: colour, stability, interactions with other compounds, bioavailability and possibly also their health promoting effects. Engineering the types of anthocyanins that accumulate in plants involves modification of these decorations. 
+
+Anthocyanins change colour depending on the prevailing $\mathrm { p H }$ , because they exist in four pH-dependent forms shown in Figure 2. It is the lack of stability in the colour of anthocyanins, especially at neutral and high pH that causes the main problem in the uses of anthocyanins, particularly as natural food colourants. However, plants have solved many of these stability problems by elaborating the decoration of their anthocyanins, adjusting the vacuolar $\mathrm { p H }$ and adopting co-pigmentation strategies to generate an enormous range of orange through blue anthocyanin-based colours, particularly familiar in flowers. 
+
+# Decoration of anthocyanins: glycosylation
+
+Glycosylations are usually catalysed by cytoplasmicallylocalized glycosyl transferases, and the most common sugars in anthocyanidin 3-monosaccharides are glucose, rhamnose, galactose, arabinose and xylose, in descending order of occurrence. Glycosylation of C3 occurs on all naturally-accumulating anthocyanins and increases the stability of the pigment [11]. Further glycosylation shifts colour slightly towards red. Common sugars in anthocyanin 3-biosides are rutinose (glucose plus rhamnose), sophorose (glucose plus glucose) and sambubiose (glucose plus xylose) [12,13] and 3-biosides are generally more stable than anthocyanidin monosides [14]. The enzymes adding the sugar residues to the different positions of the anthocyanidins belonging to distinct clusters of family 1 glycosyl transferases. 3,5 diglycosides are also common and while glycosylation of the 3 position significantly improves the stability of anthocyanins compared to anthocyanidin aglycones, glycosylation of the 5 position may reduce stability. At any given pH, anthocyanin 3-glucosides are more coloured than the equivalent anthocyanin 3,5 diglucosides because the loss of an OH group at the C5 position accelerates the hydration reactions which lead to the formation of colourless pseudobases (Figure 2) [11,14]. Other residues of the anthocyanidins that can be glycosylated are the 7 position and the $3 ^ { \prime }$ and $5 ^ { \prime }$ positions of the B-ring. Additional 
+
+
+Figure 2
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/30e44e284264980d2ab3ac8a58667d252d84b6c92a3cf210aa7a5b6c5a106b1a.jpg)
+
+
+Changes in conformation of anthocyanins in solution at different pH and the consequent changes in colour. 
+
+glycosylations provide more sugar residues for decoration with acyl groups, both aromatic and aliphatic, which affect colour and increase the stability of the pigments. 
+
+Some glycosylation reactions do not use sugar nucleotides but instead use acyl sugars as donors. These reactions are catalysed by enzymes belonging to the family 1 glucose hydrolase proteins [15] and have been characterised in delphinium and carnation. They likely act late in biosynthesis following transport of anthocyanins already decorated, into the vacuole. The activity of these types of glycosyl transferases may be restricted to specific genera or individual species with specialized decoration of their anthocyanins. 
+
+# Decoration of anthocyanins: acylation
+
+The sugar residues of anthocyanins are often acylated with aromatic acids ( $\boldsymbol { \mathscr { p } }$ -coumaric, caffeic, ferulic, sinapic, gallic or $\boldsymbol { \mathscr { p } }$ -hydroxybenzoic acids) or aliphatic acids (malonic, acetic, malic, succinic, tartaric and oxalic acids) (Figure 3). Acylation of anthocyanins increases their stability, through the processes of intramolecular and intermolecular co-pigmentation. In some plants the acyl groups are, themselves, glycosylated. Some of the most complex anthocyanins have alternating glycosyl and acyl groups, which generally leads to increased stability of these anthocyanins in solution (Figure 3). Aromatic acylation additionally shifts the colour of the pigments towards the blue, and some of the most intense blue colours of flowers such as those found in morning glory and lobelia are conferred by poly-acylated (aromatic) anthocyanins [16,17]. 
+
+Acylation is most often catalysed by BAHD acyltransferases using Acyl CoA donors [18]. These enzymes are active in the cytoplasm. Acyl groups added to anthocyanins late in decoration, may be added in the vacuole in reactions catalysed by serine carboxypeptidase-like proteins [19]. 
+
+At higher pH values (6–6.5), the anthocyanin quinoidal bases (which are blue) form. These can be stabilised through processes termed ‘co-pigmentation’, either intramolecular or intermolecular. In intramolecular co-pigmentation, the conversion to the carbinol pseudo-base/ chalcone, which involves hydration, is inhibited such that the formation of quinoidal bases from the flavylium ions is favoured, and colour is stabilised and shifted towards the blue (Figure 2). Intramolecular co-pigmentation involves side chain decorations of anthocyanins, particularly aromatic acyl groups which stack, sandwich-like, with the ring structures of the anthocyanins (known as p stacking). These molecular stacks are promoted by intramolecular bonding. Consequently, glycosylation is required for stability both in its own right and because acylation occurs on the glycosyl groups. Aliphatic acylation promotes 
+
+stability of anthocyanins but does not cause a bathochromic shift and may not involve $\pi$ -stacking [14]. 
+
+# Intermolecular co-pigmentation
+
+In intermolecular co-pigmentation, quinoidal bases are stabilised by stacking, but this time with other molecules, often other flavonoids such as flavones, flavonols, other compounds with aromatic rings (hydroxycinnamates, alkaloids, amino acids, organic acids, and other anthocyanins), nucleosides and polysaccharides [20]. Intermolecular co-pigmentation results in a hyperchronic shift in absorption by the anthocyanin, so that the pigment appears more intense, and a bathochromic shift such that the absorption maximum is increased and the pigment appears bluer, even though the co-pigment itself is uncoloured. The maximal effects of co-pigmentation are observed at $\mathrm { p H } ~ 3 . 6$ although the prevailing pH of the vacuole is more usually between 5.2 and 5.5 in most plant cells. 
+
+# Regulators of anthocyanin biosynthesis
+
+The control of anthocyanin biosynthesis is highly conserved in angiosperms and likely also in gymnosperms. Members of three protein families, R2R3MYB transcription factors, bHLH transcription factors and WD Repeat Proteins (WDR) interact to form a complex (MBW) that activates anthocyanin biosynthesis. The WDR proteins of the MBW complex are thought to serve a stabilising function and probably interact directly with the bHLH proteins. They are not thought to bind DNA. The bHLH transcription factors (TFs) involved in the MBW complex belong to conserved sub-families [21] characterised by a conserved N-terminal domain that interacts with the MYB partners in the MBW complex [22]. The bHLH partners in the MBW complex may have independent functions additional to their regulation of anthocyanin biosynthesis, for example in the regulation of proanthocyanidin biosynthesis, in the control of trichome and root hair formation in Arabidopsis, and in the control of vacuolar $\mathrm { p H }$ and seed coat morphology in Petunia [22– 26]. The broad range of biological functions of the bHLH partners means that their activity usually does not limit anthocyanin accumulation in different cell types, and they may be expressed in epidermal cells in which anthocyanin is not being produced. The activity of the R2R3MYB regulators in controlling anthocyanin biosynthesis is much more specific. Usually, species have multiple copies (paralogues) of these genes, which confer anthocyanin production in different patterns or cell types. It is the activity of the MYB TFs that normally determines the amount of anthocyanin produced by specific cells, and so differences in flower colour intensity and pattern are usually attributable to differences in the expression of the MYB TFs in the MBW complex. These MYB TFs belong to subgroup 6 of the R2R3MYB family and carry a highly conserved signature motif within their DNA binding domain [22] which is predictive of and 
+
+
+Figure 3
+
+
+
+(a)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/d5de3c5759af2c9ae8bad4b61961bf5a401f21e4e9210f0e55b42177223ca965.jpg)
+
+
+
+(b) Hydroxylation
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/25e61a932cadeaa7003f2c7ac4dc2b27c5fca6bf1c4505972354b5bc865ae5e8.jpg)
+
+
+
+Pelargonidin
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/fb5e714aeff56775bbb233881dd4040f599cbe31345765bbbafcec0841f04c22.jpg)
+
+
+
+Cyanidin
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/d7985c9314957deac72dbbb8bde836e3ac4fa07e1a832f779ee6812bec704d8d.jpg)
+
+
+
+Delphinidin
+
+
+
+Methylation(c)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/254e70f1deee3fc42c6c9c4d53900b31ff14c831446cbc12b855b5aa392ef113.jpg)
+
+
+
+Peonidin
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/f18b9047bae781fd09cbbf1d89d33d85620067a40cea3a3556c1bb504e7d71e5.jpg)
+
+
+
+Petunidin
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/67a8c4e8499014663f448231c07df55480c0bb21afb5ef58f9269364a71464f9.jpg)
+
+
+
+Malvidin
+
+
+
+(d) Major Glycosyl Units
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/98bda1be718bb5ed4ed6c136605f790eb323eadacd58aed55f4504d5f19c2c01.jpg)
+
+
+
+Arabinose
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/c6225b44d4d2575fef0f32a123cd32a3313706ddcc1a6b940486358c394ed89d.jpg)
+
+
+
+β-D-Galactose
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/a813fbc9ff3e6871021ccda2b25ccaad67d3f93b052e69f1acffe9554b3ca896.jpg)
+
+
+
+β-D-Glucose
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/d1e649a627f30a4e7de25d1fc2dad923920534a96fa129c0eb266e14f58fce58.jpg)
+
+
+
+α-L-Rhamnose
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/323053a448cfe7efcd0e74bdf9cb7c4d5dc400a154c346fea8bc440387cc0e50.jpg)
+
+
+
+$\alpha$ -D-Xylose
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/8efb0f929f16efdc0f2abae46b9cf3b988c5903c2e0ae547bb75887f2d779b4a.jpg)
+
+
+
+Rutinose
+
+
+
+(e) Common Acyl Units
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/e8113b98cc230d1196a757fdf739286b616dd3f2181a7b22beefa75d785de89a.jpg)
+
+
+
+Acetic Acid
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/306101ec19bf5d285b9731dfcc292c6dba76b5f93cd763c20ec47965c2d914a1.jpg)
+
+
+
+Caffeic Acid
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/80c3d6003dc89e96f0ad06ec350e171b8b86df397247392bb94215d83893734c.jpg)
+
+
+
+Coumaric Acid
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/b5f23fa3c55afeec8f4bd31e4d9cf2aa35637321da7068f0446198cf6ec4bd75.jpg)
+
+
+
+Ferulic Acid
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/68fc42f9f3c8c25c56472274c14ce814d3979b7cea7e9615b83202400fdf789e.jpg)
+
+
+
+Malonic Acid
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/552bb6232b1717288828277d9a4a2ad58a4277caf41871f96967511a84f3fc92.jpg)
+
+
+
+Gallic Acid
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/4d35576e7aa66860b099e7874868f0d810628621c885ff5ebc0037fff5aa7620.jpg)
+
+
+
+Sinapic Acid
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/4ef6324b2b6b37be7d0d33c16f9cf04fe05a053d2b4b8bc89f454306a2d0fde8.jpg)
+
+
+
+Succinic Acid
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/e1d9c51f571a016d100bf8c92d5f0a8604e29f085f3e783fb05f2798ff77a3f7.jpg)
+
+
+
+Gentiodelphin
+
+
+
+(Delphinidin-5,3′-di-(caffeoyl)-glucoside-3-glucoside)
+
+
+
+Current Opinion in Plant Biology
+
+
+Decorations of anthocyanins found in nature. (a) Basic structure of an anthocyanidin showing the numbering of the different carbon groups; common modification positions include ${ \mathfrak { z } } ^ { \prime }$ (R1), $4 ^ { \prime }$ (R2), 50 (R3), 3 (R4), 5 (R5) and 7 (R6) of each ring. (b) Major anthocyanins are distinguished by different hydroxylation patterns. (c) Common anthocyanins are distinguished by their methylation patterns. (d) Major glycosyl units involved in anthocyanin decoration. (e) Common acyl units involved in anthocyanin decoration. (f) Examples of two complex anthocyanins conferring blue-purple colour (petunidin 3-(p-coumaroyl) rutinoside-5 glucoside) in petunia and other common Solanaceous plants, and gentiodelphin, conferring blue colour, in gentian. 
+
+functions in the interaction with subgroup IIIf bHLH proteins. They also carry a conserved motif in their Cterminal domains, (termed the anthocyanin box) which is characteristic of most R2R3MYB proteins regulating anthocyanin biosynthesis through the MBW complex [27]. The R2R3MYB proteins of the MBW complex bind to DNA and are thought to be the principle determinants of the target genes that the MBW complex activates. The R2R3MYB proteins regulating anthocyanin biosynthesis in monocotyledonous plants such as maize are more closely related structurally to the R2R3MYB regulators of proanthocyanidin biosynthesis than to the dicot R2R3MYB anthocyanin regulators. Consequently, monocot MYBs do not work well in dicots [28] and similarly dicot MYBs do not work well in monocots, in inducing anthocyanin biosynthesis [29]. 
+
+Other small proteins with single copies of the MYB repeat, cannot bind DNA selectively but act as negative regulators of anthocyanin biosynthesis by interaction with the bHLH proteins, competitive with the R2R3MYB activators. The small size of these competitive repressors means that they can move from cell to cell and can repress anthocyanin biosynthesis non-cell autonomously [30]. 
+
+Two points are of importance to the metabolic engineering of anthocyanin biosynthesis using TFs. The first is that activation of the pathway is obligately dependent on the activity of all three classes of protein within the MBW complex. Despite this, many groups have been able to induce anthocyanin biosynthesis ectopically by expression of the MYB protein [31,32] and this has led to the impression that activation of the MYB protein alone is necessary to increase anthocyanin production $\big [ 3 3 ^ { \bullet \bullet } \big ]$ . The WDR protein is likely expressed constitutively [34] and the bHLH proteins may be expressed in tissues where anthocyanins are not produced, possibly due to their diverse regulatory roles [23]. Consequently the activity limiting anthocyanin accumulation is, most often, the specialized MYB TF. The contribution of bHLH proteins to induction of anthocyanin biosynthesis can be judged by comparing pigmentation induced by high levels of both the MYB and the bHLH proteins [35,36] to that induced by high levels of the MYB protein, alone [36–39]. Combined induction of both MYB and bHLH proteins leads to levels of anthocyanins equivalent to those in the darkest berries $( 3 { - } 6 \mathrm { m g } / \mathrm { g } \mathrm { F W } )$ ). This is equivalent to $3 - 5 \%$ dry weight accumulating as anthocyanins and may represent a maximum level compatible with sustained plant cell viability. 
+
+The second consideration of importance to metabolic engineering involves the targets of the MBW regulatory complex. Analysis of mutants of anthocyanin MBW TFs has suggested that their targets may be different in different plant species; for example the MBW complex has been reported to regulate expression of the genes encoding the enzymes of the entire pathway committed 
+
+to flavonoid biosynthesis in kernals of maize [40], but only the ‘late biosynthetic genes’ (LBGs) in dicot flowers. What is classified as an LBG may vary from species to species [41–45]. In contrast, overexpression of the proteins of the MBW complex usually results in elevated expression of all the genes encoding enzymes committed to anthocyanin biosynthesis as well as transporters and transportassociated proteins [32,35,36]. The resolution of this paradox probably lies in the way that target genes are identified: target genes show significant reduction in expression in mutants of the genes encoding TFs of the MBW complex. In flowers, alongside the proteins regulating anthocyanin biosynthesis, other TFs controlling flavone and flavonol biosynthesis may also be active $[ 4 6 , 4 7 ^ { \bullet \bullet } ]$ . These proteins activate the early steps in flavonoid biosynthesis, shared with anthocyanin biosynthesis. Consequently the loss of activity of the MBW complex does not result in downregulation of these early biosynthetic genes (EBGs), because their activation is complemented by the independent regulators of flavone and flavonol biosynthesis. Thus, the MBW complex can likely induce the entire pathway for anthocyanin accumulation. 
+
+Because expression of both MYB and bHLH partners of the MBW complex can induce all steps in the biosynthetic pathway, these proteins are powerful tools for metabolic engineering of a pathway encoded by most higher plants. 
+
+# Metabolic engineering of anthocyanins by genetic modification
+
+Engineering paler colours has been achieved relatively easily by silencing structural genes in the anthocyanin biosynthetic pathway (reviewed in [48]). Shifts in colour from blue to red have been achieved by silencing $\mathrm { F } 3 ^ { \prime } 5 ^ { \prime } \mathrm { H }$ (Table 1 in [48]). 
+
+Some species lack particular anthocyanins because they lack the genes encoding specific decorating enzymes. This deficiency can be overcome by introducing the genes from species that do have them. The best known examples have involved introduction of the $\mathrm { F } 3 ^ { \prime } 5 ^ { \prime } \mathrm { H }$ gene from Petunia and Viola into species such as carnation and rose to give flowers of blue-purple colour due to the production of delphinidins [49,50]. While the new $\mathrm { F } 3 ^ { \prime } 5 ^ { \prime } \mathrm { H }$ gene is usually functional, the DFR enzyme of the host species may be specialized to accept dihydroflavonols with just one or two hydroxyl groups on the B-ring, so flowers containing higher levels of blue-ish delphinidin-based pigments have been produced by replacing the endogenous DFR with DFR from Petunia. DFRs from Petunia or iris have a preference for trihydroxylated dihydromyrecetin as their substrate [51]. Two recent papers describe very similar strategies to produce blue/blue-violet chrysanthemums (Figure 4a–d) $[ 5 2 ^ { \bullet \bullet } , 5 3 ^ { \bullet \bullet } ]$ . In chrysanthemum, differences in the ability of $\mathrm { F } 3 ^ { \prime } 5 ^ { \prime } \mathrm { H }$ enzymes from different plant sources to compete 
+
+
+Figure 4
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/1d43138c4e5b4f72d548e607de95a723a689ca9ac4c301efe0a7dfb6bae243fe.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/8ec4f4ac4b7da2b55534ea086d103e23cdd5548eef22b0f0400003e709bb34f2.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/3d172d36134c95926cff768e54ac5ce7cbfbdf25822a7b7f2d87fec151afe42c.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/f5fe2357b9143478727148788f16fa6f6c57c342f5a0efad9390239e305dab66.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/76e3d04a5709d07482635f26776693dddb8d3e8967c8ccb61d79f2bc3bd7a4e2.jpg)
+
+
+![image](https://cdn-mineru.openxlab.org.cn/result/2026-03-18/9295c209-d364-4d94-b5fc-6848c65d24e0/ac4384f5d025315979319493d799fab0aed09187e91f652389eacf28a8531ee2.jpg)
+
+
+
+Current Opinion in Plant Biology
+
+
+Examples of plant cells with engineered anthocyanins. (a) Host Chrysanthemum variety 94-765. (b) 94-765 expressing Campanula $\mathsf { F } 3 ^ { \prime } 5 ^ { \prime } \mathsf { H }$ under the control of the F3H promoter from Chrysanthemum. (c) Host Chrysanthemum variety Taihei. (d) Taihei expressing Campanula F30 50 H under the control of the F3H promoter from Chrysanthemum. Reproduced with permission from Ref. [64]. (e) Tobacco suspension culture cells producing high levels of cyanidin 3-rutinoside as a result of transformation with genes encoding the transcription factors Rosea1 and Delila under the control of the CaMV 35S promoter. Photograph by Kalyani Kallam. (f) Tomatoes of the same age left on the vine. The red tomatoes on the left are from a cross of Money Maker $\times$ MicroTom. The purple tomatoes on the right express Delila and Rosea1 under the control of the E8 promoter [35] and are from a cross of Money Maker $\times$ MicroTom. The purple tomatoes have longer shelf life than the equivalent red ones due to slower over-ripening and reduced susceptibility to Botrytis cinerea [58]. 
+
+with endogenous $\mathrm { F } 3 ^ { \prime } \mathrm { H }$ have been observed, meaning that transformations have been undertaken in lines with low $\mathrm { F } 3 ^ { \prime } \mathrm { H }$ activity (either natural or engineered) to enhance delphinidin production, further. 
+
+In gentian, new red-purple flowers have been engineered by inhibiting the acylating activity of an $^ { 5 , 3 ^ { \prime } }$ acyl transferase [54]. Reducing the amount of diacylated delphinidin-based 
+
+anthocyanins reduces intramolecular co-pigmentation so giving a redder colour. Inhibition of flavonol synthase in lisianthus (Eustoma grandiflorum) resulted in redder flowers [55] by inhibiting intermolecular co-pigmentation of anthocyanins by flavonols. 
+
+Novel, red coloured seeds of soybean have been produced by inhibiting the activity of anthocyanidin 
+
+reductase (ANR) in the seed coat [56- ]. ANR removes anthocyanidins to supply epicatechin for proanthocyanidin synthesis. In the absence of ANR activity, red cyanidin-based anthocyanins accumulate in the seed coat. This new colour has been proposed as a marker for seed from transgenic soybean lines. 
+
+# Obtaining higher levels of anthocyanins via metabolic engineering
+
+The greatest enrichment in anthocyanins has been engineered in tomato by combining expression of an R2R3MYB protein (Rosea 1) and a bHLH protein (Delila) from snap dragon [35]. Key to the success of engineering these tomatoes was expression of the regulatory genes under the control of a fruit specific promoter (from the E8 gene of tomato) that is switched on at breaker once fruit have reached full size and most of the metabolism underpinning fruit development and flavor has been completed. The switching on of anthocyanin biosynthesis late in fruit development has meant that cultivation of purple tomatoes incurs no yield penalty and high levels of anthocyanin accumulate in fruit (about $3 \%$ of dry weight as anthocyanins). Levels are high enough for the fruit to be used in nutritional interventions with mouse models of disease. Consumption of rodent pellets supplemented at $1 0 \%$ (dry weight) with purple tomato powder, resulted in cancer-prone animals living $3 0 \%$ longer than those on a standard diet or a diet supplemented at $1 0 \%$ with regular tomato powder [35]. 
+
+Purple tomatoes can provide a source of anthocyanins for applications other than consumption. Scale-up is relatively easy in commercially cultivated crops (due to the availability of existing infrastructure for cultivation) and relatively cheap. Industry is also looking for systems for batch production of anthocyanins. A lot of research has been devoted to establishing cell cultures that stably produce anthocyanins. Despite some success, most such attempts have been confounded because anthocyanins are the products of differentiated cells, and yet suspension cultures are essentially dedifferentiated cells. Consequently, cultures developed for anthocyanin production in the past have proved unstable, long term, and these production systems remain largely uncommercialised. Expression of regulatory genes controlling anthocyanin biosynthesis in suspension cultures results in cells that produce exceptionally high levels of anthocyanins, which can be maintained stably by selecting with antibiotic to prevent silencing of the transgenes (Figure 4e). The cultures yield substantially more $\mathrm { \Omega } ( { \sim } 2 0 \mathrm { m g / g }$ dry weight) anthocyanins than conventional cultures $\mathrm { ( 1 { - } 2 ~ m g / g }$ dry weight) and are stable over long periods of culture. These methods work well for tobacco and tomato cell cultures, but are extendable to other species which carry the genetic information to produce very exotic anthocyanins, such as grape, purple sweet potato or the multiply glycosylated and acylated anthocyanins of the ‘Heavenly Blue’ morning glory. High 
+
+level production of such specialized anthocyanins is of considerable interest for providing material for assays of stability and colour determination, for new natural colour formulations, and ultimately for the production of new colours as well as providing anthocyanins for bioavailability and bioefficacy studies. 
+
+# New applications resulting from engineering anthocyanins in plants
+
+In addition to their classic roles in modifying flower colours and health benefits in food, recent research has shown that enrichment with anthocyanins can extend the shelf life of tomato fruit by delaying over-ripening and reducing the susceptibility to of fruit to the postharvest, necrotrophic pathogen, Botrytis cinerea (Figure 4f) $[ 5 7 ^ { \bullet } , 5 8 ^ { \bullet \bullet } ]$ . As antioxidants, anthocyanins increase the anti-oxidant capacity of crops, and thus can reduce the oxidative damage that occurs during over-ripening and pathogen infection. Due to the high antioxidant capacity of anthocyanins, enriched fruit can also serve as an excellent production system for recombinant proteins [59]. 
+
+The distinct appearance of anthocyanin pigmentation also makes it a very good visual marker for biological research: anthocyanin can be used as a visible marker for plant transformation [60] and viral infection [61]. Alternatively, co-suppression of candidate genes and anthocyanin biosynthetic/regulatory genes in anthocyaninenriched plant tissue provides an excellent marker for viral-induced gene silencing $[ 5 8 ^ { \bullet \bullet } , 6 2 ]$ . 
+
+# Is using plants to produce anthocyanins better than using bacteria or yeast?
+
+Although progress has been made in engineering anthocyanin production in microbes $[ 6 3 ^ { \bullet \bullet } ]$ , using plants or plant cell cultures to produce anthocyanins remains the most efficient strategy. The anthocyanin biosynthetic pathway is present in most plant species, which, consequently, are capable of making anthocyanins in certain tissues or under certain conditions. Unlike microbes, engineering anthocyanin production in plants does not require engineering the entire pathway, but can be achieved by induction of regulatory proteins of the MBW complex to give high-level accumulation (Figure 4e). Pathway induction by regulatory genes in combination with additional genes encoding decorating enzymes can lead to high level production of novel anthocyanins. TFs also induce the expression of transporters for anthocyanin sequestration in the vacuole [35]. 
+
+High level production in microbes requires optimization of precursor supply to feed anthocyanin/flavonoid biosynthesis [64]. Engineering the production of highly decorated anthocyanins will require introduction of each gene encoding a decorating enzyme, in addition to the core steps of flavonoid biosynthesis (Figure 1). Engineering 
+
+anthocyanin production in bacteria has all the same problems as in yeast and, in addition, problems of obtaining full functionality of P450 enzymes and their associated reductases. Anthocyanins may be toxic for microbes, if they have no means of secreting them, so high-level production in microbes may also require engineered secretory systems to ensure they do not accumulate intracellularly. Microbial growth generally requires considerable energy, making it an expensive way to produce anthocyanins on a large scale. Scale-up production for major crops, including vegetables and fruits, is generally easier with lower input requirements and energy costs. Consequently, it is hard to imagine that production in microbes will ever be as cost-effective as optimized plant production systems. 
+
+# Acknowledgements
+
+YZ, EB and CM are currently supported by the Institute Strategic Program Understanding and Exploiting Plant and Microbial Secondary Metabolism (BB/ J004596/1) from the BBSRC, by the European Union FP7 ATHENA collaborative project (Grant Agreement 245121) and by the ERA-NET Industrial Biotechnology project, ANTHOPLUS, funded by BBSRC (Grant Agreement BB/M004864/1). We thank Kalyani Kallam for the image of tobacco suspension culture cells shown in Figure 4e. 
+
+# References and recommended reading
+
+Papers of particular interest, published within the period of review, have been highlighted as: 
+
+- of special interest 
+
+-- of outstanding interest 
+
+
+
+1. Shang Y, Venail J, Mackay S, Bailey PC, Schwinn KE, Jameson PE, Martin CR, Davies KM: The molecular basis for venation patterning of pigmentation and its effect on pollinator attraction in flowers of Antirrhinum. New Phytol 2011, 189:602-615. 
+
+
+
+
+
+2. Feild TS, Lee DW, Holbrook NM: Why leaves turn red in autumn. The role of anthocyanins in senescing leaves of red-osier dogwood. Plant Physiol 2001, 127:566-574. 
+
+
+
+
+
+3. Gould KS, McKelvie J, Markham KR: Do anthocyanins function as antioxidants in leaves? Imaging of ${ \sf H } _ { 2 } { \sf O } _ { 2 }$ in red and green leaves after mechanical injury. Plant Cell Environ 2002, 25:1261-1269. 
+
+
+
+
+
+4. Li J, Ou-Lee TM, Raba R, Amundson RG, Last RL: Arabidopsis flavonoid mutants are hypersensitive to UV-B irradiation. Plant Cell 1993, 5:171-179. 
+
+
+
+
+
+5. Olsen KM, Slimestad R, Lea US, Brede C, Lovdal T, Ruoff P, Verheul M, Lillo C: Temperature and nitrogen effects on regulators and products of the flavonoid pathway: experimental and kinetic model studies. Plant Cell Environ 2009, 32:286-299. 
+
+
+
+
+
+6. Rubin G, Tohge T, Matsuda F, Saito K, Scheible WR: Members of the LBD family of transcription factors repress anthocyanin synthesis and affect additional nitrogen responses in Arabidopsis. Plant Cell 2009, 21:3567-3584. 
+
+
+
+
+
+7. Lorenc-Kukula K, Jafra S, Oszmianski J, Szopa J: Ectopic expression of anthocyanin 5-o-glucosyltransferase in potato tuber causes increased resistance to bacteria. J Agric Food Chem 2005, 53:272-281. 
+
+
+
+
+
+8. Wang LS, Stoner GD: Anthocyanins and their role in cancer prevention. Cancer Lett 2008, 269:281-290. 
+
+
+
+
+
+9. Tsuda T, Horio F, Uchida K, Aoki H, Osawa T: Dietary cyanidin 3-O-beta-D-glucoside-rich purple corn color prevents obesity and ameliorates hyperglycemia in mice. J Nutr 2003, 133:2125-2130. 
+
+
+
+
+
+10. Meiers S, Kemeny M, Weyand U, Gastpar R, von Angerer E, Marko D: The anthocyanidins cyanidin and delphinidin are potent inhibitors of the epidermal growth-factor receptor. J Agric Food Chem 2001, 49:958-962. 
+
+
+
+
+
+11. Mazza G, Brouillard R: Recent developments in the stabilization of anthocyanins in food products. Food Chem 1987, 25:207-225. 
+
+
+
+
+
+12. de Ancos B, Gonzalez E, Cano MP: Differentiation of raspberry varieties according to anthocyanin composition. Zeit Lebensmitt Forsch A 1999, 208:33-38. 
+
+
+
+
+
+13. Ka¨ hko¨ nen MP, Heina¨ ma¨ ki J, Ollilainen V, Heinonen M: Berry anthocyanins: isolation, identification and antioxidant activities. J Sci Food Agric 2003, 83:1403-1411. 
+
+
+
+
+
+14. Luo J, Nishiyama Y, Fuell C, Taguchi G, Elliott K, Hill L, Tanaka Y, Kitayama M, Yamazaki M, Bailey P et al.: Convergent evolution in the BAHD family of acyl transferases: identification and characterization of anthocyanin acyl transferases from Arabidopsis thaliana. Plant J 2007, 50:678-695. 
+
+
+
+
+
+15. Matsuba Y, Sasaki N, Tera M, Okamura M, Abe Y, Okamoto E, Nakamura H, Funabashi H, Takatsu M, Saito M et al.: A novel glucosylation reaction on anthocyanins catalyzed by acylglucose-dependent glucosyltransferase in the petals of carnation and delphinium. Plant Cell 2010, 22:3374-3389. 
+
+
+
+
+
+16. Kondo T, Kawai T, Tamura H, Goto T: Structure determination of heavenly blue anthocyanin, a complex monomeric anthocyanin from the morning glory ipomea tricolor, by means of the negative NOE method. Tetrahedron Lett 1987, 28:2273-2276. 
+
+
+
+
+
+17. Kondo T, Yamashiki J, Kawahori K, Goto T: Structure of lobelinin A and B, novel anthocyanins acylated with three and four different organic acids, respectively. Tetrahedron Lett 1989, 30:6055-6058. 
+
+
+
+
+
+18. D’Auria JC: Acyltransferases in plants: a good time to be BAHD. Curr Opin Plant Biol 2006, 9:331-340. 
+
+
+
+
+
+19. Fraser CM, Thompson MG, Shirley AM, Ralph J, Schoenherr JA, Sinlapadech T, Hall MC, Chapple C: Related Arabidopsis serine carboxypeptidase-like sinapoylglucose acyltransferases display distinct but overlapping substrate specificities. Plant Physiol 2007, 144:1986-1999. 
+
+
+
+
+
+20. Mazza G, Brouillard R: The mechanism of co-pigmentation of anthocyanins in aqueous solutions. Phytochemistry 1990, 29:1097-1102. 
+
+
+
+
+
+21. Heim MA, Jakoby M, Werber M, Martin C, Weisshaar B, Bailey PC: The basic helix–loop–helix transcription factor family in plants: a genome-wide study of protein structure and functional diversity. Mol Biol Evolut 2003, 20:735-747. 
+
+
+
+
+
+22. Zimmermann IM, Heim MA, Weisshaar B, Uhrig JF: Comprehensive identification of Arabidopsis thaliana MYB transcription factors interacting with R/B-like BHLH proteins. Plant J 2004, 40:22-34. 
+
+
+
+
+
+23. Koes R, Verweij W, Quattrocchio F: Flavonoids: a colorful model for the regulation and evolution of biochemical pathways. Trend Plant Sci 2005, 10:236-242. 
+
+
+
+
+
+24. Spelt C, Quattrocchio F, Mol J, Koes R: ANTHOCYANIN1 of petunia controls pigment synthesis, vacuolar pH, and seed coat development by genetically distinct mechanisms. Plant Cell 2002, 14:2121-2135. 
+
+
+
+
+
+25. Spelt C, Quattrocchio F, Mol JNM, Koes R: Anthocyanin1 of petunia encodes a basic helix–loop–helix protein that directly activates transcription of structural anthocyanin genes. Plant Cell 2000, 12:1619-1631. 
+
+
+
+
+
+26. Zhang F, Gonzalez A, Zhao MZ, Payne CT, Lloyd A: A network of redundant bHLH proteins functions in all TTG1-dependent pathways of Arabidopsis. Development 2003, 130:4859-4869. 
+
+
+
+
+
+27. Lin-Wang K, Bolitho K, Grafton K, Kortstee A, Karunairetnam S, McGhie TK, Espley RV, Hellens RP, Allan AC: An R2R3 MYB transcription factor associated with regulation of the anthocyanin biosynthetic pathway in Rosaceae. BMC Plant Biol 2010, 10:50. 
+
+
+
+
+
+28. Bovy A, de Vos R, Kemper M, Schijlen E, Almenar Pertejo M, Muir S, Collins G, Robinson S, Verhoeyen M, Hughes S et al.: Highflavonol tomatoes resulting from the heterologous expression of the maize transcription factor genes LC and C1. Plant Cell 2002, 14:2509-2526. 
+
+
+
+
+
+29. Lloyd AM, Walbot V, Davis RW: Arabidopsis and Nicotiana anthocyanin production activated by maize regulators R and C1. Science 1992, 258:1773-1775. 
+
+
+
+
+
+30. Dubos C, Stracke R, Grotewold E, Weisshaar B, Martin C, Lepiniec L: MYB transcription factors in Arabidopsis. Trend Plant Sci 2010, 15:573-581. 
+
+
+
+
+
+31. Espley RV, Hellens RP, Putterill J, Stevenson DE, Kutty-Amma S, Allan AC: Red colouration in apple fruit is due to the activity of the MYB transcription factor, MdMYB10. Plant J 2007, 49:414-427. 
+
+
+
+
+
+32. Borevitz JO, Xia YJ, Blount J, Dixon RA, Lamb C: Activation tagging identifies a conserved MYB regulator of phenylpropanoid biosynthesis. Plant Cell 2000, 12:2383-2393. 
+
+
+
+
+
+33. Yuan YW, Byers KJ, Bradshaw HD Jr: The genetic control of -- flower-pollinator specificity. Curr Opin Plant Biol 2013, 16:422-428. 
+
+
+
+
+
+This recent review emphasises the importance of genes encoding R2R3MYB transcription factors in the co-evolution of flowers and pollinators. 
+
+
+
+
+
+34. Walker AR, Davison PA, Bolognesi-Winfield AC, James CM, Srinivasan N, Blundell TL, Esch JJ, Marks MD, Gray JC: The TRANSPARENT TESTA GLABRA1 locus, which regulates trichome differentiation and anthocyanin biosynthesis in Arabidopsis, encodes a WD40 repeat protein. Plant Cell 1999, 11:1337-1349. 
+
+
+
+
+
+35. Butelli E, Titta L, Giorgio M, Mock HP, Matros A, Peterek S, Schijlen EG, Hall RD, Bovy AG, Luo J et al.: Enrichment of tomato fruit with health-promoting anthocyanins by expression of select transcription factors. Nat Biotechnol 2008, 26:1301-1308. 
+
+
+
+
+
+36. Qiu J, Gao FH, Shen GA, Li CH, Han XY, Zhao Q, Zhao DX, Hua XJ, Pang YZ: Metabolic engineering of the phenylpropanoid pathway enhances the antioxidant capacity of Saussurea involucrata. PLoS ONE 2013:8. 
+
+
+
+
+
+37. Gonzali S, Mazzucato A, Perata P: Purple as a tomato: towards high anthocyanin tomatoes. Trend Plant Sci 2009, 14:237-241. 
+
+
+
+
+
+38. Zuluaga DL, Gonzali S, Loreti E, Pucciariello C, Degl’Innocenti ED, Guidi L, Alpi A, Perata P: Arabidopsis thaliana MYB75/PAP1 transcription factor induces anthocyanin production in transgenic tomato plants. Funct Plant Biol 2008, 35:606-618. 
+
+
+
+
+
+39. Mathews H, Clendennen SK, Caldwell CG, Liu XL, Connors K, Matheis N, Schuster DK, Menasco DJ, Wagoner W, Lightner J et al.: Activation tagging in tomato identifies a transcriptional regulator of anthocyanin biosynthesis, modification, and transport. Plant Cell 2003, 15:1689-1703. 
+
+
+
+
+
+40. Dooner H: Coordinate genetic regulation of flavonoid biosynthetic enzymes in maize. Mol Gen Genet 1983, 189:136- 141. 
+
+
+
+
+
+41. Boss PK, Davies C, Robinson SP: Analysis of the expression of anthocyanin pathway genes in developing Vitis vinifera L cv Shiraz grape berries and the implications for pathway regulation. Plant Physiol 1996, 111:1059-1066. 
+
+
+
+
+
+42. Martin C, Prescott A, Mackay S, Bartlett J, Vrijlandt E: Control of anthocyanin biosynthesis in flowers of Antirrhinum-Majus. Plant J 1991, 1:37-49. 
+
+
+
+
+
+43. Pelletier MK, Murrell JR, Shirley BW: Characterization of flavonol synthase and leucoanthocyanidin dioxygenase genes in Arabidopsis—further evidence for differential regulation of ‘‘early’’ and ‘‘late’’ genes. Plant Physiol 1997, 113:1437-1445. 
+
+
+
+
+
+44. Quattrocchio F, Wing JF, Leppen HTC, Mol JNM, Koes RE: Regulatory genes-controlling anthocyanin pigmentation are functionally conserved among plant-species and have distinct sets of target genes. Plant Cell 1993, 5:1497-1512. 
+
+
+
+
+
+45. Gonzalez A, Zhao M, Leavitt JM, Lloyd AM: Regulation of the anthocyanin biosynthetic pathway by the TTG1/bHLH/Myb 
+
+
+
+
+
+transcriptional complex in Arabidopsis seedlings. Plant J 2008, 53:814-827. 
+
+
+
+
+
+46. Mehrtens F, Kranz H, Bednarek P, Weisshaar B: The Arabidopsis transcription factor MYB12 is a flavonol-specific regulator of phenylpropanoid biosynthesis. Plant Physiol 2005, 138:1083- 1096. 
+
+
+
+
+
+47. Nakatsuka T, Saito M, Yamada E, Fujita K, Kakizaki Y, Nishihara M: -- Isolation and characterization of GtMYBP3 and GtMYBP4, orthologues of R2R3-MYB transcription factors that regulate early flavonoid biosynthesis, in gentian flowers. J Exp Bot 2012, 63:6505-6517. 
+
+
+
+
+
+This paper shows that proteins structurally very closely related to subgroup 7 MYB transcription factors (that regulate flavonol accumulation in Arabidopsis) regulate flavone accumulation in Gentian. 
+
+
+
+
+
+48. Nishihara M, Nakatsuka T: Genetic engineering of flavonoid pigments to modify flower color in floricultural plants. Biotechnol Lett 2011, 33:433-441. 
+
+
+
+
+
+49. Katsumoto Y, Fukuchi-Mizutani M, Fukui Y, Brugliera F, Holton TA, Karan M, Nakamura N, Yonekura-Sakakibara K, Togami J, Pigeaire A et al.: Engineering of the rose flavonoid biosynthetic pathway successfully generated blue-hued flowers accumulating delphinidin. Plant Cell Physiol 2007, 48:1589- 1600. 
+
+
+
+
+
+50. Mol J, Cornish E, Mason J, Koes R: Novel coloured flowers. Curr Opin Biotechnol 1999, 10:198-201. 
+
+
+
+
+
+51. Tanaka Y, Brugliera F, Chandler S: Recent progress of flower colour modification by biotechnology. Int J Mol Sci 2009, 10:5350-5369. 
+
+
+
+
+
+52. Brugliera F, Tao G-Q, Tems U, Kalc G, Mouradova E, Price K, -- Stevenson K, Nakamura N, Stacey I, Katsumoto Y et al.: Violet/ blue chrysanthemums—metabolic engineering of the anthocyanin biosynthetic pathway results in novel petal colors. Plant Cell Physiol 2013, 54:1696-1710. 
+
+
+
+
+
+One of the two adjacent papers published in Plant and Cell Physiology, 2013, reporting the production of ‘blue’ or ‘blue-purple’ chrysanthemums. Best results (bluer flowers accumulating more delphinidin-based anthocyanins) was achieved with an F3’5’H gene from pansy accompanied by silencing of F30 H by RNAi. 
+
+
+
+
+
+53. Noda N, Aida R, Kishimoto S, Ishiguro K, Fukuchi-Mizutani M, -- Tanaka Y, Ohmiya A: Genetic engineering of novel bluercolored chrysanthemums produced by accumulation of delphinidin-based anthocyanins. Plant Cell Physiol 2013, 54:1684-1695. 
+
+
+
+
+
+The second paper published in Plant and Cell Physiology, 2013, reporting the production of ‘blue’ or ‘blue-purple’ chrysanthemums. Here by judicious use of different varieties of chrysanthemum, blue colours were produced without silencing of F30 H. 
+
+
+
+
+
+54. Nakatsuka T, Mishiba K-i, Kubota A, Abe Y, Yamamura S, Nakamura N, Tanaka Y, Nishihara M: Genetic engineering of novel flower colour by suppression of anthocyanin modification genes in gentian. J Plant Physiol 2010, 167:231-237. 
+
+
+
+
+
+55. Nielsen K, Deroles S, Markham K, Bradley M, Podivinsky E, Manson D: Antisense flavonol synthase alters copigmentation and flower color in lisianthus. Mol Breed 2002, 9:217-229. 
+
+
+
+
+
+56. Kovinich N, Saleem A, Rintoul T, Brown DW, Arnason J, Miki B: Coloring genetically modified soybean grains with anthocyanins by suppression of the proanthocyanidin genes ANR1 and ANR2. Transgenic Res 2012, 21:757-771. 
+
+
+
+
+
+Turning metabolic engineering of anthocyanins to practical use, this paper reports developing red-seeded soy lines that accumulate anthocyanins in their seed coat by inhibiting ANR activity. This new colour for seeds is suggested as a means of marking genetically modified varieties. 
+
+
+
+
+
+57. Bassolino L, Zhang Y, Schoonbeek HJ, Kiferle C, Perata P, Martin C: Accumulation of anthocyanins in tomato skin extends shelf life. New Phytol 2013, 200:650-655. 
+
+
+
+
+
+This paper shows that the extended shelf life that accompanies high anthocyanin accumulation in tomato fruit occurs in part in varieties where anthocyanins accumulate only in peel, either by introgression or by genetic engineering. The extended shelf life is due mostly to reduced susceptibility to Botrytis cinerea. 
+
+
+
+
+
+58. Zhang Y, Butelli E, De Stefano R, Schoonbeek HJ, Magusin A, 
+
+
+
+
+
+Pagliarani C, Wellner N, Hill L, Orzaez D, Granell A et al.: Anthocyanins double the shelf life of tomatoes by delaying overripening and reducing susceptibility to gray mold. Curr Biol 2013, 23:1094-1100. 
+
+
+
+
+
+This paper shows that high anthocyanin accumulation in tomato fruit extends shelf life by slowing over-ripening processes such as cell wall degradation, and by reducing the susceptibility to the necrotrophic pathogen, Botrytis cinerea. These results suggest that longer shelf life could be selected by breeding for high antioxidant capacity of fruit. 
+
+
+
+
+
+59. Juarez P, Presa S, Espi J, Pineda B, Anton MT, Moreno V, Buesa J, Granell A, Orzaez D: Neutralizing antibodies against rotavirus produced in transgenically labelled purple tomatoes. Plant Biotechnol J 2012, 10:341-352. 
+
+
+
+
+
+60. Kortstee AJ, Khan SA, Helderman C, Trindade LM, Wu Y, Visser RGF, Brendolise C, Allan A, Schouten HJ, Jacobsen E: Anthocyanin production as a potential visual selection marker during plant transformation. Transgenic Res 2011, 20:1253-1264. 
+
+
+
+
+
+61. Bedoya LC, Martinez F, Orzaez D, Daros JA: Visual tracking of plant virus infection and movement using a reporter MYB transcription factor that activates anthocyanin biosynthesis. Plant Physiol 2012, 158:1130-1138. 
+
+
+
+
+
+62. Orzaez D, Medina A, Torre S, Fernandez-Moreno JP, Rambla JL, Fernandez-Del-Carmen A, Butelli E, Martin C, Granell A: A visual reporter system for virus-induced gene silencing in tomato fruit based on anthocyanin accumulation. Plant Physiol 2009, 150:1122-1134. 
+
+
+
+
+
+63. Marienhagen J, Bott M: Metabolic engineering of -- microorganisms for the synthesis of plant natural products. J Biotechnol 2013, 163:166-178. 
+
+
+
+
+
+An excellent recent review of the progress and problems associated with producing plant natural products in microbes. 
+
+
+
+
+
+64. Santos CN, Koffas M, Stephanopoulos G: Optimization of a heterologous pathway for the production of flavonoids from glucose. Metab Eng 2011, 13:392-400. 
+

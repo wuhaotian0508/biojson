@@ -1,0 +1,612 @@
+{
+  "file": "MinerU_markdown_PMC7481185_2038794802023141385",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC7481185_2038794802023141385.md",
+  "timestamp": "2026-03-31T22:29:43.362237",
+  "genes": [
+    {
+      "gene_name": "PGAM1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods lists phosphoglycerate mutase 1 mutant as pgam1: SALK_003321."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Paper names the gene/protein as phosphoglycerate mutase 1 (PGAM1), but the full enzyme name '2,3-bisphosphoglycerate-independent phosphoglycerate mutase 1' is not explicitly stated."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "EC 5.4.2.12 does not appear in the paper; only a phosphoglycerate mutase assay reference mentions Sigma EC 5.4.2.1, not 5.4.2.12."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "PGAM is clearly a phosphoglycerate mutase, but the exact phrase 'Phosphoglycerate mutase family' is not explicitly stated."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study concerns Arabidopsis proteins and mutants."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly stated throughout, including Results and Methods."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental work was performed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state Arabidopsis thaliana genotypes were used."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state Columbia (Col-0) (WT) was used."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway assayed converts 3PGA through the complex to pyruvate; isotope dilution monitored pyruvate labeling."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pyruvate is the measured end product, but its classification as 'organic acid' is not stated in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Paper supports pyruvate formation at the outer mitochondrial membrane-associated complex and free enzymes in extraplastidial fraction/cytosol, but the exact phrase 'accumulation site' is not stated."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly studies glycolysis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly refers to this as the 'lower part of glycolysis' and a lower glycolytic metabolon."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "PGAM is part of the PGAM–enolase–PYK4 complex and acts upstream of enolase and pyruvate kinase in the described sequence."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Assays start with 3PGA for phosphoglycerate mutase activity and the complex converts 3PGA toward pyruvate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and isotope dilution logic support PGAM producing 2PGA, which is then channeled to pyruvate."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This reaction is directly implied by the phosphoglycerate mutase assays and pathway description."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PGAM is shown as part of a complex converting 3PGA to pyruvate, so it provides precursor flux leading to pyruvate."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not establish PGAM1 as rate-limiting; it does support involvement in a metabolon affecting channeling and organelle association."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show pgam mutants have reduced mitochondria–chloroplast association and that catalytically inactive PGAM1 restores association, indicating a non-catalytic moonlighting role."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods except perhaps gene-specific attribution of every assay to PGAM1 are present in the paper and used to support PGAM1-related claims."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "PGAM1 interactions with PGAM2, enolase, and TPT are shown; PYK4 is included in the PGAM1–enolase–PYK4 complex."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state PGAM1 is colocalized to the cytosol and outer membranes of both mitochondria and chloroplasts."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods say cytosolic glycolytic isoforms were selected based on ubiquitous expression in the AtGenExpress development dataset."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point is supported by Results, with the caveat that channeling is for the complex rather than isolated PGAM1 alone."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This is an extrapolative application statement not made in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Paper notes mutant morphological/physiological effects and importance for normal plant physiology, but specific tradeoff framing is interpretive."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Short-day conditions and day/night imaging are in Methods/Results; ENOblock is discussed as supporting complex-dependent interpretation though it targets enolase."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "PRIDE dataset PXD020588 is explicitly provided for AP-MS data."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state catalytically inactive IPGAM1 carried H39, S80, K360, and H470 mutations; Results support separable structural role for organelle association."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "5.4.2.12",
+          "new_value": "NA",
+          "reason": "EC 5.4.2.12 does not appear in the paper; only a phosphoglycerate mutase assay reference mentions Sigma EC 5.4.2.1, not 5.4.2.12."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Potential target for engineering organelle spatial coordination and metabolic efficiency, but catalytic and moonlighting functions should be considered separately; editing interaction surfaces may modulate organelle tethering without abolishing core glycolysis.",
+          "new_value": "NA",
+          "reason": "This is an extrapolative application statement not made in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 2,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "PGAM2",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods lists phosphoglycerate mutase 2 mutant as pgam2: SALK_029822."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Paper names PGAM2 but does not explicitly give the full name '2,3-bisphosphoglycerate-independent phosphoglycerate mutase 2'."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "EC 5.4.2.12 is not stated in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "Identity as a phosphoglycerate mutase is clear, but the exact family/domain wording is not explicitly given."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis proteins are studied."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental system is Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly name Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 WT background is stated."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The lower glycolytic complex converts 3PGA-derived flux to pyruvate."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pyruvate is measured, but 'organic acid' classification is not stated."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports outer mitochondrial membrane-associated complex and cytosolic free enzymes, but not an explicit accumulation-site statement for PGAM2."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "This work centers on glycolysis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The complex is explicitly discussed as part of lower glycolysis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "PGAM2 interacts with enolase and is upstream in the described PGAM–enolase–PYK4 sequence."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "PGAM function in the paper is tied to the 3PGA-to-2PGA step."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "PGAM product 2PGA is central to the channeling analysis."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The 3PGA to 2PGA reaction is directly implied for phosphoglycerate mutase."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PGAM2 contributes precursor flux toward pyruvate in the complex."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "Not established as rate-limiting; only broader complex importance is supported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Phenotype is shown in the pgam1/2 double mutant, supporting PGAM2 together with PGAM1 in organelle association, though not uniquely for PGAM2 alone."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Double mutant analysis, BiFC, and FLIM-FRET are used; co-sublocalization is shown for PGAM1 rather than clearly PGAM2, but PGAM2 is included in interaction assays."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "PGAM2 interacts with PGAM1/enolase and with TPT in BiFC/split-LUC assays."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1b places PGAM2 in 'cytosol and mitochondria outer membrane'; chloroplast localization is not claimed here."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state ubiquitously expressed cytosolic glycolytic isoforms were selected."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points are supported, though much of the functional phenotype is inferred from the pgam1/2 double mutant rather than PGAM2 singly."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No breeding/engineering application is proposed in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "General mutant physiological defects are mentioned, but explicit tradeoff framing for PGAM2 is not provided."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Short-day growth and day/night imaging are described."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "AP-MS proteomics data deposited as PXD020588."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper's functional interpretation of PGAM2 is indeed mainly through the pgam1/2 double mutant rather than a PGAM2-specific single-mutant analysis."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "5.4.2.12",
+          "new_value": "NA",
+          "reason": "EC 5.4.2.12 is not stated in the paper."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Potential auxiliary target for manipulating lower glycolytic complex assembly, though redundancy with PGAM1 and central metabolic role warrant caution.",
+          "new_value": "NA",
+          "reason": "No breeding/engineering application is proposed in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 2,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "Enolase",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods list enolase mutants enolase-2-2: SALK_021737 and enolase-2-4: SALK_077784."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The protein is explicitly called enolase throughout."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "EC 4.2.1.11 is not explicitly stated in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Enolase is explicit, and Results specifically mention the alternative translation product AtMBP-1."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the source species in this study."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis plants/protoplasts/leaves were used experimentally."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the WT genotype used."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Enolase is part of the complex converting 3PGA-derived flux to pyruvate, and pyruvate labeling was measured."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pyruvate is the end product measured, but not classified in the paper as an organic acid."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Paper supports pyruvate formation at the outer mitochondrial membrane-associated complex and in free extraplastidial/cytosolic enzymes, but does not state this as an 'accumulation site'."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway studied is glycolysis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly identifies this as the lower part of glycolysis/lower glycolytic metabolon."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Enolase is between PGAM and PYK4 in the PGAM–enolase–PYK4 complex."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly describe enolase assays using 2-phosphoglycerate as substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods describe pyruvate kinase assay from phosphoenolpyruvate downstream of enolase, consistent with enolase producing PEP; this is standard and inferable in context."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The enolase assay and pathway context support conversion of 2PGA to PEP."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PEP is the immediate precursor of pyruvate in the pathway."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "Not established as rate-limiting; the paper supports an important structural role in channeling and organelle colocalization."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show enolase mutants reduce mitochondria–chloroplast association and alter movement; ENOblock decreases association; nuclear-targeted enolase does not rescue this cellular phenotype."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are present in the paper and applied to enolase-related conclusions."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Interactions with PGAM1, PGAM2, and PYK4 are shown by multiple assays."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state enolase is colocalized to cytosol and outer membranes of mitochondria, and AtMBP-1 is localized to the nucleus."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state proteins were selected as ubiquitously expressed cytosolic glycolytic isoforms."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements match the Results, though 2PGA channeling is a property of the complex rather than enolase alone."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This engineering application is speculative and not stated in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Broad pleiotropy is plausible and some physiology defects are mentioned, but this exact tradeoff statement is not directly made."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Short-day conditions, day/night imaging, and ENOblock hydrochloride treatment are all described."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "AP-MS proteomics with PRIDE PXD020588 is explicit."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Methods mention enolase-2-2 and enolase-2-4 mutants and the alternative translation product AtMBP-1 localized to nucleus."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "4.2.1.11",
+          "new_value": "NA",
+          "reason": "EC 4.2.1.11 is not explicitly stated in the paper."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Could be exploited to tune respiratory carbon delivery and organelle coordination, but high pleiotropy and dual localization/nuclear moonlighting functions require careful design.",
+          "new_value": "NA",
+          "reason": "This engineering application is speculative and not stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "PYK4",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to pyruvate kinase 4 (PYK4)."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "EC 2.7.1.40 does not appear in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PYK4 is explicitly a pyruvate kinase isoform/family member."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis proteins are studied."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis was used experimentally."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 background is used."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PYK4 is the pyruvate kinase component producing pyruvate in the complex."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pyruvate is measured, but the classification 'organic acid' is not stated."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Paper supports pyruvate generation by the outer membrane-associated complex and free enzymes, but not a formal accumulation-site statement for PYK4."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The study concerns glycolysis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "This PYK4-containing complex is discussed as lower glycolysis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "PYK4 is the downstream/terminal enzyme within the PGAM–enolase–PYK4 sequence."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly describe pyruvate kinase assays started with phosphoenolpyruvate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Pyruvate is the product monitored and discussed for the PYK4-containing complex."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "Conversion of PEP to pyruvate is supported, but 'with ATP production' is standard biochemistry not explicitly stated in the paper text."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PYK4 directly forms pyruvate in glycolysis."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "Not established as rate-limiting; association with VDAC and metabolon anchoring is supported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support PYK4 as part of the PGAM–enolase–PYK4 complex, strongly associating with VDAC1/3, with a plausible role in pyruvate delivery to mitochondria."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "AP-MS, BiFC, split-LUC, FLIM-FRET, and co-sublocalization were all used for PYK4-related interaction claims."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Interactions with enolase, VDAC1, and VDAC3 are directly shown."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Fig. 1b place PYK4 among proteins localized to cytosol and mitochondria outer membrane."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods indicate selected cytosolic glycolytic isoforms were ubiquitously expressed."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These conclusions are consistent with Results, though contribution to inter-organelle colocalization is at complex level rather than via PYK4 mutant testing."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This application statement is not made in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No direct manipulation of PYK4 phenotype or explicit tradeoff statement is presented in this paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Short-day growth conditions are described in Methods."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "AP-MS proteomics data are available as PXD020588."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed emphasizes PYK4 among pyruvate kinase isoforms because it recurrently interacted with enolase and VDAC."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.7.1.40",
+          "new_value": "NA",
+          "reason": "EC 2.7.1.40 does not appear in the paper."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Potential engineering point to optimize pyruvate transfer to respiration and organelle coupling, but central carbon metabolism impacts are likely.",
+          "new_value": "NA",
+          "reason": "This application statement is not made in the paper."
+        },
+        {
+          "field": "Potential_Tradeoffs",
+          "old_value": "Manipulation may alter respiratory flux and broad carbon partitioning.",
+          "new_value": "NA",
+          "reason": "No direct manipulation of PYK4 phenotype or explicit tradeoff statement is presented in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 3,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 123,
+    "supported": 94,
+    "unsupported": 9,
+    "uncertain": 20,
+    "total_corrections": 9
+  }
+}

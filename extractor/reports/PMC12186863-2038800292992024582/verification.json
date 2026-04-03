@@ -1,0 +1,308 @@
+{
+  "file": "MinerU_markdown_PMC12186863_2038800292992024582",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12186863_2038800292992024582.md",
+  "timestamp": "2026-03-31T21:48:03.288490",
+  "genes": [
+    {
+      "gene_name": "NbHDR",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies NbHDR as Nicotiana benthamiana HDR throughout the abstract and Results."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana is explicitly the host plant used and the gene is named NbHDR."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All functional assays for NbHDR were performed in Nicotiana benthamiana leaves/protoplasts."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana is explicitly stated in the Results and Methods."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "GA is discussed as a pathway context and viral (+)RNA synthesis is a measured phenotype, but 'terminal metabolite' is not a clean fit because viral RNA is not a metabolite and the paper does not directly measure GA levels."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "GA as a diterpenoid phytohormone is consistent with pathway context, but 'viral RNA' as a metabolite class is not supported as a metabolite designation in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly frames GA biosynthesis as a possible route and concludes NbHDR promotes BaMV replication independently of GA biosynthesis."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "NbHDR is localized to chloroplast stroma and the MEP pathway is plastidial, but no explicit 'accumulation site' is given for GA or viral RNA."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "NbHDR is repeatedly described as a key enzyme in the methylerythritol 4-phosphate (MEP) pathway/isoprenoid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 6 and text place NbHDR in the plastidial MEP pathway upstream of GGPP and GA biosynthesis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes NbHDR as catalyzing synthesis of IPP and DMAPP in the core MEP pathway, which is downstream within the pathway."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The full enzyme name 1-hydroxy-2-methyl-butenyl 4-diphosphate reductase is explicitly stated."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number appears in the paper text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "A chloroplast transit peptide is explicitly predicted, but 'HDR/IspH family' terminology is not stated in the paper."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2C and text explicitly show/stated NbHDR localizes to the chloroplast stroma."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "At 5 dpi BaMV infection caused a slight increase in NbHDR mRNA and protein (~1.4- and ~1.2-fold)."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper measures leaf mRNA and protein levels and reports a slight increase upon BaMV infection."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly states NbHDR catalyzes reduction of HMBPP."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly states the products are IPP and DMAPP."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This reaction is explicitly described in Results section 2.2."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly positions NbHDR as generating IPP/DMAPP precursors for downstream isoprenoid/GA biosynthesis."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract and Results describe NbHDR as a key enzyme in the MEP pathway."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These conditions were all directly used: BaMV infection, GA application, VIGS knockdown, and transient overexpression."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show knockdown reduces BaMV accumulation, overexpression increases it, recombinant NbHDR enhances initiation of (+)RNA synthesis in vitro, and GA does not rescue NbHDR-silencing effect."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly reported in the paper for NbHDR except that the GA test is a rescue experiment rather than direct metabolite assay; overall the listed methods were used."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each of the three summary points is directly supported by Results sections 2.1, 2.3, 2.4, 2.5, 2.6, and 2.7."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "NbHDR was shown to interact with BaMV replicase, specifically the RdRp domain by Y2H."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The dual 35S promoter is explicitly stated for the BaMV clone pKB-RepHA21, but the promoter for transient NbHDR expression is not stated; combining both in one field makes support partial."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "NbHDR silencing caused mild chlorosis at 7 dpi and severe photobleaching at 10 dpi, indicating physiological costs."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "IP-MS/LC-MS/MS proteomics was used to identify NbHDR, and no public accession is provided in the paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable inference from the observed essentiality/bleaching and host-factor role, but the paper does not explicitly discuss engineering applications or allele editing strategies."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly states that a catalytically inactive mutant mNbHDR enhanced BaMV RNA accumulation less strongly than wild type and cites Figure S5."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.17.1.2",
+          "new_value": "NA",
+          "reason": "No EC number appears in the paper text."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 1,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "NbKS",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NbKS is a Nicotiana benthamiana gene used in this study and prior referenced work."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana is explicitly the plant species used for NbKS silencing."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The NbKS experiments were performed in Nicotiana benthamiana plants."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana is explicitly stated in Results section 2.6."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "NbKS is explicitly described as a key enzyme in GA biosynthesis, and GA rescue is tested."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "GA is a gibberellin/diterpenoid phytohormone in the context of the paper's pathway description."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states/suggests GA supports BaMV accumulation because exogenous GA rescues the reduction caused by NbKS silencing."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "NbKS is explicitly described as a key enzyme in gibberellic acid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 6A and text place KS in the GA biosynthetic branch downstream of GGPP."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls NbKS a key enzyme in GA biosynthesis; describing it as an early/committed step is consistent with known biology and the pathway schematic."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "ent-kaurene synthase is explicitly named in the abstract and Results."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for NbKS appears in the paper text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not mention terpene synthase/diterpene cyclase family or domain terminology for NbKS."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NbKS mRNA levels were measured in leaves after VIGS and shown reduced to 7% of control."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The substrate ent-copalyl diphosphate is not stated anywhere in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The product ent-kaurene is not explicitly stated in the paper text."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper names KS but does not describe the specific cyclization of ent-copalyl diphosphate to ent-kaurene."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly link NbKS to BaMV via GA biosynthesis, and GA application rescues the phenotype."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "NbKS is explicitly described as a key enzyme in GA biosynthesis."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "NbKS was examined under BaMV infection, VIGS knockdown, and exogenous GA treatment."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show NbKS silencing reduced BaMV CP accumulation and exogenous GA restored it to basal levels."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are explicitly described for NbKS in section 2.6 and Figure 6."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by Results section 2.6."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Likely true biologically, but the paper does not report growth phenotypes or tradeoffs for NbKS suppression in this study."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is an extrapolated application claim not explicitly discussed in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "NbKS is indeed used as a comparative gene in Results section 2.6 to distinguish GA-dependent from GA-independent effects."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "4.2.3.19",
+          "new_value": "NA",
+          "reason": "No EC number for NbKS appears in the paper text."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "terpene synthase / diterpene cyclase",
+          "new_value": "NA",
+          "reason": "The paper does not mention terpene synthase/diterpene cyclase family or domain terminology for NbKS."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "ent-copalyl diphosphate",
+          "new_value": "NA",
+          "reason": "The substrate ent-copalyl diphosphate is not stated anywhere in the paper."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "ent-kaurene",
+          "new_value": "NA",
+          "reason": "The product ent-kaurene is not explicitly stated in the paper text."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Cyclizes ent-copalyl diphosphate to ent-kaurene in gibberellin biosynthesis",
+          "new_value": "NA",
+          "reason": "The paper names KS but does not describe the specific cyclization of ent-copalyl diphosphate to ent-kaurene."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 5,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 58,
+    "supported": 44,
+    "unsupported": 6,
+    "uncertain": 8,
+    "total_corrections": 6
+  }
+}

@@ -1,0 +1,251 @@
+{
+  "file": "MinerU_markdown_PMC7811333_2038794636016787456",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC7811333_2038794636016787456.md",
+  "timestamp": "2026-03-31T22:30:38.267330",
+  "genes": [
+    {
+      "gene_name": "OAZ1",
+      "category": "Common",
+      "verification": {
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study tests OAZ1 in the leafhopper insect vector N. cincticeps."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly identifies the insect vector as N. cincticeps (Nephotettix cincticeps)."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OAZ1 was cloned and studied from the leafhopper N. cincticeps."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is explicitly from N. cincticeps."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show OAZ1 knockdown increases Put, and the paper focuses on putrescine biosynthesis regulated by OAZ1."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Putrescine is explicitly discussed as one of the polyamines."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results show increased Put or OAZ1 knockdown promotes RYSV accumulation/spread, supporting a role in facilitating viral propagation in insect vectors."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Polyamines were measured from whole insects / intracellular extracts, and CNS viral spread was assessed separately. The phrase 'leafhopper cells; central nervous system-associated infected tissues inferred' is partly inferential rather than directly stated."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "OAZ1 was examined under RYSV infection and dsOAZ1 RNAi treatment."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1C shows OAZ1 diffused in cytoplasm alone, recruited to nucleus with ODC1, and forming cytoplasmic puncta with RYSV M."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 3B states OAZ1 transcript and protein levels decreased at 4 and 6 dpi after RYSV infection."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are described and used for OAZ1-related evidence: yeast two-hybrid, GST pull-down, Sf9 immunofluorescence, RNAi, RT-qPCR, Western blot, and UPLC-3Q-MS."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "OAZ1 is shown to interact with RYSV M and with ODC1 by yeast two-hybrid; M-OAZ1 is also confirmed by GST pull-down."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies OAZ1 as antienzyme/antizyme of ODC1, notes it is decoded by ribosomal frameshifting, and maps the C-terminal ODC-binding domain (114–211 aa)."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point matches Results: OAZ1 negatively regulates Put biosynthesis, is reduced by RYSV infection, and its knockdown increases ODC1, Put, and viral accumulation/spread."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly frames OAZ1 as an antienzyme controlling ODC1 and shows M and ODC1 bind the same ODC-binding domain, implying competition. The statement 'not a pathway enzyme or TF' is consistent though not a direct paper phrase."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Knockdown/reduction of OAZ1 increased putrescine and promoted RYSV infection in Results."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says OAZ1 and ODC1 were cloned based on bioinformatics analysis of leafhopper RNA-seq results; no accession is provided, so 'accession NA' is consistent."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper suggests novel antiviral strategies targeting this mechanism in Discussion, but does not directly test maintaining/enhancing OAZ1 for vector control."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Possible effects on polyamine homeostasis, cell growth, and insect physiology are discussed generally, but specific OAZ1-related tradeoffs were not experimentally resolved."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 17,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "ODC1",
+      "category": "Pathway",
+      "verification": {
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ODC1 was directly studied in the leafhopper insect vector."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species studied is N. cincticeps (Nephotettix cincticeps)."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ODC1 was cloned from the leafhopper N. cincticeps."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene source is explicitly N. cincticeps."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "ODC1 is presented as the key enzyme for putrescine biosynthesis, and ODC1 knockdown reduces Put."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Putrescine is explicitly a polyamine in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Putrescine supplementation promotes RYSV and ODC1 knockdown reduces Put and viral infection, supporting this functional linkage."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Putrescine was measured from insect extracts, and CNS infection was measured separately; CNS-associated Put accumulation is inferred, not directly quantified."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ODC1 is explicitly placed in the polyamine biosynthesis pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states ODC1 acts in putrescine biosynthesis and Put is subsequently converted to Spd and Spm, supporting the de novo putrescine branch description."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "ODC1 is explicitly named ornithine decarboxylase 1."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number appears in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states ODC1 facilitates the conversion of ornithine to Put / is the first rate-limiting enzyme in Put biosynthesis."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Ornithine is explicitly named as the precursor converted by ODC1 to Put."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Putrescine is explicitly the product linked to ODC1 activity."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "ODC1 is described as the first rate-limiting enzyme in Put biosynthesis, supporting upstream/first committed step language."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "ODC1 directly generates the target product putrescine from ornithine."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls ODC1 the first rate-limiting enzyme in Put biosynthesis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show increased ODC1 during infection, dsODC1 lowers Put, and ODC1 knockdown inhibits RYSV infection."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "ODC1 interacts with OAZ1 in yeast two-hybrid and colocalization assays; no direct interaction with M was found."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not describe ODC1 as 'PLP-dependent ornithine decarboxylase' or provide family/domain annotation."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nuclear localization in Sf9 cells is supported. Negative control by OAZ1 is supported. However, 'likely via ubiquitin-independent degradation' is discussed as mechanism/homeostatic reasoning rather than directly tested here."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "ODC1 was tested under RYSV infection, dsODC1 RNAi, and DFMO treatment context."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "DFMO lowering polyamines and viral load is supported, but application as a vector antiviral target is a Discussion-level implication, not directly demonstrated as an engineering strategy."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 3B shows ODC1 transcript and protein increase at 4 and 6 dpi during RYSV infection."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are present for ODC1-related evidence: RNAi, DFMO assay, RT-qPCR, Western blot, UPLC-3Q-MS, yeast two-hybrid, and Sf9 localization."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was cloned based on leafhopper RNA-seq analysis, and no accession number is given."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "General roles of polyamines in cell growth/physiology are discussed, but detailed fitness costs of ODC1 suppression were not evaluated experimentally."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1C states ODC1 was localized in the nucleus when expressed individually in Sf9 cells."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points are supported by Results, including first rate-limiting role, increased expression during infection, dsODC1 reducing Put and viral spread, and DFMO reducing polyamines and viral propagation."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "4.1.1.17",
+          "new_value": "NA",
+          "reason": "No EC number appears in the paper."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "PLP-dependent ornithine decarboxylase",
+          "new_value": "NA",
+          "reason": "The paper does not describe ODC1 as 'PLP-dependent ornithine decarboxylase' or provide family/domain annotation."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 50,
+    "supported": 41,
+    "unsupported": 2,
+    "uncertain": 7,
+    "total_corrections": 2
+  }
+}

@@ -1,0 +1,349 @@
+{
+  "file": "MinerU_markdown_PMC8931227_2038794276388765705",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC8931227_2038794276388765705.md",
+  "timestamp": "2026-03-31T17:28:52.705483",
+  "genes": [
+    {
+      "gene_name": "KUF1",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods states the gene model used for KUF1 was At1g31350.1, and refers to KUF1 as At1g31350."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies KUF1 in Arabidopsis thaliana."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Arabidopsis thaliana throughout the paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed primarily in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Arabidopsis thaliana in the Results."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Col-0 and Ler backgrounds were used for kuf1 experiments."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The original kuf1-1 allele described in detail was generated in Col-0."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state KUF1 is predicted to have an N-terminal F-box domain; UniProt predicts five C-terminal Kelch repeats; AlphaFold suggests a beta-propeller, possibly six-bladed."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper hypothesizes KUF1 negatively regulates KL biosynthesis/availability and KAR1 metabolism into a bioactive signal, but the actual KL and KAR1-derived bioactive metabolite are unknown and not directly identified."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Karrikins are butenolides, but KL and the bioactive KAR1-derived signal are hypothetical/unknown in this paper; class assignment to all listed terminal metabolites is not directly demonstrated."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links KL/KAI2 signaling and KAR responses to seedling photomorphogenesis and root hair development, and proposes KUF1 acts through these signals."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These exact conditions/treatments are used extensively in Results: red light seedling growth, KAR1, KAR2, rac-GR24, and mock."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results say KUF1 is a transcriptional marker/output of KAR/KL signaling and show KUF1p:GUS activity in root cap, newly emerged leaves, mature root vasculature, and in adult rosette axillary buds, sepals, and anthers; activity was low/absent in hypocotyl and root elongation/differentiation zones."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states KUF1 is up-regulated after KAI2-SCFMAX2 signaling and that KAR2 and rac-GR24 intensified KUF1p:GUS staining. However, the exact statement 'upregulated by KAR1 and rac-GR24 in a KAI2- and MAX2-dependent manner' is not directly shown in Results for Arabidopsis KUF1 here."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Prior yeast two-hybrid screens found putative interactions with ASK1, ASK2, and ASK18, but in this paper only ASK1 interaction was directly tested in directed yeast two-hybrid assays."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "KUF1p:KUF1 rescue and KUF1p:GUS are directly described; 35S:KUF1 was used for transient overexpression in Nicotiana benthamiana."
+        },
+        "Omics_Data": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The provided paper text does not mention initial identification by microarray among KAR1-upregulated transcripts in dormant seeds."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are reported in the paper: CRISPR mutant generation, rescue, qRT-PCR, epistasis, hypocotyl/root hair phenotyping, ASK1 yeast two-hybrid, SMAX1 reporter assays, and transient Nicotiana expression."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately reflects the main Results and Discussion conclusions, while noting indirect support for KL/KAR1 metabolism."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support that loss of KUF1 enhances KAI2-dependent developmental responses and KAR1 sensitivity; Discussion frames KUF1 as a negative regulator of KL biosynthesis/availability and KAR1 metabolism, albeit as a model/hypothesis."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper suggests KUF1 could aid KL discovery and potentially affect growth traits, but explicit breeding/engineering application value is not directly tested."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements are all consistent with the paper: unknown SCF^KUF1 target, unknown KL/KAR1 active metabolite identity, and differing overexpression effects in Nicotiana versus Arabidopsis."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Omics_Data",
+          "old_value": "Microarray (initial identification among KAR1-upregulated transcripts in dormant seeds)",
+          "new_value": "NA",
+          "reason": "The provided paper text does not mention initial identification by microarray among KAR1-upregulated transcripts in dormant seeds."
+        }
+      ],
+      "stats": {
+        "supported": 16,
+        "unsupported": 1,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "KAI2",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "KAI2 discussed and tested is from Arabidopsis thaliana in the main experiments."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the main applied species in Results."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species in the core experiments is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Col-0 and Ler backgrounds appear in the paper, including kai2-2 Ler and backcrossed lines."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Introduction describes KAI2 as an alpha/beta-hydrolase required for KAR responses, functioning as a receptor/signaling protein."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states KAI2 encodes an alpha/beta-hydrolase with a conserved Ser-His-Asp catalytic triad."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "KAI2 is proposed to recognize KL, KAR1-derived bioactive signal, and rac-GR24/GR24ent-5DS, but KL and KAR1-derived active metabolite are not directly identified in this study."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Butenolide class is reasonable for KARs/GR24-related compounds, but KL is unknown and the exact active KAR1-derived signal is not identified."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "KAI2-mediated signaling is directly linked in the paper to seedling photomorphogenesis and root hair development."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These treatments and conditions are directly used in KAI2-related analyses in Results."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper uses an AtKAI2 ratiometric reporter and mentions KAI2 promoter in ShKAI2i kai2 from prior work, but 'native promoter in Arabidopsis' is generic and not a specific promoter construct tested here for KAI2 itself."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "UNCERTAIN",
+          "reason": "KL, KAR1-derived active metabolite, KAR2-derived signal, and GR24ent-5DS/rac-GR24 are discussed as KAI2 inputs, but some are inferential/hypothetical rather than directly established in this paper."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly places SMAX1/SMXL2 downstream of KAI2-SCFMAX2 signaling."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "KAI2 is described as controlling signal perception/output of KL/KAR responses rather than generic development alone."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion/model state activation of KAI2 leads to association with SCFMAX2 and degradation of SMAX1/SMXL2."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper proposes KAI2 pathway activation induces KUF1 expression as part of a negative feedback loop."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and prior pathway framing support that degradation of SMAX1/SMXL2 activates downstream KAR/KL-responsive gene expression."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "MAX2 and SMAX1 are supported in the pathway/model and cited prior work; direct interaction with SMXL2 is not demonstrated in this paper text, and KAI2 interactions are partly from prior studies."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper consistently refers to KAI2-SCFMAX2 signaling complex/mechanism."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "KAI2 involvement was directly tested by epistasis, abundance assays, SMAX1 reporter assays, and pharmacological response assays."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes the direct KAI2-related findings in the kuf1 study."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Epistasis and phenotyping show KAI2 is required for constitutive and KAR1-hypersensitive kuf1 responses."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Such application value is plausible but not directly evaluated in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "KAI2 is not the novel focal gene, but its necessity for KUF1-related phenotypes is directly tested in Results."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "KAI2 is essential for perception of KL/KAR-derived signals, but the 'target product' wording overstates direct evidence because KL and KAR1-derived active product are not chemically identified."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 19,
+        "unsupported": 0,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_name": "MAX2",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MAX2 studied here is Arabidopsis thaliana MAX2."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the experimental system for MAX2 epistasis and phenotyping."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Most max2 work is in Col-0, but the paper also uses Ler-derived materials elsewhere; the specific MAX2 experiments are not explicitly stated as only Col-0 in every case."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Introduction explicitly states MAX2 encodes an F-box protein functioning in an SCF E3 ubiquitin ligase complex."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "MAX2 is explicitly described as an F-box protein."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "MAX2 is required for responses to KL and KAR1-derived bioactive signal according to the model, but these metabolites are not directly identified."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "As with KAI2/KUF1, the exact active metabolites are not chemically established in this paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "MAX2-dependent KAI2 signaling is directly linked to seedling growth and root hair development in the paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "KAR1, KAR2, rac-GR24, and red light are all relevant conditions/treatments in MAX2-related analyses or pathway framing."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "In the KAI2 branch emphasized here, MAX2 acts downstream of activated KAI2."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "SMAX1 and SMXL2 are repeatedly described as degraded by SCFMAX2-regulated signaling."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "MAX2 is presented as controlling downstream signal transduction/proteolysis in the KAI2 pathway."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes SCF-mediated polyubiquitination and proteasomal degradation of repressors downstream of MAX2."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The model proposes KUF1 induction occurs following KAI2-SCFMAX2 signaling, placing MAX2 in the feedback circuit."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "By degrading SMAX1/SMXL2, MAX2 permits KAR/KL-responsive transcription, consistent with the pathway described."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Functional relationships with KAI2, SMAX1, and SMXL2 are strongly supported, but direct physical interactions for all three are not newly demonstrated in this paper."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "MAX2 is explicitly part of the SCFMAX2 E3 ubiquitin ligase complex."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "MAX2 necessity was directly tested by epistasis and phenotyping."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an accurate summary of MAX2-related conclusions from the paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly shows max2 is epistatic to kuf1, meaning MAX2 is required for kuf1-enhanced responses."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential utility is plausible but not experimentally addressed in this paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper notes MAX2 also functions in SL signaling, and d14 epistasis supports kuf1 effects being specific to the KAI2 branch here."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "MAX2 is essential for KUF1-associated KL/KAR1 response output, but the 'target product' is inferred because the metabolites/signals are not directly identified."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 19,
+        "unsupported": 0,
+        "uncertain": 6
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 73,
+    "supported": 54,
+    "unsupported": 1,
+    "uncertain": 18,
+    "total_corrections": 1
+  }
+}

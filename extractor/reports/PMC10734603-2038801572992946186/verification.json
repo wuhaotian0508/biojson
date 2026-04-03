@@ -1,0 +1,491 @@
+{
+  "file": "MinerU_markdown_PMC10734603_2038801572992946186",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC10734603_2038801572992946186.md",
+  "timestamp": "2026-03-31T21:31:48.055882",
+  "genes": [
+    {
+      "gene_name": "NKD1",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states NKD1 is encoded by nkd1 (Zm00001d002654)."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is in maize and explicitly names maize as Zea mays."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly uses 'Zea mays'."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All experiments were performed in maize."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies the applied species as Zea mays."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutant combinations were developed in a W22 inbred background."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The nkd1, nkd2, and o2 lines used were in the W22 genetic background."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and abstract repeatedly link NKD1/NKD2/O2 to starch, storage proteins, and lipids during grain filling."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Starch, storage proteins, and lipids are explicitly discussed; these correspond to polysaccharide, protein, and lipid classes."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes nutrient accumulation in maize endosperm, with starch/protein in starchy endosperm and lipid/protein in aleurone; SA is also described."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Background explicitly states endosperm stores nutrients supplying energy for germination and initial seedling growth and is central to grain filling."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "NKD1 and NKD2 are explicitly described as duplicate INDETERMINATE DOMAIN (IDD) transcription factors."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "NKD1 is explicitly a transcription factor."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports target-specific positive and negative regulation and ATAC-seq-based effects on chromatin accessibility, though not phrased exactly as this field."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The work uses endogenous mutant lines in W22 and no transgenic promoter is described for the core validation experiments."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq was performed on developing endosperm at 8, 12, and 16 DAP, and NKD1 is analyzed as acting during the transition to grain filling."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study concerns NKD1 function in developing maize endosperm."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports reduced starch and zeins, defective aleurone/subaleurone differentiation, altered ploidy/endoreduplication, and wrinkled/shrunken phenotypes in relevant mutant combinations involving nkd1."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The central experimental factor is developmental stage at 8, 12, and 16 DAP during the grain-filling transition."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "NKD1 is a transcription factor, so nuclear localization is plausible, but this paper does not explicitly state or test NKD1 subcellular localization."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are used in the paper for NKD1-centered analysis: mutant analysis, RNA-seq, WGCNA, DAP-seq, ATAC-seq, starch assay, zein HPLC, and microscopy."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports developmental timing and feedback/regulatory input from NKD2 and O2; it states NKD2 may repress nkd1 and discusses the dynamic regulatory circuit among NKD1/2/O2."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "o2, PLATZ2, GRFTF3, and MYBR24 are all discussed as potential NKD1/NKD2 targets or affected genes, but the paper generally does not isolate NKD1-specific direct targeting for each listed gene because NKD1 DAP-seq yielded few peaks and much evidence is combined with NKD2."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper cites prior evidence that NKD1 and NKD2 form homo/heterodimers and shows a pull-down assay where IDDP10 binds NKD1."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "NKD1/NKD2 homodimerization/heterodimerization is cited, and NKD1-IDDP10 physical interaction is shown in this paper."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states nkd1/nkd2 mutually regulate each other and that NKD2 may directly repress nkd1, helping limit NKD levels."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports positive regulation of o2 by NKD1/NKD2, support for repression of MYBR24 by NKD1/NKD2, and abstract/discussion support that NKD1/NKD2 increase O2 target-site accessibility."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The results and discussion support NKD1 as part of the central regulatory network controlling transition to nutrient accumulation and storage of starch/protein/lipid."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "NKD1 is implicated in promoting starch and storage protein accumulation and restricting excess cellular development and endoreduplication, especially from combined mutant analyses."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links NKD1 to grain filling, starch metabolism, storage proteins, lipid-related modules, and repression of auxin/cell wall developmental programs."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This translational breeding value statement is not presented in the paper's Results or Discussion."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states NKD1 has far fewer DAP-seq peaks than NKD2, all NKD1-bound genes are among NKD2-bound genes, and nkd1 shows stronger synthetic interaction with o2 than nkd2 does phenotypically."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "These GEO accessions are explicitly listed in the paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an accurate high-level summary of results showing NKD1 as a central IDD TF in the 8–16 DAP transition, interacting with nkd2 and o2 and affecting starch/zein accumulation."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "ATAC-seq results support that NKD1 affects chromatin accessibility and that O2 influences accessibility of NKD target sites."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "potential target for improving endosperm filling and storage quality, but perturbation likely causes severe kernel development defects so careful stacking/editing would be required",
+          "new_value": "NA",
+          "reason": "This translational breeding value statement is not presented in the paper's Results or Discussion."
+        }
+      ],
+      "stats": {
+        "supported": 32,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "NKD2",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states NKD2 is encoded by nkd2 (Zm00001d026113)."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is maize throughout the paper."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states Zea mays."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in maize."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is explicitly Zea mays."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutant combinations were generated in a W22 inbred background."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The lines used were in the W22 background."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links NKD2-containing networks to starch, storage proteins/zeins, and lipids during grain filling."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These map directly to polysaccharide, protein, and lipid, all discussed in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes endosperm nutrient accumulation, with starch/protein in starchy endosperm and lipid/protein in aleurone; SA is also discussed."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Endosperm nutrient storage for grain filling, germination, and seedling growth is explicitly described."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "NKD2 is explicitly described as an INDETERMINATE DOMAIN (IDD) transcription factor."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "NKD2 is a transcription factor."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports both positive and negative regulation by NKD2 and effects on chromatin accessibility/O2 target-site accessibility."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses endogenous mutant alleles in W22 and no transgenic promoter in the core analyses."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NKD2 is studied in developing endosperm across 8, 12, and 16 DAP."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper examines NKD2 in developing maize endosperm."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports that nkd1 nkd2 double mutants have severe aleurone defects, reduced starch, irregular starch granules, reduced zein isoforms, and increased endoreduplication."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Developmental stage at 8, 12, and 16 DAP is a core experimental factor."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nuclear localization is expected for a TF, but this paper does not explicitly report localization for NKD2."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are used in the paper for NKD2-related analysis."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports developmental timing, O2 transactivation of nkd2, and mutual regulation with NKD1."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "These genes are supported as potential NKD2 targets/hub genes or examples from Table 2/Fig. 7D, including o2, ARF1, ARF29, PLATZ2, GRFTF3, GAP1, GLK11, ABI39, HB75, and MYBR24."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper cites prior evidence that NKD2 can form homo/heterodimers with NKD1."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "Homodimer/heterodimer formation with NKD1 is explicitly cited."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports mutual regulation with nkd1 and states O2 transactivates nkd2."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports positive regulation of o2 and potential repression of arf1, hb75, and mybr24, plus module-level control over auxin, cell wall, lipid, starch, and nutrient reservoir pathways."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "NKD2 is strongly supported as a major hierarchical regulator with extensive DAP-seq support and central roles in developmental and nutrient-storage networks."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Combined mutant data support promotion of starch/storage proteins/lipid-related accumulation and restriction of excess developmental programs and endoreduplication."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 and module analyses support starch biosynthesis, nutrient reservoir activity, lipid biosynthesis/storage, grain filling, and hormone-linked developmental control."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not make this engineering application claim."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states NKD2 had many more DAP-seq targets than NKD1, o2 is a direct NKD2 target hub gene, and GO enrichment includes starch biosynthesis and nutrient reservoir activity."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "These GEO accessions are explicitly provided."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes NKD2 as a major IDD TF controlling the endosperm transition and acting hierarchically with extensive direct-target evidence."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "ATAC-seq comparisons and DAP-seq overlap support that NKD2 affects accessibility at target loci and that O2 influences accessibility of NKD2 target sites."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "key engineering node for endosperm filling, but broad developmental effects mean dosage/context must be controlled",
+          "new_value": "NA",
+          "reason": "The paper does not make this engineering application claim."
+        }
+      ],
+      "stats": {
+        "supported": 33,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "O2",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states O2 is encoded by o2 (Zm00001d018971)."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is studied in maize."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to Zea mays."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All experiments were done in maize."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Zea mays."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant combinations were made in the W22 background."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The study materials are in the W22 genetic background."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "Zein storage proteins and starch are directly supported by this paper, but lysine increase is mentioned only as prior knowledge/background from earlier studies, not directly tested here."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Protein and polysaccharide are directly supported here; amino acid/lysine class is not directly measured in this study."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links O2 to endosperm, especially storage proteins in starchy endosperm protein bodies."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Storage proteins and endosperm nutrient storage for grain filling and seedling nutrition are explicitly described; lysine nutritional quality is background-compatible."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "O2 is explicitly described as a BASIC LEUCINE ZIPPER (bZIP) domain transcription factor."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "O2 is explicitly a transcription factor."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports transcriptional activation, hierarchical network regulation, and strong effects on global chromatin accessibility."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Core analyses used endogenous mutants in W22; no transgenic promoter was used for validating O2 function."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Transcriptome analyses show O2-containing genotypes are especially distinct at 12 and 16 DAP, supporting strong influence during grain filling."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "O2 is analyzed in developing maize endosperm."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Reduced zeins, reduced starch content, opaque kernels, and altered protein body morphology are directly supported; increased lysine is cited from previous literature, not newly tested here."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The study centers on 8, 12, and 16 DAP developmental stages."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nuclear localization is expected for a bZIP TF, but this paper does not explicitly test or state O2 localization."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses mutant analysis, RNA-seq, published O2 ChIP-seq integration, WGCNA, ATAC-seq, zein profiling, starch assay, and microscopy."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports positive regulation of o2 by NKD1/NKD2 and developmental context during grain filling."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports zein genes, bzip17, gbf1, nkd2, floury2, and tryptophan aminotransferase related3 as O2 targets or coactivated targets, though some come from cited prior studies integrated into this work."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper cites O2 interaction/co-complex evidence with NKD2, PBF1, OHP1, OHP2, ZmbZIP22, and ZmMADS47 from prior studies."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states O2 forms protein complexes with PBF1, OHP1/OHP2, ZmbZIP22, and ZmMADS47."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes the dynamic circuit where O2 transactivates nkd2 and NKD1/NKD2 positively regulate o2."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports activation of zein genes and direct targeting of hub TFs bzip17 and gbf1, promoting nutrient reservoir modules."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "PCA and coexpression analyses support O2 as a key regulator with especially strong transcriptome effects at 12–16 DAP and central storage protein control."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "Promotion of zein accumulation and starch deposition is directly supported, but increased lysine is not tested in this paper and is only cited from earlier literature."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports storage protein biosynthesis, starch biosynthesis/metabolism, nutrient metabolism, and grain filling for O2."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This breeding application statement is not made in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports O2's influence on the global regulatory landscape and stronger storage-protein defects in o2-containing mutant combinations."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq and ATAC-seq accessions are listed, and published O2 ChIP-seq targets were integrated; GSE214166 pertains DAP-seq of NKD/downstream TFs used in this study."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a faithful summary of O2 as a central bZIP regulator of grain filling working with NKD1/NKD2 to control storage metabolism and chromatin accessibility."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "ATAC-seq data in the paper show that O2 broadly affects chromatin accessibility, including NKD target-site accessibility."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "classical nutritional quality target because o2 elevates lysine, but must be balanced against severe kernel texture and storage defects",
+          "new_value": "NA",
+          "reason": "This breeding application statement is not made in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 30,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 105,
+    "supported": 95,
+    "unsupported": 3,
+    "uncertain": 7,
+    "total_corrections": 3
+  }
+}

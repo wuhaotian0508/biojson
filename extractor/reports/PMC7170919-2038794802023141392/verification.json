@@ -1,0 +1,330 @@
+{
+  "file": "MinerU_markdown_PMC7170919_2038794802023141392",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC7170919_2038794802023141392.md",
+  "timestamp": "2026-03-31T22:27:57.769138",
+  "genes": [
+    {
+      "gene_name": "SaDAH-G226D",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant was generated from SaDAH, where SaDAH is from Sinomenium acutum."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Sinomenium acutum is explicitly named as the source of SaDAH."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SaDAH was heterologously expressed in Escherichia coli for recombinant protein production."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Escherichia coli is explicitly stated as the heterologous expression host."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The verified construct was transformed into E. coli BL21 (DE3)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "DAH is described as a Fe(II)- and 2-oxoglutarate-dependent halogenase of the 2ODD/2ODH-related family; the G226D form is its mutant variant."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "In vitro assays for SaDAH-G226D included Fe(II), 2OG, and NaCl in Tris buffer."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes site-directed mutagenesis, recombinant expression/purification, in vitro enzyme assays, and LC-HRAM-MS/LC-MS analysis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant assay concerns conversion of dechloroacutumine, yielding predominantly 11-hydroxy-dechloroacutumine; acutumine is discussed as the native terminal product and minor chlorination product in Fig. 2c text."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Acutumine and dechloroacutumine derivatives are alkaloids in the paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state the G226D mutant is devoid of halogenase activity and instead exhibits exclusive/predominant hydroxylase activity toward dechloroacutumine, showing the role of Gly226."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses DAH as a starting point for directed evolution and metabolic engineering, but does not explicitly assign this mechanistic switching application specifically to the G226D mutant."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant loses native halogenase activity, which is the stated tradeoff."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "The statement that the mutant 'predominantly produced 11-hydroxy-dechloroacutumine' is supported by Fig. 2c/caption, but 'chlorination abolished/undetectable as functional output of DAH' overstates the text because Fig. 2 caption notes chlorination product 1 is also produced as a minor product, while the Results text says devoid of halogenase activity."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are consistent with the Results: G226D tests the unusual residue, shifts activity from halogenation to hydroxylation, and supports the role of the Asp-to-Gly substitution in enabling halogenation."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 13,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "McDAH",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "GenBank accessions MT040708 and MT040709 are listed for the genes reported; McDAH is one of the two DAHs and corresponds to one accession, though the paper does not map accession-to-gene name inline. Given only two DAHs are reported, this is directly inferable but not explicitly assigned in text."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "McDAH is explicitly named as M. canadense dechloroacutumine halogenase."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Menispermum canadense is explicitly given."
+        },
+        "Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "McDAH was identified from M. canadense and shown in recombinant assays; recombinant McDAH activity is mentioned, but 'Menispermaceae plants' as applied species is broader than directly tested."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "McDAH itself is from M. canadense; Sinomenium acutum pertains to the ortholog SaDAH, not application of McDAH per se."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "McDAH is identified in the context of (−)-acutumine biosynthesis, which is part of benzylisoquinoline alkaloid specialized metabolism."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme is described as catalyzing the terminal chlorination step, i.e., the terminal halogenation branch of the acutumine pathway."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states chlorination is the terminal step and DAH catalyzes this terminal chlorination reaction."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "DAH directly converts dechloroacutumine to acutumine."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is named dechloroacutumine halogenase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "DAH is explicitly described as an Fe(II)- and 2-oxoglutarate-dependent halogenase related to the 2ODD family."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "DAH acts on (−)-dechloroacutumine."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "DAH converts dechloroacutumine to (−)-acutumine."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The chlorination reaction is directly shown; recombinant McDAH exhibits identical activity to SaDAH, and DAH generally is discussed as having trace hydroxylation and azidation capability."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The final product is (−)-acutumine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "(−)-Acutumine is explicitly described as a tetracyclic chloroalkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The introduction states acutumine has selective cytotoxicity to cultured human T cells and memory-enhancing properties in Wistar rats."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states (−)-acutumine accumulation is relatively more enriched in roots than stems and leaves in M. canadense."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The candidate gene has 459-fold higher transcript expression in roots than leaves in M. canadense."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "Root enrichment is clearly stated for M. canadense metabolite accumulation, but not as a specific expression analysis across both applied species."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "DAH assays used Fe(II), 2OG, and NaCl; azidation was observed with NaN3."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "McDAH is presented as catalyzing the terminal chlorination step leading to the chloroalkaloid (−)-acutumine."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "Terminal chlorination is supported, but the paper does not explicitly call it rate-limiting or a committed control step."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The discussion explicitly mentions metabolic engineering, directed evolution, and production of new-to-nature plant natural products using DAH."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed SRA and TSA accessions appear in the Data availability section."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Comparative transcriptomics, tissue-specific expression, recombinant expression, in vitro assays with LC-MS, and phylogenetic analysis are all described; recombinant McDAH activity is also noted."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The Asp226Gly substitution, first plant-origin 2ODH claim, and absence of obvious DAH ortholog in S. japonica are all explicitly stated."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary statements are directly supported by the Results and figures."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 24,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "SaDAH",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "GenBank accessions MT040708 and MT040709 are listed for the reported genes; SaDAH is one of the two DAHs, though the text does not explicitly pair the accession with the gene name inline."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SaDAH was identified from Sinomenium acutum transcriptome."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Sinomenium acutum is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SaDAH is from S. acutum and was functionally tested after heterologous expression in E. coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Sinomenium acutum and Escherichia coli are explicitly mentioned in the study context."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SaDAH is characterized in (−)-acutumine biosynthesis, a benzylisoquinoline alkaloid pathway context."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SaDAH catalyzes the terminal chlorination branch/step."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says DAH catalyzes the terminal chlorination step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "SaDAH directly converts dechloroacutumine to acutumine."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "SaDAH is identified as dechloroacutumine halogenase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly a Fe(II)- and 2-oxoglutarate-dependent halogenase related to 2ODDs."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "SaDAH activity was tested with (−)-dechloroacutumine."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "SaDAH converts (−)-dechloroacutumine to (−)-acutumine."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The chlorination reaction, trace hydroxylation, and azidation in presence of azide are all described and supported by Fig. 2 and supplementary figures."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The product linked to the pathway is (−)-acutumine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Acutumine is a chloroalkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper attributes selective cytotoxicity and memory-enhancing properties to (−)-acutumine."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Root-enriched accumulation is shown for M. canadense, but the paper does not explicitly state tissue accumulation site for S. acutum."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SaDAH was identified in S. acutum transcriptome and reported to have 99.1% identity to McDAH, making it a likely ortholog; this is explicitly stated."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "SaDAH chlorination required 2OG/Fe(II)/NaCl and azidation occurred with NaN3; lack of activity on non-native alkaloids is also reported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "SaDAH directly converts dechloroacutumine to acutumine and also catalyzes azidation under azide supplementation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is terminal and determines chlorinated product identity, but the paper does not explicitly call it rate-limiting or a control step."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The discussion explicitly proposes DAH for derivatization, directed evolution, and metabolic engineering applications."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The cited SRA and TSA accessions are listed in Data availability."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Recombinant purification from E. coli, in vitro assays, LC-HRAM-MS, kinetic assays, and substrate/anion testing are all explicitly described."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The kinetic constants, substrate specificity, and claim as first biochemically characterized plant 2ODH are all supported by the Results and supplementary references cited in text."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each of the three summary points is directly supported by the Results section."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 25,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 70,
+    "supported": 62,
+    "unsupported": 0,
+    "uncertain": 8,
+    "total_corrections": 0
+  }
+}

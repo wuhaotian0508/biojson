@@ -1,0 +1,277 @@
+{
+  "file": "MinerU_markdown_PMC3088725_2038799084189425678",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC3088725_2038799084189425678.md",
+  "timestamp": "2026-03-31T22:06:12.542041",
+  "genes": [
+    {
+      "gene_name": "Y-sat",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods states the 317-bp Y-sat sequence was from 'GenBank accession D00542'."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies Y-sat as the Y satellite RNA of cucumber mosaic virus; this is explicit throughout the title/abstract/results."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper consistently names the satellite RNA as 'Y-sat'."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments/results involve tobacco, Nicotiana benthamiana, Arabidopsis, tomato, and pepper."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods lists Nicotiana benthamiana, Capsicum annuum, Solanum lycopersicum, and Arabidopsis thaliana; Nicotiana tabacum is discussed as tobacco and in sequence context."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "N. benthamiana line 16c was used for some analyses and transgenics, but this does not apply to all listed applied species; as a single field covering all species it is only partially supported."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes Y-sat as a 'non-coding subviral RNA'; calling it a non-coding viral satellite RNA is faithful."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links Y-sat action to impairment of chlorophyll biosynthesis and yellowing; chlorophyll is the final nutrient/pigment product discussed."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Chlorophyll biosynthesis and tetrapyrrole pathway are mentioned, but the exact phrase 'tetrapyrrole pigment' is not stated."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Green/yellow coloration is clearly implicated, but 'required for green coloration and photosynthesis' is general background knowledge rather than explicitly stated in Results."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Leaf yellowing is the phenotype studied, and chloroplasts are repeatedly implicated; thus leaves/chloroplasts are directly inferable from the paper."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show Y-sat accumulates in infected systemic leaves and that abundant Y-sat-derived siRNAs, including SYR hotspot-derived siRNAs, accumulate by deep sequencing and Northern blot."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This is the central conclusion of the paper, supported by transgenics, host-range mutants, VIGS comparison, 5'-RACE, and GFP sensor assays."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods were used in Results to validate Y-sat function: IR transgenics, small RNA Northern, deep sequencing, SYR mutagenesis, 5'-RACE, and GFP-YR sensor."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1 and Methods specify the Y-sat IR cassette was under the CaMV 35S promoter."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Most assays used CMV helper virus for Y-sat infection, and separate protoplast assays used transfected Y-sat dsRNA."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "AGO1 and RDR involvement appear in the proposed model/discussion, not as directly tested protein interactions in Results; 'host RNA silencing machinery' is supported broadly but specific AGO1/RDR involvement is not experimentally demonstrated here."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports small RNA deep sequencing on an Illumina Genome Analyzer and also microarray/proteome analyses; no accession numbers are provided."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Yellowing/chlorosis through host gene silencing is directly shown, and reversion of introduced mutations is explicitly noted for Y-sat mut-Tom at 21 dpi."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable extrapolation but not a claim made by the paper's Results; the paper presents a mechanistic study, not a breeding application."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four statements accurately summarize Results: abundant 21/22-nt siRNAs including SYR, targeting of ChlI, host retargeting by SYR mutation, and sufficiency of Y-sat to drive ChlI silencing-associated yellowing."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Y-sat is indeed a non-coding pathogenic determinant rather than a plant gene/protein, and the paper shows species specificity depends on 22-nt SYR/YR complementarity."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 17,
+        "unsupported": 0,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "ChlI",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "UNCERTAIN",
+          "reason": "AF014053 is explicitly given for the tobacco ChlI gene when discussing sequence complementarity, but the field also covers Nicotiana benthamiana; the N. benthamiana ChlI cloned here is not assigned this accession in the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly studies tobacco ChlI and clones/sequences N. benthamiana ChlI."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana tabacum and Nicotiana benthamiana are explicitly referred to in the paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ChlI sequence/targeting relevance is examined across tobacco, N. benthamiana, Arabidopsis, tomato, and pepper."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed Latin names are present or directly matched to species used in the experiments."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "N. benthamiana line 16c is used in some experiments, but not as a universal variety across all applied species."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "Magnesium chelatase subunit I is explicit, but 'AAA+ ATPase-type' is not stated in the paper."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names the gene/product as 'magnesium protoporphyrin chelatase subunit I (ChlI)' / 'magnesium chelatase subunit I'."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number appears anywhere in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states ChlI is involved in chlorophyll synthesis via the tetrapyrrole biosynthesis pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says ChlI catalyzes the first step in chlorophyll synthesis and refers to Mg-chelatase, but the exact wording 'chlorophyll branch' or 'Mg-chelatase step of chlorophyll branch' is not used."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Specific substrates 'protoporphyrin IX; Mg2+; ATP' are not listed in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly name 'Mg-protoporphyrin IX' as the product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports that ChlI is part of magnesium chelatase and is key/first step in chlorophyll synthesis, but the detailed ATP-dependent Mg2+ insertion reaction is not explicitly described."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "ChlI is directly connected to chlorophyll biosynthesis as a required upstream enzyme/subunit, so this is supported by the Results/background framing used in the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly links ChlI function to chlorophyll biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Tetrapyrrole biosynthesis pathway is mentioned, but the specific label 'tetrapyrrole pigment' is not explicitly used."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "General chlorophyll roles in light harvesting/chloroplast pigmentation are not explicitly stated in Results, though chloroplast pigment formation is inferable."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The study concerns leaf yellowing and chloroplast-related defects; leaves/chloroplasts are directly supported or strongly inferable."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states ChlI is part of the primary enzyme catalyzing the first step in chlorophyll synthesis, supporting an upstream/committed positioning."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls magnesium chelatase 'the key enzyme in chlorophyll biosynthesis' and ChlI 'the key gene involved in chlorophyll synthesis'."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Chloroplast-related function is clear, but explicit subcellular localization of ChlI to chloroplasts is not directly stated."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ChlI mRNA was assayed in leaves of infected/transgenic plants and in protoplasts, matching this description."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Downregulation of ChlI is shown to cause yellow mosaic/vein yellowing and impaired chlorophyll biosynthesis, including recapitulation by VIGS."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are used in the paper to validate ChlI targeting/effect."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "CaMV 35S promoter for the Y-sat IR transgene is explicit, but calling it an applied promoter for ChlI itself is indirect; the GFP sensor vector promoter is not specified in the provided text."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "CMV infection with or without Y-sat, Y-sat dsRNA transfection, and growth conditions are all explicitly described."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states that ChlI, ChlH, and ChlD are the three required subunits of tobacco magnesium chelatase."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Microarray, small RNA deep sequencing on Illumina Genome Analyzer, and proteomics/LC-MS/MS are all reported, without accession numbers."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Yellowing and chloroplast dysfunction due to impaired chlorophyll biosynthesis are directly supported by the observed phenotype and omics analyses."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is an interpretive application beyond what the paper directly claims."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These five points accurately summarize the paper's direct evidence for ChlI targeting, downregulation, phenocopy by VIGS, cleavage mapping/sensor validation, and host retargeting via Y-sat mutants."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls ChlI the key gene in chlorophyll synthesis and reports that Arabidopsis ChlI1, but not ChlI2, supported yellowing when matched by mutant Y-sat, consistent with cited lower ChlI2 functionality/expression."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "6.6.1.1",
+          "new_value": "NA",
+          "reason": "No EC number appears anywhere in the paper."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "Protoporphyrin IX; Mg2+; ATP",
+          "new_value": "NA",
+          "reason": "Specific substrates 'protoporphyrin IX; Mg2+; ATP' are not listed in the paper."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "Mg-protoporphyrin IX",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly name 'Mg-protoporphyrin IX' as the product."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 3,
+        "uncertain": 10
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 55,
+    "supported": 37,
+    "unsupported": 3,
+    "uncertain": 15,
+    "total_corrections": 3
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "file": "MinerU_markdown_PMC7868980_2038794636016787466",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC7868980_2038794636016787466.md",
+  "timestamp": "2026-03-31T22:30:46.789323",
+  "genes": [
+    {
+      "gene_name": "OsOPR7",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental procedures explicitly give OsOPR7 as 'GenBank Accession no AP004707.4'."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies rice and repeatedly names the species as rice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Title and methods explicitly state 'Oryza sativa' / 'Oryza sativa L.'."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state seeds of 'Oryza sativa L. cv. Zhonghua11 (ZH11)' were used."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The edited plants and phenotyping were all done in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is explicitly Oryza sativa in the title and methods."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Transgenic and control plants were in cv. Zhonghua11 (ZH11)."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper uses the gene symbol OsOPR7 and describes OPR as oxophytodienoic acid reductase; however the exact full enzyme name '12-oxophytodienoate reductase 7' is not written verbatim in the paper text provided."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly identifies OsOPR7 as one of the OPR orthologous genes; OPR corresponds to 12-oxophytodienoic acid reductase family. 'Old yellow enzyme family' is not stated, but the OPR family assignment is explicit."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract and Discussion state OsOPR7/OPR3 functions in the jasmonate (JA) biosynthesis pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links OsOPR7 to JA biosynthesis but does not explicitly describe the 'OPDA reduction step' in Results or methods text."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper never classifies the step as 'midstream' or uses equivalent pathway-position terminology."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No explicit mention of '12-oxophytodienoic acid (OPDA)' as the substrate appears in the provided paper text."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specify the direct enzymatic product of OsOPR7 or describe a 'JA precursor downstream of OPDA reduction'."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is reasonable from cited OPR biology that OsOPR7 reduces an oxophytodienoic acid in JA biosynthesis, but the exact reaction description is not stated directly in this paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states OsOPR7 plays an essential role in the JA biosynthesis pathway and that loss of function can be rescued by exogenous MeJA, supporting connection to jasmonate production."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The study supports OsOPR7 as essential for JA-related fertility phenotype, but does not test or state rate-limiting status. The wording itself notes it is not explicitly established as rate-limiting."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Discussion show loss of OsOPR7 causes indehiscent anthers, reduced pollen viability, 0% seed set without MeJA in T2 examples, and partial fertility restoration by MeJA (17.9% and 20.4% seed set in treated T2 plants)."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "MeJA rescue and JA-pathway involvement are explicit, but the paper does not directly measure jasmonic acid or define a 'methyl jasmonate-responsive jasmonate pool'."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The classification 'Oxylipin phytohormone' does not appear in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly links jasmonate/MeJA to anther dehiscence, pollen viability, fertility restoration, and use of male-sterile lines for hybrid seed production."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Anthers/floral organs are where phenotypes and expression were assessed, but metabolite accumulation itself was not measured in any tissue."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state 'The expression of OsOPR7 gene in the anthers of ZH11 was 2^5.6-fold that in the eight T1 Os2#09 family plants'."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression was measured in anthers and strongly reduced in T1 osopr7 family plants relative to WT."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed approaches are described in the paper: CRISPR/Cas9 editing of exons 2 and 4, sequencing/genotyping, RT-qPCR, KI-I2 pollen staining, floral/anther observation, MeJA rescue, and agronomic/seed-setting measurements."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state mpCas9 was driven by the Ubi promoter and sgRNA by the rU6 promoter."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify spraying osopr7 panicles with 500 µM MeJA, three times daily for 15 days; plants were grown under normal paddy field conditions."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports untreated mutants had 0% seed set, treated T2 plants had 17.9% and 20.4% seed set, spraying requires manpower, and Discussion notes possible floral side effects of MeJA from prior Brassica studies and need for optimization."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are in the paper: OsOPR7 is orthologous to Arabidopsis OPR3, exon 2 editing produced more allelic variants than exon 4, and Discussion states sterility is stable and not dependent on light or temperature."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately reflects the Results/Discussion: OsOPR7 was the manipulated gene, knockout caused male sterility with indehiscent anthers and reduced pollen viability, and exogenous MeJA partially restored fertility for a proposed two-line system."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly proposes osopr7 as a phytohormone-genic male-sterile line for a two-line hybrid rice system and states optimization of spray timing/frequency/concentration is needed."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Metabolic_Step_Position",
+          "old_value": "Midstream",
+          "new_value": "NA",
+          "reason": "The paper never classifies the step as 'midstream' or uses equivalent pathway-position terminology."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "12-oxophytodienoic acid (OPDA)",
+          "new_value": "NA",
+          "reason": "No explicit mention of '12-oxophytodienoic acid (OPDA)' as the substrate appears in the provided paper text."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "JA precursor downstream of OPDA reduction",
+          "new_value": "NA",
+          "reason": "The paper does not specify the direct enzymatic product of OsOPR7 or describe a 'JA precursor downstream of OPDA reduction'."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "Oxylipin phytohormone",
+          "new_value": "NA",
+          "reason": "The classification 'Oxylipin phytohormone' does not appear in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 4,
+        "uncertain": 6
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 31,
+    "supported": 21,
+    "unsupported": 4,
+    "uncertain": 6,
+    "total_corrections": 4
+  }
+}

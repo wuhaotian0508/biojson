@@ -1,0 +1,285 @@
+{
+  "file": "MinerU_markdown_PMC5634785_2038798538355286032",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC5634785_2038798538355286032.md",
+  "timestamp": "2026-03-31T22:15:08.621859",
+  "genes": [
+    {
+      "gene_name": "OsSAMS1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies OsSAMS1 as a member of the SAMS family and describes SAMS as S-adenosyl-L-methionine synthetase; thus OsSAMS1 as S-adenosyl-L-methionine synthetase 1 is supported."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given anywhere in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "OsSAMS1 is explicitly described as 'a key component of the ethylene synthesis pathway.'"
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows OsSAMS1 produces SAM and that SAM, ACC, and ethylene levels change accordingly, placing it upstream of ACC and ethylene formation from methionine/SAM supply. This wording is inferable though not stated verbatim."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "OsSAMS1 is shown to act before ACC and ethylene accumulation; therefore 'Upstream' is directly inferable."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2E and text state that SAMS catalyzes production of SAM, pyrophosphate (PPi), and orthophosphate (Pi) from ATP and L-Met."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states the reaction uses ATP and L-Met."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states OsSAMS1 catalyzes SAM synthesis and measures SAM as product."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "OsSAMS1 is shown to increase SAM, which leads to increased ACC and ethylene; thus it supplies the precursor pool for the terminal product."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The study directly links OsSAMS1 activity/expression to ethylene levels."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Ethylene is a plant hormone, consistent with the paper's framing of phytohormone pathways."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "SAM, ACC, and ethylene were quantified from rice leaf tissues/leaves, supporting leaves as the measured site."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract and Results state ethylene plays roles in development and biotic stress responses, and in this study promotes susceptibility to RDV infection."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show OsSAMS1 overexpression increases SAM, ACC, ethylene and RDV susceptibility, while RNAi/KO lowers metabolites and increases tolerance."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly used: overexpression, RNAi, CRISPR/Cas9 knockout, SAM/ACC/ethylene quantification, in vitro enzyme assay, and RDV infection assays."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper calls SAMS 'a key component of the ethylene synthesis pathway,' but does not explicitly call OsSAMS1 rate-limiting. The 'key component' part is supported; 'key control step' is only partially justified."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Pns11 is repeatedly shown to specifically interact with OsSAMS1 by Y2H, co-IP, LUC complementation, pull-down, and BiFC."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper concerns rice; Oryza sativa is the Latin name for rice, though this exact binomial is not printed in the main text provided."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Transgenes were introduced into rice cultivar Zhonghua 11."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state constructs used pCam2300:Ubi:OCS for OsSAMS1 and S11, supporting a ubiquitin promoter. 'Constitutive' is implied but not explicitly stated."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper measures tissues at 40-d-old and 42-d-old seedlings and during RDV infection; it also explicitly states OsSAMS1 mRNA and protein were not changed by Pns11 overexpression. 'Leaves' as the sampled tissue is supported for metabolite assays, though the phrase is somewhat compressed."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC showed Pns11 and OsSAMS1 interacted and were co-localized in both nucleus and cytoplasm."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Each clause is supported: Pns11 specifically enhances OsSAMS1 activity, does not change OsSAMS1 transcript/protein level, does not alter substrate affinity to L-Met or ATP, and RNAi/KO lines show developmental defects."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summarized claims are directly supported by Results figures 2–4 and 6."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Suppressed seed germination, dwarfism, and reduced fertility are reported for OsSAMS1 RNAi/KO lines; however 'grain-size change noted in related transgenics' refers to S11 OX, not OsSAMS1, so the combined statement is only partially accurate."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The rice genome is said to encode three members of the predicted SAMS family including OsSAMS1."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq was performed and accession GSE102366 is explicitly provided."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsSAMS1 is a rice gene used from rice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The gene is from rice, but the exact Latin binomial Oryza sativa is not explicitly written in the supplied text."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "OsSAMS1 transgenics were generated in Zhonghua 11 background."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows reducing OsSAMS1 improves RDV tolerance but strong loss of function causes developmental defects. However the recommendation about 'partial modulation or pathway-specific engineering' is not in the paper and is speculative."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "OsSAMS1-related findings are examined under RDV infection, and ethylene pathway perturbation with ACC and AVG is part of the study context."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.5.1.6",
+          "new_value": "NA",
+          "reason": "No EC number is given anywhere in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "OsEIN2",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes MHZ7/OsEIN2 as a central component of the rice ethylene signaling pathway, supporting its role as an ethylene signaling regulator."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Because OsEIN2 overexpression increases susceptibility and the osein2 mutant is ethylene-insensitive, positive signaling transduction in the ethylene response pathway is supported."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states OsEIN2 plays a key role in the rice ethylene signaling pathway."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not identify direct targets of OsEIN2. It uses OsERF3 as an ethylene-response marker in chemical treatment experiments, not specifically as a demonstrated OsEIN2 target in the genetic analyses."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports that OsEIN2 promotes ethylene signaling and susceptibility-associated responses, but does not directly show OsEIN2 regulating specific downstream gene expression in these lines."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "OsEIN2 is presented as a central ethylene signaling component required for ethylene-promoted susceptibility to RDV, but it is not shown to decisively influence ethylene production itself. The wording mixes signaling with product control."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The study links OsEIN2 to ethylene signaling, with ethylene as the relevant terminal metabolite/hormone in the pathway."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Ethylene is a plant hormone."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Ethylene was measured from leaf tissues in chemical and OsSAMS1-related assays, but no OsEIN2-specific metabolite accumulation site is shown. This field is only indirectly related."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states ethylene regulates development and stress responses and that active ethylene signaling enhances virus susceptibility."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 5 shows OsEIN2 overexpression enhances susceptibility to RDV, whereas osein2 shows increased tolerance."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are supported: mutant and overexpression analyses, infection assay, northern and western blots, and OsSAMS1 overexpression in osein2 background."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The Latin name Oryza sativa is not explicitly written in the provided text."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states rice cultivar Zhonghua 11 was used broadly, but for OsEIN2 it specifically mentions osein2 mutant and OsEIN2 OX lines without explicitly restating Zhonghua 11 in this section. The combined value 'Zhonghua 11; osein2 mutant background' is not explicitly given as written."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsEIN2 is a rice gene studied in rice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact Latin binomial Oryza sativa is not explicitly stated in the supplied text."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The lines were analyzed during RDV infection, but there is no direct expression-pattern analysis of OsEIN2 itself reported in the text."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says MHZ7/OsEIN2 encodes a membrane protein homologous to EIN2, supporting membrane localization broadly, but not the exact phrase 'cell membrane'."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "OsEIN2 is explicitly part of the ethylene signaling pathway and osein2 is insensitive to ethylene, so ethylene is an upstream input."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "OsEIN2 phenotypes were tested under RDV infection."
+        },
+        "Omics_Data": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper includes RNA-seq dataset GSE102366, but no OsEIN2-specific omics result is described. Still, the study-level omics dataset exists. Association to this gene is indirect."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summarized points are supported by Figure 5 and Figure 5 supplement 2: OsEIN2 signaling enhances susceptibility, osein2 lowers accumulation/infection, and OsSAMS1 overexpression in osein2 does not restore WT susceptibility."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Possible developmental effects of ethylene insensitivity are biologically plausible, but the paper does not quantify such tradeoffs for osein2 in this study."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states MHZ7/OsEIN2 encodes a membrane protein homologous to EIN2."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Improved RDV tolerance by weakening ethylene signaling is inferable from the data, but the application statement and warning about developmental effects are not directly presented in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states 'The rice MHZ7 gene (named OsEIN2)' and identifies it as a central ethylene signaling component."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 15,
+        "unsupported": 0,
+        "uncertain": 12
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 60,
+    "supported": 42,
+    "unsupported": 1,
+    "uncertain": 17,
+    "total_corrections": 1
+  }
+}

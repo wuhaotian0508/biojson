@@ -1,0 +1,226 @@
+{
+  "file": "MinerU_markdown_PMC8942933_2038794276388765706",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC8942933_2038794276388765706.md",
+  "timestamp": "2026-03-31T17:27:50.459955",
+  "genes": [
+    {
+      "gene_name": "DHR2 (dhurrinase2)",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies sorghum and states SbEMS932 dhr2-1 is in the Tx623 genetic background of sorghum."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract identifies sorghum as Sorghum bicolor (L.) Moench."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and methods state SbEMS932 dhr2-1 was developed in the Tx623 genetic background."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Calibration experiments used sorghum genotypes including SbEMS932 dhr2-1."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper's study species is Sorghum bicolor."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "SbEMS932 dhr2-1 is explicitly described as being in the Tx623 background."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links dhurrinase2 mutation to HCN release capacity, and FA assay/Discussion concern HCN release as defense output."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Dhurrin is a cyanogenic glucoside, but the exact phrase 'cyanogenic glucoside defense output' is not used."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses HCN release/dhurrin metabolism as defense against chewing insect herbivory and cites prior work for dhurrinase2-related susceptibility."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "SbEMS932 dhr2-1 is only used in calibration experiments here, while the main NIL target is cyp79a1; Discussion states reduced HCN release due to dhurrinase2 mutation is associated with greater susceptibility from prior work."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point matches the paper: dhr2-1 was included in calibration; prior work is cited for susceptibility; and dhr2-1 was not the main NIL target in greenhouse/field results."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "Calibration comparisons are directly supported, but 'Feigl-Anger context from prior work' is not how the paper validated dhr2-1 in Results; no direct FA assay result is shown for dhr2-1."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper calls DHR2 the 'dhurrinase2 enzyme' but does not specify glycoside hydrolase, beta-glucosidase, or a protein domain."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "SbEMS932 dhr2-1 was used in calibration studies with FAW infestation in greenhouse/enclosure experiments."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable interpretation, but the paper does not directly test deployment or breeding application of DHR2 specifically."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Seedling leaves were sampled for dhurrin/HCN in the study, but this field refers to DHR2-related terminal metabolite accumulation and is not explicitly stated for dhr2-1."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the paper's use of dhr2-1 as a contextual/calibration gene affecting defense output rather than the main mechanistic target in the principal NIL experiments."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 12,
+        "unsupported": 0,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "CYP79A1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The gene CYP79A1 is explicit, but the exact enzyme name 'Tyrosine N-monooxygenase' is not stated in the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene studied is in sorghum."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies sorghum as Sorghum bicolor (L.) Moench."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "SbEMS2447 cyp79a1 is explicitly described as a mutant developed in the Tx623 background."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied/tested species in greenhouse and field experiments is sorghum."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study species is Sorghum bicolor."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly tests Tx623, Tx623 bmr6, and Tx623 bmr6 cyp79a1 NILs; SbEMS2447 cyp79a1 was also used in calibration."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract and Discussion state CYP79A1 disruption affects dhurrin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states CYP79A1 product formation leads toward dhurrin, supporting its role in cyanogenic glucoside biosynthesis; 'committed entry step' is directly implied by being the first dedicated product-forming step toward dhurrin."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion identifies CYP79A1 as producing the oxime intermediate toward dhurrin, supporting an upstream/committed role."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion describes CYP79A1 acting on tyrosine and forming N,N-dihydroxytyrosine intermediate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly names the final CYP79A1 product as (E)-p-hydroxyphenylacetaldoxime."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This description closely matches the Discussion text about two N-hydroxylations, unstable N,N-dihydroxytyrosine, dehydration/decarboxylation, and formation of (E)-p-hydroxyphenylacetaldoxime."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly states cyp79a1 disrupts dhurrin biosynthesis and describes dhurrin-free plants."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract defines dhurrin as a cyanogenic glucoside."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Conclusions support defense against chewing insects via dhurrin/HCN; nitrogen economy and drought responses are mentioned in Discussion as additional implicated roles."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Dhurrin content was measured from the top collared leaf of seedlings at the 3-leaf stage, supporting seedling leaves as the analyzed accumulation site."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows CYP79A1 is required for dhurrin production; cyp79a1 mutants are dhurrin-free."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show Tx623 bmr6 cyp79a1 had no HCN release, higher GPA/dry weight when non-infested, and greater susceptibility/preference under FAW infestation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All five summarized findings are directly supported by Materials/Results/Discussion, including C493Y mutation, dhurrin-free/HCN-free phenotype, growth advantage without infestation, increased susceptibility with infestation, field confirmation, and growth-defense tradeoff."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are used in the paper: mutant/NIL comparison, FA assay, UHPLC dhurrin quantification, greenhouse and field trials, imaging, dry weight, and leaf area phenotyping."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP79A1 is explicitly a cytochrome P450 enzyme by nomenclature, and the paper discusses it as the CYP79A1 enzyme."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper analyzes seedling stages at 3- to 4-leaf stage, but does not report gene expression pattern."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses native mutant alleles/NILs and no transgenic promoter is described."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly tests FAW infestation in greenhouse and field at seedling stages."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports CYP79A1 as a key committed enzyme required for dhurrin production, though it does not directly measure rate limitation."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show improved growth but reduced insect resistance; Discussion mentions possible broader effects on nitrogen-use efficiency and drought tolerance."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability states growth/development datasets were deposited in PURR, and no transcriptomics or other omics are reported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion/Conclusions suggest manipulating dhurrin metabolism could optimize productivity where insect pressure is controlled, with caveats about herbivory risk and other functions."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly distinguishes the cyp79a1 C493Y allele from tcd1/P414L and suggests different structural/phenotypic consequences."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 28,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 47,
+    "supported": 40,
+    "unsupported": 0,
+    "uncertain": 7,
+    "total_corrections": 0
+  }
+}

@@ -1,0 +1,595 @@
+{
+  "file": "MinerU_markdown_Plant_Cell_2011_Gou_2038801999281033220",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_Plant_Cell_2011_Gou_2038801999281033220.md",
+  "timestamp": "2026-03-31T22:43:29.881518",
+  "genes": [
+    {
+      "gene_name": "DFR",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Accession Numbers section lists DFR as At5g42800."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "DFR is referred to throughout as dihydroflavonol 4-reductase in the pathway context."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for DFR appears in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Introduction place DFR in the flavonoid pathway, specifically anthocyanin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "DFR is explicitly discussed as an anthocyanin biosynthetic gene."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states anthocyanins and flavonols share dihydroflavonol precursors, substrates for both FLS and DFR, implying a competing branch point downstream step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states metabolic flux is controlled by substrate competition between FLS and DFR, directing flux toward anthocyanins."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states dihydroflavonols are substrates for DFR and specifically discusses dihydrokaempferol being directed into the anthocyanin branch."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "DFR enzymatic product leucoanthocyanidins is standard biochemistry but is not explicitly stated in the paper text."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports DFR acting on dihydroflavonols and affecting anthocyanin flux, but does not explicitly describe the reduction to leucoanthocyanidins."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "Paper supports DFR as a key branch-control point in flux competition, but does not explicitly call it rate-limiting."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper specifies Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments on DFR expression/regulation were performed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the applied species for the core results."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Some materials are Col-0, but the paper also uses Ws for spl3-1; DFR-focused reporter and transgenic analyses are not uniformly restricted to Col-0 in the text."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "As above, the study uses multiple Arabidopsis backgrounds, so assigning only Col-0 is not cleanly supported for all DFR-related data."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "DFR expression is tied to anthocyanin accumulation in Results."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanin is a flavonoid and the paper frames the work within flavonoid biosynthesis."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanin accumulation is described at the stem-rosette junction, hypocotyl-cotyledon junction, and in inflorescence internodes of Pro35S:MIR156."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pigmentation is supported, but defense-related function is only speculative in Discussion ('one hypothesis')."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show DFR transcript rises strongly in Pro35S:MIR156, falls in Pro35S:MIM156, matching higher anthocyanin and opposite flavonol trends."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 4A shows DFR highest in basal stem and lowest in apical stem."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 4B shows strongest ProDFR:GUS activity at stem-rosette junction, enhanced in Pro35S:MIR156 and reduced in Pro35S:MIM156."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Plants were grown in long days, and DEX plus CHX treatment of ProSPL9:rSPL9-GR was used to test direct regulation of DFR."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all used in the paper for DFR: qRT-PCR, ProDFR:GUS, inducible rSPL9-GR with CHX, and ChIP-qPCR."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "SPL9, PAP1, TT8, and TTG1 are involved in DFR regulation, but the paper does not show DFR protein physically interacting with these proteins; they regulate its promoter/expression."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "DFR family/domain classification as short-chain dehydrogenase/reductase is not given in the paper."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "LC-MS flavonol profiling is reported, and no public accession is provided."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly describes antagonistic accumulation of flavonols and anthocyanins linked to DFR/FLS competition."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Paper mentions a potential target for manipulation of anthocyanin and flavonol content, but this is framed for SPLs/miR156 generally, not specifically DFR as an engineering node."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each component is supported: strong DFR induction/repression in MIR156/MIM156, inverse pattern with SPL9/SPL15, promoter activity matching anthocyanin pattern and SPL9 repression, and branch-control role via flux competition discussed in paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 5 shows SPL9 recruitment to DFR promoter and lack of effect of GTAC-box mutation on reporter pattern, supporting indirect recruitment."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.1.1.219",
+          "new_value": "NA",
+          "reason": "No EC number for DFR appears in the paper."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "Short-chain dehydrogenase/reductase family enzyme",
+          "new_value": "NA",
+          "reason": "DFR family/domain classification as short-chain dehydrogenase/reductase is not given in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 2,
+        "uncertain": 8
+      }
+    },
+    {
+      "gene_name": "FLS1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Accession Numbers section lists FLS1 as At5g208640 (matching the JSON value At5g08640 appears incorrect and does not match the paper)."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "FLS1 is discussed as a flavonol synthase-encoding gene, specifically flavonol synthase 1."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for FLS1 appears in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "FLS1 is discussed in the flavonoid pathway on the flavonol side."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "FLS1 is explicitly linked to flavonol biosynthesis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states dihydroflavonols are substrates for both flavonol synthase and DFR, indicating a competing branch step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports FLS/DFR substrate competition, so FLS1 competes with the anthocyanin branch."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Dihydroflavonols are stated to be substrates for flavonol synthase; discussion specifically mentions dihydrokaempferol conversion to kaempferol by FLS."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states conversion of dihydrokaempferol to kaempferol by FLS; flavonols including kaempferol derivatives were measured."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by the text describing FLS converting dihydrokaempferol to kaempferol and competing with DFR for common substrates."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports FLS as an important competing branch enzyme and shows FLS1 expression is not greatly changed by SPL manipulation."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the species studied."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is specified."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "FLS1 expression and flavonol accumulation were analyzed in Arabidopsis stems."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the applied species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Core transgenic lines are likely Col-0-derived, but the paper uses more than one background overall and does not explicitly tie every FLS1 result to Col-0 in the Results text."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Same reason as applied variety; not explicitly specified for all FLS1-related analyses."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Measured flavonols in stems are kaempferol derivatives, connected to FLS activity in the paper."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Kaempferol derivatives are flavonoids/flavonols in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Flavonol LC-MS analyses were performed on stem extracts."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper identifies them as flavonol secondary metabolites, though no specific biological function is elaborated."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show FLS1 transcript levels were not greatly changed, while flavonol accumulation increased when SPL activity was high and anthocyanin genes were repressed."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 3A shows FLS1 not greatly changed in Pro35S:MIM156 or Pro35S:MIR156; Figure 5B says FLS1 was not affected by DEX-induced SPL9 activation."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Long-day growth and DEX inducible assay are described."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR, inducible assay, and LC-MS profiling were used."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state that FLS1 is a 2-oxoglutarate/Fe(II)-dependent oxygenase."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "LC-MS flavonol profiling is present and no public accession is given."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Antagonistic relationship between flavonol and anthocyanin accumulation is explicitly described."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Engineering relevance is inferable from flux competition, but not explicitly proposed for FLS1 in the paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states FLS1 is the most important of six FLS genes, its transcript level is largely unchanged, and flux shifts are primarily explained by repression of anthocyanin genes rather than direct FLS1 activation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly emphasizes substrate competition between FLS and DFR as basis for altered flux."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.20.6",
+          "new_value": "NA",
+          "reason": "No EC number for FLS1 appears in the paper."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "2-oxoglutarate/Fe(II)-dependent oxygenase",
+          "new_value": "NA",
+          "reason": "The paper does not state that FLS1 is a 2-oxoglutarate/Fe(II)-dependent oxygenase."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "SPL9",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Accession Numbers section lists SPL9 as At2g42200."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "SPL9 is described as an SPL transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies SPL9 as a SQUAMOSA PROMOTER BINDING PROTEIN-LIKE factor; SPL proteins are discussed in relation to GTAC binding motifs, consistent with SBP DNA-binding domain family."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the study organism."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is specified."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SPL9 functional tests were done in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the applied species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Many SPL9 analyses are in Col-0-derived transgenics, but not every result explicitly states the accession in Results."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "As above, not uniformly explicit for all SPL9 experiments."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SPL9 is linked to anthocyanin accumulation and flavonols, primarily kaempferol derivatives."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Both anthocyanins and flavonols are flavonoids in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanin sites described include stem base, hypocotyl-cotyledon junction, and inflorescence internodes; flavonols were measured in stems."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pigmentation and developmental link are supported; 'likely defense' is only speculative in Discussion."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper concludes SPL9 negatively regulates anthocyanin biosynthetic gene expression through destabilization of a MYB-bHLH-WD40 activation complex."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show DFR, ANS, F3' H (printed as F39H), and UGT75C1 change oppositely with SPL activity; SPL9 repression of anthocyanin genes is central conclusion."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly frames SPL regulation as controlling metabolic flux/branch allocation in flavonoid biosynthesis."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "DFR is directly analyzed as a target; ANS, F3'H, and UGT75C1 are repressed in expression analyses; SPL9 also interferes with PAP1-containing MYB-bHLH-WD40 complex."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper shows SPL9 acts as a major negative regulator of anthocyanin accumulation linked to developmental transition/flowering."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly says impact on MYB12 and MYB111 is likely indirect through a feedback loop, not established."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast two-hybrid, luciferase complementation, and competition assay support SPL9 interference with PAP1-TT8-TTG1 MYB-bHLH-WD40 complex by binding PAP1 and competing with TT8."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct interactions with PAP1, MYB113, and TT8 competition via PAP1 are shown."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "miR156 targets SPL genes, and Discussion/Results connect SPL levels to developmental age and floral transition."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 4A shows SPL9 higher in apical than basal stem, opposite DFR."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Increased SPL activity in Pro35S:MIM156 and rSPL9 overexpression lines is associated with reduced anthocyanin accumulation."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Long-day growth and DEX treatment of ProSPL9:rSPL9-GR seedlings are described."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly state nuclear localization for SPL9."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods were used for SPL9: overexpression/genetics, inducible GR assay with CHX, ChIP-qPCR, yeast two-hybrid, luciferase complementation/BiFC, coIP, and transient competition assay."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "LC-MS flavonol profiling is part of the study; no public accession is reported."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper supports anthocyanin/flavonol tradeoff and states SPLs also regulate phase change and flowering, implying pleiotropic developmental consequences."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract states results reveal a potential target for manipulation of anthocyanin and flavonol content in plants; SPL9 is the mechanistic target studied."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show SPL9 decreases anthocyanin accumulation and shifts relative accumulation toward flavonols by repressing anthocyanin pathway genes."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four summary statements are directly supported by Results and Discussion synthesis grounded in data."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 5E supports that GTAC mutation does not alter reporter activity, implying indirect recruitment of SPL9 to DFR promoter."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly state nuclear localization for SPL9."
+        }
+      ],
+      "stats": {
+        "supported": 29,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "miR156",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "miR156 is explicitly a microRNA throughout the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is identified as miR156, a miRNA family; no protein domain applies."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the species used for core experiments."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is specified."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "miR156 transgenic effects were tested in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the applied species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper uses multiple backgrounds overall; Pro35S:MIR156 and MIM156 are likely Col-0 derived but this is not explicitly reiterated for each result."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Same issue as above."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "miR156 activity is linked to anthocyanin and flavonol/kaempferol derivative accumulation in Results."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanins and flavonols are flavonoids."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Anthocyanin changes were observed in stems and hypocotyl-cotyledon junction; flavonols were measured in stems."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Pigmentation and secondary metabolism are directly supported; wording stays general enough."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states miR156 targets SPL genes, implying post-transcriptional repression."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "By reducing SPL activity, miR156 is shown to increase expression of anthocyanin genes such as DFR, ANS, F3'H, and UGT75C1."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Discussion support control of flavonoid flux partitioning between anthocyanin and flavonol branches."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states Arabidopsis has 11 SPL genes targeted by miR156; experiments specifically implicate SPL9/SPL10/SPL15-type SPLs."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Increased miR156 activity promotes anthocyanin accumulation by repressing negative SPL regulators."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states miR156 levels decline as plants progress during development toward flowering."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses developmental decline of miR156, but does not directly measure or state that miR156 is high in basal stem regions; that is inferred indirectly from SPL patterns."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results clearly show Pro35S:MIR156 increases anthocyanins and lowers flavonols, whereas Pro35S:MIM156 has opposite effects."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Plants were grown in long days."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These approaches were used: transgenic MIR156 and MIM156, anthocyanin quantification, LC-MS, and qRT-PCR."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "LC-MS flavonol profiling is included and no public accession is reported."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states miR156/SPLs regulate developmental timing, flowering, and other traits, so pleiotropic effects are supported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Manipulation value is broadly supported for miR156/SPL module, but the claim that direct SPL targeting may be more precise than miR156 is not stated in the paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1 and Figure 2 show increased miR156 promotes anthocyanins and reduces flavonols, with opposite effects for reduced miR156 activity."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "About fourfold higher stem anthocyanin in Pro35S:MIR156, lowered anthocyanin/increased kaempferol derivatives in Pro35S:MIM156, and upstream action via SPLs are all supported."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Mechanistic focus of the paper is indeed on SPL9 as downstream effector, with miR156 establishing SPL dosage."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 24,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 125,
+    "supported": 102,
+    "unsupported": 5,
+    "uncertain": 18,
+    "total_corrections": 5
+  }
+}

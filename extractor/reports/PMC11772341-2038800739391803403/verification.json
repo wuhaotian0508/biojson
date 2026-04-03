@@ -1,0 +1,131 @@
+{
+  "file": "MinerU_markdown_PMC11772341_2038800739391803403",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC11772341_2038800739391803403.md",
+  "timestamp": "2026-03-31T21:38:40.181499",
+  "genes": [
+    {
+      "gene_name": "OsRbohB",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and methods explicitly states 'OsRbohB (Gene ID: Os09g0438000, Accession: AK120739)'."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is in rice and WT is Nipponbare rice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Keywords and plant materials identify rice as 'Oryza sativa L.' and 'Oryza sativa subsp. japonica cv Nipponbare'."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Plant materials states Nipponbare was used as WT and transformation background."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All experiments were performed in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies the species as Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Transgenic and knockout lines were generated in japonica cultivar Nipponbare."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "O2− and H2O2 were directly measured and are ROS, but calling them a 'terminal metabolite' is not the paper's framing and ROS are not a nutrient end product."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Reactive oxygen species are central measured products, but this is not a nutrient/metabolite endpoint category used by the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly report ROS measurements in seeds, seedlings/leaves (Figure S4), anthers (Figure 3), and grains (Figure 4)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Summary states NADPH oxidases (Rbohs) are major ROS producers and OsRbohB is the NADPH oxidase gene; respiratory burst oxidase homolog is the standard meaning of Rboh."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No plasma membrane localization experiment or explicit localization statement for OsRbohB appears in the provided paper text."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says prior work showed OsRbohB was the highest expressed among nine OsRboh genes under heat stress, and this study measured OsRbohB expression in transgenic lines plus heat-shock-related genes in seedlings/grains. But direct measurement of OsRbohB expression in seedlings and grains under long-term heat stress is not clearly shown in Results here; part of the statement relies on previous studies/discussion."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Summary consistently show OsRbohB knockout reduced ROS and improved heat tolerance, yield components, grain quality, and starch/amylose/amylopectin content under heat stress, while overexpression generally caused opposite effects."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point is supported by Results: reduced O2−/H2O2 in seeds/seedlings/anthers/grains; improved injury/tolerance traits and antioxidant activities; improved grain filling, starch traits, quality and yield; and increased expression of OsHSP23.7, OsHSP17.7, OsHSF7 and OsHsfA2a under prolonged heat stress."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are explicitly described: CRISPR/Cas9 knockout, overexpression under ubiquitin promoter, Southern blot for OE copy number, qRT-PCR, ROS measurements, enzyme assays, and phenotyping under multiple heat-stress regimes."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Heat treatments are explicitly defined as 40°C germination, 40/43°C seedling daytime heat stress, and 38°C daytime reproductive-stage heat stress in specified heading windows."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "OsHSP23.7, OsHSP17.7, OsHSF7 and OsHsfA2a were measured as heat shock-related gene expression markers, but the paper does not demonstrate physical or direct protein interaction with OsRbohB."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state OsRbohB-KO inhibited seed germination under unstressed conditions and produced slightly shorter plants than WT."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly say the OsRbohB gene was under the control of the ubiquitin promoter in overexpression constructs."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly states ROS act in stress responses but overaccumulation causes oxidative damage, membrane injury, impaired growth/floral development, reduced starch synthesis, and yield/quality loss under heat stress."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "The descriptive claim that the study focuses on ROS/heat-stress physiology and that authors propose genome editing or chemical inhibition is supported. However, the explicit classification 'Common Gene rather than Pathway Gene' is external schema language not from the paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly presents OsRbohB as a valuable target for breeding heat-tolerant rice through genome editing/targeted mutations and also proposes chemical inhibitor development."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Plasma membrane",
+          "new_value": "NA",
+          "reason": "No plasma membrane localization experiment or explicit localization statement for OsRbohB appears in the provided paper text."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "OsHSP23.7; OsHSP17.7; OsHSF7; OsHsfA2a (expression-associated downstream heat shock-related genes)",
+          "new_value": "NA",
+          "reason": "OsHSP23.7, OsHSP17.7, OsHSF7 and OsHsfA2a were measured as heat shock-related gene expression markers, but the paper does not demonstrate physical or direct protein interaction with OsRbohB."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 23,
+    "supported": 17,
+    "unsupported": 2,
+    "uncertain": 4,
+    "total_corrections": 2
+  }
+}

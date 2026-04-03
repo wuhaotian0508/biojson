@@ -1,0 +1,650 @@
+{
+  "file": "MinerU_markdown_PMC12039476_2038800476509601793",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12039476_2038800476509601793.md",
+  "timestamp": "2026-03-31T21:45:50.971272",
+  "genes": [
+    {
+      "gene_name": "PEN3",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PEN3 is studied in Arabidopsis lines in this paper, including pPEN3:PEN3-GFP and pen3-1 mutants."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses Arabidopsis thaliana (ecotype Col-0) as the species background for PEN3 analyses."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All PEN3 experiments were performed in Arabidopsis plants."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species throughout the study is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The wild-type used is Columbia/Col-0, and PEN3 reporter/mutant analyses are in this background."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "PEN3 materials referenced are Arabidopsis Col-0-based lines."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly describe PEN3 here as a pleiotropic drug resistance-type ABC transporter, even though that is known from prior literature."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show focal accumulation of PEN3-GFP at Bgh penetration sites; PEN3 as cargo to polar domains/sites of attempted invasion is directly discussed. Plasma membrane localization is implied by prior marker identity but not directly re-demonstrated here; overall statement is consistent with the paper's wording on focal accumulation at host–pathogen contact sites."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "PEN3 is not itself linked as a gene controlling a terminal nutrient/metabolite product in this study; GIPCs are produced by IPCS2, not PEN3."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "For PEN3, assigning sphingolipid terminal metabolite is not supported; PEN3 is a trafficking cargo/readout, not a metabolite-producing gene in this paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper proposes that IPCS2-derived GIPCs facilitate polarized secretion of defense cargo such as PEN3 to block fungal ingress, but this function is attributed to GIPCs/IPCS2 rather than established as a PEN3-specific terminal metabolite function."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Host-pathogen contact sites/polar domains are where PEN3 accumulates, but the paper does not directly show GIPCs accumulating there."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 4 shows PEN3-GFP focal accumulation intensity is reduced in the ipcs2W205* background, connecting IPCS2/GIPC synthesis with PEN3 delivery."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper used genetic crosses with pPEN3:PEN3-GFP, confocal microscopy, time-course and fluorescence quantification, and double-mutant infection assays involving pen3."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Genetic/pathway relationship with IPCS2 and PEN2 is supported, and PEN3 was reported as SYP61-SV cargo based on prior proteomics, but direct physical protein-protein interactions are not demonstrated here."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "PEN3 analyses were performed after Bgh infection."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly used the published pPEN3:PEN3-GFP line, i.e. native pPEN3 promoter."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are reflected by the Results: IPCS2 affects PEN3 delivery, frequency/area are not changed but intensity is reduced, and genetics place IPCS2 in the PEN2/PEN3 pathway."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "PEN3 is not the primary mutated gene but is directly tested as a mechanistic readout in the Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "pleiotropic drug resistance-type ABC transporter",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly describe PEN3 here as a pleiotropic drug resistance-type ABC transporter, even though that is known from prior literature."
+        },
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "GIPCs",
+          "new_value": "NA",
+          "reason": "PEN3 is not itself linked as a gene controlling a terminal nutrient/metabolite product in this study; GIPCs are produced by IPCS2, not PEN3."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "sphingolipid",
+          "new_value": "NA",
+          "reason": "For PEN3, assigning sphingolipid terminal metabolite is not supported; PEN3 is a trafficking cargo/readout, not a metabolite-producing gene in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 13,
+        "unsupported": 3,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "IPCS1",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The accession AT3G54020 is listed in the paper's ACCESSION NUMBERS section for IPCS1."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "IPCS1 is an Arabidopsis gene analyzed in Arabidopsis lines."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study species is Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All IPCS1-related assays were performed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The wild type background used is Col-0."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "IPCS1 discussion and assays are in Arabidopsis Col-0 background."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "IPCS1 is explicitly described as an IPCS homolog/isoform involved in IPC synthesis, i.e. IPCS family sphingolipid synthase."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "IPCS1 is discussed as contributing to IPC synthesis and thus to GIPC production, especially as residual synthesis in ipcs2 mutant context."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "GIPCs are explicitly described as complex sphingolipids."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states IPCS1 has weak constitutive expression (0.05% of IPCS2 in rosette leaves) and that IPCS1 transcript levels increase upon Bgh infection and are even more upregulated in ipcs2W205*."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Weak in rosette leaves and pathogen inducible is directly supported by Results and cited expression profile data."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states ipcs1 single knockout shows a wild-type-like Bgh phenotype and suggests IPCS1 may be upregulated to partially complement IPCS2 absence."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Results cite qPCR, ipcs1 single knockout infection assay, and inducible IPCS1;2 amiRNA knockdown assay."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Bgh infection and β-Estradiol induction in the IPCS1;2 amiRNA line are explicitly described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points reflect the Results text and Figure S2 description."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly examines IPCS1 as a homolog likely contributing residual IPC/GIPC synthesis in Results."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 17,
+        "unsupported": 0,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "SYP61",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SYP61-CFP analyses were performed in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species used is Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All SYP61 observations are from Arabidopsis plants."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The marker line pSYP61:SYP61-CFP was analyzed in Col-0 plants."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The SYP61 marker line described is in Arabidopsis Col-0 context."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to 'SYNTAXIN OF PLANTS 61-secretory vesicle (SYP61-SV) subdomain of the TGN', consistent with a syntaxin/SNARE marker of TGN secretory vesicles."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "SYP61 is explicitly associated with the TGN secretory vesicle subdomain."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "SYP61 is a trafficking marker; the paper does not establish SYP61 as producing or directly linked to a terminal metabolite field value of GIPCs."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Assigning sphingolipid terminal metabolite class to SYP61 is not directly supported."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper proposes SYP61-SVs are involved in polar transport of GIPC-enriched cargo from the TGN to polar PM domains."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "SYP61-secretory vesicles and pathogen-induced focal domains are supported for SYP61/cargo localization, but direct GIPC accumulation at these sites is inferred, not shown."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 3B shows focal accumulation of SYP61-CFP at the tip of the Bgh appressorium, supporting its role in delivery route."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "This was tested by confocal microscopy of the pSYP61:SYP61-CFP marker line."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "IPCS2 co-localization with SYP61-SV subdomain is supported from previous work and PEN3 as SYP61-SV cargo is cited from prior proteomics, but direct interactions are not demonstrated here."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "SYP61 behavior was studied upon Bgh infection."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly used the pSYP61:SYP61-CFP line."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary accurately reflects the direct SYP61-CFP accumulation result and the model built from it."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "SYP61 is indeed used as a trafficking marker rather than as the primary mutated gene."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "GIPCs",
+          "new_value": "NA",
+          "reason": "SYP61 is a trafficking marker; the paper does not establish SYP61 as producing or directly linked to a terminal metabolite field value of GIPCs."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "sphingolipid",
+          "new_value": "NA",
+          "reason": "Assigning sphingolipid terminal metabolite class to SYP61 is not directly supported."
+        }
+      ],
+      "stats": {
+        "supported": 15,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "IPCS2",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "AT2G37940 is listed in ACCESSION NUMBERS for IPCS2."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "IPCS2 studied here is from Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study species is Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All IPCS2 experiments were done in Arabidopsis plants, with yeast complementation for enzyme activity."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied plant species is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The wild-type background is Col-0."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The IPCS2 gene analyzed derives from Arabidopsis Col-0 context."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The title and text explicitly name IPCS2 as INOSITOL PHOSPHORYLCERAMIDE SYNTHASE 2."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes IPCS2 as an IPCS and notes conserved catalytic motifs among IPCSs."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "IPCS2 is explicitly involved in biosynthesis of complex sphingolipids/GIPCs."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly discuss IPCS2 in the production of IPC and downstream GIPCs, i.e. the GIPC branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "IPCS2 acts by converting ceramide into IPC, initiating entry from ceramide toward IPC/GIPC synthesis; this is directly described."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states IPCSs catalyze addition of a head group derived from PI to ceramides for production of IPC."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "IPC is explicitly described as the product of IPCS reaction."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This reaction description closely matches the Results text and Figure 2A explanation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly positions IPCS2 as producing IPC, the intermediate required for downstream GIPC synthesis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The study links IPCS2 activity to synthesis of GIPCs."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "GIPCs are explicitly complex sphingolipids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results propose IPCS2-derived GIPCs are required for pathogen entry control by facilitating sorting/secretion of PEN3, and IPCS2 also affects sphingolipid homeostasis."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports production at the TGN and a model of delivery to polar domains, but does not directly measure GIPC accumulation at polar plasma membrane domains or vesicles."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states IPCS2 is the most highly expressed IPCS isoform in all tissues and shows Bgh-induced transcript accumulation in leaves."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Induction in leaves upon Bgh infection is directly shown by qPCR."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states IPCS2 localizes to the TGN/SYP61-SV subdomain and remains at the TGN upon pathogen attack."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The title identifies IPCS2 as 'a new rate-limiting component in Arabidopsis pathogen entry control.'"
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed effects are directly supported in Results: increased ceramide, reduced IPC and Hex-GIPC, reduced PEN3 FA intensity, and enhanced entry of non-adapted powdery mildews."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly used in the study."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Functional/pathway relationships with PEN3 and SYP61 are supported, but direct physical interactions are not shown."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "pUBQ10:IPCS2-mVenus, pPEN3:PEN3-GFP, and pSYP61:SYP61-CFP are all explicitly described as constructs/lines used."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Bgh, E. pisi, and G. orontii infection assays are explicitly reported."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The study includes targeted sphingolipidomics by UPLC-nanoESI-MS/MS and mapping-by-sequencing using Illumina resequencing."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports decreased rosette size/spontaneous lesions in ipcs2W205* and spontaneous cell death upon constitutive overexpression of IPCS2-mVenus."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable inference from the data, but the paper does not explicitly discuss breeding/engineering application value."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The four summary points accurately synthesize the paper's direct Results and title claim."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Each statement is directly supported: pathogen-induced transcript/protein increase (protein in Fig. S3C), TGN retention, physiological disturbance from under/over-accumulation, and unresolved ipcs2-1 mechanism."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 31,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "FAH1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "FAH1 is analyzed in Arabidopsis through the fah1 fah2 double mutant."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathogenicity assay involving fah1 fah2 was done in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses Col-0 as the wild-type comparator/background."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "FAH1/FAH2 mutant analyses are in Arabidopsis Col-0 context."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "FAH1 is explicitly expanded as FATTY ACID HYDROXYLASE 1."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "As named in the paper, FAH1 is a fatty acid hydroxylase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "FAH1/2 are described as hydroxylating ceramides in sphingolipid metabolism."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states FAH1/2 hydroxylate the fatty acid moiety in ceramides, contributing to production of IPCS2 substrate."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "FAH1/2 are presented as acting upstream of IPCS2 substrate production."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states FAH1/2 hydroxylate the fatty acid moiety in ceramides."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper indicates FAH1/2 contribute to IPCS2 substrate production by hydroxylating ceramides, but does not explicitly name the product as 'alpha-hydroxylated ceramides' in this article's Results text."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the Results statement that FAH1/2 hydroxylate the α position of the fatty acid moiety in ceramides, contributing to IPCS2 substrate production."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly presents FAH1/2 as supplying IPCS2 substrate upstream."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "FAH1/2 are tested in the context of IPCS2-derived products/GIPCs being required for entry control."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "GIPCs are complex sphingolipids in this study."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The fah1 fah2 double mutant shows increased Bgh penetration, as shown in Figure 2G and text."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "This was tested by double-mutant pathogenicity assay."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant treatment is Bgh infection."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points accurately reflect the paper's use of fah1 fah2 to support an upstream substrate role and product-based explanation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies FAH1 only in the fah1 fah2 double mutant, not as a single mutant."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 21,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "FAH2",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "FAH2 is analyzed in Arabidopsis through the fah1 fah2 double mutant."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathogenicity assay involving fah1 fah2 was done in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses Col-0 as wild type comparator/background."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "FAH2 mutant analysis is in Arabidopsis Col-0 context."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "FAH2 is explicitly expanded as FATTY ACID HYDROXYLASE 2."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "As named in the paper, FAH2 is a fatty acid hydroxylase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "FAH1/2 are described as acting in sphingolipid biosynthesis via ceramide hydroxylation."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents FAH1/2 as generating IPCS2 substrate pool by ceramide hydroxylation upstream of IPCS2."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "FAH2 is treated as an upstream component relative to IPCS2."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says FAH1/2 hydroxylate ceramides."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact product wording 'alpha-hydroxylated ceramides' is not explicitly given in this paper's Results text, though strongly implied."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The reaction description matches the statement that FAH1/2 hydroxylate the α position of the fatty acid moiety in ceramides, contributing to IPCS2 substrate production."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "FAH2 is directly described as contributing to IPCS2 substrate production upstream."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "FAH2 is tested in support of IPCS2-derived GIPCs being required for pathogen entry control."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "GIPCs are explicitly sphingolipids."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The fah1 fah2 double mutant shows increased Bgh penetration compared with Col-0."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "This was tested using a double-mutant pathogenicity assay."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The phenotype was measured after Bgh infection."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These conclusions match the paper's interpretation of the fah1 fah2 result."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "FAH2 was studied only as part of the fah1 fah2 double mutant in this paper."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 21,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 133,
+    "supported": 118,
+    "unsupported": 5,
+    "uncertain": 10,
+    "total_corrections": 5
+  }
+}

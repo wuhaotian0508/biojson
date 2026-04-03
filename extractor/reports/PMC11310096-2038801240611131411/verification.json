@@ -1,0 +1,125 @@
+{
+  "file": "MinerU_markdown_PMC11310096_2038801240611131411",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC11310096_2038801240611131411.md",
+  "timestamp": "2026-03-31T21:35:46.223150",
+  "genes": [
+    {
+      "gene_name": "FocRnt2",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.1 explicitly states that FocRnt2 is encoded by the FOIG_10760 gene."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper consistently studies FocRnt2 in Foc TR4."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The title and throughout the paper identify the organism as Fusarium oxysporum f. sp. cubense tropical race 4."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental procedures 4.1 states that Foc TR4 strain DZ1 was used as the WT strain."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments directly involve Foc TR4, banana plants, and Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Foc TR4 and Nicotiana benthamiana are explicit; banana is explicit, but the exact Latin name given in the JSON as 'Musa spp.' is not stated verbatim in the paper, though banana plants/cultivar Brazilian are clearly used."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "DZ1 is the Foc TR4 strain used, and banana cultivar Brazilian is explicitly named in Results 2.8, Figure 6, and Methods 4.1."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.9 explicitly measures fusaric acid and shows it is reduced in FocRnt2 deletion mutants."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.9 states that fusaric acid is the main toxin of Foc TR4; as fusaric acid is discussed as a fungal toxin product, 'toxin' is supported, and it is reasonable to classify it as a secondary metabolite in this context."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.9 states fusaric acid plays an important role in fungal virulence, linking it to virulence in the banana pathosystem."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper directly measures fusaric acid in culture (CD medium supplemented with banana extracts). It does not directly measure fusaric acid in infected banana tissues, so 'infected banana system' is not supported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.8–2.10 show that FocRnt2 deletion lowers virulence and infection/colonization, and Results 2.9 shows reduced fusaric acid content and down-regulated fusaric acid biosynthetic genes."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.3 explicitly states FocRnt2 is significantly up-regulated by banana root extracts, peaks at 24 h post-induction, is strongly induced during early infection and peaks at 4 days, and is lower in conidia and mycelia."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.5 shows localization in the nucleus and cytoplasm of N. benthamiana cells, and Results 2.2 shows the signal peptide has secretion function."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.1 states FocRnt2 contains an RNase T2 domain; the abstract and Results identify it as a ribonuclease T2 family protein and candidate effector."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are described in Results/Methods: prior secretome identification, recombinant RNase assay, yeast secretion assay, transient expression in N. benthamiana, gene deletion and complementation, RT-qPCR of FA biosynthetic genes, fusaric acid assay, pathogenicity assay, fungal biomass qPCR, and confocal infection observation."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states the complementation construct contained the native promoter and terminator of FocRnt2, which supports the first part. However, it only names pBI121 and pEarley103 vectors for transient expression and does not explicitly state 'CaMV 35S-derived' in the paper text."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These treatments are directly described: banana root extract induction, infection of susceptible banana cultivar Brazilian, and CD medium supplemented with banana extracts for fusaric acid determination."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.6 and 2.7 explicitly state little or no effect of deletion on hyphal growth, colony morphology, conidiation, or sensitivity to oxidative, osmotic, and cell wall integrity stresses."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state that FocRnt2 is a breeding or engineering target/application; this is an extrapolated implication, not a direct paper-supported claim."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.1 explicitly says previous secretome analysis characterized FocRnt2 as a candidate effector; no accession for an omics dataset is provided, consistent with 'accession NA'."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.4 shows suppression of SA/JA marker genes and BAX-induced ROS/cell death in N. benthamiana; Results 2.11 shows higher defense gene expression in banana with deletion mutants; Results 2.10 shows slower root colonization/expansion."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each summarized point is directly supported by Results 2.2, 2.3, 2.4, 2.8, 2.9, and 2.10: secreted RNase T2 with RNase activity, induced during infection and immune suppression, and deletion reducing FA biosynthesis/content, colonization, and virulence without growth/stress defects."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Potential antifungal target for reducing fusaric acid production and virulence in banana wilt pathosystem",
+          "new_value": "NA",
+          "reason": "The paper does not state that FocRnt2 is a breeding or engineering target/application; this is an extrapolated implication, not a direct paper-supported claim."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 23,
+    "supported": 20,
+    "unsupported": 1,
+    "uncertain": 2,
+    "total_corrections": 1
+  }
+}

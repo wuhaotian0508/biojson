@@ -1,0 +1,549 @@
+{
+  "file": "MinerU_markdown_PMC12533315_2038799798097711116",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12533315_2038799798097711116.md",
+  "timestamp": "2026-03-31T21:55:48.696170",
+  "genes": [
+    {
+      "gene_name": "OsPAL1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results section explicitly states OsPAL1 as LOC_Os02g41630 in section 2.3."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper inconsistently calls OsPAL1 a 'phenylalanine aminotransferase' in Results, while context and cited literature imply PAL. Exact full name 'Phenylalanine ammonia-lyase 1' is not explicitly stated in the paper text provided."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "EC 4.3.1.24 does not appear in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract and Results explicitly state OsPAL1 is involved in the phenylpropanoids/phenylpropanoid biosynthesis pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results section 2.6 links PAL activity to lignin and flavonoid contents, supporting OsPAL1 as an entry step supplying these branches."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show manipulation of the PibH8-OsPAL module affects lignin and flavonoids content."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Lignin and flavonoids are explicitly named; their classes as phenylpropanoid polymer and flavonoid are standard and directly consistent with the named metabolites."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Discussion associate increased lignin/flavonoids with improved drought resistance, and the paper also links this module to blast resistance."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper measures lignin/flavonoids in transgenic lines and mentions drought-stressed leaf samples elsewhere, but does not explicitly specify 'seedling tissues/leaves' as the accumulation site for these metabolites."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is on rice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice corresponds to Oryza sativa, the study species."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional tests were performed in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is rice, Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "OsPAL1 knockout and overexpression lines were generated in the ZH11 background."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Section 2.3 says expression at seedling stage was examined and OsPAL5 was highest except OsPAL1, implying OsPAL1 is among the highest expressed at seedling stage."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state PAL family has nine members in rice; OsPAL1 is one of them."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Physiological measurements section uses L-phenylalanine as substrate for PAL activity, consistent with OsPAL1 function in the paper context."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "trans-cinnamic acid and ammonia are not explicitly stated in the paper text provided."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The reaction is biologically consistent with PAL, but the paper does not explicitly describe OsPAL1 converting L-phenylalanine to trans-cinnamic acid in the provided text."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Results link PAL activity to lignin and flavonoid accumulation, supporting precursor supply for these end products."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract and Discussion describe OsPAL1/PAL as a rate-limiting enzyme in phenylpropanoid pathway, supporting an upstream entry/committed step role."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract explicitly calls OsPAL1 'a rate-limiting enzyme in phenylpropanoids biosynthesis pathway in rice.'"
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "PibH8 and OsFBK16 interactions with OsPAL1 are supported; direct interaction with OsPAL5 is not shown, so listing OsPAL5 as an interacting protein for OsPAL1 is unsupported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "OsPAL1 knockout reduced drought resistance and overexpression increased it; the module is connected to lignin/flavonoid accumulation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point is supported: physical interaction with PibH8, drought phenotypes of mutants/OE, epistasis showing PibH8 acts upstream of OsPAL1, and linkage to lignin/flavonoids through the pathway module."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods appear in Results or associated figures/supporting figures, including CRISPR/OE, Y2H, BiFC, SFLC, Co-IP, pull-down, PAL activity, and epistasis with PibH8-OE/ospal1."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "UNCERTAIN",
+          "reason": "OsPAL1 drought phenotype was directly tested at seedling stage; panicle development stage testing is shown for PibH8, not explicitly for OsPAL1."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed inconsistently uses 'phenylalanine aminotransferase' for OsPAL1 despite PAL activity/pathway context indicating PAL function."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible interpretation, but the paper does not directly discuss breeding value of OsPAL1 or compare stacking strategies with PibH8/OsFBK16."
+        },
+        "Omics_Data": {
+          "verdict": "UNSUPPORTED",
+          "reason": "RNA-seq of drought-stressed leaf samples was used to prioritize genes in the GWAS interval, but not specifically reported as omics data for OsPAL1; 'accession NA' is not a paper statement."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "4.3.1.24",
+          "new_value": "NA",
+          "reason": "EC 4.3.1.24 does not appear in the paper."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "trans-cinnamic acid; ammonia",
+          "new_value": "NA",
+          "reason": "trans-cinnamic acid and ammonia are not explicitly stated in the paper text provided."
+        },
+        {
+          "field": "Omics_Data",
+          "old_value": "RNA-seq of drought-stressed leaf samples; accession NA",
+          "new_value": "NA",
+          "reason": "RNA-seq of drought-stressed leaf samples was used to prioritize genes in the GWAS interval, but not specifically reported as omics data for OsPAL1; 'accession NA' is not a paper statement."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 3,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "OsPAL5",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "OsPAL5 is referred to as a PAL family member, but the exact full name 'Phenylalanine ammonia-lyase 5' is not explicitly written in the provided text."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "EC 4.3.1.24 is not stated in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "OsPAL5 is discussed as a PAL family member within the phenylpropanoid pathway context."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "By analogy within the paper's PAL family context, OsPAL5 is part of the entry step supplying lignin/flavonoid branches; PibH8 also protects OsPAL5 in the same module."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows PibH8 affects lignin/flavonoids and can protect OsPAL5, but direct evidence specifically linking OsPAL5 manipulation to lignin/flavonoid changes is not shown."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Dependent on the same indirect linkage as above; not directly measured for OsPAL5."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper generally presents lignin/flavonoids as protective stress-related metabolites, and OsPAL5 is included in the protective PAL module."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "No OsPAL5-specific metabolite accumulation site is given."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsPAL5 is a rice gene in this study."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice is Oryza sativa."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional analysis was in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is rice, Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "The OsPAL5 mutant is mentioned, but the background is not explicitly restated in the Results for OsPAL5 specifically, though likely ZH11 by construct context."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Section 2.3 states OsPAL5 is most closely related to OsPAL1 and has obviously higher expression than other PAL members except OsPAL1 at seedling stage."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "OsPAL5 is explicitly treated as a PAL family member."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "Likely true for PAL5, but not directly stated for OsPAL5 in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No OsPAL5 product such as trans-cinnamic acid/ammonia is stated."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "Inferred from family membership, but not explicitly described for OsPAL5."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "Indirectly inferable through the PAL pathway module, but not directly shown for OsPAL5."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "Likely an entry PAL step, but not explicitly established for OsPAL5 in this paper."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The field carefully says not directly established in this paper; the paper only places OsPAL5 as a PAL family entry enzyme contextually."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "PibH8-OsPAL5 interaction is supported, and OsFBK16 is said to degrade PALs including OsPAL5 and competition data suggest the same module."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Section 2.4 says the OsPAL5 mutant line generated by CRISPR-Cas9 also showed reduced drought resistance."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed points are supported by Results and supporting figures: close homolog/high expression, interaction with PibH8, mutant drought phenotype, and protection via competition with OsFBK16."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed method is described in Results/supporting figures for OsPAL5-related analyses."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "OsPAL5 was functionally assessed under drought stress."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed treats OsPAL5 as a secondary, not primary, mechanistic focus."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable extrapolation, but breeding value of OsPAL5 is not directly discussed in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "4.3.1.24",
+          "new_value": "NA",
+          "reason": "EC 4.3.1.24 is not stated in the paper."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "trans-cinnamic acid; ammonia",
+          "new_value": "NA",
+          "reason": "No OsPAL5 product such as trans-cinnamic acid/ammonia is stated."
+        }
+      ],
+      "stats": {
+        "supported": 16,
+        "unsupported": 2,
+        "uncertain": 10
+      }
+    },
+    {
+      "gene_name": "PibH8",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PibH8 is identified as an NLR and shown to regulate PAL protein stability through competitive interaction with OsFBK16."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 3a and text state PibH8 contains CC, NB-ARC, and LRR domains; Discussion calls it a typical CNL-type NLR."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show PibH8 affects lignin and flavonoid content."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Lignin and flavonoids are explicitly the affected metabolites."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links increased lignin/flavonoids to improved drought resistance and also associates the pathway with blast resistance."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PibH8 is a rice gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice is Oryza sativa."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were conducted in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses natural accessions, ZH11, HHZ, KY131, and W119 in different analyses."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq showed strong expression change after drought; DR haplotype had higher drought-induced expression than DS; NIL comparisons under drought but not normal conditions are explicitly described."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Drought stress and promoter SNP vg0826989447 (C>T) defining haplotypes are explicitly described."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Section 2.6 explicitly shows competitive binding to OsFBK16 to protect PAL proteins from degradation."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "OsPAL1 is directly established and OsPAL5 is additionally supported in supplementary interaction/competition assays."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows PibH8 stabilizes OsPAL1 and suggests similar protection of OsPAL5 by competing with OsFBK16, increasing PAL activity and downstream metabolites."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly connect PibH8 to phenylpropanoid metabolism via PAL stability."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Interactions with OsPAL1, OsPAL5, and OsFBK16 are shown in Results/supporting figures."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper demonstrates a competitive interaction module among PibH8, OsPAL1/5, and OsFBK16."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "PibH8 positively regulates lignin/flavonoid accumulation, drought resistance, and blast resistance."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes the supported mechanism that PibH8 protects PALs, enabling accumulation of drought-protective phenylpropanoids."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All six points are explicitly supported by GWAS, transgenics, interaction assays, competition/stability data, epistasis, and haplotype/NIL analyses."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are reported in the paper or supporting figures."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Drought at seedling and panicle stages, field drought, and blast fungus infection were all tested."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Native promoter haplotypes and 35S promoter in transient assays are supported, but 'overexpression constructs in pCAMBIA1301U promoter details not fully stated' is partly editorial inference rather than a direct paper statement."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "PibH8 is described as a homolog of Pib, and superior Hap.1 improves both resistances without obvious agronomic penalties in NILs under normal conditions."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly emphasizes PibH8-Hap.1 as a promising breeding target/value for improving drought and blast resistance, especially in KY131."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states no significant differences in major agronomic traits under normal conditions for the NILs."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "GWAS with 7,367,740 variants and RNA-seq of drought-stressed leaf samples are explicitly described; 'accession NA' is acceptable as no accession is given in the paper."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 27,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "OsFBK16",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "OsFBK16 is explicitly described as an E3 ubiquitin ligase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The name implies F-box/Kelch, but the paper text provided does not explicitly spell out 'F-box/Kelch repeat-containing protein'."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Through regulation of PAL/PibH8, OsFBK16 is connected in Results to lignin and flavonoid accumulation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Lignin and flavonoids are the terminal metabolites affected in the described pathway module."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents lignin/flavonoids as protective secondary metabolites contributing to stress resistance."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsFBK16 is a rice gene in this study."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice is Oryza sativa."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional testing was in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "OsFBK16 knockout and OE lines were generated in ZH11 background."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Semi-in vitro ubiquitination assay showed OsFBK16 ubiquitination activity toward PibH8 was enhanced under drought conditions."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show OsFBK16 promotes ubiquitin-mediated degradation of PibH8 and is known to degrade PALs."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "OsPAL1 and OsPAL5 are cited as known targets, and this study adds PibH8 as a target."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by prior report cited in Results for OsPAL1/5 and by this study for PibH8; PAL activity decreases accordingly."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports negative post-translational control of phenylpropanoid biosynthesis via PAL stability."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Interactions with PibH8 are directly shown; OsPAL1/OsPAL5 interactions are referenced from prior work and incorporated into the model tested here."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The competitive interaction network with PibH8 and PAL proteins is explicitly investigated."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Knockout increased drought resistance and overexpression reduced it; PAL activity was reduced in OE lines."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a fair summary of the supported mechanism involving OsPAL1 and PibH8 stability."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points are directly supported by Results and figures/supporting figures."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods were used for OsFBK16-related conclusions."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Drought stress was the tested condition."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "35S promoter use in transient assays is supported, but 'overexpression construct details otherwise NA' is not a paper statement."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says previous work showed OsFBK16 negatively regulates blast resistance through degrading PALs, and this study extends its function to drought resistance and PibH8 targeting."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Negative-target editing is a reasonable interpretation, but explicit breeding application of OsFBK16 is not directly discussed in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Possible broad off-target effects of E3 ligase perturbation are speculative and were not tested in this study."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Potential_Tradeoffs",
+          "old_value": "Possible off-target effects due to broad ubiquitin-ligase functions are plausible but not tested in this study.",
+          "new_value": "NA",
+          "reason": "Possible broad off-target effects of E3 ligase perturbation are speculative and were not tested in this study."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 112,
+    "supported": 86,
+    "unsupported": 6,
+    "uncertain": 20,
+    "total_corrections": 6
+  }
+}

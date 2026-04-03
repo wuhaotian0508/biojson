@@ -1,292 +1,288 @@
 {
   "file": "Nat_Biotechnol_2008_Butelli",
   "md_path": "/data/haotianwu/biojson/extractor/input/Nat_Biotechnol_2008_Butelli.md",
-  "timestamp": "2026-03-28T11:50:42.387006",
+  "timestamp": "2026-03-30T00:13:25.241059",
   "genes": [
     {
-      "gene_name": "Del",
+      "gene_name": "Delila",
       "category": "Regulation",
       "verification": {
         "Species": {
           "verdict": "SUPPORTED",
-          "reason": "The host plant tested was tomato, explicitly identified as tomato (Solanum lycopersicum cv. MicroTom)."
+          "reason": "The transformed host is tomato, specifically tomato var. MicroTom, stated in Methods."
         },
         "Species_Latin_Name": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper explicitly states 'Tomato (Solanum lycopersicum cv. MicroTom)'."
-        },
-        "Variety": {
-          "verdict": "SUPPORTED",
-          "reason": "The transformed variety is explicitly given as 'cv. MicroTom' / 'var. MicroTom'."
+          "verdict": "UNCERTAIN",
+          "reason": "The supplied text says tomato and var. MicroTom, but the Latin binomial Solanum lycopersicum does not explicitly appear in the provided excerpt."
         },
         "Origin_Species": {
-          "verdict": "SUPPORTED",
-          "reason": "Del is stated to come from snapdragon."
+          "verdict": "UNSUPPORTED",
+          "reason": "The provided Methods text does not state that Delila is from snapdragon."
         },
         "Origin_Species_Latin_Name": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper explicitly names snapdragon as 'Antirrhinum majus'."
+          "verdict": "UNSUPPORTED",
+          "reason": "Antirrhinum majus does not appear in the provided text."
         },
         "Regulator_Type": {
-          "verdict": "SUPPORTED",
-          "reason": "Del is described as a gene encoding a transcription factor."
+          "verdict": "UNCERTAIN",
+          "reason": "Delila is used as a cDNA in a transgene construct, but the provided excerpt does not explicitly call it a transcription factor."
         },
         "Protein_Family_or_Domain": {
-          "verdict": "SUPPORTED",
-          "reason": "The text states 'Del encodes a basic helix-loop-helix transcription factor'."
-        },
-        "Core_Validation_Method": {
-          "verdict": "SUPPORTED",
-          "reason": "All listed methods are reported for the Del/Ros1 transgenic lines: E8-driven fruit-specific transgenic expression, stable inheritance, anthocyanin spectrophotometry/HPLC, suppression subtractive hybridization, northern blot, microarray, PAL assay, and antioxidant assay. However these validate the Del/Ros1 combination rather than Del alone."
-        },
-        "Promoters": {
-          "verdict": "SUPPORTED",
-          "reason": "The binary vector contained Del and Ros1 cDNAs each under control of the fruit-specific tomato E8 promoter."
-        },
-        "Expression_Pattern": {
-          "verdict": "SUPPORTED",
-          "reason": "Fruit pigmentation began at the end of the mature green stage and matched the expression pattern of the E8 gene, intensifying during ripening."
-        },
-        "Subcellular_Localization": {
           "verdict": "UNSUPPORTED",
-          "reason": "No nucleus/localization experiment or explicit localization statement for Del is provided in this paper."
-        },
-        "Protein_Complex_Involvement": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper states Del and Ros1 'interact to induce anthocyanin biosynthesis' in snapdragon flowers and tests them together in tomato as a MYB-bHLH combination."
-        },
-        "Interacting_Proteins": {
-          "verdict": "SUPPORTED",
-          "reason": "Ros1 is explicitly described as interacting with Del to induce anthocyanin biosynthesis."
-        },
-        "Primary_Regulatory_Targets": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper supports induction of many pathway genes and names PAL, F3H, F3'5'H, DFR, ANS, 3-GT, RT, 5-GT, GST, putative anthocyanin transporter, and putative acyltransferase in Fig. 3/pathway discussion. But the exact complete target list assigned specifically as Del targets is inferred from the Del/Ros1 combination, and some genes in the list (for example 4CL, C4H, C3H, CHS, CHI, F3'H) are shown in the pathway diagram rather than all explicitly demonstrated as Del/Ros1-induced targets in the Results text here."
-        },
-        "Regulatory_Effect_on_Target_Genes": {
-          "verdict": "SUPPORTED",
-          "reason": "The Results state that expression of Del and Ros1 increased transcript levels of almost all genes encoding enzymes required for anthocyanin biosynthesis, side-chain modification enzymes, and likely transport genes; northern blot verified induction including PAL and F3H."
-        },
-        "Regulation_Mode": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper presents Del as a transcription factor whose expression increases transcript levels of biosynthetic genes, consistent with transcriptional activation."
-        },
-        "Metabolic_Process_Controlled": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper directly links Del/Ros1 expression to anthocyanin biosynthesis plus side-chain modification and vacuolar transport-related genes."
-        },
-        "Upstream_Signals_or_Inputs": {
-          "verdict": "SUPPORTED",
-          "reason": "Expression was driven by the fruit-specific E8 promoter, and pigmentation matched E8 expression during ripening."
+          "reason": "bHLH is not mentioned in the supplied text."
         },
         "Terminal_Metabolite": {
           "verdict": "SUPPORTED",
-          "reason": "The final nutrient product accumulated was anthocyanins."
+          "reason": "Methods repeatedly analyze anthocyanins in Del/Ros1 tomato fruit and state transformed lines showed accumulation of anthocyanin in fruit."
         },
         "Terminal_Metabolite_Class": {
-          "verdict": "SUPPORTED",
-          "reason": "Anthocyanins are a flavonoid class, as framed in the paper's flavonoid/anthocyanin pathway."
+          "verdict": "UNSUPPORTED",
+          "reason": "The word flavonoid/class assignment is not explicitly stated in the provided text."
         },
         "Terminal_Metabolite_Accumulation_Site": {
           "verdict": "SUPPORTED",
-          "reason": "High levels of anthocyanins were detected in both peel and flesh of purple fruit."
+          "reason": "The text explicitly says accumulation of anthocyanin in fruit."
         },
         "Terminal_Metabolite_Function": {
           "verdict": "UNCERTAIN",
-          "reason": "The paper states dietary anthocyanins have been associated with protection against cancer, cardiovascular disease, age-related degenerative diseases, inflammation, visual acuity, obesity and diabetes, and shows increased hydrophilic antioxidant capacity. But these are general claims about anthocyanins, not all directly demonstrated functions of the tomato fruit anthocyanins in this study."
+          "reason": "Total antioxidant activity is measured and mouse feeding studies are described, but the provided excerpt does not explicitly state lifespan extension was due to anthocyanins or that antioxidant activity is assigned specifically as a function of Delila-driven anthocyanins."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "UNCERTAIN",
+          "reason": "Anthocyanin accumulation is clearly the phenotype, but the exact phrase that Delila controls anthocyanin biosynthesis is not in the provided text."
+        },
+        "Regulation_Mode": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Transcriptional activation is not explicitly stated in the supplied excerpt."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No specific target genes or direct regulatory targets are identified in the provided text."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNCERTAIN",
+          "reason": "Gene expression analyses were performed and altered transcripts were sought, but activation of anthocyanin pathway genes by Delila with Rosea1 is not explicitly shown in the provided excerpt."
         },
         "Core_Phenotypic_Effect": {
           "verdict": "SUPPORTED",
-          "reason": "Del/Ros1 fruit showed intense purple pigmentation, high anthocyanin accumulation, and increased hydrophilic antioxidant capacity."
+          "reason": "The construct containing Delila and Rosea1 generated lines showing accumulation of anthocyanin in fruit."
         },
-        "Decisive_Influence_on_Target_Product": {
-          "verdict": "UNCERTAIN",
-          "reason": "The study shows the Del/Ros1 combination successfully enabled high anthocyanin accumulation, but Del alone was not directly tested here, so 'essential activator' for Del individually is not directly established by this paper."
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly describe fruit-specific E8-driven transgenic expression, anthocyanin/phenylpropanoid profiling, suppression subtractive hybridization, northern blot, and microarray analyses."
         },
         "Environment_or_Treatment_Factor": {
           "verdict": "SUPPORTED",
-          "reason": "The relevant factor was fruit ripening/developmental stage, with pigmentation appearing during ripening."
+          "reason": "The genes were placed under the fruit-specific E8 promoter and expression analyses used fruit developmental/ripening stages."
         },
-        "Breeding_or_Engineering_Application_Value": {
+        "Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state both cDNAs were under control of the fruit-specific E8 promoter from tomato."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato var. MicroTom is explicitly stated."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
           "verdict": "UNCERTAIN",
-          "reason": "The paper clearly supports use for engineering/biofortification of tomato and transfer to other tomato backgrounds. Extension to 'potentially other crops' and the recommendation about 'best deployed with Ros1 and fruit-specific promoters to target edible tissues while avoiding vegetative effects' is reasonable but partly extrapolative."
-        },
-        "Potential_Tradeoffs": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper reports no abnormal anthocyanin accumulation in stems/leaves and that primary transformants developed normally; it also reports increased peel flavonols in purple fruit."
-        },
-        "Other_Important_Info": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper did not test Del alone in this work, only the Del/Ros1 combination, and states the phenotype could be transferred to Money Maker, Ailsa Craig and VF36 with no loss of phenotype."
+          "reason": "Anthocyanin accumulation in fruit and increased antioxidant activity are broadly consistent with the Methods setup, but the summary contains interpretive claims about Delila functioning as a regulatory factor and activating transcriptional programs that are not explicitly supported in the provided excerpt."
         },
         "Omics_Data": {
           "verdict": "SUPPORTED",
-          "reason": "The study used suppression subtractive hybridization and a tomato oligonucleotide microarray; accession numbers E-MEXP-1830 and A-MEXP-1417 are explicitly provided."
+          "reason": "Microarray analysis is described and accession identifiers A-MEXP-1417 and E-MEXP-1830 are explicitly provided."
         },
-        "Summary_Key_Findings_of_Core_Gene": {
-          "verdict": "SUPPORTED",
-          "reason": "All three summary points are supported for the Del/Ros1 combination: strong purple pigmentation in peel/flesh, activation of anthocyanin pathway genes including PAL/F3H/F3'5'H, anthocyanin up to 2.83 mg/g FW in line N, and roughly threefold hydrophilic antioxidant increase. Attribution to Del alone remains indirect, but the wording includes 'together with Ros1'."
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "The note that the manipulated gene is from Antirrhinum majus is not stated in the supplied text, although it is true that phenotype was studied in tomato and the excerpt is mainly Methods."
         }
       },
       "corrections": [
         {
-          "field": "Subcellular_Localization",
-          "old_value": "Nucleus",
+          "field": "Origin_Species",
+          "old_value": "Snapdragon",
           "new_value": "NA",
-          "reason": "No nucleus/localization experiment or explicit localization statement for Del is provided in this paper."
+          "reason": "The provided Methods text does not state that Delila is from snapdragon."
+        },
+        {
+          "field": "Origin_Species_Latin_Name",
+          "old_value": "Antirrhinum majus",
+          "new_value": "NA",
+          "reason": "Antirrhinum majus does not appear in the provided text."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "bHLH transcription factor",
+          "new_value": "NA",
+          "reason": "bHLH is not mentioned in the supplied text."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "flavonoid",
+          "new_value": "NA",
+          "reason": "The word flavonoid/class assignment is not explicitly stated in the provided text."
+        },
+        {
+          "field": "Regulation_Mode",
+          "old_value": "transcriptional activation",
+          "new_value": "NA",
+          "reason": "Transcriptional activation is not explicitly stated in the supplied excerpt."
+        },
+        {
+          "field": "Primary_Regulatory_Targets",
+          "old_value": "anthocyanin biosynthetic genes in the flavonoid/phenylpropanoid pathway",
+          "new_value": "NA",
+          "reason": "No specific target genes or direct regulatory targets are identified in the provided text."
         }
       ],
       "stats": {
-        "supported": 25,
-        "unsupported": 1,
-        "uncertain": 4
+        "supported": 9,
+        "unsupported": 6,
+        "uncertain": 7
       }
     },
     {
-      "gene_name": "Ros1",
+      "gene_name": "Rosea1",
       "category": "Regulation",
       "verification": {
         "Species": {
           "verdict": "SUPPORTED",
-          "reason": "The host plant tested was tomato, explicitly identified as tomato (Solanum lycopersicum cv. MicroTom)."
+          "reason": "The transformed host is tomato, specifically tomato var. MicroTom, stated in Methods."
         },
         "Species_Latin_Name": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper explicitly states 'Tomato (Solanum lycopersicum cv. MicroTom)'."
-        },
-        "Variety": {
-          "verdict": "SUPPORTED",
-          "reason": "The transformed variety is explicitly given as 'cv. MicroTom' / 'var. MicroTom'."
+          "verdict": "UNCERTAIN",
+          "reason": "The supplied text says tomato and var. MicroTom, but the Latin binomial Solanum lycopersicum does not explicitly appear in the provided excerpt."
         },
         "Origin_Species": {
-          "verdict": "SUPPORTED",
-          "reason": "Ros1 is stated to come from snapdragon."
+          "verdict": "UNSUPPORTED",
+          "reason": "The provided Methods text does not state that Rosea1 is from snapdragon."
         },
         "Origin_Species_Latin_Name": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper explicitly names snapdragon as 'Antirrhinum majus'."
+          "verdict": "UNSUPPORTED",
+          "reason": "Antirrhinum majus does not appear in the provided text."
         },
         "Regulator_Type": {
-          "verdict": "SUPPORTED",
-          "reason": "Ros1 is described as a gene encoding a transcription factor."
+          "verdict": "UNCERTAIN",
+          "reason": "Rosea1 is used as a cDNA in a transgene construct, but the provided excerpt does not explicitly call it a transcription factor."
         },
         "Protein_Family_or_Domain": {
-          "verdict": "SUPPORTED",
-          "reason": "The text states 'Ros1 encodes a MYB-related transcription factor'."
-        },
-        "Core_Validation_Method": {
-          "verdict": "SUPPORTED",
-          "reason": "All listed methods are reported for the Del/Ros1 transgenic lines: E8-driven fruit-specific transgenic expression, stable inheritance, anthocyanin spectrophotometry/HPLC, suppression subtractive hybridization, northern blot, microarray, PAL assay, and antioxidant assay. However these validate the Del/Ros1 combination rather than Ros1 alone."
-        },
-        "Promoters": {
-          "verdict": "SUPPORTED",
-          "reason": "The binary vector contained Del and Ros1 cDNAs each under control of the fruit-specific tomato E8 promoter."
-        },
-        "Expression_Pattern": {
-          "verdict": "SUPPORTED",
-          "reason": "Fruit pigmentation began at the end of the mature green stage and matched the expression pattern of the E8 gene, intensifying during ripening."
-        },
-        "Subcellular_Localization": {
           "verdict": "UNSUPPORTED",
-          "reason": "No nucleus/localization experiment or explicit localization statement for Ros1 is provided in this paper."
-        },
-        "Protein_Complex_Involvement": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper states Del and Ros1 interact to induce anthocyanin biosynthesis and tests them together as a MYB-bHLH regulatory combination."
-        },
-        "Interacting_Proteins": {
-          "verdict": "SUPPORTED",
-          "reason": "Del is explicitly described as interacting with Ros1 to induce anthocyanin biosynthesis."
-        },
-        "Primary_Regulatory_Targets": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper supports induction of many pathway genes and names PAL, F3H, F3'5'H, DFR, ANS, 3-GT, RT, 5-GT, GST, putative anthocyanin transporter, and putative acyltransferase in Fig. 3/pathway discussion. But the exact complete target list assigned specifically as Ros1 targets is inferred from the Del/Ros1 combination, and some listed genes are not all explicitly demonstrated in the Results text as induced targets."
-        },
-        "Regulatory_Effect_on_Target_Genes": {
-          "verdict": "SUPPORTED",
-          "reason": "The Results state that expression of Del and Ros1 increased transcript levels of almost all genes encoding enzymes required for anthocyanin biosynthesis, side-chain modification enzymes, and likely transport genes; northern blot verified induction including PAL and F3H."
-        },
-        "Regulation_Mode": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper presents Ros1 as a transcription factor whose expression increases transcript levels of biosynthetic genes, consistent with transcriptional activation."
-        },
-        "Metabolic_Process_Controlled": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper directly links Del/Ros1 expression to anthocyanin biosynthesis plus side-chain modification and vacuolar transport-related genes."
-        },
-        "Upstream_Signals_or_Inputs": {
-          "verdict": "SUPPORTED",
-          "reason": "Expression was driven by the fruit-specific E8 promoter, and pigmentation matched E8 expression during ripening."
+          "reason": "MYB is not mentioned in the supplied text."
         },
         "Terminal_Metabolite": {
           "verdict": "SUPPORTED",
-          "reason": "The final nutrient product accumulated was anthocyanins."
+          "reason": "Methods repeatedly analyze anthocyanins in Del/Ros1 tomato fruit and state transformed lines showed accumulation of anthocyanin in fruit."
         },
         "Terminal_Metabolite_Class": {
-          "verdict": "SUPPORTED",
-          "reason": "Anthocyanins are a flavonoid class, as framed in the paper's flavonoid/anthocyanin pathway."
+          "verdict": "UNSUPPORTED",
+          "reason": "The word flavonoid/class assignment is not explicitly stated in the provided text."
         },
         "Terminal_Metabolite_Accumulation_Site": {
           "verdict": "SUPPORTED",
-          "reason": "High levels of anthocyanins were detected in both peel and flesh of purple fruit."
+          "reason": "The text explicitly says accumulation of anthocyanin in fruit."
         },
         "Terminal_Metabolite_Function": {
           "verdict": "UNCERTAIN",
-          "reason": "The paper states dietary anthocyanins have been associated with protection against cancer, cardiovascular disease, age-related degenerative diseases, inflammation, visual acuity, obesity and diabetes, and shows increased hydrophilic antioxidant capacity. But these are general claims about anthocyanins, not all directly demonstrated functions of the tomato fruit anthocyanins in this study."
+          "reason": "Total antioxidant activity is measured and mouse feeding studies are described, but the provided excerpt does not explicitly state lifespan extension was due to anthocyanins or that antioxidant activity is assigned specifically as a function of Rosea1-driven anthocyanins."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "UNCERTAIN",
+          "reason": "Anthocyanin accumulation is clearly the phenotype, but the exact phrase that Rosea1 controls anthocyanin biosynthesis is not in the provided text."
+        },
+        "Regulation_Mode": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Transcriptional activation is not explicitly stated in the supplied excerpt."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No specific target genes or direct regulatory targets are identified in the provided text."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNCERTAIN",
+          "reason": "Gene expression analyses were performed and altered transcripts were sought, but activation of anthocyanin pathway genes by Rosea1 with Delila is not explicitly shown in the provided excerpt."
         },
         "Core_Phenotypic_Effect": {
           "verdict": "SUPPORTED",
-          "reason": "Del/Ros1 fruit showed intense purple pigmentation, high anthocyanin accumulation, and increased hydrophilic antioxidant capacity."
+          "reason": "The construct containing Delila and Rosea1 generated lines showing accumulation of anthocyanin in fruit."
         },
-        "Decisive_Influence_on_Target_Product": {
-          "verdict": "UNCERTAIN",
-          "reason": "The study shows the Del/Ros1 combination successfully enabled high anthocyanin accumulation, but Ros1 alone was not directly tested here, so 'essential activator' for Ros1 individually is not directly established by this paper."
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly describe fruit-specific E8-driven transgenic expression, anthocyanin/phenylpropanoid profiling, suppression subtractive hybridization, northern blot, and microarray analyses."
         },
         "Environment_or_Treatment_Factor": {
           "verdict": "SUPPORTED",
-          "reason": "The relevant factor was fruit ripening/developmental stage, with pigmentation appearing during ripening."
+          "reason": "The genes were placed under the fruit-specific E8 promoter and expression analyses used fruit developmental/ripening stages."
         },
-        "Breeding_or_Engineering_Application_Value": {
+        "Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state both cDNAs were under control of the fruit-specific E8 promoter from tomato."
+        },
+        "Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato var. MicroTom is explicitly stated."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
           "verdict": "UNCERTAIN",
-          "reason": "The paper clearly supports use for engineering/biofortification of tomato and transfer to other tomato backgrounds. Extension to 'potentially other crops' and the recommendation about 'best deployed with Del and fruit-specific promoters to target edible tissues while avoiding vegetative effects' is partly extrapolative."
-        },
-        "Potential_Tradeoffs": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper reports no abnormal anthocyanin accumulation in stems/leaves and that primary transformants developed normally; it also reports increased peel flavonols in purple fruit."
-        },
-        "Other_Important_Info": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper did not test Ros1 alone in this work, only the Del/Ros1 combination, and states the phenotype could be transferred to Money Maker, Ailsa Craig and VF36 with no loss of phenotype."
+          "reason": "Anthocyanin accumulation in fruit and increased antioxidant activity are broadly consistent with the Methods setup, but the summary contains interpretive claims about Rosea1 functioning as a regulatory factor and activating transcriptional programs that are not explicitly supported in the provided excerpt."
         },
         "Omics_Data": {
           "verdict": "SUPPORTED",
-          "reason": "The study used suppression subtractive hybridization and a tomato oligonucleotide microarray; accession numbers E-MEXP-1830 and A-MEXP-1417 are explicitly provided."
+          "reason": "Microarray analysis is described and accession identifiers A-MEXP-1417 and E-MEXP-1830 are explicitly provided."
         },
-        "Summary_Key_Findings_of_Core_Gene": {
-          "verdict": "SUPPORTED",
-          "reason": "All three summary points are supported for the Del/Ros1 combination: strong purple pigmentation in peel/flesh, activation of anthocyanin pathway genes including PAL/F3H/F3'5'H, anthocyanin up to 2.83 mg/g FW in line N, and roughly threefold hydrophilic antioxidant increase. Attribution to Ros1 alone remains indirect, but the wording includes 'together with Del'."
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "The note that the manipulated gene is from Antirrhinum majus is not stated in the supplied text, although it is true that phenotype was studied in tomato and the excerpt is mainly Methods."
         }
       },
       "corrections": [
         {
-          "field": "Subcellular_Localization",
-          "old_value": "Nucleus",
+          "field": "Origin_Species",
+          "old_value": "Snapdragon",
           "new_value": "NA",
-          "reason": "No nucleus/localization experiment or explicit localization statement for Ros1 is provided in this paper."
+          "reason": "The provided Methods text does not state that Rosea1 is from snapdragon."
+        },
+        {
+          "field": "Origin_Species_Latin_Name",
+          "old_value": "Antirrhinum majus",
+          "new_value": "NA",
+          "reason": "Antirrhinum majus does not appear in the provided text."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "MYB transcription factor",
+          "new_value": "NA",
+          "reason": "MYB is not mentioned in the supplied text."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "flavonoid",
+          "new_value": "NA",
+          "reason": "The word flavonoid/class assignment is not explicitly stated in the provided text."
+        },
+        {
+          "field": "Regulation_Mode",
+          "old_value": "transcriptional activation",
+          "new_value": "NA",
+          "reason": "Transcriptional activation is not explicitly stated in the supplied excerpt."
+        },
+        {
+          "field": "Primary_Regulatory_Targets",
+          "old_value": "anthocyanin biosynthetic genes in the flavonoid/phenylpropanoid pathway",
+          "new_value": "NA",
+          "reason": "No specific target genes or direct regulatory targets are identified in the provided text."
         }
       ],
       "stats": {
-        "supported": 25,
-        "unsupported": 1,
-        "uncertain": 4
+        "supported": 9,
+        "unsupported": 6,
+        "uncertain": 7
       }
     }
   ],
   "summary": {
-    "total_fields": 60,
-    "supported": 50,
-    "unsupported": 2,
-    "uncertain": 8,
-    "total_corrections": 2
+    "total_fields": 44,
+    "supported": 18,
+    "unsupported": 12,
+    "uncertain": 14,
+    "total_corrections": 12
   }
 }

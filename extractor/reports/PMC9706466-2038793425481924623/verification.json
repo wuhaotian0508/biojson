@@ -1,0 +1,285 @@
+{
+  "file": "MinerU_markdown_PMC9706466_2038793425481924623",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC9706466_2038793425481924623.md",
+  "timestamp": "2026-03-31T22:38:52.540723",
+  "genes": [
+    {
+      "gene_name": "GPT2",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The Accession numbers section states GPT2 corresponds to accession number NC_003070."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies Arabidopsis and explicitly names Arabidopsis in the title/abstract/materials."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and methods state Arabidopsis (Arabidopsis thaliana L., Heynh)."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 lists the WT ecotype as Wasilewskija-2 (Ws-2), the genetic background used."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All experiments were conducted in Arabidopsis plants."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and methods specify Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied background is Ws-2 per Table 1 and Materials and methods."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The title/abstract identify GPT2 as GLUCOSE-6-PHOSPHATE/PHOSPHATE TRANSLOCATOR2, i.e. a plastidic glucose-6-phosphate/phosphate translocator."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly discusses GPT2 as a plastid/chloroplast G6P/Pi translocator supplying metabolites into plastids/chloroplasts."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state GPT2 is mainly expressed in root tips and vascular tissues around hydathodes; RT-qPCR/proteomics show leaf transcripts are transiently induced by volatiles but GPT2 protein is not detectably increased in leaves and leaf GUS activity remains negligible in promGPT2:GPT2-GUS lines."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly report expression mainly in root tips and vascular tissues around hydathodes and describe a rapid increase in GPT2 transcripts during the first 16 h of VC exposure followed by decline to a higher steady-state after 3 days."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "GPT2 is directly linked in Results to starch accumulation phenotypes and to altered trans-zeatin (tZ) content in pgi1-2 versus pgi1-2gpt2-1 leaves."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Starch is a polysaccharide, and tZ is treated in the paper as an MEP pathway-derived cytokinin; this classification is consistent with the paper's framing."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses starch accumulation as a carbon-storage/metabolic output and states tZ-type CKs regulate growth, photosynthesis, and expression of photosynthesis-related proteins."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly measured starch in mature leaves and tZ in mature leaves."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments used small fungal volatile compounds of <45 Da emitted by adjacent Alternaria alternata cultures."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show GPT2 is required for the stronger PGI1-independent volatile response in the pgi1-2 background: pgi1-2gpt2-1 has weaker growth/photosynthesis/starch responses and lower tZ than pgi1-2, while WT versus gpt2-1 are similar."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are present in the paper: knockout and double-mutant analysis, 35S:GPT2 rescue, promAthspr:GPT2 rescue, GUS histochemistry, RT-qPCR, proteomics, gas exchange, starch assay, and tZ assay."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each numbered point matches Results/Discussion: gpt2-1 resembles WT under VCs; GPT2 matters in pgi1-2; 35S and vascular/root-tip GPT2 rescue; transcripts increase without detectable leaf protein increase; and GPT2 loss lowers tZ in pgi1-2 leaves."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly propose breeding or engineering applications. Tissue-specific rescue suggests possible utility, but this application framing is an inference beyond direct Results."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly proposes DNA methylation and m6A-mediated regulation of GPT2 expression based on prior met1 and mta evidence, while noting it was not directly tested here."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The statement that GPT2 manipulation may have limited effect in WT is supported by gpt2-1 behaving like WT, and complex regulation is discussed; however 'no obvious growth penalty from constitutive complementation' is not explicitly evaluated as a tradeoff analysis."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "GPT2 and PGI1 are genetically/functionally linked in mutant and complementation analyses, but the paper does not demonstrate direct protein-protein interaction."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 and Methods list CaMV 35S, Athspr, and the native GPT2 promoter as used promoters."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper includes RT-qPCR and TMT6plex isobaric labeling-based differential proteomics; no dataset accession is provided, so 'accession NA' is consistent with the paper content."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly speculates GPT2 could act as a sugar transceptor-like component; the study indeed uses Arabidopsis throughout and emphasizes negligible leaf GPT2 protein despite transcript induction."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "PGI1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The Accession numbers section states PGI1 corresponds to accession number NC_003075."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was studied in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and methods specify Arabidopsis thaliana."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 gives the background ecotype Wasilewskija-2 (Ws-2)."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All experiments were in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly given."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied plants are in the Ws-2 background."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract identifies PGI1 as the plastidial isoform of phosphoglucose isomerase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The specific EC number 5.3.1.9 does not appear in the paper text provided."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PGI1 is explicitly described as phosphoglucose isomerase; family assignment is directly implied by the enzyme identity."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links PGI1 to plastid metabolism, starch accumulation, photosynthesis, and in Discussion proposes roles in plastidial glycolysis/PPP supporting MEP-derived tZ biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The proposed model places PGI1 at the plastidial G6P/F6P interconversion step providing precursor support in vascular/root-tip plastids."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "As phosphoglucose isomerase, PGI1 mediates G6P/F6P interconversion; the paper's title and text identify the enzyme sufficiently for this reaction description."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme identity supports glucose-6-phosphate and fructose-6-phosphate as substrates/products, and the paper discusses G6P metabolization by PGI1."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Same rationale as for substrate: PGI1 interconverts G6P and F6P."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PGI1 is directly tied to starch phenotypes and, in the paper's proposed mechanism, to tZ levels; Results quantify starch and tZ changes in pgi1-2 backgrounds."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Starch is a polysaccharide and tZ is discussed as an MEP-derived cytokinin; this matches the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses starch as accumulated reserve/metabolic output and tZ as promoting growth, photosynthesis, and photosynthesis-related protein expression."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Starch and tZ were measured in leaves, with starch specifically in mature leaves."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Discussion cite prior work and state PGI1 is strongly expressed in root tips and vascular tissues of roots, cotyledons, hypocotyls, and fully expanded mature leaves."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The same Arabidopsis system is used here, and the paper infers functional importance of PGI1 expression in root tips and vascular tissues under VC exposure."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "PGI1 is explicitly described as the plastidial isoform of phosphoglucose isomerase."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Plants were continuously exposed to small fungal volatile compounds (<45 Da) from adjacent Alternaria alternata cultures."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show pgi1-2 has low starch and reduced photosynthetic capacity, but still retains a partial VC response that is further weakened in pgi1-2gpt2-1, supporting a PGI1-independent GPT2-mediated component."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed methods are all used: pgi1-2 and pgi1-2gpt2-1 mutants, 35S:PGI1 complementation, starch/growth/gas exchange assays, proteomics, and cytokinin quantification."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses PGI1 as important for MEP-derived tZ synthesis in vascular/root-tip plastids, but does not directly establish it as a rate-limiting step."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper's model treats PGI1 as an upstream precursor-supply step feeding downstream pathways including MEP-derived tZ biosynthesis and starch-related metabolism."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports PGI1 as affecting starch/tZ via precursor supply rather than being the terminal-product enzyme."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points align with Results: pgi1-2 lowers basal starch/photosynthesis; VCs still stimulate pgi1-2; 35S:PGI1 rescues pgi1-2gpt2-1 phenotypes; and Discussion proposes support of plastid metabolism in vascular/root-tip cells contributing to tZ-related signaling."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly discuss breeding/engineering applications; this is a plausible extrapolation but not a stated conclusion."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show pgi1-2 plants have low starch and reduced photosynthetic capacity relative to WT, and tZ in pgi1-2 is lower than WT."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "PGI1 and GPT2 show functional/genetic interplay, but no direct protein interaction is demonstrated."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly emphasizes that PGI1 action in root tips/vascular tissues is important for long-distance regulation of VC responses and that PGI1 is not the sole mediator under VC treatment."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The study includes TMT6plex differential proteomics, and no accession number for omics deposition is given in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "5.3.1.9",
+          "new_value": "NA",
+          "reason": "The specific EC number 5.3.1.9 does not appear in the paper text provided."
+        }
+      ],
+      "stats": {
+        "supported": 30,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 60,
+    "supported": 53,
+    "unsupported": 1,
+    "uncertain": 6,
+    "total_corrections": 1
+  }
+}

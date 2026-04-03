@@ -1,0 +1,165 @@
+{
+  "file": "MinerU_markdown_PMC12018824_2038800411787304974",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12018824_2038800411787304974.md",
+  "timestamp": "2026-03-31T21:43:57.850685",
+  "genes": [
+    {
+      "gene_name": "BnaC02.VTE4",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "UNCERTAIN",
+          "reason": "The Results explicitly identify the candidate as BnaC02g16270D and rename it BnaC02.VTE4. The Discussion mentions BnaC02.VTE4 (BnaC02G197500ZS). Because two different accession-style IDs appear in different parts of the paper without explicit reconciliation, the combined field value is only partially clear."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state that BnaC02g16270D encodes gamma-tocopherol methyltransferase (c-TMT) and was renamed BnaC02.VTE4."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given anywhere in the provided paper text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies BnaC02.VTE4 as gamma-tocopherol methyltransferase and states VTE4 contains conserved CMAS and Ubie_methyltran domains."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is on rapeseed and repeatedly refers to BnaC02.VTE4 in rapeseed."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The title and text identify the species as Brassica napus."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "8S069 is used as a HapH accession, while 8S088 and 8S100 are used as HapL genotypes in complementation analyses."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional tests were performed in rapeseed and in Arabidopsis mutant atvte4-4."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species are Brassica napus and Arabidopsis thaliana, both explicitly named in the paper."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly uses 8S088, 8S100, atvte4-4 (SALK_036736C), and Col-0 in validation experiments/controls."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "BnaC02.VTE4 is directly implicated in vitamin E/tocopherol biosynthesis throughout the Results and Discussion."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion states that conversion from gamma-tocopherol to alpha-tocopherol by gamma-TMT is the final step in tocopherol biosynthesis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports 'terminal/final step' explicitly, and also calls gamma-TMT the rate-limiting enzyme in the Discussion."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "Gamma-tocopherol is supported by the stated conversion to alpha-tocopherol. SAM as methyl donor is discussed indirectly through methionine metabolism serving SAM as methyl donor for alpha-T biosynthesis, but the enzyme-specific substrate pair is not directly presented in the Results."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states gamma-T is converted to alpha-T by VTE4/gamma-TMT."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is directly consistent with the paper's description that gamma-TMT converts gamma-tocopherol to alpha-tocopherol and that SAM serves as methyl donor for alpha-T biosynthesis."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is directly linked to alpha-tocopherol production, the final nutrient product measured in seeds."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly calls the conversion from gamma-T to alpha-T by gamma-TMT the rate-limiting enzyme/final step in plant tocopherol biosynthesis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "Alpha-tocopherol and vitamin E are directly supported as products/traits. Glucosinolate is also associated phenotypically with BnaC02.VTE4, but not as a direct enzymatic product of VTE4; thus the combined list overstates direct terminal product status."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Vitamin/tocopherol-related classes are inferable, and glucosinolate is a sulfur-containing secondary metabolite discussed in the paper. However, these exact class labels are not explicitly stated as a field and combine direct and indirect outputs."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states vitamin E is essential and alpha-tocopherol is the most bioactive form in humans; it also states some glucosinolate degradation products are harmful and reducing glucosinolate improves rapeseed quality."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "VE accumulation is shown in mature seeds and developing seeds, with differences during 4–6 W, and VE is also detected in leaves and pod coats."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show HapH/full-length functional allele increases VE and alpha-T, while HapL is loss-of-function with lower alpha-T and higher glucosinolate; complementation decreases glucosinolate in HapL backgrounds."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point is supported by Results: GWAS/qVE.C02, complementation identifying BnaC02.VTE4, splice-site A-to-G mutation causing alternative splicing and truncation, HapH but not HapL functional rescue, HapL1052(G-A) causal rescue, and omics/phenotyping linking haplotypes to VE and glucosinolate differences."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR showed expression in multiple tissues, highest in flower, then bud; HapH exceeds HapL during seed development with largest difference at 6 W, and 4–6 W is concluded as critical for seed VE accumulation."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the rapeseed expression analysis across leaf, stem, bud, flower, seed, and pod coat, with strongest phenotypic relevance in developing seeds."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are described in the paper's Results/Methods: GWAS, F2 genotyping, Arabidopsis and rapeseed complementation, transcript cloning, site-directed mutagenesis, qRT-PCR, RNA-seq, metabolomics, and metabolite profiling."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The association population was evaluated in field conditions in 2019 and 2020, and seed stages 4 W and 6 W were emphasized in omics and interpretation."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The full-length genomic constructs included 2.2 kb upstream sequence, and transcript constructs were driven by a 35S promoter."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper developed KASP marker C02Vte4, showed HapH is favored in breeding/domestication, argued it can improve VE and reduce glucosinolate, noted both parents should be improved for seed VE, and demonstrated causal splice-site editing logic via mutagenesis constructs."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper only suggests possible favorable links to fatty acid biosynthesis and stress resistance in Discussion and does not establish direct penalties; this field accurately frames them as suggestions, not proven tradeoffs."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The stated 1052 bp splice-site mutation, HapL-T1/HapL-T2, premature termination, loss of 24 aa or 41 aa in Ubie_methyltran, domestication of HapH, and proposed tyrosine/methionine-SAM metabolic link are all described in the paper."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly reports RNA-seq and non-target metabolomics data deposited under GSA Bioproject PRJCA032597."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.1.1.95",
+          "new_value": "NA",
+          "reason": "No EC number is given anywhere in the provided paper text."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 33,
+    "supported": 28,
+    "unsupported": 1,
+    "uncertain": 4,
+    "total_corrections": 1
+  }
+}

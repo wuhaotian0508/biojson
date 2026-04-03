@@ -1,0 +1,551 @@
+{
+  "file": "MinerU_markdown_PMC12319268_2038800101714984964",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12319268_2038800101714984964.md",
+  "timestamp": "2026-03-31T21:51:38.799929",
+  "genes": [
+    {
+      "gene_name": "GPT2",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods states 'AGI for GPT2, At1g61800'."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Core experiments on GPT2 mutants/overexpression were done in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies the species as Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species for the tested transgenic and mutant lines is Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental lines are Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Wild type background used was Col-0; overexpression lines were generated in Col-0 and gpt2-1 backgrounds."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract and Discussion describe GPT2 as a plastidial glucose 6-phosphate: phosphate co-transporter/translocator."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper repeatedly describes GPT2 as plastidial; plastidial glucose 6-phosphate:Pi cotransporters are plastid-envelope transporters, and the discussion references transport to chloroplasts/plastids."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly test effects of GPT2 alteration on lignin content/composition."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Lignin is directly studied, but the exact phrase 'phenylpropanoid polymer' does not appear in the paper text provided."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 4 states lignin staining is localized to vascular tissues and interfascicular fibres in all lines."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 3.3 and 3.4 show GPT2 overexpression significantly reduces stem lignin, specifically G and S units and associated monolignol pools, while gpt2 loss-of-function mutants show no significant lignin change."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed points are supported by Results: induction in lignin-defective backgrounds (Table 1), reduced lignin and G/S units in overexpressors, reduced monolignol precursors with HCT/4CL2/CSE downregulation, little lignin effect in mutants but metabolite changes, and joint pathway analysis implicating flux balancing."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are described and used: T-DNA mutants, 35S overexpression, qRT-PCR across insertion sites, thioacidolysis, phloroglucinol staining, LC-MS/MS metabolomics, RNA-seq, and joint pathway analysis."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show GPT2 induced in HCT-RNAi and multiple lignin-defective backgrounds (Table 1), highly expressed in 35S-GPT2, and truncated transcripts in gpt2 mutants (Figure 6)."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state overexpression lines were generated with the 35S-GPT2 vector."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Stem tissues were analyzed under defined standard growth conditions and compared across lignin-defective genotypes."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results report reduced stem height in Col-0[35S-GPT2] and metabolomics show broad increases in nucleotide sugars, nucleotides, amino acids, and carbon metabolism intermediates."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq and LC-MS/MS metabolomics are described; GEO accession GSE281739 is given in Data Availability."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper describes GPT2 as plastidial G6P:phosphate co-transporter, notes loss of GPT2 alone did not change lignin, discusses possible redundancy, and states GPT1 is an essential paralog."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports GPT2 as a candidate to lower lignin and notes reduced stem height/broad metabolic effects with constitutive overexpression, but the specific recommendation for tissue-specific or inducible deployment is not stated."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 19,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "HCT",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods lists HCT-RNAi as AT5G48930."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HCT analyzed in Arabidopsis thaliana lines."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly refers to Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The tested HCT-RNAi comparison lines are Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Wild-type control/background is Col-0."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper names HCT and its function but does not state it belongs to the BAHD acyltransferase family in the provided text."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods give the full name 'hydroxycinnamoyl CoA: shikimate hydroxycinnamoyl transferase'."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for HCT appears in the paper text."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "HCT is discussed throughout as part of monolignol/lignin biosynthesis in the phenylpropanoid pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Discussion place HCT in conversion of coumarate/coumaroyl moieties toward caffeate/caffeyl moieties within monolignol biosynthesis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "HCT is clearly not terminal and functions within the pathway, but the exact label 'midstream' is not used."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme name itself indicates hydroxycinnamoyl-CoA and shikimate substrates; discussion specifically refers to HCT reaction using shikimate as co-substrate and coumaroyl moieties."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Discussion refer to the reaction subsequent to HCT as coumaroyl shikimate 3'-hydroxylase, implying HCT forms p-coumaroyl shikimate."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes the HCT step as described around the ref-8/C3'H reaction and monolignol pathway context."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "HCT is directly linked to lignin amount/composition in Results."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Lignin is studied directly, but the exact phrase 'phenylpropanoid polymer' is not present."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 4 identifies lignin staining in vascular tissues and interfascicular fibres of stems."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 3.2-3.5 show HCT-RNAi lowers lignin, increases H units and decreases G/S units; HCT is also downregulated in 35S-GPT2 accompanying reduced G/S lignin."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each statement matches Results on HCT-RNAi lignin phenotype and HCT downregulation in 35S-GPT2."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "RNAi, thioacidolysis, metabolomics, RNA-seq, and qRT-PCR are all used in the study with HCT-related analyses."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HCT is reduced in HCT-RNAi and strongly downregulated in Col-0[35S-GPT2] according to Results/Figure 7."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization of HCT is stated in the paper text."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly links HCT downregulation to decreases in G- and S-lignin precursors and lignin units."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "HCT is clearly important mechanistically, but the paper does not explicitly label it a rate-limiting step; 'key control step' is interpretive."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Stem tissue was analyzed from hydroponically grown plants under standard long-day conditions."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Discussion note stronger HCT downregulation in earlier lines was associated with severe stunting/extensive reprogramming, and lignin reduction caused growth defects."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq and LC-MS/MS metabolomics are included, with GEO accession provided."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The study indeed treats HCT as a comparison/mechanistic target, and discusses shikimate cycling and the APX1-mediated alternative route from coumarate to caffeate."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "General idea is consistent with the paper, but explicit engineering recommendation to tune HCT with GPT2 to moderate pleiotropy is not directly tested or stated in Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "BAHD acyltransferase family",
+          "new_value": "NA",
+          "reason": "The paper names HCT and its function but does not state it belongs to the BAHD acyltransferase family in the provided text."
+        },
+        {
+          "field": "EC_Number",
+          "old_value": "2.3.1.133",
+          "new_value": "NA",
+          "reason": "No EC number for HCT appears in the paper text."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "No subcellular localization of HCT is stated in the paper text."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 3,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "4CL2",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "4CL2 discussed in Arabidopsis context."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression changes were analyzed in Arabidopsis stems."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Comparison is relative to Col-0 and Col-0[35S-GPT2]."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper names 4CL2 and indicates it is a 4CL isoform, but does not explicitly state 'acyl-activating enzyme family' in the provided text."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper defines 4CL as 4-coumarate:CoA ligase; 4CL2 is the isoform discussed."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given for 4CL2."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "4CL2 is discussed as an isoform expressed in vascular tissue for lignin biosynthesis within the phenylpropanoid pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Discussion tie 4CL2 to vascular-tissue lignin biosynthesis and coumaroyl-CoA supply."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "4CL2 acts before HCT/CSE in the pathway, but the exact categorical label 'upstream' is not stated."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion mentions downregulation of 4CL2 affecting the pool of coumaroyl CoA and increased coumaric acid, supporting coumaric acid as substrate; CoA involvement follows from enzyme name."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly refers to change in the pool of coumaroyl CoA with 4CL2 downregulation."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This description matches the enzyme function implied by the enzyme name and discussion of coumaroyl-CoA supply."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "4CL2 is discussed in relation to lignin biosynthesis and altered lignin in 35S-GPT2."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact wording 'phenylpropanoid polymer' is not used in the text."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 4 localizes lignin to vascular tissues and interfascicular fibres in stems."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 3.5 state 4CL2 was downregulated in Col-0[35S-GPT2], and Discussion links this to altered coumaroyl-CoA pools and reduced G/S lignin accumulation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are aligned with Results/Discussion: reduced 4CL2 transcript in 35S-GPT2, interpretation of limiting coumaroyl-CoA pools, and explanation for lack of H-specific intermediate accumulation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The study supports 4CL2 claims via RNA-seq/heat map and metabolite profiling interpretations."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly say 4CL2 is the isoform expressed in vascular tissue for lignin biosynthesis and is downregulated in Col-0[35S-GPT2]."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization for 4CL2 is stated in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper connects 4CL2 to coumaroyl-CoA supply for lignin biosynthesis."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The entry says 'not established'; the paper does not establish 4CL2 as rate-limiting."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These analyses were done in stem tissue under the standard growth conditions described."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq and LC-MS/MS metabolomics are part of the study and underpin the inference."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results specifically highlight 4CL2 transcript reduction in GPT2-overexpression lines as relevant to lignin changes."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential combination with GPT2 modulation is speculative and not directly tested in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "6.2.1.12",
+          "new_value": "NA",
+          "reason": "No EC number is given for 4CL2."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "No subcellular localization for 4CL2 is stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "CSE",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 lists cse as AT1G52760 in Arabidopsis."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CSE is discussed in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression effects are discussed in Arabidopsis stem tissue."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Comparisons are made relative to Col-0 and Col-0[35S-GPT2]."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper names CSE but does not explicitly classify it as a carboxylesterase in the provided text."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Table 1 explicitly expand CSE as caffeoyl shikimate esterase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for CSE is provided in the paper text."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CSE is discussed as part of monolignol/lignin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Discussion group CSE with HCT and 4CL2 in the non-oxidative coumarate-to-caffeate conversion steps."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "CSE is an internal pathway enzyme, but the exact label 'midstream' is not used."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper names the enzyme but does not explicitly state the substrate/product pair in the provided text."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper text does not explicitly state that CSE produces caffeic acid and shikimate."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The description is biochemically plausible from the enzyme name, but the exact reaction is not explicitly described in this paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CSE is discussed in direct connection with lignin biosynthesis and GPT2-linked lignin changes."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact phrase 'phenylpropanoid polymer' is not present."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 4 identifies lignin localization in vascular tissues and interfascicular fibres."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 3.5 state CSE was downregulated in Col-0[35S-GPT2], consistent with reduced G/S lignin precursor flux."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All points match the Results/Discussion: CSE down in 35S-GPT2, aligned with lower G/S monolignol pools, and grouped among non-oxidative steps sensitive to GPT2 overexpression."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq/heat-map transcript analysis and metabolite profiling are used for these claims."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly note CSE was downregulated in Col-0[35S-GPT2]."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization for CSE is given in the paper text."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion links CSE with HCT and 4CL2 as enzymes whose downregulation is consistent with decreased G- and S-lignin/lignin precursors."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The field says 'not established,' which is consistent with the paper not establishing CSE as rate-limiting."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The analysis concerns stems grown under the standard growth conditions in the study."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq and LC-MS/MS metabolomics are part of the reported datasets."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "CSE is indeed treated as a mechanistically relevant pathway gene highlighted in Results rather than the primary engineered gene."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Proposed use as a partner engineering target with GPT2 is speculative and not directly tested in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "carboxylesterase",
+          "new_value": "NA",
+          "reason": "The paper names CSE but does not explicitly classify it as a carboxylesterase in the provided text."
+        },
+        {
+          "field": "EC_Number",
+          "old_value": "3.1.1.-",
+          "new_value": "NA",
+          "reason": "No EC number for CSE is provided in the paper text."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "caffeic acid; shikimate",
+          "new_value": "NA",
+          "reason": "The paper text does not explicitly state that CSE produces caffeic acid and shikimate."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "No subcellular localization for CSE is given in the paper text."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 4,
+        "uncertain": 5
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 108,
+    "supported": 84,
+    "unsupported": 9,
+    "uncertain": 15,
+    "total_corrections": 9
+  }
+}

@@ -1,0 +1,565 @@
+{
+  "file": "MinerU_markdown_PMC12906820_2038799336061571084",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12906820_2038799336061571084.md",
+  "timestamp": "2026-03-31T22:04:08.455478",
+  "genes": [
+    {
+      "gene_name": "SGD",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper refers to SGD as a known MIA biosynthetic enzyme/gene; SGD denotes strictosidine β-D-glucosidase in Catharanthus roseus MIA literature and is used as such throughout the Results."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The specific EC number 3.2.1.105 does not appear anywhere in the paper text provided."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "SGD is an enzyme and a glycosidase by name, but the paper does not explicitly state 'glycosyl hydrolase' or a domain/family annotation."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is on Catharanthus roseus and SGD is treated as a C. roseus gene in this system."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Catharanthus roseus is explicitly the species studied."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state the plant material was Catharanthus roseus cv. Vitae Rose Red."
+        },
+        "Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The common name 'Madagascar periwinkle' does not appear in the paper text, though it refers to Catharanthus roseus."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied assays involving SGD promoter and CrEIN3 were performed in Catharanthus roseus petals/leaves and in tobacco reporter systems; the SGD gene is from C. roseus."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied plant material is the same C. roseus cv. Vitae Rose Red described in Methods."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states CrEIN3-GFP in petals was driven by the 35S promoter and that the native SGD promoter was used in dual-LUC, Y1H, EMSA probe, and ChIP-qPCR analyses."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show SGD expression increased in CrEIN3-OE, decreased in CrEIN3-silenced and CrEIL1-silenced lines, and SGD is in ETH-responsive contexts."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SGD is repeatedly discussed as an MIA pathway gene in monoterpenoid indole alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly frames SGD as a gateway enzyme toward downstream MIA biosynthesis, i.e. after strictosidine into downstream branches."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly presents SGD as a gateway step/target propelling the downstream MIA pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "By the enzyme name strictosidine β-D-glucosidase and the discussion of SGD as the gateway from strictosidine, this is directly inferable."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "Strictosidine aglycone is biochemically correct for SGD, but the paper text provided does not explicitly name this product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The general gateway role of SGD is supported, but the precise wording about hydrolysis to strictosidine aglycone and opening entry is not explicitly stated in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Discussion connect SGD activation by CrEIN3 to increased downstream MIA flux and accumulation of vinblastine/anhydrovinblastine."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Vinblastine and anhydrovinblastine are explicit downstream MIAs emphasized in the paper."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These metabolites are monoterpenoid indole alkaloids, i.e. alkaloids, throughout the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Leaves and petals are both used in experiments, but the paper does not explicitly attribute vinblastine/anhydrovinblastine accumulation for SGD itself specifically to both tissues."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract states MIAs are effective in treating cancer and discusses bisindole MIAs such as vinblastine; defense-related wording is more general but still consistent with Discussion context."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper argues that CrEIN3 activation of SGD enhances downstream MIA flux and increases vinblastine/anhydrovinblastine accumulation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points are supported: SGD is identified as a direct CrEIN3 target; CrEIN3 binds the SGD promoter by Y1H/EMSA/ChIP-qPCR; mutation of the ATGTA-box abolishes activation; SGD is described as a gateway enzyme in the model/discussion."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all explicitly used for SGD: dual-LUC, Y1H, EMSA, ChIP-qPCR, and expression analysis in CrEIN3 OE/VIGS contexts."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The qualifier is careful: the paper supports SGD as a key gateway/control point via direct transcriptional targeting, while not explicitly proving enzymatic rate limitation."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper suggests evaluating CrEIN3/CrEIL1 and key regulated enzymes such as SGD in heterologous systems in the future, but does not directly demonstrate SGD engineering value."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "CrEIN3 binds the SGD promoter; SGD is not shown to physically interact with CrEIN3 as a protein-protein partner."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq accession GSE252019 is explicitly given, and metabolomics by UPLC-Q/TOF MS and NMR are central to the study."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The study used 100 μM ethephon and 100 μM methyl jasmonate as comparison treatments."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed highlights SGD as the direct CrEIN3 target among tested promoters and places it in the ET regulatory model."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "3.2.1.105",
+          "new_value": "NA",
+          "reason": "The specific EC number 3.2.1.105 does not appear anywhere in the paper text provided."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 1,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_name": "CrEIN3",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "CRO_017077 is given in Results section 2.3 and OR936141 is given in the Data Availability Statement."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CrEIN3 is explicitly described as an EIN3/EIL transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies CrEIN3 as an EIN3/EIL TF involved in ethylene signalling."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CrEIN3 is from Catharanthus roseus."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Catharanthus roseus is explicitly stated."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify cv. Vitae Rose Red."
+        },
+        "Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The common name 'Madagascar periwinkle' is not used in the paper, though it refers to C. roseus."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional assays were carried out in C. roseus and heterologous tobacco/Arabidopsis systems; the applied production context for MIA phenotypes is C. roseus."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The C. roseus material used is cv. Vitae Rose Red."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly mention pHB-CrEIN3-GFP and p2300-CrEIN3 constructs with 35S-driven expression for transient assays."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.4 state CrEIN3 showed higher expression in flowers and old leaves."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CrEIN3 is identified in the ethylene-responsive green/pink network with strong relationships to catharanthine/anhydrovinblastine pathway genes."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.4 state CrEIN3-GFP localized to the nucleus."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows CrEIN3 regulates monoterpenoid indole alkaloid biosynthesis, especially downstream pathway genes and bisindole output."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "CrEIN3 directly binds and activates SGD, activates additional pathway/activator genes, and represses GBF1 and ZCT1."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "These genes are explicitly affected in CrEIN3 OE/VIGS or promoter activation assays, with SGD directly targeted; ORCA3, SAT, CS, TS, PRX1, CrERF5, GBF1, ZCT1 are all mentioned."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly show activation of SGD directly and upregulation of ORCA3, SAT, CS, TS, PRX1, CrERF5, plus repression of GBF1 and ZCT1."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "CrEIN3 is presented as an ethylene/ethephon-responsive mediator."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CrEIN3 affects vinblastine, anhydrovinblastine, catharanthine, and ajmalicine according to metabolite data."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are MIAs/alkaloids."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Leaves and petals are both used in CrEIN3 experiments, but the paper does not summarize all listed metabolites specifically for both tissues together."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes MIAs as bioactive and anticancer, especially vinblastine."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "VIGS reduced ETH-induced catharanthine and anhydrovinblastine; OE increased vinblastine, anhydrovinblastine, and ajmalicine."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly calls CrEIN3 a key mediator/key regulator for ethylene-induced MIA biosynthesis, particularly downstream bisindole alkaloids."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point is directly supported by Results sections 2.3-2.6."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly reported for CrEIN3."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper suggests future utility for developing high-yielding MIAs and evaluating CrEIN3 in heterologous systems, but direct engineering application is prospective rather than demonstrated."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "100 μM ethephon and MJ comparison are explicitly described."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "GSE252019 and metabolomics by UPLC-Q/TOF MS and NMR are explicitly provided."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed presents CrEIN3 as acting mainly on the downstream MIA pathway via direct SGD activation plus broader transcriptional reprogramming."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 27,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "CrEIL1",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "CRO_031898 is given in Results 2.3 and OR936142 in the Data Availability Statement."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CrEIL1 is explicitly identified as an EIN3/EIL transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states CrEIL1 is an EIN3/EIL family ethylene-responsive TF."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CrEIL1 is from Catharanthus roseus."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Catharanthus roseus is explicit."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify cv. Vitae Rose Red."
+        },
+        "Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The common name 'Madagascar periwinkle' is not explicitly used."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The MIA phenotyping and gene expression assays were performed in C. roseus."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The C. roseus material is cv. Vitae Rose Red."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods indicate pHB-CrEIL1-GFP and p2300-CrEIL1 constructs under constitutive expression in transient assays."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.4 state CrEIL1 exhibited higher expression in young leaves and flowers."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 2.3 identify CrEIL1 in the turquoise ETH/JA-responsive network with strong regulatory relationship to iridoid/vindoline genes."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "CrEIL1-GFP localized in the nucleus."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows CrEIL1 regulates MIA biosynthesis, especially the upstream iridoid pathway and downstream MIA output."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "CrEIL1 activated promoters in dual-LUC, did not directly bind tested promoters by Y1H, interacted with BIS2, and repressed GBF1/ZCT1 in OE lines."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed genes/promoters are explicitly mentioned in dual-LUC and co-overexpression analyses as CrEIL1/BIS2-associated targets."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly show activation of ORCA3, BIS2, CrWRKY1, CrERF5 and multiple pathway genes, repression of GBF1/ZCT1, and synergistic enhancement with BIS2."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "CrEIL1 is an ethylene mediator and is functionally integrated with JA-responsive BIS2."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "Physical interaction with BIS2 is demonstrated by multiple assays."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "BIS2 is directly shown to interact with CrEIL1."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports effects on secologanin, vindoline, ajmalicine, anhydrovinblastine, and vinblastine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Secologanin is not an alkaloid; the field groups secologanin together with alkaloids, so the exact value is chemically inconsistent with the paper's metabolites."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Petal data are explicit for OE/co-OE and leaves are used in other assays, but the paper does not explicitly summarize all listed metabolites as accumulating in both leaves and petals."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper frames vinblastine as an anticancer MIA and MIAs as defense-related secondary metabolites broadly."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CrEIL1 OE increased secologanin/ajmalicine/vinblastine; silencing reduced ETH-induced MIA accumulation; coaction with BIS2 enhanced bisindole alkaloids."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents CrEIL1 as a key ethylene-signaling regulator controlling upstream iridoid flux and cooperating with BIS2 to enhance vinblastine pathway output."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All six listed findings are directly supported by Results 2.3-2.8 and supplementary figure references."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly reported for CrEIL1."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper strongly suggests utility and future application, but direct engineering deployment in platforms is not experimentally demonstrated."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "ETH at 100 μM and MJ comparison are explicit."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq GSE252019 and UPLC-Q/TOF MS plus NMR metabolomics are explicit."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly contrasts CrEIL1 with CrEIN3: no direct promoter binding detected for tested genes, and action via interaction with JA-induced BIS2."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 28,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "BIS2",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "BIS2 is described as a transcription factor and specifically a JA-responsive bHLH TF in Discussion."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly calls BIS2 a bHLH TF."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "BIS2 is studied in Catharanthus roseus."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Catharanthus roseus is explicit."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The plant material for the study is cv. Vitae Rose Red."
+        },
+        "Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The common name 'Madagascar periwinkle' is not explicitly used."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient co-overexpression assays affecting metabolites were performed in C. roseus petals."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The C. roseus used in the study is cv. Vitae Rose Red."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods describe p2300-BIS2 effector and co-overexpression constructs under constitutive expression in transient assays."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states BIS2 is JA-responsive in the discussion/background and integrates with CrEIL1."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state co-expression network analysis revealed a strong correlation between CrEIL1 and BIS2."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses BIS2-GFP nucleus localization in supplementary figures, but this is only mentioned in Discussion with no explicit localization result text in Results."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "BIS2 is shown to regulate iridoid pathway genes feeding MIA biosynthesis."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "BIS2 activates promoters and synergistically coactivates with CrEIL1 through physical interaction."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "8-HGO, 7-DLGT, 7-DLH, LAMT, ORCA3 are directly tested in dual-LUC, and DXS, G8O, T16H1 are elevated in co-overexpression lines."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly show BIS2 alone activates 8-HGO/7-DLGT/7-DLH and together with CrEIL1 enhances all five listed promoters."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "BIS2 is explicitly JA-responsive and functionally integrated with ethylene via CrEIL1 interaction."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "Physical interaction with CrEIL1 is demonstrated."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "CrEIL1 is directly shown to interact with BIS2."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Co-overexpression with CrEIL1 increased secologanin, vindoline, ajmalicine, anhydrovinblastine, and vinblastine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Secologanin is not an alkaloid, so the exact field value 'Alkaloid' for the whole list is chemically inaccurate relative to the paper's metabolite list."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The co-overexpression metabolite data are explicitly from petals; 'Petals/leaves' overstates the demonstrated site for BIS2 functional metabolite output."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Vinblastine is anticancer and MIAs are bioactive, but secologanin is a precursor rather than an anticancer alkaloid; the combined field wording is only partly aligned."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly shows that co-overexpression with CrEIL1 enhances iridoid gene expression and metabolite accumulation beyond single-gene overexpression."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "BIS2 is important in the CrEIL1 partnership, but the strong wording 'decisive' is interpretive and not explicitly stated in the Results."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points are directly supported in Results 2.7-2.8."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly reported for BIS2 in this paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper implies coexpression of CrEIL1 and BIS2 is a potent strategy, but direct breeding/engineering application value is prospective."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly frames BIS2 in jasmonate-related regulation integrated with ethylene response."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper includes RNA-seq GSE252019 and metabolomics by UPLC-Q/TOF MS and NMR as the omics basis for identifying/interpreting BIS2-related regulation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Although BIS2 was known previously, this paper experimentally validates its interaction with CrEIL1 and functional effect on metabolite output."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 24,
+        "unsupported": 0,
+        "uncertain": 7
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 124,
+    "supported": 102,
+    "unsupported": 1,
+    "uncertain": 21,
+    "total_corrections": 1
+  }
+}

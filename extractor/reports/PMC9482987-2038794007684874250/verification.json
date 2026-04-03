@@ -1,0 +1,158 @@
+{
+  "file": "MinerU_markdown_PMC9482987_2038794007684874250",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC9482987_2038794007684874250.md",
+  "timestamp": "2026-03-31T22:36:48.730114",
+  "genes": [
+    {
+      "gene_name": "NeoPAR1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states that the protein encoded by AT1G09510 exhibited neoPA reduction activity and was named NeoPAR1; plasmid construction also lists AT1G09510 (NeoPAR1)."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NeoPAR1 was identified from Arabidopsis and the study organism throughout is Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The title and text explicitly identify the species as Arabidopsis thaliana."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state all Arabidopsis plants were of the Col-0 ecotype."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional assays and transgenic analyses were performed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species in the experiments is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify Col-0 background for mutants and transgenic plants."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states four candidate genes including NeoPAR1 were predicted to belong to the NAD(P)-binding Rossmann-fold superfamily, and NeoPAR1 contains a conserved YXXXK motif."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The authors explicitly named the AT1G09510 protein NeoPAR1 (neoPA reductase 1)."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper consistently describes this as the ABA catabolic/inactivation pathway, not a biosynthetic pathway. Association with ABA catabolism is supported, but the field label 'Biosynthetic_Pathway' is mismatched."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The study repeatedly places NeoPAR1 in the ABA 9′-hydroxylation pathway."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "NeoPAR1 is described as converting neoPA to epi-neoDPA, i.e. a downstream catabolic reduction step after neoPA formation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "NeoPAR1 is clearly the identified enzyme for neoPA-to-epi-neoDPA conversion, but the paper does not explicitly call it a 'key enzyme' or discuss rate limitation/bottleneck status."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "In vitro enzyme assays showed NeoPAR1 converts neoPA; neoPA is the tested substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The product of NeoPAR1 activity was identified as epi-neoDPA."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Recombinant protein assays were performed with neoPA and NADPH, and NeoPAR1 converted neoPA to epi-neoDPA."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports direct formation of epi-neoDPA from neoPA and additionally shows altered ABA levels/homeostasis in transgenic lines, consistent with an indirect homeostasis effect."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "epi-neoDPA is directly supported as the terminal catabolite identified here. ABA is not a terminal metabolite of NeoPAR1's reaction, only a metabolite whose homeostasis is affected indirectly."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "epi-neoDPA is an ABA catabolite; describing it as a plant hormone catabolite is consistent with the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows NeoPAR1 participates in ABA catabolism/homeostasis and affects seed germination/ABA-related gene expression; epi-neoDPA itself is inactive while NeoPAR1 modulates ABA homeostasis."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Figure 4A supports epi-neoDPA accumulation in siliques with highest levels at S10D. Figure 7A supports epi-neoDPA measurement in dry seeds, but not a comparative claim that dry seeds are an accumulation site. The combined phrasing is only partly supported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show OE2/OE3 had higher epi-neoDPA and ABA and slower germination, whereas neopar1 knockdown/knockout lines had lower epi-neoDPA and ABA and faster germination."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each component is supported by Results: identification of NeoPAR1/AT1G09510 as neoPA reductase, necessity of Tyr163, opposite metabolite and germination phenotypes in OE versus knockdown/knockout, and implication in ABA homeostasis via the 9′-hydroxylation branch."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are reported in the paper and were used in NeoPAR1 characterization: transcriptomics/RNA-seq candidate screening, E. coli recombinant assays, LC-MS, Y163A mutagenesis, OE, T-DNA mutants, CRISPR, RT-qPCR, germination assays, localization, and promoter-GUS."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "YFP-fused NeoPAR1 was shown to be mainly localized in the cytosol."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GUS and RT-qPCR showed predominant expression in dry seeds and siliques, signal in young anthers and chalazal seed coats, and decline during germination; S10D was used as the high-expression/high-epi-neoDPA silique stage."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Same Arabidopsis system as source species; the reported expression pattern matches the Results."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These conditions are all described in the Results/Methods: germination with or without 2-day stratification, neoPA application, and direct germination on water at 23°C and 32°C."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state CaMV 35S was used for overexpression and transient YFP localization constructs, and the native NeoPAR1 promoter drove GUS."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The study used RNA-seq/transcriptome analysis and LC-MS metabolite analyses; no accession number is reported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible application inferred from the phenotypes, but the paper does not explicitly discuss breeding or engineering utility."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports altered ABA homeostasis, which could imply broader ABA-dependent effects, but it does not directly test or state tradeoffs beyond germination-related roles."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly reports very weak PA reduction activity of NeoPAR1 (~0.3% of ABH2), inability of CRL1 to convert neoPA, partial ABA-like activity of neoPA, and inactivity of epi-neoDPA."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 27,
+        "unsupported": 0,
+        "uncertain": 6
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 33,
+    "supported": 27,
+    "unsupported": 0,
+    "uncertain": 6,
+    "total_corrections": 0
+  }
+}

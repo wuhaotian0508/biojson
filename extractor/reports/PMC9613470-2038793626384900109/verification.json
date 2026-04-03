@@ -1,0 +1,719 @@
+{
+  "file": "MinerU_markdown_PMC9613470_2038793626384900109",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC9613470_2038793626384900109.md",
+  "timestamp": "2026-03-31T22:38:51.224988",
+  "genes": [
+    {
+      "gene_name": "iadC",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies the iad locus in Variovorax paradoxus CL14, so the source genus Variovorax is supported."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly refer to the locus in Variovorax paradoxus CL14."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "CL14 is the strain used throughout the Results for the Variovorax iad locus."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "Complementation with iadDE versus iadCDE, knockout of iadCDE, IAA degradation assays, and Arabidopsis root assays are reported. However, there was no iadC-only test and no specific iadC single deletion; evidence is indirect via iadCDE comparison."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 1d,e and text show iadDE alone degrades IAA more slowly than iadCDE and only iadCDE restores Arthrobacter CL28-dependent RGI to wild-type levels."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are supported in aggregate: iadC is not sufficient alone/not shown alone but only acts with iadDE in the reported constructs; iadCDE improves degradation/rescue versus iadDE; and iadC is annotated as a ferredoxin subunit in Fig. 1 legend, consistent with electron transfer support."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 1 legend states genes are identified by last two digits of IMG gene ID 26436136##, and gene 70 is iadC."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied strain in the experiments is Variovorax paradoxus CL14."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA is explicitly identified as an auxin/plant hormone."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "iadC is co-functional with iadD and iadE in the same module and annotated as a ferredoxin subunit, but direct physical interaction between IadC and IadD/IadE was not experimentally shown."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq shows the locus is upregulated in the presence of IAA; iadC is part of that locus."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "CL14 is the strain used for the applied experiments."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The metabolite measured and degraded is indole-3-acetic acid (IAA)."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 1 legend annotates iadC as a ferredoxin subunit, and the Discussion states other ferredoxin subunits in the genome may compensate when iadC is absent."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "IAA was measured in bacterial culture supernatant and plant root phenotypes were assessed in Arabidopsis assays, but the paper does not explicitly state 'IAA accumulation site' as rhizosphere/root environment."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant experiments used IAA supplementation and duo-association with Arthrobacter CL28."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq data are reported and GEO accession GSE210968 is listed in Data availability."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a forward-looking interpretation. The paper suggests utility for developing strains with auxin signal interference properties, but does not specifically frame iadC inclusion in engineered strains in these terms."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "iadC is annotated as a ferredoxin subunit in the figure legend and Discussion."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results show iadC increases degradation rate and is required, together with iadDE, for full CL28-RGI rescue."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization for IadC is reported."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Variovorax in the experiments."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA is described as an auxin controlling plant root development, and faster degradation is linked to improved suppression of RGI in the CL28 context."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The iad locus is induced by IAA in V. paradoxus CL14, which supports iadC being IAA inducible within the operon."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "No subcellular localization for IadC is reported."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "iadD",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 1 legend identifies iadD as the large subunit of an aromatic-ring hydroxylating dioxygenase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is directly studied in bacterial IAA catabolism/degradation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements are explicitly supported by the Results in Fig. 1 and text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was tested in Variovorax."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments use Variovorax paradoxus CL14."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "CL14 is the strain used."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The source genus is Variovorax."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Variovorax paradoxus."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The source strain is CL14."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number 1.14.12.- is provided in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA is described as a plant auxin controlling root development, and its degradation prevents RGI."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "iadD/iadE are required for IAA degradation, but the paper does not explicitly establish this as the 'initial committed oxidative step'."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq shows the locus is induced by IAA and derepressed in the ΔMarR_73 mutant; iadD is downstream of gene 69 and discussed in this context."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "IAA was measured in culture supernatants and plant assays were performed, but the exact phrasing of accumulation site is not explicitly given."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 1 legend maps gene 69 to iadD within IMG gene IDs 26436136##."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The slower degradation and weaker CL28 rescue apply to iadDE versus iadCDE, so this tradeoff is supported for the iadD/iadE minimal module."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper calls iadD the large subunit of an aromatic-ring hydroxylating dioxygenase, but does not explicitly use the term 'Rieske/non-heme iron alpha subunit'."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA supplementation, Arabidopsis mono-/duo-association with Arthrobacter CL28, and M9 succinate medium are all reported experimental contexts."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states iadD and iadE encode the large and small subunits of an aromatic-ring hydroxylating dioxygenase required for IAA degradation in the iad-like pathway."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression of the locus is induced by IAA and elevated in ΔMarR_73."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion abolishes IAA degradation and abolishes RGI reversion; complementation restores these traits."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports iadD/iadE as a key required minimal module, but does not call it rate-limiting."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed approaches were used: gene knockout, complementation, heterologous expression in E. coli, IAA quantification, and Arabidopsis root assay."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper distinguishes iad-like aerobic IAA degradation leading to anthranilic acid, and Variovorax CL14 follows that pathway."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The direct target metabolite tested is IAA."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA is explicitly an auxin/phytohormone."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion states iadD and iadE are weak homologues of iacC and iacD and that iad-like loci proceed to anthranilic acid rather than catechol."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA is the substrate whose degradation depends on iadD/iadE."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "iadD/iadE are upstream and required, but the exact step position in the sequence of intermediates is not directly assigned in Results."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization for IadD is given."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.12.-",
+          "new_value": "NA",
+          "reason": "No EC number 1.14.12.- is provided in the paper."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "No subcellular localization for IadD is given."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 2,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "iadE",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 1 legend identifies iadE as the small subunit of an aromatic-ring hydroxylating dioxygenase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is directly studied in bacterial IAA catabolism/degradation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points are supported by the knockout/complementation and Arabidopsis assays in Fig. 1 and text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was tested in Variovorax."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments use Variovorax paradoxus CL14."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "CL14 is the strain used."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The source genus is Variovorax."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Variovorax paradoxus."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The source strain is CL14."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number 1.14.12.- is given in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA is described as an auxin affecting root development, and degradation mitigates RGI."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "iadE with iadD is required for IAA degradation, but the paper does not explicitly define it as the 'initial required degradation step'."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The iad locus is IAA inducible and derepressed in ΔMarR_73; iadE is part of that locus."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "IAA measurements were made in culture supernatants and plant assays on roots, but the stated accumulation site is not explicit in the paper."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 1 legend maps gene 68 to iadE within IMG gene IDs 26436136##."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The slower degradation and weaker CL28 rescue of iadDE-only complementation versus iadCDE are reported."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies iadE as the small/beta subunit of an aromatic-ring hydroxylating dioxygenase."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA supplementation, Arabidopsis mono-/duo-association with Arthrobacter CL28, and M9 succinate medium are reported contexts."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The text supports that IadE acts with IadD in a dioxygenase complex required for IAA degradation."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The locus is induced by IAA and elevated in ΔMarR_73."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "iadE as part of iadDE is necessary for IAA degradation and metabolic signal interference."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "Supported as a key required minimal module, but not explicitly shown to be rate-limiting."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are present in the Results."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Variovorax CL14 is assigned to the iad-like aerobic IAA degradation branch leading to anthranilic acid."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA is the target metabolite tested."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA is an auxin/phytohormone."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports iadE as the partner subunit of iadD in the catalytic dioxygenase complex."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA is the substrate whose degradation depends on iadDE."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "Upstream/initial required role is plausible but not explicitly mapped step-by-step in the Results."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization for IadE is reported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.12.-",
+          "new_value": "NA",
+          "reason": "No EC number 1.14.12.- is given in the paper."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "No subcellular localization for IadE is reported."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "MarR_73 (IadR)",
+      "category": "Regulation",
+      "verification": {
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The regulator was studied in Variovorax."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments use Variovorax paradoxus CL14."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "CL14 is the strain used."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The source genus is Variovorax."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Variovorax paradoxus."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The source strain is CL14."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed approaches are in the paper: ligand ITC, crystal structures, DNA-binding ITC with operator oligo, knockout, complementation, RNA-seq, and IAA degradation assay."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA is described as a plant auxin affecting root development, and degradation suppresses RGI."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly conclude MarR_73 functions as a repressor, with IAA binding causing DNA release and operon derepression."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq and DNA-binding data support repression of downstream iad locus genes in the absence of IAA and derepression upon IAA binding."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 2a states MarR_73 forms a dimer."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 1 legend identifies MarR_73 as gene suffix 73 within IMG gene ID 26436136##."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The listed interactors are DNA operator and IAA, which are not proteins. No interacting protein partner is reported."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA supplementation and M9 succinate medium are part of the MarR_73 experiments. Arabidopsis root assay context is part of the broader study but not direct MarR_73 testing."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion increasing IAA degradation rate is directly shown; no direct plant tradeoff is reported."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "All details listed are present: ~0.41 μM IAA affinity, key residues, and use of S28A for DNA-binding because native protein likely retained ligand."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "MarR_73 controls IAA catabolism/auxin signal interference via regulation of the iad locus."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three summary statements are directly supported by Fig. 2 and text."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies the DNA site between iadR and iadA and shows genes downstream of gene 69 are derepressed in ΔMarR_73; targeting the downstream iad operon including iadA/iadDE is supported."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization for MarR_73 is reported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper broadly mentions development of strains with auxin signal interference properties, but not specific engineering applications of MarR_73 as stated here."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "MarR_73 is explicitly a MarR-family transcriptional regulator."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq with GEO GSE210968 is reported; metabolomics JGI 1340427 is also reported in the paper, though not specific to MarR_73."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "MarR_73 is explicitly a MarR family regulator."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA is an auxin/phytohormone."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA is the ligand and target metabolite."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Culture supernatant measurements and Arabidopsis root assays are present, but this exact accumulation-site wording is not explicit."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The locus containing MarR_73 is present and its downstream gene expression is IAA inducible and derepressed in ΔMarR_73."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA-dependent derepression by the substrate is explicitly demonstrated."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "MarR_73 is shown to be the primary IAA-responsive repressor controlling expression of the iad catabolic locus."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA and other auxins/aromatic ligands were tested for binding to MarR_73."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of MarR_73 or IAA binding increases catabolism by relieving repression; this is directly shown."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "A DNA site between iadR and iadA was identified as the MarR_73 binding/operator sequence, consistent with a native promoter/operator region derepressed by IAA."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "DNA operator between iadR and iadA; IAA",
+          "new_value": "NA",
+          "reason": "The listed interactors are DNA operator and IAA, which are not proteins. No interacting protein partner is reported."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "No subcellular localization for MarR_73 is reported."
+        }
+      ],
+      "stats": {
+        "supported": 29,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "MarR_50 (IadR2)",
+      "category": "Regulation",
+      "verification": {
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The regulator was studied in Variovorax."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments use Variovorax paradoxus CL14."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "CL14 is the strain used."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The source genus is Variovorax."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Variovorax paradoxus."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The source strain is CL14."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Protein-ligand ITC, knockout, RNA-seq, and IAA degradation assay were all used for MarR_50."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA is described as a plant auxin whose degradation modulates root growth inhibition."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indicates a putative regulatory/repressive role for MarR_50 but states the precise role remains unclear; this wording matches the claim."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq shows gene 51 is highly upregulated independent of IAA and suggests amplification of locus upregulation in response to IAA."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "UNCERTAIN",
+          "reason": "MarR-family proteins are commonly dimers, but no direct structural or biochemical evidence for MarR_50 dimerization is reported here."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 1 legend identifies MarR_50 as gene suffix 50 within IMG gene ID 26436136##."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA supplementation and M9 succinate medium are the conditions used in the MarR_50 analyses."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says the precise role of MarR_50 remains unclear."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "No IAA binding was detected, no DNA binding site was identified, and deletion increased IAA degradation rate."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "MarR_50 is implicated in regulation of IAA catabolism."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three summary statements are directly supported by the Results."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper specifically suggests only gene 51 may be regulated by MarR_50 and its broader target remains unclear; 'possibly gene 51 and/or auxiliary iad locus genes' is a cautious summary."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization for MarR_50 is reported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is an extrapolated application not directly stated in the paper."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "MarR_50 is explicitly a MarR-family regulator."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq data with GEO GSE210968 are reported and used to assess MarR_50 effects."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly a MarR family DNA-binding regulator."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA is an auxin/phytohormone."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA is the metabolite tested in relation to MarR_50."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Culture supernatant measurements and root assays are reported, but the stated accumulation site is not explicit."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "MarR_50 is located in the auxin degradation locus and transcriptomic effects upon deletion are shown."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion increases IAA degradation rate, supporting a secondary modulatory influence on the target product."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows IAA does not bind directly under tested conditions and does not identify another ligand, so 'unknown; not IAA by direct binding under tested conditions' is supported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion increases IAA degradation rate, implying negative regulation."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not identify a specific MarR_50 operator/promoter; only generic native locus context can be inferred."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "No subcellular localization for MarR_50 is reported."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 148,
+    "supported": 121,
+    "unsupported": 8,
+    "uncertain": 19,
+    "total_corrections": 8
+  }
+}

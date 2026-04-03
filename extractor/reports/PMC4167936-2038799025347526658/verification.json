@@ -1,0 +1,932 @@
+{
+  "file": "MinerU_markdown_PMC4167936_2038799025347526658",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC4167936_2038799025347526658.md",
+  "timestamp": "2026-03-31T22:10:55.137211",
+  "genes": [
+    {
+      "gene_name": "CNE1-derived ER1 targeting sequence",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Online Methods states the ER1 targeting sequence was from CNE1 with 'Genbank ID#: AAA65967.1'."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CNE1 is a yeast gene and the paper describes using the calnexin transmembrane domain as an ER routing tag in yeast."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper names CNE1/calnexin and uses yeast genomic DNA, but does not explicitly spell out 'Saccharomyces cerevisiae' as the source of CNE1 in the ER1 sentence."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says endogenous targeting sequences were amplified from W303α genomic DNA, but also cites CNE1 reference sequence AAA65967.1; the exact phrasing 'W303α genomic source for targeting sequence context' is not explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The ER1 tag was applied in engineered yeast strains."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied host throughout is S. cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "All strains were constructed from haploid W303α."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state microscopy vectors were built in pAG416GPD-ccdB, indicating a GPD promoter; ER1 was fused to COR1.3 in these constructs."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Methods describe ER1 as a 28 amino acid transmembrane domain from calnexin/CNE1 used as an ER routing tag."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The tag is explicitly described as an endoplasmic reticulum routing tag and used to localize fusion proteins to the ER."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "ER1 was directly tested for its effect on morphine production specificity and titer."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Morphine is an alkaloid/opiate in the paper's context."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Morphine is discussed as an opioid pharmaceutical/analgesic."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Morphine was measured in the culture medium."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show COR1.3-ER1 increased morphine specificity and reduced flux to neomorphine relative to untagged COR1.3."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Confocal microscopy validated localization of GFP/COR1.3 fusions, and metabolite profiling quantified morphine/neomorphine."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by the localization and metabolic data in Fig. 2b and text."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The localization experiment was performed in engineered yeast cultures fed thebaine."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Authors explicitly state they cannot rule out that some effect may be due to reduced COR1.3 activity upon ER localization."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "ER1 was fused directly to COR1.3 and also GFP."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results support ER1 as a spatial engineering tool to improve product specificity in yeast metabolic engineering."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a non-catalytic engineering element directly tested in Results for flux control/localization."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 20,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "T6ODM",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state T6ODM is from P. somniferum (opium poppy)."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "P. somniferum is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "T6ODM was expressed in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is S. cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state all strains derive from W303α."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state initial genes were flanked by unique yeast promoters/terminators in YAC, and added genomic copies used the constitutive GPD promoter."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly reports heterologous expression in engineered yeast grown with thebaine."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "T6ODM is explicitly described as a 2-oxoglutarate Fe2+-dependent dioxygenase."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "T6ODM is thebaine 6-O-demethylase."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper implies untagged pathway enzymes are cytoplasmic in the localization comparison, but does not directly demonstrate T6ODM localization."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "T6ODM functions in the morphine/opiate morphinan pathway, part of BIA biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It participates in the thebaine-to-morphine route and also the simplified T6ODM+morB route to hydrocodone/oxycodone."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "T6ODM acts on fed thebaine at the entry to the engineered pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "T6ODM acts on thebaine."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states T6ODM direct product is neopinone, which rearranges to codeinone; this supports the stated intermediate pool description."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly describe oxidative demethylation of thebaine by T6ODM in a 2-oxoglutarate-dependent reaction leading to neopinone/codeinone."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "T6ODM initiates formation of precursors for codeine, morphine, hydrocodone, oxycodone, and hydromorphone in the tested strains."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The cautious wording matches Results: T6ODM is important, and increased T6ODM with CODM improved flux, but it was not claimed as sole rate-limiting."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly links T6ODM-containing pathways to morphine, hydrocodone, oxycodone, and hydromorphone production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are opioid alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "These molecules are described as opioid pharmaceuticals/analgesics."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Products were measured in culture medium."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "T6ODM enabled conversion of thebaine into downstream opioids, and copy-number changes influenced production."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by heterologous expression, copy-number titration, and HPLC-MS metabolite profiling."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point is directly supported by Results sections on pathway construction, copy-number balancing, and T6ODM+morB strain."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed treatments match culture conditions in Results/Methods."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly describe branching to neopine/neomorphine due to access of T6ODM product to COR before rearrangement."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "T6ODM was tested together with COR1.3, CODM, and morB in pathway constructs."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents T6ODM as a key entry enzyme for microbial opioid production requiring pathway balancing."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Requirement for 2-oxoglutarate and context-dependent product distribution are explicitly discussed."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 29,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "COR1.3",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "COR1.3 is from P. somniferum."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "P. somniferum is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "COR1.3 was expressed in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is S. cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Strains were based on W303α."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Initial YAC genes used unique yeast promoters/terminators; integrated copies used GPD promoter; ER1-tagged COR1.3 was also expressed in these systems."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper tested both cytoplasmic and ER-targeted heterologous COR1.3 in yeast."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "COR is described as an NADPH-dependent aldoketo reductase."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "COR stands for codeinone reductase."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state untagged COR1.3 is localized to the cytoplasm with T6ODM/CODM and COR1.3-ER1 is ER-localized."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "COR1.3 is part of the morphine/morphinan BIA pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly shows COR1.3 acts in the codeinone-to-codeine step and undesired neopinone-to-neopine branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It functions as a midstream branch-sensitive step in the engineered pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Codeinone is explicit, and neopinone reduction is inferred and discussed from product formation in yeast."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Codeine is explicit and neopine production is supported by the observed undesired branch attributed to COR activity."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state COR catalyzes reversible reduction of codeinone to codeine and in yeast likely reduces neopinone to neopine."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "COR1.3 directly affects precursor formation for morphine and byproduct neomorphine."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports COR as a key branch-control step rather than establishing it as sole rate-limiting."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "COR1.3 is directly tied to morphine and neomorphine production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are alkaloid opioids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "They are opioid pharmaceuticals/analgesics in the paper's context."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measured in culture medium."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show COR1.3 supports codeine/morphine but diverts flux to neopine/neomorphine; ER targeting increases morphine specificity."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by isoform selection rationale, copy-number titration, ER targeting, confocal microscopy, and metabolite profiling."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four listed findings are explicitly supported in Results."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These conditions are described for the assays involving COR1.3."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Higher COR copy number increased neomorphine; authors also note possible reduced activity upon ER localization; 14-hydroxycodeine discussion is present for fermentation strain."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "COR1.3 was functionally tested with T6ODM, CODM, and fused to ER1."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper clearly presents COR1.3 tuning/localization as valuable for controlling product specificity."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Authors explicitly note lack of prior literature for COR activity on neopinone and connect it to neopine formation."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 30,
+        "unsupported": 0,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "CODM",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CODM is from P. somniferum."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "P. somniferum is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CODM was expressed in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is S. cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Strains derive from W303α."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Initial YAC genes used unique yeast promoters/terminators and integrated copies used GPD promoter."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly tested heterologous CODM expression during thebaine conversion in yeast."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CODM is explicitly a 2-oxoglutarate Fe2+-dependent dioxygenase."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "CODM denotes codeine O-demethylase."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "CODM is likely cytoplasmic with untagged pathway enzymes, but this is not directly localized experimentally."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CODM is part of morphinan/BIA opioid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It acts in codeine-to-morphine and neopine-to-neomorphine branches."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "CODM is a downstream branch-determining step in the engineered pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly discuss codeine and neopine as substrates, with Supplementary Fig. 5 noting preference for codeine."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Morphine and neomorphine are directly attributed to CODM activity."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The oxidative O-demethylation of codeine to morphine and neopine to neomorphine is directly described."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CODM directly forms morphine and neomorphine."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show higher CODM copy number increased titers and fermentation analysis suggests CODM activity may be limiting."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CODM is directly connected to morphine and neomorphine and, in downstream routes, hydromorphone production depends on morphine branch flux."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are alkaloid opioids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "These products are opioid pharmaceuticals/analgesics."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measured in culture medium."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support increased CODM copy number improving morphine and total flux and favoring morphine due to substrate preference."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by heterologous expression, copy-number titration, pathway conversion analysis, and metabolite profiling."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four summary statements are supported by Results and Supplementary Fig. 5 references."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These conditions are part of the reported assays."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows CODM can still contribute to neomorphine formation and may remain limiting downstream."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "CODM was tested in pathway combinations with T6ODM, COR1.3, morA, and morB."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper clearly motivates optimizing CODM copy number/activity for improved production."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Need for 2-oxoglutarate and possible bottleneck status are directly discussed."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 29,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "morA",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper gives UniProtKB: Q51990 for morB, not for morA; no accession for morA is provided in the text shown."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "morA is from Pseudomonas putida M10."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Pseudomonas putida is explicitly stated."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strain M10 is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "morA was heterologously expressed in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is S. cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "All strains derive from W303α."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "morA was included in a YAC with expression cassettes flanked by unique yeast promoters/terminators."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly tested heterologous morA expression for semisynthetic opioid production."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "morA is described as an aldo-keto reductase and as NADP+-dependent morphine dehydrogenase."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "morA is explicitly named morphine dehydrogenase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "morA was used to extend yeast biosynthesis to semi-synthetic opioid products."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "morA participates in the morphine/hydromorphone and codeinone reduction branch described in the paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The data support a midstream/downstream role affecting branch outcomes."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper explicitly states morA can act in morphine-to-hydromorphone system, can replace COR on codeinone, and acts on hydrocodone/hydromorphone; however the full substrate list including 'likely 14-hydroxycodeinone-related intermediates' is partly inferential."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "Codeine support is direct, and dihydrocodeine/dihydromorphine side products are mentioned, but 'morphinone-related products' is vague and not explicitly listed as a measured primary product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that morA catalyzes opioid interconversions, can substitute for COR to reduce codeinone to codeine, and participates in semi-synthetic opioid routes."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "morA directly affects formation of morphine, hydrocodone, and hydromorphone routes and side products."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The cautious wording is consistent with the paper: not rate-limiting, but influential in route feasibility and branching."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "morA is directly linked to hydromorphone, hydrocodone, and morphine outcomes in Results."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are opioid alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "These are pharmaceutical opioids/analgesics in the text."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measured in culture medium."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show morA enables alternative hydrocodone/hydromorphone route, can replace COR, and side products/cofactor limitation affect outcomes."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by pathway substitution and combinatorial expression experiments with metabolite profiling."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points are supported by Results, including 69% selectivity with morA replacing COR and side-product accumulation in CSY951."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Thebaine feeding and NADP+/NADPH limitation are directly discussed."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports side products and cofactor limitation affecting the morA-containing pathway."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "morA was tested with morB, T6ODM, and CODM."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents morA as useful for alternative semisynthetic opioid branches, with need for further engineering."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The description of morA as NADP+-dependent morphine dehydrogenase and its multiple substrate activities is supported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Gene_Accession_Number",
+          "old_value": "UniProtKB: Q51990",
+          "new_value": "NA",
+          "reason": "The paper gives UniProtKB: Q51990 for morB, not for morA; no accession for morA is provided in the text shown."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "morB",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Q51990 is mentioned as the original morB sequence relative to the variant discussion, but assigning this accession to the wild-type morB entry in the extracted JSON is not fully explicit; the text ties Q51990 specifically to the 'original reported sequence' in comparison with the tested alternative sequence."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "morB is from Pseudomonas putida M10."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Pseudomonas putida is explicitly stated."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "M10 is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "morB was expressed in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is S. cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "All strains derive from W303α."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "morB was included in YAC constructs that used unique yeast promoters/terminators."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly tested heterologous expression of morB for semi-synthetic opioid production."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "morB is described as an α/β-barrel flavoprotein oxidoreductase and NADH-dependent morphinone reductase."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "morB is explicitly named morphinone reductase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "morB extends the pathway to semisynthetic opioid products."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results connect morB to hydrocodone/hydromorphone and oxycodone formation branches."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "morB functions as a downstream product-forming enzyme in the engineered routes."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly or inferentially supports action on codeinone and 14-hydroxycodeinone; morphinone is implied by its name and prior characterization."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Hydrocodone, hydromorphone, and oxycodone are directly reported products of morB-containing strains."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show morB catalyzes transformations leading to hydrocodone/hydromorphone and is associated with oxycodone formation from 14-hydroxycodeinone."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "morB directly forms target semisynthetic opioids in the engineered yeast."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The phrasing fits Results: morBE160G redirects flux and the simplified T6ODM+morB strain gives high product titers."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "morB is directly tied to hydrocodone, hydromorphone, and oxycodone production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are opioid alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "These are described as pharmaceutical opioids/analgesics."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measured in culture medium."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support morB enabling semi-synthetic opioid production and highest hydrocodone/oxycodone in T6ODM+morB strain."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by heterologous pathway designs, variant comparison, and metabolite profiling."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each summary point is directly supported by Table 1 and strain descriptions."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "UNCERTAIN",
+          "reason": "Thebaine feeding and batch fermentation are supported, but specifically linking morB performance to 'NADP+/NADPH limitation' is indirect because morB is NADH-dependent and the cofactor limitation note concerns hydromorphone biosynthesis more generally."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Hydrocodone to dihydrocodeine conversion by unknown mechanism and altered product distribution with the variant are directly reported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "morB was tested with morA, T6ODM, and CODM."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper clearly supports morB as valuable for microbial semi-synthetic opioid production, especially in simplified pathways and variant tuning."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The alternative E160G sequence from PDB 1GWJ_A is explicitly discussed as altering flux distribution."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Gene_Accession_Number",
+          "old_value": "UniProtKB: Q51990",
+          "new_value": "NA",
+          "reason": "Q51990 is mentioned as the original morB sequence relative to the variant discussion, but assigning this accession to the wild-type morB entry in the extracted JSON is not fully explicit; the text ties Q51990 specifically to the 'original reported sequence' in comparison with the tested alternative sequence."
+        }
+      ],
+      "stats": {
+        "supported": 29,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "morB(E160G)",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states an alternative morB amino acid sequence '(RCSB PDB: 1GWJ_A)' with Glu160Gly mutation was tested."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme is still from Pseudomonas putida M10 context in the Results section."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Pseudomonas putida is explicitly stated for morB enzymes."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The source strain M10 is given for morA/morB in the preceding paragraph."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The variant was expressed in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is S. cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "All strains derive from W303α."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The variant was substituted into the same YAC expression system with unique yeast promoters/terminators."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The variant was heterologously expressed in engineered yeast and later used in the final hydromorphone strain."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "As a morB variant, it is a variant morphinone reductase/flavoprotein oxidoreductase; this is directly inferable from the paper."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "It is an alternative amino acid sequence of morB, i.e., a morphinone reductase variant."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It was tested in the semi-synthetic opioid transformation branch."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses the variant specifically to bias flux toward hydromorphone."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It acts at the same downstream product-forming step as morB."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper suggests reduced activity on codeinone and redirecting flux to hydromorphone, but does not explicitly define the full substrate set for the variant."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Hydromorphone and hydrocodone are the directly measured products compared for the variant."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly states the variant altered catalytic behavior/product distribution, lowering hydrocodone and increasing hydromorphone."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The variant directly affects target semi-synthetic opioid products."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The wording as a flux-tuning variant is consistent with Results showing altered product distribution."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Hydromorphone is the targeted end product linked to the variant."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Hydromorphone is an opioid alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Hydromorphone is discussed as an analgesic opioid pharmaceutical."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measured in culture medium."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show the variant lowered hydrocodone and slightly increased hydromorphone, and it was chosen for the final hydromorphone strain."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by direct variant substitution and metabolite profiling."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are explicitly supported by Table 1 and final strain description."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The variant was tested in thebaine-fed engineered yeast cultures."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Authors explicitly suggest reduced activity on codeinone lowers hydrocodone output."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The variant was tested with morA, T6ODM, and CODM in the pathway."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper clearly uses this allele/variant choice to tailor product profile toward hydromorphone."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutation is explicitly described as Glu160Gly relative to the original morB sequence."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 30,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 205,
+    "supported": 195,
+    "unsupported": 2,
+    "uncertain": 8,
+    "total_corrections": 2
+  }
+}

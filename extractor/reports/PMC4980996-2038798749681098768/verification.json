@@ -1,0 +1,314 @@
+{
+  "file": "MinerU_markdown_PMC4980996_2038798749681098768",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC4980996_2038798749681098768.md",
+  "timestamp": "2026-03-31T22:11:55.163661",
+  "genes": [
+    {
+      "gene_name": "FPS",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names FPS as FARNESYL DIPHOSPHATE SYNTHASE in the Summary, figures, and Results."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The Summary/Results state the N line expresses chloroplast-targeted SQS and FPS via the nuclear genome, and C lines express FPS from the chloroplast genome."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental procedures state the FPS coding sequence was a 4xHis-tagged avian FPS."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The transformed plant species throughout the paper is tobacco."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly refer to Nicotiana tabacum lines."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly uses the WT 1068 introduction and also references the Petit Havana background for SQS-only transplastomic comparison."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental procedures list avian FPS as GenBank accession P08836."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The study repeatedly describes FPS as part of terpene biosynthesis engineered to promote squalene biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "FPS is presented as part of the squalene biosynthesis module and upstream of SQS; Discussion states IPP is the substrate of FPS and SQS uses the downstream product pool."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly states IPP is the substrate of FPS and mentions DMAPP alongside IPP in the MEP pathway context; for FPS enzymology this substrate pair is directly inferable."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The abbreviation FARNESYL DIPHOSPHATE SYNTHASE strongly implies production of farnesyl diphosphate, but the paper does not explicitly state 'FPS produces FPP' in Results."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "This full mechanistic description is biochemically standard, but the paper does not explicitly describe the condensation reaction in Results or Methods."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for FPS appears in the paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "FPS is described as part of the engineered pathway feeding squalene biosynthesis and therefore upstream of the target product; this is directly inferable from gene names and study design."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "FPS was engineered specifically to promote squalene biosynthesis together with SQS, indicating it supplies precursor for the target product."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports substrate/storage limitation for squalene accumulation despite high transplastomic expression, but it does not specifically establish FPS itself as a limited or non-limiting control step."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The target metabolite throughout the study is squalene."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 classifies squalene under secondary metabolism/terpenoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper focuses on engineering squalene accumulation, but 'industrial/high-value triterpene' is not stated in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Leaf tissue was assayed and glandular trichomes are discussed as possible sinks, but actual localization of squalene accumulation to trichomes was not directly shown."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Northern blot confirmed chloroplast-expressed His-FPS transcript in C, and RNA-seq reports large FPS expression increases in engineered lines; leaf tissues were analyzed."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "For chloroplast FPS, Methods/Results state Prrn promoter with T7 gene10 5' element and tobacco rbcL 3' UTR. The N-line promoter is indeed not specified in this paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Metabolome and transcriptome analyses were performed on plants grown via nodal cutting in sterile tissue culture, sampling the third youngest leaf at identical developmental stage."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly used chloroplast/nuclear engineering, northern blot for FPS transcript, metabolomics, phenotyping, and RNA-seq."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "FPS and SQS were co-engineered functionally, but no physical protein-protein interaction was tested or demonstrated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper includes RNA-seq with GEO accession GSE74103 and metabolomics by GC/MS and UHPLC/MS/MS."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results describe abnormal leaves/flowers, reduced pollen and fertility, and broad metabolome/transcriptome perturbations in engineered FPS/SQS lines."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show all engineered lines accumulated ~150-fold more squalene than WT despite much higher transplastomic SQS expression, and extensive off-target effects were documented for FPS/SQS lines."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are consistent with Results/Discussion: FPS was engineered with SQS, chloroplast FPS transcript accumulated strongly, squalene plateaued around 150-fold, and broad phenotypic/metabolomic/transcriptomic effects occurred."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The recommendation to pair with precursor/sink expansion is consistent with Discussion suggestions, but 'application value' wording is interpretive rather than directly stated as a validated conclusion."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "FPS is an enzyme in the prenyltransferase class by general knowledge, but the paper does not explicitly assign this family/domain."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state the source gene was codon-optimized 4xHis-tagged avian FPS, and Discussion explicitly links FPS demand to MEP-pathway precursor imbalance and possible retrograde signaling."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.5.1.10",
+          "new_value": "NA",
+          "reason": "No EC number for FPS appears in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 1,
+        "uncertain": 8
+      }
+    },
+    {
+      "gene_name": "SQS",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names SQS as SQUALENE SYNTHASE."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The N line is described as expressing chloroplast-targeted SQS/FPS via the nuclear genome, and C/CN express SQS from the chloroplast genome."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state the SQS coding sequence was Flag-tagged yeast SQS."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The transformed plant species is tobacco."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly refer to Nicotiana tabacum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly uses WT 1068 and references Petit Havana for SQS-only transplastomic plants."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods list yeast SQS as GenBank accession NM001179321."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The study centers on engineering squalene biosynthesis as part of terpene metabolism."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SQS is directly presented as the squalene biosynthesis enzyme; it functions at the squalene-forming step downstream of FPS."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "That SQS uses FPP is standard biochemistry and inferable from the pathway, but the paper does not explicitly state this in Results."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "From the enzyme name SQUALENE SYNTHASE and the engineering goal, it directly follows that SQS produces squalene."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact wording 'converts farnesyl diphosphate into squalene' is biochemically correct, but not explicitly stated in the paper."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for SQS appears in the paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "SQS is the product-forming step for the target metabolite squalene, directly inferable from enzyme name and study design."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "SQS directly forms the engineered target product, squalene."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Discussion show that despite 1400–4372-fold higher SQS protein in transplastomic lines, squalene did not exceed N, supporting that SQS overaccumulation alone was not sufficient because of substrate/storage limitations."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The engineered end product is squalene."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 classifies squalene among terpenoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper treats squalene as the engineered target metabolite, but does not explicitly call it an industrial/high-value triterpene."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Measurements were from leaf tissue and trichomes are proposed as sinks, but actual squalene localization was not experimentally demonstrated."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Western blot/densitometry showed Flag-SQS in N, C, and CN, with C at 1399–2309-fold and CN at 2813–4372-fold above N."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Methods specify plastid SQS expression under the tobacco psbA promoter with 5' UTR and 3' UTR; N-line promoter is not specified here."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Plants for metabolome/transcriptome analyses were grown under identical sterile tissue culture conditions and sampled as third youngest leaves at the same stage."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper used transgenic/transplastomic expression, anti-Flag western blot for SQS, metabolomics, phenotyping, and RNA-seq."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "SQS was co-expressed with FPS in pathway engineering, but no direct protein interaction was tested."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq (GSE74103) and metabolomics by GC/MS and UHPLC/MS/MS are explicitly reported."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results document small curled leaves, clustered inflorescences, aborted buds, reduced pollen/fertility, and widespread metabolite/transcript changes in engineered lines."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show ~150-fold squalene accumulation in engineered lines and strong off-target metabolic/transcriptomic changes; Table S2/Discussion note SQS-only PH plants altered nearly 100 metabolites including nicotine."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points accurately reflect the paper: SQS overexpression increased squalene, transplastomic SQS protein was orders of magnitude higher without more squalene, and major developmental/off-target effects occurred, including PH-SQS nicotine elevation."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Discussion suggests increasing sink capacity via trichomes or lipid droplets, but this field frames that as application advice beyond what was directly tested."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper never identifies SQS as belonging to the 'squalene/phytoene synthase family'."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods identify the gene as codon-optimized Flag-tagged yeast SQS, and the paper argues the signaling effects relate to pathway imbalance rather than squalene amount alone."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.5.1.21",
+          "new_value": "NA",
+          "reason": "No EC number for SQS appears in the paper."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "Squalene/phytoene synthase family",
+          "new_value": "NA",
+          "reason": "The paper never identifies SQS as belonging to the 'squalene/phytoene synthase family'."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 2,
+        "uncertain": 6
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 64,
+    "supported": 47,
+    "unsupported": 3,
+    "uncertain": 14,
+    "total_corrections": 3
+  }
+}

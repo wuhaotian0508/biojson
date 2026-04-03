@@ -1,0 +1,274 @@
+{
+  "file": "MinerU_markdown_PMC12464976_2038799991425761290",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12464976_2038799991425761290.md",
+  "timestamp": "2026-03-31T21:53:01.427797",
+  "genes": [
+    {
+      "gene_name": "OsLpa1",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1b explicitly labels the Lpa1 locus as OsLpa1, LOC_Os02g57400."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper names Lpa1/OsLpa1 as the low phytic acid gene affecting PA accumulation, but does not explicitly describe a protein family/domain or state 'non-enzyme/common gene'."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly connect lpa1 to reduced phytic acid and altered Fe and Zn pools in grains, including lower PA-bound Fe/Zn and increased grain Fe/Zn accumulation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Phytic acid is treated as the phosphorus storage/antinutrient compound, and Fe/Zn as mineral nutrients throughout the Results and Discussion."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results section 3.4 shows lower PA-bound Fe/Zn and higher NA/DMA-associated Fe/Zn in lpa1 and lpa1 RcN2 grains, supporting improved mineral bioavailability rationale."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "PA, NA, and DMA were measured in mature brown grains, and mineral contents were measured in both brown and polished grains; however PA-bound Fe/Zn speciation was assessed from brown grain extracts, not polished grain specifically."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses rice throughout."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods states the WT cultivar Dongjin is Oryza sativa L. ssp. japonica."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods explicitly states the rice cultivar Dongjin was used."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The engineered and mutant plants were all rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species in this study is Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The transformations/mutations were performed in cultivar Dongjin."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show CRISPR lpa1 lowered grain PA, lpa1/lpa1 RcN2 had lower PA-bound Fe/Zn, lpa1 grains had slightly higher NA/DMA, and mineral accumulation was highest in lpa1 RcN2."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are described and used in Results: CRISPR/Cas9 knockout, PA assay, LC-MS/MS, ICP-MS, SEC-ICP-MS/ESI-MS, field phenotyping, and SEM."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Plants were grown in growth chamber conditions and in a field paddy; field-grown plants were used for phenotypic and grain measurements."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper studies the combined genotype lpa1 RcN2, but does not show a physical or molecular protein-protein interaction between OsLpa1 and OsNAS2."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point matches Results: ~30–41% PA reduction, lower PA-bound Fe/Zn with slightly higher NA/DMA in lpa1, strongest mineral accumulation in lpa1 RcN2, and agronomic penalties plus chalkiness."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly presents lpa1/lpa1 RcN2 as useful for improved mineral bioavailability and chalky grains favorable for flour, while suggesting combination with other low-phytate alleles to reduce yield penalties."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results section 3.6 directly reports shorter culms, fewer tillers, reduced panicle/grain traits, lower seed-setting, lower hundred-grain weight, and high chalkiness in lpa1 backgrounds."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states chalkiness may benefit flour production despite poorer conventional grain quality, and suggests combining RcN2 with alternative low-phytate alleles lacking agronomic penalties."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "OsNAS2",
+          "new_value": "NA",
+          "reason": "The paper studies the combined genotype lpa1 RcN2, but does not show a physical or molecular protein-protein interaction between OsLpa1 and OsNAS2."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "OsNAS2",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies NAS2/OsNAS2 as nicotianamine synthase 2."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided anywhere in the paper text."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state NAS2 catalyzes biosynthesis of NA, and Discussion states NA is the precursor to DMA; this supports the reaction description at a general level."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "S-adenosyl-L-methionine is not mentioned in the paper text provided."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 3.1 explicitly states NAS2 catalyzes the biosynthesis of NA."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper centers on NA and DMA biosynthesis/metal chelator biosynthesis regulated by NAS2."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states NAS2 synthesizes NA, which is the precursor to DMA, supporting placement in the NA-to-DMA branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Because NAS2 synthesizes NA and NA is precursor to DMA, NAS2 is upstream of DMA production as described in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly links NAS2-derived NA to downstream DMA production and to increased grain mineral accumulation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "NAS2 is clearly important in this study, but the paper does not explicitly call it rate-limiting or a key control step."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly connect OsNAS2 overexpression to increased NA and DMA and to increased Fe and Zn in grains."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "NA/DMA are treated as metal chelators and Fe/Zn as mineral nutrients throughout the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Discussion state NA and DMA chelate metals, promote transport to grains, and are associated with more bioavailable Fe/Zn forms."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "NA/DMA were measured in mature brown grains, minerals in brown and polished grains, and Discussion/Results infer enhanced endosperm enrichment after polishing."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsNAS2 is a rice gene and the study is in rice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study species is Oryza sativa L. ssp. japonica."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The cultivar used is Dongjin."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The transgenic lines were generated in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The transformed background was Dongjin."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "RcN2 is explicitly described as OsRCc3pro:NAS2, with OsRCc3 as a tissue-specific/root-predominant promoter."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show higher NAS2 transcript levels in roots of RcN2 and lpa1 RcN2, and figure legend/discussion describe OsRCc3 as predominantly active in roots and also in node phloem companion cells."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization for OsNAS2 is stated in the paper text."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show root-directed NAS2 overexpression increased grain NA/DMA, raised Fe/Zn/Mn/Cu and also Mg/K, increased NA/DMA-bound Fe/Zn, and RcN2 showed no major agronomic penalty."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed methods are all explicitly used: transgenic overexpression under OsRCc3, RT-qPCR, LC-MS/MS, ICP-MS, SEC-ICP-MS/ESI-MS, and field phenotyping."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Growth chamber and field-grown paddy conditions are explicitly described."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "OsNAAT1, OsDMAS1, OsTOM1, OsIRT1, OsYSL2, OsCOPT1, OsZIP4, and OsZIP5 were measured as co-regulated genes, not demonstrated as interacting proteins with OsNAS2."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points are directly supported by the Results: strong NA/DMA increase, higher minerals in brown/polished grains, stronger effect when combined with lpa1 including speciation shift, and no significant agronomic penalty in RcN2."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly frames RcN2/OsNAS2 as a promising biofortification resource, especially with tissue-specific expression and future introgression into elite cultivars."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show no significant penalty in RcN2 alone, while lpa1 RcN2 has penalties; Discussion attributes these mainly to lpa1-related tradeoffs."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states NA/DMA were quantified only in brown grains and that contributions of root- versus phloem/node-derived chelators to grain accumulation remain speculative."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.5.1.43",
+          "new_value": "NA",
+          "reason": "No EC number is provided anywhere in the paper text."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "S-adenosyl-L-methionine",
+          "new_value": "NA",
+          "reason": "S-adenosyl-L-methionine is not mentioned in the paper text provided."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "No subcellular localization for OsNAS2 is stated in the paper text."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "OsNAAT1; OsDMAS1; OsTOM1; OsIRT1; OsYSL2; OsCOPT1; OsZIP4; OsZIP5",
+          "new_value": "NA",
+          "reason": "OsNAAT1, OsDMAS1, OsTOM1, OsIRT1, OsYSL2, OsCOPT1, OsZIP4, and OsZIP5 were measured as co-regulated genes, not demonstrated as interacting proteins with OsNAS2."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 4,
+        "uncertain": 1
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 51,
+    "supported": 43,
+    "unsupported": 5,
+    "uncertain": 3,
+    "total_corrections": 5
+  }
+}

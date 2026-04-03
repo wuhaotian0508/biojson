@@ -1,0 +1,383 @@
+{
+  "file": "MinerU_markdown_PMC9860180_2038793425481924609",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC9860180_2038793425481924609.md",
+  "timestamp": "2026-03-31T22:41:45.888624",
+  "genes": [
+    {
+      "gene_name": "CAC3",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods states the cac3 mutant used was SALK_207356, and Results names this T-DNA line cac3-1."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is in Arabidopsis; CAC3 mutants are Arabidopsis lines."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly refers to Arabidopsis; full species name Arabidopsis thaliana is directly inferable for these ABRC/SALK lines."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CAC3 was tested in Arabidopsis plants."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Arabidopsis thaliana as used throughout the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Text states CAC3 encodes the α-subunit / α-CT subunit of plastid heteromeric ACCase."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "CAC3 is described as a subunit of plastid heteromeric ACCase, supporting plastid/chloroplast localization."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state T-DNA insertion in the 3′ UTR of CAC3 significantly reduced expression from neighboring sequences but not the coding region."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "CAC3 is used as supporting evidence for ACCase involvement and heat-sensitive dwarfism, but the paper does not directly measure C18:1/C18:2 in cac3 mutants."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The linked end products discussed for ACCase in this study are fatty acids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states unsaturated fatty acids are important for membrane integrity/homeostasis and heat tolerance."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses membrane integrity in leaves/chloroplasts generally, but does not directly specify CAC3-linked metabolite accumulation site."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show cac3 mutants are near wild type at 22°C but dwarf at 28°C, supporting a role of plastid ACCase in heat tolerance; membrane homeostasis is part of the broader study conclusion."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "CAC3 phenotypes were tested at 28°C heat stress."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not report a direct physical interaction between CAC3 and AccD; they are components of the same ACCase complex but no interaction assay is shown."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Results describe T-DNA mutant cac3-1, CRISPR-Cas9 mutant cac3-2, and heat-stress phenotyping."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible implication, but such engineering application for CAC3 is not directly stated or tested in the paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point matches the Results/Introduction: CAC3 encodes the α-CT subunit, cac3 mutants are heat-sensitive dwarf but near WT at 22°C, and this supports plastid ACCase involvement in heat sensitivity."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "CAC3 indeed serves mainly as supporting genetic evidence for ACCase involvement rather than the main molecular focus."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "accD",
+          "new_value": "NA",
+          "reason": "The paper does not report a direct physical interaction between CAC3 and AccD; they are components of the same ACCase complex but no interaction assay is shown."
+        }
+      ],
+      "stats": {
+        "supported": 15,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "accD",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "accD studied here is the Arabidopsis chloroplast gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism is Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All functional tests were performed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Arabidopsis thaliana."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states ACCase catalyzes the committed step of de novo fatty acid biosynthesis and accD encodes an ACCase subunit."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "accD is explicitly part of the plastid heteromeric ACCase."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says ACCase catalyzes the committed/initial rate-limiting step of fatty acid synthesis."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The text states accD encodes the β-carboxyl transferase subunit of acetyl-CoA carboxylase and is chloroplast encoded."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "This wording is directly supported by the description of AccD as the β-carboxyl transferase subunit of ACCase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number appears in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states ACCase converts acetyl-CoA to malonyl-CoA in the initial committed step; accD encodes the β-CT subunit of this enzyme."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Acetyl-CoA is explicitly named as the substrate converted by ACCase."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Malonyl-CoA is explicitly named as the product of ACCase and was used in rescue experiments."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly show lower C18:1 and C18:2 in rare1 (accD editing-defective) and higher C18:1/C18:2 in edited accD-OE plants."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These terminal products are fatty acids/unsaturated fatty acids."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "accD/ACCase supplies malonyl-CoA precursor for fatty acid biosynthesis, directly linking to end products."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This summarizes the central Results: edited accD enhances heat tolerance and C18:1/C18:2, while loss of editing lowers ACCase activity, reduces these UFAs, damages membranes, and causes yellow dwarf heat-sensitive plants."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper calls ACCase the initial rate-limiting/committed step of FA synthesis."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The study states these UFAs maintain membrane structural homeostasis/fluidity and contribute to heat tolerance."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "FA changes were measured in leaves/seed contexts, and membrane effects were examined in leaf chloroplast/plasma membranes; seeds are explicitly mentioned for OE FA content."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show heat treatment increased accD-C794 editing rate and analyzed overexpression lines under heat stress."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows accD C794 editing is heat responsive, increasing with heat-treatment time."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Results describe a construct under control of the CaMV 35S promoter for edited accD overexpression."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All three treatments are reported: 28°C heat stress, exogenous malonyl-CoA, and exogenous C18:1/C18:2."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "accD is a chloroplast gene encoding a plastid ACCase subunit; overexpression construct also included a chloroplast transit peptide."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "RARE1 is required for accD transcript editing and CAC3 is another ACCase subunit, but the paper does not demonstrate direct physical protein-protein interactions involving AccD."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports GC-MS fatty acid profiling and provides no public accession for omics data."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are in Results: rare1 mutants abolishing accD-C794 editing, edited accD overexpression, heat phenotyping, ACCase assay, FA profiling, malonyl-CoA rescue, and TEM."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Although framed as implication, the paper directly shows edited accD overexpression enhances heat tolerance and increases seed FA content, supporting engineering value."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points faithfully summarize explicit Results and background statements in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states C794 editing causes an S265L substitution and is dispensable under normal temperature but critical under heat stress."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "6.4.1.2",
+          "new_value": "NA",
+          "reason": "No EC number appears in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 29,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "RARE1",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RARE1 studied here is from Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental species is Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All RARE1 experiments were performed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Arabidopsis thaliana."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "RARE1 is explicitly described as a PPR protein required for accD-C794 RNA editing."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly calls RARE1 a PPR protein/editing factor."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "RARE1 controls editing of a chloroplast accD transcript, supporting chloroplast localization; this is also consistent with cited prior work."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The study links RARE1-mediated accD editing to ACCase activity and fatty acid biosynthesis."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "RARE1 acts via post-transcriptional C-to-U RNA editing of accD at C794."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly states RARE1 is responsible for editing the accD-C794 site."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of RARE1 abolishes accD-C794 editing; thus it promotes editing of accD transcripts."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results link loss of RARE1 to reduced ACCase activity under heat stress, lower C18:1/C18:2, and heat sensitivity."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly show lower C18:1 and C18:2 in rare1 mutants."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "C18:1 and C18:2 are fatty acids/UFAs."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states these UFAs maintain membrane integrity/fluidity and support heat tolerance."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Leaf membrane effects and seed FA measurements are shown in the study overall, but RARE1-specific metabolite accumulation site is not explicitly stated."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This is the main Results conclusion for rare1 mutants under heat stress."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show RARE1 expression increased with heat treatment."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The value says 'accD transcript', which is not a protein; moreover no protein interaction partner is experimentally shown for RARE1 in this paper."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 3G shows RARE1 expression increases during heat treatment."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Heat-induced expression of RARE1 is directly reported."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Complementation used pRARE1::RARE1-c-Myc, i.e., native RARE1 promoter."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These treatments are all part of the rare1-related experiments in the paper."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "GC-MS fatty acid profiling was performed and no public accession is reported."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed approaches are described and used in the study for RARE1/rare1 analysis."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable implication from the data, but not directly tested as a breeding strategy in the paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three points accurately summarize the main Results regarding RARE1."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This characterization is consistent with the study's framing of RARE1 as the core RNA-editing regulator rather than a transcription factor."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "accD transcript",
+          "new_value": "NA",
+          "reason": "The value says 'accD transcript', which is not a protein; moreover no protein interaction partner is experimentally shown for RARE1 in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 78,
+    "supported": 69,
+    "unsupported": 3,
+    "uncertain": 6,
+    "total_corrections": 3
+  }
+}

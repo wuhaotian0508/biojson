@@ -1,0 +1,459 @@
+{
+  "file": "MinerU_markdown_PMC7067565_2038794943153086468",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC7067565_2038794943153086468.md",
+  "timestamp": "2026-03-31T22:27:50.406574",
+  "genes": [
+    {
+      "gene_name": "HDR/ispH (panel of heterologous plant, cyanobacterial and bacterial HDR genes; including RcHDR, PtHDR1, PpHDR, EgHDR1, TcHDR, AtHDR, EgHDR, PsHDR1, PsHDR2, Synechococcus HDR, and E. coli ispH)",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly lists the E. coli ispH identifiers in the Key resources table and the heterologous HDR protein accession numbers plus plasmid GenBank IDs in Table 1 and the resources tables."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed source species are explicitly given in Table 1/results."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "These Latin names appear in Table 1 and text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All assays were performed in engineered E. coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied host is explicitly Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state E. coli W (ATCC 9637) with ΔcscR background was used."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state plant genes were placed under the IPTG-inducible trc promoter."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study overexpressed HDR genes in engineered E. coli under IPTG induction."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "HDR/IspH and its role as the final MEP-pathway enzyme are explicit, but '[4Fe-4S] reductase family' is not stated in the provided paper text."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state plant chloroplast targeting peptides were predicted and removed for expression in E. coli, supporting native plastid targeting in plants and expression without transit peptide in E. coli."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "HDR/ispH is explicitly the final step of the plastidic/bacterial MEP isoprenoid pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The results directly frame HDR as determining DMAPP versus IPP output for downstream short-chain versus long-chain isoprenoid synthesis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract explicitly says HDR/IspH is 'the final step' of the plastidic isoprenoid production pathway."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not call HDR universally rate-limiting, but it explicitly presents HDR as a key junction/control point shaping volatile versus non-volatile isoprenoid allocation."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Hydroxymethylbutenyl diphosphate reductase / 4-hydroxy-3-methylbut-2-enyl diphosphate reductase is explicitly the enzyme under study."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper text."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "By the explicit enzyme name 4-hydroxy-3-methylbut-2-enyl diphosphate reductase, HMBPP is directly inferable as the substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly states HDR produces DMAPP and IPP in varying ratios."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes the reported HDR reaction and enzyme-dependent DMAPP:IPP ratios."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The central conclusion is that HDR determines relative DMAPP/IPP availability for volatile isoprenoid formation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly connect HDR behavior to isoprene production and discuss monoterpenes and broader volatile isoprenoids."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These terminal metabolites are terpenoid/isoprenoid products discussed throughout the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract and discussion explicitly describe plant volatile organic compounds affecting biosphere-atmosphere interactions and mention industrial applications such as biofuels, fragrances, pharmaceuticals."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses plant emission of volatiles and measures isoprene in engineered E. coli headspace."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly reports up to 40-fold DMAPP:IPP variation and that high-DMAPP HDRs enabled more isoprene; the non-volatile/longer-chain phrasing is somewhat interpretive but consistent with the discussion."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly used: complementation, overexpression, LC-MS/MS metabolite quantification, isoprene assay, growth-rate analysis, and LC-MS proteomics."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These engineered contexts and induction/culture conditions are described in results and methods."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "IDI, DXS, IspS, CrtE, CrtI, and CrtB were co-expressed or analyzed in the engineered system, but direct physical interaction is not shown; only pathway co-occurrence is supported."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "LC-MS/MS metabolomics and LC-MS proteomics are explicitly reported, and no public omics accession is given beyond source data."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These four summary points closely match the paper's major results and conclusions."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The discussion explicitly states HDR choice is important for heterologous isoprenoid engineering, including balancing DMAPP/IPP and avoiding toxicity."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly describe severe dose-dependent growth defects and about 50% growth reduction with PsHDR2."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an accurate summary of paper scope and the note that in vivo ratios depend on sink context but relative differences remain similar."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.17.1.2",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper text."
+        }
+      ],
+      "stats": {
+        "supported": 30,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "PsHDR1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 and resources table list PsHDR1 as ACN40284.1 and plasmid MH605327."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsHDR1 is from Picea sitchensis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The Latin name is explicitly given."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsHDR1 was expressed in E. coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host species is Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify E. coli W (ATCC 9637), ΔcscR background."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Plant genes were under IPTG-inducible trc promoter."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "PsHDR1 is clearly an HDR, but 'gymnosperm Type I HDR' is an interpretation based on discussion of two gymnosperm classes and PsHDR1/GbHDR1 examples rather than a direct explicit label in the paper."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Plant transit peptides were removed for E. coli expression, supporting native plastid targeting and bacterial cytosolic expression after truncation."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "HDR is part of the MEP isoprenoid pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper frames PsHDR1/PsHDR2 differences as controlling DMAPP/IPP precursor partitioning."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "HDR is the terminal/final MEP step."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "In this study HDR is presented as a key control/junction for precursor ratio."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "PsHDR1 is an HDR enzyme."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is stated in the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Inferable from the explicit enzyme identity as HMBPP reductase."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly say PsHDR1 had ratio shifted toward more IPP."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the reported conversion and IPP-biased product ratio."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PsHDR1 is linked to low DMAPP availability and very low isoprene production."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2b/e and text directly connect PsHDR1 to isoprene production phenotype."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Isoprene is an isoprenoid/terpenoid volatile discussed in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses isoprene as a volatile relevant to atmospheric interactions."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Isoprene was measured as emitted headspace product in E. coli."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states PsHDR1 produced the highest relative amount of IPP and showed very low isoprene production."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These are the methods used for PsHDR1 in Figure 2."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "PsHDR1 was tested with PtDXS and either lycopene or isoprene sink under IPTG induction."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "These proteins were co-expressed in the system, but direct interaction with PsHDR1 was not demonstrated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "PsHDR1 was part of metabolomics and proteomics analyses in Figure 2 and supplements."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "Points 1 and 2 are directly supported, including DMAPP:IPP = 0.447 +/- 0.19. Point 3 about specialization for basal/long-chain isoprenoid precursor supply is speculative discussion rather than directly demonstrated result."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible engineering inference, but the paper does not explicitly recommend PsHDR1 for IPP-balanced engineering applications."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Low support for isoprene formation is directly shown."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed proposes functional specialization between PsHDR1 and PsHDR2."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.17.1.2",
+          "new_value": "NA",
+          "reason": "No EC number is stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "PsHDR2",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 and resources table list PsHDR2 as ACN39959.1 and plasmid MH605328."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsHDR2 is from Picea sitchensis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The Latin name is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PsHDR2 was tested in E. coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify E. coli W (ATCC 9637), ΔcscR background."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Plant genes were expressed from IPTG-inducible trc promoter."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "PsHDR2 is clearly an HDR; calling it 'gymnosperm Type II HDR' is strongly suggested by discussion but not directly and formally annotated in the methods/results text."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Transit peptides were removed for E. coli expression, implying native plastid targeting and bacterial cytosolic expression after truncation."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "HDR belongs to the MEP isoprenoid pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PsHDR2 is directly studied for DMAPP/IPP precursor partitioning."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "HDR is the terminal MEP step."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Within this study HDR is presented as a key control point for precursor ratio."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "PsHDR2 is an HDR enzyme."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is stated in the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Inferable from the enzyme identity as HMBPP reductase."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states PsHDR2 produced a >10-fold excess of DMAPP over IPP."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the reported strongly DMAPP-shifted product ratio."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly link PsHDR2's DMAPP-rich output to higher isoprene production than PsHDR1."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PsHDR2 is directly linked to isoprene output in Figure 2e."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Isoprene is a terpenoid/isoprenoid volatile."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses isoprene as a volatile relevant to atmospheric interactions."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Isoprene was measured in culture headspace."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states PsHDR2 produced >10-fold excess DMAPP over IPP, enabled higher isoprene than PsHDR1, and reduced growth by about 50%."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods were used, and the text specifically notes initial complementation failure plus metabolite, isoprene, and growth analyses."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "PsHDR2 was examined with PtDXS and lycopene or isoprene sink under IPTG induction."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "These pathway proteins were co-expressed, but direct interactions with PsHDR2 were not demonstrated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Metabolomics and proteomics were part of the analyses in this system."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points closely match explicit results and discussion for PsHDR2."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The discussion explicitly states HDR choice is important for engineering short-chain isoprenoids and warns about balancing flux and toxicity; applying this to high-DMAPP PsHDR2 is a direct inference from results."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly reports likely sink-dependent complementation failure, reduced host growth, and high toxicity."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the paper's interpretation of PsHDR2 as evidence for specialized gymnosperm HDR paralogs."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.17.1.2",
+          "new_value": "NA",
+          "reason": "No EC number is stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 29,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 97,
+    "supported": 86,
+    "unsupported": 3,
+    "uncertain": 8,
+    "total_corrections": 3
+  }
+}

@@ -1,0 +1,466 @@
+{
+  "file": "MinerU_markdown_PMC7415783_2038794802023141378",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC7415783_2038794802023141378.md",
+  "timestamp": "2026-03-31T22:29:06.558765",
+  "genes": [
+    {
+      "gene_name": "nifM",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The Summary and Results state the nif genes used were from Azotobacter vinelandii."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Azotobacter vinelandii is explicitly named throughout the paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The work uses tobacco plants/leaves, specifically transient assays in tobacco leaves."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results and methods explicitly use N. benthamiana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The study aims to produce active nitrogenase Fe protein (NifH), and nifM is linked to that outcome."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "NifH is a protein component of nitrogenase, but the exact class phrase 'protein cofactor-dependent nitrogen fixation component' does not appear verbatim in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "NifH is described as accumulating in soluble form within the chloroplast stroma of leaf cells when co-expressed appropriately."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state NifM is required for NifH to fold correctly and become soluble in the stroma, enabling active NifH recovery."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The Summary explicitly describes NifM as a putative peptidyl-prolyl cis-trans isomerase."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are represented in the Results: co-expression with nifH, confocal microscopy, chloroplast fractionation, co-elution/co-purification evidence, and acetylene reduction assay on purified NifH from co-expression experiments."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The genes were transiently expressed in agroinfiltrated N. benthamiana leaves."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Results describe p35S-driven expression; enhanced p35S is also used in some constructs, but nifM expression is under 35S-derived constitutive promoters."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "NifM showed diffuse localization co-localized with chlorophyll and was confirmed mostly in the chloroplast stroma soluble fraction."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "NifM co-eluted with purified NifH and co-expression altered NifH localization/solubility, supporting interaction with NifH."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states tissue was collected at the end of the dark period of the third day after agroinfiltration."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Without nifM, NifH formed puncta/aggregates, associated with membrane/vesicle-like structures, and did not accumulate as soluble active protein."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each of the three listed findings is directly supported by Figures 4–5 and related text."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not classify genes into 'Common Gene' versus other database categories."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper argues these findings support engineering nitrogen fixation in plant plastids and that accessory factors like NifM are required."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper deposits nif gene sequences under MN920692 to MN920699; with four genes and two versions each, nifM corresponding to MN920693 and MN920697 is directly inferable from the listed order nifH, nifM, nifU, nifS."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states that complete nucleotide sequences of nifH, nifM, nifU and nifS yeast-optimized and tobacco synthetic genes were deposited in GenBank under MN920692 to MN920699."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Other_Important_Info",
+          "old_value": "Classified as Common Gene because it acts as a maturation factor rather than pathway enzyme or transcriptional regulator.",
+          "new_value": "NA",
+          "reason": "The paper does not classify genes into 'Common Gene' versus other database categories."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "nifU",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The nif genes used are from Azotobacter vinelandii."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Azotobacter vinelandii is explicitly named in the paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied host is tobacco."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient expression assays were done in Nicotiana benthamiana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "nifU is functionally linked to obtaining active NifH in chloroplasts."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact class wording is not used in the paper, though NifH is indeed a protein component dependent on Fe-S cofactors."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states NifH accumulated in soluble form within the chloroplast stroma under the successful co-expression condition."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show no NifH activity without NifU/NifS, and purified chloroplast NifU was functional in apo-NifH reconstitution assays."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly mentions the Nfu-like C-terminal domain of NifU."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are directly represented in Results/Figures: co-expression studies, purification, iron measurement, apo-NifH reconstitution, and acetylene reduction assays."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "nifU was transiently expressed in agroinfiltrated leaves."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses p35S and, for the NifU/NifS construct, enhanced p35S; this statement matches the constructs described."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "NifU localized to the chloroplast stroma and was found mostly in the soluble stroma fraction."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "NifS co-purified with NifU, and NifU also co-eluted with NifH, both explicitly reported."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Dark-period harvest and anaerobic purification/activity assays are explicitly described."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports a truncated/degradation product of NifU lacking part of the C-terminus and suggests this may reduce activity."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings are directly stated in Results/Discussion and supported by Figures 5–6 and supplementary data."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The database-style classification statement ('Common Gene') is not present in the paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports inclusion of NifU with other nif genes for plastid engineering and notes improving NifU stability could improve performance."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Given the explicit deposited range MN920692–MN920699 for nifH, nifM, nifU, nifS in yeast-optimized and tobacco synthetic versions, MN920694 and MN920698 for nifU are inferable from the listed order."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The GenBank deposition range MN920692–MN920699 is explicitly stated."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Other_Important_Info",
+          "old_value": "Accessory scaffold, not catalytic step of small-molecule nutrient pathway; therefore classified as Common Gene.",
+          "new_value": "NA",
+          "reason": "The database-style classification statement ('Common Gene') is not present in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "nifS",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The nif genes are from Azotobacter vinelandii."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Azotobacter vinelandii is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The host system is tobacco."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient assays were done in Nicotiana benthamiana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "nifS is tied to accumulation of active NifH, the principal functional output tested."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact wording is not in the paper, though the underlying concept is broadly consistent."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The successful active NifH is described in chloroplasts/stroma of leaf tissue."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show NifU and NifS are required for detectable NifH activity, supporting the stated role in maturation."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "NifS function as sulfur-transfer enzyme is described; the text states NifS transfers sulfur necessary for Fe-S cluster assembly, consistent with cysteine desulfurase identity."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Co-expression studies, chloroplast fractionation, NifU co-purification, and effect on NifH acetylene reduction activity are all in the Results."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "nifS was transiently expressed in agroinfiltrated leaves."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The constructs use p35S or enhanced p35S promoters as described."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "NifS showed diffuse chloroplast localization and stromal soluble fraction accumulation."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "A fraction of NifS co-purified with NifU, explicitly indicating interaction to some degree."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Dark-period harvest and anaerobic handling for activity-related assays are explicitly stated."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports that omission of NifU/NifS abolishes detectable NifH activity, but it does not isolate a nifS-only omission effect or discuss this as a specific tradeoff for nifS alone."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summarized points are supported by the reported dependence of NifH activity on NifU/NifS, NifS co-purification with NifU, and increased NifU Fe loading when NifS is co-expressed."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not use the database classification wording 'Common Gene' or explicitly frame it this way."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indicates NifS is needed alongside NifU and NifH for functional plastid nitrogenase assembly."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "From the explicit deposited accession range MN920692–MN920699 and the gene order nifH, nifM, nifU, nifS with two versions each, MN920695 and MN920699 for nifS are inferable."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly reports GenBank deposition of gene sequences under MN920692 to MN920699."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Other_Important_Info",
+          "old_value": "Acts as maturation/accessory factor rather than direct metabolic enzyme for a terminal nutrient product, so classified as Common Gene.",
+          "new_value": "NA",
+          "reason": "The paper does not use the database classification wording 'Common Gene' or explicitly frame it this way."
+        }
+      ],
+      "stats": {
+        "supported": 18,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "nifH",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly reports GenBank accessions MN920692 to MN920699 for nifH, nifM, nifU and nifS yeast-optimized and synthetic versions; MN920692 and MN920696 for nifH are inferable from the stated order."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The nif genes used are from Azotobacter vinelandii."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Azotobacter vinelandii is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The host plant is tobacco."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments were conducted in Nicotiana benthamiana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The main product studied is active nitrogenase Fe protein (NifH) itself."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not use this exact classification phrase."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states NifH purified from tobacco chloroplasts was active in reduction of acetylene to ethylene and describes it as nitrogenase Fe protein; its role as electron donor to MoFe protein is standard and directly implied by the assay setup."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Successful soluble active NifH accumulation is reported in chloroplast stroma of leaf cells."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The study centers on nitrogenase assembly / engineering nitrogen fixation machinery in chloroplasts."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact phrase 'Nitrogenase Fe protein maturation module' is not used in the paper, though conceptually related."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "NifH is repeatedly identified as nitrogenase Fe protein / Fe protein."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "NifH is an Fe protein with a [4Fe-4S] cluster, but the exact wording '[4Fe-4S]-binding ATPase' is not explicitly given in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly shows NifH supports acetylene reduction to ethylene in the presence of MoFe protein, which matches the stated functional reaction description."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "MoFe protein and ATP dependence are consistent with nitrogenase function, but the exact list 'Nitrogenase MoFe protein; ATP; reducing equivalents' is not explicitly stated in the Results text for this construct."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The formulation 'Reduced MoFe protein enabling substrate reduction' is biochemical interpretation, not explicitly stated in the paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "NifH is presented as the Fe protein catalytic component of nitrogenase and central to the activity assayed."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The phrase 'directly forms target product' is not faithful here; NifH is itself the target active protein recovered, not something that forms that product."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support that synthetic redesign, chloroplast targeting, and co-expression with nifM/U/S enabled soluble active NifH accumulation in tobacco chloroplasts."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The field explicitly says 'not explicitly established as rate-limiting'; this is faithful because the paper does not claim rate limitation but does present NifH as a key functional component."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are directly used and reported in the paper."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient expression in agroinfiltrated leaves and highest accumulation at end of dark period on day 3 are directly reported."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Results describe p35S-driven expression for the synthetic design experiments and multigene constructs use 35S-derived promoters."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Dark-period harvest, chloroplast localization, anaerobic purification, and assay with A. vinelandii MoFe protein are all explicitly reported."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "NifH is membrane-associated/vesicular when alone and soluble in chloroplast stroma with nifM co-expression, as shown by microscopy and fractionation."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "NifH co-eluted with NifM and NifU, requires NifS/NifU for activation, and was assayed with MoFe protein (NifDK)."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states chloroplast NifH activity reached a maximum of 16% of A. vinelandii NifH and discusses incomplete maturation and/or oxygen damage as likely causes."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper frames active NifH accumulation as foundational for plastid engineering of nitrogen fixation and notes need for accessory factors and oxygen protection."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by Figures 1, 2, and 5 plus accompanying text."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is true the output is an active protein rather than a classic nutrient metabolite, but the classification as 'Pathway' gene is a database interpretation not made by the paper."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The GenBank deposition range MN920692–MN920699 is explicitly stated."
+        }
+      },
+      "corrections": [
+        {
+          "field": "End_Product_Connection_Type",
+          "old_value": "directly forms target product",
+          "new_value": "NA",
+          "reason": "The phrase 'directly forms target product' is not faithful here; NifH is itself the target active protein recovered, not something that forms that product."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 1,
+        "uncertain": 6
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 94,
+    "supported": 80,
+    "unsupported": 4,
+    "uncertain": 10,
+    "total_corrections": 4
+  }
+}

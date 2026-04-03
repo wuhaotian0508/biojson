@@ -1,0 +1,282 @@
+{
+  "file": "MinerU_markdown_PMC9534833_2038793816743387153",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC9534833_2038793816743387153.md",
+  "timestamp": "2026-03-31T22:36:48.727251",
+  "genes": [
+    {
+      "gene_name": "nifM",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state 'Azotobacter vinelandii NifM (NifMAv)' and Methods describe 'A. vinelandii nifM'."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names Azotobacter vinelandii as the source of nifM."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The transgene was introduced into rice and tested in rice callus/plants throughout the Results."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify the applied species as 'Oryza sativa cv. Nipponbare'."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state 'Oryza sativa cv. Nipponbare'."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports co-expression of nifM with nifH and infers nifM aided NifH solubility/maturation because soluble NifH accumulated, but nifM was not directly shown as causal in rice by comparison without nifM. 'Indirectly supporting partial Fe protein activity' is plausible but not directly isolated as nifM's effect."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Introduction describes NifM as a 'putative peptidyl prolyl cis-trans isomerase'."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "These methods were used in the study, but most direct biochemical assays validated NifH, not nifM itself. qRT-PCR and attempted immunoblotting support nifM expression, while purification/ARA/FeMo-co assays are indirect with respect to nifM."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "1) co-expression of A. vinelandii nifM with H. thermophilus nifH in rice mitochondria is supported; 2) lack of clear NifM detection in plant extracts and inference from soluble NifH is supported; 3) that this support allowed recovery of partially active NifH is indirect rather than directly demonstrated for nifM alone."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The study did not produce or measure ammonia in rice. It assayed NifH activity via acetylene reduction and FeMo-co synthesis only."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Because no terminal metabolite was measured for nifM in this study, assigning 'nitrogen nutrient' is not directly supported."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNSUPPORTED",
+          "reason": "These are general background statements about nitrogen, not a measured nifM-linked terminal product/function in the Results."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states NifM facilitates Fe protein folding and improves solubility; in this study nifM was included to assist NifH polypeptide folding."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "nifM was fused to the Su9 mitochondrial targeting peptide and the study states proteins were targeted to the mitochondrial matrix/mitochondria."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Methods state nifMAv was co-expressed under the constitutive OsActin promoter with an N-terminal Su9 transit peptide."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state both genes were expressed in rice callus and regenerated plants, with higher mRNA levels in plants than callus."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Plants were Fe-fertilized with 100 μM Fe(III)-EDDHA and harvested before onset of light at end of dark period for purification."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly presents NifM as assisting NifH folding and solubility, indicating interaction/functional partnership with NifH."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion supports nifM as an accessory gene useful for engineering active Fe protein in plant mitochondria and indicates additional Fe-S delivery improvements are needed."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the paper: nifM was co-expressed in the core experiment, its effect was indirect, and no direct metabolite accumulation in rice was measured."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "Ammonia",
+          "new_value": "NA",
+          "reason": "The study did not produce or measure ammonia in rice. It assayed NifH activity via acetylene reduction and FeMo-co synthesis only."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "nitrogen nutrient",
+          "new_value": "NA",
+          "reason": "Because no terminal metabolite was measured for nifM in this study, assigning 'nitrogen nutrient' is not directly supported."
+        },
+        {
+          "field": "Terminal_Metabolite_Function",
+          "old_value": "Biologically fixed nitrogen supports plant nutrition, chlorophyll formation, nucleic acids, proteins, ATP-related metabolism, growth and photosynthesis.",
+          "new_value": "NA",
+          "reason": "These are general background statements about nitrogen, not a measured nifM-linked terminal product/function in the Results."
+        }
+      ],
+      "stats": {
+        "supported": 14,
+        "unsupported": 3,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "nifH",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies NifH as the nitrogenase structural component Fe protein, also known as dinitrogenase reductase/Fe protein."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state the gene encoding Hydrogenobacter thermophilus NifH was used."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names Hydrogenobacter thermophilus as the nifH source."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "nifH was stably expressed and tested in rice callus and regenerated rice plants."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify Oryza sativa cv. Nipponbare."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state cv. Nipponbare."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This is the central Results finding: mitochondrial nifH expression in rice yielded soluble Fe protein with partial activity in electron transfer to NifDK and FeMo-co biosynthesis."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Introduction states Fe protein is the obligate electron donor to MoFe protein for N2 reduction and is also required for maturation/activation of P-cluster and FeMo-co."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "ATP dependence and interaction with NifDK/NifEN systems are supported, but the exact phrasing 'electrons delivered to NifH' and bundled substrate list is not explicitly given as such."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports electron donation to MoFe protein and support of FeMo-co maturation, but does not explicitly define a 'primary product' in these terms."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "NifH is explicitly placed within the nitrogenase system for biological nitrogen fixation."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports NifH roles in the core electron-transfer function and FeMo-co maturation, matching this description."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Introduction states NifH is the obligate electron donor to MoFe protein and also required for cofactor maturation, supporting an upstream essential role."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "NifH is directly required for nitrogenase function and eventually ammonia formation in the full pathway, but this study did not measure ammonia formation in planta."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The wording is cautious and matches the paper: NifH is key, but rate-limiting was not formally established, and activity was limited by poor [4Fe-4S] cluster occupancy."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes NifH as Fe protein carrying a [4Fe-4S] cluster with MgATP binding/hydrolysis sites, consistent with '[4Fe-4S] cluster-binding ATPase'."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "nifH was targeted to mitochondria/mitochondrial matrix using the Cox4 transit peptide, and processing in rice mitochondria was demonstrated."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show expression in callus and regenerated plants, higher mRNA in plants than callus, and stable inheritance/expression in T1."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Methods state nifHHt expression was driven by the maize ubiquitin promoter and first intron (ZmUbi1+1st intron) with Cox4 transit peptide."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly reports Fe fertilization with 100 μM Fe(III)-EDDHA, harvest before light onset at end of dark period, and anaerobic purification/assays."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods were used and reported in Results/Methods for nifH: transgenic expression, qRT-PCR, immunoblotting, STAC purification, N-terminal sequencing, MS, ARA with A. vinelandii NifDK, [4Fe-4S] reconstitution with EcNifU, and FeMo-co synthesis assay."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each numbered point is directly supported by the Results and Discussion summary: soluble processed mitochondrial NifH, low but definite activity, ~9-fold increase after reconstitution, support for FeMo-co synthesis, and functional expression in rice."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Ammonia was not measured or produced as an experimental endpoint in this study; the assays used acetylene reduction and FeMo-co synthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Because no terminal metabolite was directly measured for nifH in this paper, this classification is not supported by Results evidence."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNSUPPORTED",
+          "reason": "These are general background statements about ammonia/fixed nitrogen, not a directly measured nifH-dependent outcome in the study."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "NifM, NifDK, NifEN, and NifU are all explicitly discussed/tested as functional partners of NifH in folding, electron transfer, FeMo-co synthesis, or reconstitution."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly frames nifH as foundational for engineering biological nitrogen fixation in cereals and notes the need for accessory genes/host modifications."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly concludes activity is limited because much protein accumulates as apo-NifH with poor [4Fe-4S] occupancy and that this must be improved."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes the cross-species experimental setup and the fact that in planta ammonia production was not directly measured."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.18.6.1",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper."
+        },
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "Ammonia",
+          "new_value": "NA",
+          "reason": "Ammonia was not measured or produced as an experimental endpoint in this study; the assays used acetylene reduction and FeMo-co synthesis."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "nitrogen nutrient",
+          "new_value": "NA",
+          "reason": "Because no terminal metabolite was directly measured for nifH in this paper, this classification is not supported by Results evidence."
+        },
+        {
+          "field": "Terminal_Metabolite_Function",
+          "old_value": "Fixed nitrogen in ammonia form supports amino acid, protein, nucleic acid, chlorophyll and energy metabolism, improving plant nitrogen nutrition and potentially reducing fertilizer dependence.",
+          "new_value": "NA",
+          "reason": "These are general background statements about ammonia/fixed nitrogen, not a directly measured nifH-dependent outcome in the study."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 4,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 50,
+    "supported": 37,
+    "unsupported": 7,
+    "uncertain": 6,
+    "total_corrections": 7
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "file": "MinerU_markdown_PMC4633822_2038798937007104008",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC4633822_2038798937007104008.md",
+  "timestamp": "2026-03-31T22:09:56.200979",
+  "genes": [
+    {
+      "gene_name": "GGPPS",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods states: 'Previously characterized GGPPS (NCBI accession no. EF382626)-silenced irGGPPS line of N. attenuata20 was used.'"
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The GGPPS silenced line is explicitly described as an N. attenuata line."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly names the plant species as Nicotiana attenuata."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods states seeds were from 'The 30th generation seeds of an inbred line ... originally harvested in 1988 from a native population in Utah (USA).'"
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The transgenic EV and irGGPPS lines used in experiments are N. attenuata plants."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied plant species is explicitly Nicotiana attenuata."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Methods explicitly use EV and irGGPPS transgenic N. attenuata lines."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper names GGPPS as geranylgeranyl pyrophosphate synthase, but does not explicitly describe it as a 'prenyltransferase' family/domain in this paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "irGGPPS is explicitly used as a Lyc4/HGL-DTG-depleted control plant fed to M. sexta larvae."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Within this study, irGGPPS is used as a pre-existing stable silenced line/control, HGL-DTG levels are measured, and irBG1 x irGGPPS plants are generated for complementation tests."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GGPPS is responsible for synthesis of the HGL-DTG precursor geranylgeranyl pyrophosphate and uses irGGPPS as Lyc4-depleted/HGL-DTG-low plants enabling tests of Lyc4-dependent larval effects."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The study links GGPPS silencing to depletion of HGL-DTGs including Lyc4, Nic1, and Nic2."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Lyc4/Nic1/Nic2 are explicitly described as HGL-DTGs, i.e. diterpene glycosides."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "HGL-DTGs are described as major phytotoxins/chemical defences against M. sexta."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results discuss Lyc4/Nic1/Nic2 as major fractions of N. attenuata leaf HGL-DTGs and leaf extracts are analyzed throughout."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each summary point is supported: GGPPS is said to synthesize the HGL-DTG precursor; irGGPPS provides the Lyc4-depleted background; low-Lyc4 backgrounds remove moulting defects despite BG1 silencing."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is reasonable inference that manipulating GGPPS modulates HGL-DTG defence, but this application value is not explicitly proposed for GGPPS in the Results."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not test or state broad diterpenoid precursor tradeoffs of GGPPS manipulation in this study."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Accurate characterization: GGPPS is central as a control/background but the main Results focus is on insect BG1."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Potential_Tradeoffs",
+          "old_value": "Likely broad metabolic effects on diterpenoid precursor metabolism; not dissected here.",
+          "new_value": "NA",
+          "reason": "The paper does not test or state broad diterpenoid precursor tradeoffs of GGPPS manipulation in this study."
+        }
+      ],
+      "stats": {
+        "supported": 16,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "BG1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results states: 'We identified three BGs (BG1, BG2 and BG3 NCBI accession no: FK816842, FK816724 and FK816837, respectively).'"
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "BG1 is explicitly referred to as β-glucosidase 1."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies RGHGL as differing from Lyc4 by loss of the C-17 glucose, links BG1 to this conversion, and infers this partial deglycosylation detoxifies Lyc4."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "BG1 is studied in the context of xenobiotic detoxification/counteradaptation to host-plant HGL-DTGs."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports expression/activity in midgut tissue/extracts, but does not explicitly localize BG1 to the 'midgut lumen/tissue' at subcellular resolution."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "BG1 is directly implicated in the partial deglycosylation step converting Lyc4 to RGHGL during detoxification."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "RGHGL is the identified metabolite formed from Lyc4 and reduced upon BG1 silencing."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "BG1 transcript is induced by Lyc4 ingestion from EV foliage or Lyc4-containing artificial diet."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "BG1 is a Manduca sexta gene."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show BG1 is induced in larval midgut by Lyc4 ingestion; foregut/hindgut transcript reductions after PMRi are also reported, though induction emphasis is midgut."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are in the Results/Methods: PMRi, qRT-PCR, midgut in vitro assay, d-gluconolactone inhibitor assay, metabolite profiling, dietary induction, and Lyc4/RGHGL complementation."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is functionally tested in Manduca sexta larvae."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "BG1 is explicitly one of the identified β-glucosidases/glycoside hydrolases."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "BG1 is specifically implicated in Lyc4 deglycosylation; assays incubate midgut extracts with Lyc4."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The insect is explicitly Manduca sexta."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "BG1 acts in detoxification, but the label 'midstream' is an interpretive pathway-position term not stated in the paper."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided anywhere in the paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly suggests insect β-glycosidases could be valuable targets for pest control and PMRi could become useful for controlling pests in agriculture."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The study directly connects BG1 activity to conversion of Lyc4 into the less toxic derivative RGHGL."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state BG1-silenced larvae have higher Lyc4 in midgut and hindgut and lower RGHGL in midgut; frass analyses quantify excreted RGHGL."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "BG1 is described as midgut-expressed and Lyc4-inducible in feeding larvae."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows BG1 silencing causes moulting impairment/mortality only in Lyc4 presence, and that avoiding detoxification increases unpalatability to spiders—matching this tradeoff statement."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Lyc4 is an HGL-DTG, a diterpene glycoside."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Manduca sexta."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly supported by silencing, metabolite, and phenotype data: reduced RGHGL formation, increased Lyc4 accumulation, moulting impairment, and mortality on Lyc4-containing diets."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "BG1 is clearly important, but the paper does not explicitly demonstrate or state that it is rate-limiting."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four summary points are directly supported by the Results."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says candidate glycoside hydrolase sequences were retrieved from NCBI; no broader deposited omics dataset accession is reported."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Lyc4 is presented as a plant anti-herbivore chemical defence and high Lyc4 also deters spider ingestion."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements are all supported in the paper: unusual detoxification by partial deglycosylation and PMRi specificity with no effect on BG2/BG3."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The focal terminal metabolite linked to BG1 is Lyciumoside IV (Lyc4)."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "EC 3.2.1.21",
+          "new_value": "NA",
+          "reason": "No EC number is provided anywhere in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 50,
+    "supported": 43,
+    "unsupported": 2,
+    "uncertain": 5,
+    "total_corrections": 2
+  }
+}

@@ -1,0 +1,1526 @@
+{
+  "file": "MinerU_markdown_PMC9911603_2038793273480347648",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC9911603_2038793273480347648.md",
+  "timestamp": "2026-03-31T22:43:33.450059",
+  "genes": [
+    {
+      "gene_name": "psdA",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly renames Δorf2064 as ΔpsdA."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "psdA was identified and tested in Pseudomonas mosselii strain 923."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source organism is explicitly identified as Pseudomonas mosselii."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional analyses were performed in Pseudomonas mosselii strain 923."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species in the experiments is Pseudomonas mosselii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The tested strain is explicitly strain 923."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "psdA was from strain 923."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "psdA is linked directly to production of pseudoiodinine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pseudoiodinine is described as a natural product/pyrazolotriazine family compound, but not explicitly classified as an alkaloid in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Pseudoiodinine is shown to inhibit Xanthomonas spp. and Magnaporthe oryzae and is discussed as a potential biopesticide."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "ΔpsdA lost pseudoiodinine production and antibacterial/plant-protective activity, and complementation restored function."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports gene deletion, complementation, HPLC profiling, and in planta biocontrol assays involving ΔpsdA."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "psdA is part of the pseudoiodinine biosynthetic operon psdABCDEFG."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper annotates psdA as a methyltransferase type 12 but does not assign it specifically to a 'terminal tailoring/methylation module'."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No explicit downstream step position is given for psdA."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion of psdA abolished pseudoiodinine production, so it is required for biosynthesis of the target product."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 3e annotates psdA as 'methyltransferase type 12'."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly annotates psdA as methyltransferase type 12."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "A methylation role is plausible from annotation, but the paper does not directly assign psdA to a specific methylation step."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The statement 'not established' matches the paper, which does not identify psdA as rate-limiting."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "psdA is part of the psdABCDEFG operon; the paper shows GacA-rsmY/rsmZ positively and CsrA proteins negatively regulate psdA/operon expression."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by operon analysis, deletion/complementation, and HPLC/activity data."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses LB vs TSB medium and regulation by GacA, rsmY/rsmZ, and CsrA in relation to pseudoiodinine output."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The operon and RBS engineering strategy was used to increase pseudoiodinine yield for biopesticide production."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states overproduction improved activity but reduced early fermentation growth."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper gives transcriptome accession PRJNA880759 and genome BioProject PRJNA826312."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "psdA promoter fusions were constructed and the 5' UTR/RBS is discussed as the CsrA-targeted region."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports regulatory relationships with CsrA1/2/3, rsmY, rsmZ, and indirect GacA effects, but does not show direct physical interaction of psdA with all listed factors."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Pathway_Branch_or_Subpathway",
+          "old_value": "terminal tailoring/methylation module",
+          "new_value": "NA",
+          "reason": "The paper annotates psdA as a methyltransferase type 12 but does not assign it specifically to a 'terminal tailoring/methylation module'."
+        },
+        {
+          "field": "Metabolic_Step_Position",
+          "old_value": "downstream",
+          "new_value": "NA",
+          "reason": "No explicit downstream step position is given for psdA."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "psdB",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly renames Δorf2065 as ΔpsdB."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "psdB was identified in Pseudomonas mosselii strain 923."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is explicitly Pseudomonas mosselii."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional analyses were done in P. mosselii 923."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments used Pseudomonas mosselii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strain tested is 923."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "psdB comes from strain 923."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "psdB is directly tied to pseudoiodinine production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly call pseudoiodinine an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Pseudoiodinine is an antimicrobial metabolite and proposed biopesticide."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "ΔpsdB was impaired in production of pseudoiodinine and defective in antimicrobial activity; discussion states deletion abolished production."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion, complementation, heterologous expression of the operon, and HPLC profiling are all reported."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "psdB is part of the pseudoiodinine biosynthetic operon."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not define a specific 'core assembly module' for psdB."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No midstream position is assigned to psdB in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of psdB disrupts biosynthesis of pseudoiodinine."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 3e annotates psdB as 'glyoxylase bleomycin resistance protein dioxygenase superfamily protein'."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "This family annotation appears in Figure 3e."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No specific oxidative reaction for psdB is proposed in the paper."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish psdB as rate-limiting."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RT-PCR showed psdABCDEFG is a single operon, so psdB is co-transcribed."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed points are supported by cluster identification, deletion/complementation, and sufficiency of the operon in P. putida."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed accessions appear in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the DSM17497 homolog orf2185 restored activity/production when complementing ΔpsdB."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "psdB functions in the same operon as psdA/C/D/E/F/G, but direct protein-protein interactions are not shown."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Pathway_Branch_or_Subpathway",
+          "old_value": "core assembly module",
+          "new_value": "NA",
+          "reason": "The paper does not define a specific 'core assembly module' for psdB."
+        },
+        {
+          "field": "Metabolic_Step_Position",
+          "old_value": "midstream",
+          "new_value": "NA",
+          "reason": "No midstream position is assigned to psdB in the paper."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "proposed oxidative step in pseudoiodinine assembly",
+          "new_value": "NA",
+          "reason": "No specific oxidative reaction for psdB is proposed in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 3,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "psdC",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly renames Δorf2066 as ΔpsdC."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "psdC was identified in P. mosselii 923."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The organism is Pseudomonas mosselii."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional testing was performed in P. mosselii 923."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species used is Pseudomonas mosselii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper consistently uses strain 923."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "psdC is from strain 923."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "psdC is directly linked to pseudoiodinine biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly classify pseudoiodinine as an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Pseudoiodinine is demonstrated as an antimicrobial biopesticide candidate."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "ΔpsdC lost production, and feeding 1,6-DDMT restored pseudoiodinine production."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion, complementation, feeding with 1,6-DDMT, and HPLC profiling are reported."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "psdC belongs to the pseudoiodinine biosynthetic cluster."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The proposed pathway specifically places PsdC and/or PsdE in the 1,6-DDMT-forming step."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "psdC is placed upstream of 1,6-DDMT and before final pseudoiodinine formation, consistent with a midstream role."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Feeding rescue supports that psdC acts before formation of a key intermediate leading to the end product."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 3e annotates psdC as a sulphatase-modifying factor protein."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "This annotation is explicit in Figure 3e."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The proposed pathway says PsdE and/or PsdC use structure 2 or dephosphorylated structure 3 with glycine."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The proposed pathway says PsdE and/or PsdC generate 1,6-DDMT."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly proposes PsdE and/or PsdC mediate N–N bond formation to generate 1,6-DDMT."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "No rate-limiting claim is made in the paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings are supported, with the caveat that the biochemical role is proposed rather than proven."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The cited omics accessions appear in the article."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the exact biochemical role remains unclear and DSM17497 orf2186 complemented ΔpsdC."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 24,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "psdD",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly renames Δorf2067 as ΔpsdD."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "psdD was identified in P. mosselii 923."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is explicitly Pseudomonas mosselii."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments were performed in P. mosselii 923."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Pseudomonas mosselii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strain is 923."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "psdD is from strain 923."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "psdD is part of the pseudoiodinine pathway."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly call pseudoiodinine an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Pseudoiodinine is shown to be an antimicrobial/biopesticide candidate."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion of psdD abolished pseudoiodinine production and the proposed pathway initiates from GTP via PsdD."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion, complementation, homology-based assignment, and heterologous operon expression are all reported."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "psdD is a member of the pseudoiodinine biosynthetic operon."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The proposed pathway places PsdD at the GTP-derived precursor entry step."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper proposes PsdD acts in the first step from GTP."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The proposed role is precursor supply into the pseudoiodinine pathway."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 3e annotates psdD as GTP cyclohydrolase, and text compares it to GTP cyclohydrolase II."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "GTP cyclohydrolase annotation is explicit."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GTP is a precursor and PsdD/PsdG use GTP to generate structure 1 and structure 2 in the first two steps."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The proposed pathway explicitly identifies structure 1 as the product of the first step."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper proposes PsdD converts GTP into the first pyrimidinone intermediate."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not call this a committed-step candidate."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points are supported by annotation, deletion phenotype, and pathway proposal."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed accessions appear in the article."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Homology to riboflavin/toxoflavin biosynthetic enzymes is explicitly discussed."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Rate_Limiting_or_Key_Control_Step",
+          "old_value": "committed-step candidate, not experimentally established",
+          "new_value": "NA",
+          "reason": "The paper does not call this a committed-step candidate."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "psdE",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly renames Δorf2068 as ΔpsdE."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "psdE was identified in P. mosselii 923."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The organism is Pseudomonas mosselii."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The work was performed in P. mosselii 923."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Pseudomonas mosselii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strain is 923."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "psdE is from strain 923."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "psdE is directly connected to pseudoiodinine biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly classify pseudoiodinine as an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Pseudoiodinine is shown as an antimicrobial metabolite/biopesticide candidate."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "ΔpsdE lost production, and feeding 1,6-DDMT restored pseudoiodinine production."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion, complementation, 1,6-DDMT feeding, and HPLC were used."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "psdE is in the pseudoiodinine biosynthetic operon."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway proposal specifically places PsdE and/or PsdC in 1,6-DDMT formation."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Its function is proposed before 1,6-DDMT and final product formation, consistent with midstream."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Feeding rescue links psdE to formation of a key intermediate precursor of pseudoiodinine."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 3e annotates psdE as a WD-40 repeat protein."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "This annotation appears in Figure 3e."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The proposed pathway specifies structure 2 or structure 3 with glycine as substrates for PsdE and/or PsdC."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The proposed product is 1,6-DDMT."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper proposes participation with PsdC in N–N bond formation leading to 1,6-DDMT."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "No rate-limiting claim is made."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements match the reported deletion, feeding rescue, and proposed pathway."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The cited accession numbers are present in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states the exact biochemical role remains unresolved."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 24,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "psdF",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly renames Δorf2069 as ΔpsdF."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "psdF was identified in P. mosselii 923."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Pseudomonas mosselii."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments used P. mosselii 923."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Pseudomonas mosselii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The tested strain is 923."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "psdF is from strain 923."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "psdF is directly linked to pseudoiodinine biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "No explicit alkaloid classification is given."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Pseudoiodinine is presented as an antimicrobial metabolite/biopesticide candidate."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion of psdF abolished pseudoiodinine production and antimicrobial activity, with rescue by complementation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion, complementation, heterologous expression of the operon, and HPLC profiling are reported."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "psdF is part of psdABCDEFG, the pseudoiodinine biosynthetic operon."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "psdF is a methyltransferase, so terminal tailoring is plausible, but the paper does not explicitly assign psdF to a 'terminal methylation module'."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No downstream placement is explicitly given for psdF."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion abolishes the target product, supporting a required biosynthetic role."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 3e annotates psdF as 'methyltransferase domain'."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "This domain annotation appears in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "A methylation role is plausible from annotation, but no specific late-step reaction is assigned experimentally."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish psdF as rate-limiting."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points are directly supported by gene cluster analysis and deletion/complementation results."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The cited accession numbers are present in the article."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Metabolic_Step_Position",
+          "old_value": "downstream",
+          "new_value": "NA",
+          "reason": "No downstream placement is explicitly given for psdF."
+        }
+      ],
+      "stats": {
+        "supported": 18,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "psdG",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly renames Δorf2070 as ΔpsdG."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "psdG was identified in P. mosselii 923."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The organism is Pseudomonas mosselii."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional work was performed in P. mosselii 923."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Pseudomonas mosselii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strain used is 923."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "psdG is from strain 923."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "psdG is linked to pseudoiodinine production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly call pseudoiodinine an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Pseudoiodinine is experimentally shown to be antimicrobial and discussed as a biopesticide."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states ΔpsdG was only partially attenuated in antibacterial activity and pseudoiodinine production."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion, complementation, heterologous expression of the operon, and homology-based assignment are all reported."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "psdG is part of the pseudoiodinine biosynthetic cluster."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The proposed pathway places PsdG in an early precursor-processing step from GTP-derived intermediate to ribitylaminouracil-type intermediate."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The proposed role is in the first two steps, consistent with upstream."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links psdG to precursor/intermediate processing in pseudoiodinine biosynthesis."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 3e annotates psdG as riboflavin biosynthesis protein RibD; text also compares it to a deaminase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "RibD annotation is explicit."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The proposed pathway implies structure 1 is processed toward structure 2 by PsdD/PsdG."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Structure 2 is explicitly identified in the proposed pathway as the product of the early steps involving PsdD/PsdG."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The proposed pathway supports an early conversion toward 5-amino-6-(5-phospho-d-ribitylamino) uracil, though mechanistic detail is inferential."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "No rate-limiting role is established in the paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points accurately reflect the partial mutant phenotype and homology-based pathway assignment."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The accession numbers are present in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper notes psdG may affect structural/functional stability of pseudoiodinine and that DSM17497 orf2190 complemented ΔpsdG."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 24,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "gacA",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "gacA was identified and tested in P. mosselii 923."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is explicitly Pseudomonas mosselii."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional analyses were done in P. mosselii 923."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Pseudomonas mosselii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant strain is strain 923."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "gacA was studied in strain 923."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "gacA is directly linked to pseudoiodinine production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly classify pseudoiodinine as an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Pseudoiodinine is shown to act as an antimicrobial/biopesticide candidate."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "gacA is explicitly described as a response regulator in a two-component system."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states gacA belongs to the GacS/GacA two-component system family."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows GacA activates rsmY and rsmZ and does not directly bind the psdA promoter, supporting indirect transcriptional activation of the pathway."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "GacA controls pseudoiodinine biosynthesis."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "EMSA showed GacA binds promoters of rsmY and rsmZ."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GacA binds and activates rsmY/rsmZ promoters and does not bind the psdA promoter."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes uncharacterized signals acting through the GacS/GacA system."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Interaction with GacS is part of the canonical TCS model and likely applicable, but this was not directly tested here; rsmY/rsmZ are RNAs, not proteins."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places GacA in the GacS/GacA phosphorelay system."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization experiment or explicit cytoplasmic localization statement is provided."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Tn5 insertion and deletion of gacA abolished pseudoiodinine production and antibacterial activity."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The study used Tn5 mutagenesis, knockout, complementation, overexpression, EMSA, RNA-seq, and HPLC."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The data support GacA as a major positive upstream regulator needed for pathway activation via the sRNA branch."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by Results data."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Transcriptome comparison in LB and uncharacterized GacS/GacA inputs are described."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states gacA overproduction did not further increase pseudoiodinine production."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The cited accessions appear in the article."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutant 34-6 with single-copy Tn5 insertion in gacA is explicitly reported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "cytoplasm",
+          "new_value": "NA",
+          "reason": "No localization experiment or explicit cytoplasmic localization statement is provided."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "rsmY",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "rsmY was studied in P. mosselii 923."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Pseudomonas mosselii."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional analysis was done in P. mosselii 923."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Pseudomonas mosselii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The tested strain is 923."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "rsmY is from strain 923."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "rsmY is linked to pseudoiodinine biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly classify pseudoiodinine as an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Pseudoiodinine is shown to be an antimicrobial metabolite/biopesticide candidate."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "rsmY is explicitly described as a noncoding small RNA."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "Its role as an Rsm/Csr-sequestering sRNA is strongly implied by the regulatory model, but not directly demonstrated by binding assays with CsrA proteins in this paper."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The model and Results indicate rsmY positively affects production by antagonizing CsrA/RsmA repression."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "rsmY positively regulates pseudoiodinine biosynthesis."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports rsmY acting through CsrA proteins affecting psdA control, but does not experimentally show direct targeting of all listed CsrA proteins by rsmY."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states GacA positively regulates pseudoiodinine via rsmY/rsmZ and presents a model of antagonism of CsrA repression on psdA/operon output."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "EMSA shows GacA binds the rsmY promoter."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Direct interaction is shown only for GacA binding the promoter; interactions with CsrA1/2/3 and rsmZ are inferred from the regulatory model, not directly tested."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization statement or experiment is provided."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "ΔrsmY significantly reduced pseudoiodinine; ΔrsmYZ nearly abolished production and antibacterial activity."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Promoter motif analysis, EMSA, deletion/complementation, and HPLC metabolite profiling are all reported."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "rsmY is part of the key GacA-dependent sRNA module controlling pseudoiodinine production."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are supported by the reported experiments."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "cytoplasm",
+          "new_value": "NA",
+          "reason": "No localization statement or experiment is provided."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "rsmZ",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "rsmZ was studied in P. mosselii 923."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Pseudomonas mosselii."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments were performed in P. mosselii 923."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Pseudomonas mosselii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strain tested is 923."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "rsmZ is from strain 923."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "rsmZ is linked to pseudoiodinine biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly classify pseudoiodinine as an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Pseudoiodinine is shown to be antimicrobial and a candidate biopesticide."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "rsmZ is explicitly described as a noncoding small RNA."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "Its role as a Csr/Rsm-sequestering sRNA is part of the model but is not directly demonstrated by binding assays in this paper."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports a positive role through relief of CsrA repression."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "rsmZ regulates pseudoiodinine biosynthesis."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact direct targets are not experimentally shown; the role via CsrA-mediated psdA control is inferred."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports indirect positive regulation of psd operon output via antagonism of CsrA repression."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "GacA binding to the rsmZ promoter is shown by EMSA."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Direct evidence exists only for GacA-promoter binding; interactions with CsrA proteins and rsmY are inferred rather than directly shown."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization is reported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Single ΔrsmZ had little effect, but ΔrsmYZ abolished pseudoiodinine production and antibacterial activity."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Promoter motif analysis, EMSA, deletion/complementation, and HPLC were used."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports redundant function with rsmY in the GacA-dependent sRNA module controlling pathway output."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed findings match the Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "cytoplasm",
+          "new_value": "NA",
+          "reason": "No localization is reported."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "csrA1",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "csrA1 was identified and tested in P. mosselii 923."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The organism is Pseudomonas mosselii."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional analyses used P. mosselii 923."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Pseudomonas mosselii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strain is 923."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "csrA1 is from strain 923."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "csrA1 is linked to regulation of pseudoiodinine biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly classify pseudoiodinine as an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Pseudoiodinine is shown as an antimicrobial metabolite/biopesticide candidate."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CsrA/RsmA proteins are described as RNA-binding proteins regulating translation."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "csrA1 is identified as a CsrA/RsmA homolog."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes CsrA/RsmA proteins as binding GGA motifs near the RBS to block ribosome access; this is the inferred mode for psdA control."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "csrA1 is examined for control of pseudoiodinine biosynthesis/psdA expression."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper infers a GGA site in the psdA 5' UTR/RBS and discusses CsrA binding there, but direct binding of csrA1 specifically to psdA mRNA was not shown."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion of csrA1 increased psdA promoter-driven GUS activity, supporting repression of psdA expression."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states CsrA/RsmA proteins can be antagonized by regulatory RNAs such as rsmY/rsmZ."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Interactions with rsmY/rsmZ and psdA mRNA are consistent with the model but were not directly demonstrated for csrA1 in this study."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization is reported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "csrA1 deletion increased psdA-reporter output but did not significantly increase pseudoiodinine production."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion mutants, psdA::uidA fusion assays, and HPLC profiling were used."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports csrA1 as a minor negative regulator relative to csrA2/csrA3."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three points match the Results."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "csrA1 deletion was part of the engineered overproducer strain construction."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "cytoplasm",
+          "new_value": "NA",
+          "reason": "No localization is reported."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "csrA2",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "csrA2 was identified and tested in P. mosselii 923."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Pseudomonas mosselii."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional analysis was in P. mosselii 923."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Pseudomonas mosselii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strain is 923."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "csrA2 is from strain 923."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "csrA2 regulates pseudoiodinine production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "No explicit alkaloid classification is given in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Pseudoiodinine is shown as an antimicrobial metabolite/biopesticide candidate."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CsrA2 is a CsrA/RsmA-family RNA-binding translational regulator."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies csrA2 as a csrA homolog and discusses CsrA/RsmA family function."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes post-transcriptional repression via GGA binding near the RBS as the likely mechanism."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "csrA2 controls pseudoiodinine biosynthesis/psdA expression."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "The psdA 5' UTR/RBS target is strongly inferred, but direct binding of csrA2 to psdA RNA was not shown."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "csrA2 deletion increased psdA reporter output and pseudoiodinine production, supporting strong repression."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents rsmY/rsmZ as antagonists of CsrA/RsmA proteins."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Direct interactions with rsmY/rsmZ, psdA mRNA, or CsrA3 were not experimentally shown."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization is reported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion significantly improved pseudoiodinine production and antibacterial activity."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion mutagenesis, psdA::uidA fusion assays, HPLC profiling, and engineered strain construction were reported."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies CsrA2 together with CsrA3 as major negative regulators useful for engineering increased yield."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points agree with the Results."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "TSB medium was used in overproduction engineering experiments involving csrA deletions."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The engineered overproducer including csrA removals showed slower early growth while achieving higher yield."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "cytoplasm",
+          "new_value": "NA",
+          "reason": "No localization is reported."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "csrA3",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "csrA3 was identified and tested in P. mosselii 923."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Pseudomonas mosselii."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in P. mosselii 923."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Pseudomonas mosselii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The tested strain is 923."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "csrA3 is from strain 923."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "csrA3 regulates pseudoiodinine biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly classify pseudoiodinine as an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Pseudoiodinine is shown as an antimicrobial metabolite/biopesticide candidate."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CsrA3 is a CsrA/RsmA-family RNA-binding translational regulator."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies csrA3 as a csrA homolog and discusses CsrA/RsmA family function."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports post-transcriptional repression via GGA motif binding near the RBS."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "csrA3 controls pseudoiodinine biosynthesis/psdA expression."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "The psdA 5' UTR/RBS target is inferred from the model, but direct csrA3-RNA binding was not shown."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "csrA3 deletion increased psdA expression and pseudoiodinine production, indicating strong repression."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "rsmY/rsmZ antagonism of CsrA/RsmA proteins is described in the paper."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Direct interactions with rsmY/rsmZ, psdA mRNA, or CsrA2 were not directly demonstrated."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization evidence is provided."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion significantly improved pseudoiodinine production and antibacterial activity."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion mutagenesis, psdA::uidA assays, HPLC profiling, and engineering experiments were used."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "CsrA3 is identified as a major negative regulator whose removal aids overproduction."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The three summary statements are consistent with the Results."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "TSB medium was used during engineering experiments involving csrA3 deletion backgrounds."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The engineered overproducer incorporating csrA removals showed slower early growth but higher yield."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "cytoplasm",
+          "new_value": "NA",
+          "reason": "No localization evidence is provided."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 317,
+    "supported": 273,
+    "unsupported": 13,
+    "uncertain": 31,
+    "total_corrections": 13
+  }
+}

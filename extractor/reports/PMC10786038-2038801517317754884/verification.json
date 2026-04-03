@@ -1,0 +1,759 @@
+{
+  "file": "MinerU_markdown_PMC10786038_2038801517317754884",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC10786038_2038801517317754884.md",
+  "timestamp": "2026-03-31T21:34:20.475706",
+  "genes": [
+    {
+      "gene_name": "HvCHS",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states 'HvCHS, CHS from H. vulgare' and discusses it as chalcone synthase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The EC number 2.3.1.74 does not appear in the paper text provided."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state CHS enzymes adopt the typical fold with an 'αβαβα pseudosymmetric thiolase motif in the C-terminal domain and the α-helical motif in the N-terminal domain'; CHS is a chalcone synthase family enzyme. 'Type III polyketide synthase' is standard for CHS but not explicitly stated verbatim; overall family/domain description is directly supported enough."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HvCHS is described as CHS from H. vulgare, i.e., barley."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly gives H. vulgare."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HvCHS was expressed/tested in engineered E. coli strains."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly uses Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The recombinant production strains were constructed in E. coli MG1655 (DE3), described as MG1655 K-12 (DE3)."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Expression used pETDuet/pET28a and IPTG induction, which implies T7-based expression in DE3 hosts, but the promoter itself is not explicitly named in the provided text."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The study concerns flavonoid biosynthesis and methylated flavonoid production."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "HvCHS is tested in production of methylated flavonoids homoeriodictyol and hesperetin from hydroxycinnamic acid-derived starter units."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract explicitly calls CHS 'the enzyme catalyzing the first committed step of the pathway'."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show HvCHS controls acceptance of O-methylated substrates and affects final homoeriodictyol/hesperetin titers."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The text and assay setup support that HvCHS uses hydroxycinnamoyl-CoA starter units with malonyl-CoA to form products leading to flavanones; in vivo products were homoeriodictyol and hesperetin, and in vitro feruloyl-CoA plus malonyl-CoA were used."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "Feruloyl-CoA and malonyl-CoA are directly supported in the in vitro assay. Isoferuloyl-CoA is inferred from feeding isoferulic acid and downstream hesperetin production, but not directly measured or named in the text."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "CHS forms chalcone intermediates that are then converted by CHI to flavanones; this is directly implied by pathway design and CHI inclusion."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "HvCHS was directly linked to production of homoeriodictyol and hesperetin in Results."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly discusses these compounds as flavonoids / O-methylated flavonoids."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods say extracellular metabolites were quantified from fermentation samples; thus products were measured in culture broth/supernatant."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract and Discussion describe homoeriodictyol and hesperetin as health-promoting and bioactive for treating human diseases."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HvCHS was heterologously expressed in engineered E. coli and induced with IPTG during fermentation."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization for HvCHS is stated in the paper."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "HvCHS function was tested in the reconstructed pathway together with Os4CL and MsCHI in coexpression strains."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "CHS is explicitly the first committed-step enzyme, and the paper's engineering results identify HvCHS as the main determinant of improved methylated flavonoid production."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show wild-type HvCHS supports methylated flavonoid production and that variants, especially Q232P,D234V, improved titers and gave the best performance."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are used in the paper: heterologous reconstruction, mutagenesis, fermentations, HPLC/HPLC-MS, crystal structures, and in vitro kinetics."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state 1 mM ferulic acid or isoferulic acid feeding, IPTG induction, cerulenin supplementation, and 32 h fermentation."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Discussion show hesperetin production remained much lower than homoeriodictyol and OD600 was similar across strains, indicating no obvious growth penalty in the tested set."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly frames HvCHS as a target for further engineering/directed evolution for microbial methylated flavonoid production."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "PDB codes 8B32, 8B35, and 8B3C are explicitly given; O-methylated flavonoids impaired soaking; surface loop effects on in vivo performance are described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are consistent with the Results and Discussion: first committed-step role, influence of A199/surface loop residues, and superior performance plus higher affinity of Q232P,D234V."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.3.1.74",
+          "new_value": "NA",
+          "reason": "The EC number 2.3.1.74 does not appear in the paper text provided."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "cytosol",
+          "new_value": "NA",
+          "reason": "No subcellular localization for HvCHS is stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "HvCHS(Q232P,D234V)",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly described as an HvCHS double mutant variant, i.e., an engineered chalcone synthase variant."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The EC number 2.3.1.74 is not given in the paper text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "As an HvCHS variant, it belongs to the chalcone synthase family; CHS structural context is described in the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HvCHS is from H. vulgare, i.e., barley."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states H. vulgare."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The variant was expressed and tested in engineered E. coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Escherichia coli is explicitly named."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Strain construction for pathway testing used E. coli MG1655 (DE3)."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "IPTG induction and pETDuet/pET28a constructs are stated, but explicit promoter identity is not named."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The variant was tested in the flavonoid biosynthetic pathway for methylated flavonoid production."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly tied to the methylated flavonoid branch producing homoeriodictyol and hesperetin."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "As a CHS variant, it acts at the first committed step; the paper treats CHS as that control point."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show the double mutant directly enhanced production of methylated flavanones in vivo."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The variant is assayed as a CHS enzyme using feruloyl-CoA and malonyl-CoA and improves methylated product formation."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "Feruloyl-CoA and malonyl-CoA are directly supported; isoferuloyl-CoA is inferred from isoferulic acid feeding and hesperetin production but not directly named or assayed."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "As a CHS variant in a CHI-containing pathway, it forms chalcone intermediates leading to final flavanones."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The double mutant increased homoeriodictyol and hesperetin titers in vivo."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are flavonoids/O-methylated flavonoids in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Fermentation extracellular metabolites were quantified."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes these metabolites as health-promoting/bioactive."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The engineered variant was heterologously expressed in E. coli after IPTG induction."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No cellular localization is reported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway strains expressing the variant also include Os4CL and MsCHI."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper focuses on engineering CHS as the key first committed-step enzyme and shows the double mutant improves pathway output."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Small-scale data show about 2-fold higher homoeriodictyol and 3-fold higher hesperetin than wild-type HvCHS, and shake-flask titers of 0.33 mM and 0.016 mM are explicitly reported; comparison to previous report as 2-fold and 10-fold is in abstract/discussion."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods were all used to validate the mutant: mutagenesis, E. coli expression, fermentation, HPLC, and kinetics."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed fermentation conditions are explicitly described."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states hesperetin production remains much lower than homoeriodictyol due to substrate preference; no growth defect was reported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents this mutant as the best variant and a useful basis for further engineering."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state yields of 48 vs 93 mg/L protein and a 1.6-fold KM difference with similar vmax and kcat, supporting this summary."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by Results/Discussion."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.3.1.74",
+          "new_value": "NA",
+          "reason": "The EC number 2.3.1.74 is not given in the paper text."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "cytosol",
+          "new_value": "NA",
+          "reason": "No cellular localization is reported."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "PhCHS(T197A)",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly a PhCHS mutant variant, i.e., engineered chalcone synthase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The EC number 2.3.1.74 is not stated in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "As a CHS variant, it belongs to the chalcone synthase family discussed throughout the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PhCHS is from P. hybrida, i.e., petunia."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states Petunia hybrida."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant was tested in engineered E. coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Escherichia coli is explicitly named."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Pathway strains were constructed in E. coli MG1655 (DE3)."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "IPTG induction and pETDuet constructs are given, but the promoter is not explicitly named."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant was tested in flavonoid biosynthesis for methylated flavonoid production."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It was directly assessed for production of methylated flavonoids, especially hesperetin."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "As CHS, it is the first committed-step enzyme in the pathway."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state T197A enabled hesperetin production with PhCHS."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "As a CHS mutant, it catalyzes chalcone formation from hydroxycinnamoyl-CoA plus malonyl-CoA; the broadening toward O-methylated precursor acceptance is supported by hesperetin production."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "Feruloyl/isoferuloyl-CoA are inferred from fed acids and pathway chemistry, but not directly measured or named as substrates for this mutant."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway logic with CHI supports chalcone intermediates leading to hesperetin and homoeriodictyol."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly links this mutant to hesperetin and homoeriodictyol production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are flavonoids/O-methylated flavonoids in the article."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Extracellular fermentation products were measured."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes these compounds as health-promoting/bioactive."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant was heterologously expressed in E. coli after IPTG induction."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization is reported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "PhCHS was used in pathway strains with Pc4CL and MsCHI."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "CHS is treated as a key substrate-selectivity determinant/first committed-step enzyme, and this mutation altered final product formation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state PhCHS(T197A) enabled hesperetin production for the first time with this enzyme while homoeriodictyol remained comparable to wild-type PhCHS."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant was validated by mutagenesis, pathway reconstruction in E. coli, precursor feeding, and HPLC quantification."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These conditions are described in Methods and used for the screening experiment."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 3A/Results indicate this mutant was not the best-performing strain compared with improved HvCHS variants, so the statement is consistent."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly interprets this mutation as demonstrating a determinant for accepting O-methylated substrates in canonical CHS."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The article explicitly says this mutation enabled hesperetin production with PhCHS 'for the first time'."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three points are directly supported by the Results and Discussion."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.3.1.74",
+          "new_value": "NA",
+          "reason": "The EC number 2.3.1.74 is not stated in the paper."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "cytosol",
+          "new_value": "NA",
+          "reason": "No subcellular localization is reported."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "Os4CL",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The abbreviations define 4CL as 4-coumarate:CoA ligase, and Os4CL is 4-CL from O. sativa."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The EC number 6.2.1.12 does not appear in the paper text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "Os4CL is clearly a 4CL enzyme, but the specific wording '4CL acyl-activating enzyme family' is not explicitly stated in the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Os4CL is from O. sativa, i.e., rice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly gives O. sativa."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Os4CL was expressed/tested in engineered E. coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Escherichia coli is explicitly named."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Strain construction used E. coli MG1655 (DE3)."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "IPTG induction and pETDuet/pCDFDuet/pET28a plasmids are described, but promoter identity is not explicitly stated."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Os4CL participates in precursor activation for the flavonoid production pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It supplies substrates for the methylated flavonoid branch yielding homoeriodictyol/hesperetin."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Os4CL acts upstream of CHS by activating hydroxycinnamic acid precursors."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway requires Os4CL-generated CoA esters for downstream methylated flavonoid formation, and pathway outputs were measured."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods for in vitro feruloyl-CoA synthesis with purified Os4CL explicitly support activation of ferulic acid with ATP and CoA; isoferulic acid activation is inferred from pathway production but not directly assayed."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "Ferulic acid, ATP and CoA are directly supported for in vitro synthesis. Isoferulic acid is only indirectly inferred from in vivo feeding and product formation, not directly shown for purified Os4CL."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "Feruloyl-CoA is directly supported by in vitro synthesis. Isoferuloyl-CoA is inferred but not explicitly shown or named."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Os4CL is part of pathways producing homoeriodictyol and hesperetin in Results."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These terminal metabolites are flavonoids."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Extracellular metabolites in engineered E. coli fermentation were quantified."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes these compounds as health-promoting/bioactive."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Os4CL was heterologously expressed in E. coli and induced with IPTG."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization is stated."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Os4CL was coexpressed functionally with HvCHS and MsCHI in the recombinant pathway."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper's results indicate 4CL engineering had only modest effects and CHS became the major focus; thus it was not established as the principal bottleneck."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state HvCHS+Os4CL (s2) produced up to two times more homoeriodictyol than PhCHS+Pc4CL and was the only initial combination producing hesperetin."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Os4CL was examined via heterologous pathway reconstruction, 4CL mutagenesis screening, purified-enzyme feruloyl-CoA synthesis, and HPLC analyses."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These fermentation conditions are explicitly described."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state 4CL mutagenesis yielded only modest or no improvements, whereas CHS engineering gave stronger gains."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "This interpretation matches the paper: Os4CL is useful upstream, but CHS is the more decisive engineering target here."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state purified Os4CL was used to synthesize feruloyl-CoA for HvCHS in vitro assays."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are consistent with the Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "6.2.1.12",
+          "new_value": "NA",
+          "reason": "The EC number 6.2.1.12 does not appear in the paper text."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "cytosol",
+          "new_value": "NA",
+          "reason": "No localization is stated."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "Os4CL(delV340)",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly an Os4CL deletion mutant, i.e., engineered 4-coumarate:CoA ligase variant."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The EC number 6.2.1.12 is not stated in the paper text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is a 4CL variant, but '4CL acyl-activating enzyme family' is not explicitly phrased in the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Os4CL is from O. sativa, i.e., rice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly gives O. sativa."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The variant was screened in engineered E. coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Escherichia coli is explicitly named."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The recombinant strains were made in E. coli MG1655 (DE3)."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "IPTG induction is given, but explicit promoter identity is not."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant was tested in the precursor activation arm feeding methylated flavonoid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It was specifically screened for effects on methylated flavonoid production from methylated hydroxycinnamic acids."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "As a 4CL enzyme, it functions upstream in precursor activation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant was directly evaluated by its effect on final methylated flavonoid titers."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says the deletion was designed to better accommodate O-methylated substrates by analogy to N. tabacum 4CL; as a 4CL it activates hydroxycinnamic acids to CoA esters."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "Fed ferulic and isoferulic acids were used in screening, but direct substrate specificity for the mutant was not biochemically demonstrated."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The specific CoA ester products of this mutant were not directly measured in the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly reports increased homoeriodictyol titer for Os4CL(delV340)."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Homoeriodictyol is a flavonoid/O-methylated flavonoid in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Extracellular fermentation products were quantified."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes homoeriodictyol as a health-promoting O-methylated flavonoid."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant was heterologously expressed in engineered E. coli after IPTG induction."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization is stated."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant was screened in the reconstructed pathway with CHS and CHI, specifically Os4CL with HvCHS/MsCHI context."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish this mutant or 4CL as the key control step; effects were modest."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state s6 expressing Os4CL(delV340) showed a 1.5-fold increase in homoeriodictyol titer compared to s2, while other 4CL mutants were equal or lower."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "This mutant was tested by site-directed mutagenesis, pathway screening in E. coli, and HPLC product quantification."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The strain screening used fed methylated hydroxycinnamic acids, IPTG induction, and cerulenin supplementation."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows the benefit was modest and CHS engineering ultimately outperformed 4CL engineering."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a fair summary of the paper's evidence: modest improvement from upstream 4CL pocket engineering."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The design rationale was explicitly based on analogy to N. tabacum 4CL mutagenesis allowing larger methoxylated substrate binding."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary statements match the Results and rationale given in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "6.2.1.12",
+          "new_value": "NA",
+          "reason": "The EC number 6.2.1.12 is not stated in the paper text."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "cytosol",
+          "new_value": "NA",
+          "reason": "No localization is stated."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 155,
+    "supported": 131,
+    "unsupported": 10,
+    "uncertain": 14,
+    "total_corrections": 10
+  }
+}

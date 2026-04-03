@@ -1,0 +1,660 @@
+{
+  "file": "MinerU_markdown_PMC3015458_2038799185993564168",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC3015458_2038799185993564168.md",
+  "timestamp": "2026-03-31T22:06:41.907129",
+  "genes": [
+    {
+      "gene_name": "STS",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1d and text identify STS as probe set 1608009_s_at; GSVIVT00008253001."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study concerns wine grape/grapevine berries."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states Vitis vinifera."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Cabernet Sauvignon and Chardonnay were tested, and Pinot Noir was used for promoter sequence comparison."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental species is grapevine."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental cultivars are Vitis vinifera."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Field experiments and transcript profiling were done on Cabernet Sauvignon and Chardonnay."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links STS expression changes to increased trans-piceid accumulation, the measured major stilbene product."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Trans-piceid is described as a stilbene/stilbene-derived compound."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Stilbenes were quantified in whole berries; Figure 5 states concentrations in whole berries."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "STS is discussed as part of the resveratrol/stilbene biosynthetic pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places STS within stilbene biosynthesis, a branch of phenylpropanoid metabolism."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "STS is explicitly called stilbene synthase/resveratrol synthase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses coumaroyl-CoA as precursor of trans-resveratrol, but does not explicitly state STS substrates here or mention malonyl-CoA."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The text states trans-resveratrol is converted to trans-piceid, and STS/resveratrol synthase catalyzes the preceding step in the resveratrol pathway, making trans-resveratrol directly inferable as product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This exact reaction description with condensation of p-coumaroyl-CoA and malonyl-CoA is not stated in the paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper calls STS the next step in the resveratrol pathway and functionally treats it as the decisive step associated with piceid accumulation; 'committed step' is a reasonable inference for stilbene branch entry."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "STS forms trans-resveratrol, which the paper states is converted to trans-piceid, so it is the immediate precursor-forming step."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The treatment throughout the paper is water deficit."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state STS transcript strongly increased in Cabernet Sauvignon under water deficit after veraison through harvest, while in Chardonnay expression was higher in well-watered vines than under deficit."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the probe set underwent a 10-fold increase upon water deficit one week following veraison in Cabernet Sauvignon, reaching maximal expression five weeks after veraison."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "A 1.2 kb proximal upstream/native promoter region of the STS gene was sequenced and cultivar-specific polymorphisms were analyzed computationally."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all present: field water-deficit treatment, Affymetrix microarray, metabolite profiling by HPLC-MS, promoter sequencing and cis-element analysis; qPCR validation is cited for the microarray platform/data."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper concludes increased STS expression, not glucosyltransferase expression, appears to regulate/promote trans-piceid accumulation under water deficit in Cabernet Sauvignon."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four summary points match explicit Results/Discussion statements, including ~10-fold induction, opposite Chardonnay response, 5-fold trans-piceid increase, and promoter polymorphisms suggesting cultivar-specific control."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The authors explicitly state STS gene expression appears to be a regulatory step for trans-piceid accumulation and that water deficit affects STS rather than glucosyltransferase."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states seven other STS isogenes showed similar but nonsignificant patterns, and promoter analysis found 12 SNPs causing eight cis-element changes."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Microarray transcriptomics were deposited in PlexDB experiment VV5."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper suggests promoter differences may allow cultural and genetic manipulation to increase stilbenes, but does not explicitly mention marker-assisted selection or metabolic engineering in those terms."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states trans-piceid can release trans-resveratrol in the human intestine/liver and increased stilbenes may contribute to pathogen resistance."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.3.1.95",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "condenses p-coumaroyl-CoA with malonyl-CoA to form trans-resveratrol",
+          "new_value": "NA",
+          "reason": "This exact reaction description with condensation of p-coumaroyl-CoA and malonyl-CoA is not stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "4CL",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results text lists 4CL as 1611265_at; GSVIVT00009148001."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was studied in grapevine berries."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly studies Vitis vinifera."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Cabernet Sauvignon and Chardonnay were the tested cultivars."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied/tested species is grapevine."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The tested cultivars are Vitis vinifera."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Cabernet Sauvignon and Chardonnay were used in the experiment."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "4CL is discussed in the resveratrol/stilbene pathway linked to measured trans-piceid accumulation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Trans-piceid is the measured stilbene."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Metabolites were measured in whole berries."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "4CL is explicitly discussed as the third step of resveratrol biosynthesis within phenylpropanoid/stilbene metabolism."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes 4CL as supplying coumaroyl-CoA precursor for trans-resveratrol, i.e., precursor supply to the stilbene branch."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The text names it 4-coumarate coenzyme A: ligase / 4-coumarate:CoA ligase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number appears in the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the closest ortholog utilizes 4-coumarate as a substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says this supports direct involvement in biosynthesis of coumaroyl-CoA, precursor of trans-resveratrol."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a faithful paraphrase of the paper's statement that 4CL is directly involved in biosynthesis of coumaroyl-CoA from 4-coumarate."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls it the third step of resveratrol biosynthesis, i.e., upstream of STS/piceid."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The text directly frames 4CL as providing coumaroyl-CoA precursor for trans-resveratrol and thus upstream precursor supply."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression was examined under water deficit."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state transcript abundance increased in Cabernet Sauvignon after veraison through harvest under water deficit and decreased in Chardonnay during the same period."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "This gene's evidence is from Affymetrix microarray transcript profiling in field water-deficit treatments."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper associates 4CL with precursor formation and discusses likely contribution, but does not directly demonstrate that this gene itself caused increased stilbene biosynthesis."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These summary points closely match the Results text and discussion of precursor supply."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish 4CL as rate-limiting in grape here, but does discuss a potential regulatory role based on heterologous evidence; the field correctly says not established."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed cites heterologous tobacco 4CL evidence as background support rather than direct grape validation."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The study used microarray transcriptomics deposited in PlexDB VV5."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses human health benefits and pathogen resistance for stilbenes generally, but not specifically as a verified function tied to 4CL."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "6.2.1.12",
+          "new_value": "NA",
+          "reason": "No EC number appears in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "C4H",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper lists one C4H transcript as 1610821_at; GSVIVT00023932001."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Studied in grapevine berries."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies Vitis vinifera."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Cabernet Sauvignon and Chardonnay were tested."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The tested species is grapevine."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The tested cultivars are Vitis vinifera."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Cabernet Sauvignon and Chardonnay were compared."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "C4H is discussed within the pathway leading to measured trans-piceid."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Trans-piceid is a stilbene in this paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Metabolite data are from whole berries."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "C4H is explicitly placed in the resveratrol/phenylpropanoid pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "As the second step, it contributes to early phenylpropanoid precursor formation."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is explicitly named cinnamate 4-hydroxylase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "By gene name and pathway step, cinnamate as substrate is directly inferable; the paper says the second step is catalyzed by cinnamate 4-hydroxylase."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "p-Coumarate is directly inferable from the named C4H reaction in this pathway, though not written out explicitly."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a standard restatement directly inferable from the enzyme name and pathway position in the paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says the second step in the resveratrol biosynthetic pathway is catalyzed by C4H."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "C4H is upstream and contributes precursor supply toward stilbene synthesis."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The treatment was water deficit."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state 1610821_at increased under water deficit from veraison through harvest in Cabernet Sauvignon and was not affected in Chardonnay."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Evidence comes from Affymetrix microarray transcript profiling under field water deficit."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "Association with increased precursor flux is plausible but not directly demonstrated by metabolite flux measurements or gene manipulation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points faithfully summarize the explicit C4H Results and their interpretation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish C4H as rate-limiting; this field correctly says not established."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Microarray transcriptomics in PlexDB VV5 were used."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.14.91",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "PAL",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies PAL as 1613113_at; GSVIVT00018175001."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was studied in grapevine berries."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states Vitis vinifera."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Cabernet Sauvignon and Chardonnay were the studied cultivars."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental species is grapevine."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The tested plants are Vitis vinifera cultivars."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Cabernet Sauvignon and Chardonnay were compared."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL is discussed as part of the pathway associated with trans-piceid accumulation under water deficit."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Trans-piceid is the measured stilbene product."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Stilbenes were measured in whole berries."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL is explicitly discussed in the resveratrol/phenylpropanoid biosynthetic pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes PAL as the first committed step associated with the resveratrol biosynthetic pathway, consistent with phenylpropanoid entry."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is explicitly named phenylalanine ammonia-lyase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number appears in the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "From the enzyme name phenylalanine ammonia-lyase, L-phenylalanine as substrate is directly inferable."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "trans-Cinnamate is directly inferable from the named PAL reaction, though not explicitly spelled out in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a standard restatement directly inferable from PAL identity and pathway role."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says the first committed step associated with the resveratrol biosynthetic pathway is controlled by PAL."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL is an upstream precursor-supplying step in the pathway leading to stilbenes."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene response was measured under water deficit."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state coordinated increased transcript abundance in Cabernet Sauvignon from veraison through harvest under water deficit and reduced abundance in Chardonnay under deficit."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Evidence is from Affymetrix microarray transcript profiling under field water deficit."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows association with upstream pathway activation, but not a direct causal phenotypic effect of PAL on trans-piceid."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points accurately summarize the PAL Results and interpretation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish PAL as key control for the target metabolite; the field correctly says not established."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results discuss strong homology to Arabidopsis AtPAL2 and environmentally triggered flavonoid synthesis."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Microarray transcriptomics, PlexDB VV5, were used."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "4.3.1.24",
+          "new_value": "NA",
+          "reason": "No EC number appears in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "resveratrol-O-glucosyltransferase",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1e and text identify 1617078_at; GSVIVT00036670001."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Studied in grapevine berries."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental system is Vitis vinifera."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Cabernet Sauvignon and Chardonnay were analyzed."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The tested species is grapevine."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The tested cultivars are Vitis vinifera."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Cabernet Sauvignon and Chardonnay were used experimentally."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly links this enzyme class to conversion of trans-resveratrol to trans-piceid."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Trans-piceid is described as a stilbene."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Trans-piceid was measured in whole berries."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "This gene is discussed in the step converting resveratrol to piceid, i.e., stilbene glycosylation."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states trans-resveratrol is converted to trans-piceid by resveratrol-O-glucosyltransferase."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The text uses resveratrol-o-glucosyltransferase; Figure 2 annotates the probeset as resveratrol/hydroxycinnamic acid-O-glucosyltransferase."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states trans-resveratrol is converted to trans-piceid by this enzyme."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states the product is trans-piceid."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This directly restates the paper's explicit conversion of trans-resveratrol to trans-piceid by this enzyme."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Because it converts resveratrol to piceid, it is the terminal step toward the measured target product."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly presents this enzyme as forming trans-piceid from trans-resveratrol."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The transcript response was assessed under water deficit."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state transcript abundance declined steadily over development and was unaffected by water deficit in either cultivar."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper provides microarray transcript data and HPLC-MS metabolite profiling in the same experiment."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The authors explicitly conclude this gene was not responsive to water deficit and therefore did not explain increased trans-piceid accumulation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three statements match the Results text and conclusion."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper specifically argues against this step being the control point under water deficit."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The authors explicitly emphasize that although this gene is most directly related to piceid formation, its transcript was unchanged by water deficit."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Microarray transcriptomics were used and deposited in PlexDB VV5."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 26,
+        "unsupported": 0,
+        "uncertain": 0
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 138,
+    "supported": 127,
+    "unsupported": 5,
+    "uncertain": 6,
+    "total_corrections": 5
+  }
+}

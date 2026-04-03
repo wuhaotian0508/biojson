@@ -1,0 +1,846 @@
+{
+  "file": "MinerU_markdown_PMC10248720_2038801811950833666",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC10248720_2038801811950833666.md",
+  "timestamp": "2026-03-31T21:28:08.386737",
+  "genes": [
+    {
+      "gene_name": "PRX111",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is in rice and PRX111 is a rice gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice is explicitly identified as Oryza sativa / Oryza sativa ssp. japonica in Materials and methods."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All experiments were performed in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is rice, explicitly Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "HY and ZH11 are explicitly used; PRX111-related assays include WT HY roots and protoplast/WOX11 OE work in ZH11 background."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PRX111 is treated as a PRX/peroxidase; the text states 79 Class III peroxidases (PRXs) in rice roots."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization for PRX111 is given. Fig. 8 mentions ROS in cytosol of CR cells, not PRX111 localization."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says most ROS homeostasis-related genes/proteins, including many PRXs, showed root-specific expression, but it does not explicitly state PRX111 itself is root-specific in the main text."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PRX111 transcript is reduced in wox11 roots (Fig. 2C), and the study focuses on crown roots/root tissues."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PRX111 knockout reduces root ROS/H2O2 accumulation by DAB staining and is discussed as promoting H2O2/ROS production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "H2O2 is explicitly treated as a reactive oxygen species."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states ROS/H2O2 balance cell division and differentiation in root meristem and are required for crown root development."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "ROS/H2O2 were analyzed in crown root meristem/crown root cells; WOX11 controls ROS homeostasis in crown root meristem."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "prx111 knockout plants showed reduced root ROS and fewer crown roots (Fig. 2F,G)."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each element is supported: direct WOX11 targeting by EMSA/ChIP/luciferase, reduced PRX111 transcript in wox11, and prx111 knockout causing lower ROS and fewer CRs."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all explicitly reported for PRX111: RT-qPCR, EMSA, dual-luciferase, ChIP-qPCR, CRISPR/Cas9 knockout, DAB staining, and crown root phenotyping."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper shows WOX11 binds the PRX111 DNA locus, not that WOX11 physically interacts with PRX111 protein."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "UNCERTAIN",
+          "reason": "KI and exogenous H2O2 effects are shown for WT/wox11 ROS phenotypes, but not directly tested in prx111 mutants."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The CRISPR/Cas9 vector uses ubiquitin promoter for Cas9 and U3/6 for sgRNA; 35S promoter drives WOX11 in dual-luciferase effector."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper includes proteomics and acetylproteomics and references prior transcriptomics; supplementary datasets are linked to the DOI."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This is an extrapolative application claim not stated or tested in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses ROS homeostasis and broader developmental/stress roles of PRXs/ROS, but does not explicitly frame tradeoffs for PRX111 engineering."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the paper's focus: PRX111 is studied as a WOX11-regulated ROS-homeostasis gene in root development, while nitrogen metabolism/protein synthesis enrichment pertains to downstream acetylation analyses."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "No subcellular localization for PRX111 is given. Fig. 8 mentions ROS in cytosol of CR cells, not PRX111 localization."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "WOX11",
+          "new_value": "NA",
+          "reason": "The paper shows WOX11 binds the PRX111 DNA locus, not that WOX11 physically interacts with PRX111 protein."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Potential target to improve crown root system architecture by maintaining optimal ROS homeostasis, but careful dosage control is needed because ROS balance is developmental-context dependent",
+          "new_value": "NA",
+          "reason": "This is an extrapolative application claim not stated or tested in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 3,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "WOX11",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "WOX11 studied here is from rice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice is explicitly Oryza sativa / Oryza sativa ssp. japonica."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All experiments are in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is explicitly Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "HY is used for WT and wox11; ZH11 is used for transgenic plants including WOX11 OE and reporter assays."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "WOX11 is a WOX/homeobox transcription factor, consistent with its DNA-binding and transcriptional activation assays in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "WOX11 is explicitly a WOX family gene; the homeobox identity is inherent to WOX nomenclature and prior work."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "As a transcription factor binding chromatin, nuclear function is inferable, but the paper does not explicitly state nucleus localization."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "WOX11 is studied in crown roots/root tissues and described as acting in crown root meristem cells."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "WOX11-dependent ROS/H2O2 levels in crown root cells are a central result."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "H2O2 is explicitly treated as ROS."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows WOX11-controlled H2O2 is required for crown root development and promotes protein lysine acetylation of proteins enriched in nitrogen metabolism and protein synthesis pathways."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly places WOX11-controlled ROS/H2O2 in crown root meristem/crown root cells."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results and Abstract state WOX11 maintains ROS homeostasis leading to control of protein lysine acetylation."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "wox11 mutation lowers ROS and protein acetylation and impairs crown root development; H2O2 partially rescues."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly state WOX11 binds three PRX genes: PRX70, PRX111, and PRX112."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "WOX11 activates PRX111 expression in dual-luciferase and is discussed as directly activating PRX genes."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by decreased PRX111 in wox11 and direct binding/activation assays; the text extends this to PRX genes."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "PRX111/70/112 are regulatory target genes, not proteins shown to physically interact with WOX11."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "wox11 has low ROS, hypo-acetylation, and fewer crown roots; H2O2 rescues in part."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary matches the main Results and figures."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly used in the paper for WOX11-related conclusions."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "KI lowers H2O2 and phenocopies aspects of wox11; exogenous H2O2 restores ROS and Kac in wox11."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "35S drives WOX11 effector in dual-luciferase, and ubiquitin promoter is used in transgene/Cas9 contexts in this study."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Proteomics, quantitative acetylproteomics, and referenced transcriptomic analysis are explicitly used."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Potential engineering value is speculative and not claimed/tested in the Results."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper implies broader developmental and stress-related roles of ROS/hormone pathways, but does not explicitly discuss engineering tradeoffs for WOX11 manipulation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The study indeed centers on root development, while noting enrichment of ROS-dependent acetylation targets in nitrogen metabolism and peptide/protein biosynthesis."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "PRX111; PRX70; PRX112",
+          "new_value": "NA",
+          "reason": "PRX111/70/112 are regulatory target genes, not proteins shown to physically interact with WOX11."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Candidate regulator for engineering stronger crown root systems through controlled ROS signaling, but manipulation should avoid excessive ROS perturbation and unintended developmental effects",
+          "new_value": "NA",
+          "reason": "Potential engineering value is speculative and not claimed/tested in the Results."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "SRT1",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SRT1 analyzed here is a rice HDAC."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism is Oryza sativa."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments are in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice is explicitly Oryza sativa."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls SRT1 a rice NAD+-dependent sirtuin family histone deacetylase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "SRT1 is explicitly part of the sirtuin HDAC family."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state SRT1 is nucleus and cytoplasm in this study; that detail is not explicitly given here."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SRT1-FLAG overexpression lines were analyzed in crown roots for redox status."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Protein lysine acetylation state is not a metabolite, and the paper does not define it as a terminal metabolite."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Post-translational acetylation state is not a metabolite class in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links ROS-controlled acetylation to proteins enriched in organonitrogen metabolism/protein synthesis, but not specifically as SRT1's terminal metabolite function."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Acetylation changes are measured in crown root cells, but the framing as metabolite accumulation site is not explicit."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "SRT1 is a deacetylase and sirtinol-sensitive sirtuin activity is linked to protein deacetylation/homeostasis."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper suggests SRT1 and SRT2 are at least partially involved, but does not establish SRT1 alone as decisively influencing the observed hypo-acetylation."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The sirtinol acetylproteomics shows many proteins respond; the paper does not resolve specific direct targets."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "SRT1 is a deacetylase; H2O2 promotes oxidation and sirtinol inhibits sirtuin activity."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The evidence concerns protein Kac levels, not effects on target genes."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "ROS/H2O2 redox state and sirtinol are explicitly tested as inputs affecting sirtuin state/activity."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No physical or functional interaction between SRT1 and SRT2 is demonstrated; they are only studied together."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "SRT1 contributes to acetylation changes, but no direct SRT1 mutant/root phenotype is tested in this paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "SRT1 redox state shifts under KI/H2O2, oxidation is consistent with lower HDAC activity, and sirtinol-sensitive sirtuins contribute to the low-ROS hypo-acetylation pattern."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are explicitly used: FLAG-tag AMS redox assay, sirtinol treatment, and quantitative acetylproteomics."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "KI, H2O2, and sirtinol are all explicitly applied in SRT1-related analyses."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Quantitative acetylproteomics of sirtinol-treated plants is reported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Application value is speculative and not supported by the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Broad pleiotropic consequences are plausible, but not directly discussed for SRT1 engineering in this paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects that SRT1 was experimentally tested for redox sensitivity and contribution to Kac regulation, but is not the main upstream ROS regulator."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus and cytoplasm",
+          "new_value": "NA",
+          "reason": "The paper does not state SRT1 is nucleus and cytoplasm in this study; that detail is not explicitly given here."
+        },
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "Protein lysine acetylation state affecting nitrogen metabolism-related proteins",
+          "new_value": "NA",
+          "reason": "Protein lysine acetylation state is not a metabolite, and the paper does not define it as a terminal metabolite."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "post-translational acetylation state",
+          "new_value": "NA",
+          "reason": "Post-translational acetylation state is not a metabolite class in the paper."
+        },
+        {
+          "field": "Regulatory_Effect_on_Target_Genes",
+          "old_value": "Promotes lower Kac on many proteins when active",
+          "new_value": "NA",
+          "reason": "The evidence concerns protein Kac levels, not effects on target genes."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "SRT2",
+          "new_value": "NA",
+          "reason": "No physical or functional interaction between SRT1 and SRT2 is demonstrated; they are only studied together."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Potential target for tuning protein acetylation-linked root metabolism, though broad pleiotropic effects are likely",
+          "new_value": "NA",
+          "reason": "Application value is speculative and not supported by the paper."
+        }
+      ],
+      "stats": {
+        "supported": 16,
+        "unsupported": 6,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "SRT2",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SRT2 analyzed here is a rice gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism is Oryza sativa."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All experiments are in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice is explicitly Oryza sativa."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "SRT2 is explicitly included among rice NAD+-dependent sirtuin family histone deacetylases."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "SRT2 belongs to the sirtuin HDAC family as stated."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly state nucleus/cytoplasm localization for SRT2 here."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SRT2-FLAG overexpression lines were analyzed in crown roots."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Protein lysine acetylation state is not a metabolite and is not presented as such."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Post-translational acetylation state is not a metabolite class in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links acetylation changes to metabolism-related proteins generally, but not specifically as an SRT2 terminal-metabolite function."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Acetylation changes are measured in crown roots, but not as a metabolite accumulation site."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "SRT2 is part of the deacetylation machinery affecting protein acetylation homeostasis."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "SRT2 is implicated only partially via sirtinol and redox assays; no direct single-gene test establishes decisiveness."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "Many proteins are affected in sirtinol acetylproteomics, but specific direct targets are unresolved in this paper."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "SRT2 acts by deacetylation and is affected by oxidation/redox and sirtinol inhibition."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper concerns protein Kac rather than direct regulation of target genes by SRT2."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "ROS/H2O2 and sirtinol are explicitly examined as inputs."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No interaction between SRT2 and SRT1 is shown."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "Contribution to hypo-acetylation is suggested, but no SRT2-specific phenotype is tested."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary matches the actual data and interpretation for SRT2."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "FLAG-tag AMS redox assay, sirtinol treatment, and acetylproteomics are explicitly used."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "KI, H2O2, and sirtinol are explicitly used."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Quantitative acetylproteomics of sirtinol-treated plants is included."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This engineering implication is not stated or tested."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Broad effects are plausible, but not explicitly established in the paper for SRT2 manipulation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "It is accurate that SRT2 is experimentally implicated alongside SRT1 in redox-controlled HDAC activity."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus and cytoplasm",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly state nucleus/cytoplasm localization for SRT2 here."
+        },
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "Protein lysine acetylation state affecting nitrogen metabolism-related proteins",
+          "new_value": "NA",
+          "reason": "Protein lysine acetylation state is not a metabolite and is not presented as such."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "post-translational acetylation state",
+          "new_value": "NA",
+          "reason": "Post-translational acetylation state is not a metabolite class in the paper."
+        },
+        {
+          "field": "Regulatory_Effect_on_Target_Genes",
+          "old_value": "Promotes lower Kac on many proteins when active",
+          "new_value": "NA",
+          "reason": "The paper concerns protein Kac rather than direct regulation of target genes by SRT2."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "SRT1",
+          "new_value": "NA",
+          "reason": "No interaction between SRT2 and SRT1 is shown."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Potential handle for modulating root protein acetylation, with caution due to broad metabolic effects",
+          "new_value": "NA",
+          "reason": "This engineering implication is not stated or tested."
+        }
+      ],
+      "stats": {
+        "supported": 16,
+        "unsupported": 6,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "HDA710",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HDA710 is studied in rice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study species is Oryza sativa."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments are in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice is Oryza sativa."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "HDA710 is explicitly one of the rice HDACs analyzed."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specify HDA710 as RPD3/HDA1-type HDAC."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HDA710-FLAG overexpression lines were analyzed in crown roots."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Protein lysine acetylation state is not a metabolite and is not described as one."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Post-translational acetylation state is not a metabolite class."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Growth-related metabolic relevance is only broadly inferred from pathway enrichment, not specifically tied to HDA710."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Crown root cells are where assays were done, but not framed as terminal metabolite accumulation."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "As an HDAC candidate, HDA710 is part of protein deacetylation/homeostasis machinery."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "HDA710 is a candidate redox-sensitive HDAC, but no direct causal role in the phenotype is shown."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper's redox assay and discussion support HDA710 as a deacetylase likely inhibited by oxidation."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "KI and H2O2 treatments are explicitly used to assess HDA710 redox state."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not test HDA710 mutant/overexpression phenotypes for crown roots."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary matches the AMS redox assay data and the paper's interpretation that HDA710 is a candidate contributor."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "HDA710 was tested by FLAG-tag AMS redox shift assay."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "KI and H2O2 are explicitly the treatments used."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This application value is speculative and not presented in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "General broad effects of acetylation changes are plausible, but not directly examined for HDA710."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed treats HDA710 as a tested candidate HDAC without direct genetic validation of its role in crown root phenotype."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "RPD3/HDA1-type HDAC",
+          "new_value": "NA",
+          "reason": "The paper does not specify HDA710 as RPD3/HDA1-type HDAC."
+        },
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "Protein lysine acetylation state",
+          "new_value": "NA",
+          "reason": "Protein lysine acetylation state is not a metabolite and is not described as one."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "post-translational acetylation state",
+          "new_value": "NA",
+          "reason": "Post-translational acetylation state is not a metabolite class."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Possible target to alter acetylation-dependent root growth, but evidence here is supportive rather than definitive",
+          "new_value": "NA",
+          "reason": "This application value is speculative and not presented in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 13,
+        "unsupported": 4,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "HDA714",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HDA714 is studied in rice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The organism is Oryza sativa."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments are in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice is Oryza sativa."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "HDA714 is explicitly listed among rice HDACs analyzed."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specify HDA714 as RPD3/HDA1-type HDAC."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "In Discussion, HDA714 is explicitly described as a cytoplasmic deacetylase."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HDA714-FLAG overexpression lines were analyzed in crown roots."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Protein lysine acetylation state of non-histone proteins is not a metabolite."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Post-translational acetylation state is not a metabolite class."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper suggests possible involvement in protein synthesis-related non-histone acetylation, but this is inferential rather than directly demonstrated for HDA714 here."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Assays are in crown roots, but the 'accumulation site' phrasing is not directly supported."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "HDA714 is discussed as maintaining low acetylation of many non-histone proteins, i.e., protein deacetylation/homeostasis."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "HDA714 is proposed as a candidate responder to ROS, but not conclusively shown in this paper."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "Discussion cites prior evidence that HDA714 affects many non-histone proteins such as ribosomal proteins, but this paper does not directly map HDA714 targets."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "AMS assay/discussion indicate deacetylation and weaker oxidation response to H2O2."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "KI and H2O2 were explicitly used to test HDA714 redox status."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "Its contribution to low-ROS hypo-acetylation is proposed, not directly demonstrated genetically."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary accurately reflects the data and the cautious interpretation in Discussion."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "HDA714 was tested by FLAG-tag AMS redox shift assay."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "KI and H2O2 are explicitly used."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This is speculative and absent from the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "General pleiotropy is plausible but not directly examined."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed discusses HDA714 as a plausible mediator based on prior evidence and current enrichment patterns, without direct genetic proof in this study."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "RPD3/HDA1-type HDAC",
+          "new_value": "NA",
+          "reason": "The paper does not specify HDA714 as RPD3/HDA1-type HDAC."
+        },
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "Protein lysine acetylation state of non-histone proteins",
+          "new_value": "NA",
+          "reason": "Protein lysine acetylation state of non-histone proteins is not a metabolite."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "post-translational acetylation state",
+          "new_value": "NA",
+          "reason": "Post-translational acetylation state is not a metabolite class."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Potential target to modulate translational/protein synthesis acetylation networks in roots, with substantial pleiotropy risk",
+          "new_value": "NA",
+          "reason": "This is speculative and absent from the paper."
+        }
+      ],
+      "stats": {
+        "supported": 14,
+        "unsupported": 4,
+        "uncertain": 6
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 151,
+    "supported": 100,
+    "unsupported": 25,
+    "uncertain": 26,
+    "total_corrections": 25
+  }
+}

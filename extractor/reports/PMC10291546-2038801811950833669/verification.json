@@ -1,0 +1,105 @@
+{
+  "file": "MinerU_markdown_PMC10291546_2038801811950833669",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC10291546_2038801811950833669.md",
+  "timestamp": "2026-03-31T21:26:06.449309",
+  "genes": [
+    {
+      "gene_name": "TcGLIP",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The Accession Codes section states: 'The accession number of cDNA coding for TcGLIP is JN418994.'"
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TcGLIP is defined as 'Tanacetum cinerariifolium GDSL lipase' and the study is on T. cinerariifolium."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly uses the species name 'Tanacetum cinerariifolium'."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "In vivo experiments were performed in T. cinerariifolium seedlings/leaves."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results and Experimental sections explicitly state 'T. cinerariifolium' / 'Tanacetum cinerariifolium'."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The Experimental section describes T. cinerariifolium seedlings/petioles with single leaves cultured in modified MS medium, treated with compounds in 0.1% DMSO, incubated 2 weeks at 25 °C with a 16 h light/8 h dark cycle; the Results highlight 5a and also 4a and 6a effects. In vitro enzyme inhibition assays are also described. This field is a faithful summary."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper quantified and discussed pyrethrin I and pyrethrin II in leaves as the biosynthetic end products affected by TcGLIP inhibition."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pyrethrins are clearly described as natural pesticides/insecticides, but the exact class phrase 'terpenoid ester insecticides' does not explicitly appear in the paper text provided."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The Abstract states pyrethrins are natural pesticides with high knockdown and killing activities against flying insects such as mosquitoes."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Pyrethrin I and II were quantified 'in the leaves' and the conclusion states 5a suppressed pyrethrin accumulation in leaves."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents TcGLIP as underpinning pyrethrin biosynthesis, and shows that inhibitor 5a suppressed pyrethrin accumulation in T. cinerariifolium leaves; 5a reduced pyrethrin I and pyrethrin II, though pyrethrin I reduction is not claimed for all active compounds."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point is supported: TcGLIP was the intended molecular target of the phosphonates; in vitro 5a and 8b were top inhibitors in their respective stereochemical series; in vivo 5a reduced pyrethrin accumulation in leaves."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls TcGLIP a 'GDSL esterase/lipase (GELP or TcGLIP)' and abbreviations define TcGLIP as Tanacetum cinerariifolium GDSL lipase."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The Experimental/Results sections describe recombinant TcGLIP expression, enzyme inhibition assays with HPLC quantification of pyrethrin I, in vivo inhibitor treatment followed by HPLC quantification of pyrethrin I/II, and docking/modeling."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "These are interacting amino acid residues within TcGLIP (Ser40, Gly114, Pro211, Phe56, Tyr197/Phe56/Phe320), not interacting proteins. Also one residue is inconsistently reported as Tyr297 in text vs Tyr197 in Figure 4 legend, so the field as 'Interacting_Proteins' is not faithful."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed uses chemical genetics via inhibitors rather than transgenic manipulation; describes TcGLIP as underpinning pyrethrin biosynthesis; emphasizes stereochemistry; and states 8b was potent in vitro but ineffective in vivo likely due to limited translocation associated with high hydrophobicity."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows chemical inhibition suppresses pyrethrin accumulation, and specifically notes 8b likely had poor in vivo effect due to high hydrophobicity and limited translocation."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The conclusion supports 5a as a useful tool for elucidating pyrethrin biosynthesis and identifying determinants, but explicit claims about 'metabolic engineering' or breeding value are not directly made in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "Ser40; Gly114; Pro211; Phe56; Tyr197; Phe320",
+          "new_value": "NA",
+          "reason": "These are interacting amino acid residues within TcGLIP (Ser40, Gly114, Pro211, Phe56, Tyr197/Phe56/Phe320), not interacting proteins. Also one residue is inconsistently reported as Tyr297 in text vs Tyr197 in Figure 4 legend, so the field as 'Interacting_Proteins' is not faithful."
+        }
+      ],
+      "stats": {
+        "supported": 15,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 18,
+    "supported": 15,
+    "unsupported": 1,
+    "uncertain": 2,
+    "total_corrections": 1
+  }
+}

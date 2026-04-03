@@ -1,0 +1,638 @@
+{
+  "file": "MinerU_markdown_PMC7252677_2038794862601478147",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC7252677_2038794862601478147.md",
+  "timestamp": "2026-03-31T22:29:06.386897",
+  "genes": [
+    {
+      "gene_name": "TgALAS",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly names TgALAS as TGGT1_258690."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Results identifies TgALAS as 5-aminolevulinic acid (ALA) synthase, equivalent to 5-aminolevulinate synthase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for TgALAS appears in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper repeatedly states TgALAS is in the de novo heme biosynthesis pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion of TgALAS is described as blocking the first enzyme in Toxoplasma's de novo heme biosynthesis pathway."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly call TgALAS the first enzyme in the pathway."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "TgALAS is described as producing ALA and thereby supporting downstream de novo heme production."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state glycine and succinyl-CoA as TgALAS substrates."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state ALA is the product of TgALAS."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports that TgALAS produces ALA as the first precursor, but it does not explicitly state condensation of glycine and succinyl-CoA or 'first committed precursor' wording."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports TgALAS as an essential entry step for de novo heme production, though not formally as rate-limiting."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene studied is from Toxoplasma gondii."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Toxoplasma gondii is the organism studied throughout."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in Toxoplasma parasites."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Toxoplasma gondii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods and Results indicate TgALAS was deleted in NanoLuc-expressing wildtype parasites, i.e. RHΔku80Δhxg::NLuc / WT::NLuc background."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The parasite strains used are RH-derived strains, including RHΔku80 backgrounds."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state localization experiments distributed heme biosynthesis across mitochondrion, cytoplasm, and apicoplast; ALAS is the first enzyme and ALA must reach the parasite's mitochondrion, consistent with mitochondrial localization. Fig. 1/S1 support enzyme localization."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway endpoint studied is heme."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not classify heme as a tetrapyrrole in these terms."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract and summary describe heme as an essential prosthetic group for diverse cellular activities and required for intracellular growth and acute virulence."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state all 8 heme biosynthesis genes are actively expressed during the acute infection stage."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Same evidence: immunoblotting revealed active expression during acute toxoplasmosis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion caused severe heme depletion, growth/replication/plaque defects, and loss of virulence; ALA supplementation and complementation restored phenotypes to varying extents."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings are directly supported by Results and Fig. 2/S3/Fig. 3B."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods were used: CRISPR knockout, complementation, ALA rescue/starvation, luciferase growth, replication, plaque, mouse virulence, heme quantification, and yeast complementation."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "ALA supplementation and ALA starvation are central experimental treatments for Δalas."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of TgALAS caused severe growth impairment and complete loss of acute virulence."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Native locus expression is supported, and complementation used cognate 5' and 3' UTRs, but the paper does not explicitly say 'native promoter' in this field wording."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper frames parasite heme biosynthesis as a therapeutic/druggable target for controlling infection."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state TgALAS deletion keeps the downstream pathway intact for possible utilization of host-derived intermediates; residual growth without ALA suggests limited salvage insufficient for normal infection."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.3.1.37",
+          "new_value": "NA",
+          "reason": "No EC number for TgALAS appears in the paper."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "glycine; succinyl-CoA",
+          "new_value": "NA",
+          "reason": "The paper does not state glycine and succinyl-CoA as TgALAS substrates."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "tetrapyrrole",
+          "new_value": "NA",
+          "reason": "The paper does not classify heme as a tetrapyrrole in these terms."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 3,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "TgFECH",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly gives TgFECH accession TGGT1_258650."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Results identify TgFECH as ferrochelatase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for TgFECH is given in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "TgFECH is explicitly described as part of the heme biosynthesis pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state TgFECH catalyzes the last step in heme production."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly described as the last/terminal step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Because TgFECH catalyzes the last step in heme production, it is directly linked to formation of the target product."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly name protoporphyrin IX and Fe2+ as TgFECH substrates."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper clearly says TgFECH catalyzes the last step in heme production, but does not specify 'heme b'."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports that TgFECH performs the final step in heme production, but it does not explicitly describe iron insertion into protoporphyrin IX."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support TgFECH as an essential terminal determinant for heme production in this parasite."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is from Toxoplasma gondii."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Toxoplasma gondii is explicitly the study organism."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in Toxoplasma."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Toxoplasma gondii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state the TgFECH knockdown was generated in TaTiΔku80Δhxg and derivatives."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strains used are RH-derived, including TaTiΔku80Δhxg and RHΔku80 backgrounds."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Localization experiments place heme biosynthetic components in mitochondrion/cytoplasm/apicoplast; FECH as terminal enzyme is consistent with mitochondrial localization shown in Fig. 1/S1."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The terminal metabolite studied is heme."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly call heme a tetrapyrrole."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states heme is an essential prosthetic group needed for diverse cellular functions and parasite growth/virulence."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All 8 pathway genes, including TgFECH, were expressed during acute infection stage."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TgFECH expression during acute infection and strong repression by ATc in the TET-OFF strain are directly shown/described."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "ATc repression lowered heme abundance to ~15% and caused drastic replication defects; knockout attempts failed, supporting essentiality."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed findings are directly described in Results and supported by Fig. 2C-D and Fig. 3B."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods except direct knockout recovery were used or attempted, including failed knockout, TET-OFF knockdown, immunoblot, replication assay, heme quantification, and yeast complementation."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "ATc, ALA, SA, and heme supplementation are all discussed for TgFECH experiments."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Strong repression causes severe growth defects; inability to recover knockout suggests essentiality."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state TgFECH cognate promoter was replaced with tetracycline-responsive T7S4 promoter."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The study supports heme biosynthesis, including FECH, as a therapeutic target."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper separately suggests lack of a heme transporter and inability of extracellular heme to rescue growth, but this was not demonstrated specifically as a direct FECH rescue experiment beyond failed knockout with 10 μM heme."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "4.99.1.1",
+          "new_value": "NA",
+          "reason": "No EC number for TgFECH is given in the paper."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "protoporphyrin IX; Fe2+",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly name protoporphyrin IX and Fe2+ as TgFECH substrates."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "tetrapyrrole",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly call heme a tetrapyrrole."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 3,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "TgCPOX",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly names TgCPOX as TGGT1_223020."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Results identify TgCPOX as coproporphyrinogen oxidase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "TgCPOX is explicitly part of the heme biosynthesis pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "As a downstream pathway enzyme between early and terminal steps, a mid-to-late placement is directly inferable from the pathway description."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "TgCPOX is downstream but 'midstream' is not explicitly stated; the exact positional label is interpretive."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explain TgCPOX converts coproporphyrinogen III into protoporphyrinogen IX, an immediate precursor toward later heme synthesis."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly mention coproporphyrinogen III as the molecule converted by TgCPOX."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state TgCPOX converts coproporphyrinogen III into protoporphyrinogen IX."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state TgCPOX converts coproporphyrinogen III into protoporphyrinogen IX via decarboxylation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not claim rate-limiting status, but functional importance is clearly supported by knockout phenotypes."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is from Toxoplasma gondii."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Toxoplasma gondii is the study organism."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in Toxoplasma."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Toxoplasma gondii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state Δcpox was generated in RHΔku80Δhxg background."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strain background is RH-derived."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper text provided does not explicitly assign TgCPOX to the cytoplasm by name; localization is distributed across compartments but gene-specific localization is not fully stated here."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway endpoint is heme."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly use the class term tetrapyrrole."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Heme is described as an essential prosthetic group for multiple functions required for intracellular growth and virulence."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All 8 genes, including TgCPOX, were expressed during acute infection stage."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Same evidence supports expression during acute infection."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion reduced heme abundance by ~75%, impaired replication and plaque formation, and abolished acute virulence."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings are directly supported by Fig. 2E,G, S5, Fig. 3B, and Fig. 4D/S12."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "CRISPR knockout, complementation, growth/replication/plaque assays, mouse virulence assay, heme quantification, and yeast complementation were all used."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper mentions TgCPDH may help bypass the TgCPOX-catalyzed reaction, but it does not demonstrate a physical or direct protein interaction between TgCPOX and TgCPDH."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Heme supplementation and ALA supplementation were directly tested in Δcpox-related rescue/growth experiments."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion strongly impaired growth and abolished virulence."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Endogenous/native context and cognate UTR-based complementation are supported, but explicit promoter wording is not given."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper broadly supports parasite heme biosynthesis enzymes as therapeutic targets."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly propose TgCPDH may partially bypass TgCPOX loss and explain residual heme synthesis/growth."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.3.3.3",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytoplasm",
+          "new_value": "NA",
+          "reason": "The paper text provided does not explicitly assign TgCPOX to the cytoplasm by name; localization is distributed across compartments but gene-specific localization is not fully stated here."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "tetrapyrrole",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly use the class term tetrapyrrole."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "TgCPDH",
+          "new_value": "NA",
+          "reason": "The paper mentions TgCPDH may help bypass the TgCPOX-catalyzed reaction, but it does not demonstrate a physical or direct protein interaction between TgCPOX and TgCPDH."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 4,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "TgPPO",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly names TgPPO as TGGT1_272490."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Results identify TgPPO as protoporphyrinogen oxidase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "TgPPO is explicitly a heme biosynthesis pathway gene."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "TgPPO is a downstream enzyme in de novo heme biosynthesis and was chemically interrogated as such."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Its pathway position as downstream/late is inferable because FECH is terminal and PPO acts just upstream of it."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support TgPPO forming the immediate precursor toward the final FECH-catalyzed step to heme."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state the reactant of PPO is protoporphyrinogen IX."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state protoporphyrinogen IX is spontaneously oxidized to protoporphyrin IX, identifying the PPO product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports PPO activity as oxidation of protoporphyrinogen IX to protoporphyrin IX."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not claim rate-limiting status, but it clearly validates TgPPO as a chemical target."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is from Toxoplasma gondii."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Toxoplasma gondii is the study organism."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in Toxoplasma."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Toxoplasma gondii."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "TgPPO knockout/inhibitor assays used RHΔku80Δhxg::NLuc-derived lines including WT::NLuc and Δppo::NLuc."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strains are RH-derived."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states pathway enzymes localize across mitochondrion, cytoplasm, and apicoplast, but the provided text here does not explicitly assign TgPPO alone to the apicoplast."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway endpoint is heme."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly call heme a tetrapyrrole."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Heme is described as an essential prosthetic group needed for diverse cellular activities, parasite growth, and virulence."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All 8 pathway genes are reported as expressed during acute infection stage."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Acute-stage expression is supported, and qPCR showed ~12-fold overexpression in the pTub-TgPPO strain."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion reduced heme by ~50%, impaired replication and virulence, and chemical inhibition reduced heme and growth."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed findings are directly supported by Fig. 2F,H, Fig. 3B, S8, Fig. 4B-C, and S10."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods were used, including knockout, complementation, overexpression under tubulin promoter, qPCR, growth/replication/plaque/virulence assays, heme quantification, and inhibitor profiling."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Oxadiazon, Compound 1, and Compound 2 were the central chemical treatments for TgPPO studies."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion abolished virulence and impaired growth; low-dose PPO inhibitors unexpectedly enhanced Δppo growth, as explicitly reported."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state overexpression under the Toxoplasma tubulin promoter; endogenous/native locus also applies to the wildtype gene."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper strongly argues TgPPO is a therapeutic target due to plant-like divergence and inhibitor sensitivity."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly suggest residual Δppo growth may reflect non-enzymatic oxidation, and the two derivatives were ~15-25-fold more potent than oxadiazon."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.3.3.4",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "tetrapyrrole",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly call heme a tetrapyrrole."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 125,
+    "supported": 105,
+    "unsupported": 12,
+    "uncertain": 8,
+    "total_corrections": 12
+  }
+}

@@ -1,0 +1,1382 @@
+{
+  "file": "MinerU_markdown_PMC12586918_2038799715734163468",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12586918_2038799715734163468.md",
+  "timestamp": "2026-03-31T22:00:48.710851",
+  "genes": [
+    {
+      "gene_name": "BRI1",
+      "category": "Common",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper identifies BRI1 as a brassinosteroid receptor, but does not state the domain/family 'leucine-rich repeat receptor-like kinase' in the Results or Methods text provided."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses Arabidopsis material throughout, including the bri1-101 mutant."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly stated in Materials and Methods."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "bri1-101 is listed among mutants from the Col-0 background in Materials and Methods."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly named."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the wild-type background used for bri1-101 comparisons."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper measures castasterone accumulation and discusses brassinosteroids broadly, but BRI1 is a receptor and was not directly tied to changing castasterone levels in the mutant."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Brassinosteroids are explicitly treated as phytohormones in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Hormone quantification, including castasterone, was performed in hypocotyl tissue."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results show BRs mediate hypocotyl elongation under boron toxicity, and BT-induced elongation is linked to cell expansion and seedling growth."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results section 3.4 states bri1-101 had shorter hypocotyls than wild type, with reduction more pronounced under BT, indicating BR perception attenuates the response."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Plasma membrane localization of BRI1 is not stated in this paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "UNCERTAIN",
+          "reason": "BRI1 was directly tested under boron toxicity; epiBL and BRZ were tested pharmacologically in Col-0, and warm temperature was analyzed separately, not specifically with bri1-101."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The Discussion describes BRI1 in BR signaling with BIN2/BZR1/BES1, but direct interaction claims are not experimentally tested in this paper."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly used the loss-of-function bri1-101 mutant and hypocotyl length measurements under control and BT; pharmacological BRZ/epiBL comparisons are also part of the BR pathway validation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements match Results 3.4: shorter hypocotyls in bri1-101, stronger reduction under BT, and interference visible by 5 DPG."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant showed reduced growth/shorter hypocotyls due to impaired BR sensitivity in the Results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "In this paper BRI1 is indeed used as a BR signaling component via mutant analysis, not as a biosynthetic enzyme or transcription factor."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is an extrapolative application statement not directly tested in the paper, though growth penalties from reduced BRI1 function are consistent with the results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Plasma membrane",
+          "new_value": "NA",
+          "reason": "Plasma membrane localization of BRI1 is not stated in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 14,
+        "unsupported": 1,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "BIN2",
+      "category": "Common",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper describes BIN2/BIL1/BIL2 as repressors of BR signaling, but does not explicitly state 'GSK3/Shaggy-like protein kinase' in the provided text."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant is from Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly stated."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods lists bin2-bil1bil2 from Ws background."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis was the experimental species."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Ws is the corresponding wild-type background for bin2-bil1bil2."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "Castasterone and BRs were quantified in hypocotyls, but the bin2-bil1bil2 mutant itself was not used for metabolite measurements."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "BRs are explicitly treated as phytohormones/brassinosteroids."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "BR accumulation was measured in hypocotyl tissue."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Active BR signaling is shown to promote hypocotyl elongation under BT, and bin2-bil1bil2 enhances sensitivity."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 3.4 state the bin2bil1bil2 mutant displayed greater sensitivity and relative hypocotyl elongation under BT, consistent with BIN2-family repression of the response."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Cytoplasm/nucleus localization is not provided in this paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant was directly tested under BT at 3 mM H3BO3."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "BIN2 relations with BZR1/BES1 and COP1 are discussed from prior literature, not directly tested here."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Reverse genetics with bin2-bil1bil2 and hypocotyl phenotyping under control versus BT were directly performed."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points accurately summarize Results 3.4 for bin2bil1bil2."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pleiotropic growth alteration is plausible but not directly analyzed in this paper beyond hypocotyl growth."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes the triple mutant as constitutively active BR signaling due to inactivation of BIN2, BIL1, and BIL2 repressors."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This engineering interpretation is not directly tested in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytoplasm; nucleus",
+          "new_value": "NA",
+          "reason": "Cytoplasm/nucleus localization is not provided in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 14,
+        "unsupported": 1,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "DWF4",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "DWF4 is explicitly described as the cytochrome P450 steroid C-22 hydroxylase encoded by DWARF4."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper identifies DWF4 as a cytochrome P450 steroid C-22 hydroxylase, but does not specify 'CYP90B family' in the provided text."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene expression analysis was performed in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the study species."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis was used in the experiments."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Gene expression analysis was conducted in Col-0 hypocotyls."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The expression work was done in Col-0."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "DWF4 is analyzed as a BR biosynthesis gene."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not assign DWF4 specifically to 'late C-6 oxidation / bioactive BR biosynthetic route.'"
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "DWF4 is described as rate-limiting and acting on multiple BR precursors, so an upstream/midstream role is inferable, but the exact phrasing is not used."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly calls DWF4 a rate-limiting enzyme/gene in BR production."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion states DWF4 is involved in hydroxylation of multiple BR precursors."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states hydroxylation at C-22 of precursors, but does not explicitly name 'C-22-hydroxylated BR intermediates' as the product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the Discussion description that DWF4 hydroxylates multiple BR precursors at C-22."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links DWF4 activity to the synthesis of CS and BL via BR biosynthesis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Castasterone was quantified and linked with DWF4 upregulation under BT."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Castasterone is treated as a brassinosteroid phytohormone."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Castasterone was measured in hypocotyl tissue."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "BRs are shown to promote cell elongation and hypocotyl growth under BT."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 3.5 show DWF4 upregulation under BT, and Results 3.2/3.3 link elevated BRs with sustained hypocotyl elongation."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 3.5 explicitly state DWF4 increased from 3 to 7 DPG and was reduced at 10 DPG under BT."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression was measured in hypocotyls under BT from 3 to 7 DPG."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Endoplasmic reticulum localization is not stated in this paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "BT at 3 mM H3BO3 is the direct treatment, and BRZ inhibition of the DWF4-encoded step is explicitly discussed."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "RT-qPCR in hypocotyls, castasterone quantification, and BRZ pharmacology are all directly reported."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements accurately synthesize the gene expression, hormone, and pharmacology data presented."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "General BR pleiotropy is plausible but not directly assessed in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes DWF4 as rate-limiting and notes reduction at 10 DPG despite sustained CS."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This application-oriented statement is not tested in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.-.-",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper."
+        },
+        {
+          "field": "Pathway_Branch_or_Subpathway",
+          "old_value": "Late C-6 oxidation / bioactive BR biosynthetic route",
+          "new_value": "NA",
+          "reason": "The paper does not assign DWF4 specifically to 'late C-6 oxidation / bioactive BR biosynthetic route.'"
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Endoplasmic reticulum",
+          "new_value": "NA",
+          "reason": "Endoplasmic reticulum localization is not stated in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 3,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "BR6OX1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "BR6OX1 is explicitly expanded as BRASSINOSTEROID-6-OXIDASE 1."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is reported."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper identifies BR6OX1 as a C-6 oxidase but does not specify 'CYP85A family' in the provided text."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The work is in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis was used experimentally."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Gene expression analysis was in Col-0 hypocotyls."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression assays used Col-0."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "BR6OX1 is analyzed as a BR biosynthesis gene."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes BR6OX1 as a C-6 oxidase, consistent with C-6 oxidation steps toward bioactive BRs."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "As a C-6 oxidase contributing to CS/BL production, it is directly inferable as a downstream biosynthetic step."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion groups BR6OX1 among key/rate-limiting BR biosynthetic genes."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not specify exact BR6OX1 substrates, only that BR6OX1/2 catalyze synthesis of CS and BL."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion states BR6OX1/BR6OX2 catalyze synthesis of CS and BL, supporting castasterone and downstream oxidized products."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the paper's description of BR6OX1 as a C-6 oxidase contributing to CS/BL formation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links BR6OX1 activity to the bioactive BR pool via CS/BL synthesis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Castasterone was measured and discussed in relation to BR6OX1 expression."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Castasterone is treated as a brassinosteroid phytohormone."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measured in hypocotyls."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "BRs are linked to cell expansion and hypocotyl elongation under BT."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show early BR6OX1 induction under BT and BR accumulation/elongation association."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 3.5 explicitly state BR6OX1 increased from 3 to 5 DPG, returned to basal by 7 DPG, and was reduced at 10 DPG."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression was measured in hypocotyls and strongest at early stages."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Endoplasmic reticulum localization is not stated in this paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The direct treatment was BT at 3 mM H3BO3."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "RT-qPCR in hypocotyls and correlation with castasterone quantification were directly done."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes the reported transient BR6OX1 induction and its relation to BR accumulation and growth."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "General pleiotropic BR effects are not directly tested."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion indeed groups BR6OX1 with DWF4 and BR6OX2 as key/rate-limiting BR biosynthetic enzymes."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Not experimentally addressed in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.-.-",
+          "new_value": "NA",
+          "reason": "No EC number is reported."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Endoplasmic reticulum",
+          "new_value": "NA",
+          "reason": "Endoplasmic reticulum localization is not stated in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "BR6OX2",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "BR6OX2 is explicitly named BRASSINOSTEROID-6-OXIDASE 2."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number appears in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The text does not specify CYP85A family, only C-6 oxidase function."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the study species."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis was used experimentally."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression assays used Col-0 hypocotyls."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 was used."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "BR6OX2 is analyzed as a BR biosynthesis gene."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses BR6OX2 as responsible for CS-to-BL conversion, i.e. terminal bioactive BR formation."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Its role in CS-to-BL conversion supports a downstream/terminal step."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion groups BR6OX2 among key/rate-limiting BR biosynthetic genes."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion specifically notes BR6OX2 is responsible for CS to BL conversion, supporting castasterone as substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links BR6OX2 to BL formation."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes BR6OX2 as a C-6 oxidase involved in CS/BL synthesis and particularly CS-to-BL conversion."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct terminal bioactive BR formation is supported by the discussion of CS-to-BL conversion."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links BR6OX2 to both castasterone/brassinolide biosynthetic context, although BL was not detected."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are brassinosteroid phytohormones."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The BR measurements were in hypocotyl tissue."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "BRs are implicated in sustained hypocotyl elongation under BT."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 3.5 show BR6OX2 upregulation under BT, together with prolonged BR-associated hypocotyl elongation."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state BR6OX2 was elevated from 3 to 7 DPG and remained elevated until 10 DPG."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "This was measured in hypocotyls across most stages tested."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "ER localization is not stated in the paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "BT at 3 mM H3BO3 is the direct treatment."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "RT-qPCR, castasterone quantification, and BR pharmacology are all part of the study."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary matches the prolonged induction pattern and authors' interpretation."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Whole-plant architecture effects were not tested."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed emphasizes BR6OX2 in CS-to-BL conversion while noting BL was not detected."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is speculative and not directly tested."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.-.-",
+          "new_value": "NA",
+          "reason": "No EC number appears in the paper."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Endoplasmic reticulum",
+          "new_value": "NA",
+          "reason": "ER localization is not stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "BAS1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states BAS1 is involved in BR inactivation and encodes a C-26 hydroxylase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not specify the CYP734A family designation in the provided text."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the study species."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis was used experimentally."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression analyses were done in Col-0 hypocotyls."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 was used."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly treats BAS1 as part of BR inactivation/catabolism rather than biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "BAS1 is explicitly discussed as part of the BR inactivation module."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It is directly described as an inactivation step opposing BR accumulation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper emphasizes BAS1 as important for BR homeostasis and inactivation, supporting key control point status."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly states BAS1 hydroxylates CS and BL."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "Inactive C-26-hydroxylated derivatives are implied but not named explicitly in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states BAS1 hydroxylates CS and BL at C-26, reducing their bioactive content."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "BAS1 is described as reducing active BR accumulation by inactivation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly discusses BAS1 acting on castasterone and brassinolide."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are BR phytohormones."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant hormone measurements were in hypocotyls."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links active BRs to hypocotyl elongation and BAS1 to limiting that by inactivation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 3.5 and Discussion support that BAS1 is generally repressed under BT, consistent with sustained BR accumulation and elongation."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state BAS1 was generally downregulated except for a transient increase at 5 DPG."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "This pattern was measured in hypocotyl tissue under BT."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "ER localization is not stated in this paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The direct treatment was BT at 3 mM H3BO3."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "RT-qPCR in hypocotyls correlated with BR quantification was directly performed."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements match the BAS1 expression pattern and authors' interpretation."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Exaggerated BR pleiotropy from BAS1 reduction is not directly tested."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The authors explicitly interpret BAS1 repression as evidence of disrupted BR negative feedback/homeostasis under BT."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is speculative and not directly tested."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.-.-",
+          "new_value": "NA",
+          "reason": "No EC number is provided."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Endoplasmic reticulum",
+          "new_value": "NA",
+          "reason": "ER localization is not stated in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "BZR1",
+      "category": "Regulation",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies BZR1 as a BR signaling-related gene/transcription factor in the BR pathway context."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the study species."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis was used experimentally."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression analysis was in Col-0 hypocotyls."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 was used."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "BZR1 is described as a transcription factor promoting BR responses."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion states BZR1 activity is controlled by BR signaling and BIN2-mediated phosphorylation/inactivation."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "UNCERTAIN",
+          "reason": "BR signaling and cell elongation control are supported, but 'positive control of BR biosynthesis feedback under boron toxicity' is proposed rather than directly demonstrated."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "Cell elongation-related genes and possible PIF4-associated targets are discussed from prior literature/model, not directly tested in this paper."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states BZR1 promotes BR responses/growth programs; enhanced expression under BT is associated with enhanced signaling."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "BZR1 is discussed downstream of BRs/BRI1 and BIN2, and its expression responds to BT."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly proposes BT may disrupt normal negative feedback and convert BR homeostasis into a positive feedback mechanism."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "UNCERTAIN",
+          "reason": "BZR1-PIF4 heterodimerization is discussed based on previous literature and proposed model, not directly tested here."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "BZR1 is implicated in BR signaling and growth, but no direct manipulation of BZR1 was performed to show decisive influence on BR accumulation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "Castasterone and BRs are the relevant hormones, but BZR1 was not directly shown to alter their levels in this study."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "BRs are phytohormones/brassinosteroids."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Hormone quantification was in hypocotyl tissue."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "BRs are shown to promote hypocotyl growth/cell expansion."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 3.5 show BZR1 expression is reduced at 3 DPG and increased at 5 and 7 DPG under BT, supporting enhanced BR signaling during sustained elongation."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "This exact pattern is explicitly stated in Results 3.5."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression was measured in hypocotyls and was stage dependent under BT."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Nuclear localization is not directly shown or stated for BZR1 in this paper; only discussed from prior literature."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "BT at 3 mM H3BO3 is the main condition, within BR signaling context."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "BIN2, PIF4, BRI1, and BES1 relationships are discussed from known BR signaling, but not directly tested as interactions in this paper."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "BZR1 transcript analysis plus pathway mutant/pharmacological data are part of the study."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points agree with the Results and Discussion, noting the third point is a proposal rather than direct proof."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pleiotropy is plausible but not directly tested."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper did not test a BZR1 mutant; evidence is transcript-level plus pathway genetics/pharmacology."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This application statement is not directly evaluated in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "Nuclear localization is not directly shown or stated for BZR1 in this paper; only discussed from prior literature."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 1,
+        "uncertain": 8
+      }
+    },
+    {
+      "gene_name": "BES1",
+      "category": "Regulation",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "BES1 is explicitly identified as a BR signaling-related transcription factor."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the study species."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis was used experimentally."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression analyses were done in Col-0 hypocotyls."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 was used."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "BES1 is explicitly described as a transcription factor promoting BR responses."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion states BIN2 phosphorylates/inactivates BES1 in the absence of BRs."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "BES1 is linked to BR signaling and elongation-associated growth in the paper."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "Specific target genes are not experimentally identified here; PIF4/BR biosynthesis links are proposed from prior literature."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents BES1 as promoting BR-responsive gene expression/growth under active signaling."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "BES1 is discussed downstream of BRs, BRI1, BIN2, and responsive to BT context."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses disrupted BR feedback under BT and possible positive feedback involving BES1/PIF4."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "UNCERTAIN",
+          "reason": "BES1-PIF4 complex is proposed from prior literature and model, not directly shown in this paper."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "BES1 expression supports BR signaling, but no direct manipulation demonstrates decisive control over BR accumulation/product output here."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "Relevant BRs were measured, but BES1 was not directly shown to alter castasterone or other BR levels in this study."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "BRs are phytohormones/brassinosteroids."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Measured in hypocotyl tissue."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "BRs promote hypocotyl elongation and cell expansion in the study."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 3.5 show BES1 upregulated from 5 to 10 DPG under BT, consistent with sustained BR signaling/elongation."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "This exact expression pattern is explicitly reported."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Measured in hypocotyls at later stages under BT."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Nuclear localization is not directly stated or shown in this paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "BT at 3 mM H3BO3 is the direct treatment."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "BIN2, PIF4, BRI1, and BZR1 associations are discussed from prior literature, not directly tested here."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "RT-qPCR plus BR pathway mutant/pharmacological context are part of the study."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements match the Results and Discussion, with the third point framed as a proposal by the authors."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pleiotropy from BES1 activation is not examined directly."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper provides indirect transcript/pathway evidence and does not test a BES1 mutant."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Engineering value is speculative and not tested."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "Nuclear localization is not directly stated or shown in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 1,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_name": "PIF4",
+      "category": "Regulation",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PIF4 is explicitly identified as a transcription factor and member of the PHYTOCHROME INTERACTING FACTORS family."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the study species."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis was used experimentally."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "pif4 and related mutants are in Col-0 background."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods lists pif4-101 and related mutants from Col-0."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PIF4 is explicitly described as a transcription factor."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents PIF4 as a positive regulator of elongation/thermomorphogenesis."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The study directly links PIF4 to BT-induced thermomorphogenic-like hypocotyl elongation and BR signaling context."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "Specific target genes are not experimentally identified in this paper."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNCERTAIN",
+          "reason": "Promotion of elongation genes and BR biosynthesis with BES1/BZR1 is discussed/proposed from prior literature, not directly tested here."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses BT, warm temperature-like signaling, COP1, and PHYB/ELF3 contexts in relation to PIF4."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "UNCERTAIN",
+          "reason": "A feedforward interaction with BR signaling is proposed in Discussion/model, but not directly demonstrated in this paper."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "UNCERTAIN",
+          "reason": "PIF4-BZR1/BES1 complexes are discussed from prior literature and model, not directly tested."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "PIF4 is directly validated as a major positive regulator of BT-induced hypocotyl elongation in mutant analyses."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "PIF4 is linked to BR-associated growth output, but not directly to castasterone accumulation in the Results."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant BRs are phytohormones/brassinosteroids."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Hormone measurements were in hypocotyl tissue."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The growth output under BT is hypocotyl elongation, supported by BR-related pathways."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 3.6 state pif mutants, especially pif4, suppress hypocotyl elongation under BT, especially later."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supporting Figure S3 is described as showing reduced PIF4 at 3 DPG, increased at 5-7 DPG, and no difference at 10 DPG."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "This was measured in hypocotyl tissue under BT."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Nuclear localization is not stated in this paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "BT at 3 mM H3BO3 and warm-temperature comparison are both direct parts of the study."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Associations with BZR1, BES1, COP1, PHYB, and ELF3 are discussed/proposed, but not directly demonstrated as interactions here."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss-of-function mutants pif4, pif4pif5, and pifq plus hypocotyl phenotyping and RT-qPCR were directly used."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points accurately match the Results and interpretation."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "General overactivation effects are not directly tested, though reduced activity suppresses growth is shown."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "PIF4 is indeed one of the clearest experimentally validated core regulators in the Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This application statement is speculative and not tested in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "Nuclear localization is not stated in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 1,
+        "uncertain": 8
+      }
+    },
+    {
+      "gene_name": "COP1",
+      "category": "Regulation",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper identifies COP1 as a regulator of hypocotyl growth/photomorphogenesis, but does not explicitly state 'RING-finger E3 ubiquitin ligase' in the provided text."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis is the study species."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis was used experimentally."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "cop1 mutants used are in Col-0 background."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods lists cop1-4 and cop1-6 from Col-0."
+        },
+        "Regulator_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "COP1 is clearly a signaling regulator here, but the paper does not explicitly state 'E3 ligase' in the provided text."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states COP1 represses photomorphogenic growth factors like HY5, thereby indirectly supporting elongation."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results and Discussion directly connect COP1 to thermomorphogenic-like and BR-linked hypocotyl elongation under BT."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "HY5 is explicitly mentioned as a COP1-controlled photomorphogenesis factor, and indirect support of PIF4/BR outputs is discussed."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "COP1 is described as promoting elongation indirectly by repressing photomorphogenesis factors."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "COP1 is discussed in the contexts of BT, light signaling, and BR signaling."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "UNCERTAIN",
+          "reason": "Bidirectional reinforcement with BR signaling is proposed in Discussion, not directly shown in this paper."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss-of-function cop1 mutants reduce BT-induced hypocotyl elongation, supporting an essential positive role in the growth output."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "COP1 is not directly tied to castasterone accumulation; the link is to BR-associated growth signaling."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant BRs are phytohormones/brassinosteroids."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Hormone measurements in the study were in hypocotyl tissue."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links BR-associated pathways to stress-induced hypocotyl elongation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results 3.6 show cop1 mutants had reduced hypocotyl elongation under BT, with cop1-6 showing no differential elongation under BT versus control at later stages."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supporting Figure S3 is described as increased COP1 expression under BT at most stages, reduced at 10 DPG."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "This was measured in hypocotyl tissue."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Nucleus/cytoplasm localization is not stated in this paper, though nuclear localization is discussed from prior literature."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "BT at 3 mM H3BO3 and comparison with warm-temperature mechanisms are directly studied."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "HY5, BIN2, and PIF4 relations are discussed from prior literature or inferred regulatory links, but not directly tested as interactions here."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss-of-function cop1-4 and cop1-6 mutant analysis plus hypocotyl phenotyping and RT-qPCR were directly performed."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements accurately summarize the Results and authors' interpretation."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows reduced COP1 function impairs hypocotyl elongation and discusses its broad role in photomorphogenesis, consistent with broader developmental effects."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The authors do propose BT may enhance COP1 activity and reinforce BR signaling via BIN2/BZR1/BES1 in Discussion/model."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This engineering statement is speculative and not directly tested."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus; cytoplasm",
+          "new_value": "NA",
+          "reason": "Nucleus/cytoplasm localization is not stated in this paper, though nuclear localization is discussed from prior literature."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 1,
+        "uncertain": 6
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 287,
+    "supported": 217,
+    "unsupported": 15,
+    "uncertain": 55,
+    "total_corrections": 15
+  }
+}

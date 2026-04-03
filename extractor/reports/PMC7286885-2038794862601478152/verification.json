@@ -1,0 +1,482 @@
+{
+  "file": "MinerU_markdown_PMC7286885_2038794862601478152",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC7286885_2038794862601478152.md",
+  "timestamp": "2026-03-31T22:28:29.862383",
+  "genes": [
+    {
+      "gene_name": "HglS",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes HglS as from Pseudomonas putida, including 'Recently we described ... in the bacterium Pseudomonas putida' and Fig. 1 refers to 'P. putida HglS'."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated as Pseudomonas putida."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The core biochemical and structural experiments on HglS were performed with the P. putida enzyme."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Pseudomonas putida for HglS experiments."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "HglS is explicitly expanded as hydroxyglutarate synthase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "HglS is explicitly called a DUF1338 family protein; structural analysis suggests membership in the VOC superfamily; the paper concludes it is a member of the two-substrate α-ketoacid-dependent oxygenase (2S-αKAO) family/subfamily."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper places HglS in lysine catabolism, not biosynthesis. The field label says biosynthetic pathway, which is not faithful to the paper."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly studies conversion of 2-oxoadipate (2OA) to 2-hydroxyglutarate (2HG) as the missing step/module."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The title and abstract state HglS performs the 'last missing step' and Results show it links 2OA to 2HG."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "2OA is the tested substrate; the reaction is Fe(II)- and O2-dependent, with substrate-bound structures and oxygen-consumption assays supporting this."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states HglS converts 2OA to D-2-hydroxyglutarate (2HG)."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly supported by structural, oxygen stoichiometry, and 18O2 labeling data showing Fe(II)- and O2-dependent decarboxylation/hydroxylation of 2OA to 2HG."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The direct product assayed for HglS is 2HG, specifically D-2HG in the HglS context."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "2HG is an organic acid and catabolic intermediate, but the exact class phrase 'amino acid catabolite / organic acid' does not appear verbatim."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "HglS directly forms 2HG from 2OA in vitro."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper's central finding is that HglS catalyzes 2HG formation from 2OA, defining the missing reaction in lysine catabolism."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states D-2HG has been identified as an intermediate in plant lysine catabolism and studies bacterial lysine catabolism as well."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are reported in Results/Fig. 1 or Methods: apo and substrate-bound crystal structures, in vitro assays, oxygen stoichiometry, 18O2 labeling LC-HRMS, substrate panel, and mutagenesis R74A/V402P."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that this is the key missing step; it does not claim rate-limiting behavior."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Fe(II)- and O2-dependent in vitro assays and 18O2 atmosphere labeling experiments are explicitly described."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The Discussion suggests understanding lysine catabolism could aid development of high-lysine crops, but HglS itself from P. putida was not directly tested as an engineering target in crops."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each numbered point matches Results: HglS converts 2OA to D-2HG; mechanism supported by structural/isotope data; Arg74 is essential for specificity/activity."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "PDB IDs 6W1G and 6W1H are explicitly given; His70/His226/Glu294 are named as the metal-binding motif; Arg74 and V402 roles are supported by Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Biosynthetic_Pathway",
+          "old_value": "lysine catabolism",
+          "new_value": "NA",
+          "reason": "The paper places HglS in lysine catabolism, not biosynthesis. The field label says biosynthetic pathway, which is not faithful to the paper."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "AT1G07040",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "AT1G07040 is explicitly named throughout the Results."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The homolog is from Arabidopsis, specifically Arabidopsis thaliana."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated as Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Biochemical and mutant phenotype analyses were performed for the Arabidopsis gene/protein."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Salk_103299C is a mutant line/background, not a species variety. The line is explicitly used, but calling it a variety is not faithful terminology."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "AT1G07040 is shown to be an HglS homolog and to catalyze 2OA to 2HG in vitro, but the paper does not explicitly name the Arabidopsis enzyme 'hydroxyglutarate synthase homolog' as a formal enzyme name."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AT1G07040 is explicitly a DUF1338 homolog; VOC superfamily assignment is generalized to DUF1338 proteins; it has a predicted chloroplast localization sequence. Calling it a putative 2S-αKAO enzyme is a fair inference from the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper links AT1G07040 to lysine catabolism/degradation, not biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper proposes and tests plant homologs in the 2OA to 2HG step."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper frames plant DUF1338 proteins as catalyzing the missing step linking 2OA to 2HG."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "In vitro assays tested conversion of 2OA by AT1G07040."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The product 2HG was confirmed by high-resolution LC-MS for plant homologs including AT1G07040."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states AT1G07040 catalyzed conversion of 2OA to 2HG in vitro analogous to HglS."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "2HG is the direct product measured for AT1G07040."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact classification phrase is not stated, though 2HG is clearly an organic acid/catabolic intermediate."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "AT1G07040 directly forms 2HG from 2OA in vitro."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results report delayed germination, chlorosis, impaired growth, and altered oil body morphology in Salk_103299C mutants, consistent with disrupted lysine catabolism."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 2HG was previously identified as a plant lysine catabolism intermediate."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses seeds/embryo and plastid-associated lysine catabolism context, but does not directly state AT1G07040-produced 2HG accumulates in 'Seeds/embryo plastid-associated' sites."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Transcript correlation analysis in A. thaliana showed AT1G07040 transcription is highly correlated with known lysine catabolic enzymes."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Same support as above for Arabidopsis thaliana."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states AT1G07040 has a predicted chloroplast localization sequence."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are in the paper: in vitro LC-HRMS assay, coexpression analysis, Salk_103299C mutant phenotyping, and seed histology."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports AT1G07040 participating in the missing plant lysine catabolic step, but does not conclusively establish this specifically for all of plant lysine catabolism in vivo; rate-limiting is not established."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Seed germination assays on media and soil under controlled conditions are explicitly described."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Co-expression analysis using the ATTED-II database is explicitly stated; no accession is reported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The discussion generally links lysine catabolism knowledge to high-lysine crop engineering, but AT1G07040 itself was not directly tested for engineering application."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point is backed by Results: in vitro 2OA-to-2HG activity, coexpression with lysine catabolic genes, and mutant developmental defects."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Predicted chloroplast localization is stated, and the paper explicitly cautions that the Arabidopsis mutant phenotype is preliminary and should be validated with multiple T-DNA lines."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Biosynthetic_Pathway",
+          "old_value": "lysine catabolism",
+          "new_value": "NA",
+          "reason": "The paper links AT1G07040 to lysine catabolism/degradation, not biosynthesis."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 1,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "FLO7",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "FLO7 is explicitly the Oryza sativa homolog."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated as Oryza sativa."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Biochemical and structural studies were performed on the rice homolog FLO7."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Oryza sativa."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "FLO7 is described as a DUF1338 homolog with identical activity to HglS, but the exact enzyme name 'hydroxyglutarate synthase homolog FLO7' is not used verbatim."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "FLO7 is explicitly a DUF1338 family member; DUF1338 proteins are assigned to the VOC superfamily; FLO7 has an N-terminal chloroplast localization signal and localizes to the amyloplast. Calling it a 2S-αKAO enzyme is inferable from the family assignment."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper places FLO7 in lysine catabolism/degradation, not biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "FLO7 is tested for the 2OA to 2HG conversion step."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper proposes FLO7 fills the missing plant step linking 2OA to 2HG."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "2OA is the tested substrate in biochemical assays and in the substrate-bound structure."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "2HG production by FLO7 was confirmed by LC-HRMS."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports FLO7 catalyzes 2OA to 2HG and has a nearly identical substrate-binding mode to HglS."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "2HG is the direct product measured for FLO7."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact class wording is not explicitly provided in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "FLO7 directly forms 2HG from 2OA in vitro."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper cites prior O. sativa FLO7 mutants with floury starch phenotype and interprets this as supporting a role in lysine catabolism; the phenotype itself is clearly stated."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "2HG is described as an intermediate in plant lysine degradation/catabolism."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses amyloplast/endosperm context and FLO7 localization, but does not directly state 2HG accumulates there."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states FLO7 localizes to the amyloplast via an N-terminal chloroplast localization signal peptide."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly reported: in vitro LC-HRMS assay, kinetic analysis, and substrate-bound crystal structure."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports FLO7 as part of the missing step in plant lysine catabolism, but does not specifically establish a key control-step role for FLO7 in vivo or any rate limitation."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The Discussion implies relevance to crop lysine engineering and seed quality, but FLO7 was not directly tested as an engineering target in this paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are supported: in vitro 2OA-to-2HG activity, conserved architecture despite ~15% identity, and prior mutant phenotypes interpreted as physiological support."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "PDB 6W1K is explicitly listed; Arg64 analogous to HglS Arg74 is stated; kinetic parameters Km 0.55 mM and Vmax 0.89 mM/min/µM are explicitly reported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Biosynthetic_Pathway",
+          "old_value": "lysine catabolism",
+          "new_value": "NA",
+          "reason": "The paper places FLO7 in lysine catabolism/degradation, not biosynthesis."
+        }
+      ],
+      "stats": {
+        "supported": 18,
+        "unsupported": 1,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "YdcJ",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to the E. coli homolog YdcJ."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Escherichia coli."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "YdcJ from E. coli was biochemically characterized in vitro."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Escherichia coli."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "YdcJ is shown to be an HglS homolog with identical activity, but the paper does not explicitly rename it 'hydroxyglutarate synthase homolog YdcJ'."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "YdcJ is explicitly described as a DUF1338 homolog; DUF1338 proteins are placed in the VOC superfamily."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper discusses lysine catabolism, not biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "YdcJ is tested for the same 2OA to 2HG conversion module."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "As an HglS homolog it functions in the downstream 2OA-to-2HG step; this is directly implied by the biochemical assay."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "YdcJ was assayed for conversion of 2OA."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states YdcJ catalyzed conversion of 2OA to 2HG, confirmed by LC-HRMS."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly supported by the in vitro assay statement."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "2HG is the direct product measured."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact class wording is not explicitly used in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "YdcJ directly forms 2HG from 2OA in vitro."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports conserved biochemical activity, but 'identical activity to HglS' is stated in the Discussion; no organismal phenotype for YdcJ is tested in Results."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper treats 2HG as part of lysine catabolism and discusses E. coli lysine catabolic context, though physiological role remains unresolved."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "High-resolution LC-MS in vitro assay is explicitly described for YdcJ along with AT1G07040 and FLO7."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The field says not established, which matches the paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary accurately reflects that YdcJ has HglS-like activity, supports conservation, and requires further physiological study."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "PDB 2RJB is explicitly referenced as the solved structure used in comparisons/search models, and YdcJ is indeed included among biochemically characterized homologs."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Biosynthetic_Pathway",
+          "old_value": "lysine catabolism",
+          "new_value": "NA",
+          "reason": "The paper discusses lysine catabolism, not biosynthesis."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 98,
+    "supported": 78,
+    "unsupported": 4,
+    "uncertain": 16,
+    "total_corrections": 4
+  }
+}

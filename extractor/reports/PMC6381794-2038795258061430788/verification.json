@@ -1,0 +1,505 @@
+{
+  "file": "MinerU_markdown_PMC6381794_2038795258061430788",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC6381794_2038795258061430788.md",
+  "timestamp": "2026-03-31T22:22:24.325247",
+  "genes": [
+    {
+      "gene_name": "HvCOMT1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HvCOMT1 is a barley gene; the paper studies barley COMT genes."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Barley is explicitly given as Hordeum vulgare in the title/summary."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and methods state barley cv. Golden Promise was used."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The RNAi work was performed in barley."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is barley, explicitly Hordeum vulgare."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Transformation and experiments used cv. Golden Promise."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly report reduced S/G ratio, increased 5-OH-G incorporation, reduced wall p-coumarate in COMT RNAi lines, and NMR suggests tricin reduction from 3% to 2% in one line."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "All reported metabolites are lignin/phenylpropanoid related."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The study links lignin modification to straw properties, saccharification, bioenergy applications, and animal feed value."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Lignin analyses were performed on stem straw/internodes; the paper refers to lignifying tissues and stem straw cell walls."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "COMT is explicitly discussed as a lignin biosynthesis gene in monolignol/lignin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states COMT's main role is methylation of 5-hydroxyconiferaldehyde, a precursor of S units, i.e. the syringyl branch."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "COMT is explicitly caffeic acid O-methyltransferase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given anywhere in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper clearly treats HvCOMT1 as a COMT/O-methyltransferase, but does not explicitly state 'SAM-dependent O-methyltransferase family/domain' for HvCOMT1."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/discussion state COMT's main role is methylation of 5-hydroxyconiferaldehyde; enzyme assays measured O-methylation of caffeic acid, though assay activity may include other OMTs."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "5-hydroxyconiferaldehyde is explicitly discussed as a COMT substrate; caffeic acid was the assay substrate used for O-methylation assays."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "Sinapaldehyde is directly inferable from discussion of conversion of 5-hydroxyconiferaldehyde to the precursor of sinapyl alcohol, but ferulic acid as assay product is not explicitly named in the assay description/results."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places COMT in the branch leading to S-unit/sinapyl alcohol formation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly connects COMT deficiency with reduced S units and diversion to 5-OH-G incorporation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports COMT as important/key for S-unit formation, but does not directly establish rate limitation; the qualifier 'not explicitly established as sole rate-limiting step' makes this partly interpretive."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization for HvCOMT1 is reported."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and RNAseq support expression in lignifying tissues including stems, roots, lemma, palea, rachis, with higher internode expression at earlier stages."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "In the experimental barley plants, HvCOMT1 was detected in stem internodes and was higher earlier in development."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly examines internode developmental stage and constitutive RNAi driven by the maize ubiquitin promoter."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The RNAi hairpin was under control of the constitutive maize ubiquitin promoter."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show HvCOMT1/HvCOMT2 co-suppression reduced transcripts, protein, and activity; lowered S/G by ~50%; increased 5-OH-G 10–15-fold; reduced pCA in several lines; modestly reduced lignin; and improved saccharification in some lines."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly used in the paper."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "HvCOMT2 is a co-expressed/co-silenced paralog rather than a demonstrated physical interactor; CAD is inferred in pathway flux discussion, not shown as interacting protein."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper cites Mascher et al. RNA-seq for expression, uses microarray transcript profiling, and UHPLC-MS metabolomics."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "No brown-midrib/gold-hull phenotype was observed; no significant straw biomass difference was reported; lignin reduction was modest and saccharification improvement occurred only in some lines."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly proposes multiplex knockout/silencing of COMT genes, potentially via CRISPR or tissue-specific strategies, to improve straw for feed/bioenergy."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "HvCOMT1 is identified as one of three true barley COMTs, located on chromosome 7H, and the RNAi fragment was amplified from HvCOMT1 cDNA."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately reflects results for HvCOMT1 within the HvCOMT1/HvCOMT2 RNAi system."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.1.1.68",
+          "new_value": "NA",
+          "reason": "No EC number is given anywhere in the paper."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "cytosol",
+          "new_value": "NA",
+          "reason": "No subcellular localization for HvCOMT1 is reported."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "HvCOMT2",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HvCOMT2 is a barley gene studied in this paper."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Barley is explicitly Hordeum vulgare."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments used cv. Golden Promise."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is barley."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies Hordeum vulgare."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Golden Promise was transformed and analyzed."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The COMT RNAi phenotype affecting S units, 5-OH-G, p-coumarate, and minor tricin changes is attributed to suppression of stem-expressed COMTs including HvCOMT2."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are lignin/phenylpropanoid compounds."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The study links lignin remodeling to straw quality, digestibility/saccharification, bioenergy/feed uses."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Metabolite/lignin changes were measured in stem internodes/straw cell walls."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "HvCOMT2 is classified as a true COMT in lignin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "COMT is linked to S-unit formation via methylation of 5-hydroxyconiferaldehyde."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "HvCOMT2 is annotated in this paper as a caffeic acid O-methyltransferase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the article."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "HvCOMT2 is clearly an O-methyltransferase/COMT by phylogeny and residues, but the exact family/domain wording is not explicitly given."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports COMT function for HvCOMT2 by conserved residues and phylogeny, and discusses COMT-mediated methylation of 5-hydroxyconiferaldehyde to produce S-lignin precursors."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "5-hydroxyconiferaldehyde is the key COMT substrate discussed for lignin biosynthesis."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states COMT-mediated conversion of 5-hydroxyconiferaldehyde to sinapaldehyde, precursor of sinapyl alcohol."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "HvCOMT2 is placed in the downstream branch toward syringyl monolignol formation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links COMT suppression to reduced S lignin and altered downstream lignin structure."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "HvCOMT2 contributes to S-unit formation, but the paper does not directly characterize it as a key control step in a formal kinetic sense."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization data for HvCOMT2 are presented."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state HvCOMT2 is expressed in lignifying tissues including stems, roots, lemma, palea and rachis, with stronger developmental decline in internodes than HvCOMT1."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HvCOMT2 was detected in stem internodes, especially at earlier stages."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression depends on internode developmental stage and was reduced by constitutive RNAi."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The RNAi construct used the constitutive maize ubiquitin promoter."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show HvCOMT2 was co-suppressed with HvCOMT1 and contributed to reduced COMT activity/protein and altered lignin chemistry in stems."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Phylogenetic/residue analysis, RT-qPCR, RNAi, western blot, enzyme assay, and lignin analyses were all used."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No physical or direct protein interaction between HvCOMT2 and HvCOMT1 is shown."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses Mascher RNA-seq support, microarray transcript profiling, and UHPLC-MS metabolomics."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The line-level outcomes include no visible brown-midrib phenotype and incomplete suppression due to redundancy."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly indicates multiple COMT family members such as HvCOMT1 and HvCOMT2 should be co-targeted."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state HvCOMT2 is on chromosome 3H and note it had been previously suggested to be a flavone-specific OMT but is reclassified here as a true COMT."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary matches the paper's results for HvCOMT2."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.1.1.68",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the article."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "cytosol",
+          "new_value": "NA",
+          "reason": "No localization data for HvCOMT2 are presented."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "HvCOMT1",
+          "new_value": "NA",
+          "reason": "No physical or direct protein interaction between HvCOMT2 and HvCOMT1 is shown."
+        }
+      ],
+      "stats": {
+        "supported": 29,
+        "unsupported": 3,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "HvCOMT3",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "HvCOMT3 is identified as a barley gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Barley is Hordeum vulgare."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses Golden Promise barley."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The species studied is barley."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Hordeum vulgare."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Golden Promise is the cultivar used."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No terminal metabolite for HvCOMT3 in roots/embryos was directly measured; the paper only reports expression pattern, not HvCOMT3-specific metabolite outcomes."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "HvCOMT3 is predicted to be a COMT involved in lignin-related phenylpropanoid metabolism, but this was not directly tested for HvCOMT3."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Roots and embryos are expression sites, not demonstrated metabolite accumulation sites for HvCOMT3-specific products."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "HvCOMT3 is identified as a true COMT by residues/phylogeny, suggesting lignin biosynthesis involvement, but it was not functionally tested."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "This assignment is plausible from COMT identity but not directly demonstrated for HvCOMT3 in this study."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "HvCOMT3 is annotated as one of three COMT genes."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number appears in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "HvCOMT3 is a COMT by annotation and conserved residues, but no explicit family/domain terminology is provided."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The reaction is predicted from COMT identity, but HvCOMT3 itself was not biochemically tested."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "5-hydroxyconiferaldehyde is a COMT substrate in general, but not directly shown for HvCOMT3."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "Sinapaldehyde is inferred for COMT function generally, not specifically demonstrated for HvCOMT3."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is inferred from COMT identity rather than direct HvCOMT3 testing."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "Putative precursor-forming role is plausible but not directly evidenced for HvCOMT3."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No such role is established for HvCOMT3."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization data are provided."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state no expression was detected for HvCOMT3 in sampled internodes; ESTs and RNA-seq indicate predominant expression in roots and embryos."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "In the studied plants, HvCOMT3 was not detected in internodes and is predominantly root/embryo expressed according to external RNA-seq support."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The RNAi construct was under maize ubiquitin promoter and the trigger fragment had 90.4% identity to HvCOMT3, although HvCOMT3 stem expression was undetectable."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that HvCOMT3 was identified as a true COMT family member but was not implicated in stem lignin phenotype because no stem internode expression was detected."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Phylogenetic/conserved-residue analysis, RT-qPCR, and RNA-seq support were used to assess HvCOMT3."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Mascher et al. RNA-seq data are cited for HvCOMT3 expression."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Possible relevance outside stems is speculative and not directly examined in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state HvCOMT3 is on chromosome 6H and not a primary driver of stem lignin changes due to lack of internode expression."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately reflects the paper's evidence on HvCOMT3."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "lignin-related phenylpropanoids in roots/embryos",
+          "new_value": "NA",
+          "reason": "No terminal metabolite for HvCOMT3 in roots/embryos was directly measured; the paper only reports expression pattern, not HvCOMT3-specific metabolite outcomes."
+        },
+        {
+          "field": "Terminal_Metabolite_Accumulation_Site",
+          "old_value": "roots and embryos (expression site, not directly measured metabolite accumulation)",
+          "new_value": "NA",
+          "reason": "Roots and embryos are expression sites, not demonstrated metabolite accumulation sites for HvCOMT3-specific products."
+        },
+        {
+          "field": "EC_Number",
+          "old_value": "2.1.1.68",
+          "new_value": "NA",
+          "reason": "No EC number appears in the paper."
+        },
+        {
+          "field": "Rate_Limiting_or_Key_Control_Step",
+          "old_value": "not established",
+          "new_value": "NA",
+          "reason": "No such role is established for HvCOMT3."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "cytosol",
+          "new_value": "NA",
+          "reason": "No localization data are provided."
+        }
+      ],
+      "stats": {
+        "supported": 15,
+        "unsupported": 5,
+        "uncertain": 10
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 98,
+    "supported": 72,
+    "unsupported": 10,
+    "uncertain": 16,
+    "total_corrections": 10
+  }
+}

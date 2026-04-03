@@ -1,0 +1,1150 @@
+{
+  "file": "MinerU_markdown_PMC4304707_2038798980527202305",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC4304707_2038798980527202305.md",
+  "timestamp": "2026-03-31T22:11:26.761585",
+  "genes": [
+    {
+      "gene_name": "IAA12",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper lists IAA12 as AT1G04550 in the 'Accession numbers of Arabidopsis genes' section."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA12 is presented as an Arabidopsis gene in the accession-number section and throughout the Arabidopsis experiments."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses Arabidopsis thaliana for the host species and lists IAA12 among Arabidopsis genes."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA12 function was tested in Arabidopsis mesophyll protoplasts and Arabidopsis crown gall material."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species in experiments is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states Arabidopsis thaliana ecotype Columbia (Col-0) was used for plant experiments relevant to these analyses."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "IAA12 was studied as a repressor of ARF5-dependent Ipt promoter activity, and Ipt is linked to cytokinin production, but the paper does not directly measure cytokinin changes caused by IAA12 itself."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The linked end product through Ipt is cytokinin, which is a phytohormone."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper directly supports that IAA12 reduces ARF5-driven Ipt promoter activity, but 'thereby reducing Ipt expression and cytokinin accumulation potential' extends beyond direct IAA12-specific measurements."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements are grounded in Results/Discussion: IAA12 significantly reduced ARF5-driven Ipt promoter activity (Fig. 7B), auxin relieves repression in the ARF5 module, and reduced IAA12 in wrky mutants is proposed as compensation (S6C/Fig. 4C discussion)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes IAA12 as an Aux/IAA protein and inhibitor of ARF5 function."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA12 involvement was assessed by protoplast transactivation/promoter-luciferase assays and by qRT-PCR of IAA12 expression (S6C)."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states that in crown galls of the wrky single mutants, expression of IAA12 was reduced (S6C Fig.)."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not generally describe 'low-level context-dependent expression in crown gall tissues'; it only specifically notes reduced IAA12 in wrky single mutant crown galls and discusses its signaling role."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization experiment or explicit localization statement for IAA12 is provided in this paper."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA12 is explicitly described as the repressor/inhibitor of ARF5, and Fig. 8/model text states auxin promotes TIR1 interaction and polyubiquitination by a TIR1-SKP(ASK1)-CUL1 complex."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the paper's framing: IAA12 is part of the regulatory module controlling Ipt expression, and Fig. 8 explicitly depicts auxin-promoted TIR1-SKP(ASK1)-CUL1-mediated degradation of IAA12."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA12 was examined in the context of auxin (1-NAA) treatment and Agrobacterium infection/crown gall experiments."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible extrapolation, but breeding/engineering application of IAA12 was not discussed directly in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No subcellular localization experiment or explicit localization statement for IAA12 is provided in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 14,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "ipt",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The Ipt oncogene is described as encoded on the T-DNA of Agrobacterium tumefaciens strain C58/pTiC58."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source organism is Agrobacterium tumefaciens as repeatedly stated in the paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Ipt expression/regulation was tested in Arabidopsis tissues, crown galls, protoplasts, and callus."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied host species is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Col-0 and WS-2 are explicitly used in different experiments relevant to Ipt."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly links Ipt to cytokinin production and measures elevated cytokinin levels in crown gall tissues."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Cytokinin is a phytohormone."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states cytokinin affects cell division and is essential for cell proliferation and initiation of crown gall development."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Cytokinins were measured as elevated in Arabidopsis crown gall tissues."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that Ipt is highly expressed, its promoter is strongly activated by host TFs, and Ipt expression is linked to crown gall development and cytokinin accumulation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point is supported in Results: high Ipt vs IaaH/IaaM transcript levels (Fig. 2A), activation by WRKY18/40/60 and ARF5 (Fig. 3A), ARF5+auxin/AuxRE mutation effects (Fig. 7B,C), moderate reduction in wrky triple mutant at 6 dpi (Fig. 4C), and elevated cytokinin in crown galls."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supporting Information explicitly names Ipt as isopentenyl transferase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "Its enzymatic role in cytokinin biosynthesis is supported, but 'cytokinin biosynthetic transferase' as a protein-family label is not explicitly stated in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Ipt is linked directly to cytokinin biosynthesis throughout the paper."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specify 'isoprenoid cytokinin biosynthesis' as a pathway branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "Ipt is clearly important for cytokinin biosynthesis, but 'committed/early biosynthetic step' is not explicitly described in the paper."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The study specifically presents Ipt transcription as the principal strongly regulated oncogene output and a key control point at the transcriptional level in transformed plant cells."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No biochemical reaction description for Ipt is provided in the paper."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number appears in the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state substrates for Ipt."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specify the immediate biochemical product of Ipt."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Ipt is directly linked to cytokinin biosynthesis and cytokinin accumulation in crown galls."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods were used in the paper for Ipt-related analyses: qRT-PCR, promoter-GFP/LUC assays, TF screening, AuxRE mutagenesis, wrky mutant infection assay, and cytokinin analysis."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Ipt is shown to have the highest transcript levels among the oncogenes in crown galls and the highest promoter activity in protoplasts."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses the native IGR2/Ipt promoter in reporter constructs and CaMV35S for TF effector expression."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly cites previous microarray data [20,46] and no accession is given in the text."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the paper's scope and its cytokinin profiling results, including zeatin conjugates, zeatin riboside, and free zeatin elevations."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Ipt regulation was studied under Agrobacterium infection, auxin (1-NAA), and trans-zeatin treatment."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly links oncogene expression, including Ipt-driven cytokinin production, to tumorigenesis/crown gall formation."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable implication, but the paper does not directly discuss promoter engineering or breeding applications."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Pathway_Branch_or_Subpathway",
+          "old_value": "Isoprenoid cytokinin biosynthesis",
+          "new_value": "NA",
+          "reason": "The paper does not specify 'isoprenoid cytokinin biosynthesis' as a pathway branch."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Transfers an isopentenyl group to an adenine nucleotide substrate to generate cytokinin precursors.",
+          "new_value": "NA",
+          "reason": "No biochemical reaction description for Ipt is provided in the paper."
+        },
+        {
+          "field": "EC_Number",
+          "old_value": "2.5.1.27",
+          "new_value": "NA",
+          "reason": "No EC number appears in the paper."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "Adenine nucleotides; isoprenoid donor (not directly tested in this paper)",
+          "new_value": "NA",
+          "reason": "The paper does not state substrates for Ipt."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "Isopentenyladenine-type cytokinin precursors",
+          "new_value": "NA",
+          "reason": "The paper does not specify the immediate biochemical product of Ipt."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 5,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "iaaH",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "IaaH is an Agrobacterium tumefaciens T-DNA oncogene in pTiC58."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is explicitly Agrobacterium tumefaciens."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "IaaH promoter/transcript analyses were done in Arabidopsis crown galls, callus, and protoplasts."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host species used is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Col-0 and WS-2 are used in relevant experiments."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly links IaaH/IaaM expression to increased production of auxin; crown galls accumulate more unconjugated IAA."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA/auxin is a phytohormone."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that elevated auxin contributes to crown gall growth and later boosts Ipt expression via ARF5 in the model/discussion."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states crown galls accumulate four times more unconjugated IAA than control tissues."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The notion of 'constitutive low basal expression contributes to auxin production' is largely from Discussion/model; low expression is supported, but direct causal testing for IaaH alone was not performed in Results."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points are supported: lower transcript abundance than Ipt (Fig. 2A), IGR1a promoter activity (Fig. 1B), no TF from screen activated IaaH promoter, and auxin/cytokinin did not affect IaaH promoter activity (Fig. 7A/S7)."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supporting Information names IaaH as indole-3-acetamide hydrolase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not describe IaaH as an amidohydrolase family/domain protein."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "IaaH and IaaM are discussed as oncogene enzymes increasing auxin production in transformed tissues."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly name the IAM pathway."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "Its downstream position relative to IaaM can be inferred from canonical biology and gene names, but the paper does not explicitly state this step position."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish IaaH as rate-limiting/key control; thus 'Not established' is faithful."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No explicit biochemical reaction for IaaH is described in the paper text."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number appears in the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state indole-3-acetamide as substrate."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly state IAA as the direct product of IaaH enzymatic reaction."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links IaaH/IaaM enzyme activity to auxin production in transformed cells."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "IaaH was analyzed by qRT-PCR, promoter-GFP, promoter-LUC, and 5' RACE."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "IaaH transcript abundance is shown to be much lower than Ipt in crown galls."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "IGR1a is the promoter used for IaaH reporter analyses."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the paper's interpretation that no activating host TF was identified and that the promoter likely supports basal expression."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "IaaH was studied in Agrobacterium infection and in protoplast assays with auxin and cytokinin treatment."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links auxin overproduction by oncogenes to tumorigenesis/crown gall formation."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is an inference; the paper does not discuss engineering applications for IaaH."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "Amidohydrolase",
+          "new_value": "NA",
+          "reason": "The paper does not describe IaaH as an amidohydrolase family/domain protein."
+        },
+        {
+          "field": "Pathway_Branch_or_Subpathway",
+          "old_value": "IAM pathway",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly name the IAM pathway."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Hydrolyzes indole-3-acetamide to indole-3-acetic acid (IAA).",
+          "new_value": "NA",
+          "reason": "No explicit biochemical reaction for IaaH is described in the paper text."
+        },
+        {
+          "field": "EC_Number",
+          "old_value": "3.5.1.4",
+          "new_value": "NA",
+          "reason": "No EC number appears in the paper."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "Indole-3-acetamide",
+          "new_value": "NA",
+          "reason": "The paper does not state indole-3-acetamide as substrate."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "Indole-3-acetic acid",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly state IAA as the direct product of IaaH enzymatic reaction."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 6,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "iaaM",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "IaaM is an Agrobacterium tumefaciens T-DNA oncogene in pTiC58."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is explicitly Agrobacterium tumefaciens."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "IaaM promoter/transcript analyses were done in Arabidopsis tissues and protoplasts."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host species is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Col-0 and WS-2 are used in relevant experiments."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links IaaH/IaaM expression to increased auxin production in transformed cells."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Auxin is a phytohormone."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that elevated auxin contributes to crown gall development and to later ARF5-mediated Ipt induction."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Crown galls are reported to accumulate four times more unconjugated IAA than control tissues."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "Low expression is supported, but the specific claim that basal IaaM expression contributes precursor supply was not directly tested in Results."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points are supported: lower transcript abundance than Ipt (Fig. 2A), IGR1b promoter activity (Fig. 1B), no activating TF from the screen, and no effect of auxin/cytokinin on IaaM promoter activity."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Supporting Information names IaaM as tryptophan monooxygenase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not describe IaaM as a monooxygenase family/domain protein."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "IaaM is discussed with IaaH as part of the auxin-producing oncogene machinery."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The IAM pathway is not explicitly named in the paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "An upstream role relative to IaaH is biologically plausible, but not explicitly stated in this paper."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish IaaM as rate-limiting/key control; thus 'Not established' is faithful."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No explicit reaction description is given in the paper."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number appears in the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specify tryptophan as substrate."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly specify indole-3-acetamide as product."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links IaaM/IaaH function to auxin production."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "IaaM was analyzed by qRT-PCR, promoter-GFP, promoter-LUC, and 5' RACE."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "IaaM transcript abundance is much lower than Ipt in crown galls."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "IGR1b is the promoter used for IaaM reporter analyses."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the paper's interpretation of basal expression and lack of identified activating host TFs."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "IaaM was studied under Agrobacterium infection and auxin/cytokinin treatment in protoplast assays."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Auxin overproduction is directly tied to tumorigenesis in the paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Engineering value is not directly discussed in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "Monooxygenase",
+          "new_value": "NA",
+          "reason": "The paper does not describe IaaM as a monooxygenase family/domain protein."
+        },
+        {
+          "field": "Pathway_Branch_or_Subpathway",
+          "old_value": "IAM pathway",
+          "new_value": "NA",
+          "reason": "The IAM pathway is not explicitly named in the paper."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Converts tryptophan to indole-3-acetamide, the precursor of IAA in the IAM pathway.",
+          "new_value": "NA",
+          "reason": "No explicit reaction description is given in the paper."
+        },
+        {
+          "field": "EC_Number",
+          "old_value": "1.13.12.3",
+          "new_value": "NA",
+          "reason": "No EC number appears in the paper."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "Tryptophan",
+          "new_value": "NA",
+          "reason": "The paper does not specify tryptophan as substrate."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "Indole-3-acetamide",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly specify indole-3-acetamide as product."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 6,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "WRKY40",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper lists WRKY40 as AT1G80840 in the accession section."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY40 is an Arabidopsis transcription factor studied in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY40 function was tested in Arabidopsis tissues and protoplasts."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper specifies Col-0 as the ecotype used for mutant and infection analyses."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY40 is directly linked to activation of the Ipt promoter, and Ipt is linked to cytokinin production in crown galls."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Cytokinin is a phytohormone."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Cytokinins are measured in crown gall tissues."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states cytokinin promotes cell division and crown gall growth through Ipt action."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY40 is explicitly a transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY40 is explicitly identified as a WRKY transcription factor."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC fluorescence for WRKY40 interactions was always restricted to the nucleus."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY40 directly activates the Ipt promoter, binds the Ipt promoter in EMSA, and acts synergistically with ARF5."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows activation of Ipt and no activation of IaaH/IaaM by screened TFs including WRKY40."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The directly supported target is the bacterial Ipt promoter."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC showed WRKY40 interacts with WRKY18, WRKY40, WRKY60, and ARF5."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports homo-/heterotypic WRKY interactions and WRKY40-ARF5 interaction that potentiates Ipt promoter activation."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY40 expression is induced by Agrobacterium infection and responds to wounding/buffer infiltration."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY40 promotes Ipt expression and supports crown gall development; wrky40 mutants show smaller galls."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly points to a dominant role for WRKY40 among the tested WRKYs in Ipt promoter regulation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point is directly supported by the Results (Fig. 3A-C, Fig. 4, Fig. 5, Fig. 6, S4)."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods were used for WRKY40: PTA/protoplast transactivation, qRT-PCR, mutant assay, BiFC, EMSA."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states WRKY40 was significantly induced as early as 2 hpi and elevated in crown galls vs GV3101 controls."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the infection-responsive and crown gall-elevated pattern shown in the paper."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "CaMV35S was used for TF expression and the native Ipt promoter-LUC reporter for target activation assays."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper cites microarray data from previous studies [20,46] and provides no accession number in the text."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The EMSA used an Ipt promoter fragment containing three W-boxes, and WRKY40 was stronger than WRKY18/60, consistent with the paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY40 was studied under Agrobacterium infection, protoplast assay conditions, and wounding/buffer infiltration."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses broader pathogen/stress roles of WRKY40 and possible pleiotropic implications."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "A host susceptibility-factor framing is plausible, but breeding/engineering applications are not explicitly proposed in the paper."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 30,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "ARF5",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The accession section lists ARF5 as AT1G19850."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ARF5 is an Arabidopsis gene studied in Arabidopsis systems."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ARF5 was tested in Arabidopsis protoplasts and expression analyzed in Arabidopsis tissues."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the ecotype used for these analyses."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "ARF5 activates the Ipt promoter, and Ipt is linked to cytokinin production in crown galls."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Cytokinin is a phytohormone."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Cytokinin accumulation was measured in crown gall tissues."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links Ipt-driven cytokinin production to crown gall growth."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "ARF5 is explicitly an auxin response factor transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies ARF5 as an ARF and states domains III and IV at the C-terminus are required for interaction."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC fluorescence involving ARF5 was always restricted to the nucleus."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "ARF5 activates Ipt in an auxin-dependent manner through AuxREs and synergizes with WRKY40."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "ARF5 activated Ipt, and no activation of IaaH/IaaM by ARF5 is reported."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly supports Ipt as the target promoter."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly supports interactions with IAA12 functionally, and BiFC supports interactions with WRKY18/40/60 and ARF5 itself."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "ARF5 self-interaction and interactions with WRKY18/40/60 are shown by BiFC, with functional potentiation specifically for WRKY40."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "ARF5 activity is linked to auxin (1-NAA/IAA) and infection-associated auxin increase."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "UNCERTAIN",
+          "reason": "The feedforward interpretation is plausible but not explicitly demonstrated as a regulatory loop in the paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This is directly shown in Fig. 5A and Fig. 7B,C."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "ARF5 is presented as an auxin-dependent co-activator linking elevated auxin to stronger Ipt expression."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All five points are directly supported by Results (Fig. 3A, Fig. 5A-B, Fig. 7B-C)."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods were used for ARF5: protoplast transactivation, auxin treatment, AuxRE mutagenesis, and BiFC."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports ARF5 remained low through 72 hpi in infiltration assays, was elevated in crown galls vs GV3101 stems, and was elevated in wrky mutant crown galls (S6C)."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "This general summary is consistent with the paper."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "CaMV35S drove TF expression and native/mutated Ipt promoter-LUC reporters were used."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper cites previous microarray data [20,46] and provides no accession in the text."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states arf5 mutant crown gall assays were not feasible and that ARF5Δ722 lost interactions."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "ARF5 was studied under auxin treatment and Agrobacterium infection contexts."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes strong developmental phenotypes of arf5 mutants."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The stated strategy implications are reasonable but not directly discussed in the paper."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 30,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "WRKY18",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The accession section lists WRKY18 as AT4G31800."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY18 is an Arabidopsis transcription factor."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY18 was studied in Arabidopsis tissues and protoplasts."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the relevant ecotype background."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY18 activates the Ipt promoter, which is linked to cytokinin production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Cytokinin is a phytohormone."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Cytokinins were measured in crown gall tissues."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Cytokinin is linked to cell division and crown gall development in the paper."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY18 is a transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY18 is explicitly identified as a WRKY transcription factor."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC fluorescence signals were restricted to the nucleus."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY18 activates the Ipt promoter in protoplast assays."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY18 activates Ipt and is weaker than WRKY40 according to comparison experiments."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The supported target is Ipt promoter activation."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC supports interactions with WRKY18, WRKY40, WRKY60, and ARF5."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "Nuclear interactions with itself, other WRKYs, and ARF5 are shown in BiFC."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY18 responded to Agrobacterium/wounding and was elevated in crown galls."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "wrky18 mutants formed smaller crown galls and WRKY18 activated Ipt promoter activity."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows WRKY18 is supportive rather than dominant compared with WRKY40."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four statements are supported by Results (Fig. 3, Fig. 4, Fig. 5A)."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY18 was analyzed by protoplast transactivation, qRT-PCR, mutant assay, and BiFC."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY18 increased significantly from 8 hpi with GV3101 and was elevated in crown galls."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "This is consistent with the infection-responsive/crown gall-elevated pattern in the paper."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "CaMV35S drove TF expression and Ipt promoter-LUC was the reporter."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Previous microarray data [20,46] are cited without accession numbers in the text."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This is consistent with the paper's description of the WRKY18/40/60 module and stronger phenotype in higher-order mutants."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY18 was studied in Agrobacterium infection and wounding contexts."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses WRKYs as broader stress/defense regulators, implying pleiotropy."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This application framing is not directly discussed in the paper."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 30,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "WRKY60",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The accession section lists WRKY60 as AT2G25000."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY60 is an Arabidopsis transcription factor."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY60 was studied in Arabidopsis tissues and protoplasts."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the relevant ecotype background."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY60 activates the Ipt promoter, linked to cytokinin production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Cytokinin is a phytohormone."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Cytokinin was measured in crown gall tissues."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Cytokinin is linked to cell division and crown gall development in the paper."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY60 is a transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY60 is explicitly identified as a WRKY transcription factor."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC fluorescence signals were restricted to the nucleus."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY60 activates the Ipt promoter in protoplast assays."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY60 activates Ipt and is weaker than WRKY40 by comparison experiments."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The directly supported target is Ipt promoter activation."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC supports interactions with WRKY18, WRKY40, WRKY60, and ARF5."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "Nuclear interactions with itself, the other WRKYs, and ARF5 are shown."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY60 was induced by Agrobacterium infection and responds to wounding/buffer infiltration."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY60 positively regulates Ipt promoter activity and wrky60 mutants formed smaller crown galls."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports WRKY60 as supportive, not dominant relative to WRKY40."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points are supported by Results (Fig. 3, Fig. 4, Fig. 5A)."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY60 was analyzed by protoplast transactivation, qRT-PCR, mutant assay, and BiFC."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY60 was significantly induced from 4 hpi and elevated in crown galls."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary matches the paper."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "CaMV35S drove TF expression and Ipt promoter-LUC was used as the reporter."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Previous microarray data [20,46] are cited without accession numbers in the text."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the paper's depiction of partial redundancy and stronger combined-mutant effects."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY60 was studied in Agrobacterium infection and wounding contexts."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Broader defense/stress functions of WRKYs are discussed, implying pleiotropy."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not directly discuss this engineering implication."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 30,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 232,
+    "supported": 196,
+    "unsupported": 18,
+    "uncertain": 18,
+    "total_corrections": 18
+  }
+}

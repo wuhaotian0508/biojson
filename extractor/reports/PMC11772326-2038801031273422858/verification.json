@@ -1,0 +1,755 @@
+{
+  "file": "MinerU_markdown_PMC11772326_2038801031273422858",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC11772326_2038801031273422858.md",
+  "timestamp": "2026-03-31T21:40:43.305402",
+  "genes": [
+    {
+      "gene_name": "ZmLHT14",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmLHT14 is studied in maize throughout the paper."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism is maize, i.e. Zea mays."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional tests of ZmLHT14 overexpression were performed in maize."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is maize, Zea mays."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Methods mention both B104 and B73-329 as WT backgrounds for different materials; the paper does not explicitly state that ZmLHT14 overexpression specifically used B104."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmLHT14 overexpression increased free amino acid concentrations in kernels at 21 DAP (Figure 5b)."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Free amino acids are the measured terminal metabolite class."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states amino acid accumulation is important for kernel nitrogen accumulation/grain filling, and ZmLHT14 enhances kernel amino acid accumulation."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Amino acid accumulation was measured in maize kernels."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls ZmLHT14 the amino acid transporter gene and names it LHT14, i.e. a lysine/histidine transporter family member."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "GFP-tagged ZmLHT14 localized to the plasma membrane in Nicotiana benthamiana leaf cells (Figure S4a)."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Transcriptome/qPCR results show ZmLHT14 down-regulated in zmccd8, up-regulated in ZmCCD8-OE, and up-regulated in ZmD14B-OE kernels at 7 DAP."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Kernel measurements were taken at 7 and 21 DAP, and field experiments are described in Methods."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state Pro35S:ZmLHT14 constructs were generated for overexpression."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows ZmMYB42 and ZmMYB63 bind the promoter of ZmLHT14 and repress its transcription, but does not show protein-protein interaction with ZmLHT14."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed approaches are in the paper: maize overexpression, free amino acid profiling, transcript analysis, and Y1H/EMSA/ChIP-qPCR/DLR showing MYB-mediated promoter regulation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 5 shows ZmLHT14 overexpression increased free amino acids and did not change soluble sugar concentration."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point matches Results: SL-pathway-associated expression, direct repression by ZmMYB42/63, and increased amino acids in OE kernels including listed amino acids."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports utility for increasing kernel amino acid accumulation, but does not explicitly claim ZmLHT14 as a breeding target or mention nitrogen-use efficiency for this gene specifically."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The study validates in planta amino acid accumulation effects but does not directly assay ZmLHT14 substrate specificity in planta."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 17,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "ZmCCD8",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly list ZmCCD8 as GRMZM2G446858 in the GWAS section."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmCCD8 is a maize gene studied in this paper."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is maize, Zea mays."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CRISPR and overexpression analyses were performed in maize."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Zea mays."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state the ZmCCD8 CRISPR/Cas9 and Pro35S:ZmCCD8 constructs were transformed into maize embryos of the inbred line B104."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper names CCD8 as CAROTENOID CLEAVAGE DIOXYGENASE 8."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "By name and function, ZmCCD8 is a carotenoid cleavage dioxygenase family enzyme; the paper cites CCD8 as an SL biosynthesis enzyme."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states CCD8 functions as a plant strigolactone biosynthesis enzyme."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmCCD8 is presented as part of the core SL biosynthetic pathway in maize."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly describe ZmCCD8 as 'downstream/midstream' within the SL pathway."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "ZmCCD8 is clearly important for SL production and downstream phenotypes, but the paper does not explicitly define it as rate-limiting."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No specific substrate or 'carlactone pathway intermediate(s)' for ZmCCD8 is stated in this paper."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows ZmCCD8 affects downstream zealactone accumulation, but does not state that ZmCCD8 directly produces strigolactones or zealactone as its enzymatic product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports that ZmCCD8 is required for SL biosynthesis and affects zealactone levels, but does not describe the exact catalyzed carotenoid-cleavage reaction."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support that ZmCCD8 supplies an SL signal upstream of the transporter-regulatory module controlling sucrose and amino acid accumulation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmCCD8 affects kernel sucrose and free amino acid accumulation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These terminal metabolites are carbohydrate and amino acid classes."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links these metabolites to grain filling, ear growth and kernel development."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Metabolites were measured in kernels."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states ZmCCD8 is highly expressed in root and ear during flowering and declines in the ear from silking to 3 weeks after pollination."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Overexpression is shown in OE kernels, and knockout lines are CRISPR null/mutant lines with loss of function."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Phosphate starvation was used to enhance SL production for root analysis, and kernel analyses were at 7 and 21 DAP in field experiments."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state Pro35S:ZmCCD8 constructs were generated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq accession PRJNA978351 and GWAS using public MaizeGo data are explicitly stated."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are directly described in the paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show increased zealactone, sucrose/free amino acids, and enhanced ear traits in OE lines, with opposite effects in knockouts."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points are directly supported by the Results and Discussion summaries of experiments."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says ZmCCD8 may be a target for breeding high-yield and nitrogen-efficient maize and identifies favorable promoter haplotypes/SNP associations."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show 100-kernel weight unchanged in OE lines despite greater kernel weight per ear, and shoot growth changes were observed."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports an indirect role via SL signalling rather than direct synthesis of sugars or amino acids."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Substrate",
+          "old_value": "carlactone pathway intermediate(s) in strigolactone biosynthesis",
+          "new_value": "NA",
+          "reason": "No specific substrate or 'carlactone pathway intermediate(s)' for ZmCCD8 is stated in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "ZmMYB42",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmMYB42 is a maize gene studied in this work."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Zea mays."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Knockout and expression analyses were performed in maize."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is maize, Zea mays."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Methods mention B104 and B73-329 as WT backgrounds, but do not explicitly assign ZmMYB42 knockout experiments to B104 in the provided text."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmMYB42 is explicitly described as a transcription factor gene."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly called an MYB transcription factor."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient expression localized ZmMYB42 to the nucleus (Figure S4b)."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "DLR assays indicated ZmMYB42 represses expression of ZmSWEET10, ZmSWEET13c and ZmLHT14."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Y1H, EMSA, ChIP-qPCR and DLR assays support direct repression of these three targets."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "These three genes are the experimentally validated direct targets."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper shows UB3 binds the promoter of ZmMYB42 and represses its transcription, but no protein-protein interaction between ZmMYB42 and ZmUB3 is reported."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmMYB42 is regulated by ZmCCD8/SL signalling and directly repressed by UB3; it is also down-regulated in ZmD14B-OE kernels."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmMYB42 knockout increases kernel sucrose and free amino acids."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The terminal metabolites are carbohydrate and amino acid classes."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links these metabolites to carbon and nitrogen accumulation for grain filling."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "These phenotypes were measured in kernels."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmMYB42 transcript is up-regulated in zmccd8 kernels and down-regulated in ZmCCD8-OE and ZmD14B-OE kernels at 7 DAP."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Knockout of ZmMYB42 increased expression of ZmSWEET10, ZmSWEET13c and ZmLHT14 in kernels at 7 DAP."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Kernel analyses were conducted at 7 and 21 DAP during grain filling."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "CRISPR/Cas9 knockout is supported, and promoter reporters were used in DLR assays, but 'Applied_Promoters' is not a natural fit for knockout and the exact summary wording is not explicitly stated."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support control of transporter-mediated sucrose and amino acid accumulation in kernels."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmMYB42 functions as a negative regulator linking SL signalling to repression of assimilate transporters and reduced metabolite accumulation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are described and used for ZmMYB42."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Knockout of ZmMYB42 increased soluble sugars and free amino acids in kernels."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point matches the experimental Results for ZmMYB42."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The phenotype suggests utility, but the paper does not explicitly propose ZmMYB42 loss-of-function breeding/editing as an application."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places ZmMYB42 downstream of UB3 in the SL pathway model."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "ZmUB3",
+          "new_value": "NA",
+          "reason": "The paper shows UB3 binds the promoter of ZmMYB42 and represses its transcription, but no protein-protein interaction between ZmMYB42 and ZmUB3 is reported."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "ZmMYB63",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmMYB63 is a maize gene studied here."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Zea mays."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Knockout and expression analyses were performed in maize."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is maize, Zea mays."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "The provided text does not explicitly assign the ZmMYB63 knockout material to B104 specifically."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmMYB63 is explicitly described as a transcription factor gene."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly called an MYB transcription factor."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient expression localized ZmMYB63 to the nucleus (Figure S4b)."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "DLR assays indicated ZmMYB63 represses expression of ZmSWEET10, ZmSWEET13c and ZmLHT14."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Y1H, EMSA, ChIP-qPCR and DLR support direct repression of these targets."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmSWEET10, ZmSWEET13c and ZmLHT14 are directly tested targets."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The study shows transcriptional regulation of ZmMYB63 by UB3, not protein-protein interaction."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmMYB63 is regulated by ZmCCD8/SL signalling and repressed by UB3; it is also down-regulated in ZmD14B-OE kernels."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmMYB63 knockout increases kernel sucrose and free amino acids."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The terminal metabolites are carbohydrate and amino acid classes."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links these to carbon/nitrogen accumulation for grain filling."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Phenotypes were measured in kernels."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmMYB63 is up-regulated in zmccd8 kernels and down-regulated in ZmCCD8-OE and ZmD14B-OE kernels at 7 DAP."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Knockout of ZmMYB63 increased expression of ZmSWEET10, ZmSWEET13c and ZmLHT14 in kernels at 7 DAP."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Kernel analyses were conducted at 7 and 21 DAP during grain filling."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "CRISPR/Cas9 knockout is supported and promoter reporters were used in DLR assays, but the field wording is not explicitly stated in the paper."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support control of transporter-mediated sucrose and amino acid accumulation in kernels."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmMYB63 is shown as a negative regulator connecting SL signalling to repression of assimilate transporters."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are directly reported for ZmMYB63."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Knockout of ZmMYB63 increased soluble sugars and free amino acids in kernels."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed finding is directly supported by the Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential utility is inferable, but the paper does not explicitly propose ZmMYB63 editing/breeding application."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway model places ZmMYB63 downstream of UB3 in SL signalling."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "ZmUB3",
+          "new_value": "NA",
+          "reason": "The study shows transcriptional regulation of ZmMYB63 by UB3, not protein-protein interaction."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "ZmUB3",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmUB3 is a maize gene in this study."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Zea mays."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression and regulatory assays for ZmUB3 used maize/tobacco systems derived from the maize gene."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene under study is from maize, Zea mays."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "No dedicated ZmUB3 transgenic maize line/background is specified as B104 for core tests."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "UB3 is treated as a transcriptional regulator binding promoter GTAC motifs."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "Although UB3 is known as an SPL factor from prior literature, this paper excerpt does not explicitly say 'SPL transcription factor'."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Figure S4 is said to include ZmUB3 localization, but the text does not explicitly state nucleus localization in the provided Results."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "DLR assays suggested UB3 repressed ZmMYB42 and ZmMYB63 transcription in planta."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Y1H, EMSA, ChIP-qPCR and DLR show direct repression of ZmMYB42 and ZmMYB63 via GTAC motifs."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmMYB42 and ZmMYB63 are the directly tested targets."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion/model explicitly state D53 interacts with UB3, citing prior data and the proposed mechanism."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to the D53-UB3 module as a well-known SL signalling component."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmUB3 is positioned downstream of ZmCCD8/SL signalling, and the model states D53 restrains UB3 activity when SL is low."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmUB3 is part of the pathway regulating sucrose and free amino acid accumulation in kernels."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are carbohydrate and amino acid classes."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links these metabolite changes to kernel carbon/nitrogen accumulation and ear growth."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The affected metabolites are measured in kernels."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmUB3 expression was up-regulated in ZmCCD8 overexpression kernels and Figure 7e shows increased ZmUB3 expression in ZmD14B-OE kernels."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression/promotion-binding analyses are reported for 7 DAP kernels."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state ZmUB3 coding sequence was placed in 35S-based vectors for ChIP and DLR assays."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "UB3 controls the MYB/transporter module that governs kernel assimilate accumulation."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "UB3 represses MYB negative regulators, thereby enabling sucrose and amino acid accumulation in the proposed pathway."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Y1H, EMSA, ChIP-qPCR, DLR, and expression analyses in ZmCCD8/ZmD14B backgrounds are all reported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The indirect promoting role is inferable from pathway data, but UB3 itself was not genetically manipulated for kernel metabolite phenotyping in this study."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are supported by Results, though the third is pathway positioning rather than direct phenotype testing."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible implication, but the paper does not explicitly propose UB3 as an engineering target."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed does not report a direct UB3-alone transgenic metabolite phenotype."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "ZmD14B",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmD14B is a maize gene studied here."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Zea mays."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmD14B overexpression was tested in maize."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is maize, Zea mays."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Methods do not explicitly state that ZmD14B OE lines were in B104; they only say overexpression lines were generated by transforming maize embryos and provided by a center."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls ZmD14B the SL receptor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "As stated, ZmD14B is the strigolactone receptor, i.e. a D14 family member."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The model and discussion describe D14-mediated SL perception triggering D53 degradation and release of UB3 activity."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 7e shows down-regulation of ZmMYB42/63 and up-regulation of ZmSWEET10, ZmSWEET13c, ZmLHT14 and ZmUB3 in ZmD14B-OE kernels."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "These are the downstream genes whose expression was directly measured in ZmD14B-OE kernels."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "D53 interaction with D14 is part of general SL signalling knowledge and the model, but this paper does not directly test ZmD14B-D53 interaction."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places D14B within the SL receptor/signalling module involving D53 in the model/discussion."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmD14B is explicitly described as the SL receptor, so its input is strigolactone."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmD14B overexpression increased sucrose and free amino acids in kernels."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are carbohydrate and amino acid metabolite classes."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links these metabolites to grain filling and ear growth."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The metabolite changes were measured in kernels."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 7a shows ZmD14B is overexpressed in transgenic kernels at 7 DAP."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Kernel grain-filling analyses were performed at 7 and 21 DAP."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly describe Pro35S:ZmD14B constructs."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support that ZmD14B-mediated SL perception controls transporter-regulator expression linked to kernel sugar and amino acid accumulation."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Overexpression was sufficient to enhance both sucrose and amino acid accumulation in kernels."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Overexpression, metabolite profiling, and qRT-PCR of downstream genes were all used."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly show increased soluble sugars/sucrose and free amino acids in ZmD14B-OE kernels."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by Figure 7 and corresponding text."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable implication, but the paper does not explicitly propose ZmD14B as a breeding/engineering target."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "ZmD14B is the SL receptor branch directly tested in this study's maize kernel experiments."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 24,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 162,
+    "supported": 138,
+    "unsupported": 3,
+    "uncertain": 21,
+    "total_corrections": 3
+  }
+}

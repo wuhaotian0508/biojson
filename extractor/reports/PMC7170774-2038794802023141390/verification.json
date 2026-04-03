@@ -1,0 +1,683 @@
+{
+  "file": "MinerU_markdown_PMC7170774_2038794802023141390",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC7170774_2038794802023141390.md",
+  "timestamp": "2026-03-31T22:28:20.480194",
+  "genes": [
+    {
+      "gene_name": "StACS3; StACS4; StACS5; StACSL",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses potato plants throughout; potato is the source species for these genes."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental procedures specify potato as Solanum tuberosum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental procedures state cultivar Desirée."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species tested is potato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Potato is explicitly given as Solanum tuberosum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Cultivar Desirée is explicitly stated."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Section 2.5 directly measures ET/ethylene after CuSO4 treatment."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Ethylene is a plant hormone/phytohormone in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "ACC treatment enhanced resistance to P. infestans similarly to CuSO4, supporting a defense-promoting role for ethylene in this study."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "ET was measured from potato plants/leaves treated with CuSO4, and Figure 5 concerns leaves sprayed with CuSO4."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "ACS denotes ACC synthase genes; the paper discusses ACS genes in the ethylene synthesis pathway."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Section 2.5 states several ACS genes were up-regulated by Cu2+ and Figure 5b–i shows minute-scale induction after treatment."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA/qPCR and ET assays used 10 μM CuSO4 treatment."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper used RT-qPCR for ACS transcripts, gas chromatography for ET, and ACC treatment/disease assays; all are explicitly described."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports rapid ACS induction, transient ET production, and enhanced resistance, but it does not directly test that ACS gene induction itself causes the resistance because no ACS silencing/overexpression was done."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summarized points are reflected in Section 2.5, with the caveat that the implication is indirect rather than gene-by-gene functional proof."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is an extrapolative application claim not directly tested in the Results, though it is a reasonable inference from the data."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "General ethylene tradeoff language is not directly examined for ACS genes in this paper."
+        },
+        "Omics_Data": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper includes RNA-seq and gives SRA accession SRR8791013, but ACS induction itself was not identified by the RNA-seq DEGs and was instead assessed by RT-qPCR due to rapid timing."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed did not functionally validate individual ACS genes by silencing or overexpression."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 16,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "StABA1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "StABA1 is a potato gene studied in potato."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Potato is explicitly Solanum tuberosum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Cultivar Desirée is specified."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in potato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Solanum tuberosum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The cultivar used was Desirée."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "StABA1 is explicitly described as an ABA biosynthetic gene affecting ABA content."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "ABA is a phytohormone."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links reduced ABA with stomatal opening, water loss, drought sensitivity, and altered defense responses."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "ABA levels were measured in potato leaves sprayed with CuSO4."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "StABA1 is explicitly placed in the ABA biosynthetic pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says StABA1 plays an important role in the entry point of ABA synthesis, consistent with an early step from carotenoid precursors."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper calls StABA1 an ABA biosynthetic gene but does not explicitly name the encoded enzyme as zeaxanthin epoxidase in the provided text."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The specific family/domain 'zeaxanthin epoxidase family' is not stated in the paper text."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Zeaxanthin is not mentioned in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Violaxanthin is not mentioned in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This reaction description is not provided in the paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes StABA1 as important in the entry point of ABA synthesis, i.e. an upstream entry step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "As an entry-point ABA biosynthetic gene, it supports the precursor pool for ABA; this is directly inferable from the Results."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state StABA1 and StNCED1 play important roles in the entry point and limiting step of ABA synthesis; for StABA1 this supports 'important entry-point enzyme' rather than limiting step."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figures 2 and 6 show StABA1 transcript decreased after CuSO4 and increased in StEIN2- and StEIN3-silenced leaves."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states StABA1 coding sequence was inserted into pCXSN for transient expression; the native promoter was analyzed for binding; CaMV35S was used for FLAG-StEIN3, not StABA1."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These treatments and infection context are all part of experiments involving StABA1."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq, RT-qPCR, HPLC-MS/MS ABA assay, VIGS, transient overexpression, disease index assays, ChIP-qPCR and EMSA are all reported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "StEIN3 is shown to bind the StABA1 promoter directly."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "staba1-VIGS plants were more resistant to EC1, consistent with reduced ABA biosynthesis enhancing resistance."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by Results sections 2.2, 2.4, 2.6, and 2.7."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible translational inference but not directly tested as a breeding application in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Reduced ABA is associated with stomatal opening, water loss, and drought sensitivity after Cu2+ treatment, but these tradeoffs were not directly tested specifically in StABA1-silenced plants."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq was performed and SRA accession SRR8791013 is given."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly identify StABA1 as a core ABA biosynthetic gene repressed by Cu2+ and directly targeted by StEIN3 via ChIP and EMSA."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.15.21",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper text."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "Zeaxanthin",
+          "new_value": "NA",
+          "reason": "Zeaxanthin is not mentioned in the paper."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "Violaxanthin",
+          "new_value": "NA",
+          "reason": "Violaxanthin is not mentioned in the paper."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Epoxidizes zeaxanthin to violaxanthin in the ABA precursor pathway",
+          "new_value": "NA",
+          "reason": "This reaction description is not provided in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 4,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "StNCED1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "StNCED1 is a potato gene examined in potato."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Potato is explicitly Solanum tuberosum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Cultivar Desirée is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were conducted in potato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Solanum tuberosum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The variety was Desirée."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "StNCED1 is explicitly linked to ABA biosynthesis and ABA content."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "ABA is a phytohormone."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper associates ABA with stomatal closure, drought tolerance-related responses, and defense modulation."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "ABA was measured in leaves."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "StNCED1 is explicitly an ABA biosynthetic gene."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper places StNCED1 in ABA biosynthesis and as the limiting step, but does not explicitly say 'oxidative cleavage step' in the provided text."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly spell out the enzyme name '9-cis-epoxycarotenoid dioxygenase' in the provided text, though NCED convention suggests it."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number appears in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The specific family 'carotenoid cleavage dioxygenase family' is not explicitly stated."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "9-cis-epoxycarotenoids are not mentioned in the text."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Xanthoxin is not mentioned in the text."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This biochemical reaction description is not explicitly provided in the paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results describe StNCED1 as playing an important role in the limiting step of ABA synthesis, supporting a committed/rate-limiting position."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is inferable that StNCED1 forms a direct ABA precursor, but the paper does not explicitly describe direct precursor formation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states StNCED1 plays an important role in the limiting step of ABA synthesis."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figures 2 and 6 show StNCED1 decreases after CuSO4 and increases in StEIN2/StEIN3-silenced leaves."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These treatments/infection contexts are all used in StNCED1-related experiments."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq, RT-qPCR, HPLC-MS/MS ABA assay, VIGS, transient overexpression, disease assays, ChIP-qPCR and EMSA are all reported for StNCED1-related conclusions."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "StEIN3 is shown to bind the StNCED1 promoter directly."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "stnced1-VIGS plants were more resistant to EC1, and overexpression attenuated Cu2+-mediated resistance."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summarized points are directly supported by the Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable application inference but not experimentally tested as breeding/engineering in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "ABA reduction is associated with water loss/drought sensitivity under Cu2+, but not directly shown specifically for StNCED1 perturbation."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq and accession SRR8791013 are explicitly provided."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports multiple predicted EIN3-binding sites in the StNCED1 promoter and validates direct binding by ChIP and EMSA."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.13.11.51",
+          "new_value": "NA",
+          "reason": "No EC number appears in the paper."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "9-cis-epoxycarotenoids",
+          "new_value": "NA",
+          "reason": "9-cis-epoxycarotenoids are not mentioned in the text."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "Xanthoxin",
+          "new_value": "NA",
+          "reason": "Xanthoxin is not mentioned in the text."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Cleaves 9-cis-epoxycarotenoids to produce xanthoxin, a direct ABA precursor",
+          "new_value": "NA",
+          "reason": "This biochemical reaction description is not explicitly provided in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 4,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "StEIN2",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "StEIN2 is studied in potato."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Potato is identified as Solanum tuberosum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Cultivar Desirée is given."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in potato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Solanum tuberosum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The variety was Desirée."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "StEIN2 is linked to repression of ABA biosynthesis and altered ABA accumulation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "ABA is a phytohormone."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links ABA to stomatal movement, drought sensitivity/tolerance context, and defense outcomes."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "ABA measurements/immunofluorescence were performed in leaves of potato VIGS plants."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "EIN2 is an ethylene signaling regulator, as used in the paper's ET signaling framework."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper treats StEIN2 as an ethylene signaling component, but does not explicitly describe an EIN2 family/domain in the provided text."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Section 2.6 shows ET signaling via StEIN2 suppresses ABA biosynthesis."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Silencing StEIN2 increased StABA1/StNCED1 expression and ABA levels, supporting negative regulation of ABA biosynthetic gene expression through ET signaling."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 6a shows higher StABA1 and StNCED1 expression in EIN2-VIGS plants."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The main targets tested were StABA1 and StNCED1."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper's model is Cu2+-induced ethylene production feeding into EIN2-dependent signaling."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "CuSO4 treatment and P. infestans infection are central contexts for the StEIN2 experiments."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 5 includes StEIN2 transcript measurements after 10 μM CuSO4 and shows induction."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper used VIGS, RT-qPCR, ABA immunofluorescence, ET measurement in VIGS plants, disease assays, and epistasis with StABA1/StNCED1 silencing."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper places StEIN2 upstream of StEIN3 in ET signaling conceptually, but does not present a direct physical interaction assay between StEIN2 and StEIN3."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "stein2-VIGS increased StABA1/StNCED1, elevated ABA, and increased susceptibility to EC1."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support StEIN2 as required for ET-mediated suppression of ABA biosynthesis and for Cu2+-mediated resistance."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by Figure 6 and related text."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a forward-looking application inference not directly tested in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "General ET–ABA antagonism affecting drought/stomata is discussed, but specific StEIN2 engineering tradeoffs were not directly tested."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states Cu2+-mediated resistance failed in stein2-VIGS plants and Figure S4 shows reduced ET level relative to control."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "StEIN3",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "StEIN3 is a potato gene studied in potato."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Potato is explicitly Solanum tuberosum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Cultivar Desirée is specified."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in potato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Solanum tuberosum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The variety was Desirée."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "StEIN3 is linked to suppression of ABA biosynthesis and ABA accumulation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "ABA is a phytohormone."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links ABA to stomatal movement, drought response context, and defense tradeoffs."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "ABA was measured in potato leaves/VIGS leaves."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes EIN3 as a transcription factor in ET signal transduction."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Section 2.7 states EIN3 is a transcription factor and gives the EIN3-binding site consensus AYGWAYCT."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization of StEIN3 is explicitly stated in the paper text."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show StEIN3 suppresses ABA biosynthesis downstream of ET signaling."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "ChIP and EMSA show direct promoter binding and VIGS increases target-gene expression, supporting direct transcriptional repression."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "StEIN3 binds promoters of StABA1 and StNCED1, and silencing StEIN3 increases their transcript levels."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "StABA1 and StNCED1 are the direct targets tested."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places StEIN3 in Cu2+-induced ethylene signaling."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "CuSO4 treatment and P. infestans infection are key contexts for StEIN3 experiments."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 5 includes StEIN3 transcript measurements after CuSO4 and indicates induction."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed methods—VIGS, RT-qPCR, ABA immunofluorescence, disease assays, ChIP-qPCR with FLAG-StEIN3, and EMSA with MBP-StEIN3—are all explicitly described."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports StEIN3 binding the StABA1 and StNCED1 promoters (DNA targets), but promoter DNA is not a protein; direct interaction with StEIN2 is not assayed."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Silencing StEIN3 increased ABA biosynthetic gene expression and ABA accumulation and was associated with greater susceptibility; direct promoter binding supports its regulatory role."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "StEIN3 is the direct mechanistic link from ET signaling to suppressed ABA biosynthesis in the Results."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by Figures 6 and 7 and corresponding text."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible engineering implication but not directly tested in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Water loss/drought sensitivity are linked to reduced ABA in Cu2+-treated plants, but not directly tested for StEIN3 manipulation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly reports promoter-fragment-specific ChIP enrichment and EMSA binding, supporting StEIN3 as a direct regulator rather than merely a signaling component."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No subcellular localization of StEIN3 is explicitly stated in the paper text."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 138,
+    "supported": 108,
+    "unsupported": 9,
+    "uncertain": 21,
+    "total_corrections": 9
+  }
+}

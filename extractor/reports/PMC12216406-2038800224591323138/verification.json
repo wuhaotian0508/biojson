@@ -1,0 +1,535 @@
+{
+  "file": "MinerU_markdown_PMC12216406_2038800224591323138",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12216406_2038800224591323138.md",
+  "timestamp": "2026-03-31T21:49:13.946797",
+  "genes": [
+    {
+      "gene_name": "FgEC10",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly name FgEC10 as FGRAMPH1_01T21317."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "FgEC10 is described as an effector candidate of Fusarium graminearum."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper consistently identifies the source organism as Fusarium graminearum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods and Results use the F. graminearum PH-1 wild-type strain for FgEC10 experiments."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "FgEC10 virulence and target studies are performed in wheat."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper refers to bread wheat/wheat but does not explicitly state the Latin name Triticum aestivum in the provided text."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Virulence assays were done on JiMai22, and some host/transgenic assays used Fielder."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state FgEC10 is a small protein predicted to contain an N-terminal signal peptide and no other reported domains."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "FgEC10-GFP was detected in culture filtrate and in wheat cells after infection; BiFC showed interaction with TaFAH in the cytoplasm, supporting secretion and translocation into host cytoplasm."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RT-qPCR showed negligible transcript at 0 hpi and ~60-fold induction at 24 and 48 hpi during cushion-mediated penetration."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "FgEC10 affects TaFAH stability, and the Discussion/model links this to reduced amino acid contents, but amino acids were directly measured in TaFAH transgenics, not in FgEC10 mutants."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Same issue as terminal metabolite: amino acid changes are not directly shown for FgEC10 perturbation in Results."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Amino acid metabolomics were performed in wheat heads of TaFAH lines; no direct FgEC10 metabolite measurements in heads/spikelets are reported."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports that some amino acids increase resistance and that Lys inhibits fungal growth, but the claim that higher amino acid levels also reduce DON accumulation is not directly demonstrated for amino acid treatments."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion reduced virulence, fungal biomass, and DON in wheat; FgEC10 binds TaFAH and promotes its degradation, and TaFAH positively regulates FHB resistance."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods appear in Results/Methods: knockout/complementation, infection assays, fungal biomass/DON, secretion/translocation, ROS/callose, Y2H, IP-MS, pulldown, LCI, Co-IP, BiFC, and degradation assay."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct interaction is shown with TaFAH, and Supplementary data indicate interaction with TaFAH-B and TaFAH-D; FgEC10 also enhances TaFAH-TaPSMD12 interaction and NtPSMD12 appeared in IP-MS, but direct binding to TaPSMD12 is not explicitly demonstrated. Because the field lists proteins associated with FgEC10 in the paper, this is broadly supported."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These conditions are explicitly used: wheat infection, flg22/chitin elicitation in N. benthamiana, and MG132 in proteasome-related assays."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each numbered statement is supported by Results, with reduced disease index/fungal biomass/DON in mutants, immune suppression assays, TaFAH binding and degradation via TaPSMD12/26S proteasome, and secretion/translocation evidence."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state no effect on colony morphology, growth, infection cushion formation, or DON biosynthesis in liquid medium; reduced spike DON is attributed to less infection spread."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper presents FgEC10 as a useful effector probe conceptually, but specific engineering strategies targeting FgEC10-TaFAH interaction are not directly tested."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Transcriptomics guided candidate selection; host RNA-seq accession PRJNA1070554 is given; IP-MS identified candidate interactors; metabolomics accessions MSV000097681 and MSV000097684 are provided study-wide."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 16,
+        "unsupported": 0,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "TaFAH",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The submitted accession does not exactly match the Results text, which gives TraesC-S6A03G0386400.1."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "TaFAH is explicitly identified as fumarylacetoacetate hydrolase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper text."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TaFAH is from wheat."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper text provided does not explicitly state Triticum aestivum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "JiMai22 and Fielder are both associated with TaFAH experiments."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TaFAH function is tested in wheat."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Latin name is not explicitly shown in the provided text."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "JiMai22 and Fielder are used."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by the stated identity as fumarylacetoacetate hydrolase."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC/co-localization data support cytoplasmic localization."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states FAH catalyzes a step in tyrosine degradation and that products enter the TCA cycle, affecting amino acid metabolism."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Discussion describe FAH as catalyzing the final step in tyrosine degradation feeding into the TCA cycle."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls FAH the final step in tyrosine degradation."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "FAA/fumarylacetoacetate is explicitly named as the substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Fumarate and acetoacetate are explicitly named as products."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states cleavage of fumarylacetoacetate into fumarate and acetoacetate."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links FAH products entering the TCA cycle and metabolomics showing increased amino acids in TaFAH-overexpressing plants."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The field value is 'Not established in the paper,' which accurately reflects the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Amino acids are directly reported as increased in TaFAH-overexpressing plants."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Amino acids are explicitly identified as a major upregulated metabolite class."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Metabolomics was performed on wheat head samples."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show His, Lys, and Ser enhance resistance and Lys inhibits fungal growth."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "TaFAH overexpression promotes amino acid accumulation, enhances FHB resistance, and advances heading."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are used and reported for TaFAH."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct interactions with FgEC10 and TaPSMD12 are experimentally supported."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Rapid induction after infection followed by decline is explicitly stated."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Induction in infected heads and high expression in OE lines are reported."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed conditions are described in TaFAH experiments."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These four conclusions are directly supported by the Results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Supplementary data support no effect of FgEC10 on catalytic activity, only on stability."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Earlier heading and lack of major negative agronomic penalties are reported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The authors explicitly propose TaFAH as a candidate for resistance breeding and promoter editing."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The cited study-wide RNA-seq and metabolomics accessions are provided."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state overexpression was driven by the Ubi promoter."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Gene_Accession_Number",
+          "old_value": "TraesCS6A03G0386400.1",
+          "new_value": "NA",
+          "reason": "The submitted accession does not exactly match the Results text, which gives TraesC-S6A03G0386400.1."
+        },
+        {
+          "field": "EC_Number",
+          "old_value": null,
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper text."
+        }
+      ],
+      "stats": {
+        "supported": 31,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "TaPSMD12",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TaPSMD12 is a wheat proteasome subunit homolog investigated in the study."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The provided text does not explicitly state Triticum aestivum."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TaPSMD12 is studied in the context of wheat proteins and wheat extract assays."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Latin binomial is not explicitly given in the paper text provided."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "TaPSMD12 experiments use wheat head extracts and heterologous N. benthamiana expression; specific wheat varieties JiMai22 and Fielder are not clearly assigned to all TaPSMD12 assays."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies TaPSMD12 as proteasome 26S subunit, non-ATPase 12, i.e., PSMD12/RPN5 homolog."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Co-localization with TaFAH in plant cells and functional interaction in degradation assays support cytoplasmic localization."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "TaPSMD12 affects TaFAH degradation, but amino acid changes were not directly measured for TaPSMD12 manipulation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Same as above; indirect inference only."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "No direct metabolite assay linked specifically to TaPSMD12 is reported."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "Any effect on amino-acid-associated resistance is indirect and not directly tested through TaPSMD12 perturbation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "IP-MS implication, pulldown, LCI, Co-IP, co-localization, in vitro degradation assay, and yeast tri-hybrid are all described."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "TaPSMD12 directly interacts with TaFAH, and FgEC10 is implicated with TaPSMD12 in the tri-hybrid/enhancement context and IP-MS implication."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "MG132-sensitive proteasome-dependent degradation in wheat infection/protein degradation context is described."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support direct interaction with TaFAH, acceleration of TaFAH degradation, and enhancement of TaFAH-TaPSMD12 interaction by FgEC10."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Supplementary ubiquitination assay showed FgEC10 and TaPSMD12 did not promote TaFAH ubiquitination."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not establish direct breeding value for TaPSMD12; this statement is speculative."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "IP-MS implicates TaPSMD12; the study-level RNA-seq and metabolomics accessions are provided, though not TaPSMD12-specific."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Possible target for protecting TaFAH stability, though direct breeding value not established",
+          "new_value": "NA",
+          "reason": "The paper does not establish direct breeding value for TaPSMD12; this statement is speculative."
+        }
+      ],
+      "stats": {
+        "supported": 10,
+        "unsupported": 1,
+        "uncertain": 7
+      }
+    },
+    {
+      "gene_name": "TaFAH",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The submitted accession does not exactly match the Results text, which gives TraesC-S6A03G0386400.1."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "TaFAH is explicitly identified as fumarylacetoacetate hydrolase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper text."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TaFAH is from wheat."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper text provided does not explicitly state Triticum aestivum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "JiMai22 and Fielder are both associated with TaFAH experiments."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TaFAH function is tested in wheat."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Latin name is not explicitly shown in the provided text."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "JiMai22 and Fielder are used."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by the stated identity as fumarylacetoacetate hydrolase."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC/co-localization data support cytoplasmic localization."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states FAH catalyzes a step in tyrosine degradation and that products enter the TCA cycle, affecting amino acid metabolism."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Discussion describe FAH as catalyzing the final step in tyrosine degradation feeding into the TCA cycle."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls FAH the final step in tyrosine degradation."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "FAA/fumarylacetoacetate is explicitly named as the substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Fumarate and acetoacetate are explicitly named as products."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states cleavage of fumarylacetoacetate into fumarate and acetoacetate."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links FAH products entering the TCA cycle and metabolomics showing increased amino acids in TaFAH-overexpressing plants."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The field value is 'Not established in the paper,' which accurately reflects the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Amino acids are directly reported as increased in TaFAH-overexpressing plants."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Amino acids are explicitly identified as a major upregulated metabolite class."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Metabolomics was performed on wheat head samples."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show His, Lys, and Ser enhance resistance and Lys inhibits fungal growth."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "TaFAH overexpression promotes amino acid accumulation, enhances FHB resistance, and advances heading."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are used and reported for TaFAH."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct interactions with FgEC10 and TaPSMD12 are experimentally supported."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Rapid induction after infection followed by decline is explicitly stated."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Induction in infected heads and high expression in OE lines are reported."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed conditions are described in TaFAH experiments."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These four conclusions are directly supported by the Results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Supplementary data support no effect of FgEC10 on catalytic activity, only on stability."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Earlier heading and lack of major negative agronomic penalties are reported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The authors explicitly propose TaFAH as a candidate for resistance breeding and promoter editing."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The cited study-wide RNA-seq and metabolomics accessions are provided."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state overexpression was driven by the Ubi promoter."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Gene_Accession_Number",
+          "old_value": "TraesCS6A03G0386400.1",
+          "new_value": "NA",
+          "reason": "The submitted accession does not exactly match the Results text, which gives TraesC-S6A03G0386400.1."
+        },
+        {
+          "field": "EC_Number",
+          "old_value": "3.7.1.2",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper text."
+        }
+      ],
+      "stats": {
+        "supported": 31,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 110,
+    "supported": 88,
+    "unsupported": 5,
+    "uncertain": 17,
+    "total_corrections": 5
+  }
+}

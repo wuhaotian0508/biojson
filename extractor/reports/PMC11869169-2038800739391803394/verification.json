@@ -1,0 +1,253 @@
+{
+  "file": "MinerU_markdown_PMC11869169_2038800739391803394",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC11869169_2038800739391803394.md",
+  "timestamp": "2026-03-31T21:41:04.821449",
+  "genes": [
+    {
+      "gene_name": "SlChlH",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The mapping section explicitly identifies SlChlH as Solyc04g015750."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states SlChlH encodes the H subunit of magnesium chelatase and refers to it as GUN5."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Data availability lists BSA resequencing under BioProject PRJNA1108922 and RNA-seq under GEO GSE267238."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are described in Results/Methods: EMS mutant mapping, CAPS co-segregation, CRISPR/Cas9 frameshift mutants, genomic complementation, RT-qPCR, immunoblotting, tetrapyrrole/metabolite profiling, TEM, ethylene measurement, and carotenoid measurement."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "mut26 was generated in tomato cultivar Ailsa Craig (AC)."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies tomato as Solanum lycopersicum."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Carotenoids were measured in fruits/pericarp, and the study examines plastid conversion to chromoplasts in fruit pericarp during ripening."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 4a/b and text state SlChlH transcript rises from 35 dpa, peaks at 41 dpa, then declines; it is also assayed in leaves/seedlings."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly links ethylene to climacteric ripening and carotenoids to ripening-associated pigmentation; nutritional quality is stated in the Summary for fruit quality context."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion/working model explicitly describe GUN5 as plastid-localized, and chloroplast/plastid context is central throughout."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show reduced chlorophyll, stronger albino/cold-sensitive phenotypes, seedling lethality of frameshift mutants, reduced fruit weight and soluble solids, and delayed ripening."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support promotion of ripening, ethylene emission, carotenoid accumulation, plastid conversion, and retrograde signaling by SlChlH; mut26 delays these processes."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Ethylene emission and fruit lycopene and β-carotene were directly measured and reduced in mut26."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each statement is supported: causal identification by BSA/CAPS/complementation, P398S weak gun phenotype with reduced tetrapyrrole synthesis, and positive regulation of ripening/ethylene/carotenoids/plastid transition."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Source species is the same tomato system used for applied species, so this matches the reported SlChlH expression pattern."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is in tomato."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "ChlI, ChlD, and GUN4 are discussed as Mg chelatase-related proteins and their levels were examined, but direct physical interaction with SlChlH was not tested in this paper."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is tomato, Solanum lycopersicum."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is tomato throughout the study."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant and complementation analyses were performed in Ailsa Craig background."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper emphasizes a new role of ChlH/GUN5 in ripening via plastid retrograde signaling; the causal lesion is Pro398Ser, and frameshift alleles are albino lethal."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These conditions are explicitly described: natural greenhouse ripening, norflurazon treatment for gun assays, and low temperature enhancement of chlorophyll-deficient phenotype."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Ethylene is a hormone and lycopene/β-carotene are carotenoids."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper reports phenotypes relevant to ripening timing/firmness/carotenoids and notes strong loss-of-function lethality, but it does not explicitly propose breeding or shelf-life manipulation applications."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 22,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "SlHY5",
+      "category": "Regulation",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper refers to HY5 and explicitly calls NOR a NAC factor, while HY5 is discussed as the known HY5 regulator; however 'bZIP' is not explicitly stated in the provided text. Because HY5 is a standard HY5 identity, this is reasonably inferable but not directly written."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "HY5 is treated as a nuclear gene-expression regulator acting downstream of GUN5 to regulate SlPhANG transcription; this supports transcription factor role."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "SlHY5 induction in RNA-seq is mentioned, and RNA-seq dataset GSE267238 is provided in Data availability."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods appear in Results: double mutant generation by crossing, RT-qPCR of SlPhANGs under Nf, carotenoid profiling, ethylene measurement, and ripening-stage phenotyping."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "The study uses AC for mut26, but Slhy5 is said to be from an earlier study; 'Ailsa Craig background' is not explicitly stated for Slhy5 in the provided text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments are in tomato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper is on tomato, Solanum lycopersicum."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SlHY5 is a tomato gene in this study."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Source species is tomato, Solanum lycopersicum."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states SlHY5 was transiently and partially induced in a GUN5-dependent manner during ripening."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support transient induction during fruit ripening and functional activity in seedlings for SlPhANG regulation assays."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The provided paper text does not explicitly state that SlHY5 is localized to the nucleus."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Unknown cofactor Y and HSP90 are proposed only in the Discussion model; no direct interaction with SlHY5 is demonstrated in Results."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports control of plastid retrograde signaling-linked SlPhANG expression and shows reduced carotenoids/slower coloration in Slhy5."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show delayed fruit coloration, reduced β-carotene and lycopene, long hypocotyl, and severe albino/poor fruit set in mut26 Slhy5 double mutant."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows SlHY5 promotes SlPhANG expression downstream of GUN5 in seedlings, and Slhy5 single mutant shows WT-like ACS2, ACO1, PSY1, RIN, TAGL1, and FUL1 expression at matched MG/BR stages."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the Results: SlHY5 acts downstream of GUN5 for SlPhANG regulation, but Slhy5 single mutant has WT-like ethylene and overall ripening progression aside from coloration."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "β-carotene and lycopene were measured and reduced in Slhy5 fruits."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "β-carotene and lycopene are carotenoids."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by the Results and Discussion framing."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Carotenoids are directly linked to fruit pigmentation, and the paper frames ripening as relevant to fruit quality."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support GUN5-dependent induction of SlHY5 during ripening and use norflurazon-sensitive plastid perturbation in seedlings."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "SlCAB1B, SlCAB1C, and SlRBCS1 were directly assayed as SlHY5-related outputs in the Nf experiments."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly concludes SlHY5 is not a master determinant of ripening progression, despite acting downstream of GUN5 in retrograde signaling and affecting coloration/carotenoids."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes the paper's interpretation that prior stronger ripening effects may result from sampling by age rather than developmental stage."
+        },
+        "Regulation_Mode": {
+          "verdict": "UNCERTAIN",
+          "reason": "Promotion of target gene expression is supported, but the exact phrasing 'transcriptional activation' is not directly demonstrated mechanistically in this paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Norflurazon treatment and natural ripening stages MG/BR/BR+3/BR+6 are explicitly used."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "UNCERTAIN",
+          "reason": "Association with unknown cofactor Y and HSP90 is only proposed in the Discussion model and not experimentally validated here."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "The provided paper text does not explicitly state that SlHY5 is localized to the nucleus."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 52,
+    "supported": 45,
+    "unsupported": 1,
+    "uncertain": 6,
+    "total_corrections": 1
+  }
+}

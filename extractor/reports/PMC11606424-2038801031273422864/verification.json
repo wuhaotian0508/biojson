@@ -1,0 +1,1781 @@
+{
+  "file": "MinerU_markdown_PMC11606424_2038801031273422864",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC11606424_2038801031273422864.md",
+  "timestamp": "2026-03-31T21:42:22.240407",
+  "genes": [
+    {
+      "gene_name": "NDPS1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state tomato (Solanum lycopersicum) monoterpene metabolism was manipulated and NDPS1 is the tomato gene targeted."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names tomato as Solanum lycopersicum in Case 2."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Ailsa Craig is given in Materials for tomato transformation, but not explicitly as the source variety of NDPS1 itself."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NDPS1 was edited in tomato plants."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Case 2 explicitly concerns tomato (Solanum lycopersicum)."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and methods specify tomato cultivar 'Ailsa Craig' for transformation and growth."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state ndps1 mutants were deficient in monoterpenes, specifically β-phellandrene and 2-carene."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "β-phellandrene and 2-carene are referred to as monoterpenes; terpenoid is a valid class inference from the stated metabolites."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states tomato synthesizes and accumulates a blend of monoterpenes in type VI glandular trichomes distributed on the leaf and stem surface."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly give NDPS1 as Solyc08g005680.2.1."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "NDPS1 is explicitly called neryl diphosphate synthase 1; classifying this as a prenyltransferase/neryl diphosphate synthase is consistent with the paper."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses monoterpene accumulation in glandular trichomes and cites prior work, but does not directly measure or state NDPS1 expression pattern in this study."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The study did not report NDPS1 expression analysis in the edited tomato plants; only mutagenesis and metabolite changes were shown."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states IPP and DMAPP are derived from the plastidial MEP pathway and Figure 4 caption says NDPS1 condenses plastid-synthesized IPP and DMAPP to NPP, supporting plastid localization/involvement."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show CRISPR/Cas9 targeting of NDPS1, sequencing of mutants, and GC-MS analysis of leaf surface extracts."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states ndps1-1 and ndps1-2 were deficient in monoterpenes, while sesquiterpenes such as (E)-β-caryophyllene and α-humulene were not affected."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed finding matches the Results: CRISPR-generated 4-bp and 1-bp deletions, monoterpene deficiency, and unaffected sesquiterpenes."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of monoterpenes with no reported effect on sesquiterpenes is directly described in the Results."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials specify greenhouse growth under 16 h light/8 h dark at 25°C for tomato."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly state these mutants could be used as a new chassis for heterologous production of high-value terpenoids."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is interpretive commentary about classification as a 'Common Gene' and study intent; not a statement from the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Expression_Pattern_of_Applied_Species",
+          "old_value": "glandular trichomes",
+          "new_value": "NA",
+          "reason": "The study did not report NDPS1 expression analysis in the edited tomato plants; only mutagenesis and metabolite changes were shown."
+        }
+      ],
+      "stats": {
+        "supported": 17,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "CYP76AD1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states 'e.g. CYP76AD1 from red beet' in the betanin pathway description."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Red beet is explicitly given as Beta vulgaris."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP76AD1 was expressed in tobacco."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The case is heterologous production of betanin in tobacco (Nicotiana tabacum)."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials specify tobacco cultivar 'K326'."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The pBeta construct used a 35S::CYP76AD1::OCS cassette, i.e. CaMV 35S constitutive promoter."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Case 3 explicitly concerns betanin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP76AD1 is described as part of the core betanin pathway converting tyrosine/L-DOPA toward betanidin/betanin."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper refers to CYP76AD1 as a cytochrome P450 monooxygenase of the CYP76ADα family."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Cytochrome P450, CYP76AD family is explicitly stated."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states CYP76AD1 hydroxylates tyrosine to L-DOPA and oxidizes L-DOPA to cyclo-DOPA."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The same pathway description explicitly gives L-DOPA and cyclo-DOPA as products of CYP76AD1-catalyzed reactions."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This reaction description matches the explicit pathway text."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "From the pathway description, CYP76AD1 acts at the beginning and middle of the route to betanin; 'upstream to midstream' is a reasonable direct inference."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly places CYP76AD1 products as required intermediates for betanin synthesis."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The JSON says 'Not established,' and the paper does not claim CYP76AD1 is rate-limiting."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states qRT-PCR revealed that all genes were transcribed in transgenic tobacco plants."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The engineered pathway target is betanin."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Betanin is explicitly called an alkaloid pigment."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The Summary and Case 3 describe betanin as a food colorant and beneficial for health due to antioxidant, anti-inflammatory, and ROS scavenging bioactivities."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Figures/text report betanin content in leaves and describe purple-red colour of transgenic plants, supporting accumulation in leaves/whole plant tissues."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The construct was stably transformed; qRT-PCR, visible red phenotype, and betanin quantification were reported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Although not isolated singly, CYP76AD1 was part of the tested pBeta cassette set that enabled de novo betanin production in tobacco."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are consistent with Results: independent cassette in pBeta, transcription in transgenic plants, and contribution within the multigene system to betanin accumulation."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Stable transformation in greenhouse-grown tobacco is described in Methods."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The study demonstrates reconstructing the betanin pathway in a heterologous crop species, supporting this application value."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly contrasts their independent multi-cassette strategy with the RUBY single-ORF/2A design."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 27,
+        "unsupported": 0,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "DODA",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "DODA is discussed in the context of red beet betanin biosynthesis and likely sourced from that pathway, but the paper does not explicitly state 'DODA from red beet' for the construct."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Beta vulgaris is named for the pathway example, but the source species of the actual DODA transgene is not explicitly assigned in the Results."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "DODA was expressed in tobacco in the pBeta construct."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Case 3 is in Nicotiana tabacum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials specify cultivar K326."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The DODA cassette is described as 35S::DODA::OCS."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "DODA is part of the betanin biosynthetic pathway shown in Figure 5a."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "DODA is part of the betalain/betanin core pathway converting L-DOPA toward betalamic acid."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names DODA as DOPA 4,5-dioxygenase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Describing it as a DOPA dioxygenase is directly supported by the enzyme name."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway text states L-DOPA is oxidized by DODA to betalamic acid."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Betalamic acid is explicitly named as the DODA product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the explicit pathway description."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "DODA acts after L-DOPA formation and before betanidin/betanin; 'midstream' is directly inferable."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Betalamic acid is a direct precursor needed for betanin formation per Figure 5a/text."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish DODA as rate-limiting; 'Not established' is consistent."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR showed all genes were transcribed in transgenic tobacco plants."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The engineered end product is betanin."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Betanin is explicitly an alkaloid pigment."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states betanin is a food colorant and has antioxidant, anti-inflammatory, and ROS scavenging activities."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper quantifies betanin in leaves and shows whole-plant red coloration."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "DODA was tested as part of the stable multigene pBeta construct with qRT-PCR, phenotype, and betanin quantification."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "As part of the tested pBeta gene set, DODA contributed to de novo betanin production in tobacco."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements match the Results at the multigene construct level."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Stable transformation and greenhouse growth are described."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The work supports introducing betalain/betanin production into heterologous plants."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states betalamic acid condenses with cyclo-DOPA-derived partner to form betanidin."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 25,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "5GT",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "5GT is part of the red beet betanin pathway context, but the paper does not explicitly say the cloned 5GT gene is from red beet."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Beta vulgaris is discussed for betanin, but source assignment of the specific 5GT transgene is not explicit."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "5GT was expressed in tobacco in the pBeta construct."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Case 3 is in Nicotiana tabacum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials specify cultivar K326."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The construct included 35S::5GT::OCS."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "5GT is part of betanin biosynthesis in Figure 5a."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "5GT catalyzes the terminal glycosylation step to betanin, matching the named subpathway."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names it betanidin 5-O-glucosyltransferase (5GT)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "UDP-glycosyltransferase is plausible, but this family label is not explicitly stated in the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 5a/text state betanidin is glycosylated by 5GT."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The product betanin is explicitly stated."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says glycosylated at the 5-hydroxyl position by 5GT, producing betanin."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is directly the terminal step in the pathway as described."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "5GT directly forms the target product betanin."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not state 5GT is rate-limiting; the cautious phrasing is consistent."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All genes in transgenic tobacco were reported as transcribed by qRT-PCR."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Betanin is the final metabolite produced."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Betanin is explicitly called an alkaloid pigment."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Food colorant and health-related bioactivities are explicitly described."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Betanin was measured in leaves and visible in transgenic plants."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The pBeta transgenics were analyzed by qRT-PCR, phenotype, and betanin quantification."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "As the terminal enzyme in the tested gene stack, 5GT is linked to successful betanin production."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points match the Results at the construct level."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Stable transformation in greenhouse-grown tobacco is described."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The study supports use of 5GT for betanin engineering in crops."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies 5GT as catalyzing the final glycosylation step to betanin."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 24,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "ADH (ADHα)",
+      "category": "Pathway",
+      "verification": {
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ADH was expressed in tobacco as part of pBeta."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Case 3 uses Nicotiana tabacum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials specify tobacco cultivar K326."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes the cassette as 35S::ADH::OCS."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ADH was introduced to enhance tyrosine precursor supply for betanin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It was placed in the upstream shikimate-derived tyrosine supply branch in Figure 5a."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes a feedback-insensitive arogenate dehydrogenase (ADHα)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Arogenate dehydrogenase is explicitly stated."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 5a/text state ADH converts L-arogenate to tyrosine."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "L-tyrosine is explicitly stated as the product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The reaction description matches the pathway text."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "ADH functions upstream as precursor supply, directly inferable from Figure 5a and text."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says ADH was added to enhance metabolic flux toward the precursor tyrosine."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish ADH as rate-limiting; 'Not established' is consistent."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR revealed all genes were transcribed in transgenic tobacco plants."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Betanin is the target final product."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Betanin is explicitly called an alkaloid pigment."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states betanin is a food colorant with antioxidant, anti-inflammatory and ROS-scavenging activities."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Betanin was quantified in leaves and visible in transgenic plants."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "ADH was tested in the stable multigene pBeta construct, analyzed by qRT-PCR, phenotype, and betanin quantification."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states ADH was added to enhance tyrosine flux, but does not directly compare pBeta with and without ADH to show enhancement."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "Inclusion in pBeta and transcript detection are supported, but the claim that ADH enhanced flux is proposed rationale rather than directly demonstrated in comparative Results."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Stable transformation in greenhouse-grown tobacco is described."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The study supports precursor-boosting gene stacking for betanin engineering, though enhancement magnitude was not isolated."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper cites Timoneda et al. 2018 for the feedback-insensitive ADHα concept and does not explicitly state a source species, matching this note."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "TvTPS2",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TvTPS2 nomenclature and pathway context refer to thyme; the paper names thyme (Thymus vulgaris) as a source plant containing thymol/carvacrol."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names thyme as Thymus vulgaris."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TvTPS2 was expressed in tobacco."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Case 4 uses Nicotiana tabacum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials specify tobacco cultivar K326."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Both 35S and CBTS promoters were used in pThymol/pCarva constructs."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Case 4 explicitly concerns thymol and carvacrol biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "TvTPS2 is described as converting GPP to γ-terpinene, the monoterpenoid branch precursor."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls it the monoterpene synthase TvTPS2."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Terpene synthase is directly supported by the description of TvTPS2 as a monoterpene synthase."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 6a/text state TvTPS2 cyclizes geranyl diphosphate (GPP)."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "γ-terpinene is explicitly named as the TvTPS2 product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says TvTPS2 catalyses cyclization of GPP to γ-terpinene."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is the upstream committed step in the pathway shown in Figure 6a."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "γ-terpinene is the immediate precursor for downstream oxidation toward thymol/carvacrol."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish TvTPS2 as rate-limiting; 'Not established' is consistent."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says thymol/carvacrol are synthesized and stored in secretory glandular trichomes of thyme and oregano, but does not directly measure or state TvTPS2 expression in source species."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR showed TvTPS2 transcripts were significantly higher in glandular trichomes than in leaves under CBTS-driven constructs."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper notes monoterpenoids are synthesized in plastid via the MEP pathway, but does not directly localize TvTPS2 protein."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "TvTPS2 was used in engineering of thymol and carvacrol production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls thymol and carvacrol phenolic monoterpenoids, a terpenoid class."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper lists antibacterial, antitussive, antispasmodic, antioxidant and anticancer properties."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Thymol/carvacrol contents were measured in leaves of transgenic tobacco, and rationale focused on glandular trichomes on leaf surfaces."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Stable multigene transformation, promoter swap to CBTS, qRT-PCR, and GC-MS profiling were performed."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "TvTPS2-containing constructs produced trace products under 35S and much higher thymol/carvacrol under CBTS-driven trichome expression."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements align with Results and Figure 6/S6-S7."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly deduced low yields under 35S may be due to limited GPP supply in mesophyll cells."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Promoter context (35S vs CBTS) was a key tested factor in stable tobacco transformants."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results support tissue-specific deployment in precursor-rich glandular trichomes for better yields."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed used TvTPS2 in separate constructs with different CYP71D partners for thymol versus carvacrol."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 28,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "CYP71D179",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP71D179 is part of the thyme/oregano thymol-carvacrol pathway context; with the Tv prefix pathway from thyme, source species assignment to thyme is supported by context though not reiterated per gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Thyme is explicitly named as Thymus vulgaris in the paragraph introducing the pathway."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP71D179 was expressed in tobacco."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Case 4 uses Nicotiana tabacum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials specify tobacco cultivar K326."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Both 35S and CBTS promoter versions were constructed for CYP71D179."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was used specifically in thymol biosynthesis constructs."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The text places CYP71D179 in the γ-terpinene oxidation branch toward thymol."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly named CYP71D179, a cytochrome P450."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states cytochrome P450s of the CYP71D family are involved."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 6a/text indicate CYP71D-family enzymes hydroxylate γ-terpinene."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly name the hydroxylated intermediate product for CYP71D179, only that hydroxylation occurs and TvSDR1 then oxidizes the product to thymol/carvacrol."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states CYP71D family enzymes hydroxylate γ-terpinene at C-3 or C-6 positions; in the thymol branch CYP71D179 corresponds to one of these branch oxidations as used in pThymol."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a midstream branch step after γ-terpinene formation and before TvSDR1 oxidation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP71D179 directs flux toward thymol in the tested pThymol constructs."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not explicitly call it rate-limiting; the cautious statement is acceptable."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "Synthesis/storage in secretory glandular trichomes of thyme is stated for the metabolites, but CYP71D179 expression itself is not measured in source species here."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR showed CYP71D179 transcript abundance was significantly higher in glandular trichomes than in leaves under CBTS-driven constructs."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP71D179 was used in the thymol branch and thymol was measured."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Thymol is explicitly described as a phenolic monoterpenoid/terpenoid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper lists the bioactivities of thymol/carvacrol."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Thymol was quantified in leaves of transgenic tobacco and the engineering strategy targeted glandular trichomes."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Stable multigene expression, promoter swap, qRT-PCR, and GC-MS thymol analysis were performed."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP71D179-containing pThymol constructs yielded thymol, with higher amounts under CBTS-driven expression."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements match the Results: inclusion in pThymol constructs, higher trichome transcript abundance under CBTS, and increased thymol yield."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports very low thymol under 35S-driven expression."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Promoter context (35S vs CBTS) was directly tested in stable transgenic tobacco."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The data support pairing CYP71D179 with trichome-specific expression and partner genes for thymol engineering."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact statement 'position-specific oxidation at C-3' for CYP71D179 alone is not explicitly assigned in the paper text provided; it only says CYP71D family enzymes hydroxylate at C-3 or C-6 positions."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 26,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "CYP71D180",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses thymol/carvacrol from thyme and oregano and names the enzyme as CYP71D180, but does not explicitly state the source species of CYP71D180 itself."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Thymus vulgaris is mentioned as thyme in general pathway context, but the paper does not explicitly assign CYP71D180 to Thymus vulgaris."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP71D180 was used in transgenic tobacco constructs for carvacrol production."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is tobacco, and the paper explicitly states Nicotiana tabacum in the betanin section and tobacco throughout transformation experiments."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and methods state tobacco cultivar 'K326' was used."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Constructs used both CaMV35S and CBTS promoters for CYP71D180-containing carvacrol pathways."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP71D180 is part of the thymol/carvacrol biosynthetic pathway, specifically used in carvacrol constructs."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 6a states CYP71D180 hydroxylates the pathway toward carvacrol, i.e. the γ-terpinene oxidation branch to carvacrol."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is explicitly named CYP71D180, a cytochrome P450 in the pathway description."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The text states cytochrome P450s of the CYP71D family, including CYP71D180."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 6a/text indicate γ-terpinene is hydroxylated by CYP71D179 or CYP71D180."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly name the hydroxylated γ-terpinene intermediate; it only states hydroxylation then oxidation by TvSDR1 leads to carvacrol."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states CYP71D180 hydroxylates γ-terpinene at the C-6 position in the carvacrol branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Within the pathway, CYP71D180 acts after TvTPS2 and before TvSDR1, so midstream branch step is directly inferable from Figure 6a."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway scheme indicates CYP71D180 specifies the carvacrol branch from γ-terpinene."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The value explicitly says not explicitly stated; the paper does not claim rate-limiting status."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says thymol/carvacrol are synthesized and stored in secretory glandular trichomes of thyme and oregano, but does not explicitly report CYP71D180 source-species expression pattern."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states transcript abundances of TvTPS2, CYP71D179, CYP71D180 and TvSDR were significantly higher in glandular trichomes than in leaves for CBTS constructs."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP71D180 is in the carvacrol pathway and used in pCarva constructs producing carvacrol."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes thymol and carvacrol as phenolic monoterpenoids, i.e. terpenoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper lists antibacterial, antitussive, antispasmodic, antioxidant and anticancer properties for thymol and carvacrol."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Carvacrol was measured in leaves of transgenic tobacco, and trichome-specific expression enhanced yield."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results describe stable transformation, promoter swap to CBTS, qRT-PCR of pathway genes, and GC-MS analysis of carvacrol."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP71D180-containing pathway constructs enabled carvacrol accumulation, which was higher with trichome-specific expression."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements match Results: CYP71D180 was co-expressed with TvTPS2 and TvSDR1 in pCarva constructs; CBTS increased transcript abundance and carvacrol yield; Figure 6a assigns it to the carvacrol oxidation branch."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports only trace carvacrol under 35S-driven expression, supporting very low accumulation in that configuration."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant manipulated factor in Results was promoter context (35S vs CBTS) in stable transgenic tobacco."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "This is directly supported as an engineering implication from the demonstrated reconstruction of carvacrol biosynthesis using CYP71D180 with TvTPS2/TvSDR1 and CBTS promoter."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 6a explicitly indicates hydroxylation at C-6 for the carvacrol branch."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 25,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "TvSDR1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The gene name TvSDR1 suggests thyme, and thyme is discussed in pathway context, but the paper does not explicitly state the source species for TvSDR1."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Thymus vulgaris is mentioned generally for thyme, but not explicitly linked to TvSDR1 in the Results."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TvSDR1 was expressed in transgenic tobacco for thymol/carvacrol engineering."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied host is tobacco, used throughout these experiments; tobacco is Nicotiana tabacum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and methods specify tobacco cultivar K326."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper used CaMV35S and CBTS promoters; methods specifically note TvSDR1 as 35S-driven in pThymol-CBTS/pCarva-CBTS constructs."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "TvSDR1 is explicitly part of the thymol/carvacrol biosynthetic pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 6a describes TvSDR1 oxidizing hydroxylated intermediates to allylic ketones, i.e. the allylic alcohol oxidation step."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly names the short-chain dehydrogenase TvSDR1/TvSDR."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states TvSDR1 is a short-chain dehydrogenase."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 6a implies TvSDR1 acts on the hydroxylated γ-terpinene intermediates formed by CYP71D179/180."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states TvSDR1 oxidizes the hydroxylated intermediates, forming allylic ketones."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 6a and text state TvSDR1 oxidizes hydroxylated intermediates to allylic ketones that then tautomerize to thymol/carvacrol."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "TvSDR1 acts after hydroxylation and immediately before final spontaneous tautomerization, so downstream/terminal-forming step is supported."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway shows TvSDR1 is needed to generate the immediate precursors of thymol/carvacrol."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish TvSDR1 as rate-limiting; thus 'Not established' is faithful."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper mentions thymol/carvacrol occur in glandular trichomes of thyme/oregano, but does not explicitly report TvSDR1 source-species expression pattern."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR showed TvTPS2, CYP71D179, CYP71D180 and TvSDR transcript abundances were higher in glandular trichomes than in leaves."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "TvSDR1 participates in production of both thymol and carvacrol."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies thymol and carvacrol as phenolic monoterpenoids, i.e. terpenoids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed bioactivities are explicitly provided in the Results."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Thymol and carvacrol were quantified in leaves of transgenic tobacco and increased with trichome-focused expression."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Stable transgenic expression, qRT-PCR and GC-MS metabolite profiling are all explicitly described."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "TvSDR1 was included in both pathways and the full pathway produced thymol/carvacrol, supporting its required downstream role."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point matches the Results and Figure 6 pathway description."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports low product accumulation under 35S pathway configuration."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Promoter context and targeting expression to glandular trichomes were the key experimental factors."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "As demonstrated, TvSDR1 is an essential late-pathway gene to combine with TvTPS2 and CYP71D genes for engineering thymol/carvacrol."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state pSDR-35S was used even in CBTS constructs, matching this note."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 26,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "crtE",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specify the donor/source species for crtE."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "crtE was expressed in engineered E. coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly uses Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify E. coli strain BL21 for production experiments."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The pET28-GG system retained the T7 promoter and lac operator, with IPTG induction."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "crtE is one of the core enzymes used for β-carotene biosynthesis in E. coli."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "crtE is part of the core carotenoid pathway shown in Figure 7a."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly identifies crtE as geranylgeranyl diphosphate synthase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "Prenyltransferase is biochemically plausible for crtE, but this family label is not stated in the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 7a connects IPP and DMAPP to GGPP via crtE/geranylgeranyl diphosphate synthase."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 7a explicitly shows GGPP as the product of crtE action."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is directly inferable from Figure 7a and the enzyme name."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "crtE acts upstream to form GGPP before crtB/I/Y steps."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "GGPP is the immediate precursor entering carotenoid biosynthesis, so this linkage is supported by Figure 7a."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish crtE as rate-limiting; 'Not established' is faithful."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression was induced in engineered E. coli with IPTG."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state cytosolic localization."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "crtE was part of the β-carotene-producing pCart construct."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "β-carotene is described as a carotenoid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states β-carotene is a precursor of vitamin A, a natural colouring pigment, and commercially important in pharmaceutical, cosmetics and food industries."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "β-carotene was produced and extracted from E. coli cells."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes operon assembly, heterologous expression in E. coli and chromatographic quantification of β-carotene."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "crtE was part of the functional pCart set that enabled β-carotene production in E. coli."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The three statements match the Results, except source is unspecified but not claimed here."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states E. coli growth was not affected."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods and Figure 7d specify 0.1 mM IPTG induction and cultivation at 28°C after induction in LB."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "crtE is shown as a core enzyme in microbial β-carotene production modules."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed does not specify the source organism for crtE."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Source_Species",
+          "old_value": "Bacterial carotenoid pathway donor",
+          "new_value": "NA",
+          "reason": "The paper does not specify the donor/source species for crtE."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "The paper does not state cytosolic localization."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "crtB",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The donor/source species for crtB is not specified in the paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "crtB was expressed in engineered E. coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host species is explicitly Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify strain BL21."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Genes in pCart were under the T7 promoter/lac operator system with IPTG induction."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "crtB is listed among core enzymes for β-carotene biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "crtB belongs to the carotenoid core pathway in Figure 7a."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly identifies crtB as phytoene synthase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "Phytoene synthase family is plausible but not explicitly discussed as a family/domain in the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 7a shows phytoene synthase using GGPP as substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 7a shows phytoene as product of crtB."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper names crtB as phytoene synthase and Figure 7a supports GGPP to phytoene, but the specific wording 'condenses GGPP molecules' is not explicitly stated."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "crtB is an early central step, but the paper does not explicitly call it the committed step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Phytoene is a direct carotenoid intermediate en route to β-carotene in Figure 7a."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish crtB as rate-limiting; 'Not established' is faithful."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression occurred in IPTG-induced engineered E. coli."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state cytosolic localization."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "crtB is part of the β-carotene pathway construct."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "β-carotene is explicitly a carotenoid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed functions and commercial uses are explicitly described."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "β-carotene accumulated in E. coli cells."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Operon assembly, E. coli expression and chromatographic quantification were used."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "crtB contributed as part of the pCart set enabling β-carotene biosynthesis."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points align with the Results for pCart and pCart+D."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "No growth penalty was reported."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "0.1 mM IPTG and 28°C post-induction culture are stated."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "crtB is demonstrated as a core enzyme for β-carotene engineering."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The source organism is indeed not specified in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Source_Species",
+          "old_value": "Bacterial carotenoid pathway donor",
+          "new_value": "NA",
+          "reason": "The donor/source species for crtB is not specified in the paper."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "The paper does not state cytosolic localization."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "crtI",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specify the donor/source species for crtI."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "crtI was used in engineered E. coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is explicitly Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state strain BL21."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The operon was under T7 promoter/lac operator with IPTG induction."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "crtI is one of the core enzymes in the β-carotene pathway described."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "crtI is part of the carotenoid core pathway in Figure 7a."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies crtI as phytoene desaturase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The field value repeats the enzyme type 'Phytoene desaturase', which is directly stated."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 7a places crtI after phytoene, supporting phytoene as substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 7a shows lycopene as the product after the crtI step(s)."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 7a notes dashed arrows represent multiple reactions from phytoene to lycopene, matching the description."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "crtI is clearly midstream between crtB and crtY in Figure 7a."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Lycopene is the direct precursor of β-carotene in the pathway."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not state crtI is rate-limiting; 'Not established' is faithful."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression was IPTG-induced in engineered E. coli."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state cytosolic localization."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "crtI was included in the β-carotene production construct."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "β-carotene is described as a carotenoid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly provides these functions and uses of β-carotene."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "β-carotene was extracted from E. coli cells."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Operon assembly, heterologous expression and β-carotene quantification are described."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "crtI contributed as part of the pCart set enabling β-carotene production."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points match the Results for pCart and pCart+D."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "No growth penalty was reported."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The induction and culture conditions are explicitly given."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "crtI is demonstrated as a core mid-pathway enzyme for microbial carotenoid engineering."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed does not specify the source organism for crtI."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Source_Species",
+          "old_value": "Bacterial carotenoid pathway donor",
+          "new_value": "NA",
+          "reason": "The paper does not specify the donor/source species for crtI."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "The paper does not state cytosolic localization."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 2,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "crtY",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The donor/source species for crtY is not given in the paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "crtY was expressed in engineered E. coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is explicitly Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify strain BL21."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression was driven by the T7 promoter/lac operator system with IPTG induction."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "crtY is one of the core enzymes listed for β-carotene biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "crtY is part of the core pathway to β-carotene; calling it a 'cyclization branch' is reasonable but not explicit wording in the paper."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The text explicitly identifies crtY as lycopene cyclase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The field value matches the enzyme type stated in the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 7a shows lycopene converted by crtY to β-carotene."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 7a explicitly shows β-carotene as the crtY product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Cyclization of lycopene to β-carotene is directly supported by Figure 7a and the enzyme name."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "crtY is the final enzyme shown in Figure 7a, so terminal step is supported."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "crtY directly forms the target product β-carotene."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not call crtY rate-limiting; the field explicitly says not explicitly stated."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression was induced in engineered E. coli with IPTG."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state cytosolic localization."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "crtY directly produces β-carotene in the engineered pathway."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "β-carotene is explicitly described as a carotenoid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly provides these functions and commercial uses."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "β-carotene accumulated in E. coli cells."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Operon assembly, heterologous expression and β-carotene quantification are described in Results and Methods."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "crtY directly produces β-carotene as shown in Figure 7a and pCart results."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points align with the Results, though the role is inferred from pathway inclusion rather than single-gene dissection."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "No growth penalty was reported."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The stated induction and culture conditions are explicitly described."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "crtY is demonstrated as essential for β-carotene production modules."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The source organism is indeed not specified in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Source_Species",
+          "old_value": "Bacterial carotenoid pathway donor",
+          "new_value": "NA",
+          "reason": "The donor/source species for crtY is not given in the paper."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytosol",
+          "new_value": "NA",
+          "reason": "The paper does not state cytosolic localization."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "SlDXS2",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says 'tomato SlDXS2'."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tomato is explicitly given earlier in the paper as Solanum lycopersicum."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SlDXS2 was expressed in engineered E. coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host is explicitly Escherichia coli."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify BL21 strain."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "SlDXS2 in pCart+D was assembled into pET28-GG, which retains T7 promoter and lac operator and is IPTG inducible."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places SlDXS2 in the MEP pathway supplying precursors for β-carotene biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is explicitly described as part of the isoprenoid precursor MEP pathway."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The text states DXS is 1-deoxy-D-xylulose-5-phosphate synthase, and the cloned gene is SlDXS2."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "DXS enzyme family is a valid biochemical classification but not explicitly stated in the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states DXS catalyses formation of DXP from pyruvate and glyceraldehyde 3-phosphate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names DXP as the product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This reaction description is stated directly in the Results."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes DXS as the first enzyme of the MEP pathway, i.e. an upstream precursor-supply step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "SlDXS2 was added specifically to increase precursor supply for β-carotene production."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states DXS is the rate-limiting first enzyme of the MEP pathway."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states tomato SlDXS2 is responsible for monoterpenoid biosynthesis specifically in glandular trichomes."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SlDXS2 was expressed in E. coli under the IPTG-inducible pET28-GG system."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SlDXS2 was used to enhance β-carotene production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "β-carotene is explicitly described as a carotenoid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly provides these functions and uses of β-carotene."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "β-carotene accumulated in E. coli cells."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Co-expression with crt genes, color phenotype, β-carotene quantification and growth measurement are all described."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state approximately 20 mg/L β-carotene for pCart and 65 mg/L for pCart+D, with no effect on growth."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements accurately summarize the Results on SlDXS2."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states growth of E. coli was not affected."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods and Results specify 0.1 mM IPTG induction and flask cultivation for 24 h."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports SlDXS2 as an upstream flux-boosting gene in microbial β-carotene engineering, but extending this to 'microbes or plants' goes beyond direct evidence."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states DXS is the first and rate-limiting enzyme of the MEP pathway."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 27,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 385,
+    "supported": 347,
+    "unsupported": 9,
+    "uncertain": 29,
+    "total_corrections": 9
+  }
+}

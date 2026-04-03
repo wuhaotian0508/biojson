@@ -1,0 +1,425 @@
+{
+  "file": "MinerU_markdown_PMC11831804_2038800684689686544",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC11831804_2038800684689686544.md",
+  "timestamp": "2026-03-31T21:41:00.770300",
+  "genes": [
+    {
+      "gene_name": "LaPIN2",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Accession numbers section states LaPIN2 accession as Lalb_Chr12g0199691."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is described in white lupin roots."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "White lupin is identified as Lupinus albus L. in the paper."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and methods state white lupin accession/variety Amiga was used."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional tests were done in white lupin."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Lupinus albus L."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments used white lupin accession Amiga."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states LaPIN gene family is important for auxin transport and names LaPIN2 as PIN-formed2/auxin transporter."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization experiment or explicit localization statement for LaPIN2 is provided in this paper; plasma membrane is only external inference."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state LaPIN2 in SQR9-inoculated plants was significantly upregulated compared with noninoculated roots under low phosphorus."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly reports induction of LaPIN2 in roots under low phosphorus after SQR9 inoculation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "IAA is the auxin discussed throughout the paper, but LaPIN2 is a transporter, not a biosynthetic gene producing IAA itself."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Auxin/IAA is the relevant molecule transported in the study, but assigning a terminal metabolite class to LaPIN2 is indirect."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and model indicate auxin transport by LaPIN2 is required for cluster root formation under low phosphorus, which is linked to phosphorus acquisition/use efficiency."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA content was measured in white lupin roots and root auxin signaling increased after SQR9 inoculation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "LaPIN2 knockdown greatly reduced cluster root number, and SQR9 could not rescue this, supporting essentiality for cluster root formation and integrating plant/bacterial auxin in the authors' model."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper used RT-qPCR, VIGS knockdown, cluster root phenotyping with and without SQR9, and NPA pharmacology."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "LaPIN2 was studied under low phosphorus, SQR9 inoculation, and auxin transport inhibitor NPA treatment."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The study says transcriptome data were obtained from White Lupin Genome Portal from Hufnagel et al. (2020) and reanalyzed; no accession is provided."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper proposes functional relationships among LaPIN2, LaYUC4, and bacterial ysnE-derived auxin, but does not show protein-protein interactions."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper clearly shows LaPIN2 knockdown strongly reduces cluster root formation; it does not report broader tradeoffs, matching the field wording."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "A TRV-based VIGS system was used for knockdown, and no native promoter characterization is reported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses insights into phosphorus use efficiency, but direct breeding/engineering application value is not experimentally tested."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by the Results and Fig. 6A interpretation."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "LaPIN2 indeed functions as an auxin transporter, but the classification label 'Common_Gene' is metadata not from the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Plasma membrane (inferred for PIN auxin transporters)",
+          "new_value": "NA",
+          "reason": "No localization experiment or explicit localization statement for LaPIN2 is provided in this paper; plasma membrane is only external inference."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "LaYUC4; ysnE",
+          "new_value": "NA",
+          "reason": "The paper proposes functional relationships among LaPIN2, LaYUC4, and bacterial ysnE-derived auxin, but does not show protein-protein interactions."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "ysnE",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ysnE is described as a gene in B. amyloliquefaciens SQR9."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper names the bacterium Bacillus amyloliquefaciens."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strain used is SQR9."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Phenotypic effects were tested on white lupin."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "White lupin is Lupinus albus L."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The white lupin accession used was Amiga."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract says ysnE encodes an auxin biosynthesis enzyme in SQR9."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links ysnE to auxin biosynthesis but does not describe a specific protein family/domain."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ysnE is explicitly associated with auxin/IAA biosynthesis in SQR9."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The field states IAA biosynthesis in rhizobacteria, which is the direct context of ysnE in this paper."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant ΔysnE has much lower IAA content, supporting IAA as the product associated with ysnE function."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports a role in bacterial auxin biosynthesis leading to IAA, and the field explicitly notes the exact step is not specified."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA is the metabolite measured and reduced in the ΔysnE mutant."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA is a phytohormone/auxin."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show ysnE-dependent bacterial auxin promotes cluster root formation, and the paper frames this as improving phosphorus use under low phosphorus."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "IAA was measured in bacterial supernatant and in white lupin roots, but the paper does not directly show ysnE-derived IAA accumulation specifically in roots."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper calls ysnE a key gene/intermediate in SQR9 auxin biosynthesis, supporting a key biosynthetic step role."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The bacterial ysnE-dependent auxin contributes to the auxin pool driving cluster root formation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The field carefully says key control step supported by mutant analysis but not explicitly rate-limiting; this matches the evidence."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "ΔysnE inoculation significantly reduced cluster root formation compared with SQR9 under low phosphorus."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The study used a ysnE knockout mutant, HPLC measurement of IAA, inoculation phenotype comparisons, and root trait measurements."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The ysnE tests were performed under low phosphorus with bacterial inoculation."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No protein-protein interactions between ysnE and LaPIN2/LaYUC4 are demonstrated."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "ΔysnE-inoculated plants had reduced root fresh weight promotion relative to SQR9 under both normal and low phosphorus."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Bioinoculant utility is a reasonable implication, but direct engineering application is not experimentally tested."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each summary point is supported: SQR9 increased cluster roots, ΔysnE had much less IAA and reduced induction, and the model combines bacterial and plant auxin contributions."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed states ysnE is associated with auxin biosynthesis in SQR9 without detailing exact enzymatic chemistry, and source and applied species are distinct in the study."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "LaPIN2; LaYUC4",
+          "new_value": "NA",
+          "reason": "No protein-protein interactions between ysnE and LaPIN2/LaYUC4 are demonstrated."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "LaYUC4",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Accession numbers section lists LaYUC4 as Lalb_Chr14g0361961."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "LaYUC4 is a white lupin gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "White lupin is identified as Lupinus albus L."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments used accession Amiga."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional validation was performed in white lupin."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Lupinus albus."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied variety/accession is Amiga."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper calls LaYUC4 a YUCCA4 auxin biosynthesis enzyme/gene but does not explicitly name it as a flavin-containing monooxygenase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "YUCCA family membership is supported, but 'flavin monooxygenase-like' is not explicitly stated in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "LaYUC4 is explicitly described as an auxin biosynthesis gene."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The specific IPA/YUCCA branch is not stated in this paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No substrate or pathway intermediate for LaYUC4 is identified or tested in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is described as contributing to auxin/IAA production, and the model states LaYUC4 produces auxin."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "A YUCCA-mediated role in auxin biosynthesis is supported, but no catalytic reaction is directly tested or described in mechanistic detail."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state LaYUC4, LaYUC7, and LaYUC9 are upregulated in cluster roots versus lateral roots, and LaYUC4 is induced by SQR9 under low phosphorus."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly reports higher LaYUC4 expression in roots/cluster roots under low phosphorus and after SQR9 inoculation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Auxin/IAA is the terminal metabolite linked to LaYUC4 in the paper."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "IAA is an auxin phytohormone."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The authors show and conclude that auxin from LaYUC4 contributes to cluster root formation under low phosphorus, which supports phosphorus acquisition/use efficiency."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "IAA increase was measured in roots overall, but the paper does not specifically quantify LaYUC4-derived auxin in cluster-root-forming tissue."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "LaYUC4 is directly described as an auxin biosynthesis gene, supporting its placement in an auxin biosynthetic step."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper proposes LaYUC4 supplies the plant-derived auxin pool promoting cluster root formation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "LaYUC4 is functionally important, but the paper does not explicitly establish it as a control point or rate-limiting step."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "LaYUC4 knockdown reduced cluster root formation, showing requirement for full cluster root formation under low phosphorus."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The study used transcriptome analysis, RT-qPCR, VIGS knockdown, and cluster root phenotyping with and without SQR9."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "LaYUC4 was studied under low phosphorus and SQR9 inoculation."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes transcriptome reanalysis from White Lupin Genome Portal/Hufnagel et al. (2020), with no accession given."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No protein-protein interactions involving LaYUC4, LaPIN2, or ysnE are demonstrated."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows knockdown reduces cluster root formation and does not report broader agronomic penalties."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible application inference, but it is not directly tested in the paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The three statements are consistent with Results: LaYUC4 was the strongest implicated YUC gene, induced by SQR9 and high in cluster roots, and knockdown reduced cluster roots while SQR9 partially increased them."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed mentions LaYUC7 and LaYUC9 as also upregulated, but only LaYUC4 was functionally tested by VIGS."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Pathway_Branch_or_Subpathway",
+          "old_value": "IPA/YUCCA auxin biosynthesis branch",
+          "new_value": "NA",
+          "reason": "The specific IPA/YUCCA branch is not stated in this paper."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "Indole-3-pyruvic acid pathway intermediate (not explicitly tested in paper)",
+          "new_value": "NA",
+          "reason": "No substrate or pathway intermediate for LaYUC4 is identified or tested in the paper."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "LaPIN2; ysnE-derived bacterial auxin pool",
+          "new_value": "NA",
+          "reason": "No protein-protein interactions involving LaYUC4, LaPIN2, or ysnE are demonstrated."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 3,
+        "uncertain": 6
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 84,
+    "supported": 65,
+    "unsupported": 6,
+    "uncertain": 13,
+    "total_corrections": 6
+  }
+}

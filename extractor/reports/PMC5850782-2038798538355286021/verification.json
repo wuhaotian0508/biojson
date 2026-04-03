@@ -1,0 +1,673 @@
+{
+  "file": "MinerU_markdown_PMC5850782_2038798538355286021",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC5850782_2038798538355286021.md",
+  "timestamp": "2026-03-31T22:19:00.805928",
+  "genes": [
+    {
+      "gene_name": "ATR2",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly mentions 'A. thaliana ATR2'."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly named in Discussion for ATR2."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion mentions A. thaliana ATR2 and an ATR2 ortholog from hybrid poplar."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Arabidopsis thaliana is explicit, but 'hybrid poplar' is mentioned without a Latin binomial or 'Populus sp.' wording."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "ATR2 is only discussed as a possible redox partner; no specific terminal metabolite is directly assigned to ATR2 in the paper."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "ATR2 is discussed in the context of phenolic metabolism, but no explicit metabolite class is assigned to ATR2 itself."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This phrasing is inferred from hypothesized partner function, not explicitly stated for ATR2."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly describes ATR2 as a duplicate of the P450 oxidoreductase (POR)."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states the ATR2 ortholog from hybrid poplar was investigated and concluded to have strict ER localization."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "ATR2 is only mentioned in Discussion as hypothesis/inference from prior literature, not experimentally tested here."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly says elongated POR with prototype A. thaliana ATR2 is a plausible redox partner for class II CYP73s."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points match Discussion: ATR2 as elongated POR duplicate, ER localization of poplar ortholog, and plausible but untested partner role."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No engineering or breeding application for ATR2 is discussed in the paper."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Class II CYP73s are proposed as interaction/partner candidates for ATR2 in Discussion, albeit hypothetically."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Accurately reflects that ATR2 is not a Results-section experimental subject and is only proposed as a relevant partner in Discussion."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "p-coumaric acid/phenolic derivatives",
+          "new_value": "NA",
+          "reason": "ATR2 is only discussed as a possible redox partner; no specific terminal metabolite is directly assigned to ATR2 in the paper."
+        },
+        {
+          "field": "Terminal_Metabolite_Function",
+          "old_value": "Supports electron transfer for phenolic biosynthesis enzymes",
+          "new_value": "NA",
+          "reason": "This phrasing is inferred from hypothesized partner function, not explicitly stated for ATR2."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Potential co-engineering target when deploying class II CYP73 topology-dependent phenylpropanoid pathways",
+          "new_value": "NA",
+          "reason": "No engineering or breeding application for ATR2 is discussed in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 10,
+        "unsupported": 3,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "CYP73A48",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Methods identify the gene as from Physcomitrella patens."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Physcomitrella patens is explicitly named."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify protonema cDNA from the Grandsen strain."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results say the homolog was heterologously expressed in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state the S. cerevisiae WAT11 strain was transformed."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP73/C4H is explicitly placed in the phenolic/phenylpropanoid pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper describes CYP73 as catalyzing the first plant-specific and early/general entry step of phenolic metabolism."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract states CYP73/C4H catalyzes the first plant-specific and rate-limiting step."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Results conclude bryophyte CYP73-like genes encoded true cinnamic acid 4-hydroxylase (C4H)."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given anywhere in the paper text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP73 family is explicitly identified as a cytochrome P450 family."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state PpCYP73A48 converted cinnamic acid into p-coumaric acid."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state conversion to p-coumaric acid."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly inferable from cinnamic acid to p-coumaric acid conversion by C4H."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "p-Coumaric acid is the measured product in the assay."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "p-Coumaric acid is part of the phenolic/phenylpropanoid pathway discussed in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper links C4H products to UV screens and biopolymer/lignin precursors, supporting this precursor role."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "p-Coumaric acid is the immediate product and precursor in downstream phenolic metabolism."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract explicitly says CYP73/C4H catalyzes the rate-limiting step."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The family is membrane-associated and assay used yeast microsomes, but PpCYP73A48 localization itself was not experimentally shown in this paper."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Methods support heterologous yeast expression and enzymatic product assay; HPLC is described in Methods."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state this demonstrates bryophyte CYP73 evolved for cinnamic acid hydroxylation as an early phenolic step."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points match the Results section."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No engineering application for CYP73A48 is discussed."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper reports genome/transcriptome mining including 1kP, and no accession number for CYP73A48 is provided."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Accurately reflects that CYP73A48 is used for evolutionary origin of C4H activity rather than trait engineering."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.14.91",
+          "new_value": "NA",
+          "reason": "No EC number is given anywhere in the paper text."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Limited direct application in this evolutionary study; useful as an ancestral C4H reference for engineering phenylpropanoid entry reactions",
+          "new_value": "NA",
+          "reason": "No engineering application for CYP73A48 is discussed."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "CYP73A92",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results identify CYP73A92 as a Brachypodium distachyon paralog."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Brachypodium distachyon is explicit."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state B. distachyon cDNA was from BD21 accession."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Gene was studied in yeast, Arabidopsis and Nicotiana benthamiana; source species is Brachypodium."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed Latin names appear in Results/Methods."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify Arabidopsis cyp73a5-1 in Col-0 background and yeast WAT11."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP73/C4H is explicitly part of the phenylpropanoid/phenolic pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "General entry step is supported, but specific association of class I with lignin precursor branch is discussed more broadly/inferentially, not directly tested for CYP73A92."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states CYP73 catalyzes the first plant-specific and rate-limiting step."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP73 proteins are cinnamate 4-hydroxylases; CYP73A92 was assayed as such."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP73A92 is explicitly one of the CYP73 family and class I group."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Cinnamate binding and catalytic assays were performed with trans-cinnamic acid."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state conversion of cinnamate into p-coumarate."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly supported by enzyme assays showing cinnamate 4-hydroxylation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "p-Coumarate/p-coumaric acid is the direct product measured."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Product belongs to the phenylpropanoid/phenolic pathway discussed."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper links C4H products to lignin precursors and other phenolics; this is a fair summary."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "p-Coumarate is the immediate product and precursor."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP73/C4H is stated to be rate-limiting."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support ER localization and topology assay shows single N-terminal TMH with catalytic domain facing cytoplasm for CYP73A92."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods were used for CYP73A92 except topology glycosylation mapping was specifically done on full-length CYP73A92."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show efficient cinnamate hydroxylation and restoration of normal growth in cyp73a5-1."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Points 1-3 are directly supported; point 4 is phrased as proposal and matches Discussion, so overall acceptable."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No breeding/engineering application is discussed in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper shows C4H deficiency causes severe stunted growth, so growth effects of altered C4H flux are supported at a general level."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Phylogeny from genome/transcriptome mining including 1kP is described; no accession for CYP73A92 is given."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods and Results explicitly state Arabidopsis CYP73A5 promoter (AtC4Hpro) was used."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper discusses class I as the main clade likely featuring orthologs essential for lignin biosynthesis in vascular plants."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.14.91",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Potential entry-point enzyme for engineering phenylpropanoid flux; class I form may be preferred when targeting lignin precursor production",
+          "new_value": "NA",
+          "reason": "No breeding/engineering application is discussed in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "CYP73A93",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results identify CYP73A93 as a Brachypodium distachyon paralog."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Brachypodium distachyon is explicit."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify BD21 accession cDNA."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Gene was studied in yeast, Arabidopsis and Nicotiana benthamiana; source species is Brachypodium."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed Latin names appear in the paper."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify Arabidopsis cyp73a5-1 in Col-0 background and yeast WAT11."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP73/C4H is explicitly in the phenylpropanoid pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "General entry step is supported, but direct class I association with lignin precursor branch is inferential rather than shown for CYP73A93."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states CYP73 catalyzes the first plant-specific and rate-limiting step."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP73A93 was assayed as a cinnamate 4-hydroxylase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number appears in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP73A93 is explicitly class I CYP73."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Assays used cinnamate/trans-cinnamic acid."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state conversion to p-coumarate."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly supported by enzyme assay description."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "p-Coumarate is the direct product measured."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Product is in the phenylpropanoid/phenolic pathway."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper supports role as precursor to lignin and other phenolics at pathway level."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Immediate precursor/product relationship is supported."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP73/C4H is stated to be rate-limiting."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "ER localization is shown for EGFP fusions, but full single-pass/cytosolic catalytic-domain topology was directly demonstrated for CYP73A92, not full-length CYP73A93."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast assays, Arabidopsis complementation, Nicotiana EGFP localization, and helix insertion assays were used; full-length glycosylation topology mapping was not shown for CYP73A93."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show efficient catalytic activity and growth rescue of cyp73a5-1."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "Points 1 and 2 are supported; ER localization is supported; 'canonical class I single-pass topology' for CYP73A93 is inferred from prediction/insertion behavior rather than directly proven on full-length protein."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No breeding/engineering application is discussed in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Severe growth defect of C4H-deficient mutant supports general growth tradeoff statement."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Phylogeny/mining including 1kP is described and no accession is given."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "AtC4Hpro is explicitly used for complementation constructs."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "It is indeed the second Brachypodium class I paralog and described as highly similar to CYP73A92."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.14.91",
+          "new_value": "NA",
+          "reason": "No EC number appears in the paper."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Candidate C4H for boosting phenylpropanoid entry flux where canonical ER-facing cytosolic orientation is desired",
+          "new_value": "NA",
+          "reason": "No breeding/engineering application is discussed in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "CYP73A94",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results identify CYP73A94 as the Brachypodium class II paralog."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Brachypodium distachyon is explicit."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify BD21 accession cDNA."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Gene was studied in yeast, Arabidopsis and Nicotiana benthamiana; source species is Brachypodium."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed Latin names appear in the paper."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify Arabidopsis cyp73a5-1 in Col-0 background and yeast WAT11."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP73/C4H is explicitly in the phenylpropanoid pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "General entry step is supported, but class II feeding non-lignin branches is proposed only in Discussion and not experimentally shown."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP73/C4H is stated to catalyze the first plant-specific, rate-limiting step."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP73A94 was assayed as a cinnamate 4-hydroxylase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is reported in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly a CYP73 family, class II enzyme."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Assays used trans-cinnamic acid/cinnamate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state conversion to p-coumarate."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly supported by enzyme assay data and wording."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "p-Coumaric acid/p-coumarate is the direct product."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Product belongs to the phenylpropanoid pathway discussed."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper discusses p-coumarate/C4H products as feeding flavonoids, stilbenes, coumarins, lignin precursors and other phenolics at pathway level."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "p-Coumarate is the immediate precursor/product."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP73/C4H is stated to be rate-limiting."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states a preliminary in silico investigation indicates differential but overlapping expression of class I and II CYP73 genes in B. distachyon organs."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state ER localization was investigated in roots, cotyledons and hypocotyls of complemented Arabidopsis line."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly support ER localization, two N-terminal TMHs/open hairpin, and dual topology with catalytic domain either cytosolic or luminal."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed approaches are described and used for CYP73A94."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support strong C4H activity, rescue of cyp73a5-1, and altered topology; specialization toward distinct branches is proposed rather than proven but appropriately phrased as likely."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Points 1-4 are directly supported in Results; point 5 is explicitly presented as a proposal in Discussion, matching the paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No breeding/engineering application is discussed in the paper."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Possible redirection away from lignin branches is speculative Discussion content, not experimentally shown."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion proposes ATR2 as a potential redox partner, while noting it is not experimentally validated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Phylogeny/mining including 1kP is described; no accession listed."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "AtC4Hpro is used for stable expression and complementation; 35S promoter is used in pCAMBIA2300uGFP for transient EGFP fusion expression."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly notes a conserved 4-5 aa insertion near the heme-binding cysteine in all class II proteins, possibly linked to alternative electron donor interaction."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.14.91",
+          "new_value": "NA",
+          "reason": "No EC number is reported in the paper."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Useful for engineering phenylpropanoid branch partitioning or secretory phenolic production because topology may alter metabolon membership without changing catalytic chemistry",
+          "new_value": "NA",
+          "reason": "No breeding/engineering application is discussed in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 132,
+    "supported": 112,
+    "unsupported": 11,
+    "uncertain": 9,
+    "total_corrections": 11
+  }
+}

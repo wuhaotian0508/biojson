@@ -1,0 +1,360 @@
+{
+  "file": "MinerU_markdown_PMC9310625_2038794007684874258",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC9310625_2038794007684874258.md",
+  "timestamp": "2026-03-31T17:35:21.645021",
+  "genes": [
+    {
+      "gene_name": "HSP70 family",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The host plant studied throughout the transfer and transcriptome experiments is Sphagnum angustifolium."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names the host as Sphagnum angustifolium."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The recipient axenic plants used in experiments were Sphagnum angustifolium."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied/recipient species is explicitly Sphagnum angustifolium."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results and Discussion explicitly refer to the HSP70 family/heat shock proteins; describing them as heat shock protein 70 family molecular chaperones is consistent with the family identity."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "In the Discussion, the paper states that Arabidopsis HSP70 proteins are found within all subcellular compartments of the cell. This supports a multiple-compartment localization statement, though it is general rather than Sphagnum-specific."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The study used metatranscriptomics/RNA-seq differential expression under microbiome transfer and temperature treatments, alongside host growth and chlorophyll fluorescence phenotyping."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The value given is thermotolerance/heat stress acclimation, which is a trait/physiological response, not a terminal nutrient/metabolite product. The paper links HSP70 to heat response, not to a final metabolite."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states that the warm-microbiome induced the heat shock response, especially HSP70, even without warming, suggesting thermal preconditioning, and warm-origin microbiomes improved growth under warming."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These exact factors were tested: ambient versus warming chamber treatments and ambient-origin versus warm-origin microbiome transfer."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state HSPs, especially HSP70 family members, were responsive to warming, and Discussion/Results indicate induction by warm-origin microbiome including without heat."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly reports 15 HSP70 family members induced under warming, and under ambient conditions with warm microbiome 33 of 35 detected HSPs were induced."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The Data availability section gives 16S/ITS BioProject PRJNA644113 and metagenome/metatranscriptome BioProject PRJNA644538."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are supported by the Results/Conclusions: warm microbiome induced host heat shock response especially HSP70; HSP70 induction occurred without warming; and this occurred in the context of improved growth/photosynthetic performance under warming."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports family-level HSP70 responses and does not provide individual HSP70 gene IDs; HSP70 is observed as a host response marker, not directly manipulated."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper suggests future applications and identifies HSP70-related response as important, but does not directly validate breeding or engineering use. Calling it a potential marker pathway is interpretive rather than explicitly tested."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite_Function",
+          "old_value": "Thermotolerance/heat stress acclimation",
+          "new_value": "NA",
+          "reason": "The value given is thermotolerance/heat stress acclimation, which is a trait/physiological response, not a terminal nutrient/metabolite product. The paper links HSP70 to heat response, not to a final metabolite."
+        }
+      ],
+      "stats": {
+        "supported": 14,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "AOC",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly mentions allene oxide cyclase (AOC)."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "AOC is explicitly expanded as allene oxide cyclase in the Discussion."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The host gene expression discussed pertains to Sphagnum angustifolium."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The host plant is explicitly Sphagnum angustifolium."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The microbiome was applied to axenic Sphagnum angustifolium plants."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The recipient species in the experiment is explicitly Sphagnum angustifolium."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Allene oxide cyclase family is supported by the explicit enzyme identity AOC."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly states that AOC contributes to jasmonic acid synthesis/biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Jasmonic acid biosynthesis is part of the oxylipin/jasmonate branch; this is directly inferable from the AOC/OPDA context provided."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper identifies AOC as producing OPDA in the jasmonic acid pathway, but does not classify the step explicitly as midstream."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly name the substrate as an allene oxide intermediate derived from fatty acid oxidation, though this is standard biochemistry and indirectly consistent with the pathway."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly states that AOC synthesizes 12-oxo-phytodienoic acid (OPDA)."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states that AOC synthesizes OPDA, a signaling compound and intermediate in jasmonic acid biosynthesis; the cyclization wording is consistent with the known enzyme function, though not spelled out in detail."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes OPDA as an intermediate in the jasmonic acid biosynthesis pathway."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish AOC as rate-limiting; the field correctly says this was not established."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Evidence comes from host metatranscriptomics/RNA-seq and ontology enrichment under microbiome and temperature treatments."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly links AOC to jasmonic acid biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Jasmonic acid is a phytohormone and oxylipin; this classification is consistent with the pathway described."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion states jasmonic acid is a key phytohormone contributing to abiotic and biotic stress responses and has been implicated in thermotolerance."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the warm-microbiome elicited host expression of genes contributing to jasmonic acid synthesis via AOC, consistent with induction of stress-response metabolism."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant factors were warm-origin microbiome transfer and ambient versus warming temperature conditions."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion states the warm-microbiome elicited host plant expression of genes contributing to jasmonic acid synthesis via AOC."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results report jasmonic acid synthesis ontology enrichment, and the host plants are the applied Sphagnum angustifolium recipients."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Metatranscriptome/RNA-seq data are available under BioProject PRJNA644538."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary accurately reflects that warm microbiome induced jasmonic acid synthesis-related expression via AOC, linking treatment to OPDA/jasmonate pathway activation, without direct functional testing."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly discusses AOC as part of jasmonic acid synthesis, provides no individual gene ID, no direct metabolite measurement, and notes jasmonate-related enrichment disappeared after warming exposure."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion cites prior literature that AOC overexpression in Marchantia polymorpha decreases growth; this was not tested here."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not directly test engineering or breeding applications of AOC; calling it a candidate pathway node is speculative though plausible."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 25,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "PAL",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly mentions phenylalanine ammonia lyase (PAL)."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "PAL is explicitly expanded as phenylalanine ammonia lyase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The host transcriptional responses discussed are from Sphagnum angustifolium."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is explicitly Sphagnum angustifolium."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The microbiome transfer recipient plants were axenic Sphagnum angustifolium."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is explicitly Sphagnum angustifolium."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Phenylalanine ammonia-lyase family is supported by the explicit enzyme PAL identity."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links PAL to production of phenolic compounds/phenolic secondary metabolite production, which is within phenylpropanoid/phenolic secondary metabolism."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Phenolic compound biosynthesis is explicitly mentioned in association with PAL."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly state that PAL is the upstream/entry step, even though that is standard pathway knowledge."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper never explicitly states L-phenylalanine as the substrate."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper never explicitly states trans-cinnamate as the product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not describe PAL's catalytic conversion of L-phenylalanine to cinnamate; this is background knowledge not stated in the article."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The article links PAL to production of phenolic compounds, so its role in supplying precursors to phenolic secondary metabolites is directly inferable."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish PAL as rate-limiting; the field correctly notes this is not established."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Evidence is from metatranscriptomics/RNA-seq ontology enrichment under microbiome and temperature treatments."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Phenolic compounds/phenolic secondary metabolites are explicitly mentioned."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Phenylpropanoid/phenolic secondary metabolites is consistent with the paper's description of phenolic compound production."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion states PAL has been implicated in temperature response and disease resistance."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the warm-microbiome induced expression of enzymes involved in production of phenolic compounds, including PAL, in association with host stress acclimation/defense-related responses."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These effects are discussed in the context of warm-origin microbiome transfer and ambient versus warming conditions."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion states the warm-microbiome induced enzymes involved in phenolic compound production, including PAL."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly report enrichment of phenolic secondary metabolite production ontology in the host transcriptome."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Metatranscriptome/RNA-seq data are available under BioProject PRJNA644538."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary matches the paper: host phenolic metabolism was induced depending on microbiome/temperature context, PAL was specifically mentioned, and no metabolite accumulation was directly measured."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper provides transcriptomic/pathway-level evidence only and does not manipulate or biochemically assay PAL."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The study does not directly demonstrate PAL as a breeding or engineering target; this is a speculative application."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Substrate",
+          "old_value": "L-phenylalanine",
+          "new_value": "NA",
+          "reason": "The paper never explicitly states L-phenylalanine as the substrate."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "Trans-cinnamate",
+          "new_value": "NA",
+          "reason": "The paper never explicitly states trans-cinnamate as the product."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Deaminates L-phenylalanine to initiate phenylpropanoid biosynthesis leading to phenolic compounds",
+          "new_value": "NA",
+          "reason": "The paper does not describe PAL's catalytic conversion of L-phenylalanine to cinnamate; this is background knowledge not stated in the article."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 3,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 71,
+    "supported": 61,
+    "unsupported": 4,
+    "uncertain": 6,
+    "total_corrections": 4
+  }
+}

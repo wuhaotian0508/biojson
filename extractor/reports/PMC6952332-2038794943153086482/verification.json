@@ -1,0 +1,920 @@
+{
+  "file": "MinerU_markdown_PMC6952332_2038794943153086482",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC6952332_2038794943153086482.md",
+  "timestamp": "2026-03-31T22:27:37.391049",
+  "genes": [
+    {
+      "gene_name": "SuSY",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state 'sucrose synthase (SuSY; itf03g05100)'."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is on sweetpotato and discusses SuSY in sweetpotato roots."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper title gives sweetpotato as Ipomoea batatas (L.) Lam."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Traits and gene analyses were performed in sweetpotato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly concerns Ipomoea batatas."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression comparisons were between Beauregard and Tanzania roots."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Population is explicitly 315 F1 progeny from a cross between Beauregard and Tanzania."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "SuSY is explicitly named sucrose synthase."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SuSY is discussed as a determinant of starch synthesis and starch content."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Starch is a polysaccharide; this is directly inferable from the biological term starch."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper repeatedly discusses starch content in sweetpotato storage roots."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract and Results describe starch as important for calories and a major constituent of dry matter."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show higher/elevated SuSY expression in Tanzania and reduced expression in Beauregard, while the paper links LG3 haplotypes to higher beta-carotene and reduced starch, supporting the stated inverse association."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state similar expression at 10 and 20 DAT, divergence beginning at 30 DAT, persistent elevation in Tanzania, and no expression detected in Beauregard storage roots at 50 DAT."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper uses QTL colocalization, physical proximity/linkage to PSY, and RNA-seq differential expression."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed points are explicitly described in Results: LG3 QTL context, 12.2 kb linkage to PSY with no intervening genes, and 30 DAT storage-root differential expression (log2fc -2.59, adj. p 1.8E-12)."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Field phenotyping across Peru control/drought and San Ramon is explicit; RNA-seq was during root development with Tanzania grown in parallel with Beauregard."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states ADP-glucose synthesized in the cytosol via SuSY for starch biosynthesis."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "The hypothesis that SuSY activity is inhibited during chromoplast biogenesis is in Discussion/Conclusion, but classification as 'Common Gene' and the broader explanatory phrasing are not paper-derived fields."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly documents negative correlation between starch and beta-carotene and links SuSY/PSY region to this tradeoff."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion and Conclusion explicitly mention haplotype analysis, functional markers, reverse genetics, and gene editing as future breeding applications."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly used GBSpoly genotyping and RNA-seq expression profiling."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Paper shows physical linkage between SuSY and PSY, not a protein-protein interaction."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "PSY",
+          "new_value": "NA",
+          "reason": "Paper shows physical linkage between SuSY and PSY, not a protein-protein interaction."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "PSY",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly identify PSY as itf03g05110."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Study is on sweetpotato and candidate genes in sweetpotato."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper title specifies Ipomoea batatas."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Gene-trait analyses are in sweetpotato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicit from paper title."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression was compared in Beauregard and Tanzania."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The mapped population was Beauregard × Tanzania F1 progeny."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "PSY is explicitly called phytoene synthase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly identifies PSY as phytoene synthase and a carotenoid pathway gene."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PSY is explicitly described as part of carotenoid biosynthesis and degradation pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links PSY to carotenoid biosynthesis and beta-carotene accumulation, but does not use the specific phrase 'core carotenoid/provitamin A biosynthesis'."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "PSY is explicitly described as a rate-limiting gene initiating carotenoid biosynthesis; committed/upstream is directly inferable."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly calls PSY a rate-limiting gene/enzyme."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "GGPP substrate is not stated in this paper."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "15-cis-phytoene is not stated in this paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Specific reaction chemistry is not described in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper directly links PSY to carotenoid biosynthesis and beta-carotene accumulation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Main nutritional trait analyzed is beta-carotene."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Beta-carotene is explicitly a carotenoid in the paper context."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper discusses carotenoid accumulation in storage roots and notes Beauregard accumulates carotenoids in both fibrous and storage roots from 30 DAT."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract states beta-carotene is an important source of provitamin A."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "PSY is tied to beta-carotene/orange flesh and the linked LG3 region is associated with reduced starch and increased beta-carotene."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed temporal/stage details and the 50 DAT storage-root DE result (log2fc 2.34, adj. p 4.2E-6) are explicitly stated."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper uses QTL colocalization, positional candidacy, RNA-seq DE, and also cites prior association mapping by Wu et al. 2018."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points are all directly supported in Results."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Paper supports interaction of Or/IbOr with PSY from cited literature and supports physical linkage with SuSY, but not a direct PSY-SuSY biochemical interaction in this study."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "GBSpoly genotyping and RNA-seq were explicitly used."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Major LG3 haplotype effects show increased beta-carotene coupled with reduced starch/dry matter."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly frames PSY as a cis-acting major locus interacting with IbOr; it also states expression of PSY alone does not explain carotenoid accumulation because both parents express it."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion/Conclusion explicitly mention functional markers, haplotype mining, and gene editing implications for candidate genes including PSY."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq covered 10–50 DAT root stages, and phenotype mapping used multiple environments in Peru/Uganda."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Plastid localization is not stated in this paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.5.1.32",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "two molecules of geranylgeranyl diphosphate (GGPP)",
+          "new_value": "NA",
+          "reason": "GGPP substrate is not stated in this paper."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "15-cis-phytoene",
+          "new_value": "NA",
+          "reason": "15-cis-phytoene is not stated in this paper."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Condenses two molecules of GGPP to form phytoene, initiating carotenoid biosynthesis.",
+          "new_value": "NA",
+          "reason": "Specific reaction chemistry is not described in the paper."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Plastid",
+          "new_value": "NA",
+          "reason": "Plastid localization is not stated in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 5,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "LCYB",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly identify lycopene beta-cyclase as itf04g32080."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Gene is discussed in sweetpotato."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper is on Ipomoea batatas."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied analyses concern sweetpotato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicit from title."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression comparisons were between Beauregard and Tanzania."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Population was Beauregard × Tanzania F1."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly names it lycopene beta-cyclase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "Being a lycopene cyclase family member is biologically plausible but not stated in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper lists it among genes involved in carotenoid biosynthesis and metabolism."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "The specific label 'beta-carotene branch' is not used in the paper, though it is inferable from the enzyme function."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not classify the step as 'midstream branch-forming'."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper does not present LCYB as rate-limiting; 'not established' is consistent with the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly says lycopene beta-cyclase converts lycopene into beta-carotene."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states conversion into beta-carotene."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly supported by Discussion statement that it converts lycopene into beta-carotene."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly states it converts lycopene to beta-carotene."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Beta-carotene is the target nutrient trait."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Beta-carotene is treated as a carotenoid throughout the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper focuses on beta-carotene accumulation in storage roots."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Beta-carotene is described as provitamin A."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Paper says it underlies FC QTL and is down-regulated in Beauregard vs Tanzania at 30 and 50 DAT storage roots, but this does not straightforwardly support 'supports beta-carotene formation' in Beauregard because the reported direction is opposite of expectation."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state it is down-regulated between Beauregard and Tanzania in 30 and 50 DAT storage roots."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper supports positional candidacy, RNA-seq differential expression, and prior association with flesh color."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are explicitly stated in Results."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "QTL mapping and RNA-seq are both part of the study."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper treats LCYB as an additional carotenoid candidate, not the main driver compared with PSY and Or."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses candidate genes generally for breeding/engineering, but does not specifically prioritize LCYB in combination with PSY and IbOr."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Evidence comes from root developmental stage comparisons."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Plastid localization is not stated in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "5.5.1.19",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper."
+        },
+        {
+          "field": "Core_Phenotypic_Effect",
+          "old_value": "Supports β-carotene formation; gene underlying flesh-color-related QTL and is downregulated in Beauregard versus Tanzania at selected storage-root stages.",
+          "new_value": "NA",
+          "reason": "Paper says it underlies FC QTL and is down-regulated in Beauregard vs Tanzania at 30 and 50 DAT storage roots, but this does not straightforwardly support 'supports beta-carotene formation' in Beauregard because the reported direction is opposite of expectation."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Plastid",
+          "new_value": "NA",
+          "reason": "Plastid localization is not stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 3,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "PDS",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly identify 15-cis-phytoene desaturase as itf03g06560."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussed in sweetpotato candidate gene set."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper is on Ipomoea batatas."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Study applies to sweetpotato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicit from title."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Candidate gene evaluation is in Beauregard and Tanzania expression datasets."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Population is Beauregard × Tanzania F1."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly call it 15-cis-phytoene desaturase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme name itself supports phytoene desaturase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is listed among genes involved in carotenoid biosynthesis and metabolism."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "The specific phrase 'core carotenoid pathway' is not used, though broadly consistent."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not describe PDS as 'upstream-to-midstream'."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper does not say PDS is rate-limiting; 'not established' fits the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Substrate is not stated in this paper."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Product/intermediate zeta-carotene is not stated in this paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Specific reaction chemistry is not described in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "As a carotenoid biosynthesis gene, connection to beta-carotene as downstream product is directly inferable."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Beta-carotene is the focal metabolite."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Beta-carotene is a carotenoid in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The trait is measured in storage roots."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Beta-carotene is described as a provitamin A nutrient."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly identify it as one of three other genes involved in carotenoid biosynthesis/metabolism underlying carotenoid-related QTL."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Evidence is positional candidacy under carotenoid-related QTL."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements accurately reflect the paper's limited treatment of PDS as an additional, not primary, candidate."
+        },
+        "Omics_Data": {
+          "verdict": "UNCERTAIN",
+          "reason": "QTL mapping supports candidacy, but the paper does not specifically describe a gene-specific RNA-seq finding for PDS in the text."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper indeed presents PDS as a secondary/background candidate with weaker evidence than PSY and Or."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "General candidate-gene breeding/engineering implications are discussed, but not specifically for PDS."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Plastid localization is not stated in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.3.99.31",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper."
+        },
+        {
+          "field": "Metabolic_Step_Position",
+          "old_value": "upstream-to-midstream",
+          "new_value": "NA",
+          "reason": "The paper does not describe PDS as 'upstream-to-midstream'."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "15-cis-phytoene",
+          "new_value": "NA",
+          "reason": "Substrate is not stated in this paper."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "ζ-carotene intermediates",
+          "new_value": "NA",
+          "reason": "Product/intermediate zeta-carotene is not stated in this paper."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Desaturates phytoene in the carotenoid pathway toward downstream colored carotenoids.",
+          "new_value": "NA",
+          "reason": "Specific reaction chemistry is not described in the paper."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Plastid",
+          "new_value": "NA",
+          "reason": "Plastid localization is not stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 6,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "VDE",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly identify violaxanthin de-epoxidase as itf03g11440."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussed in sweetpotato candidate genes."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper is on Ipomoea batatas."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Study is in sweetpotato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicit from title."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Candidate gene context uses Beauregard and Tanzania expression data."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Population is Beauregard × Tanzania F1."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly name violaxanthin de-epoxidase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not provide an EC number."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme name itself supports this designation."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper includes it among carotenoid biosynthesis/metabolism genes."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "Specific wording 'xanthophyll cycle / downstream beta-carotene-derived branch' is not used in the paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly places violaxanthin de-epoxidase in a downstream product branch of beta-carotene degradation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper does not claim VDE is rate-limiting; 'not established' is consistent."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly says it catalyzes conversion of violaxanthin into antheraxanthin."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states antheraxanthin as product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly stated in Discussion."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly treats it as downstream of beta-carotene degradation products."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Beta-carotene is the focal nutrient product."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Beta-carotene is a carotenoid in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Trait focus is in storage roots."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Beta-carotene is described as provitamin A."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly highlight VDE as another gene underlying carotenoid-related QTL."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Support is positional candidacy under carotenoid-related QTL."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points match the paper: under QTL, downstream carotenoid metabolism, secondary candidate relative to PSY and Or."
+        },
+        "Omics_Data": {
+          "verdict": "UNCERTAIN",
+          "reason": "QTL mapping supports candidacy, but the paper does not textually report a VDE-specific RNA-seq result."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The proposed flux-diversion effect is not tested or shown in this paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper indeed provides positional rather than direct functional validation for this gene."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "General candidate gene applications are discussed, but not specifically for VDE as a modifier target."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Plastid localization is not stated in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.23.5.1",
+          "new_value": "NA",
+          "reason": "The paper does not provide an EC number."
+        },
+        {
+          "field": "Potential_Tradeoffs",
+          "old_value": "May divert downstream carotenoid flux away from β-carotene-derived retention, but not directly tested here.",
+          "new_value": "NA",
+          "reason": "The proposed flux-diversion effect is not tested or shown in this paper."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Plastid",
+          "new_value": "NA",
+          "reason": "Plastid localization is not stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 3,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "Or",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly identify the Or homolog as itf12g24270."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study concerns sweetpotato and a sweetpotato Or homolog (IbOr)."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper title gives Ipomoea batatas."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Analyses are in sweetpotato."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicit from title."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression profiling compares Beauregard and Tanzania."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Population is Beauregard × Tanzania F1."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper describes Or as regulating PSY and as a molecular switch for chromoplast biogenesis; post-transcriptional regulation is discussed from cited literature."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper calls it Orange/ORANGE protein, but does not mention 'DnaJ-like zinc finger cofactor family'."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The linked nutrient trait is beta-carotene."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Beta-carotene is a carotenoid in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper discusses carotenoid accumulation in storage roots."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Beta-carotene is described as provitamin A."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly says Or is responsible for chromoplast biogenesis and carotenoid accumulation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract/Discussion conclude that Or enhances chromoplast biogenesis and carotenoid accumulation and contributes to the negative association with starch."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state it is highly expressed in both parents throughout the time course and is not differentially expressed under the log2fc cutoff."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper supports this with major QTL colocalization, positional candidacy near the peak, RNA-seq profiling, and cited prior sweetpotato functional evidence."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper states Or acts on and regulates PSY to allow amyloplast-to-chromoplast modification; chromoplast biogenesis machinery is directly implied."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states Or is known for post-transcriptional regulation of PSY protein level and enzyme activity and promotes chromoplast biogenesis."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNCERTAIN",
+          "reason": "Paper supports enhancement of PSY function/activity and carotenoid accumulation, but 'acts pleiotropically with PSY' is an interpretive synthesis rather than a directly demonstrated gene-target regulation statement."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper explicitly describes Or as the molecular switch for chromoplast biogenesis and indicates it is the major gene associated with carotenoid/starch accumulation at LG12."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Interaction with PSY/IbPSY is discussed from literature cited in the paper and used to interpret results."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper cites literature reporting interaction with PSY protein, though not a named complex."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Developmental root differentiation is part of the experimental context, but the paper does not explicitly define upstream signals to Or; sequence haplotype variation is inferred, not shown."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links favorable haplotypes for beta-carotene with reduced starch at major QTL and discusses Or with PSY in that coordinated tradeoff."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed statements are directly consistent with Results/Discussion."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "GBSpoly genotyping and RNA-seq were used."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq spans 10–50 DAT root development; multi-environment phenotyping supported QTL mapping."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Plastid localization is not stated in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper indeed treats Or as a principal candidate despite lack of DE and discusses possible causal sequence variation analogous to the golden SNP in other species."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion/Conclusion explicitly support haplotype-assisted breeding, marker development, and gene editing for reported candidate genes including Or."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "ORANGE protein, DnaJ-like zinc finger cofactor family",
+          "new_value": "NA",
+          "reason": "The paper calls it Orange/ORANGE protein, but does not mention 'DnaJ-like zinc finger cofactor family'."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Plastid",
+          "new_value": "NA",
+          "reason": "Plastid localization is not stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 2,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 177,
+    "supported": 142,
+    "unsupported": 20,
+    "uncertain": 15,
+    "total_corrections": 20
+  }
+}

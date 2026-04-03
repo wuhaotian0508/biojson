@@ -1,0 +1,594 @@
+{
+  "file": "MinerU_markdown_PMC12010376_2038800630146965510",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12010376_2038800630146965510.md",
+  "timestamp": "2026-03-31T21:45:22.495763",
+  "genes": [
+    {
+      "gene_name": "OsMetAP1A",
+      "category": "Common",
+      "verification": {
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is in rice, and experiments involving OsMetAP1A were conducted in the rice context, though some assays used tobacco transient expression."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice in the paper is Oryza sativa; this is explicitly indicated in phylogeny/species abbreviations and standard for the study organism."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The WT rice background is stated as 'Shishoubaimao' (SSBM) in Methods and figure labels."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsMetAP1A is a rice gene, as indicated by the Os prefix and rice experiments."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species for OsMetAP1A is rice, i.e. Oryza sativa."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "OsMetAP1A is described as encoding a Met excision enzyme; MetAP denotes methionine aminopeptidase."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper centers on basal salicylic acid (SA) as the relevant end metabolite linked to this pathway context."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "SA is a phytohormone and phenolic acid; this classification is consistent with the paper's subject matter."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper measures SA/SAG in plants and discusses root-specific phenotypes, but does not explicitly define 'root tissues' as the accumulation site for OsMetAP1A-linked SA."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The study concludes that basal SA supports root growth and abiotic stress response through repression of the PRT6 N-degron pathway."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 4A and 4C show increased expression of OsMetAP1a in Osaim1 roots and after AIP treatment."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC/co-IP assays required OsMetAP1A co-expression for OsPRT6-substrate interaction detection, and OsMetAP genes were upregulated under low-SA conditions; this summary matches the Results."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are supported: OsMetAP1A was required in BiFC/co-IP setup, OsMetAP gene expression increased in low-SA conditions, and free N termini increased in Osaim1."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "OsMetAP1A was examined in the low-SA Osaim1 background and under AIP treatment."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper used qPCR, BiFC, co-IP, and free N-termini quantification in relation to OsMetAP1A/pathway activity."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state construction of 35S-OsMetAP1A-RFP for transient assays."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "OsMetAP1A was co-expressed to enable OsPRT6 interactions with OsERF66 and OsWRKY62/76, but the paper did not directly demonstrate physical binding of OsMetAP1A itself to all listed proteins."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible interpretation, but the paper does not discuss OsMetAP1A as an engineering target."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The statement is biologically reasonable, but no pleiotropy of manipulating OsMetAP1A was tested or discussed in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly suggests OsMetAP1A could cleave initiating Met of Met-Asp N-termini, noting this unusual feature in this system."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 16,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "OsAIM1",
+      "category": "Pathway",
+      "verification": {
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsAIM1 was studied in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice is Oryza sativa in this study."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The WT/background is Shishoubaimao (SSBM), stated in Methods and figures."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsAIM1 is a rice gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Oryza sativa."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The Osaim1 mutant is in the Shishoubaimao (SSBM) background."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The prior cited work defines AIM1 as ABNORMAL INFLORESCENCE MERISTEM1, and the paper refers to OsAIM1-dependent SA biosynthesis."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states OsAIM1 is involved in SA biosynthesis but does not explicitly describe it here as a 'Peroxisomal AIM1-family enzyme'."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states OsAIM1-dependent SA biosynthesis is required to maintain basal SA levels."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "OsAIM1 is presented as required for biosynthesis of the target metabolite SA."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "OsAIM1 is directly linked to salicylic acid biosynthesis in the paper."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to OsAIM1-dependent/basal SA biosynthesis route."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The metabolite affected is salicylic acid."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "OsAIM1 is upstream of SA accumulation and of OsPRT6 pathway effects."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The value says 'not established,' which is consistent with the paper not establishing rate limitation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SA is the focal terminal metabolite."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "SA is a phytohormone/phenolic acid."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state aerial parts and roots were collected separately for metabolite measurement, supporting roots and aerial parts as measured compartments."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and introduction state basal SA maintains root meristem activity/root growth and abiotic stress response, with ROS homeostasis implicated."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Osaim1 mutant analysis, SA measurements, and suppressor analysis are all central methods in the paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Osaim1 was analyzed under normal growth and salt stress; AIP treatment was used as SA-biosynthesis inhibition context."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq of root tips is described, and BioProject PRJNA1131484 is explicitly given."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three statements reflect the Results and prior context used in this paper: OsAIM1 maintains basal SA, loss causes short roots/ROS and stress defects, and reduced SA activates OsPRT6 pathway."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly shows/states loss of OsAIM1 reduces basal SA and impairs root growth and stress tolerance."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable application inference, but the paper does not explicitly propose breeding/engineering of OsAIM1."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports short-root defects and increased salt sensitivity in Osaim1 when basal SA is reduced."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects that OsAIM1 sets the metabolic context, while the paper's main mechanistic focus is downstream OsPRT6 regulation."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 25,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "OsPRT6",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies OsPRT6 as LOC_Os01g05500."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsPRT6 was studied in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice is Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "WT/background is Shishoubaimao (SSBM)."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsPRT6 is a rice gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Oryza sativa."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was studied in the SSBM rice background."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states OsPRT6 encodes an E3 ligase and key component of the Arg/N-degron pathway."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "OsPRT6 is described as an E3 ligase similar to AtPRT6, and the UBR domain is specifically mentioned for the N-terminal fragment."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "PRT6-mediated ubiquitination/degradation of N-degron substrates is a core mechanism described and tested."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results identify OsWRKY62 and OsWRKY76 as downstream targets/substrates of OsPRT6."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Interaction and degradation assays support promotion of OsWRKY62/76 protein degradation; root growth/stress phenotypes are linked downstream."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links OsPRT6 to SA-linked regulation of ROS homeostasis, root growth, and stress response via protein turnover."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The study concludes basal SA represses the OsPRT6 pathway and reduced SA activates it."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Low SA in Osaim1 and by AIP treatment increased expression/activity of N-degron pathway genes."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SA is the metabolite whose basal level regulates this pathway."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "SA is a phytohormone/phenolic acid."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state metabolites were measured separately in roots and aerial parts."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows basal SA supports root growth, ROS balance, and abiotic stress tolerance."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of OsPRT6 partially rescued Osaim1 short roots and salt sensitivity, and Osprt6 alone showed enhanced salt tolerance."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes OsPRT6 as a key downstream executor activated when SA is reduced, contributing to the phenotype."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "qPCR showed expression in roots, shoot bases, leaves, leaf sheaths, and panicles."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GUS showed expression in actively dividing cells such as root tips, young leaves, and lateral root primordia; qPCR showed increased expression in Osaim1."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods were used for OsPRT6: EMS suppressor mapping, MutMap, CRISPR, co-segregation, qPCR, GUS, degradation assays, and salt-stress assays."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "OsPRT6 interaction with OsWRKY62/76 was shown; OsMetAP1A was required in the assay context and functionally connected."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper treats OsPRT6 as an N-recognin E3 ligase in the Arg/N-degron pathway, not as part of a named stable complex."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "OsPRT6 was studied under salt stress, low-SA Osaim1 condition, and AIP treatment context."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "ProOsPRT6:GUS is explicit; CRISPR mutant alleles are explicit; native genomic fragment transformation attempt is also described."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq of root tips and BioProject PRJNA1131484 are explicitly stated."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points are directly supported by Results figures and text."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable translational inference, but the paper does not explicitly frame OsPRT6 manipulation as a breeding strategy."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports Ossra1-1 had shorter shoots than WT, supporting developmental tradeoff concerns."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly shows PRT6 ortholog conservation and argues conservation of SA-mediated repression of the PRT6 pathway."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 32,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "OsWRKY62",
+      "category": "Regulation",
+      "verification": {
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsWRKY62 is a rice gene analyzed in this rice-focused study."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice experiments use the SSBM background."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsWRKY62 is from rice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Oryza sativa."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "OsWRKY62 is a WRKY transcription factor identified here as an N-degron substrate."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene name itself and prior literature context indicate WRKY transcription factor."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports OsPRT6-dependent destabilization of OsWRKY62, with slower degradation in Osprt6 extracts and for D2A mutant protein."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links OsWRKY62/76 downstream to root growth and ROS-related responses, while not identifying direct target genes."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "OsWRKY62 is placed in SA-linked regulation affecting ROS homeostasis and root growth."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Basal SA is shown to repress OsPRT6 pathway activity, thereby indirectly affecting OsWRKY62 stability."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SA is the metabolite anchoring this regulatory pathway."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "SA is a phytohormone/phenolic acid."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Root tissues are relevant to phenotype, but the paper does not explicitly assign OsWRKY62 to SA accumulation sites."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper demonstrates root growth and abiotic stress roles for basal SA generally, but OsWRKY62 itself was not directly tied to abiotic stress tolerance in Results."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "OsWRKY62 is shown as a direct downstream target of OsPRT6, but its specific contribution to root growth maintenance is inferred rather than directly phenotyped in transgenic or mutant plants in this paper."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "As a validated substrate in the SA-PRT6 module, OsWRKY62 is supported as part of the downstream connection to root-growth outputs."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC and cell-free degradation assays with D2A comparison and different extracts were performed for OsWRKY62."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "OsPRT6 interaction with OsWRKY62 was shown in BiFC, with OsMetAP1A required in the assay context."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "OsWRKY62 stability was studied under normal growth and low-SA Osaim1 extract conditions."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points match the Results: MetAP1A-dependent interaction, slower degradation of D2A, and bona fide substrate behavior."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is speculative; the paper does not propose engineering OsWRKY62 alleles for crop improvement."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes OsWRKY62 was still partially degraded in Osprt6 extracts, implying parallel degradation systems and complexity."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly highlights the unusual Asp at position 2 and suggests low-efficiency Met excision by OsMetAP1A."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 20,
+        "unsupported": 0,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "OsWRKY76",
+      "category": "Regulation",
+      "verification": {
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsWRKY76 is a rice gene analyzed in this study."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The rice background used is SSBM."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsWRKY76 is from rice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Oryza sativa."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "OsWRKY76 is a WRKY transcription factor and is identified here as an N-degron substrate."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "It is a WRKY transcription factor by gene identity and paper context."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC and co-IP showed residue-specific recognition by OsPRT6, and D2A disrupts recognition."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places OsWRKY76 downstream in root growth/ROS-related responses, while direct targets were not identified."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "OsWRKY76 is connected to SA-linked regulation of ROS homeostasis and root growth."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Basal SA represses OsPRT6 pathway activity, indirectly affecting OsWRKY76 stability."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SA is the focal metabolite linked to this regulatory module."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "SA is a phytohormone/phenolic acid."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Root tissues are where phenotypes were assessed, but this exact SA accumulation site statement is not explicit for OsWRKY76."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports basal SA roles in root growth and abiotic stress generally, but OsWRKY76 was directly tested only for root-growth rescue, not abiotic stress tolerance."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly shows degradation-resistant OsWRKY76-D2A partially rescues Osaim1 root growth defect."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "OsWRKY76 is validated as a direct downstream substrate mediating part of the SA-PRT6 effect on root growth."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Supplemental Figure 8 is described as showing similar OsWRKY76 transcript levels in root tips of transgenic lines and Osaim1."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC, co-IP, native-promoter OsWRKY76-D2A transgenics, and root phenotype analysis were all used."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "OsWRKY76 interacted with OsPRT6 in BiFC/co-IP in an OsMetAP1A-dependent assay setup."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was studied under normal growth and low-SA Osaim1 background."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly state OsWRKY76-D2A driven by its native promoter was transformed into Osaim1."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements are directly supported by Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is an extrapolated application; the paper does not explicitly propose it."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes that only partial rescue was observed, implying other OsPRT6 substrates are involved."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states OsWRKY62 and OsWRKY76 were previously reported to participate in root SA signaling and ROS accumulation, and here OsWRKY76 is positioned as a direct OsPRT6 substrate."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 130,
+    "supported": 116,
+    "unsupported": 0,
+    "uncertain": 14,
+    "total_corrections": 0
+  }
+}

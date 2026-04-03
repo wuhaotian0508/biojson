@@ -1,0 +1,599 @@
+{
+  "file": "MinerU_markdown_PMC9342611_2038794088060321802",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC9342611_2038794088060321802.md",
+  "timestamp": "2026-03-31T17:37:29.309878",
+  "genes": [
+    {
+      "gene_name": "SDH1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SDH1 was assayed in maize developing endosperm/mitochondria from o18-1 and WT kernels, so the source species is maize."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies maize, explicitly identified as Zea mays L."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All SDH1-related assays were performed in maize mutant and WT kernels/endosperm."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is the study species, Zea mays."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "SDH1 is discussed as a downstream flavoprotein affected by riboflavin/FAD deficiency, but the paper does not present SDH1 as being linked to accumulation of the final nutrient product riboflavin itself."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Because SDH1 is not directly shown to control a terminal vitamin product, assigning the metabolite class as vitamin for this gene is not directly supported."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Riboflavin was measured in developing seeds/endosperm, but SDH1 itself was analyzed in mitochondria/endosperm; the field ties SDH1 to riboflavin accumulation site only indirectly."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 5 and text identify SDH1 as the flavinylated subunit associated with mitochondrial complex II, i.e. the succinate dehydrogenase flavoprotein subunit."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "SDH1 is analyzed as a mitochondrial protein/subunit of complex II in Figure 5."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state that complex II activity was severely reduced in o18-1, presumably due to lack of FAD insertion into SDH1, and in-gel fluorometry showed decreased SDH1 flavinylation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 5 uses in-gel fluorometry for flavinylation, immunoblot for SDH1 abundance, and complex II activity assay."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly reflected in Figure 5/text: reduced SDH1 flavinylation, reduced SDH1 abundance/complex II activity, and SDH1 as a downstream flavoprotein connecting flavin supply to respiration."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "SDH1 is indeed not the causal gene; it is experimentally examined as a downstream target in the o18/riboflavin-deficiency phenotype."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "SDH1-related assays were performed in developing endosperm/mitochondria at 15–18 DAP in the o18 riboflavin-deficient background."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "riboflavin",
+          "new_value": "NA",
+          "reason": "SDH1 is discussed as a downstream flavoprotein affected by riboflavin/FAD deficiency, but the paper does not present SDH1 as being linked to accumulation of the final nutrient product riboflavin itself."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "vitamin",
+          "new_value": "NA",
+          "reason": "Because SDH1 is not directly shown to control a terminal vitamin product, assigning the metabolite class as vitamin for this gene is not directly supported."
+        }
+      ],
+      "stats": {
+        "supported": 11,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "CDKA;1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CDKA;1 was assayed in maize kernels/endosperm."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper's maize species is Zea mays L."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CDKA;1 data come from maize WT and o18 kernels."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Zea mays."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "CDKA;1 is linked to cell-cycle consequences of o18, not directly to a terminal nutrient product accumulation such as riboflavin."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not establish CDKA;1 as a vitamin-metabolism gene affecting riboflavin accumulation."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Developing endosperm is where CDKA;1 was tested, and riboflavin was measured in seeds/endosperm, but CDKA;1 is not directly tied to metabolite accumulation there."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CDKA;1 is explicitly a cyclin-dependent kinase in the Results/discussion context."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 6d shows reduced CDKA;1 protein in o18, associated with G1/S defects and endoreduplication impairment."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses immunoblotting for CDKA;1, flow cytometry for cell-cycle/endoreduplication, and qRT-PCR of cell-cycle genes."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each statement matches Figure 6 and corresponding text: reduced CDKA;1 protein, correlation with G1/S arrest and reduced endoreduplication, and placement in a downstream cell-cycle pathway affected by riboflavin deficiency."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "CDKA;1 is treated as a downstream effector rather than the causal metabolic gene."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "CDKA;1 was analyzed in developing kernels at 10 and 15 DAP in the o18 mutant background."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "riboflavin",
+          "new_value": "NA",
+          "reason": "CDKA;1 is linked to cell-cycle consequences of o18, not directly to a terminal nutrient product accumulation such as riboflavin."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "vitamin",
+          "new_value": "NA",
+          "reason": "The paper does not establish CDKA;1 as a vitamin-metabolism gene affecting riboflavin accumulation."
+        }
+      ],
+      "stats": {
+        "supported": 10,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "RBR1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RBR1 was tested in maize kernels/endosperm."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study species is Zea mays L."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All RBR1 assays were on maize WT and o18 kernels."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Zea mays."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "RBR1 is a downstream cell-cycle regulator; the paper does not directly link RBR1 to the final nutrient product riboflavin accumulation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "As with CDKA;1, assigning a vitamin terminal metabolite to RBR1 is not directly supported."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "RBR1 is assayed in developing kernels/endosperm, but not as a determinant of riboflavin accumulation at that site."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "RBR1 is explicitly described as retinoblastoma-related1."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 6d and text state that RBR1 levels were significantly reduced in o18, linking to cell-cycle control."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Immunoblotting is used for RBR1 levels; transcriptome/heat map of RBR1 targets and flow cytometry support associated cell-cycle defects."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The three summary points are consistent with Figure 6d, Figure S11, and the cell-cycle analyses."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "RBR1 is not the causal gene but was directly assayed as a downstream node."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "RBR1 was assessed in developing kernels at 10–15 DAP in the o18 mutant background."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "riboflavin",
+          "new_value": "NA",
+          "reason": "RBR1 is a downstream cell-cycle regulator; the paper does not directly link RBR1 to the final nutrient product riboflavin accumulation."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "vitamin",
+          "new_value": "NA",
+          "reason": "As with CDKA;1, assigning a vitamin terminal metabolite to RBR1 is not directly supported."
+        }
+      ],
+      "stats": {
+        "supported": 10,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "LSD1-like proteins",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses and analyzes maize LSD1-like genes/proteins in maize."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is maize, Zea mays."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant assays and inferences are from maize o18 kernels."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Zea mays."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper frames LSD1-like proteins as FAD-dependent and affected by riboflavin deficiency, but does not directly test them against terminal metabolite accumulation. 'FAD/riboflavin' is broader than directly shown."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Riboflavin is a vitamin and FAD is a derivative cofactor, but the specific metabolite assignment to LSD1-like proteins is inferential rather than directly demonstrated."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Relevant work was in developing endosperm at 15 DAP, but LSD1-like proteins were not directly shown to alter accumulation of FAD/riboflavin there."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to LSD1-like proteins as FAD-dependent H3K4 demethylases/lysine-specific demethylases."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state increased H3K4me3 in o18 was most likely caused by functional impairment of LSD1-like proteins in maize, due to FAD deficiency."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "H3K4me3 immunoblot and ChIP-qPCR were performed, and inference from FAD dependence plus LSD1-like gene analysis is explicitly used."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the paper's proposed mechanism, while remaining phrased as a proposal/consistency rather than direct proof."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not mutate specific maize LSD1-like genes; their involvement is inferred from FAD dependence and epigenetic data."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant analyses were conducted in developing endosperm at 15 DAP in the FAD-deficient o18 background."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 10,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "O18",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The causal gene for o18 is identified as Zm00001d016902 in the positional cloning section."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "O18 is a maize gene studied in this paper."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Maize is explicitly given as Zea mays L."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Different assays used different maize backgrounds/inbred lines (W64A introgression, W22 tissues, B73 cDNA for localization). The combined field value is a synthesis rather than a single paper-stated source variety designation."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "O18 was tested in maize, and also overexpressed in Arabidopsis for some assays; however for the main gene entry the applied species maize is supported for the core study."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The main applied species in the core findings is Zea mays."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states W64A introgression background for o18-1 and KN5585 for CRISPR transformations."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly mention a maize UBQ promoter in the UBQ::O18 construct and Pro35S:O18-GFP / 35S::O18-GFP constructs for localization/Arabidopsis overexpression."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "O18 is directly shown to be required for riboflavin biosynthesis, and riboflavin levels were quantified."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Riboflavin is vitamin B2, explicitly discussed as a vitamin."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states riboflavin is a precursor of FMN and FAD required for respiration/energetics and links overexpression to osmotic tolerance and seed development."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Riboflavin was measured in developing endosperm/seeds, and biosynthesis/localization was assigned to plastids/chloroplasts."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "O18 is shown to initiate riboflavin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states O18 has GCH II and DHBPS activities that initiate the pathway, i.e. the entry reactions of de novo riboflavin biosynthesis."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results identify O18/ZmRIBA1 as a bifunctional GTP cyclohydrolase II / 3,4-dihydroxy-2-butanone 4-phosphate synthase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Specific EC numbers 3.5.4.25 and 4.1.99.12 do not appear in the paper text provided."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 4a explicitly gives GCH II (PF00925) and DHBPS (PF00926) domains in O18."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "O18-GFP was localized to chloroplast/plastid; the summary and results describe plastid/chloroplast localization."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Public RNA-seq data showed constitutive expression in many tissues, with high expression of O18/ZmRIBA1 in developing leaves."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The same maize expression analyses support constitutive expression including kernels and other tissues."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state GCH II catalyzes the first step from GTP and DHBPS converts ribulose-5-phosphate to its product."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The specific products of GCH II and DHBPS are explicitly named in the Results."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an accurate synthesis of the two initial branch reactions described in the Results."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "O18 is described as initiating riboflavin biosynthesis and as rate-limiting."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of O18 nearly abolishes riboflavin accumulation, directly connecting it to riboflavin biosynthesis."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The Summary explicitly calls O18/ZmRIBA1 a rate-limiting bifunctional enzyme."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper includes developing seeds, riboflavin feeding, mannitol osmotic stress, and NaCl stress assays."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq differential expression at 18 DAP and public maize RNA-seq expression datasets are explicitly mentioned; no accession is given, matching the field."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly used in the paper for O18 validation and characterization."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed phenotypic effects are directly supported by results: riboflavin/FMN/FAD reduction, mitochondrial defects, defective filling, increased lysine, and overexpression effects."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These five points accurately summarize major Results supported by Figures 3–7."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper suggests o18 as high-lysine germplasm and shows overexpression increases riboflavin and osmotic tolerance, but the broader biofortification/engineering framing is an extrapolation beyond directly demonstrated application."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss-of-function tradeoffs and lack of salt-tolerance effect in overexpressors are directly shown/discussed."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "G185 essentiality, indirect lysine increase via reduced zein, and naming as O18/ZmRIBA1 are directly supported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "3.5.4.25; 4.1.99.12",
+          "new_value": "NA",
+          "reason": "Specific EC numbers 3.5.4.25 and 4.1.99.12 do not appear in the paper text provided."
+        }
+      ],
+      "stats": {
+        "supported": 31,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "AtRIBA1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AtRIBA1 refers to Arabidopsis thaliana and was experimentally tested in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly uses Arabidopsis thaliana."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The WT ecotype is stated to be Columbia (Col-0)."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CRISPR/Cas9 knockout analysis was conducted in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The Arabidopsis WT used was Col-0."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AtRIBA1 is discussed as the only active bifunctional enzyme in Arabidopsis riboflavin biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Riboflavin is a vitamin."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses riboflavin as precursor of FMN/FAD and uses AtRIBA1 knockout to support a requirement for seed development."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper mentions leaf phenotypes from previous studies and seed abortion in CRISPR mutants, but does not directly measure riboflavin accumulation in specific Arabidopsis seed/leaf tissues here."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AtRIBA1 is discussed in the context of riboflavin biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "As a bifunctional RIBA enzyme, it catalyzes the initial entry reactions of the pathway, as discussed comparatively."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The comparative discussion identifies AtRIBA1 as a bifunctional GCH II-DHBPS enzyme."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Specific EC numbers are not stated in the paper for AtRIBA1."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "AtRIBA1 is described comparatively as a bifunctional RIBA enzyme, though domain labels are not detailed for AtRIBA1 specifically."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The substrates of the bifunctional RIBA enzyme activities are described generally in the Results and apply to AtRIBA1 by direct comparison."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact Arabidopsis-specific products are not explicitly stated for AtRIBA1 in its own experiment; this is inferred from general RIBA biochemistry."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is consistent with the comparative description of RIBA function in Arabidopsis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "AtRIBA1 is discussed as the only active bifunctional enzyme acting at the initial step of riboflavin biosynthesis."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper treats AtRIBA1 as required for direct riboflavin biosynthesis."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper explicitly calls O18 rate-limiting and cites prior Arabidopsis work; for AtRIBA1 in this paper it is clearly the only active bifunctional enzyme, but 'rate-limiting' is not directly stated for this gene here."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "CRISPR/Cas9 knockout analysis in seeds is directly reported."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 7c,d show CRISPR/Cas9-edited alleles and aborted-seed phenotype analysis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states that knockout mutants showed aborted seeds, supporting conserved seed-development roles of RIBA genes."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements accurately summarize the AtRIBA1 comparative Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This application-oriented interpretation is reasonable but not directly presented as such in the Results."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Knockout leading to aborted seeds/seed lethality is directly shown."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "AtRIBA1 was directly manipulated in the Results as cross-species validation rather than the primary maize target."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "3.5.4.25; 4.1.99.12",
+          "new_value": "NA",
+          "reason": "Specific EC numbers are not stated in the paper for AtRIBA1."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 115,
+    "supported": 95,
+    "unsupported": 8,
+    "uncertain": 12,
+    "total_corrections": 8
+  }
+}

@@ -1,0 +1,1244 @@
+{
+  "file": "MinerU_markdown_PMC10510385_2038801689426821121",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC10510385_2038801689426821121.md",
+  "timestamp": "2026-03-31T21:35:44.586620",
+  "genes": [
+    {
+      "gene_name": "RpBAS",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "BAS is explicitly referred to as benzalacetone synthase in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly state that BAS is a type III polyketide synthase."
+        },
+        "Source_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper uses the gene name RpBAS but does not spell out the source species as Rheum palmatum in the provided text."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Rheum palmatum does not appear in the paper text provided."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RpBAS was tested in both Nicotiana benthamiana and Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Nicotiana benthamiana and Saccharomyces cerevisiae are explicitly used experimentally."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The plant material is wild type N. benthamiana and yeast work uses H4590/H5304-derived strains listed in Table 2."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "RpBAS is used as a key pathway gene for raspberry ketone formation throughout the Results."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links BAS to the coumaroyl-CoA to raspberry ketone route and discusses 4CL-BAS channeling of coumaroyl-CoA."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "BAS acts between coumaroyl-CoA formation and final raspberry ketone accumulation, so midstream is directly inferable."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "Coumaroyl-CoA is clearly implicated, but the exact substrate pair 'p-coumaroyl-CoA; malonyl-CoA' is not explicitly stated in this paper text."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The discussion references reduction of 4-hydroxybenzalacetone to raspberry ketone, implying BAS makes it, but this exact BAS product assignment is not directly stated in Results."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "This reaction description is biochemically plausible and partly inferable, but not explicitly described in the provided paper text."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "BAS is used to generate the precursor branch leading to raspberry ketone; RiZS1/endogenous reductases then complete formation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper strongly supports that fusion to 4CL improves productive flux, but it does not explicitly label RpBAS itself as a rate-limiting or control step."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The tested product is raspberry ketone."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Raspberry ketone is presented as a flavor compound, but the paper does not explicitly classify it as a 'phenylpropanoid flavor compound'."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract states raspberry ketone is of interest as a flavor agent and health promoting supplement."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "In tobacco, raspberry ketone accumulated mainly as glucosides in leaves; in yeast it was measured from culture samples/supernatant extracts."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization for RpBAS is experimentally shown in the paper."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RpBAS was transiently expressed in tobacco and constitutively engineered in yeast strains."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show natural RpBAS outperformed RpBAS(S331V) in both tobacco and yeast, especially in 4CL fusions."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are directly reflected in the paper: transient expression, yeast engineering, gene fusion, and GC-MS metabolite analysis."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These treatment contexts are explicitly described; pH effects are discussed as a possible explanation."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "At4CL1/Pc4CL and RiZS1 are coexpressed or fused with RpBAS, but direct physical protein interaction is not demonstrated."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary matches the Results values: trace/low production alone, 11.3 and 33.5 μg/g in tobacco with natural At4CL-BAS settings, and 61 mg/L fed plus 47 mg/L de novo in yeast with natural BAS."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "SES promoter/bidirectional SES promoters are explicitly described for constructs."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results and Discussion support natural BAS fused to 4CL as the preferred engineering strategy in plants and yeast."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Rhododendrol accumulation and plateauing in de novo yeast are shown/discussed; pH sensitivity is discussed specifically for BAS(S331V), which is part of the comparison."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly states many organisms possess endogenous reductase/BAR activity and that natural RpBAS unexpectedly outperformed the mutant in this study."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "Type III polyketide synthase",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly state that BAS is a type III polyketide synthase."
+        },
+        {
+          "field": "Source_Species",
+          "old_value": "Rheum palmatum",
+          "new_value": "NA",
+          "reason": "The paper uses the gene name RpBAS but does not spell out the source species as Rheum palmatum in the provided text."
+        },
+        {
+          "field": "Source_Species_Latin_Name",
+          "old_value": "Rheum palmatum",
+          "new_value": "NA",
+          "reason": "Rheum palmatum does not appear in the paper text provided."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "cytosol",
+          "new_value": "NA",
+          "reason": "No subcellular localization for RpBAS is experimentally shown in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 4,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "RpBAS(S331V)",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to the mutated BAS(S331V) gene/sequence."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly describe BAS(S331V) as a type III polyketide synthase."
+        },
+        "Source_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The provided text does not explicitly state the species source of RpBAS as Rheum palmatum."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Rheum palmatum is not stated in the provided paper text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant BAS was tested in both tobacco and yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana and Saccharomyces cerevisiae were both experimental hosts."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Wild type N. benthamiana and H4590/H5304-derived yeast strains were used."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant BAS was directly tested in the raspberry ketone pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It participates in the same coumaroyl-CoA to raspberry ketone branch as BAS."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant BAS functions in the intermediate step before final raspberry ketone formation."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact substrate pair is not explicitly stated in this paper text, though inferred from pathway context."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "4-hydroxybenzalacetone is implied as the BAS product via discussion of its reduction, but not directly assigned in Results."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The intended BAS reaction is inferable but not explicitly described in the text provided."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant BAS is intended to form the immediate precursor of raspberry ketone."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper clearly establishes that the mutant is not superior and is inferior to the natural BAS under the tested conditions."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The metabolite measured is raspberry ketone."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper presents raspberry ketone as a flavor compound, but not with this exact class wording."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Flavor agent and health-promoting supplement are stated in the abstract."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Accumulation was measured in tobacco leaves and yeast culture samples."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization experiment or explicit localization statement is given."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant was transiently expressed in tobacco and engineered into yeast strains."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show it supported production but was markedly less effective than natural BAS in both hosts."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These validation approaches are exactly what was done in the paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Agroinfiltration, p-HCA feeding, fermentation, and possible pH dependence are all described."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "These partners were fused or coexpressed with the mutant BAS, but direct protein interaction was not shown."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The values 0.9 μg/g in tobacco, 4.3 and 5.6 mg/L in fed yeast, and 6.3 mg/L in de novo yeast match the Results."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "SES promoter systems are explicitly used."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper's comparative data support lower priority for the mutant than natural BAS."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Lower productivity is shown; possible pH sensitivity is specifically discussed."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion indeed proposes pH dependence, substrate specificity, or structural reasons for the mutant's poor performance."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "Type III polyketide synthase",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly describe BAS(S331V) as a type III polyketide synthase."
+        },
+        {
+          "field": "Source_Species",
+          "old_value": "Rheum palmatum",
+          "new_value": "NA",
+          "reason": "The provided text does not explicitly state the species source of RpBAS as Rheum palmatum."
+        },
+        {
+          "field": "Source_Species_Latin_Name",
+          "old_value": "Rheum palmatum",
+          "new_value": "NA",
+          "reason": "Rheum palmatum is not stated in the provided paper text."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "cytosol",
+          "new_value": "NA",
+          "reason": "No localization experiment or explicit localization statement is given."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 4,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "At4CL1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "At4CL1 is explicitly described as 4-coumaric acid ligase/4CL."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly assign At4CL1 to the acyl-activating enzyme family."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is named At4CL1, and Arabidopsis thaliana is explicitly mentioned elsewhere in the paper; At indicates Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "At4CL1 denotes Arabidopsis thaliana 4CL1, and Arabidopsis thaliana appears in the discussion."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "At4CL1 was used in Nicotiana benthamiana transient expression experiments."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana is explicitly stated."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states wild type N. benthamiana plants were used."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "At4CL1 is used in the raspberry ketone pathway engineering experiments."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states coumaroyl-CoA is the direct precursor and 4CL supplies it."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "4CL functions upstream of BAS in the engineered pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "4CL is explicitly linked to p-coumaric acid/coumaroyl-CoA conversion in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Coumaroyl-CoA is explicitly identified as the direct precursor and the product of 4CL activity in pathway context."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "Activation of p-coumaric acid to p-coumaroyl-CoA is supported, but the explicit mention of CoA and ATP is not given in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "At4CL1 clearly supplies precursor for raspberry ketone biosynthesis."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper emphasizes precursor channeling via the fusion, but does not explicitly call At4CL1 a rate-limiting or key control point."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Raspberry ketone is the product measured."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "This exact class wording is not stated in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Flavor/fragrance and health-promoting supplement are stated."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Tobacco leaves accumulated mostly raspberry ketone glucosides."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization is given for At4CL1."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "At4CL1 was heterologously transiently expressed in infiltrated tobacco leaves."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Separate At4CL + RpBAS gave only slight increase, whereas At4CL-BAS fusion greatly enhanced raspberry ketone accumulation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "This was validated by transient coexpression/fusion comparison and GC-MS profiling."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Agroinfiltration of leaf tissue and harvest at 6 days are explicit."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "At4CL1 was fused to/coexpressed with BAS proteins, but direct interaction was not experimentally shown."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary matches the tobacco Results and discussion of channeling."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Constructs were made in the pK2GW7_Nb-SES system; SES promoter is explicit."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The study directly supports 4CL-BAS fusion engineering to direct flux toward raspberry ketone."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract explicitly states coumaroyl-CoA is also an essential precursor for flavonoid and lignin biosynthesis in plants."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements are directly supported by abstract/discussion text on coumaroyl-CoA regulation and fusion-mediated channeling."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "6.2.1.12",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper text."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "4-coumarate:CoA ligase, acyl-activating enzyme family",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly assign At4CL1 to the acyl-activating enzyme family."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "cytosol",
+          "new_value": "NA",
+          "reason": "No subcellular localization is given for At4CL1."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 3,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "Pc4CL",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Pc4CL is explicitly named as 4CL/4-coumaric acid ligase in yeast constructs."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is stated in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly state this family/domain assignment."
+        },
+        "Source_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The source species of Pc4CL is not spelled out in the provided text."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Petroselinum crispum does not appear in the provided paper text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Pc4CL was tested in Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Saccharomyces cerevisiae is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The yeast strains are H4590/H5304-derived engineered strains listed in Table 2."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Pc4CL is part of the engineered raspberry ketone biosynthetic pathway in yeast."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It supplies p-coumaroyl-CoA precursor for raspberry ketone synthesis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Pc4CL acts upstream of BAS in yeast constructs."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "p-HCA/p-coumaric acid feeding is directly linked to Pc4CL-dependent raspberry ketone production."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "p-coumaroyl-CoA is explicitly discussed as the 4CL product/precursor."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "Activation to p-coumaroyl-CoA is supported, but the exact mechanistic wording with CoA for entry is not explicitly stated."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Pc4CL supplies precursor pool for raspberry ketone production."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "Fusion-based channeling is supported, but the paper does not explicitly define Pc4CL as a rate-limiting or key control step."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Raspberry ketone is the assayed end product."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "This exact class term is not used."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Flavor/fragrance and health-promoting supplement are stated for raspberry ketone."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast raspberry ketone was measured from culture liquid samples."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization for Pc4CL is given."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Pc4CL was constitutively engineered in fed and de novo yeast strains."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast results show Pc4CL-containing strains produce raspberry ketone, best when fused to natural BAS."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast pathway reconstruction, fed/de novo systems, and GC-MS were used."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These fermentation conditions and precursor contexts are directly described."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pc4CL is fused/coexpressed with BAS and paired with RiZS1, but direct interaction is not proven."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed titers 4.3, 61, and 47 mg/L are reported in Results for Pc4CL-containing yeast strains."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Bidirectional SES promoter systems are explicitly used in yeast constructs."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper clearly supports Pc4CL-natural BAS fusion for improved yeast production."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly links p-coumaroyl-CoA/4CL activity with unwanted phloretic acid formation in yeast."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion indeed notes endogenous metabolism can divert p-coumaroyl-CoA to phloretic acid."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "6.2.1.12",
+          "new_value": "NA",
+          "reason": "No EC number is stated in the paper."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "4-coumarate:CoA ligase, acyl-activating enzyme family",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly state this family/domain assignment."
+        },
+        {
+          "field": "Source_Species",
+          "old_value": "Petroselinum crispum",
+          "new_value": "NA",
+          "reason": "The source species of Pc4CL is not spelled out in the provided text."
+        },
+        {
+          "field": "Source_Species_Latin_Name",
+          "old_value": "Petroselinum crispum",
+          "new_value": "NA",
+          "reason": "Petroselinum crispum does not appear in the provided paper text."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "cytosol",
+          "new_value": "NA",
+          "reason": "No subcellular localization for Pc4CL is given."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 5,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "RiZS1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "RiZS1 is explicitly named and discussed as BAR/zingerone synthase-type activity for raspberry ketone formation."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly describe RiZS1 as an NADPH-dependent reductase."
+        },
+        "Source_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The source species is not explicitly spelled out in the provided text."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Rubus idaeus does not appear in the provided text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RiZS1 was tested in both tobacco and yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both hosts are explicitly used."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Wild type N. benthamiana and H4590/H5304-derived yeast strains were used."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "RiZS1 was directly tested as part of raspberry ketone pathway reconstruction."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The discussion explicitly frames RiZS1/BAR activity as reducing benzalacetone to raspberry ketone."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "RiZS1 functions at the downstream/final reduction step by pathway context and discussion."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly refers to reduction of 4-hydroxybenzalacetone to raspberry ketone."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "RiZS1 is used to produce raspberry ketone from the benzalacetone intermediate."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This reduction step is explicitly described in the Discussion."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "RiZS1 directly forms the target product by the stated pathway step."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly shows RiZS1 was dispensable/nonbeneficial in tobacco and endogenous activities can substitute."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Raspberry ketone is the relevant product."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "This exact classification is not used in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Flavor and health-promoting supplement are stated."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Product was measured in tobacco leaves and yeast cultures."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization data are provided."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RiZS1 was transiently expressed in tobacco and engineered into yeast strains."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show little or negative contribution in tobacco and the discussion states many organisms possess endogenous BAR activity."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the experimental methods/results."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These contexts are explicit."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "These proteins were coexpressed with RiZS1, but direct interactions were not shown."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary reflects the Results and Discussion: trace with BAS, lower with 4CL-BAS plus RiZS1 than without, and nonessential role due to endogenous reductases."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "SES-based promoters are explicit in both plant and yeast constructs."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports RiZS1 as optional rather than essential under these host backgrounds."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Added pathway burden is plausible but not directly shown; cosuppression/interference in plants is only proposed in Discussion."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly states many organisms inherently possess BAR activity."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "NADPH-dependent reductase",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly describe RiZS1 as an NADPH-dependent reductase."
+        },
+        {
+          "field": "Source_Species",
+          "old_value": "Rubus idaeus",
+          "new_value": "NA",
+          "reason": "The source species is not explicitly spelled out in the provided text."
+        },
+        {
+          "field": "Source_Species_Latin_Name",
+          "old_value": "Rubus idaeus",
+          "new_value": "NA",
+          "reason": "Rubus idaeus does not appear in the provided text."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "cytosol",
+          "new_value": "NA",
+          "reason": "No localization data are provided."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 4,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "FjTAL",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "FjTAL is explicitly called a tyrosine specific gene/TAL from Flavobacterium johnsoniae."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly call it an ammonia-lyase family protein."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Flavobacterium johnsoniae is explicitly stated as the source."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Flavobacterium johnsoniae appears explicitly in Results/Discussion."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "FjTAL was engineered into Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Saccharomyces cerevisiae is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "FjTAL is present in H6711/H6712/H6713 strains listed in Table 2."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It was used for de novo p-coumaric acid supply for raspberry ketone biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly states TAL enables one-step production of p-HCA from tyrosine."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "FjTAL acts upstream to supply precursor."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says TAL acts from tyrosine."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says TAL produces p-HCA/p-coumaric acid."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "Conversion of tyrosine to p-coumaric acid is explicit, but 'by ammonia elimination' is not stated verbatim."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "FjTAL supplies precursor pool for raspberry ketone production."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is clearly enabling for de novo production, but the paper does not explicitly define it as rate-limiting."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Raspberry ketone is the final product of the pathway tested."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "This exact class label is not used."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Flavor agent and health-promoting supplement are stated for raspberry ketone."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Raspberry ketone was quantified from yeast culture samples."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization is stated."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "FjTAL was engineered into de novo yeast strains under SES-based constructs."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly links FjTAL-containing strains to de novo raspberry ketone production from glucose."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Genome integration/de novo strain construction and GC-MS product analysis were used."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "De novo production from glucose without external p-HCA is explicitly described."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "These genes were engineered in the same strains, but direct protein interactions are not shown."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately reflects the de novo pathway engineering and 47 mg/L result with natural BAS fusion background."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Bidirectional SES promoter usage for ARO7 and FjTAL is explicitly described."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports FjTAL as important for precursor-self-sufficient de novo yeast production."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Broader aromatic byproducts are discussed, but attribution specifically to FjTAL rather than overall pathway deregulation is not directly shown."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly says FjTAL was chosen as a highly efficient TAL gene reported previously."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "4.3.1.23",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper."
+        },
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "Ammonia-lyase",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly call it an ammonia-lyase family protein."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "cytosol",
+          "new_value": "NA",
+          "reason": "No localization is stated."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 3,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "ARO7",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes feedback-insensitive chorismate mutase aro7G141S used to channel metabolism."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Chorismate mutase is explicitly stated."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ARO7 is a yeast gene used in Saccharomyces cerevisiae strains; this is explicit/intrinsic from strain engineering description."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is part of S. cerevisiae engineering and described in that host."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ARO7 was applied in Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Saccharomyces cerevisiae is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "ARO7 is in H5304/H6711/H6712/H6713 strains per Table 2 and text."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "ARO7 engineering is linked to raspberry ketone production in de novo strains."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact class wording is not used."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Raspberry ketone's flavor and supplement role is stated."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Raspberry ketone was quantified from yeast cultures."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says aro7G141S was used to channel pathway flux toward p-HCA/raspberry ketone precursors."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "General aromatic precursor flux is supported, but this specific target phrasing is an interpretation rather than explicit statement."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNSUPPORTED",
+          "reason": "ARO7 affects metabolic flux, not target genes; the paper does not discuss gene-level regulatory effects."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Feedback-insensitive mutation indicates relief of allosteric feedback inhibition, as explicitly described."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports ARO7 as an important flux-enhancing component in de novo raspberry ketone strains."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of feedback inhibition is directly supported by 'feedback-insensitive' wording."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states feedback-insensitive but does not explicitly specify the normal inhibitory aromatic amino acid signal in this text."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization is given."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ARO7 was engineered into de novo yeast strains using SES-based donor constructs."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly link overexpressing feedback-insensitive aro7G141S with de novo raspberry ketone production."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Genome engineering plus downstream metabolite quantification is what the paper reports."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The de novo context is glucose fermentation without p-HCA feeding."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "These genes are coengineered in the same pathway, but direct protein interactions are not shown."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary matches the text: ARO7G141S introduced to channel metabolism and support de novo production up to 47 mg/L with natural BAS fusion."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Aro7 and FjTAL were expressed from an integrative bidirectional SES plasmid."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports ARO7 as useful for metabolic engineering of precursor supply."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion suggests Aro4/Aro7 feedback-insensitive mutations may enhance phenylalanine and phenylethyl alcohol formation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "In this paper ARO7 is indeed used as a flux-regulating node rather than a direct raspberry ketone-forming enzyme."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Regulatory_Effect_on_Target_Genes",
+          "old_value": "Feedback-insensitive ARO7G141S increases pathway flux toward aromatic precursor formation",
+          "new_value": "NA",
+          "reason": "ARO7 affects metabolic flux, not target genes; the paper does not discuss gene-level regulatory effects."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "cytosol",
+          "new_value": "NA",
+          "reason": "No localization is given."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "ARO4",
+      "category": "Regulation",
+      "verification": {
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes a tyrosine feedback-insensitive mutation of Aro4 and aro4K229L background engineering."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Aro4 is explicitly referred to as feedback-insensitive DAHP synthase in the gene summary context and known in text as Aro4 mutation; however the exact full enzyme name is not spelled out in Results. Still, DAHP synthase identity is inferable from gene notation less directly."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ARO4 is a yeast gene used in Saccharomyces cerevisiae strains."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "It is part of the engineered S. cerevisiae background."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied in Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Saccharomyces cerevisiae is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "H5304/H6711/H6712/H6713 background use is supported by Table 2 and text."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "ARO4 engineering is connected to de novo raspberry ketone production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not use this exact class wording."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Flavor/supplement roles of raspberry ketone are stated."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Product accumulation was measured in yeast cultures."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Text states ARO4 with feedback-insensitive mutation was used to channel pathway toward producing more p-HCA."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "Broader aromatic precursor supply is inferable, but this exact phrasing is not directly stated."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper discusses metabolic flux effects, not regulatory effects on target genes."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Feedback-insensitive mutation supports relief of feedback inhibition."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "ARO4(K229L) is presented as an important upstream modification in de novo raspberry ketone strains."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of feedback inhibition is directly implied by feedback-insensitive wording."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact native inhibitory signal is not explicitly named in the provided paper text."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No localization data are provided."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The ARO4(K229L) allele is present in engineered yeast background H5304 and derived strains."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links the Aro4 feedback-insensitive background with enhanced precursor supply for de novo raspberry ketone production."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Use of the ARO4(K229L)-containing chassis and final GC-MS product measurement is supported."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "This is in the de novo glucose fermentation context without p-HCA feeding."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "These genes are coengineered in the same strains, but no direct protein interactions are shown."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The summary matches text: ARO4(K229L) was part of the chassis intended to increase precursor formation and enable de novo raspberry ketone production."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "H5304 is described as having an ARO4(K229L) cassette, but the exact generalization 'engineered background expression cassette in strain H5304' is only partly supported; promoter details are not fully given in Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports ARO4 chassis modification as useful for phenylpropanoid-related production."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion suggests Aro4/Aro7 deregulation may increase phenylalanine and phenylethyl alcohol side product formation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed treats ARO4 as an upstream flux-deregulating control element rather than a direct pathway enzyme for raspberry ketone."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Regulatory_Effect_on_Target_Genes",
+          "old_value": "Feedback-insensitive ARO4(K229L) increases precursor flux into the aromatic pathway",
+          "new_value": "NA",
+          "reason": "The paper discusses metabolic flux effects, not regulatory effects on target genes."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "cytosol",
+          "new_value": "NA",
+          "reason": "No localization data are provided."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 2,
+        "uncertain": 5
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 241,
+    "supported": 178,
+    "unsupported": 27,
+    "uncertain": 36,
+    "total_corrections": 27
+  }
+}

@@ -1,7 +1,7 @@
 {
   "file": "Sci_Adv_2016_Zhao",
   "md_path": "/data/haotianwu/biojson/extractor/input/Sci_Adv_2016_Zhao.md",
-  "timestamp": "2026-03-28T11:57:42.463913",
+  "timestamp": "2026-03-30T00:14:21.718591",
   "genes": [
     {
       "gene_name": "SbCHI",
@@ -11,92 +11,92 @@
           "verdict": "SUPPORTED",
           "reason": "Materials and methods lists SbCHI accession number as KT963462."
         },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies SbCHI as a chalcone isomerase gene/transcript."
+        },
         "Species": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper studies Scutellaria baicalensis; the shorthand genus 'Scutellaria' is inferable but not the exact field value used as a species label."
+          "verdict": "SUPPORTED",
+          "reason": "SbCHI was identified from Scutellaria baicalensis RNA-seq/database and cloning work."
         },
         "Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "The paper explicitly studies Scutellaria baicalensis."
+          "reason": "The species studied throughout is Scutellaria baicalensis."
         },
         "Origin_Species": {
           "verdict": "SUPPORTED",
-          "reason": "SbCHI was cloned from Scutellaria baicalensis RNA-seq resources."
+          "reason": "SbCHI sequence was cloned from S. baicalensis."
         },
         "Origin_Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "The origin species throughout the paper is Scutellaria baicalensis."
+          "reason": "The origin species is explicitly Scutellaria baicalensis."
         },
         "Terminal_Metabolite": {
           "verdict": "UNCERTAIN",
-          "reason": "SbCHI is discussed in the RSF pathway context, but the paper does not directly test SbCHI effects on baicalein/baicalin/wogonin/wogonoside individually."
+          "reason": "The paper discusses SbCHI in the context of the 4'-deoxy root-specific flavone pathway, but SbCHI itself was not directly shown to determine accumulation of all listed terminal metabolites in planta."
         },
         "Terminal_Metabolite_Class": {
           "verdict": "SUPPORTED",
-          "reason": "The pathway products discussed are flavones/flavonoids."
+          "reason": "The terminal compounds discussed are flavones/flavonoids."
         },
         "Terminal_Metabolite_Function": {
           "verdict": "SUPPORTED",
-          "reason": "The introduction states these specialized flavones have antitumor, antioxidant, and antiviral activities."
+          "reason": "The introduction states these root-specific flavones have reported antitumor, antioxidant, and antiviral properties."
         },
         "Terminal_Metabolite_Accumulation_Site": {
           "verdict": "SUPPORTED",
-          "reason": "The paper repeatedly describes these 4′-deoxy root-specific flavones as accumulating in roots."
-        },
-        "Expression_Pattern": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper states a single CHI transcript was identified in roots and concludes there was not a novel isoform of CHI involved in RSF synthesis."
+          "reason": "The paper repeatedly states the 4'-deoxy root-specific flavones accumulate in roots."
         },
         "Core_Phenotypic_Effect": {
           "verdict": "SUPPORTED",
-          "reason": "Results state that no novel CHI isoform was found and tobacco reconstruction showed pinocembrin/chrysin formation without requiring SbCHI, supporting a non-specialized role."
+          "reason": "Results state no novel CHI isoform was found, and tobacco reconstruction showed similar pinocembrin/chrysin production with or without SbCHI, supporting that general/endogenous CHI activity suffices."
         },
         "Summary_Key_Findings_of_Core_Gene": {
           "verdict": "SUPPORTED",
-          "reason": "All three points match the Results: one CHI transcript in RNA-seq, pinocembrin formation without SbCHI in N. benthamiana, and similar production when SbCHI was added."
+          "reason": "All three points match Results/Discussion: one CHI transcript identified in roots; no novel CHI isoform implicated; pathway reconstruction in N. benthamiana showed SbCHI was not required for pinocembrin or chrysin production when SbCLL-7 and SbCHS-2 were present."
         },
-        "Core_Validation_Method": {
+        "Expression_Pattern": {
           "verdict": "SUPPORTED",
-          "reason": "SbCHI was assessed by RNA-seq identification and transient reconstruction in Nicotiana benthamiana."
-        },
-        "Promoters": {
-          "verdict": "UNCERTAIN",
-          "reason": "For tobacco infiltration the genes were expressed under 35S promoter per Results text, but Materials cite cloning into pEAQ-HT-DEST1 rather than explicitly stating CaMV 35S for SbCHI alone."
-        },
-        "Other_Important_Info": {
-          "verdict": "SUPPORTED",
-          "reason": "This summary matches the paper's conclusion that chalcone isomerization may occur spontaneously or via the same CHI active in aerial parts, and that CHI is not a specialized determinant."
-        },
-        "Protein_Family_or_Domain": {
-          "verdict": "SUPPORTED",
-          "reason": "SbCHI is explicitly identified as a CHI gene, i.e., chalcone isomerase."
-        },
-        "Environment_or_Treatment_Factor": {
-          "verdict": "SUPPORTED",
-          "reason": "Cinnamic acid supplementation was used in reconstruction assays, and MeJA is discussed for pathway genes but not specifically for SbCHI."
-        },
-        "Interacting_Proteins": {
-          "verdict": "UNCERTAIN",
-          "reason": "SbCHI was coexpressed with SbCLL-7, SbCHS-2, and SbFNSII-2 in pathway reconstruction, but direct physical/protein interaction was not shown."
+          "reason": "The paper reports a single CHI transcript identified in roots and explicitly says no novel isoform dedicated to RSF synthesis was found."
         },
         "Expression_Pattern_of_Origin_Species": {
           "verdict": "SUPPORTED",
-          "reason": "This is equivalent to the study species context for SbCHI."
+          "reason": "Same support as above: only one CHI transcript was identified from root RNA-seq, with no specialized isoform."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "SbCHI was coexpressed with SbCLL-7, SbCHS-2, and SbFNSII-2 in pathway reconstruction, but direct physical or biochemical protein-protein interactions were not demonstrated."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "SbCHI was identified from RNA-seq and tested in transient pathway reconstruction with metabolite profiling in N. benthamiana."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper tested transient expression in Nicotiana benthamiana leaves with or without cinnamic acid supplementation."
+        },
+        "Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "For tobacco infiltration, the genes were expressed under the 35S promoter according to Results text, but the construct details in methods emphasize pEAQ-HT-DEST1; the exact promoter for SbCHI specifically is not spelled out in the methods excerpt."
         },
         "Omics_Data": {
           "verdict": "SUPPORTED",
-          "reason": "The RNA-seq BioProject and SRA accessions are explicitly provided in Materials and methods."
+          "reason": "RNA-seq database and accession set PRJNA300475/SRP068883/SRS1263237/SRX1546377/SRR3123399 are explicitly provided."
         },
         "Breeding_or_Engineering_Application_Value": {
           "verdict": "UNCERTAIN",
-          "reason": "This is a reasonable inference from the reconstruction results, but the paper does not explicitly discuss SbCHI as a low-priority engineering target."
+          "reason": "The paper supports that SbCHI is optional/not essential in heterologous reconstruction, but it does not explicitly discuss breeding or engineering value in those terms."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The authors explicitly infer no dedicated CHI isoform is required for RSF biosynthesis and that isomerization can occur via general CHI activity or spontaneously."
         }
       },
       "corrections": [],
       "stats": {
-        "supported": 16,
+        "supported": 17,
         "unsupported": 0,
-        "uncertain": 5
+        "uncertain": 4
       }
     },
     {
@@ -107,21 +107,9 @@
           "verdict": "SUPPORTED",
           "reason": "Materials and methods lists SbFNSII-2 accession number as KT963454."
         },
-        "Enzyme_Name": {
+        "Protein_Family_or_Domain": {
           "verdict": "SUPPORTED",
-          "reason": "SbFNSII-2 is explicitly identified as flavone synthase II."
-        },
-        "EC_Number": {
-          "verdict": "UNSUPPORTED",
-          "reason": "No EC number is provided for SbFNSII-2 in the paper."
-        },
-        "Species": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper studies Scutellaria baicalensis; the shorthand genus 'Scutellaria' is not used as a formal species value."
-        },
-        "Species_Latin_Name": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper explicitly studies Scutellaria baicalensis."
+          "reason": "The paper identifies SbFNSII-2 as CYP93B25, a flavone synthase II cytochrome P450."
         },
         "Origin_Species": {
           "verdict": "SUPPORTED",
@@ -129,125 +117,133 @@
         },
         "Origin_Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "The source organism is Scutellaria baicalensis."
+          "reason": "The species is explicitly Scutellaria baicalensis."
         },
-        "Terminal_Metabolite": {
+        "Species": {
           "verdict": "SUPPORTED",
-          "reason": "Results and abstract link SbFNSII-2 to synthesis of 4′-deoxyRSFs such as chrysin and downstream wogonin, wogonoside, baicalein, and baicalin."
+          "reason": "Same as above."
         },
-        "Terminal_Metabolite_Class": {
+        "Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "These compounds are flavones/flavonoids."
-        },
-        "Terminal_Metabolite_Function": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper describes these flavones as antitumor, antioxidant, and antiviral bioactives."
-        },
-        "Terminal_Metabolite_Accumulation_Site": {
-          "verdict": "SUPPORTED",
-          "reason": "The compounds are described as root-specific flavones, and SbFNSII-2 is root-enriched."
-        },
-        "Biosynthetic_Pathway": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper characterizes a specialized 4′-deoxyflavone biosynthetic pathway."
-        },
-        "Pathway_Branch_or_Subpathway": {
-          "verdict": "SUPPORTED",
-          "reason": "SbFNSII-2 is explicitly tied to the root-specific 4′-deoxyflavone branch."
-        },
-        "Metabolic_Step_Position": {
-          "verdict": "SUPPORTED",
-          "reason": "Results directly show SbFNSII-2 converts pinocembrin to chrysin, placing it downstream as the flavone-forming step."
-        },
-        "Primary_Substrate": {
-          "verdict": "SUPPORTED",
-          "reason": "In vitro and in vivo assays show SbFNSII-2 uses pinocembrin and not naringenin or eriodictyol."
-        },
-        "Primary_Product": {
-          "verdict": "SUPPORTED",
-          "reason": "SbFNSII-2 converted pinocembrin to chrysin in yeast and Arabidopsis feeding assays."
-        },
-        "Catalyzed_Reaction_Description": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper reports NADPH-dependent dehydrogenation with product mass 2 lower than substrate, consistent with flavone formation by a P450 FNSII."
-        },
-        "End_Product_Connection_Type": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper states chrysin is the precursor from which baicalein, baicalin, wogonin, and wogonoside are synthesized."
-        },
-        "Core_Phenotypic_Effect": {
-          "verdict": "SUPPORTED",
-          "reason": "RNAi of SbFNSII-2 strongly reduced baicalin, baicalein, wogonoside, and wogonin."
+          "reason": "Same as above."
         },
         "Summary_Key_Findings_of_Core_Gene": {
           "verdict": "SUPPORTED",
-          "reason": "All listed findings are directly supported by Results and figures/tables."
+          "reason": "All listed findings are directly supported by Results: high root expression and MeJA induction, RNAi reduction of RSFs with pinocembrin-derived intermediates accumulating, enzyme specificity for pinocembrin to chrysin, Arabidopsis production of chrysin only upon pinocembrin feeding, and tobacco pathway reconstruction."
         },
-        "Core_Validation_Method": {
+        "Terminal_Metabolite": {
           "verdict": "SUPPORTED",
-          "reason": "All listed methods were used in the paper for SbFNSII-2."
+          "reason": "Results and discussion connect SbFNSII-2 to synthesis of 4'-deoxy root-specific flavones including chrysin-derived baicalein, baicalin, wogonin, and wogonoside."
         },
-        "Promoters": {
+        "Enzyme_Name": {
           "verdict": "SUPPORTED",
-          "reason": "Results explicitly state Arabidopsis overexpression under the CaMV 35S promoter; native expression was also analyzed. Tobacco transient expression used 35S promoter according to Results."
-        },
-        "Other_Important_Info": {
-          "verdict": "SUPPORTED",
-          "reason": "SbFNSII-2 is named CYP93B25 and discussed as a neofunctionalized duplicate with lower catalytic activity than SbFNSII-1."
-        },
-        "Environment_or_Treatment_Factor": {
-          "verdict": "SUPPORTED",
-          "reason": "MeJA treatment, pinocembrin feeding in Arabidopsis, and cinnamic acid supplementation in tobacco assays are all reported."
-        },
-        "Expression_Pattern": {
-          "verdict": "SUPPORTED",
-          "reason": "qRT-PCR shows strong root enrichment and MeJA induction of SbFNSII-2."
-        },
-        "Expression_Pattern_of_Origin_Species": {
-          "verdict": "SUPPORTED",
-          "reason": "Same as the study species."
-        },
-        "Interacting_Proteins": {
-          "verdict": "UNCERTAIN",
-          "reason": "These genes function together in pathway reconstruction, but direct protein-protein interactions were not demonstrated."
-        },
-        "Subcellular_Localization": {
-          "verdict": "SUPPORTED",
-          "reason": "SbFNSII-2 was assayed in yeast microsomes, consistent with P450 microsomal localization, though localization was not directly imaged in planta."
-        },
-        "Protein_Family_or_Domain": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper names SbFNSII-2 as CYP93B25, a cytochrome P450 family member."
-        },
-        "Rate_Limiting_or_Key_Control_Step": {
-          "verdict": "UNCERTAIN",
-          "reason": "SbFNSII-2 is clearly essential/key for 4′-deoxyflavone formation, but the specific phrase 'rate-limiting' is not tested."
-        },
-        "Potential_Tradeoffs": {
-          "verdict": "SUPPORTED",
-          "reason": "Table 1 and Discussion state SbFNSII-2 has lower catalytic activity than SbFNSII-1 while being more substrate-specific."
+          "reason": "SbFNSII-2 is explicitly described as flavone synthase II."
         },
         "Omics_Data": {
           "verdict": "SUPPORTED",
-          "reason": "The RNA-seq BioProject and SRA accession information is explicitly provided."
+          "reason": "RNA-seq dataset identifiers are provided in the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "In vitro and in vivo assays show SbFNSII-2 uses pinocembrin and not naringenin/eriodictyol."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "SbCLL-7, SbCHS-2, and SbCHI act in the same reconstructed pathway, but direct protein interactions with SbFNSII-2 were not shown."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Recombinant SbFNSII-2 converted pinocembrin to chrysin."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The linked 4'-deoxy flavones are repeatedly described as root-specific/root-accumulating."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper clearly presents SbFNSII-2 as required/core for branch entry from pinocembrin, but does not explicitly call it rate-limiting."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for SbFNSII-2/FNSII is given in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state SbFNSII-2 converts pinocembrin to chrysin in an NADPH-dependent dehydrogenation reaction."
+        },
+        "Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state Arabidopsis overexpression used the CaMV 35S promoter, and tobacco reconstruction states genes were expressed under the control of the 35S promoter."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states SbFNSII-2 is specific for pinocembrin but has a lower apparent Vmax than SbFNSII-1; no penalty beyond lower catalytic activity is reported."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "SbFNSII-2 converts pinocembrin to chrysin, i.e., the branch step from 4'-deoxyflavanone to 4'-deoxyflavone scaffold."
+        },
+        "Expression_Pattern_of_Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show transcript levels are highest in roots and 8-, 28-, and 36-fold above stems, leaves, and flowers, and increase 4.8-fold after MeJA treatment."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper's main subject is the specialized 4'-deoxyflavone biosynthetic pathway, and SbFNSII-2 is a core enzyme in it."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SbFNSII-2 is specifically tied to the root-specific 4'-deoxyflavone branch."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "SbFNSII-2 is explicitly designated CYP93B25 and discussed as recently evolved from duplication/neofunctionalization relative to SbFNSII-1."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states these root-specific flavones have reported antitumor, antioxidant, and antiviral activities."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "SbFNSII-2 was assayed in yeast microsomes and is a cytochrome P450, supporting microsomal localization."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "RNAi sharply decreased baicalin, baicalein, wogonoside, and wogonin, while enzyme and heterologous assays showed chrysin formation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The compounds are flavones/flavonoids."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show high root expression, low aerial expression, and induction by methyl jasmonate."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed factors are directly described in Results."
         },
         "Breeding_or_Engineering_Application_Value": {
           "verdict": "UNCERTAIN",
-          "reason": "Engineering utility is strongly inferable from Arabidopsis/tobacco results, but this application statement is not explicitly made by the paper."
+          "reason": "The paper demonstrates engineering utility in heterologous systems, but does not explicitly discuss breeding/application value in those terms."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows SbFNSII-2 forms chrysin, the immediate flavone scaffold precursor for downstream baicalein/wogonin derivatives."
         }
       },
       "corrections": [
         {
           "field": "EC_Number",
-          "old_value": "1.14.-.-",
+          "old_value": "1.14.20.-",
           "new_value": "NA",
-          "reason": "No EC number is provided for SbFNSII-2 in the paper."
+          "reason": "No EC number for SbFNSII-2/FNSII is given in the paper."
         }
       ],
       "stats": {
         "supported": 28,
         "unsupported": 1,
-        "uncertain": 4
+        "uncertain": 3
       }
     },
     {
@@ -258,21 +254,9 @@
           "verdict": "SUPPORTED",
           "reason": "Materials and methods lists SbCLL-7 accession number as KT963458."
         },
-        "Enzyme_Name": {
+        "Protein_Family_or_Domain": {
           "verdict": "SUPPORTED",
-          "reason": "The paper identifies SbCLL-7 as a cinnamic acid–specific CoA ligase/cinnamate–CoA ligase."
-        },
-        "EC_Number": {
-          "verdict": "UNSUPPORTED",
-          "reason": "No EC number is given for SbCLL-7 in the paper."
-        },
-        "Species": {
-          "verdict": "UNCERTAIN",
-          "reason": "The study organism is Scutellaria baicalensis; the generic 'Scutellaria' label is not explicit."
-        },
-        "Species_Latin_Name": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper explicitly studies Scutellaria baicalensis."
+          "reason": "The paper describes SbCLL-7 as a CoA ligase-like protein and identifies it functionally as a cinnamic acid-specific CoA ligase/cinnamate-CoA ligase."
         },
         "Origin_Species": {
           "verdict": "SUPPORTED",
@@ -280,123 +264,131 @@
         },
         "Origin_Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "The source organism is Scutellaria baicalensis."
+          "reason": "The species is explicitly S. baicalensis."
         },
-        "Terminal_Metabolite": {
+        "Species": {
           "verdict": "SUPPORTED",
-          "reason": "RNAi and pathway reconstruction link SbCLL-7 to production of root-specific flavones baicalein, baicalin, wogonin, and wogonoside."
+          "reason": "Same as above."
         },
-        "Terminal_Metabolite_Class": {
+        "Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "These are flavonoid/flavone metabolites."
-        },
-        "Terminal_Metabolite_Function": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper describes these root-specific flavones as antitumor, antioxidant, and antiviral bioactives."
-        },
-        "Terminal_Metabolite_Accumulation_Site": {
-          "verdict": "SUPPORTED",
-          "reason": "The relevant metabolites are root-specific flavones."
-        },
-        "Biosynthetic_Pathway": {
-          "verdict": "SUPPORTED",
-          "reason": "SbCLL-7 is described as part of the specialized 4′-deoxyflavone pathway."
-        },
-        "Pathway_Branch_or_Subpathway": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper states SbCLL-7 enables bypass of C4H to supply cinnamoyl-CoA for the root-specific branch."
-        },
-        "Metabolic_Step_Position": {
-          "verdict": "SUPPORTED",
-          "reason": "SbCLL-7 acts upstream to activate cinnamic acid at pathway entry."
-        },
-        "Primary_Substrate": {
-          "verdict": "SUPPORTED",
-          "reason": "Purified enzyme assays show activity only with cinnamic acid among tested substrates."
-        },
-        "Primary_Product": {
-          "verdict": "SUPPORTED",
-          "reason": "As a cinnamate–CoA ligase, the inferred product is cinnamoyl-CoA, explicitly discussed in the paper."
-        },
-        "Catalyzed_Reaction_Description": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper explicitly states SbCLL-7 activates cinnamic acid to cinnamoyl-CoA in a CoA ligase reaction."
-        },
-        "End_Product_Connection_Type": {
-          "verdict": "SUPPORTED",
-          "reason": "Results and Discussion connect SbCLL-7 to supplying precursor for pinocembrin and downstream 4′-deoxyflavones."
-        },
-        "Core_Phenotypic_Effect": {
-          "verdict": "SUPPORTED",
-          "reason": "RNAi of SbCLL-7 reduced baicalin, baicalein, and wogonoside; the figure also concerns four major root flavones."
+          "reason": "Same as above."
         },
         "Summary_Key_Findings_of_Core_Gene": {
           "verdict": "SUPPORTED",
-          "reason": "These points are directly supported by expression, enzymology, RNAi, Arabidopsis, and tobacco experiments."
+          "reason": "Each listed point is supported: preferential root expression, cinnamic acid specificity/high efficiency, RNAi reduction of major RSFs, and tobacco coexpression with SbCHS-2 producing pinocembrin."
         },
-        "Core_Validation_Method": {
-          "verdict": "SUPPORTED",
-          "reason": "All listed methods were used for SbCLL-7 in the paper."
-        },
-        "Promoters": {
+        "Terminal_Metabolite": {
           "verdict": "UNCERTAIN",
-          "reason": "Native expression was analyzed, but the paper does not explicitly state a CaMV 35S promoter for SbCLL-7 Arabidopsis expression in the Results section, though it is a reasonable inference from methods/context."
+          "reason": "SbCLL-7 is clearly linked to the 4'-deoxy RSF pathway and reductions in baicalein/baicalin/wogonoside were shown, but explicit reduction of wogonin is not stated in the textual Results excerpt for SbCLL-7."
         },
-        "Other_Important_Info": {
+        "Enzyme_Name": {
           "verdict": "SUPPORTED",
-          "reason": "Discussion states SbCLL-7 has a C-terminal SKL motif and is phylogenetically closer to At4CLL7 than AtCNL, supporting convergent evolution."
-        },
-        "Environment_or_Treatment_Factor": {
-          "verdict": "SUPPORTED",
-          "reason": "MeJA had no significant effect on SbCLL-7 transcripts, and cinnamic acid supplementation was used in heterologous assays."
-        },
-        "Expression_Pattern": {
-          "verdict": "SUPPORTED",
-          "reason": "qRT-PCR shows highest expression in roots and no significant induction by MeJA."
-        },
-        "Expression_Pattern_of_Origin_Species": {
-          "verdict": "SUPPORTED",
-          "reason": "Same as study species."
-        },
-        "Interacting_Proteins": {
-          "verdict": "UNCERTAIN",
-          "reason": "SbCLL-7 was functionally combined with SbCHS-2, SbCHI, and SbFNSII-2, but direct interactions were not shown."
-        },
-        "Subcellular_Localization": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper notes an SKL peroxisomal targeting motif and discusses probable peroxisomal location, but localization was not directly demonstrated."
-        },
-        "Protein_Family_or_Domain": {
-          "verdict": "SUPPORTED",
-          "reason": "Phylogeny and annotation place SbCLL-7 in the 4CL/CoA ligase-like family."
-        },
-        "Rate_Limiting_or_Key_Control_Step": {
-          "verdict": "UNCERTAIN",
-          "reason": "SbCLL-7 is clearly important as an entry step, but 'rate-limiting' was not directly established."
-        },
-        "Potential_Tradeoffs": {
-          "verdict": "SUPPORTED",
-          "reason": "The Arabidopsis result directly shows SbCLL-7 alone is insufficient because host CHS cannot efficiently use cinnamoyl-CoA."
+          "reason": "The paper states SbCLL-7 encodes a cinnamic acid-specific CoA ligase/cinnamate-CoA ligase."
         },
         "Omics_Data": {
           "verdict": "SUPPORTED",
-          "reason": "RNA-seq project/accessions are provided in the paper."
+          "reason": "RNA-seq dataset identifiers are provided."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Assays tested cinnamic acid, 4-coumaric acid, and caffeic acid; SbCLL-7 used only cinnamic acid, with CoA and ATP present in assay system."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "SbCHS-2, SbCHI, and SbFNSII-2 were coexpressed in pathway reconstruction, but no direct protein interactions were shown."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Its enzymatic role is explicitly to ligate CoA to cinnamic acid, forming cinnamoyl-CoA."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The associated RSFs are root-specific/root-accumulating in the paper."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper presents SbCLL-7 as required and as an upstream entry/bypass step, but does not explicitly call it rate-limiting."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for SbCLL-7 is stated in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Results describe SbCLL-7 as activating cinnamic acid by CoA ligation in an ATP-dependent CoA ligase assay."
+        },
+        "Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The tobacco transient assays are described as using genes under control of the 35S promoter in Results, but Arabidopsis transformation of SbCLL-7 is only described as driven by the 35S promoter in text; no dedicated construct figure/Methods line explicitly repeats promoter for all contexts in a gene-specific way."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly reports that overexpression of SbCLL-7 alone in Arabidopsis did not produce pinocembrin because Arabidopsis CHS could not use cinnamoyl-CoA in vivo; no growth penalty is reported."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "SbCLL-7 is positioned upstream, producing cinnamoyl-CoA to bypass C4H and feed the specialized pathway."
+        },
+        "Expression_Pattern_of_Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results say SbCLL-7 is expressed most highly in roots, aerial parts have at least threefold lower transcript levels, and no significant MeJA induction was detected."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SbCLL-7 is explicitly required for synthesis of root-specific flavones in the specialized 4'-deoxyflavone pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Its role is to supply cinnamoyl-CoA/pinocembrin branch precursors for the specialized pathway."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states SbCLL-7 has a C-terminal SKL peroxisome localization motif and was recruited from a CLL ancestor distinct from Arabidopsis CNL/BZO."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper attributes antitumor, antioxidant, and antiviral properties to these RSFs."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Peroxisomal association is inferred from the SKL motif in Discussion, but direct localization of SbCLL-7 was not experimentally shown."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "RNAi reduced major RSFs and reconstruction assays showed it supplies precursor for pinocembrin formation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The products are flavones/flavonoids."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support predominant expression in roots, lower in stems/leaves/flowers."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Results include MeJA treatment and N. benthamiana pathway reconstruction with or without cinnamic acid."
         },
         "Breeding_or_Engineering_Application_Value": {
           "verdict": "UNCERTAIN",
-          "reason": "Engineering value is inferable from reconstruction, but this explicit application statement is not made in the paper."
+          "reason": "The paper demonstrates pathway engineering relevance, but does not explicitly frame this as breeding/application value."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "SbCLL-7 supplies the precursor pool feeding the specialized end-product branch."
         }
       },
       "corrections": [
         {
           "field": "EC_Number",
-          "old_value": "6.2.1.12",
+          "old_value": "6.2.1.-",
           "new_value": "NA",
-          "reason": "No EC number is given for SbCLL-7 in the paper."
+          "reason": "No EC number for SbCLL-7 is stated in the paper."
         }
       ],
       "stats": {
-        "supported": 26,
+        "supported": 25,
         "unsupported": 1,
         "uncertain": 6
       }
@@ -409,129 +401,125 @@
           "verdict": "SUPPORTED",
           "reason": "Materials and methods lists SbCHS-2 accession number as KT963461."
         },
-        "Enzyme_Name": {
+        "Protein_Family_or_Domain": {
           "verdict": "SUPPORTED",
-          "reason": "SbCHS-2 is explicitly identified as chalcone synthase."
-        },
-        "EC_Number": {
-          "verdict": "UNSUPPORTED",
-          "reason": "No EC number is given in the paper."
-        },
-        "Species": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper studies Scutellaria baicalensis; the shorthand 'Scutellaria' is not used as a formal species designation."
-        },
-        "Species_Latin_Name": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper explicitly studies Scutellaria baicalensis."
+          "reason": "SbCHS-2 is explicitly identified as chalcone synthase; CHS is a type III polyketide synthase family enzyme."
         },
         "Origin_Species": {
           "verdict": "SUPPORTED",
-          "reason": "SbCHS-2 was isolated from Scutellaria baicalensis sequencing databases."
+          "reason": "SbCHS-2 was isolated from S. baicalensis sequencing databases."
         },
         "Origin_Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "The source organism is Scutellaria baicalensis."
+          "reason": "The origin species is Scutellaria baicalensis."
         },
-        "Terminal_Metabolite": {
+        "Species": {
           "verdict": "SUPPORTED",
-          "reason": "Reconstruction experiments connect SbCHS-2 to pinocembrin/chrysin formation and the paper states it is required for synthesis of chrysin and downstream 4′-deoxyRSFs."
+          "reason": "Same as above."
         },
-        "Terminal_Metabolite_Class": {
+        "Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "The listed end products are flavonoid/flavone compounds."
-        },
-        "Terminal_Metabolite_Function": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper describes these root-specific flavones as bioactive with antitumor, antioxidant, and antiviral properties."
-        },
-        "Terminal_Metabolite_Accumulation_Site": {
-          "verdict": "SUPPORTED",
-          "reason": "These 4′-deoxyRSFs are root-specific in the paper."
-        },
-        "Biosynthetic_Pathway": {
-          "verdict": "SUPPORTED",
-          "reason": "SbCHS-2 is described as part of the specialized 4′-deoxyflavone pathway."
-        },
-        "Pathway_Branch_or_Subpathway": {
-          "verdict": "SUPPORTED",
-          "reason": "SbCHS-2 is required for the pinocembrin-forming branch in the root-specific pathway."
-        },
-        "Metabolic_Step_Position": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper positions CHS upstream of pinocembrin formation from cinnamoyl-CoA."
-        },
-        "Primary_Substrate": {
-          "verdict": "UNCERTAIN",
-          "reason": "Use of cinnamoyl-CoA by SbCHS-2 is strongly inferred from tobacco reconstruction, but purified enzyme assays directly testing cinnamoyl-CoA and malonyl-CoA were not reported."
-        },
-        "Primary_Product": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper states SbCHS-2 activity leads to pinocembrin formation via pinocembrin chalcone."
-        },
-        "Catalyzed_Reaction_Description": {
-          "verdict": "UNCERTAIN",
-          "reason": "This is biochemically plausible and consistent with CHS function, but the exact condensation reaction with purified SbCHS-2 was not directly demonstrated in the paper."
-        },
-        "End_Product_Connection_Type": {
-          "verdict": "SUPPORTED",
-          "reason": "SbCHS-2 supplies precursor for chrysin and downstream 4′-deoxyflavones according to reconstruction and model pathway."
-        },
-        "Core_Phenotypic_Effect": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper concludes SbCHS-2 is required for synthesis of chrysin and shows this through pathway reconstruction in tobacco."
+          "reason": "Same as above."
         },
         "Summary_Key_Findings_of_Core_Gene": {
           "verdict": "SUPPORTED",
-          "reason": "These points match the RNA-seq/qPCR expression data and tobacco reconstruction results."
+          "reason": "All listed points are supported: root-enriched expression, pinocembrin production with SbCLL-7 in N. benthamiana, chrysin production upon addition of SbFNSII-2, and ~16-fold MeJA induction."
         },
-        "Core_Validation_Method": {
+        "Terminal_Metabolite": {
           "verdict": "SUPPORTED",
-          "reason": "SbCHS-2 was studied by RNA-seq/qRT-PCR and transient pathway reconstruction in Nicotiana benthamiana."
+          "reason": "SbCHS-2 is linked to the specialized 4'-deoxyflavone pathway via pinocembrin/chrysin leading to RSFs."
         },
-        "Promoters": {
-          "verdict": "UNCERTAIN",
-          "reason": "Native expression was analyzed, and tobacco constructs were used, but explicit CaMV 35S wording for SbCHS-2 is not clearly stated in methods; Results say genes were expressed under 35S in HyperTrans."
-        },
-        "Other_Important_Info": {
+        "Enzyme_Name": {
           "verdict": "SUPPORTED",
-          "reason": "The paper explicitly compares SbCHS-2 with SbCHS2a/SbCHS-C and SbCHS2b and suggests allelic relationships and recent divergence."
-        },
-        "Environment_or_Treatment_Factor": {
-          "verdict": "SUPPORTED",
-          "reason": "MeJA induction and cinnamic acid supplementation in reconstruction assays are reported."
-        },
-        "Expression_Pattern": {
-          "verdict": "SUPPORTED",
-          "reason": "RNA-seq and qPCR show high root expression, very low flower expression, and ~16-fold induction by MeJA."
-        },
-        "Expression_Pattern_of_Origin_Species": {
-          "verdict": "SUPPORTED",
-          "reason": "Same as study species."
-        },
-        "Interacting_Proteins": {
-          "verdict": "UNCERTAIN",
-          "reason": "SbCHS-2 was coexpressed with SbCLL-7, SbCHI, and SbFNSII-2 in pathway reconstruction, but direct physical interactions were not shown."
-        },
-        "Protein_Family_or_Domain": {
-          "verdict": "SUPPORTED",
-          "reason": "SbCHS-2 is a chalcone synthase, i.e., type III polyketide synthase family member."
-        },
-        "Rate_Limiting_or_Key_Control_Step": {
-          "verdict": "UNCERTAIN",
-          "reason": "SbCHS-2 is clearly important, but the paper does not establish it as rate-limiting."
-        },
-        "Potential_Tradeoffs": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper did not report standalone purified-protein enzymology for SbCHS-2; this limitation is consistent with the field statement."
+          "reason": "The paper explicitly names it chalcone synthase."
         },
         "Omics_Data": {
           "verdict": "SUPPORTED",
-          "reason": "RNA-seq BioProject/SRA accessions are given in the paper."
+          "reason": "RNA-seq dataset identifiers are provided, and SbCHS-2 read counts are discussed."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper infers/establishes in vivo that SbCHS-2 can use cinnamoyl-CoA to form pinocembrin, but malonyl-CoA is not explicitly discussed in the Results text for SbCHS-2 though it is standard CHS chemistry."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "SbCLL-7, SbCHI, and SbFNSII-2 were coexpressed functionally, but direct physical interactions were not tested."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results indicate SbCLL-7 plus SbCHS-2 produced pinocembrin, implying SbCHS-2 forms pinocembrin chalcone leading to pinocembrin; the narrative explicitly states pinocembrin is the product of CHS and CHI."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The associated specialized flavones are root-specific/root-accumulating."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "SbCHS-2 is clearly required/specific for branch formation, but the paper does not explicitly describe it as rate-limiting."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for SbCHS-2 is given in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The described reaction is biochemically reasonable and inferable, but the paper did not directly assay purified SbCHS-2 enzyme chemistry or explicitly state the exact stoichiometric condensation with malonyl-CoA units."
+        },
+        "Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state the tobacco reconstruction expressed SbCHS-2 under the control of the 35S promoter."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper contrasts specialization with SbCHS-1, but does not explicitly discuss tradeoffs or absence of penalties."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "SbCHS-2 acts downstream of cinnamoyl-CoA formation and upstream of chrysin formation in the reconstructed pathway."
+        },
+        "Expression_Pattern_of_Origin_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show SbCHS-2 is highly expressed in roots, low in flowers, and induced 16-fold by MeJA."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "SbCHS-2 is explicitly required for the specialized 4'-deoxyflavone pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It feeds the pinocembrin-forming branch of the pathway."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Discussion state SbCHS-2 is highly similar to previously reported Scutellaria CHS2 alleles and diverged relatively recently from SbCHS-1."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states these flavones have antitumor, antioxidant, and antiviral properties."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows SbCHS-2 enables pinocembrin production with SbCLL-7 and is needed for chrysin reconstruction with SbFNSII-2."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The products are flavonoids/flavones."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show high expression in roots, low in flowers, and MeJA induction."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "MeJA treatment and transient expression in N. benthamiana with or without cinnamic acid are directly described."
         },
         "Breeding_or_Engineering_Application_Value": {
           "verdict": "UNCERTAIN",
-          "reason": "Engineering importance is inferable from pathway reconstruction, but not explicitly discussed as an application."
+          "reason": "Engineering relevance is inferable from pathway reconstruction, but the paper does not explicitly discuss application value in those terms."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "SbCHS-2 forms the pinocembrin precursor pool feeding the target 4'-deoxyflavone branch."
         }
       },
       "corrections": [
@@ -539,168 +527,21 @@
           "field": "EC_Number",
           "old_value": "2.3.1.74",
           "new_value": "NA",
-          "reason": "No EC number is given in the paper."
+          "reason": "No EC number for SbCHS-2 is given in the paper."
         }
       ],
       "stats": {
         "supported": 24,
         "unsupported": 1,
-        "uncertain": 7
-      }
-    },
-    {
-      "gene_name": "SbFNSII-1",
-      "category": "Pathway",
-      "verification": {
-        "Gene_Accession_Number": {
-          "verdict": "SUPPORTED",
-          "reason": "Materials and methods lists SbFNSII-1 accession number as KT963453."
-        },
-        "Enzyme_Name": {
-          "verdict": "SUPPORTED",
-          "reason": "SbFNSII-1 is explicitly identified as flavone synthase II."
-        },
-        "EC_Number": {
-          "verdict": "UNSUPPORTED",
-          "reason": "No EC number is provided in the paper."
-        },
-        "Species": {
-          "verdict": "UNCERTAIN",
-          "reason": "The formal organism studied is Scutellaria baicalensis; 'Scutellaria' alone is not a specific species designation in the paper."
-        },
-        "Species_Latin_Name": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper explicitly studies Scutellaria baicalensis."
-        },
-        "Origin_Species": {
-          "verdict": "SUPPORTED",
-          "reason": "SbFNSII-1 was cloned from Scutellaria baicalensis."
-        },
-        "Origin_Species_Latin_Name": {
-          "verdict": "SUPPORTED",
-          "reason": "The source organism is Scutellaria baicalensis."
-        },
-        "Terminal_Metabolite": {
-          "verdict": "SUPPORTED",
-          "reason": "In vitro assays show production of apigenin, luteolin, and chrysin from naringenin, eriodictyol, and pinocembrin, supporting a general flavone role rather than RSF-specific products."
-        },
-        "Terminal_Metabolite_Class": {
-          "verdict": "SUPPORTED",
-          "reason": "These are flavonoid/flavone metabolites."
-        },
-        "Terminal_Metabolite_Function": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper supports a general flavone metabolism role, but does not explicitly assign this exact phrase as a function to SbFNSII-1."
-        },
-        "Terminal_Metabolite_Accumulation_Site": {
-          "verdict": "SUPPORTED",
-          "reason": "SbFNSII-1 expression is low and broadly distributed across organs, consistent with multiple organs/aerial tissues rather than root-specific accumulation."
-        },
-        "Biosynthetic_Pathway": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper contrasts SbFNSII-1 with the specialized root-specific pathway and indicates it likely acts in the standard flavone pathway."
-        },
-        "Pathway_Branch_or_Subpathway": {
-          "verdict": "SUPPORTED",
-          "reason": "SbFNSII-1 accepts 4′-hydroxylated substrates like naringenin and eriodictyol, fitting a general/4′-hydroxyflavone branch."
-        },
-        "Metabolic_Step_Position": {
-          "verdict": "SUPPORTED",
-          "reason": "As FNSII it catalyzes the flavanone-to-flavone conversion step."
-        },
-        "Primary_Substrate": {
-          "verdict": "SUPPORTED",
-          "reason": "Results and Table 1 show SbFNSII-1 converts pinocembrin, naringenin, and eriodictyol, with preference for naringenin."
-        },
-        "Primary_Product": {
-          "verdict": "SUPPORTED",
-          "reason": "Products chrysin, apigenin, and luteolin are directly shown in the in vitro assays."
-        },
-        "Catalyzed_Reaction_Description": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper reports NADPH-dependent dehydrogenation and product masses 2 units lower than substrate."
-        },
-        "End_Product_Connection_Type": {
-          "verdict": "SUPPORTED",
-          "reason": "RNAi showed no effect on major RSFs, so SbFNSII-1 parallels rather than determines the specialized branch."
-        },
-        "Core_Phenotypic_Effect": {
-          "verdict": "SUPPORTED",
-          "reason": "Silencing SbFNSII-1 had no effect on the four RSFs and enzymology showed broad substrate specificity."
-        },
-        "Summary_Key_Findings_of_Core_Gene": {
-          "verdict": "SUPPORTED",
-          "reason": "These three points are directly supported by qRT-PCR, MeJA response, RNAi, and enzyme assays."
-        },
-        "Core_Validation_Method": {
-          "verdict": "SUPPORTED",
-          "reason": "These methods were used for SbFNSII-1 in the paper."
-        },
-        "Promoters": {
-          "verdict": "SUPPORTED",
-          "reason": "Only native expression was analyzed for SbFNSII-1; this matches the field."
-        },
-        "Other_Important_Info": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper names SbFNSII-1 as CYP93B24 and discusses it as the likely ancestral broad-specificity enzyme."
-        },
-        "Environment_or_Treatment_Factor": {
-          "verdict": "SUPPORTED",
-          "reason": "MeJA treatment effects on SbFNSII-1 were assessed."
-        },
-        "Expression_Pattern": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper states SbFNSII-1 is relatively low and equally distributed across organs and unchanged by MeJA."
-        },
-        "Expression_Pattern_of_Origin_Species": {
-          "verdict": "SUPPORTED",
-          "reason": "Same as study species."
-        },
-        "Subcellular_Localization": {
-          "verdict": "SUPPORTED",
-          "reason": "SbFNSII-1 was assayed in yeast microsomes, consistent with microsomal localization of P450 enzymes."
-        },
-        "Protein_Family_or_Domain": {
-          "verdict": "SUPPORTED",
-          "reason": "SbFNSII-1 is explicitly named CYP93B24, a cytochrome P450."
-        },
-        "Rate_Limiting_or_Key_Control_Step": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper does not establish SbFNSII-1 as a key control step for the RSF pathway; this negative statement is supported by lack of phenotype on silencing."
-        },
-        "Potential_Tradeoffs": {
-          "verdict": "UNCERTAIN",
-          "reason": "Its limited value for pathway engineering is inferable from no RSF phenotype, but this application-oriented tradeoff is not directly stated."
-        },
-        "Omics_Data": {
-          "verdict": "SUPPORTED",
-          "reason": "RNA-seq project/accessions are explicitly given."
-        },
-        "Breeding_or_Engineering_Application_Value": {
-          "verdict": "UNCERTAIN",
-          "reason": "Lower priority for engineering is a reasonable inference, but not explicitly discussed in the paper."
-        }
-      },
-      "corrections": [
-        {
-          "field": "EC_Number",
-          "old_value": "1.14.-.-",
-          "new_value": "NA",
-          "reason": "No EC number is provided in the paper."
-        }
-      ],
-      "stats": {
-        "supported": 27,
-        "unsupported": 1,
-        "uncertain": 4
+        "uncertain": 6
       }
     }
   ],
   "summary": {
-    "total_fields": 151,
-    "supported": 121,
-    "unsupported": 4,
-    "uncertain": 26,
-    "total_corrections": 4
+    "total_fields": 116,
+    "supported": 94,
+    "unsupported": 3,
+    "uncertain": 19,
+    "total_corrections": 3
   }
 }

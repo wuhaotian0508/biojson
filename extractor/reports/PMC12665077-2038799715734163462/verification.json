@@ -1,0 +1,327 @@
+{
+  "file": "MinerU_markdown_PMC12665077_2038799715734163462",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12665077_2038799715734163462.md",
+  "timestamp": "2026-03-31T21:58:48.710272",
+  "genes": [
+    {
+      "gene_name": "NifU",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly refers to 'A. vinelandii NifU' and states NifU was cloned from Azotobacter vinelandii."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The full species name Azotobacter vinelandii appears in the paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NifU was co-expressed in Nicotiana benthamiana and also heterologously expressed/purified from Escherichia coli."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Nicotiana benthamiana and E. coli/Escherichia coli are explicitly described as hosts."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper measures 15N2 reduction and states N2 is reduced to ammonia by the overall system, but NifU itself is only an accessory maturation factor and is not directly linked as a gene-to-product output in Results."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Ammonia as a mineral nutrient class is not explicitly assigned to NifU in the paper; this is broader interpretation."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The phrase 'bioavailable reduced nitrogen for plant nutrition' does not appear and was not tested as a plant nutrition trait."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show chemically reconstituted EcNifU restored activity of plant-produced NbAnfH V6 in vitro, supporting FeS cluster loading/reconstitution."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three elements are supported: A. vinelandii NifU was co-expressed in plants, EcNifU purified from E. coli and chemically reconstituted activated NbAnfH V6 in vitro, and plant co-expression did not yield active as-isolated holo-AnfH."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "NifU is explicitly discussed as involved in [Fe4S4] cluster maturation/donation, consistent with FeS cluster scaffold protein."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "In plants NifU was targeted to mitochondria; in E. coli it was produced for purification, matching the recombinant purification context."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states NifU was co-expressed with AnfH in N. benthamiana and also expressed in E. coli BL21(DE3) for purification."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all explicitly described: plant co-expression, E. coli purification, chemical reconstitution, and in vitro activation assays."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state plant constructs generally used CaMV enhanced 35S promoter and E. coli NifU/NifS transcriptional units used a T7 promoter."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "NifU was co-expressed with NifS and AnfH, and used to reconstitute AnfH; these functional interactions are described."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper concludes FeS loading remains limiting and discusses maturation factors such as NifU as relevant for engineering nitrogenase in plants; 'alone insufficient' is consistent with Results/Discussion."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show in planta co-expression with NifU did not yield active as-isolated AnfH, implying insufficiency and need for additional factors/contexts."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "NifU is indeed used as a maturation scaffold/donor rather than as the focal catalytic nitrogenase protein in this study."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite_Function",
+          "old_value": "bioavailable reduced nitrogen for plant nutrition",
+          "new_value": "NA",
+          "reason": "The phrase 'bioavailable reduced nitrogen for plant nutrition' does not appear and was not tested as a plant nutrition trait."
+        }
+      ],
+      "stats": {
+        "supported": 15,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "NifS",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states A. vinelandii NifS was used."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Azotobacter vinelandii is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NifS was used in Nicotiana benthamiana transient expression experiments."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana is explicitly named."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "Ammonia is the end product of the reconstituted nitrogenase system, but NifS itself was not directly tested for a product-related phenotype."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "This classification is not stated in the paper and is only indirectly related to NifS."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No plant nutrition function was tested or stated for NifS."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "NifS was co-expressed as a putative maturation factor in plant mitochondria, yet active holo-AnfH was not obtained directly from plants."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that NifS was co-expressed with AnfH and NifU, intended to assist [Fe4S4] maturation, and that co-expression was insufficient to yield active as-isolated NbAnfH."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "NifS is described in the context of FeS cluster maturation and is known/implicitly used as the sulfur-donating maturation factor; 'cysteine desulfurase' is a faithful inference for NifS."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state NifS contained a mitochondrial targeting peptide and was expressed for plant mitochondrial targeting."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NifS was co-expressed transiently in N. benthamiana leaves from a multigene vector."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "NifS evidence is indirect and based on co-expression plus inference from AnfH maturation outcome; this matches the paper."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state plant expression vectors generally used CaMV enhanced 35S promoter."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "NifS was co-expressed with NifU and AnfH and discussed as participating with NifU in maturation of AnfH."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion frames FeS maturation factors as relevant future components for plant nitrogenase engineering, while indicating current insufficiency."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows that co-expression of NifS with NifU did not achieve active as-isolated AnfH in plant mitochondria."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "NifS is included as a supportive maturation factor and not as the direct catalytic nitrogen-reducing component in assays."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite_Function",
+          "old_value": "bioavailable reduced nitrogen for plant nutrition",
+          "new_value": "NA",
+          "reason": "No plant nutrition function was tested or stated for NifS."
+        }
+      ],
+      "stats": {
+        "supported": 15,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "AnfH",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper consistently refers to AnfH from A. vinelandii."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Azotobacter vinelandii is explicitly stated."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AnfH variants were expressed in Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana is explicitly stated."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state AvAnfDKG with reconstituted NbAnfH V6 reduced N2 to ammonia."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "While ammonia is the relevant product, the class 'mineral nutrient' is not stated in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not test or state 'bioavailable reduced nitrogen for plant nutrition' as a phenotype."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes the Results: V6 greatly improved soluble accumulation, after [Fe4S4] reconstitution supported 15N2 reduction with AnfDKG; V7 was partially functional; wt performed poorly."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are supported by Results, including poor wt performance, improved solubility/abundance of variants, ~90-fold improvement for V6, and reconstituted activity in ARA and 15N2 reduction assays."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AnfH is studied as part of the Fe-only nitrogenase system for biological nitrogen fixation."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AnfH is the electron donor component of the Fe-only nitrogenase branch; this is directly described."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "AnfH is the Fe-only nitrogenase reductase/electron donor component; this naming is consistent with the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places AnfH in the 'nitrogenase Fe protein' family and explicitly cites InterPro IPR005977; [Fe4S4]-binding ATP-dependent reductase is consistent with described function."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The AnfH constructs were targeted to plant mitochondria throughout the plant expression experiments."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AnfH was transiently expressed in N. benthamiana leaf mitochondria."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes AnfH as the obligate electron donor of Fe-only nitrogenase; N2 is reduced by partner AnfDKG rather than directly by AnfH."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly define a molecular 'product' of AnfH itself as 'reduced AvAnfDKG'; this is mechanistically inferred."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a faithful mechanistic summary of AnfH function as described in the paper."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "AnfH functions upstream as the electron-delivery component to the catalytic nitrogenase complex."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "AnfH is shown to be a required electron donor for target product formation in the nitrogen reduction assays."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly reported in the paper."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The cautious wording is appropriate: the paper shows AnfH is a key required component, while not explicitly proving rate limitation."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These experimental conditions are all explicitly described."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Plant expression vectors generally used CaMV enhanced 35S promoter."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Interactions/functional associations with AnfDKG, NifU, NifS, AvNifDK, and AnfG are all mentioned in Results/Discussion."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly presents AnfH V6 as a valuable engineering module for plant nitrogenase reconstruction, while noting FeS loading remains limiting."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed caveats are supported: apo/inactive as isolated, inadequate FeS loading in planta, possible substitution effects, and poorer performance of wt/some variants."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies AnfH V6 (T200A, T228V, E234H) as the optimized core variant; V7 and V8 behaviors and the negative BLAST result for natural identity to V6 are also reported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite_Function",
+          "old_value": "bioavailable reduced nitrogen for plant nutrition",
+          "new_value": "NA",
+          "reason": "The paper does not test or state 'bioavailable reduced nitrogen for plant nutrition' as a phenotype."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 64,
+    "supported": 55,
+    "unsupported": 3,
+    "uncertain": 6,
+    "total_corrections": 3
+  }
+}

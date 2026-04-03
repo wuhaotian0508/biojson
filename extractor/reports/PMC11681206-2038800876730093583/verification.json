@@ -1,0 +1,165 @@
+{
+  "file": "MinerU_markdown_PMC11681206_2038800876730093583",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC11681206_2038800876730093583.md",
+  "timestamp": "2026-03-31T21:38:30.494792",
+  "genes": [
+    {
+      "gene_name": "nodS",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results and Discussion explicitly identify nodS as gene Bphy_7716."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism throughout is Paraburkholderia phymatum."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly names the bacterium Paraburkholderia phymatum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strain tested is consistently Paraburkholderia phymatum STM815T."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was tested in soybean, common bean, and Mimosa pudica inoculation assays."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly gives Glycine max, Phaseolus vulgaris, and Mimosa pudica."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Soybean cv. Williams 82 and common bean cv. Negro Jamapa are stated in Methods; no variety is given for Mimosa pudica."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says nodS is a methyltransferase involved in NF biosynthesis and Discussion presumes it is involved in methylation/N-methylated NFs, but P. phymatum NF structures were not determined in this study."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Nodulation factors are explicitly described as lipo-chitooligosaccharides (LCOs), i.e. symbiotic signals."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states NF decorations such as methyl groups determine host specificity, and NFs initiate nodulation signaling via plant receptors."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is generally consistent with rhizobial biology that NFs act at the root interface/rhizosphere, but this exact localization wording is not directly demonstrated in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "nodS is explicitly described as involved in the biosynthesis/modification of nodulation factors (LCOs)."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states nodS codes for a SAM-dependent methyltransferase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "nodS is explicitly annotated as an S-adenosyl-L-methionine-dependent methyltransferase."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "This detailed reaction order and substrate specificity are discussed from prior studies in Bradyrhizobium/other rhizobia, not directly shown for P. phymatum in this paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "N-deacetylated chitooligosaccharides produced by NodBC are mentioned only in Discussion based on prior literature, not experimentally demonstrated here for P. phymatum NodS."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "An N-methylated chitooligosaccharide/NF precursor is plausible from annotation and prior work, but not directly identified in this study."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that nodS is required for a strain-specific NF modification step rather than backbone synthesis itself."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The Introduction explicitly places nodS among strain-specific nod genes that add methyl groups to the NF core."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "The wording 'downstream modification step during NF assembly' is broadly consistent, but precise step position is not directly established for P. phymatum in the Results."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports nodS as a key determinant of host specificity; it does not establish rate limitation, and the field correctly notes that it is not established as rate-limiting."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly show that intact nodS blocks soybean nodulation, is important for optimal common bean nodulation, and is dispensable for Mimosa pudica nodulation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are present in Results/Methods: Tn-seq screen, deletion mutant, complementation in trans, nodulation assays, nitrogenase assay, and histology/TEM."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point matches the Results: repeated nodS Tn insertions in soybean nodules, deletion/complementation validation on soybean, altered common bean phenotype, and no significant effect in Mimosa pudica."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly cites previous RNA-seq work showing P. phymatum nodS is upregulated in the presence of Mimosa pudica root exudates; it is clearly presented as prior work, not new data here."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was studied under different plant-host inoculation contexts, and Mimosa root exudate context is explicitly discussed from previous work."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization of NodS is experimentally shown or explicitly stated in the paper."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state the complementing nodS gene in pBBR1MCS2 was cloned opposite to lacZα with transcription driven by the T7 promoter."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses Tn-seq/transposon sequencing and provides raw FASTQ under BioProject PRJNA1089526."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Discussion places NodS in the NF biosynthetic sequence relative to NodB, NodC, and NodA, but direct physical or functional interaction with these proteins was not tested in this paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The conclusion explicitly frames the findings as opening avenues for bioengineering inoculants with broader host range, and the host-specific tradeoff is supported by soybean/common bean phenotypes."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show soybean nodules formed by the nodS mutant had lower nitrogenase activity than B. diazoefficiens and signs of premature senescence, while common bean showed fewer nodules despite higher per-nodule nitrogenase activity."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the paper: NodS function is inferred from annotation/prior literature, and the NF structures of P. phymatum wild type versus nodS mutant were not determined here."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cytoplasm",
+          "new_value": "NA",
+          "reason": "No subcellular localization of NodS is experimentally shown or explicitly stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 1,
+        "uncertain": 7
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 33,
+    "supported": 25,
+    "unsupported": 1,
+    "uncertain": 7,
+    "total_corrections": 1
+  }
+}

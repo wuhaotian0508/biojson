@@ -26,6 +26,7 @@ import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
+from typing import Callable, Optional
 
 from .config import (
     MODEL, INPUT_DIR, TOKEN_USAGE_DIR, MAX_WORKERS,
@@ -164,6 +165,114 @@ def print_verify_summary(all_reports: list):
         print(f"  📈 Fidelity:    {accuracy:.1f}%")
 
 
+def save_token_report(
+    tracker: TokenTracker,
+    prefix: str = "pipeline",
+    output_dir: Optional[Path] = None,
+) -> Optional[str]:
+    """Persist the current token tracker and return the saved report path."""
+    if not tracker or not tracker.calls:
+        return None
+
+    report_dir = Path(output_dir or TOKEN_USAGE_DIR)
+    report_dir.mkdir(parents=True, exist_ok=True)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    report_path = report_dir / f"{prefix}-{timestamp}.json"
+    tracker.save_report(str(report_path))
+    return str(report_path)
+
+
+def run_pipeline_batch(
+    files: list[str],
+    *,
+    input_dir: Optional[Path] = None,
+    workers: int = MAX_WORKERS,
+    tracker: Optional[TokenTracker] = None,
+    stop_requested: Optional[Callable[[], bool]] = None,
+    on_paper_start: Optional[Callable[[str, int, int, bool], None]] = None,
+    on_paper_done: Optional[Callable[[str, dict, int, int, bool], None]] = None,
+) -> dict:
+    """Run a batch of papers using the shared extractor pipeline orchestration.
+
+    This is the reusable core for both CLI and `/admin`:
+    - CLI uses it for normal batch processing + terminal output
+    - admin uses it for SSE progress, stop checks, and token tracking
+
+    The web layer stays responsible for auth/UI/index rebuild; extractor owns
+    the actual paper-processing loop and token-report inputs.
+    """
+    input_dir = Path(input_dir or INPUT_DIR)
+    tracker = tracker or TokenTracker(model=MODEL)
+    total = len(files)
+    all_reports = []
+    failed_files = []
+    skipped_files = []
+    stopped = False
+    submitted = 0
+    done_count = 0
+    is_parallel = total > 1 and workers > 1
+
+    if not is_parallel:
+        for i, filename in enumerate(files):
+            if stop_requested and stop_requested():
+                stopped = True
+                break
+
+            if on_paper_start:
+                on_paper_start(filename, i, total, False)
+
+            md_path = input_dir / filename
+            stem = Path(filename).stem
+            result = process_one_paper(md_path, stem, tracker)
+            collect_paper_result(filename, result, all_reports, failed_files, skipped_files)
+
+            done_count = i + 1
+            if on_paper_done:
+                on_paper_done(filename, result, done_count, total, False)
+    else:
+        with ThreadPoolExecutor(max_workers=workers) as pool:
+            future_to_file = {}
+
+            for filename in files:
+                if stop_requested and stop_requested():
+                    stopped = True
+                    break
+
+                if on_paper_start:
+                    on_paper_start(filename, submitted, total, True)
+
+                md_path = input_dir / filename
+                stem = Path(filename).stem
+                future = pool.submit(process_one_paper, md_path, stem, tracker)
+                future_to_file[future] = filename
+                submitted += 1
+
+            for future in as_completed(future_to_file):
+                filename = future_to_file[future]
+                try:
+                    result = future.result()
+                except Exception as e:
+                    print(f"  ❌ {filename}: {e}")
+                    result = {"status": "failed", "report": None}
+
+                collect_paper_result(filename, result, all_reports, failed_files, skipped_files)
+
+                done_count += 1
+                if on_paper_done:
+                    on_paper_done(filename, result, done_count, total, True)
+
+    return {
+        "tracker": tracker,
+        "all_reports": all_reports,
+        "failed_files": failed_files,
+        "skipped_files": skipped_files,
+        "stopped": stopped,
+        "submitted": submitted if is_parallel else done_count,
+        "done": done_count,
+        "total": total,
+    }
+
+
 def main():
     """Pipeline 主函数：解析参数 → 发现文件 → 顺序/并行处理 → 汇总输出。[PR 改动] 拆出 collect_paper_result/_print_paper_result"""
     parser = argparse.ArgumentParser(description="BioJSON Extraction Pipeline")
@@ -202,56 +311,42 @@ def main():
         if not files:
             return
 
-    tracker = TokenTracker(model=MODEL)
-    all_reports = []
-    failed_files = []
-    skipped_files = []
-
-    # ── Sequential or parallel processing ─────────────────────────────────────
     workers = args.workers
-    if len(files) == 1 or workers <= 1:
-        # Sequential
-        for i, filename in enumerate(files, 1):
-            md_path = input_dir / filename
-            stem = Path(filename).stem
+    is_parallel = len(files) > 1 and workers > 1
+    tracker = TokenTracker(model=MODEL)
 
+    def _on_paper_start(filename: str, index: int, total: int, parallel: bool):
+        # CLI 只在顺序模式下打印单篇头部，避免并行日志互相打乱。
+        if not parallel:
             print(f"\n{'━' * 60}")
-            print(f"📄 [{i}/{len(files)}] {filename}")
+            print(f"📄 [{index + 1}/{total}] {filename}")
             print(f"{'━' * 60}")
 
-            result = process_one_paper(md_path, stem, tracker)
-            collect_paper_result(filename, result, all_reports, failed_files, skipped_files)
-            _print_paper_result(stem, result)
-    else:
-        # Parallel
+    def _on_paper_done(filename: str, result: dict, done: int, total: int, parallel: bool):
+        stem = Path(filename).stem
+        _print_paper_result(stem, result)
+
+    if is_parallel:
         print(f"\n🔄 Processing {len(files)} papers with {workers} workers...\n")
 
-        with ThreadPoolExecutor(max_workers=workers) as pool:
-            future_to_file = {}
-            for filename in files:
-                md_path = input_dir / filename
-                stem = Path(filename).stem
-                future = pool.submit(process_one_paper, md_path, stem, tracker)
-                future_to_file[future] = filename
-
-            for future in as_completed(future_to_file):
-                filename = future_to_file[future]
-                try:
-                    result = future.result()
-                    collect_paper_result(filename, result, all_reports, failed_files, skipped_files)
-                    _print_paper_result(Path(filename).stem, result)
-                except Exception as e:
-                    print(f"  ❌ {filename}: {e}")
-                    failed_files.append(filename)
+    run_result = run_pipeline_batch(
+        files,
+        input_dir=input_dir,
+        workers=workers,
+        tracker=tracker,
+        on_paper_start=_on_paper_start,
+        on_paper_done=_on_paper_done,
+    )
+    all_reports = run_result["all_reports"]
+    failed_files = run_result["failed_files"]
+    skipped_files = run_result["skipped_files"]
 
     # ── Summary ───────────────────────────────────────────────────────────────
     if all_reports:
         print_verify_summary(all_reports)
 
     tracker.print_summary()
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    TOKEN_USAGE_DIR.mkdir(parents=True, exist_ok=True)
-    tracker.save_report(str(TOKEN_USAGE_DIR / f"pipeline-{timestamp}.json"))
+    save_token_report(tracker, "pipeline")
 
     if failed_files:
         print(f"\n⚠️  {len(failed_files)} files failed: {failed_files}")

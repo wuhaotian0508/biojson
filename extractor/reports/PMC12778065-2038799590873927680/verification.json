@@ -1,0 +1,384 @@
+{
+  "file": "MinerU_markdown_PMC12778065_2038799590873927680",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12778065_2038799590873927680.md",
+  "timestamp": "2026-03-31T21:59:54.061268",
+  "genes": [
+    {
+      "gene_name": "NS2",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NS2 is explicitly described as the RSV nonstructural 2 protein; RSV is rice stripe virus."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper uses the common virus name 'Rice stripe virus (RSV)' and does not provide a separate Latin binomial-style name; the exact field value duplicates the common name rather than a formal Latin name."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional assays involve rice plants, including NS2-overexpressing plants in the NPB background."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and methods identify rice as Oryza sativa L."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "NS2ox plants are stated to be in the NPB background, and coimmunoprecipitation/BiFC assays were done in Nicotiana benthamiana."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "NS2 is linked mechanistically to reduced MeSA defense via OsMYC2/OsBSMT1 pathway in the Results."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "MeSA is clearly the metabolite, but the exact composite classification 'phytohormone volatile; salicylate derivative' is not explicitly stated in Results for NS2."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows MeSA attracts parasitoids and repels SBPH, constituting indirect defense."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "MeSA was measured as volatile emission from rice plants using headspace SPME-GC-MS; NS2 is tied to suppression of this pathway."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "NS2 is explicitly called the RSV nonstructural 2 protein."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Fractionation assays in NS2ox plants revealed NS2 primarily localized in the cytoplasm."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state NS2 targets OsMYC2, reduces nuclear OsMYC2, decreases OsBSMT1 transcript levels, reduces attraction to A. nilaparvatae, and SBPH prefers NS2ox plants."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly reported: yeast two-hybrid, co-IP, in vitro pull-down, BiFC, NS2 overexpression in rice, fractionation, and behavioral assays."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "NS2 was studied in the context of RSV infection and in NS2-overexpressing plants."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast two-hybrid, co-IP, pull-down, and BiFC all support interaction with OsMYC2."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper suggests mechanistic relevance and discusses engineering resistance generally, but does not directly state this specific application for NS2 as an engineering target."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point is supported in Results: specific interaction with OsMYC2, mainly cytoplasmic localization with reduced nuclear OsMYC2, and NS2ox causing lower OsBSMT1/parasitoid attraction plus higher vector preference."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "NS2 is indeed a viral protein rather than a plant enzyme/TF, and the paper only suggests functionally analogous proteins in other rice viruses without identifying them."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Source_Species_Latin_Name",
+          "old_value": "Rice stripe virus",
+          "new_value": "NA",
+          "reason": "The paper uses the common virus name 'Rice stripe virus (RSV)' and does not provide a separate Latin binomial-style name; the exact field value duplicates the common name rather than a formal Latin name."
+        }
+      ],
+      "stats": {
+        "supported": 15,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "OsBSMT1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper states 'SABATH3 (also known as OsBSMT1)' but does not provide an accession number; SABATH3 is an alias, not an accession."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsBSMT1 is a rice gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice is identified as Oryza sativa L."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "OsBSMT1 was studied in both NPB and Kitaake backgrounds."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was tested in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments used Nipponbare and Kitaake."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "OsBSMT1 is directly linked to methyl salicylate biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "MeSA is supported, but the exact wording 'phytohormone volatile; salicylate derivative' is not explicitly given for this gene."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show MeSA attracts parasitoids and repels SBPH, supporting indirect defense and field biocontrol relevance."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "MeSA was quantified as emitted volatile from rice plants."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "OsBSMT1 is explicitly placed in MeSA biosynthesis via SA methylation."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states OsBSMT1 methylates SA to produce MeSA, supporting SA-to-MeSA conversion branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "OsBSMT1 directly forms MeSA from SA, making it the terminal step to the target product."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show OsBSMT1 directly catalyzes the product-forming step for MeSA."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies OsBSMT1 as benzoic acid/salicylic acid carboxyl methyltransferase 1."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "OsBSMT1 is stated to be SABATH3 and among rice SABATH genes."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states OsBSMT1 methylates SA to produce MeSA."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "SA is directly named as the methylated substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "MeSA is directly named as the product."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The authors call OsBSMT1 the key enzyme and the major rice SABATH responsible for MeSA biosynthesis under SBPH infestation."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Promoter activity in roots/stems/leaves and induction by multiple planthoppers with repression by RSV, SRBSDV, RRSV, RBSDV, and rice grassy stunt virus are all described."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly states OsBSMT1 transcripts increase upon vector infestation and decrease in virus-infected plants."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Overexpression increased MeSA emission and parasitoid attraction; suppression by viruses reduced indirect defense. Vector preference consistent with MeSA is also shown."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are reported: overexpression, CRISPR knockout, qRT-PCR, Western blot, GUS reporter, GC-MS, and olfactometer assays."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These infestations and virus infections are all specifically discussed for OsBSMT1 transcripts."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "OsMYC2 is an upstream transcription factor binding the promoter, but no direct protein-protein interaction between OsBSMT1 and OsMYC2 is shown."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "pUbi::OsBSMT1-3xHA and native pOsBSMT1::GUS constructs are explicitly described."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states no significant phenotypic differences for overexpression and knockout lines compared with wild type."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The discussion suggests MeSA-based management and identifies pathway components, but this specific breeding/engineering claim for OsBSMT1 is not directly tested."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points match Results: unique expression pattern among SABATHs, overexpression/knockout effects on MeSA and parasitoid attraction, and suppression by multiple viruses."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly define OsBSMT1 as the key enzyme for MeSA biosynthesis and show pUbi-driven OsBSMT1 was not repressed by RSV, supporting promoter-level regulation."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Gene_Accession_Number",
+          "old_value": "SABATH3",
+          "new_value": "NA",
+          "reason": "The paper states 'SABATH3 (also known as OsBSMT1)' but does not provide an accession number; SABATH3 is an alias, not an accession."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "OsMYC2",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsMYC2 is a rice gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice is Oryza sativa L."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "OsMYC2-related experiments used Kitaake and NPB backgrounds."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was tested in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Kitaake and Nipponbare are both mentioned in OsMYC2-related experiments."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "OsMYC2 is linked upstream to MeSA biosynthesis via OsBSMT1."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "MeSA is supported, but the exact class phrase is not explicitly stated for OsMYC2."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "MeSA is shown to attract parasitoids and repel vectors."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "MeSA was measured as volatile emission from rice plants; OsMYC2 regulates this pathway through OsBSMT1."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The title/abstract and Results identify OsMYC2 as a basic helix-loop-helix transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "OsMYC2 is explicitly a bHLH/MYC2 transcription factor."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show transcriptional activation of OsBSMT1 and viral modulation via relocalization of OsMYC2."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "OsMYC2 controls MeSA biosynthesis by activating OsBSMT1 transcription."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "OsBSMT1 is the direct target demonstrated in ChIP/EMSA/transactivation assays."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly shows direct binding to G-box motifs in the OsBSMT1 promoter and activation of transcription."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and summary model portray OsMYC2 as the key upstream regulator of the OsBSMT1-MeSA pathway targeted by viruses."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "OsMYC2 is described as a JA signaling hub; vector infestation increases transcripts, and viral infection alters function/localization."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC showed cytoplasmic localization of the NS2-OsMYC2 complex."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "RSV NS2 is a supported protein interactor, but 'OsBSMT1 promoter DNA' is not a protein, so the field as written is partly incorrect."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states transcripts increase after vector infestations; some viruses reduce OsMYC2 transcript accumulation, whereas RSV mainly affects localization and not transcript abundance."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsBSMT1 transcript levels are higher in OsMYC2ox and lower in osmyc2; RSV reduces nuclear abundance of OsMYC2."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Fractionation and immunohistochemistry show OsMYC2 in both nucleus and cytoplasm, with RSV shifting it toward the cytoplasm."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support promotion of OsBSMT1 expression and parasitoid attraction, and SBPH preferences indicate deterrence is compromised when OsMYC2 function is lost or interfered with."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly reported: ChIP-qPCR, EMSA, protoplast transactivation, overexpression, mutant analysis, qRT-PCR, fractionation, immunofluorescence, and olfactometer assays."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These insect infestations and virus infections are all discussed in relation to OsMYC2."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly mentions p35S::OsMYC2-FLAG transgenic plants."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper highlights OsMYC2 as a central node, but the specific application statement about engineering and broader JA-responsive tradeoffs is not directly tested."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by Results: direct binding/activation of OsBSMT1, overexpression versus mutant effects on attractiveness, and RSV-driven relocalization impairing activation."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly describes OsMYC2-OsBSMT1 as an integrating node for JA and SA signaling, and Results show RSV leaves transcript unchanged while altering protein accumulation/localization."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 27,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 80,
+    "supported": 70,
+    "unsupported": 2,
+    "uncertain": 8,
+    "total_corrections": 2
+  }
+}

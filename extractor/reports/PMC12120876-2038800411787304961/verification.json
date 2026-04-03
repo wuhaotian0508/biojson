@@ -1,0 +1,249 @@
+{
+  "file": "MinerU_markdown_PMC12120876_2038800411787304961",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12120876_2038800411787304961.md",
+  "timestamp": "2026-03-31T21:45:59.255320",
+  "genes": [
+    {
+      "gene_name": "TaSnRK1-b1-4B",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The interacting protein is described in the paper as SnRK1-b1-4B in wheat grains, indicating wheat as the source species."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is on wheat, whose Latin name Triticum aestivum is standard and directly consistent with the paper's species context."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The interaction and proposed role are discussed in wheat grains."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is wheat throughout the study, i.e. Triticum aestivum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "TaSnRK1-b1-4B itself was only tested in interaction assays and the paper does not clearly assign those assays to KN199 or Chinese Spring. Chinese Spring is mentioned for expression context of TaWUS-like-5D homoeologs, not TaSnRK1-b1-4B."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The interaction is discussed in the context of regulating starch synthesis in wheat grains."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Starch is a polysaccharide."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly discusses starch synthesis/content in wheat grain endosperm."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state TaSnRK1-b1-4B physically interacts with TaWUS-like-5D and may be involved in regulating sugar and ABA interaction and consequently starch synthesis; however, no direct TaSnRK1-b1-4B phenotype was tested."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points reflect the Results/Discussion: physical interaction shown by Y2H/LCI/BiFC, linkage to T6P-SnRK1 pathway is proposed, and participation in sugar/ABA crosstalk affecting grain filling is inferred."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies it as 'SNF1-related protein kinase regulatory subunit beta-1 protein' and as the beta subunit of SnRK1."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct interaction with TaWUS-like-5D is shown in Figure 7 by Y2H, LCI, and BiFC."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These exact methods are used in Figure 7 and described in Results/Methods."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links the biology to developing grains at 10 DPA under field growth, but the TaSnRK1-b1-4B interaction assays were done in yeast and Nicotiana benthamiana, not directly under that condition."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The study centers on starch as the key storage carbohydrate affecting grain filling and kernel weight."
+        },
+        "Omics_Data": {
+          "verdict": "UNSUPPORTED",
+          "reason": "RNA-seq at 10 DPA is reported for TaWUS-like-5D OE vs WT, but no omics dataset is presented for TaSnRK1-b1-4B itself."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not directly propose engineering TaSnRK1-b1-4B; this is an inference from pathway context."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the study: TaSnRK1-b1-4B was not genetically manipulated, and its role was inferred from protein interaction/pathway context."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Omics_Data",
+          "old_value": "RNA-seq of developing grains at 10 DPA; no accession reported",
+          "new_value": "NA",
+          "reason": "RNA-seq at 10 DPA is reported for TaWUS-like-5D OE vs WT, but no omics dataset is presented for TaSnRK1-b1-4B itself."
+        }
+      ],
+      "stats": {
+        "supported": 14,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "TaWUS-like-5D",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The candidate gene is explicitly identified as TraesCS5D03G0230800 and designated TaWUS-like-5D."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TaWUS-like-5D is a wheat gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is on wheat, i.e. Triticum aestivum."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Chinese Spring is used as the wheat reference/expression database context, and haplotypes were analyzed in Chinese wheat germplasm."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene was functionally tested in wheat."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is wheat, Triticum aestivum."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "KN199, Kronos, Chinese Spring, Shi4185, Zhongyou9507, and Hongjinmai all appear in the paper in relevant contexts."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly links TaWUS-like-5D to starch synthesis in wheat grains."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Starch is a polysaccharide."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The study repeatedly measures starch in grain endosperm and states TaWUS-like-5D decreases starch synthesis in wheat grain endosperm."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This summarizes the central Results: OE lowers starch, amylose, amylopectin, grain traits and yield; RNAi/knockout increase grain size/TKW, with RNAi showing increased yield."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed findings are directly supported by Results and Summary, including mapping, expression peak at 10 DPA, transgenic/mutant phenotypes, downstream gene repression, and interaction with TaSnRK1-b1-4B."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "TaWUS-like-5D is explicitly described as a transcription factor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies it as a WUSCHEL-related homeobox TF of the WUS clade and shows conserved homeobox and WUS box domains."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Results indicate inhibition of downstream gene expression and physical interaction with SnRK1-b1-4B."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "These specific genes are listed in the Results as decreased or increased in OE grains at 10 DPA."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "These target classes/genes are directly highlighted in Results as major downstream genes affected by TaWUS-like-5D."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly links TaWUS-like-5D to sucrose lysis/utilization, T6P signaling, starch biosynthesis, cellulose/lignin changes, and hormone-mediated grain filling."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents TaWUS-like-5D as a major negative regulator of grain starch accumulation and TKW."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly proposes involvement in the T6P-SnRK1-ABA module and says possible feedback via SnRK1 remains to be explored."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states TaWUS-like-5D interacts with SnRK1-b1-4B, identified as the beta subunit of the heterotrimeric SnRK1 complex."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct interaction with TaSnRK1-b1-4B is supported by Figure 7."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "qRT-PCR showed preferential expression in young spikes and developing grains, highest at 10 DPA, and lower expression in high-TKW vs low-TKW varieties during filling."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly states preferential expression in young spikes and developing grains with peak at 10 DPA."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Nuclear localization is explicitly stated and supported by Figure S3."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "The constructs used pWMB110 and pAHC-PSK vectors, but the specific promoter driving expression is not stated in the provided text."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Grain filling stage, especially 10 DPA, and field conditions in Beijing across seasons are clearly described."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The study frames starch as the major storage carbohydrate affecting grain filling, sink strength, kernel weight, and yield."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "OE effects and triple-knockout inadequate filling/reduced starch are directly reported, supporting dosage-balance tradeoffs among homoeologs."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed approaches are described in Results/Methods and used to support TaWUS-like-5D function."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports GWAS, BSA-seq, BSR-seq, and RNA-seq of 10 DPA grains on Illumina HiSeq 2500, and no public accession is given."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The Summary/Discussion explicitly propose TaWUS-like-5D as a target for genetic engineering/CRISPR to improve TKW and yield, while also noting dosage balance issues from triple knockout phenotypes."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper clearly distinguishes beneficial single/double loss-of-function from detrimental triple knockout, supporting homoeolog dosage/subfunctionalization interpretation."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 32,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 51,
+    "supported": 46,
+    "unsupported": 1,
+    "uncertain": 4,
+    "total_corrections": 1
+  }
+}

@@ -1,0 +1,401 @@
+{
+  "file": "MinerU_markdown_PMC7377494_2038794749162332175",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC7377494_2038794749162332175.md",
+  "timestamp": "2026-03-31T22:28:37.178075",
+  "genes": [
+    {
+      "gene_name": "FvABC3",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies FvABC3 as FVEG_11089 in the Abstract, Table 1, Results, and Table 3."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 annotates FvABC3 as an ABC transporter, and the Discussion/S6 Fig describe a multidrug-resistance-transporter-like topology with two NBDs and two TMD modules."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "FvABC3 is a gene from Fusarium verticillioides throughout the paper."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly studies Fusarium verticillioides."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional tests were performed in Fusarium verticillioides."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments use Fusarium verticillioides strain M-3125."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 3 states wild-type strain FRC M-3125 was used for mutant generation and characterization."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper mentions FRC M-3125 is also known as 7600, but the exact phrasing '7600 / M-3125 lineage not clearly separated in paper' is not stated verbatim; it is an interpretive summary."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Fumonisin production measurements for FB1, FB2, and FB3 were explicitly tested for ΔFvABC3 mutants in Results section 5 and S4 Fig."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Fumonisins are explicitly described as mycotoxins in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Results section 5 states fumonisin production was assessed in GYAM liquid cultures, i.e. fungal culture in GYAM medium."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results sections 4 and 5 show FvABC3 is required for resistance to pyrrocidine B, while deletion did not significantly alter fumonisin production or maize seedling virulence."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq Table 1 and qRT-PCR Fig 3A show strong induction after 1 h exposure to pyrrocidine A and especially pyrrocidine B."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The same Fusarium verticillioides source gene is reported as strongly induced by pyrrocidine A/B in Table 1 and Results."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Membrane localization is consistent with ABC transporter topology and transmembrane-domain prediction, but the paper does not directly experimentally localize FvABC3 to the cell membrane."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "FvABC3 was studied under pyrrocidine A exposure, pyrrocidine B exposure (10–20 µg/mL in various assays), and fumonisin-conducive GYAM medium."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly described: RNA-seq, qRT-PCR, gene deletion, complementation, growth assays under pyrrocidine B, LC-MS fumonisin profiling, and maize seedling assay."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed finding matches the Results: induction by pyrrocidines, extreme pyrrocidine B sensitivity upon deletion with rescue by complementation, and no significant change in fumonisin production or virulence."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states fumonisins are toxic mycotoxins associated with phytotoxicity and animal health problems."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary accurately reflects the Results: loss of FvABC3 causes strong pyrrocidine B sensitivity without detectable changes in fumonisin production or virulence."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states FvABC3 is orthologous to FgABC3/FGSG_04580, discusses likely exporter/substrate specificity, and shows induction is independent of adjacent FvZEAR."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses biological control potential of pyrrocidines/S. zeae broadly, but does not explicitly frame FvABC3 itself as a breeding or engineering target; this is extrapolative."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq data accession GSE116351 is explicitly provided."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "FvZEAR is adjacent and tested for regulatory independence, but no protein-protein interaction data are shown; calling it an interacting protein is not supported."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Complementation used the wild-type gene amplified with 5' and 3' flanks, implying native regulatory context, but the exact statement 'Native promoter in complementation context' is inferential and no promoter was directly characterized."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "FvZEAR (adjacent but not required for induction)",
+          "new_value": "NA",
+          "reason": "FvZEAR is adjacent and tested for regulatory independence, but no protein-protein interaction data are shown; calling it an interacting protein is not supported."
+        }
+      ],
+      "stats": {
+        "supported": 20,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "FvZBD1",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies FvZBD1 as FVEG_00314 in the Abstract, Table 1, Results, and Table 3."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 annotates FvZBD1 as alcohol dehydrogenase, and the Discussion describes it as a putative zinc-binding dehydrogenase with conserved-domain relationship to zinc-dependent alcohol dehydrogenases and quinone oxidoreductases."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "FvZBD1 is a gene from Fusarium verticillioides in this study."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly studies Fusarium verticillioides."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional testing of FvZBD1 deletion and complementation was done in Fusarium verticillioides."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied organism is Fusarium verticillioides strain M-3125."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 3 identifies FRC M-3125 as the wild-type strain used."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper notes M-3125 is also known as 7600, but the supplied wording is a paraphrase rather than a paper-stated designation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results sections 8 and 9 explicitly quantify FB1, FB2, and FB3 and link them to FvZBD1."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Fumonisins are explicitly described as mycotoxins."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The increased fumonisins in ΔFvZBD1 were measured in GYAM liquid fungal cultures."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results sections 7 and 8 show deletion dramatically increases FB1/FB2/FB3 and enhances virulence on maize seedlings, consistent with a negative role in fumonisin accumulation."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results section 6 and Table 1 state FvZBD1 was the most highly induced gene, with log2 FC about 12 in both pyrrocidine A and B treatments; Discussion also notes near-zero control and high induced FPKM."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly reports strong induction of FvZBD1 by pyrrocidine A/B."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed contexts are explicitly present: pyrrocidine A/B exposure, GYAM medium, and maize seedling infection on Silver Queen."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed methods are all directly used for FvZBD1: RNA-seq, qRT-PCR, gene deletion, complementation, LC-MS fumonisin analysis, seedling assay, pyrrocidine growth assays, and GYAM plate morphology."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These findings are directly supported by Results sections 6–10 and Fig 7: highest induction and adjacency to FUM cluster; >30-fold FB1 and ~40-fold FB2 increases with strong FB3 increase; enhanced virulence and altered colony morphology."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states fumonisins are phytotoxic and harmful mycotoxins linked to animal disease and connects elevated fumonisin to stronger seedling symptoms."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show slightly delayed growth under pyrrocidine B exposure and more uniform/faster growth on GYAM, alongside increased fumonisins and virulence."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly proposes FvZBD1 as a non-canonical fumonisin-cluster-associated gene with negative impact on fumonisin biosynthesis and states it is not proven as a direct biosynthetic enzyme/mechanism remains unknown."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly discusses FvZBD1 induction and pyrrocidine treatment as relevant to biological control and mitigation of fumonisin contamination."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq GEO accession GSE116351 is explicitly reported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper discusses genomic adjacency/cofunctional association with FUM cluster genes, but does not demonstrate protein-protein interactions."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Complementation used the wild-type gene plus flanking regions, implying native promoter context, but no promoter was explicitly identified or tested."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "FUM cluster genes (genomic adjacency/cofunctional association, not direct physical interaction demonstrated)",
+          "new_value": "NA",
+          "reason": "The paper discusses genomic adjacency/cofunctional association with FUM cluster genes, but does not demonstrate protein-protein interactions."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "FvZEAR",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies FvZEAR as FVEG_11090 in Results, Table 1, and Table 3."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "FvZEAR is annotated as a transcription factor in Table 1 and discussed as such in the Results."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 gives 'Zn(2)-Cys(6) transcription factor,' and the Discussion further mentions a GAL4-like Zn2Cys6 binuclear cluster DNA-binding domain."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "FvZEAR is a Fusarium verticillioides gene in this paper."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species studied is Fusarium verticillioides."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion and expression tests were done in Fusarium verticillioides."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Fusarium verticillioides."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 3 identifies FRC M-3125 as the experimental wild type."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "As above, the exact provided wording is interpretive rather than explicit in the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "FvZEAR was not directly linked in Results to altered FB1/FB2/FB3 production; no fumonisin phenotype for ΔFvZEAR was reported."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Because no direct FvZEAR-fumonisin trait link was established in Results, assigning fumonisins as the terminal metabolite for this gene is not supported."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No FvZEAR-specific fumonisin accumulation assay in GYAM was reported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results section 4 supports that despite strong induction, FvZEAR was not required for FvABC3 induction and its deletion did not alter pyrrocidine B sensitivity; no fumonisin effect was established."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 and Results show strong induction by pyrrocidine A and especially B after 1 h."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly reports induction by pyrrocidines and discusses orthologous zearalenone responsiveness in related Fusarium species."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nuclear localization is plausible for a fungal Zn2Cys6 transcription factor, but no localization experiment is reported."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "FvZEAR was studied under pyrrocidine A/B exposure."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq, qRT-PCR, gene deletion, pyrrocidine B growth assay, and testing FvABC3 expression in the ΔFvZEAR background are all described in Results."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three findings match Results section 4 exactly: strong induction, no effect on FvABC3 induction in the mutant, and no enhanced pyrrocidine B sensitivity."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "FvABC3 was specifically tested as a putative adjacent target and found not dependent on FvZEAR for induction."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports no positive regulatory effect of FvZEAR on FvABC3 induction under the tested conditions."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not establish a decisive product-level effect for FvZEAR; stating 'not established' accurately reflects the evidence."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports no detectable pyrrocidine B sensitivity phenotype for ΔFvZEAR under tested conditions."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a fair summary of the Results and Discussion: FvZEAR was experimentally tested but shown dispensable for the assayed pyrrocidine tolerance phenotype, and possible redundancy with FVEG_10488 is discussed."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The conclusion that it has limited application value is a reasonable inference, but the paper does not explicitly evaluate FvZEAR as a breeding/engineering target."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq data accession GSE116351 is explicitly stated."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "FvABC3 is an adjacent gene whose expression was tested, not a demonstrated interacting protein."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Complementation with the wild-type gene plus flanks implies native promoter context, but this was not explicitly characterized as a promoter choice."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Pyrrocidine A and B are directly shown as inputs in this study, and orthologs were previously reported as zearalenone responsive in related Fusarium species."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "fumonisin B1; fumonisin B2; fumonisin B3",
+          "new_value": "NA",
+          "reason": "FvZEAR was not directly linked in Results to altered FB1/FB2/FB3 production; no fumonisin phenotype for ΔFvZEAR was reported."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "mycotoxin",
+          "new_value": "NA",
+          "reason": "Because no direct FvZEAR-fumonisin trait link was established in Results, assigning fumonisins as the terminal metabolite for this gene is not supported."
+        },
+        {
+          "field": "Terminal_Metabolite_Accumulation_Site",
+          "old_value": "fungal culture in GYAM medium",
+          "new_value": "NA",
+          "reason": "No FvZEAR-specific fumonisin accumulation assay in GYAM was reported."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "FvABC3 (adjacent gene; regulatory independence demonstrated)",
+          "new_value": "NA",
+          "reason": "FvABC3 is an adjacent gene whose expression was tested, not a demonstrated interacting protein."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 4,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 78,
+    "supported": 62,
+    "unsupported": 6,
+    "uncertain": 10,
+    "total_corrections": 6
+  }
+}

@@ -1,0 +1,1255 @@
+{
+  "file": "MinerU_markdown_PMC5916857_2038798478645166083",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC5916857_2038798478645166083.md",
+  "timestamp": "2026-03-31T22:23:40.940501",
+  "genes": [
+    {
+      "gene_name": "PAH1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PAH1 is the yeast gene studied throughout the paper."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses yeast strain RS453, i.e., Saccharomyces cerevisiae."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PAH1 was tested in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species for PAH1 experiments is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and methods list all strains as derived from RS453; pah1Δ and overexpression assays were in this background."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 lists pBG1805-PAH1 under GAL1 promoter and YCplac33-PAH1 under its endogenous promoter."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract/author summary identify Pah1p as phosphatidate phosphatase and sole yeast ortholog of human LIPIN genes; PAP/lipin family inference is direct."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses effects on nuclear/ER membrane morphology and BMV localization, but does not directly localize Pah1p itself in Results."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results directly link PAH1 loss to increased total phospholipids."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Total phospholipids are phospholipids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states phospholipids are major membrane components and important for VRC formation/viral replication."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/discussion describe phospholipids as membrane components and BMV VRCs at the nuclear ER membrane; 'cellular membranes' is supported, and nuclear ER membrane involvement is directly discussed."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly shown: PAH1 deletion increased BMV replication and total phospholipids, while PAH1 overexpression inhibited replication."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point is supported in Results: ~3-fold increase in pah1Δ, lipid changes in pah1Δ nem1Δ/pah1Δ backgrounds, pah1Δ dgk1Δ normal membrane but enhanced replication, improved growth, and inhibition by PAH1 overexpression."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods were all used in the PAH1-related experiments."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "BMV replication was induced in galactose medium in yeast."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show improved host growth during infection and lipid shifts including reduced TAG with increased phospholipids/ErgE/free FAs upon PAH1 loss."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The antiviral engineering implication is a reasonable interpretation from the study, but not explicitly presented as a breeding/engineering application in the paper."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Nem1p and Spo7p are explicitly stated to activate Pah1p; DGK1 is discussed as a counteracting pathway component affecting the same PA/DAG node."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "RS453 is the yeast strain background used."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes the paper's central conclusion that Pah1p limits BMV via host lipid homeostasis and diversion toward storage lipid synthesis."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 19,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "NEM1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NEM1 is a yeast gene directly tested in yeast deletion and overexpression assays."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The work uses Saccharomyces cerevisiae strain RS453 derivatives."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NEM1 was assayed in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "nem1Δ strain is listed as RS453 nem1::HIS3."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 lists pBG1805-NEM1 under the GAL1 promoter."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state Nem1p and Spo7p are required for Pah1p activation; calling it a Pah1p-activating phosphatase complex component matches the paper's description."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses nuclear/ER membrane phenotypes of nem1Δ cells, but does not directly determine NEM1 protein localization in Results."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "NEM1 is linked indirectly through Pah1p activation to phospholipid control, but total phospholipid was not directly measured for nem1Δ alone in Results."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Depends on the indirect total phospholipid assignment for NEM1."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports the general function of phospholipids as membrane lipids supporting VRCs."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "This metabolite-site linkage is not directly shown for NEM1-specific experiments."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly shown: nem1Δ enhances BMV replication and NEM1 overexpression inhibits replication; text attributes this to Pah1p inactivation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three listed findings are explicitly stated in Results."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion mutant analysis, overexpression, and Northern blotting were used for NEM1."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Assays were performed during galactose-induced BMV replication in yeast."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of NEM1 favoring viral replication via disrupted lipid regulation is directly inferable from Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This extrapolated engineering value is not explicitly discussed in the paper."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Nem1p is explicitly linked to Spo7p and Pah1p activation."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "NEM1 experiments used the RS453 background."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "NEM1 was directly tested in Results as a Pah1p activator affecting replication phenotype."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 16,
+        "unsupported": 0,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "SPO7",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SPO7 is a yeast gene directly tested in yeast."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The yeast system is Saccharomyces cerevisiae RS453 derivatives."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SPO7 was examined in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "spo7Δ strain is listed in RS453 background."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 lists pBG1805-SPO7 under GAL1 promoter."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state Spo7p is required with Nem1p for Pah1p activation; this description is supported."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not directly localize Spo7p in Results."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "SPO7 is only indirectly tied to total phospholipids through Pah1p; not directly measured for spo7Δ."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Depends on the indirect total phospholipid assignment."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Phospholipid function in membrane biogenesis/VRCs is supported generally."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Not directly shown for SPO7-specific metabolite effects."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "spo7Δ enhanced BMV replication and SPO7 overexpression inhibited replication in Results."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each item is explicitly supported by Results."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion analysis, overexpression, and Northern blotting were used."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "BMV replication was induced in galactose medium in yeast."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of SPO7 favoring viral replication through disrupted lipid regulation is a direct inference from the Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Engineering-target interpretation is not explicitly claimed in the paper."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Spo7p is explicitly connected to Pah1p and Nem1p."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "RS453 background is documented."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "SPO7 perturbation was directly tied to replication phenotype in Results."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 16,
+        "unsupported": 0,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "DGK1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "DGK1 is a yeast gene directly tested in the study."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The yeast used is Saccharomyces cerevisiae."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "DGK1 experiments were in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "DGK1 constructs and mutants were used in RS453-derived yeast strains."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 states DGK1 and DGK1-D177A are under the GAL1 promoter."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly say DGK1 encodes DAG kinase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for DGK1 appears in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Described directly as DAG kinase/diacylglycerol kinase."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses DGK1 overexpression causing expanded nER membrane, but does not directly localize Dgk1p itself."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "DGK1 is explicitly placed in PA/DAG interconversion affecting phospholipid and TAG synthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the PA-DAG node discussed in Fig 1A and Results."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "DGK1 acts at the branching node between DAG and PA, directly inferable from the pathway figure and text."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state DGK1 converts DAG to PA."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state DGK1 converts DAG to PA."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is stated verbatim in Results."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Results interpret DGK1 overexpression as redirecting lipid synthesis from TAG to phospholipids."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "DGK1 is important in this study, but the paper does not explicitly call it rate-limiting."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The study ties DGK1-driven PA increase to redirected synthesis toward phospholipids/total phospholipids."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Total phospholipids are phospholipids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The membrane/VRC-support role of phospholipids is explicit."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses membrane phospholipids and BMV VRCs at the nuclear ER membrane/cellular membranes."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly show DGK1 overexpression enhanced BMV replication to pah1Δ-like levels and required catalytic activity."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements are explicitly supported by Fig 1C and related text."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Overexpression, catalytic mutant D177A, and Northern blotting were used."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression and replication assays were induced under galactose conditions."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results support elevated PA/phospholipid synthesis and reduced TAG accumulation accompanying enhanced viral replication."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This application framing is interpretive and not explicitly stated by the paper."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pah1p is a counteracting pathway component, but a direct protein-protein interaction is not shown."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast background is RS453."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "DGK1 was indeed used both for causal PA-increase testing and in pah1Δ dgk1Δ genetic analysis."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.7.1.107",
+          "new_value": "NA",
+          "reason": "No EC number for DGK1 appears in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "CHO2",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CHO2 is a yeast gene directly tested in the Results."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Saccharomyces cerevisiae."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CHO2 experiments were carried out in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "cho2Δ and overexpression experiments used the RS453 background."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 2 lists p426-CHO2 under endogenous CHO2 promoter and p3G-CHO2 under GAL1 promoter."
+        },
+        "Enzyme_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states Cho2p is involved in converting PE to PC, but does not explicitly name the enzyme as phosphatidylethanolamine N-methyltransferase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "SAM-dependent phospholipid methyltransferase is consistent with known biology, but this family/domain wording is not stated in the paper."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper mentions recruitment of host Cho2p to viral replication sites from prior work, but does not directly determine CHO2 localization in this study."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CHO2 is directly linked to phosphatidylcholine synthesis in the Results."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states Cho2p converts PE to PC, supporting the PE-to-PC methylation branch description."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "Calling it 'midstream' is not stated or inferable with precision from the paper."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly say Cho2p is involved in converting PE to PC."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly associate CHO2 with synthesis of PC."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results state Cho2p is involved in converting PE to PC; methylation wording is inferable from this context."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly links PC synthesis to support of BMV replication."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The study shows CHO2 is important, but does not explicitly define it as rate-limiting."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PC is the metabolite directly linked to CHO2 in the Results."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "PC is a phospholipid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "PC is described as the major membrane phospholipid and important for viral replication-site membrane biogenesis."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links PC/phospholipids to viral replication sites on nER/cellular membranes."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly supported by Fig 8: cho2Δ diminishes the pah1Δ-enhanced phenotype, and CHO2 overexpression promotes BMV replication."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four statements are explicitly supported by the Results section around Fig 8."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion, overexpression from two promoters, Northern blotting, and Western blotting of Cho2p-HA were used."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed during galactose-induced BMV replication in yeast."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The study supports enhanced PC synthesis favoring viral replication and cho2Δ strongly impairing replication, implying membrane-homeostasis tradeoffs."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This extrapolates beyond explicit statements in the paper."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Opi1p is discussed as a transcriptional regulator of phospholipid synthesis genes, but no direct CHO2-Opi1p protein interaction is shown or stated."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "RS453 background is stated."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed concludes PC is important but not sufficient alone to explain the full pah1Δ phenotype."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.1.1.17",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "Opi1p (transcriptional context reported for phospholipid synthesis genes)",
+          "new_value": "NA",
+          "reason": "Opi1p is discussed as a transcriptional regulator of phospholipid synthesis genes, but no direct CHO2-Opi1p protein interaction is shown or stated."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 2,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "AtPAH1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AtPAH1 is identified as an Arabidopsis thaliana PAH1 ortholog."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AtPAH1 was expressed and tested in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species for the assay is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast experiments were done in RS453 background."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Results say all plant genes were expressed from a high-copy plasmid under GAL1 promoter; Table 2 lists pYes2-AtPAH1 under GAL1."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Plant PAH orthologs are described as PAP enzymes and orthologs of yeast PAH1."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "As plant PAH1 ortholog/lipin-like PAP, this family assignment is supported by the paper's ortholog/PAP discussion."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PAH proteins are discussed in PA-to-DAG lipid metabolism controlling phospholipid vs TAG synthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "This directly matches the PA-to-DAG branch described for PAP activity."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "PAP acts at the branching point between phospholipid and storage lipid synthesis, as described in abstract/summary."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "PAP converts phosphatidate to DAG according to the paper."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states PAP converts phosphatidate to diacylglycerol."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is the reaction described for PAP/PAH1 in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly frames PAP as diverting lipid flux away from phospholipids toward storage lipids."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper treats PAP as important for flux control, but does not explicitly label AtPAH1 as rate-limiting."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The PAH/lipin function is directly tied to total phospholipid levels in the study framework."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Total phospholipids are phospholipids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports this general phospholipid function."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Membrane localization of phospholipid function is a direct theme; 'cellular membranes' is supported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig 10B shows heterologous expression of AtPAH1 inhibits BMV replication in yeast."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "AtPAH1 is presented as a plant ortholog and its yeast expression inhibited BMV by ~40-50%."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Heterologous expression in yeast and Northern blotting were used."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast assay used galactose-induced BMV replication."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Likely lipid flux redirection is consistent with known PAP biology, but this tradeoff was not directly tested for AtPAH1 in Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This application statement is plausible but not explicitly made for AtPAH1 in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "AtPAH1 was directly assayed in yeast as a functional ortholog affecting replication."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "3.1.3.4",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "AtPAH2",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AtPAH2 is explicitly from Arabidopsis thaliana."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is named in the paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AtPAH2 was tested in both yeast and Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Saccharomyces cerevisiae and Nicotiana benthamiana are explicitly used."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "RS453 is the yeast background; no cultivar/variety is given for N. benthamiana, so 'NA' is acceptable."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "GAL1 promoter in yeast is stated; enhanced CaMV 35S promoter in N. benthamiana is stated in Results/methods."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "AtPAH2 is treated as a plant PAH/PAP ortholog."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is reported in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Lipin/PAP family characterization is supported by the ortholog/PAP discussion."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PAH proteins are positioned in glycerolipid/phospholipid metabolism in the paper."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PA-to-DAG conversion controlling TAG vs phospholipid synthesis is directly consistent with the study's framework."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "PAP is discussed as a branchpoint enzyme between phospholipid and storage lipid synthesis."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "PAP substrate phosphatidate is directly described."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "PAP product DAG is directly described."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the PAP reaction described in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly explains PAP activity as reducing PA available for phospholipid synthesis and channeling toward storage lipids."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "Important control role is implied, but 'rate-limiting' is not directly stated."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Total phospholipids are the study's endpoint for PAH function."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are phospholipids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by paper's discussion of membrane structural lipids and VRC formation."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Cellular membrane association is supported generally."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "AtPAH2 inhibited BMV in yeast and N. benthamiana, and also inhibited TMV in N. benthamiana."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed findings are directly reported in Results/Fig 10."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast heterologous expression, plant agroinfiltration, and Northern blotting were used."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the described experimental setup."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The likely phospholipid-pool tradeoff is inferred, but host membrane effects were not directly evaluated for AtPAH2."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This engineering interpretation is plausible but not explicitly proposed in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The virus-specific difference between BMV/TMV and TRV is directly discussed."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "3.1.3.4",
+          "new_value": "NA",
+          "reason": "No EC number is reported in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "NbPAH1A",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly list NbPAH1A as Niben101Scf01009g01015.1."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NbPAH1A is identified from Nicotiana benthamiana."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NbPAH1A was tested in both yeast and N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Saccharomyces cerevisiae and Nicotiana benthamiana are the assay species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "RS453 is the yeast strain background; no N. benthamiana variety is specified."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "GAL1 promoter in yeast and enhanced CaMV 35S promoter in N. benthamiana are stated."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "NbPAH1A is a putative PAH/PAP ortholog based on sequence similarity, as stated in Results."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number appears in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Lipin/PAP family assignment is supported by the ortholog analysis presented."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The PAH orthologs are framed in PAP-controlled glycerolipid/phospholipid metabolism."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PA-to-DAG conversion controlling phospholipid versus TAG synthesis matches the study's PAH framework."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "PAP is a branchpoint enzyme in the paper's model."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "PAH/PAP substrate PA is directly described in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "PAH/PAP product DAG is directly described."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the PAP reaction described for PAH orthologs."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PAH activity is described as competing with phospholipid synthesis by consuming PA."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "Control role is plausible, but 'rate-limiting' is not stated."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The PAH study framework centers on total phospholipids as the relevant endpoint."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are phospholipids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper supports phospholipids as membrane structural lipids supporting replication complexes."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Cellular membranes is supported as the relevant site."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "NbPAH1A inhibited BMV in yeast and less strongly in N. benthamiana."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed points are explicitly stated in Results around Fig 10."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Yeast heterologous expression, plant agroinfiltration, and Northern blots were used."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Matches methods and Results."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The host lipid-balance tradeoff is an inference, not directly tested for NbPAH1A."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Possible application is interpretive and not directly presented."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes that different plant PAH orthologs may play different roles in plants."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "3.1.3.4",
+          "new_value": "NA",
+          "reason": "No EC number appears in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "NbPAH2A",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly list NbPAH2A as Niben101Scf05628g01019.1."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NbPAH2A is identified from Nicotiana benthamiana."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Nicotiana benthamiana is explicitly named."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NbPAH2A was tested in yeast and N. benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Saccharomyces cerevisiae and Nicotiana benthamiana are the assay species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "RS453 is the yeast background; no plant variety is specified."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "GAL1 promoter in yeast and enhanced CaMV 35S promoter in N. benthamiana are stated."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "NbPAH2A is presented as a putative PAH/PAP ortholog."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Lipin/PAP family assignment is supported by the ortholog analysis."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PAH orthologs are discussed in lipid metabolism controlling phospholipid/storage lipid balance."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PA-to-DAG conversion branch is central to the study's model."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "PAP is a branchpoint enzyme in the lipid pathway described."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "PA is the substrate described for PAPs."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "DAG is the product described for PAPs."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the PAH/PAP reaction described in the paper."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by the paper's explanation of PAP function in competing with phospholipid synthesis."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "Important control is implied, but not explicitly 'rate-limiting'."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Total phospholipids are the metabolite class tied to PAH function in this study."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are phospholipids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports phospholipids as membrane structural lipids needed for VRC formation."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Cellular membranes is supported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "NbPAH2A inhibited BMV in yeast and strongly inhibited BMV and TMV in plants."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed statement is directly supported by Fig 10 and text."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods match the study: heterologous expression/agroinfiltration and Northern blotting."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Matches the reported conditions."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Host lipid-allocation consequences are inferred rather than directly measured for NbPAH2A."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Promising application is interpretive, not explicitly claimed by the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports stronger antiviral effect of NbPAH2A than NbPAH1A, implying functional divergence."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "3.1.3.4",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "OPI1",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Opi1p is mentioned as a yeast transcription repressor in the Results."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Context is Saccharomyces cerevisiae yeast lipid regulation."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The regulatory context described is in yeast."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "This context is Saccharomyces cerevisiae."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Although yeast work is in RS453, OPI1 itself was not experimentally assayed in a specific strain context."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly call Opi1p a transcription repressor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is a phospholipid biosynthesis regulator by function, but this specific family/domain label is not used in the paper."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state phospholipid synthesis gene transcription increases due to sequestration of Opi1p when PA levels increase."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "Results say phospholipid synthesis genes increase in transcription and CHO2 is given as a relevant example."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "This is exactly the mechanism described in Results."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The controlled process is phospholipid synthesis/biosynthesis, explicitly stated."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper connects Opi1p-mediated transcriptional effects to phospholipid synthesis genes including CHO2/PC and broader total phospholipids."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "PC and total phospholipids are phospholipids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported generally by the paper's membrane biogenesis/VRC discussion."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Phospholipids are membrane components in cellular membranes, supported by the paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The proposed role of Opi1p in favoring BMV replication is background interpretation only; OPI1 was not directly manipulated or phenotyped in Results."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "Opi1p is presented as a transcriptional gatekeeper, but 'decisive influence' is stronger than directly shown here."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These two statements accurately reflect what the paper says about Opi1p, while also noting it was used to motivate CHO2 experiments."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The value 'Not directly tested in this study' is correct."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant condition is the high-PA pah1Δ context during BMV replication, as stated in Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is conceptual extrapolation and not directly validated or proposed in the paper."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "OPI1 itself was not directly tested in RS453; the value is background-contextual rather than experimentally specific."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "PA is a lipid, not a protein; this field asks for interacting proteins."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Elevated phosphatidate levels are explicitly stated to sequester Opi1p."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes PA status linking to transcriptional control of phospholipid synthesis genes."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately notes OPI1 is background/regulatory context rather than a directly manipulated core gene."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Core_Phenotypic_Effect",
+          "old_value": "High PA in pah1Δ is proposed to sequester Opi1p, increasing phospholipid synthesis gene expression and thereby favoring BMV replication",
+          "new_value": "NA",
+          "reason": "The proposed role of Opi1p in favoring BMV replication is background interpretation only; OPI1 was not directly manipulated or phenotyped in Results."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "PA (sequestration context)",
+          "new_value": "NA",
+          "reason": "PA is a lipid, not a protein; this field asks for interacting proteins."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 2,
+        "uncertain": 5
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 265,
+    "supported": 217,
+    "unsupported": 9,
+    "uncertain": 39,
+    "total_corrections": 9
+  }
+}

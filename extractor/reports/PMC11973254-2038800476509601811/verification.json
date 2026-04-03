@@ -1,0 +1,542 @@
+{
+  "file": "MinerU_markdown_PMC11973254_2038800476509601811",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC11973254_2038800476509601811.md",
+  "timestamp": "2026-03-31T21:44:43.149467",
+  "genes": [
+    {
+      "gene_name": "PilB",
+      "category": "Common",
+      "verification": {
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism throughout is Xanthomonas oryzae pv. oryzicola (Xoc)."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly studies Xanthomonas oryzae pv. oryzicola."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The wild-type strain used is GX01."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "PilB was cloned/tested from Xoc GX01."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "PilB is from Xanthomonas oryzae pv. oryzicola in this paper."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The pilB gene was amplified from Xoc GX01."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "PilB is described as a motor protein for pilus assembly/extension, but the exact phrase 'inner membrane-associated / cytoplasmic pilus assembly motor' is not explicitly stated in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PilB is explicitly described as a pilus motor protein and ATPase responsible for assembly/extension of the pilus, i.e. a type IV pilus assembly ATPase."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "PilB was tested for motility and ATPase activity, not directly for EPS production as a final product trait."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Because PilB is not directly linked in Results to a terminal nutrient/metabolic product such as EPS, this assignment is not supported."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not connect PilB experimentally to EPS accumulation site."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show ΔpilB almost lost twitching motility and had greatly increased spreading motility; EmvR repressed PilB ATPase activity."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "PilB was examined by protein purification and ATPase assay, deletion mutant and complementation, bacterial two-hybrid, and pull-down assay."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed findings match Results: PilB had ATPase activity, EmvR interacted with PilB and reduced activity by ~40.4%, ΔpilB nearly abolished twitching and increased spreading, complementation restored motility."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows PilB is important for twitching/spreading, but 'likely compromising host surface colonization' is an inference not directly tested for pilB."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This is an application proposal not stated or tested in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that PilB is a motility factor central to the EmvR-regulated phenotype, and does not present it as an EPS biosynthetic enzyme."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "PilB ATPase was assayed in vitro."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "extracellular polysaccharide (EPS)",
+          "new_value": "NA",
+          "reason": "PilB was tested for motility and ATPase activity, not directly for EPS production as a final product trait."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "polysaccharide",
+          "new_value": "NA",
+          "reason": "Because PilB is not directly linked in Results to a terminal nutrient/metabolic product such as EPS, this assignment is not supported."
+        },
+        {
+          "field": "Terminal_Metabolite_Accumulation_Site",
+          "old_value": "extracellular matrix / cell surface",
+          "new_value": "NA",
+          "reason": "The paper does not connect PilB experimentally to EPS accumulation site."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Potential antibacterial target to block T4P function and early host invasion of Xoc",
+          "new_value": "NA",
+          "reason": "This is an application proposal not stated or tested in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 12,
+        "unsupported": 4,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "EmvR",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "EmvR is explicitly identified as XOCgx_1445."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly calls EmvR an orphan single-domain response regulator / orphan SD-RR."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support protein activity modulation via interaction with PilB, likely phosphorylation-dependent function, and repression of PilB ATPase activity."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support roles in EPS production, T4P-dependent motility, and virulence during spray inoculation/early invasion."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "EPS production is directly measured and affected by EmvR, especially upon overexpression."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "EPS is a polysaccharide."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "EPS is extracellular by nature, but the exact wording 'extracellular matrix / cell surface' is not explicitly used in the Results."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly test EPS production and support indirect control of T4P biogenesis-associated behavior via PilB."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Interaction with ColS_XOCgx_4036 is shown, but the specific 'unknown environmental or emergency stimulus' language is a proposed model in Discussion/Figure 7, not directly demonstrated in Results."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism is Xanthomonas oryzae pv. oryzicola."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated throughout the paper."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The wild-type strain is GX01."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "EmvR studied here is from Xoc GX01."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Xanthomonas oryzae pv. oryzicola."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Gene manipulation was performed in GX01."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state that EmvR is localized in the cytoplasm."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "PilB is directly validated as an EmvR-interacting target and functionally modulated by EmvR."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "EmvR is described as containing a REC domain and lacking a conventional output domain, i.e. a single-domain RR."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "B2H and pull-down assays support interaction with PilB and ColS_XOCgx_4036."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "UNCERTAIN",
+          "reason": "Transient interactions with ColS and PilB are supported, but the specific statement about a 'likely transient signaling complex' is interpretive rather than directly shown."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion reduced spreading and spray virulence while increasing twitching; overexpression increased EPS and spreading and reduced twitching."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods appear in the Results/Methods for EmvR."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each numbered point is backed by the Results, including genetic phenotypes, interactions, inhibition of PilB, downstream relation to ColS, and importance of Asp-15/Asp-59/Thr-87 with Asp-59 as phosphorylation site."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly shows deletion lowers virulence in spray inoculation and overexpression reduces twitching/T4P-associated motility."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Potential antimicrobial application is not presented or tested in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly reports spray-specific but not infiltration-specific virulence effect and proposes a branched one-to-two TCS model involving ColS, ColR, and EmvR."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Spray versus infiltration inoculation and sucrose-containing EPS assay media are explicitly used."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "co-IP coupled LC-MS/MS is explicitly performed; no accession is provided, so 'accession NA' is consistent."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "cytoplasm",
+          "new_value": "NA",
+          "reason": "The paper does not state that EmvR is localized in the cytoplasm."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Potential antimicrobial target to reduce Xoc virulence and EPS-associated colonization by interfering with EmvR-PilB or EmvR-ColS signaling",
+          "new_value": "NA",
+          "reason": "Potential antimicrobial application is not presented or tested in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "ColR_XOCgx_4037",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is explicitly named XOCgx_4037 / ColR_XOCgx_4037."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states ColR_XOCgx_4037 is a typical response regulator with a DNA-binding domain, consistent with a response regulator transcription factor."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents ColR as the RR of the ColS/ColR TCS, implying transcriptional regulation downstream of ColS_XOCgx_4036."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion of colR reduced EPS and altered motility, supporting positive regulation of EPS production and control of motility phenotypes."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "EPS production was directly measured and reduced in the colR mutant."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "EPS is a polysaccharide."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact phrase 'extracellular matrix / cell surface' is not explicitly given, though EPS is extracellular."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show effects on EPS production and motility."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "ColR is explicitly paired with ColS_XOCgx_4036 in a two-component system; the environmental cue remains unknown but is proposed by the authors."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The work is in Xanthomonas oryzae pv. oryzicola."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicit throughout."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "GX01 is the wild-type strain used."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "colR was manipulated in Xoc GX01."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Xanthomonas oryzae pv. oryzicola."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "GX01."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "ColR is a DNA-binding RR, but the exact localization 'cytoplasm / DNA-associated' is not directly stated."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNCERTAIN",
+          "reason": "The Discussion proposes ColR changes expression of genes involved directly or indirectly in motility, but no downstream genes were experimentally identified in Results."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states ColR_XOCgx_4037 has a REC domain and a DNA-binding domain."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "ColR is treated as cognate RR of ColS, but direct physical interaction between ColR and ColS was not experimentally shown in this paper."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies ColS_XOCgx_4036/ColR_XOCgx_4037 as a TCS."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion of colR reduced EPS and spreading and enhanced twitching; complementation restored phenotypes."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion, complementation, cross-complementation with emvR, EPS assay, and motility assay were performed."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed findings are consistent with Results, including 27.7% less EPS, motility changes, complementation, and rescue by emvR overexpression."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of ColR is directly shown to decrease EPS and alter motility."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Application as an antibacterial target is not stated or tested in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper does not identify direct downstream genes of ColR experimentally."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "EPS was assayed on sucrose-containing media."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Candidate antibacterial target for limiting EPS-associated colonization and motility in Xoc",
+          "new_value": "NA",
+          "reason": "Application as an antibacterial target is not stated or tested in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "ColS_XOCgx_4036",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is explicitly named XOCgx_4036 / ColS_XOCgx_4036."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "ColS_XOCgx_4036 is explicitly described as a sensor histidine kinase (HK)."
+        },
+        "Regulation_Mode": {
+          "verdict": "UNCERTAIN",
+          "reason": "Physical interaction with EmvR is supported, but direct phosphotransfer signaling to EmvR was not demonstrated; it is proposed."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Results show ColS affects motility but not EPS production; tying it to a terminal product like EPS is not supported."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper explicitly states deletion of colS did not significantly affect EPS production."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Since terminal metabolite assignment to EPS is unsupported for ColS, this class field is also unsupported."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No supported terminal metabolite linkage for ColS to EPS is shown in Results."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support motility-associated regulation and indirect relation to T4P biogenesis via EmvR/PilB model."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Unknown environmental cue/emergency stimulus is part of the proposed model in Discussion/Figure 7, not directly shown experimentally."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Studied in Xanthomonas oryzae pv. oryzicola."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicit throughout the paper."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "GX01 is the strain used."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "colS was manipulated from Xoc GX01."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Xanthomonas oryzae pv. oryzicola."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "GX01."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "As a sensor HK ColS is membrane-associated by implication, but 'cell membrane' is not explicitly stated in the Results text."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "UNCERTAIN",
+          "reason": "Influence via ColR and likely via EmvR is supported at the pathway level, but specific target genes were not identified."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "ColR is the cognate RR by genomic context and EmvR physically interacts with ColS, but direct regulatory targeting/phosphotransfer to either was not experimentally proven."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "ColS is explicitly a sensor histidine kinase."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "EmvR interaction is directly supported, but direct physical interaction with ColR_XOCgx_4037 was not shown in the paper."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports a canonical ColS/ColR TCS and proposes a branched TCS involving EmvR."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion of colS weakened spreading and enhanced twitching, with no significant effect on EPS production."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion/complementation, B2H, pull-down, cross-complementation with emvR overexpression, motility and EPS assays were performed."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "Points 1-3 and the downstream role of EmvR in motility are supported, but the claim that emvR overexpression restored EPS production in the colS mutant is misleading because colS deletion did not reduce EPS in the first place."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Likely effect on infection-related surface colonization is plausible from motility phenotypes but was not directly tested for colS."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This translational application is not stated or tested in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says phosphotransfer from ColS_XOCgx_4036 to EmvR was proposed/attempted but not directly detected."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "UNCERTAIN",
+          "reason": "EPS-inducing sucrose media are used, but 'unknown environmental cue' is only hypothetical."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Decisive_Influence_on_Target_Product",
+          "old_value": "Controller of motility-related branch and upstream activator/modulator of EmvR-dependent signaling",
+          "new_value": "NA",
+          "reason": "Results show ColS affects motility but not EPS production; tying it to a terminal product like EPS is not supported."
+        },
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "extracellular polysaccharide (EPS)",
+          "new_value": "NA",
+          "reason": "The paper explicitly states deletion of colS did not significantly affect EPS production."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "polysaccharide",
+          "new_value": "NA",
+          "reason": "Since terminal metabolite assignment to EPS is unsupported for ColS, this class field is also unsupported."
+        },
+        {
+          "field": "Terminal_Metabolite_Accumulation_Site",
+          "old_value": "extracellular matrix / cell surface",
+          "new_value": "NA",
+          "reason": "No supported terminal metabolite linkage for ColS to EPS is shown in Results."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Potential target for disrupting surface motility and host entry of Xoc",
+          "new_value": "NA",
+          "reason": "This translational application is not stated or tested in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 14,
+        "unsupported": 5,
+        "uncertain": 9
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 101,
+    "supported": 71,
+    "unsupported": 12,
+    "uncertain": 18,
+    "total_corrections": 12
+  }
+}

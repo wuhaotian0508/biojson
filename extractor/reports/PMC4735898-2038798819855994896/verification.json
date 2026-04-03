@@ -1,0 +1,400 @@
+{
+  "file": "MinerU_markdown_PMC4735898_2038798819855994896",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC4735898_2038798819855994896.md",
+  "timestamp": "2026-03-31T22:10:48.704582",
+  "genes": [
+    {
+      "gene_name": "CYP706B1",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state CYP706B1 with accession 'GenBank: AF332974.1'."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The transgenic CYP706B1 RNAi work was performed in cotton."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state seed-specific silencing of CYP706B1 significantly reduced gossypol in transgenic seeds while lysigenous glands still formed as in non-transgenic plants."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly state the Latin species name for the CYP706B1 transgenic background in this section; only 'transgenic cotton plants' and cultivar R15 are given."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods describe seed-specific RNAi using the globulin promoter, i.e. during seed development."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly use CYP706B1 silencing to show gossypol biosynthesis is not linked to gland formation, and describe CYP706B1 as '(+)-d-cadinene-8-hydroxylase, a P450 monooxygenase in the gossypol biosynthesis pathway'."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is explicitly described as a P450 monooxygenase; as CYP706B1 it belongs to the cytochrome P450 family."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states glands contain gossypol deposits and discusses glands in seeds/aerial tissues, but does not explicitly assign CYP706B1's terminal metabolite accumulation site in this gene-specific experiment beyond seeds with glands present."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Gossypol is described elsewhere as a phenolic compound, while the paper also refers to related terpenoids/terpenoid aldehydes; the exact class label 'sesquiterpenoid aldehyde' is not explicitly attached to CYP706B1 here."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state cotton seeds '(R15)' were transformed and identify transgenic line 'P1-13-8' with low gossypol contents."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Introduction explicitly states gossypol contributes to defense against pests, diseases and abiotic stresses, and reducing seed gossypol is discussed as enabling food/protein/oil use."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "This is directly supported by the CYP706B1 result showing low-gossypol seeds without altering gland formation, matching the stated engineering rationale."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods/results support RNAi transgenics, HPLC measurement of gossypol, and gland phenotype observation."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The specific Latin species for R15 is not stated in the paper excerpt for the CYP706B1 experiment."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiment explicitly measured reduced gossypol levels in seeds."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Reduced seed gossypol is shown and no gland morphology change is reported, but the tradeoff statement about reduced defensive terpenoid in seeds is inferential rather than directly tested."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP706B1 was studied in cotton."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly stated in the Results section for CYP706B1 silencing."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 13,
+        "unsupported": 0,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "CDN",
+      "category": "Pathway",
+      "verification": {
+        "Omics_Data": {
+          "verdict": "UNCERTAIN",
+          "reason": "RNA-seq accession PRJNA265955 is present, and CDN-1 is mentioned in promoter-context discussion, but the paper does not explicitly tie RNA-seq results to a specific CDN entry."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CDN is discussed in cotton."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states gossypol functions in defense against pests, diseases and abiotic stresses and that reducing seed gossypol improves nutritional utility."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says CDN catalyzes the first step in gossypol biosynthesis, but does not explicitly describe the reaction as converting farnesyl diphosphate to (+)-δ-cadinene in this article."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly refers to '(+)-d-cadinene synthase gene (CDN)'."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Farnesyl diphosphate is not mentioned in the paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states previous silencing of CDN did not affect gland formation and implies reduced gossypol biosynthesis, but this was not directly tested in this paper; promoter G-box responsiveness to GoPGF is only speculative/contextual."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects that CDN is cited as prior evidence and as a possible downstream TPS target rather than being directly dissected here."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper reports 15 TPS genes were downregulated in GoPGF-silenced leaves and that some TPS genes were validated by qPCR, but does not specifically show CDN expression data."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes glands as storage organs of gossypol in cotton."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "CDN is discussed in cotton generally; the exact Latin species is not explicitly specified for the prior CDN silencing work in this paper text."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "Point 1 is supported only at the level 'first step in gossypol biosynthesis'; point 2 is cited from previous work; point 3 about CDN-1 promoter G-box binding by GoPGF is speculative rather than directly demonstrated."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CDN is discussed in the context of gossypol biosynthesis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The article does not explicitly assign a species Latin name for the referenced CDN silencing experiment."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNSUPPORTED",
+          "reason": "TM-1 and related lines are used for GoPGF work, but no variety is explicitly linked to CDN in this paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly places CDN in the gossypol biosynthesis pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "UNCERTAIN",
+          "reason": "Terpenoid aldehyde synthesis is mentioned, but the exact subpathway wording 'sesquiterpene/terpenoid aldehyde biosynthesis' is not explicitly attached to CDN."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Reduced defensive terpenoids on silencing is biologically plausible but not directly examined here for CDN."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The product '(+)-δ-Cadinene' is not explicitly stated in the paper text provided."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CDN is a terpene synthase gene and TPS genes are explicitly discussed."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states CDN catalyses the first step in gossypol biosynthesis."
+        },
+        "Core_Validation_Method": {
+          "verdict": "UNCERTAIN",
+          "reason": "Prior gene silencing evidence is referenced and yeast one-hybrid to a generic G-box is shown, but no direct promoter assay for CDN is presented; thus only part of the statement is supported."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CDN is discussed in cotton."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports 'first step' but does not call CDN rate-limiting; 'committed-step enzyme' is interpretive."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Introduction explicitly notes ultra-low gossypol cottonseed lines developed using RNAi knockdown of d-cadinene synthase genes during seed development while foliage/floral organs retained wild-type gossypol."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper mentions related terpenoids/terpenoid aldehydes, but does not explicitly classify gossypol itself here as a sesquiterpenoid aldehyde."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Because CDN is explicitly said to catalyse the first step in gossypol biosynthesis, a direct early-pathway connection is supported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No protein-protein interaction between CDN and GoPGF is shown; only possible promoter-level regulation via G-box is suggested."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number appears in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Substrate",
+          "old_value": "Farnesyl diphosphate",
+          "new_value": "NA",
+          "reason": "Farnesyl diphosphate is not mentioned in the paper."
+        },
+        {
+          "field": "Applied_Species_Variety",
+          "old_value": "TM-1 and related cotton lines",
+          "new_value": "NA",
+          "reason": "TM-1 and related lines are used for GoPGF work, but no variety is explicitly linked to CDN in this paper."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "(+)-δ-Cadinene",
+          "new_value": "NA",
+          "reason": "The product '(+)-δ-Cadinene' is not explicitly stated in the paper text provided."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "GoPGF (promoter-level regulatory implication only)",
+          "new_value": "NA",
+          "reason": "No protein-protein interaction between CDN and GoPGF is shown; only possible promoter-level regulation via G-box is suggested."
+        },
+        {
+          "field": "EC_Number",
+          "old_value": "EC 4.2.3.-",
+          "new_value": "NA",
+          "reason": "No EC number appears in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 12,
+        "unsupported": 5,
+        "uncertain": 12
+      }
+    },
+    {
+      "gene_name": "GoPGF",
+      "category": "Regulation",
+      "verification": {
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly provide RNA-seq accession PRJNA265955 and reference genome alignment to PRJNA248163."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Introduction states gossypol contributes to defense and reducing seed gossypol could improve cottonseed use as food protein/oil."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GoPGF was studied in cotton."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not demonstrate physical interactions with JAZ, WRKYs, or TPS proteins; it only discusses transcript changes and possible promoter regulation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact class label 'sesquiterpenoid aldehyde' is not explicitly assigned to gossypol in the GoPGF results, though related sesquiterpenes/terpenoid aldehydes are discussed."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "GoPGF experiments involve Gossypium hirsutum and Gossypium barbadense."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states expression of GoPGF was induced by JA treatment."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support GoPGF as a positive regulator of gland formation; yeast one-hybrid supports G-box binding, and transcriptome data support effects on gossypol-related genes, though direct activation of specific targets remains partly inferential."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly used in the paper for GoPGF."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states glands are storage organs for gossypol in cotton and discusses glands in aerial tissues and seeds."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion/Fig. 5 explicitly propose feedback from GoPGF/gland formation regulator to gossypol biosynthesis via TPS/WRKY regulation."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "JA treatment inducing GoPGF expression is explicitly reported."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "All components are stated: reduced expression and Ala43Val in Hai-1, frameshift insertions/premature stop codons in recessive alleles, and placement in a distinct bHLH clade."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "VIGS caused glandless phenotype and >93% reduction of hemigossypol and gossypol in leaves; glands are storage structures for gossypol."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports constitutive expression in root, stem, leaf and reduced expression in Hai-1/F1 and very low levels in recessive mutant alleles."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "GoPGF is explicitly identified as a bHLH transcription factor."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly discusses GoPGF as a molecular basis to generate glandless seed/glanded cotton and mentions delayed gland morphogenesis applications."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "TM-1, Hai-1, Giza 45, and Hai7124 are all explicitly used in GoPGF analyses."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "GoPGF silencing reduced gossypol and hemigossypol; the study is centered on gossypol-containing glands."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Loss of glands and reduced defensive sesquiterpenes are shown, but compromised pest/pathogen resistance is not directly tested in this paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points are supported by mapping, localization, VIGS, metabolite data, JA induction, G-box binding, and transcriptome analyses, though some downstream target claims remain proposed rather than fully proven."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq/qPCR show reduced TPS/WRKY/MYB/JA-related genes in GoPGF-silenced plants; regulation of JAZ/WRKY/TPS is proposed in the model."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes a bHLH TF with N-terminal Pfam14215 motif and C-terminal helix-loop-helix DNA-binding domain Pfam00010."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Constitutive expression in root, stem and leaf of glanded cotton is explicitly reported."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Supplementary Fig. 2 and text state GoPGF protein was localized to the nucleus."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "GoPGF is a cotton gene."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support control of gland formation and associated sesquiterpene/gossypol biosynthesis-storage relationships."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "TM-1, Giza 45, Hai-1 and Hai7124 are all explicitly used as source materials in GoPGF work."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The native promoter fragments from TM-1 and Hai-1 were analyzed in transient GUS assays, and no differential activity was detected."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is from Gossypium species; both G. hirsutum and G. barbadense are explicitly involved."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "TPS, WRKY, and JAZ-related genes are implicated by RNA-seq/qPCR/model, and CDN-1 is discussed in promoter context, but direct target status is not conclusively demonstrated."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "JAZ; WRKYs; TPS genes including CDN-1 (regulatory/promoter-level evidence and transcriptomic association)",
+          "new_value": "NA",
+          "reason": "The paper does not demonstrate physical interactions with JAZ, WRKYs, or TPS proteins; it only discusses transcript changes and possible promoter regulation."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 78,
+    "supported": 52,
+    "unsupported": 6,
+    "uncertain": 20,
+    "total_corrections": 6
+  }
+}

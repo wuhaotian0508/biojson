@@ -1,0 +1,956 @@
+{
+  "file": "MinerU_markdown_PMC11967806_2038800476509601810",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC11967806_2038800476509601810.md",
+  "timestamp": "2026-03-31T21:47:13.662472",
+  "genes": [
+    {
+      "gene_name": "AtALMT9",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental Section explicitly states AtALMT9 (AT3G18440)."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Experimental Section identify AtALMT9 as from Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental Section states Arabidopsis thaliana ecotype Columbia."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental Section explicitly says ecotype Columbia."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The transgene was introduced into rice CBP plants."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice in the paper is Oryza sativa/Nipponbare background."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "CBP construct was introduced into slac1-1 receptor derived from Nipponbare; this matches 'Nipponbare; slac1-1 background'."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental Section states AtALMT9 was amplified under the control of the OsActin1 promoter."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Results describe AtALMT9 as the aluminium-activated malate transporter and Figure 2a calls it a vacuolar anion channel."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1c and text explicitly place AtALMT9-GFP at the vacuolar membrane."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AtALMT9 is included as malate transporter module in pathway leading to malate storage."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Malate is an organic acid; this is consistent with paper context and metabolite analysis."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Text states malate is transported to vacuoles and stored there; AtALMT9 localizes to vacuolar membrane."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The CAM model in Results describes nighttime malate storage in vacuoles and daytime mobilization supporting decarboxylation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "Nighttime malate accumulation is shown for the whole multigene CBP system, but AtALMT9-specific contribution was not isolated experimentally."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "UNCERTAIN",
+          "reason": "Items 1 and 2 are supported, but item 3 infers AtALMT9's role from whole-pathway malate/pH data rather than direct gene-specific testing."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods were used in the study for AtALMT9 within CBP: stacking, localization, PCR/RT-PCR/immunoblot, metabolite and vacuolar pH assays."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Expression analyses at DNA/RNA/protein levels showed the six foreign genes, including AtALMT9, were expressed in CBP lines."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Malate and vacuolar pH were assessed across day/night, including 12:00 am and 12:00 pm sampling."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports AtALMT9 as part of a CAM engineering module, but the broader application statement is interpretive rather than directly tested."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows these tradeoffs in the full CBP context and does not isolate them to AtALMT9, matching the field wording."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Both clauses are supported: AtALMT9 was tested only in a multigene pathway, and Discussion notes daytime malate remobilization remains incomplete/needs further study."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 19,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "OsSLAC1",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly list OsSLAC1 (LOC_Os04g48530)."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsSLAC1 is a rice gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice in this study is Oryza sativa."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "CRISPR construct was introduced into Nipponbare calli."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "OsSLAC1 was edited and tested in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Results mention slac1-1 and slac1-2 lines derived from Nipponbare."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "SLAC1 is described as part of the stomatal regulation module; Figure 2a refers to vacuolar anion channel for AtALMT9, not OsSLAC1, but SLAC1 anion channel identity is directly implied by gene name and cited prior work. Family term SLAH is not explicitly stated."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNSUPPORTED",
+          "reason": "OsSLAC1 is a stomatal regulator; the paper does not directly link OsSLAC1 itself to malate as a terminal metabolite."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Depends on unsupported assignment of malate as OsSLAC1 terminal metabolite."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNSUPPORTED",
+          "reason": "OsSLAC1 was not directly shown to control leaf vacuolar malate accumulation."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The wording carefully says it supports the CAM-like carbon sequestration context by stomatal behavior rather than direct malate synthesis, which matches the paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "slac1-1 was used as receptor background; CBP/slac1 context showed higher stomatal conductance and no improved WUE/drought resistance."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points are directly supported by Results and Supporting Information references."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "CRISPR-Cas9 knockout, mutant phenotyping, drought treatment, and gas exchange were all used."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed conditions/treatments appear in Results: normal growth, PEG drought, pot drought, dark treatment, Ci and light variation."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly says constitutive stomatal opening is not suitable for drought-prone crops and suggests inducible/specific promoters for future stomatal regulation."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed tradeoffs are directly reported in Results/Discussion."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "OsSLAC1 was used as receptor background/stomatal module rather than a metabolic catalyst; it is central to the synthetic CAM system."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite",
+          "old_value": "Malate",
+          "new_value": "NA",
+          "reason": "OsSLAC1 is a stomatal regulator; the paper does not directly link OsSLAC1 itself to malate as a terminal metabolite."
+        },
+        {
+          "field": "Terminal_Metabolite_Class",
+          "old_value": "Organic acid",
+          "new_value": "NA",
+          "reason": "Depends on unsupported assignment of malate as OsSLAC1 terminal metabolite."
+        },
+        {
+          "field": "Terminal_Metabolite_Accumulation_Site",
+          "old_value": "Leaf vacuole",
+          "new_value": "NA",
+          "reason": "OsSLAC1 was not directly shown to control leaf vacuolar malate accumulation."
+        }
+      ],
+      "stats": {
+        "supported": 16,
+        "unsupported": 3,
+        "uncertain": 0
+      }
+    },
+    {
+      "gene_name": "AcoCA1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental Section lists AcoCA1 (Aco006181)."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Results identify AcoCA1 as carbonic anhydrase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Aco genes are from pineapple."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper refers to pineapple but does not explicitly spell out Ananas comosus in the provided text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoCA1 was introduced into rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice corresponds to Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "CBP was transformed into slac1-1 receptor from Nipponbare background."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Results say native promoters of selected pineapple genes were used, including AcoCA1."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Carbonic anhydrase family identity is explicit."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1a text states AcoCA1 is expressed in both cytoplasm and chloroplast."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoCA1 is part of the synthetic facultative CAM bypass / CAM carbon fixation module."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly include AcoCA1 in the nocturnal carboxylation module."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "As CO2 hydration step preceding PEPC fixation, it is upstream in the pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Text says CAM plants convert CO2 into HCO3- at night by CA."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Text explicitly gives HCO3- as product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly described in Results and Figure 2a."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoCA1 provides bicarbonate precursor for downstream malate formation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Within the engineered pathway the downstream CAM biomarker/final measured product is malate."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Malate is treated as an organic acid in targeted metabolite analysis."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Pathway model describes malate storage in vacuoles."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Discussion describe malate as CAM biomarker, temporary carbon-storage metabolite, and source for daytime decarboxylation."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "AcoCA1 plausibly supports nocturnal bicarbonate supply, but its specific contribution to malate accumulation was not dissected from the multigene CBP stack."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed points are directly supported, except the final causal phrasing is as part of the whole CBP system; still reasonably faithful."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper does not establish this; 'Not established' is faithful."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are reported for candidate selection and validation of AcoCA1 except direct CA enzyme assay, which this field does not claim."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state AcoCA1 has relatively high leaf expression in pineapple and is induced by darkness/circadian rhythm."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly report nocturnal expression peaking after 2 h darkness and remaining high until morning."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "This was assessed under diurnal light-dark cycle."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "General engineering value is plausible and consistent with the paper, but this exact application statement is not explicitly tested."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper reports no gene-specific penalty and notes whole-CBP WUE did not improve."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state CA activity was not measured due to lack of suitable method."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "4.2.1.1",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "AcoPEPC1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental Section lists AcoPEPC1 (Aco010025)."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoPEPC1 is identified as phosphoenolpyruvate carboxylase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Aco genes are from pineapple."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pineapple source is clear, but Ananas comosus is not explicitly written in the provided text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Introduced into rice CBP lines."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is rice/Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "CBP was built in Nipponbare-derived slac1-1 background."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Native promoters of selected pineapple genes were used, including AcoPEPC1."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PEPC family identity is explicit."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1a shows AcoPEPC1-GFP in the cytoplasm."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoPEPC1 is part of the synthetic CAM bypass/CAM carbon fixation."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Text explicitly places AcoPEPC1 in the carboxylation module."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "PEPC is the committed fixation step from HCO3- and PEP to OAA in the described pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Text explicitly states PEPC uses PEP and HCO3-."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Text states the reaction results in OAA."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This reaction is directly described in Results and Figure 2a."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "OAA is the immediate precursor to malate."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Malate is the measured CAM biomarker/final pathway product discussed."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Malate is analyzed as an organic acid."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Malate is described as stored in vacuoles."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper describes malate as temporary carbon storage and source for daytime decarboxylation enhancing sequestration."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "AcoPEPC1 certainly participates mechanistically, but its individual causal contribution to enhanced carbon fixation was not separated from the multigene CBP system."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed items are explicitly supported, though phenotype improvements derive from whole CBP lines rather than single-gene lines."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "PEPC is central to nocturnal carboxylation, but the paper does not explicitly designate AcoPEPC1 as a key control or rate-limiting step in engineered rice."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods were used."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state high leaf expression and darkness/circadian induction in pineapple."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results say AcoPEPC1 shows a higher expression pattern at night in rice."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Assessed under diurnal light-dark rhythm."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Plausible extrapolation from the study, but not explicitly tested as a standalone breeding-value claim."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "No gene-specific penalty isolated; whole-system tradeoffs are reported."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "It is indeed the central nocturnal fixation enzyme in the engineered module as described."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "4.1.1.31",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "AcoMDH1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental Section lists AcoMDH1 (Aco013935)."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoMDH1 is identified as malate dehydrogenase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Aco genes are from pineapple."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pineapple is stated, but Ananas comosus is not explicitly written in the provided text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoMDH1 was introduced into rice CBP lines."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is rice/Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "CBP lines were generated in Nipponbare-derived slac1-1 background."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Results indicate native promoters of selected pineapple genes, including AcoMDH1, were used."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "MDH family identity is explicit."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1a places AcoMDH1-GFP in the cytoplasm."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoMDH1 is part of the synthetic CAM bypass."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway description uses MDH in both nocturnal malate formation and daytime cytoplasmic branch, matching this linking role."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It sits midstream between OAA generation and malate storage/use."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Results describe OAA being reduced by MDH to malate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Malate is explicitly stated as product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The first clause is explicit; the second clause about daytime role reflects the pathway model in Figure 2a/text."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoMDH1 directly forms malate."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Malate is the downstream target metabolite measured."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Malate is an organic acid."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Malate is stored in vacuoles according to pathway description."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper describes malate as CAM organic acid for storage and remobilization."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "The gene likely contributes, but no single-gene experiment shows AcoMDH1 alone causes diurnal malate accumulation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed statements are supported, noting metabolite/TCA effects are at whole-CBP level."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper does not establish this; 'Not established' is faithful."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods were used."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state AcoMDH1 showed relatively high expression in pineapple leaves."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results say AcoMDH1 exhibits a higher expression trend during the day."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "This was assessed across the diurnal cycle."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Reasonable interpretation, but broader engineering utility is not directly tested beyond this multigene system."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion links CBP to increased TCA flux and respiratory drain, not isolated to AcoMDH1; wording reflects whole-system context."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed describes MDH as participating in malate production and daytime carbon flow in the model."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.1.1.37",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "AcoPEPCK1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental Section lists AcoPEPCK1 (XM_020232666.1)."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoPEPCK1 is identified as phosphoenolpyruvate carboxykinase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Aco gene from pineapple."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pineapple is stated, but Ananas comosus is not explicitly written in the provided text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Introduced into rice CBP lines."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is rice/Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "CBP lines were made in Nipponbare-derived slac1-1 background."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Native promoters of selected genes were used, including AcoPEPCK1."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PEP carboxykinase family identity is explicit."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1a shows AcoPEPCK1-GFP in the cytoplasm."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is part of synthetic CAM bypass/daytime decarboxylation module."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly include AcoPEPCK1 in decarboxylation modules."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It acts in the daytime downstream branch after nocturnal malate formation."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2a/text indicate PEP generation is mediated by AcoMDH1 and AcoPEPCK1 from daytime decarboxylation pathway, implying OAA substrate; this is inferable though not stated in reaction form."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 6d and pathway model support PEP as product; CO2 release is part of daytime decarboxylation description."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is consistent with the pathway model and known PEPCK role as described in text."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Supports remobilization of stored malate-derived carbon and CO2 release for Calvin cycle in the model."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Malate is the key CAM metabolite linked to this branch."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Malate is an organic acid."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Malate storage in vacuole is explicit."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper describes remobilized malate elevating daytime CO2 around Rubisco."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "Higher photosynthesis and CE are shown for whole CBP lines, not AcoPEPCK1-specific lines."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed points are supported, though improved photosynthetic parameters are whole-CBP outcomes."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper does not establish this; 'Not established' is faithful."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods were used."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results say AcoPEPCK1 showed relatively high expression in pineapple leaves."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state AcoPEPCK1 exhibits a higher expression trend during the day."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Assessed under diurnal cycle."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "A reasonable extrapolation, but not directly tested as a standalone engineering claim."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly warns about futile cycles between carboxylation and decarboxylation and respiratory costs in CBP."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This statement matches the Discussion."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "4.1.1.49",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "AcoPPDK1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental Section lists AcoPPDK1 (Aco024818)."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoPPDK1 is identified as pyruvate phosphate dikinase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Aco gene from pineapple."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pineapple is explicit, but Ananas comosus is not explicitly written in the provided text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Introduced into rice CBP lines."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Applied species is rice/Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "CBP lines were generated in Nipponbare-derived slac1-1 background."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Native promoters of selected genes were used, including AcoPPDK1."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PPDK family identity is explicit."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1b shows AcoPPDK1-GFP colocalized with chloroplast autofluorescence."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Part of synthetic CAM bypass/daytime decarboxylation and PEP regeneration."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly include AcoPPDK1 in decarboxylation modules."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "As PEP regeneration from pyruvate in daytime, it is a downstream/recycling step."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 2a text explicitly says pyruvate is converted to PEP by AcoPPDK1."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "PEP is explicitly identified as the product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly stated in Figure 2a text."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "AcoPPDK1 supplies PEP precursor pool in daytime branch."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Malate is the key CAM metabolite connected to this shuttle."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Malate is an organic acid."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Malate vacuolar accumulation is explicit in pathway description."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The statement reflects the CBP carbon shuttle described in paper."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "UNCERTAIN",
+          "reason": "Enhanced carbon fixation and PEP accumulation are shown for whole CBP lines; specific contribution of AcoPPDK1 alone was not dissected."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All points are supported, with phenotype interpretation at whole-CBP level."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Paper does not establish this; 'Not established' is faithful."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods were used."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state AcoPPDK1 showed relatively high expression in pineapple leaves."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results say AcoPPDK1 exhibits a higher expression trend during the day in rice."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Assessed under diurnal cycle."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Plausible engineering interpretation, but not directly tested as a standalone application claim."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Whole-system respiratory cost increased in CBP lines."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The chloroplast role distinct from cytoplasmic AcoPEPCK1/AcoMDH1 branch matches Figure 2a and localization data."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.7.9.1",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 201,
+    "supported": 174,
+    "unsupported": 8,
+    "uncertain": 19,
+    "total_corrections": 8
+  }
+}

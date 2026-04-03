@@ -1,0 +1,555 @@
+{
+  "file": "MinerU_markdown_PMC11868565_2038800739391803393",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC11868565_2038800739391803393.md",
+  "timestamp": "2026-03-31T21:42:19.589033",
+  "genes": [
+    {
+      "gene_name": "SMAX1",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study tests SMAX1 in Lotus japonicus."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Lotus japonicus is explicitly the species used for SMAX1 experiments."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state wild type/background is Lotus japonicus ecotype Gifu B-129."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied/tested species for SMAX1 AM phenotypes is Lotus japonicus."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Lotus japonicus."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify Gifu B-129 background."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes SMAX1 as a transcriptional repressor and proteolytic target of KAI2-SCFMAX2/karrikin signaling; it is part of the SMXL context."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper supports regulatory relationships with KAI2/MAX2, EIN2, CCD7, CCD8, LYS7, CCaMK, CYCLOPS, DELLA2, DIP1 and DLK2, but does not show these as direct protein-protein interactions; KAI2A/KAI2B and MAX2 are pathway components rather than demonstrated direct binders here, and EIN2B direct interaction is not shown."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points are directly supported by Results/Figs. 5-6: SMAX1 is required for ethylene suppression of AM, smax1 mutants are hypercolonized and ACC-resistant, SMAX1 transcript is unchanged while protein accumulates after ACC in an EIN2-dependent manner, and SMAX1/ethylene regulate overlapping AM-relevant genes."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all used in the Results for SMAX1: smax1 mutants, ACC treatment, genetics with ein2a ein2b, RNA-seq, SMAX1D2-GFP confocal imaging, western blot, KAR1 rescue, and colonization assays."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 6D shows SMAX1 transcript not changed by ethephon or ein2a ein2b, and Fig. 6E-F plus text show protein accumulation in nuclei after ACC treatment."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly reports sparse/weak nuclear SMAX1D2-GFP in untreated roots and stronger nuclear accumulation after ACC in wild type but not ein2a ein2b."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible application inferred from the findings, but the paper does not directly present breeding/engineering recommendations or test low-input deployment."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links SMAX1 to AM symbiosis that improves mineral nutrient uptake, especially phosphate; however 'mineral nutrients' are not a direct metabolite product of SMAX1 and no nutrient measurements are reported."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Same issue: nutrient class is biologically connected through AM, but not directly measured as a terminal product in Results."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The AM interface is discussed conceptually, but not measured as an accumulation site for a product in SMAX1 experiments."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The introduction explicitly states AM improves plant access to mineral nutrients, especially phosphate."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show SMAX1 accumulation suppresses AM and smax1 loss enhances colonization."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper notes SMAX1 and ethylene have broader roles, but exact pleiotropic tradeoffs of reducing SMAX1 were not established here."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states SMAX1 abundance in nuclei increases after ethylene/ACC treatment; nuclear localization is directly observed with SMAX1D2-GFP."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed factors appear in SMAX1-related experiments: ACC, ethephon context, KAR1, AM fungal inoculation, and low-phosphate growth conditions in methods."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "SMAX1D2-GFP was expressed from a ubiquitin promoter, and the paper states the endogenous SMAX1 promoter did not yield detectable signal in Lotus roots."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results/Discussion support that ethylene-promoted SMAX1 accumulation is KAI2-independent, KAR1 counteracts it in a KAI2-dependent manner, and Arabidopsis/Nicotiana assays suggest broader conservation; the 'categorized here' phrasing is external but the substantive claims are supported."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Both BioProject accessions PRJNA1133936 and PRJNA1133253 are explicitly listed in Data availability and correspond to ethephon and smax1 RNA-seq."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "KAI2A;KAI2B;MAX2;EIN2B;CCD7;CCD8;LYS7;CCaMK;CYCLOPS;DELLA2;DIP1;DLK2",
+          "new_value": "NA",
+          "reason": "The paper supports regulatory relationships with KAI2/MAX2, EIN2, CCD7, CCD8, LYS7, CCaMK, CYCLOPS, DELLA2, DIP1 and DLK2, but does not show these as direct protein-protein interactions; KAI2A/KAI2B and MAX2 are pathway components rather than demonstrated direct binders here, and EIN2B direct interaction is not shown."
+        }
+      ],
+      "stats": {
+        "supported": 18,
+        "unsupported": 1,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "CCD7",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD7 is analyzed in Lotus japonicus."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Lotus japonicus."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The study background is Gifu B-129."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD7 expression and pathway context are tested in Lotus japonicus."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Lotus japonicus."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify Gifu B-129 as wild type/background."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD7 is explicitly referred to as a strigolactone biosynthesis gene and is well named carotenoid cleavage dioxygenase 7."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD7 belongs to the carotenoid cleavage dioxygenase class; the paper refers to CCD genes in apocarotenoid metabolism."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD7 is explicitly listed among strigolactone biosynthesis genes."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places CCD7 within apocarotenoid/strigolactone metabolism."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not assign CCD7 as 'midstream' specifically."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No specific CCD7 substrate is stated in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not specify the exact immediate product/intermediate made by CCD7."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "A general carotenoid-cleavage role is consistent with CCD7 biology, but the paper itself does not describe the reaction mechanistically."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD7 is presented as a strigolactone biosynthetic gene contributing precursors to strigolactone production."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The statement carefully says not explicitly established, while noting expression is a major regulated node in this paper; that is consistent with the Results."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are supported: CCD7 is repressed by ACC/ethephon, increased in smax1 overlap analyses, and GR24^5DS rescue supports reduced strigolactone biosynthesis contributing to ethylene-reduced colonization."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq, RT-qPCR, GR24^5DS rescue experiment, and overlap with smax1 transcriptome are all described."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD7 is AM-induced, repressed by ethylene treatment, and increased in smax1 mutants per Fig. 3C/Fig. 5 and text."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "Ethylene-insensitive background increase is only specifically stated for CCD7 in the presence of AM, not as a broad general pattern 'higher in AM-associated conditions and ethylene-insensitive backgrounds' across all contexts."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable implication, but not directly tested or proposed in Results."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD7 is linked to strigolactone biosynthesis, and strigolactones are the relevant final pathway products discussed."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Strigolactones are apocarotenoids; the paper places CCD7 within apocarotenoid biosynthesis/strigolactone branch."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states roots release strigolactones to activate AM fungi, supporting root exudates/rhizosphere as the relevant site."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The introduction explicitly states strigolactones induce fungal spore germination and hyphal branching."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links repression of strigolactone biosynthesis genes including CCD7 to reduced AM colonization, and GR24 rescue supports this pathway effect."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Architecture/parasitic weed tradeoffs are not tested in this paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "ACC, ethephon, GR24^5DS, AM inoculation, and low phosphate are all part of the CCD7-related experimental context."
+        },
+        "Other_Important_Info": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper emphasizes CCD7 and the strigolactone branch, but calling CCD7 'core status' is an external categorization and direct CCD7 transgenics were not used."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The cited RNA-seq BioProjects are explicitly provided and relevant to ethephon and smax1 transcriptomics including CCD7."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Substrate",
+          "old_value": "9-cis-β-carotene-derived intermediate with D27/CCD8 pathway context",
+          "new_value": "NA",
+          "reason": "No specific CCD7 substrate is stated in the paper."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "Carlactone pathway intermediate(s) supporting strigolactone production",
+          "new_value": "NA",
+          "reason": "The paper does not specify the exact immediate product/intermediate made by CCD7."
+        }
+      ],
+      "stats": {
+        "supported": 22,
+        "unsupported": 2,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "CCD8",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD8 is analyzed in Lotus japonicus."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Lotus japonicus."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify Gifu B-129 background."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD8 expression is studied in Lotus japonicus."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Lotus japonicus."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Gifu B-129 is the study background."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD8 is explicitly named among strigolactone biosynthesis genes and corresponds to carotenoid cleavage dioxygenase 8."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD8 is part of the carotenoid cleavage dioxygenase family/pathway context."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD8 is explicitly listed as a strigolactone biosynthesis gene."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper groups it within apocarotenoid/strigolactone biosynthesis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper does not explicitly describe CCD8 as 'downstream'."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No exact substrate for CCD8 is specified in the paper."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not explicitly state that CCD8 produces carlactone."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNCERTAIN",
+          "reason": "General pathway knowledge fits, but the paper itself does not describe CCD8's biochemical reaction in this detail."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD8 is presented as part of strigolactone biosynthesis leading to strigolactones."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Not established is accurate; the paper does not claim rate limitation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD8 is repressed by ethylene treatment, elevated in smax1 mutants, and implicated in lower strigolactone output contributing to reduced AM establishment."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq, RT-qPCR, comparative transcriptomics, and pathway rescue with GR24^5DS are all used in the relevant analyses."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD8 is AM-induced, repressed by ethylene, and increased in smax1 mutants according to transcriptome analyses and text."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports higher CCD8 expression in colonization-permissive conditions than in ethylene-treated roots."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Application value is inferential, not directly tested."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD8 is connected to strigolactone biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Strigolactones are apocarotenoids in the paper's pathway framing."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Roots release strigolactones to the rhizosphere according to the introduction."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Strigolactones stimulate AM fungi and promote symbiosis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links CCD8 repression with the ethylene-suppressed AM phenotype via the strigolactone branch and GR24 rescue."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Possible architecture/rhizosphere tradeoffs were not analyzed here."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "ACC, ethephon, low phosphate, and AM inoculation are all relevant conditions used."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "CCD8 is indeed among overlapping SMAX1/ethylene targets with known AM function in Fig. 5/text."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "PRJNA1133936 and PRJNA1133253 are explicit RNA-seq datasets used for ethephon and smax1 analyses."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Primary_Substrate",
+          "old_value": "CCD7-derived apocarotenoid intermediate",
+          "new_value": "NA",
+          "reason": "No exact substrate for CCD8 is specified in the paper."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "Carlactone",
+          "new_value": "NA",
+          "reason": "The paper does not explicitly state that CCD8 produces carlactone."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "EIN2B",
+      "category": "Regulation",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "EIN2B is studied in Lotus japonicus."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Lotus japonicus."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify Gifu B-129 background."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "EIN2B experiments are in Lotus japonicus."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Lotus japonicus."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant background is Gifu B-129."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes EIN2 as a central regulator/component of ethylene signaling, and EIN2B is one of two EIN2 paralogs."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states EIN2 is localized to the ER membrane and its carboxyl end (CEND) translocates to the nucleus to activate ethylene responses."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show EIN2-mediated ethylene signaling activates nuclear ethylene responses and is required for SMAX1 accumulation."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "UNCERTAIN",
+          "reason": "EIN2B clearly controls AM-associated symbiosis and represses AM genes, but framing this as a metabolic process controlling nutrient acquisition is indirect and nutrient levels were not measured."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports EIN2 dependence for SMAX1 accumulation and ethylene-responsive regulation of several genes/classes, but does not establish these as direct EIN2B targets; DLK2 is increased in ein2a ein2b but not presented as a direct target."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports indirect repression of AM-relevant genes via ethylene signaling and promotion of SMAX1 protein accumulation."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "EIN2 is essential for ethylene-mediated suppression of AM, but 'associated mineral nutrient acquisition' is inferred rather than measured as a product."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "ACC and ethephon are used as ethylene-producing inputs upstream of EIN2-mediated responses."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places EIN2 in the ethylene signaling pathway between perception and downstream responses, while not resolving a specific complex."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion/Fig. 7 proposes an ethylene-SMAX1 feedback loop, explicitly as a model."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are supported by Figs. 1, 2, and 6."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutant analysis, ACC/ethephon treatments, tissue-specific EIN2B-CEND expression, and SMAX1D2-GFP confocal quantification are all directly used."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows epidermal or ubiquitin-driven EIN2B-CEND suppresses colonization, whereas cortex/PT4 do not, supporting epidermal functional action."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible application, but not directly tested or proposed as a breeding strategy in the paper."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "UNCERTAIN",
+          "reason": "Mineral nutrients via AM are conceptually linked, but not directly measured as EIN2B-controlled terminal products."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "UNCERTAIN",
+          "reason": "Same reason as above."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The site is inferred from AM biology, not measured in EIN2B experiments."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "AM is described as supporting plant mineral nutrition, especially phosphate uptake."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "EIN2B-mediated ethylene signaling suppresses AM colonization; ein2 mutants are less suppressed and epidermal EIN2B-CEND restores suppression."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses broad stress/development roles of ethylene, so possible tradeoffs from weakening EIN2 are a fair inference anchored in the text, though not experimentally tested in AM context."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states EIN2 is ER-membrane localized and its CEND translocates to the nucleus."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed factors are used in EIN2B-related experiments."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "These exact promoters were used for EIN2B-CEND expression in Fig. 2."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show ein2b increases colonization while ein2a alone has no effect, supporting EIN2B as the major paralog affecting AM in this study."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "PRJNA1133936 is the ethephon/ein2 RNA-seq dataset explicitly listed."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 24,
+        "unsupported": 0,
+        "uncertain": 7
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 115,
+    "supported": 88,
+    "unsupported": 5,
+    "uncertain": 22,
+    "total_corrections": 5
+  }
+}

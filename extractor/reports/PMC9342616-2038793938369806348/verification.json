@@ -1,0 +1,237 @@
+{
+  "file": "MinerU_markdown_PMC9342616_2038793938369806348",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC9342616_2038793938369806348.md",
+  "timestamp": "2026-03-31T17:36:51.223534",
+  "genes": [
+    {
+      "gene_name": "PEPC",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses endogenous PEPC in transgenic Arabidopsis and explicitly states increased bicarbonate supply for the endogenous phosphoenolpyruvate carboxylase in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental plant for the endogenous PEPC discussed is Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "All PEPC-related assays and inferred effects are in Arabidopsis plants."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species throughout the study is Arabidopsis thaliana."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "PEPC is explicitly named as phosphoenolpyruvate carboxylase; this supports assignment to the phosphoenolpyruvate carboxylase family."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results report increased malate, aspartic acid, and asparagine in transgenics, and these are linked to increased HCO3− availability for endogenous PEPC."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Malate is an organic acid and aspartate/asparagine are amino acids; these classes match the metabolites reported."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Metabolites were measured from complete rosettes/leaves, so accumulation site as leaves/rosettes is supported."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The Summary and Results state that increased malate/TCA intermediates provided additional carbon skeletons for amino acid synthesis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper's model and Results explicitly propose that FbβCA3 supplies HCO3− to endogenous PEPC, increasing OAA/malate flux and TCA-linked amino acid synthesis."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three elements are stated in Results/Summary: PEPC is the proposed sink for added bicarbonate, malate/amino acid increases are attributed to increased substrate supply, and in vitro PEPC activity with exogenous bicarbonate was similar in VC and transgenics."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "PEPC enzyme assay, metabolite profiling by GC-MS, and pathway inference from transgenic phenotype are all described in Results/Methods."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The Summary states endogenous phosphoenolpyruvate carboxylase is in the cytosol."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper functionally links FbβCA3 and endogenous PEPC in the same pathway, but does not show direct physical protein-protein interaction."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper frames this as a metabolic-engineering concept for improving C3 crops, and PEPC is discussed as a partner pathway component though not directly manipulated."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the paper: PEPC is important in the proposed mechanism but is not the transgene directly overexpressed/tested as the primary manipulated gene."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 15,
+        "unsupported": 0,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "FbβCA3",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental procedures explicitly state full-length FbβCA3 accession no. AY167113."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is described as from Flaveria bidentis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Flaveria bidentis is explicitly named throughout the paper."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "FbβCA3 was overexpressed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Arabidopsis thaliana."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The construct is described as under 35S/CaMV35S-Ω-polyA promoter cassette, i.e. constitutive expression."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "FbβCA3 is explicitly identified as a β-carbonic anhydrase."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene product is repeatedly called carbonic anhydrase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is stated in the paper text."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly links FbβCA3 to photosynthetic carbon assimilation and anaplerotic carbon metabolism feeding amino acid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "This description closely matches the Summary, Figure 1 model, and Results discussing cytosolic CO2 hydration supplying HCO3− for endogenous PEPC and TCA-linked amino acid synthesis."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents FbβCA3 as an upstream bicarbonate-supplying step feeding downstream PEPC/TCA/amino acid changes."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper discusses hydration of CO2 by carbonic anhydrase; water is included in the Methods assay and standard CA reaction context, making CO2 and H2O inferable substrates."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The Summary explicitly states overexpression resulted in a better supply of HCO3−; H+ is inherent to the hydration reaction though not emphasized separately."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an accurate restatement of the Summary and Figure 1 model."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents FbβCA3 as supplying precursor bicarbonate rather than directly catalyzing terminal nutrient synthesis."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly show increases in aspartate, asparagine, glutamate, glutamine, sugars, and starch."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These metabolites fall into amino acid and carbohydrate classes as stated."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Metabolite and carbohydrate measurements were made in leaves/complete rosettes."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly links these increases to higher protein, photosynthetic capacity, growth, biomass, and water-use efficiency."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This summary matches the reported phenotypes in Results."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each numbered point is directly supported by Results: increased transcript/protein/activity, increased malate/fumarate/amino acids, and enhanced chlorophyll, electron transport, CO2 assimilation, sugars/starch, biomass, and WUE-related traits."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are explicitly described and used in the Results."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The transgene was constitutively expressed under 35S, and expression/protein were assayed in 4-week-old Arabidopsis leaves/rosettes."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "FbβCA3 is repeatedly described as cytosolic/cytoplasmic."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "These growth and gas-exchange conditions are explicitly reported in Methods/figure legends."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "GC-MS metabolite profiling and targeted qRT-PCR are reported; no public accession is mentioned."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports a functional relationship with endogenous PEPC but does not demonstrate direct physical interaction."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The Discussion argues CA activity is important and controlling for bicarbonate supply, but does not directly prove FbβCA3 is a rate-limiting step."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state respiration increased ~12%–16%, and no significant difference in CO2 compensation point was found."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The Summary/Discussion explicitly frame FbβCA3 expression as a strategy to improve photosynthesis, biomass, and WUE in C3 crops."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show PEPC activity with exogenous bicarbonate was similar in VC and transgenics, supporting the interpretation that effects were due to substrate availability rather than altered intrinsic PEPC activity."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "4.2.1.1",
+          "new_value": "NA",
+          "reason": "No EC number is stated in the paper text."
+        }
+      ],
+      "stats": {
+        "supported": 29,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 48,
+    "supported": 44,
+    "unsupported": 1,
+    "uncertain": 3,
+    "total_corrections": 1
+  }
+}

@@ -1,0 +1,309 @@
+{
+  "file": "MinerU_markdown_PMC9897482_2038793425481924617",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC9897482_2038793425481924617.md",
+  "timestamp": "2026-03-31T22:40:48.716840",
+  "genes": [
+    {
+      "gene_name": "OsAS1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names OsAS1 as 'asparagine synthetase 1'."
+        },
+        "EC_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The introduction states 'Asparagine synthetase (AS, EC6.3.5.4)'."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "OsAS1 is explicitly described as encoding asparagine synthetase 1, supporting assignment to the asparagine synthetase family."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is in rice and OsAS1 is a rice gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice is explicitly identified as Oryza sativa."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and Methods state WT rice varieties used were Nipponbare, Dongjin, and Hwayoung."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional tests for OsAS1 were performed in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species throughout is rice, Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Main OsAS1 mutant and double-mutant analyses in Results are in the Nipponbare/Nipp background."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and introduction place OsAS1 in nitrogen metabolism/assimilation and asparagine synthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states OsAS1 is responsible for synthesis of Asn coupled with NH4+ assimilation in rice roots."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes AS as generating Asn from Asp using Gln or NH4+, i.e., an asparagine-forming downstream N assimilation step."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The introduction explicitly describes ATP-dependent transfer of the Gln-amide group to Asp forming Asn and Glu, and notes NH4+ can also act as donor with lower efficiency."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Aspartate, glutamine, ATP, and NH4+ as an alternative donor are explicitly described for AS."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Asparagine and glutamate are explicitly stated as products of the AS reaction."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "OsAS1 is directly linked to formation and accumulation of asparagine in the Results."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Asparagine is an amino acid."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "OsAS1 directly catalyzes formation of the target product Asn."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show OsAS1 promotes Asn accumulation, and osas1/cr-as1 mutants have lower survival and higher shoot NH4+ under salt; rst1 upregulates OsAS1 and improves these traits."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports OsAS1 as a key control point in stress-associated Asn production, but does not explicitly call it rate-limiting; the phrasing preserves that distinction."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states Asn has a central role in N storage and transport, high N:C ratio, and relevance to stress adaptation under salinity."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show Asn measured in roots, shoots, and xylem sap, with transport from roots to shoots discussed."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states OsAS1 is preferentially expressed in roots at seedling stage and internodes/spikelets at heading stage; Fig. 3A and SI Appendix indicate salt inducibility."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state OsAS1 is upregulated in osarf18/rst1 and downregulated in OsARF18-OE lines, and give tissue-expression pattern."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed treatments appear in Results: 140 mM and 25 mM NaCl, albizziin, and different N forms including NH4+ and NO3-."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show osas1 mutants have reduced survival and impaired Asn accumulation; the statement that no major growth penalty from increased OsAS1 was emphasized is consistent with the paper."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "RST1/OsARF18 directly regulates the OsAS1 promoter, but this is not a protein-protein interaction with OsAS1 protein."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly uses proAS1::LUC in reporter assays."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq with BioProject PRJNA812782 is explicitly given, and amino acid metabolite profiling is presented in Results."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all reported in the study for OsAS1: Tos-17 and T-DNA mutants, CRISPR/Cas9, double mutants, E. coli enzyme assays, metabolite profiling, albizziin inhibition, and promoter repression assays."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by the Results, including direct repression by RST1, osas1 mutant phenotypes, and contribution of OsAS1 upregulation in rst1 to salt tolerance."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "OsAS1 is implicated in salt tolerance and N use, but the paper's explicit breeding emphasis is mainly on RST1/RST1 haplotypes rather than direct OsAS1 engineering."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state OsAS1 is one of the main downstream factors of RST1 and that double mutants only partially reverse rst1; E. coli assays showed truncated CRISPR-derived proteins lost activity."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 31,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "RST1",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Results identify OsARF18 as Os06g0685700."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "RST1 encodes an auxin response factor and is shown to function as a transcriptional repressor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes RST1/OsARF18 with DBD, RD, and PB1 domains and as an auxin response factor."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "RST1 is a rice gene studied in rice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Rice is identified as Oryza sativa."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The rst1 mutant was isolated from an EMS-mutagenized Nipponbare population."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional analyses of RST1 were performed in rice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is rice, Oryza sativa."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The core experiments compare Nipp/Nipponbare and rst1 in the Nipponbare background."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "ChIP-qPCR, EMSA, and promoter-reporter assays show direct binding to AuxRE-containing OsAS1 promoter regions and transcriptional repression."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly connect RST1 to N metabolism, Asn biosynthesis via OsAS1, and NH4+ accumulation."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "OsAS1 is the direct target demonstrated in Results."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly shows RST1 represses OsAS1 and rst1 loss elevates OsAS1 expression."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "These phenotypes are all supported by Results: loss of RST1 increases Asn, lowers shoot NH4+ and Na+, raises K+, improves salt tolerance, and increases grain size/weight/yield."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports RST1 as a major negative regulator/'brake' on Asn production through OsAS1 repression, though 'brake' wording is from Discussion."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "RST1 regulates accumulation of asparagine via OsAS1."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Asparagine is an amino acid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly describes Asn as a nitrogen storage/transport metabolite relevant to stress adaptation."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Results measure Asn in roots, shoots, and xylem sap, which are the contexts regulated by rst1."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state higher expression in above-ground tissues, detailed tissue localization, transient salt induction, and sustained induction by drought and ABA."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly show higher expression in shoots than roots and salt inducibility in both tissues."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "RST1-GFP was detected in nuclei in tobacco and transgenic rice."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Salt, drought, and ABA induction of RST1 expression are explicitly reported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The stated item is not an interacting protein; the paper shows binding to promoter AuxRE DNA elements, and PB1-mediated protein interactions were not tested here."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "No direct protein complex was experimentally established in this study."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed factors appear in the study: salt, drought, ABA, different nitrogen forms, and saline field conditions."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The study reports improvement of both salt tolerance and grain yield for rst1, with no apparent yield penalty described."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "proRST1::RST1-GFP and proAS1::LUC are explicitly used; GAL4/UAS system is used in DLR; overexpression lines exist though promoter details are not given here, making the overall field sufficiently supported."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq with PRJNA812782 and population-genomic analyses using 3K RGP data are explicitly described."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are reported for RST1 in the study."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four summary points are directly supported by the Results and Discussion-linked interpretation of the Results."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly proposes marker-assisted selection or editing/allele replacement involving superior RST1 haplotypes to improve salt tolerance and yield."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The premature stop at residue 330, loss of part of RD and all PB1, directional selection, and grass conservation are all explicitly reported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "OsAS1 promoter AuxRE elements; possible PB1-mediated ARF/Aux-IAA interactions not directly tested here",
+          "new_value": "NA",
+          "reason": "The stated item is not an interacting protein; the paper shows binding to promoter AuxRE DNA elements, and PB1-mediated protein interactions were not tested here."
+        }
+      ],
+      "stats": {
+        "supported": 32,
+        "unsupported": 1,
+        "uncertain": 0
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 66,
+    "supported": 63,
+    "unsupported": 1,
+    "uncertain": 2,
+    "total_corrections": 1
+  }
+}

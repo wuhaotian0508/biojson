@@ -1,0 +1,1237 @@
+{
+  "file": "MinerU_markdown_PMC12665076_2038799715734163461",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12665076_2038799715734163461.md",
+  "timestamp": "2026-03-31T22:02:14.099511",
+  "genes": [
+    {
+      "gene_name": "TCS1",
+      "category": "Common",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "TCS1 is referred to as tea caffeine synthase 1 in the paper, but the exact family/domain wording 'N-methyltransferase' is not explicitly stated in the provided text."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TCS1 is studied in tea plant throughout the paper."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper studies tea plant and states Camellia sinensis in title/methods."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Genes were cloned from Shuchazao leaf cDNA in Methods generally, but this is not explicitly stated specifically for TCS1 as a cloned gene in this study."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TCS1 expression and function are tested in tea plant."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments involving TCS1 were performed in Camellia sinensis."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Tea cutting seedlings of Shuchazao and Longjing43 were used in this study, and TCS1-related tea assays are within these tea materials."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Results include TCS1 knockdown effects on resistance (Fig. S2), qRT-PCR, metabolite profiling, promoter transactivation assays, EMSA on TCS1 promoter, and fungal infection assays."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper shows CsMYB184 binds and activates the TCS1 promoter, but does not present TCS1 protein physically interacting with CsMYB184."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "TCS1 is reported as upregulated by fungal infection and MeJA, and prior/developmental data indicate caffeine pathway enrichment in young leaves."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports TCS1 upregulated by fungal infection and MeJA and repressed by GA and DIECA."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "TCS1 is the caffeine biosynthetic enzyme gene and is linked to caffeine accumulation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeine is explicitly described as a defensive alkaloid/purine alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeine is shown to contribute to antifungal defence against Colletotrichum gloeosporioides."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeine is shown in young leaves, mesophyll cells, epidermal cells, and cuticle."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Downregulation of TCS1 decreased resistance; TCS1 expression correlates with caffeine biosynthesis, supporting promotion of caffeine and fungal resistance."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "TCS1 is examined under C. gloeosporioides infection, MeJA, DIECA, and GA3-related contexts."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq is used in the study and accession PRJNA798825 is given in Methods."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The TCS1 promoter is directly used in reporter/transactivation assays."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "TCS1 is within the paper's growth-defence trade-off framework, but TCS1 itself is not directly tested as the trade-off driver."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a forward-looking application inference; the paper discusses mechanism and crop relevance broadly, but does not explicitly nominate TCS1 as an engineering target with this wording."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed uses TCS1 mainly as the downstream output gene regulated by the CsDELLA-JAZ-MYC2-MYB184 module rather than as the central mechanistic protein focus."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements are supported: induction by fungal infection/MeJA, direct activation by CsMYB184 with JAZ repression of this activation, and reduced resistance upon TCS1 downregulation."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "CsMYB184",
+          "new_value": "NA",
+          "reason": "The paper shows CsMYB184 binds and activates the TCS1 promoter, but does not present TCS1 protein physically interacting with CsMYB184."
+        }
+      ],
+      "stats": {
+        "supported": 18,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "CsGA2ox4",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods section 4.22 lists CsGA2ox4 as TEA014251."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names gibberellin 2-oxidase 4 (CsGA2ox4)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "GA2ox identity is explicit, but the exact domain phrase '2-oxoglutarate/Fe(II)-dependent dioxygenase' is not stated in the provided text."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CsGA2ox4 is from tea plant."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tea plant is Camellia sinensis in the paper."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state ORFs of genes including CsGA2ox4 were amplified from Camellia sinensis cv. Shuchazao."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CsGA2ox4 was tested in tea plant and tobacco."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The entry gives only Camellia sinensis, but core functional assays were also performed in Nicotiana tabacum; the field as written is incomplete."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Tea cutting seedlings include Shuchazao and Longjing43, but CsGA2ox4 functional overexpression was in tobacco cv. Xanthi; this field omits the tobacco system."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CsGA2ox4 is directly placed in gibberellin catabolism/inactivation."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes catabolism/inactivation of bioactive GAs."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It is described as a GA inactivation/catabolic step acting on bioactive GAs."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "In vitro assay shows CsGA2ox4 acts on GA4 and GA1."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "In vitro assay shows GA4 to GA34 and GA1 to GA8."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is exactly what Figure 7A and text describe."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The study links GA inactivation by CsGA2ox4 to growth inhibition and support of caffeine-associated defence."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper treats CsGA2ox4 as important/key in this study, but does not explicitly establish it as a rate-limiting step."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CsGA2ox4 is stated to be highly expressed in leaves and stems and induced by fungal infection and JA treatment."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows induction by fungal infection/JA, activation by CsMYC2, and repression by CsJAZ12."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Although not in the caffeine pathway, the study links CsGA2ox4 to caffeine output through hormonal crosstalk."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeine is the linked terminal product and is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports caffeine as antifungal defence, with CsGA2ox4 contributing indirectly via hormone balance."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeine accumulation is measured in tea leaves, the relevant tissue for CsGA2ox4-mediated trade-off effects."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CsGA2ox4 promotes GA inactivation, inhibits growth, and is linked to defence-associated caffeine regulation indirectly."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper includes in vitro enzyme assay, LC-MS, overexpression in tobacco, hormone profiling, EMSA, and promoter activation assay."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper shows transcriptional regulation by CsMYC2 and repression by CsJAZ12 in promoter assays, but no physical interaction of CsGA2ox4 protein with CsMYC2 or CsJAZ12."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "CsGA2ox4 is examined under fungal infection and MeJA treatment."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "RNA-seq and PRJNA798825 are stated in the paper."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The native CsGA2ox4 promoter is used in transient LUC assays."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The study directly shows growth inhibition/dwarf phenotype from CsGA2ox4 action reducing bioactive GA."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible implication, but the paper does not explicitly propose CsGA2ox4 engineering in these terms."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately reflects the paper's framing of CsGA2ox4 as a hormonal mechanism component linked to caffeine-associated trade-off rather than a caffeine-pathway enzyme."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary statements are directly supported by the Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "CsMYC2; CsJAZ12",
+          "new_value": "NA",
+          "reason": "The paper shows transcriptional regulation by CsMYC2 and repression by CsJAZ12 in promoter assays, but no physical interaction of CsGA2ox4 protein with CsMYC2 or CsJAZ12."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "CsMYB184",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods section 4.22 lists CsMYB184 as TEA029017."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CsMYB184 is studied as a transcription factor regulating TCS1."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states CsMYB184 contains an R2R3 DNA-binding domain and is an MYB factor."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CsMYB184 is from tea plant."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tea plant is Camellia sinensis in the study."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods indicate gene ORFs including CsMYB184 were amplified from cv. Shuchazao."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CsMYB184 was tested in tea and heterologous assay systems."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The entry lists only Camellia sinensis, but assays also used Nicotiana benthamiana and Arabidopsis protoplasts."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Shuchazao and Longjing43 are tea materials in the study, but CsMYB184 assays also include heterologous systems; the field is incomplete."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC signals with CsJAZs are reported in nucleus and/or cytoplasm."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "CsMYB184 is the key activator of caffeine biosynthesis."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "CsMYB184 functions as a transcriptional activator."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "TCS1 is the direct downstream target emphasized in the Results."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows CsMYB184 activates TCS1 transcription."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "CsMYB184 is induced by JA/MeJA, activated by CsMYC2, and repressed by CsJAZ1/12/13; fungal infection also elevates related pathway activity."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract/discussion describe an activation-repression loop involving MYC2, JAZs, and MYB184."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Complexes with CsJAZ1/12/13 are supported, but direct interaction of CsMYB184 with CsDELLA1/2 is not shown; DELLAs instead compete for CsJAZ12."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows induction by MeJA and developmental correlation with JA signaling and young-leaf caffeine patterns."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows CsMYB184 is upregulated by MeJA and reduced by DIECA and CsMYC2 knockdown."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CsMYB184 controls caffeine biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeine is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeine-mediated antifungal defence against C. gloeosporioides is supported."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeine is shown in tea leaves, especially young leaves and cuticle-associated tissues."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CsMYB184 is described and tested as a key positive regulator promoting caffeine biosynthesis and resistance."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Y1H, GUS/LUC activation, EMSA, knockdown, metabolite analysis, fungal assays, Y2H, BiFC, and pull-down are all included."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Direct interactions with CsJAZ1/12/13 are supported, but not with CsMYC2 or CsDELLA1/2."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract states JA-regulated CsMYB184 is key for caffeine biosynthesis in tea leaves."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "CsMYB184 is embedded in the JA-GA defence-growth trade-off framework controlling caffeine."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "A reasonable implication, but the paper does not explicitly propose CsMYB184 engineering with this practical wording."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results directly show MYB184 NT binds TCS1 promoter, while CT mediates transactivation and JAZ interaction."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are directly supported by the Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Complex_Involvement",
+          "old_value": "Forms inhibitory complexes with CsJAZ1; CsJAZ12; CsJAZ13; competes with CsDELLA1/2 for CsJAZ12 association indirectly",
+          "new_value": "NA",
+          "reason": "Complexes with CsJAZ1/12/13 are supported, but direct interaction of CsMYB184 with CsDELLA1/2 is not shown; DELLAs instead compete for CsJAZ12."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "CsMYC2; CsJAZ1; CsJAZ12; CsJAZ13; CsDELLA1; CsDELLA2",
+          "new_value": "NA",
+          "reason": "Direct interactions with CsJAZ1/12/13 are supported, but not with CsMYC2 or CsDELLA1/2."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "CsMYC2",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods section 4.22 lists CsMYC2 as TEA000833."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CsMYC2 is explicitly treated as a JA signalling effector and transcriptional regulator."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CsMYC2 is described as binding G-box motifs, consistent with MYC2/bHLH identity in the paper."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CsMYC2 is from tea plant."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tea plant is Camellia sinensis."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods say gene ORFs including CsMYC2 were amplified from cv. Shuchazao."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CsMYC2 was tested in tea and heterologous systems."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The entry lists only Camellia sinensis, but CsMYC2 was also assayed in Nicotiana benthamiana and Arabidopsis."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Tea materials include Shuchazao and Longjing43, but the full set of functional assays includes heterologous systems not reflected here."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows CsMYC2 controls caffeine biosynthesis and GA inactivation via CsGA2ox4."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "CsMYC2 activates transcription of CsMYB184 and CsGA2ox4."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct target promoters tested are CsMYB184 and CsGA2ox4."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly shows activation of both promoters by CsMYC2."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "CsMYC2 is a JA/MeJA pathway regulator and JAZ-repressed component in the paper's framework."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes a JA signalling amplification loop through CsMYC2 activation of CsMYB184 and the growth-defence module via CsGA2ox4."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "Supporting/discussion text states CsJAZ12 interacts with CsMYC2, and this is used to explain repression of CsMYC2 activity."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says CsMYB184 expression pattern is highly similar to JA regulator genes including CsMYC2 over development."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Knockdown reduces CsMYB184, TCS1 and caffeine, and CsMYC2 functions in MeJA/fungal contexts."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CsMYC2 links to caffeine accumulation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeine is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeine contributes to antifungal defence, while CsMYC2 also impacts growth."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeine effects measured in tea leaves."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports promotion of caffeine biosynthesis/defence and suppression of growth via GA catabolism."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Y1H, EMSA, promoter activation assays, knockdown, transient overexpression, Arabidopsis phenotyping, and metabolite profiling are all present."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ12 interaction with CsMYC2 is stated in discussion/supporting data context of this paper."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract explicitly identifies CsMYC2 as the JA effector linking caffeine accumulation and GA-mediated growth repression."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Growth inhibition, short hypocotyls, and elevated GA inactivation are shown."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a reasonable inference, but not explicitly proposed in the Results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct G-box binding in CsMYB184 and CsGA2ox4 promoters is shown."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 27,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "CsJAZ1",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods section 4.22 lists CsJAZ1 as TEA001681."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ1 is explicitly a JAZ/JA signalling repressor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states JAZ proteins contain conserved ZIM and Jas domains, and CsJAZ1 is one of them."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ1 is from tea plant."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tea plant is Camellia sinensis."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods indicate gene ORFs including CsJAZ1 were amplified from cv. Shuchazao."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ1 was tested in tea and tobacco-based assays."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The field lists only Camellia sinensis, but interaction assays were also done in Nicotiana benthamiana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Main functional tea assays for CsJAZ1 use Shuchazao; this is consistent with the study materials."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC interaction signals with CsMYB184 were observed in nucleus and/or cytoplasm."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ1 is studied as a regulator of caffeine biosynthesis."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows repression through protein-protein interaction with CsMYB184."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ1 acts on the CsMYB184-TCS1 regulatory module."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ1 represses CsMYB184-mediated activation of TCS1."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ1 is part of JA signalling and is induced by fungal infection."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "It is part of the JA repression arm relieved upon JA activation, as described in the model."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows CsJAZ1 forms inhibitory complex with CsMYB184."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ1 is highly expressed in leaves, induced by fungal infection, and discussion states it peaks in mature leaves."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Leaf expression and stress responsiveness are supported by expression analyses."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The regulatory output is caffeine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeine is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeine mediates antifungal defence."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Relevant caffeine accumulation is in tea leaves."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Combined JAZ knockdown increases caffeine and resistance; JAZ overexpression reduces TCS1. CsJAZ1 is part of this negative regulatory group."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Y2H, BiFC, pull-down, EMSA competition, transient repression assay, combined asODN knockdown, and hairy-root overexpression are all used."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct interaction with CsMYB184 is shown by Y2H, BiFC, and pull-down."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ1 directly represses the key activator CsMYB184, affecting caffeine output."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Trade-off implications are plausible within JA signalling, but CsJAZ1-specific growth effects were not directly tested."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Multiplex editing is an inference, not an explicit claim of the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly maps interaction to CsJAZ1 N-terminus and CsMYB184 C-terminus."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three summary statements match the Results, noting the knockdown phenotype was shown for combined CsJAZ1/12/13 suppression rather than CsJAZ1 alone."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 28,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "CsJAZ12",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods section 4.22 lists CsJAZ12 as TEA030190."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ12 is a JA signalling repressor."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "JAZ proteins with ZIM and Jas domains are explicitly described, including CsJAZ12."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ12 is from tea plant."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tea plant is Camellia sinensis."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods indicate gene ORFs including CsJAZ12 were amplified from cv. Shuchazao."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ12 was tested in tea, tobacco, and Arabidopsis systems."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The field lists only Camellia sinensis, but major assays also used Nicotiana benthamiana and Arabidopsis."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Shuchazao is the main tea material for CsJAZ12 assays."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC interaction signals are reported in nucleus and/or cytoplasm."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ12 regulates caffeine biosynthesis and participates in GA-JA crosstalk."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows repression via protein-protein interactions."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "CsMYB184-TCS1 module is directly supported, and CsMYC2-CsGA2ox4 regulation is supported functionally."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ12 represses CsMYB184-mediated TCS1 activation and suppresses CsMYC2 activation of CsGA2ox4."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ12 is part of JA signalling, induced by fungal infection, and functionally antagonized by CsDELLA1/2."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper presents CsJAZ12 as a central repression node in the JA-GA loop."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct complexes with CsMYB184 and CsDELLA1/2 are shown; repression of CsMYC2 activity is also supported."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ12 is highly expressed in leaves, correlated with caffeine, and induced by fungal infection."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Leaf-enriched and stress-responsive expression is shown."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The controlled output is caffeine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeine is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeine is linked to antifungal defence."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant output is in tea leaves."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ12 acts as a major negative regulator of caffeine biosynthesis; overexpression promotes growth-associated GA status and knockdown enhances defence outputs."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are present across the Results for CsJAZ12."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Interactions with CsMYB184, CsDELLA1, and CsDELLA2 are directly shown; interaction with CsMYC2 is discussed and supported by supplemental mention."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper highlights CsJAZ12 as the principal JAZ partner in JA-GA crosstalk controlling caffeine output."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Overexpression and transgenic evidence show growth-promoting/GA-favoring effects with lower caffeine and defence."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible application inference, but not explicitly proposed by the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed emphasizes CsJAZ12 as the main DELLA-interacting JAZ in crosstalk."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are supported by the Results."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 29,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "CsJAZ13",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods section 4.22 lists CsJAZ13 as TEA027049."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ13 is a JA signalling repressor/JAZ protein."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "JAZ proteins with ZIM and Jas domains are explicitly described, including CsJAZ13."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ13 is from tea plant."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tea plant is Camellia sinensis."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods indicate gene ORFs including CsJAZ13 were amplified from cv. Shuchazao."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ13 was tested in tea and tobacco-based assays."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The field lists only Camellia sinensis, but BiFC assays were done in Nicotiana benthamiana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Main tea assays are in Shuchazao material."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "BiFC interaction signals are reported in nucleus and/or cytoplasm."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ13 is studied as a regulator of caffeine biosynthesis."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Protein-protein interaction-mediated repression is directly shown."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ13 acts on the CsMYB184-TCS1 module."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ13 represses CsMYB184-mediated activation of TCS1."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ13 is in JA signalling and induced by fungal infection."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "It is part of the JA repression arm in the model."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct inhibitory complex with CsMYB184 is shown."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ13 is highly expressed in young leaves and induced by fungal infection."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Leaf-enriched and developmentally correlated with caffeine are supported."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The output is caffeine."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeine is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeine is linked to antifungal defence."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Relevant caffeine accumulation is in tea leaves."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ13 is a negative regulator of caffeine biosynthesis; combined JAZ knockdown enhances resistance."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Y2H, BiFC, pull-down, EMSA competition, transient repression assay, combined asODN knockdown, and hairy-root overexpression are all used."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct interaction with CsMYB184 is shown."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "CsJAZ13 is one of the major JAZ repressors dampening caffeine output in leaves."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Trade-off wording is inferential; CsJAZ13-specific growth effects were not directly tested."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Stacked editing utility is not explicitly proposed."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper distinguishes CsJAZ13 from CsJAZ12 in DELLA-crosstalk emphasis."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points are supported, with the defence increase shown for combined JAZ knockdown rather than CsJAZ13 alone."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 28,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "CsDELLA1",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods section 4.22 lists CsDELLA1 as TEA009882."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CsDELLA1 is explicitly a GA signalling repressor/DELLA protein."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes DELLA proteins with DELLA and GRAS domains."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CsDELLA1 is from tea plant."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tea plant is Camellia sinensis."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods indicate gene ORFs including CsDELLA1 were amplified from cv. Shuchazao."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CsDELLA1 was tested in tea, tobacco, and tobacco leaves for interaction assays."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The field lists only Camellia sinensis, but functional/interaction assays were also done in Nicotiana tabacum and N. benthamiana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Tea functional assays use Shuchazao material."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Subcellular localisation assays showed GFP-CsDELLA1 only in the nucleus."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "CsDELLA1 participates in GA-JA crosstalk affecting caffeine biosynthesis and growth."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Competitive protein interaction/sequestration with CsJAZ12 is shown."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "CsDELLA1 acts indirectly on the CsJAZ12-CsMYB184 complex and TCS1 expression."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows CsDELLA1 relieves CsJAZ12 repression, promoting TCS1 activation."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "CsDELLA1 functions within GA status and JA-associated GA inactivation context."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper's model places DELLA proteins within the antagonistic JA-GA loop stabilized by GA inactivation."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "CsDELLA1 interacts with CsJAZ12 and other JAZs and competitively interferes with CsJAZ12-CsMYB184 formation."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Both CsDELLA1 and CsDELLA2 are reported highly expressed in young leaves where caffeine is enriched."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Young leaf enrichment is supported."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CsDELLA1 positively influences caffeine biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeine is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeine supports antifungal defence, and CsDELLA1 enhances resistance via this module."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Relevant caffeine measurements are in tea leaves."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CsDELLA1 positively regulates caffeine biosynthesis and resistance while repressing growth/GA signalling."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Overexpression, knockdown, Y2H, BiFC, pull-down, EMSA competition, LUC assay, and fungal infection assay are all reported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct interaction with CsJAZ12 is shown."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results support CsDELLA1 as a key GA-side activator of caffeine biosynthesis by relieving JAZ repression."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Overexpression causes dwarf phenotype and growth repression."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is an inferred application rather than an explicit statement in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The GRAS-domain-containing C-terminus is shown required for interaction with CsJAZ12."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements are directly supported."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 29,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "CsDELLA2",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods section 4.22 lists CsDELLA2 as TEA022818."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CsDELLA2 is explicitly a GA signalling repressor/DELLA protein."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes DELLA proteins with DELLA and GRAS domains."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CsDELLA2 is from tea plant."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Tea plant is Camellia sinensis."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods indicate gene ORFs including CsDELLA2 were amplified from cv. Shuchazao."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CsDELLA2 was tested in tea and tobacco systems."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "UNCERTAIN",
+          "reason": "The field lists only Camellia sinensis, but functional and interaction assays were also done in Nicotiana species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Tea functional assays use Shuchazao material."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Subcellular localisation assays showed GFP-CsDELLA2 only in the nucleus."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "CsDELLA2 participates in GA-JA crosstalk affecting caffeine biosynthesis and growth."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Competitive protein interaction/sequestration with CsJAZ12 is shown."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "CsDELLA2 acts indirectly on the CsJAZ12-CsMYB184 complex and TCS1 expression."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows CsDELLA2 relieves CsJAZ12 repression, promoting TCS1 activation."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "CsDELLA2 functions within GA status and JA-associated GA inactivation context."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The model places DELLA proteins in the antagonistic JA-GA loop stabilized by GA inactivation."
+        },
+        "Protein_Complex_Involvement": {
+          "verdict": "SUPPORTED",
+          "reason": "CsDELLA2 interacts with CsJAZ12 and other JAZs and competitively interferes with CsJAZ12-CsMYB184 formation."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Both CsDELLAs are reported highly expressed in young leaves where caffeine is enriched."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Young leaf enrichment is supported."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CsDELLA2 positively influences caffeine biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeine is an alkaloid."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Caffeine supports antifungal defence, and CsDELLA2 enhances resistance via this module."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Relevant caffeine measurements are in tea leaves."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "CsDELLA2 positively regulates caffeine biosynthesis and resistance while repressing growth/GA signalling."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Overexpression, knockdown, Y2H, BiFC, pull-down, EMSA competition, LUC assay, and fungal infection assay are reported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct interaction with CsJAZ12 is shown."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results support CsDELLA2 as a key GA-side activator of caffeine biosynthesis by relieving JAZ repression."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Overexpression causes dwarf phenotype and growth repression."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is an inferred application, not an explicit claim in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The GRAS-domain-containing C-terminus is shown required for interaction with CsJAZ12."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three statements are directly supported."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 29,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 272,
+    "supported": 241,
+    "unsupported": 4,
+    "uncertain": 27,
+    "total_corrections": 4
+  }
+}

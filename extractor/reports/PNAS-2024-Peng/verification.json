@@ -1,7 +1,7 @@
 {
   "file": "PNAS_2024_Peng",
   "md_path": "/data/haotianwu/biojson/extractor/input/PNAS_2024_Peng.md",
-  "timestamp": "2026-03-28T11:54:48.249170",
+  "timestamp": "2026-03-30T00:14:58.877544",
   "genes": [
     {
       "gene_name": "CreOMT6",
@@ -9,94 +9,86 @@
       "verification": {
         "Species": {
           "verdict": "UNCERTAIN",
-          "reason": "The gene is named CreOMT6, where 'Cre' implies Citrus reticulata, but the paper does not explicitly state the generic field value 'Citrus'."
+          "reason": "CreOMT6 is a gene from C. reticulata, i.e. citrus, but the paper does not explicitly label the species field as the generic term 'Citrus'."
         },
         "Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "CreOMT6 is explicitly described in C. reticulata and located in the genome of C. reticulata."
+          "reason": "The paper repeatedly refers to CreOMT6 in C. reticulata, i.e. Citrus reticulata."
         },
         "Origin_Species": {
           "verdict": "SUPPORTED",
-          "reason": "The paper studies CreOMT6 as a gene from mandarin/C. reticulata accessions."
+          "reason": "C. reticulata is mandarin; the paper discusses CreOMT6 in mandarins."
         },
         "Origin_Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "CreOMT6 is explicitly from Citrus reticulata."
-        },
-        "Origin_Species_Variety": {
-          "verdict": "SUPPORTED",
-          "reason": "The text discusses CreOMT6 in multiple C. reticulata contexts including Clementine, Red tangerine, and Mangshan mandarin, so the context-dependent variety statement matches the paper."
+          "reason": "CreOMT6 is explicitly discussed in C. reticulata."
         },
         "Variety": {
           "verdict": "SUPPORTED",
-          "reason": "Red tangerine, Clementine, Mangshan mandarin, and comparative citrus accessions are all used in analyses involving CreOMT6 expression/comparison."
-        },
-        "Promoters": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper includes comparative analysis of 2-kb promoter regions for OMT3-OMT6 and does not report transgenic promoter engineering for CreOMT6."
-        },
-        "Expression_Pattern": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper states CreOMT6 expression was highly correlated with total PMF content during fruit development in Red tangerine, and Group I/II lacking the OMT cluster showed negligible OMT6 expression; it was also not associated with PMF content in the main correlation table for natural variation."
-        },
-        "Expression_Pattern_of_Origin_Species": {
-          "verdict": "SUPPORTED",
-          "reason": "Pearson analysis in C. reticulata Red tangerine linked CreOMT6 expression across fruit development with total PMF content, consistent with fruit/developing-fruit associated expression in mandarins."
-        },
-        "Protein_Family_or_Domain": {
-          "verdict": "UNCERTAIN",
-          "reason": "CreOMT6 is treated as an O-methyltransferase and highly homologous to CreOMT3/4/5, but PF08100 is explicitly discussed for CreOMT7/8 pseudogene assessment, not directly stated for CreOMT6."
+          "reason": "The paper mentions C. reticulata Red tangerine, Clementine, and cloning/testing of OMT6 homologs from nine citrus accessions, so this summary is consistent with the Results."
         },
         "Terminal_Metabolite": {
           "verdict": "SUPPORTED",
-          "reason": "CreOMT6 is discussed in the context of PMF biosynthesis and evolutionary emergence of PMFs."
+          "reason": "CreOMT6 is discussed in relation to PMF biosynthesis, even though it is not a major determinant of PMF variation."
         },
         "Terminal_Metabolite_Class": {
           "verdict": "SUPPORTED",
-          "reason": "PMFs are explicitly described as flavones/flavonoids."
+          "reason": "PMFs are flavonoids/flavones throughout the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper states PMFs are mainly distributed in fruit peels, leaves, and flowers in general, but the CreOMT6-specific Results emphasize fruit development/flavedo; explicit CreOMT6 evidence for flowers is not shown in Results."
         },
         "Terminal_Metabolite_Function": {
           "verdict": "SUPPORTED",
-          "reason": "The introduction explicitly describes PMFs as having anticancer, anti-inflammatory, cardiovascular protective, metabolic disorder preventive, and UV/pathogen barrier-related roles."
-        },
-        "Terminal_Metabolite_Accumulation_Site": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper states PMFs are mainly distributed in fruit peels, leaves, and flowers, and specifically analyzes fruit flavedo and leaves."
+          "reason": "These functions of PMFs are described in the Introduction, though not as CreOMT6-specific functions."
         },
         "Core_Phenotypic_Effect": {
           "verdict": "SUPPORTED",
-          "reason": "Results show most OMT6 homologs weakly or cannot O-methylate certain hydroxyflavone positions and CreOMT6 was not associated with PMF variation, supporting an ancestral/reference rather than main determinant role."
+          "reason": "Results state CreOMT6 was not associated with PMF content across citrus, yet its expression correlated with total PMF during Red tangerine fruit development; OMT6 homologs from most species showed weak or no activity on some key sites."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "CreOMT6 is an OMT and closely related to the PF08100-containing cluster, but PF08100 is explicitly used to classify CreOMT7/8 as pseudogenes; PF08100 presence is not directly stated for CreOMT6."
         },
         "Core_Validation_Method": {
           "verdict": "SUPPORTED",
-          "reason": "The paper used cloning from multiple accessions, recombinant protein assays, expression–metabolite correlation, comparative genomics/synteny, and site-directed mutagenesis involving CreOMT6."
+          "reason": "The Results describe correlation analysis, recombinant protein enzyme assays with OMT6 homologs from nine citrus accessions, and site-directed mutagenesis comparing CreOMT4/CreOMT6 residues."
         },
-        "Environment_or_Treatment_Factor": {
+        "Promoters": {
           "verdict": "SUPPORTED",
-          "reason": "CreOMT6 was analyzed across fruit developmental stages and domestication groups."
-        },
-        "Breeding_or_Engineering_Application_Value": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper frames OMT6 mainly as an evolutionary reference and mutational template, but does not explicitly propose it as a breeding or engineering target."
-        },
-        "Other_Important_Info": {
-          "verdict": "SUPPORTED",
-          "reason": "All listed points are in Results/Discussion: 91.2–95.5% identity to CreOMT3/4/5, likely ancestral source via duplication, D17N in OMT6 confers C3/C5/C6/C3' activity, and AbOMT6 is catalytically strong but not expressed in A. buxfoliata."
+          "reason": "Fig. 5B and related text compare 2-kb promoter regions of OMT3/4/5/6 across citrus groups, so OMT6 promoter structural variation was surveyed comparatively."
         },
         "Omics_Data": {
           "verdict": "SUPPORTED",
-          "reason": "All listed BioProject IDs appear in the Data availability section."
+          "reason": "These BioProject accessions are listed in Data Availability and correspond to BSA and RNA-seq datasets used in the study."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "CreOMT6 expression is discussed across fruit developmental stages and among citrus groups/domestication backgrounds."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state CreOMT6 expression was highly correlated with total PMF content during Red tangerine fruit development and negligible in Group I/II species lacking the OMT cluster."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper uses CreOMT6 mainly for evolutionary/functional comparison; the engineering value phrasing is plausible but not directly stated in Results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed details are in Results: CreOMT6 is ~1.6 Mb downstream, shares 91.2–95.5% identity with CreOMT3/4/5, D17/N17 swap affects function, and AbOMT6 has strong activity but negligible expression in A. buxfoliata."
         },
         "Summary_Key_Findings_of_Core_Gene": {
           "verdict": "SUPPORTED",
-          "reason": "All three summary points are supported by the Results: close relationship/ancestral role, reduced multisite activity of most OMT6 homologs, and residue 17 contribution to divergence from CreOMT4."
+          "reason": "This accurately summarizes Results showing ancestral relationship to the cluster, weak/absent activity of most OMT6 homologs, and lack of association with PMF variation compared with CreOMT3/4/5."
         }
       },
       "corrections": [],
       "stats": {
-        "supported": 18,
+        "supported": 15,
         "unsupported": 0,
-        "uncertain": 3
+        "uncertain": 4
       }
     },
     {
@@ -105,131 +97,127 @@
       "verification": {
         "Species": {
           "verdict": "UNCERTAIN",
-          "reason": "The paper indicates CreOMT3 is from C. reticulata, but the generic field value 'Citrus' is not explicitly stated."
+          "reason": "CreOMT3 is from citrus/C. reticulata, but the generic field value 'Citrus' is not itself a formal statement from the paper."
         },
         "Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "CreOMT3 was cloned from C. reticulata accessions and named accordingly."
+          "reason": "CreOMT3 is identified from C. reticulata."
         },
         "Origin_Species": {
           "verdict": "SUPPORTED",
-          "reason": "CreOMT3 is a mandarin gene in this study."
+          "reason": "C. reticulata is mandarin; CreOMT3 is a mandarin gene in the paper."
         },
         "Origin_Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "The origin species is Citrus reticulata."
-        },
-        "Origin_Species_Variety": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper states CreOMT3 was successfully cloned from RT (Red tangerine)."
+          "reason": "The gene is cloned from C. reticulata accessions."
         },
         "Variety": {
           "verdict": "SUPPORTED",
-          "reason": "CreOMT3 is analyzed in Red tangerine, transiently overexpressed in Guoqing No.1 satsuma mandarin flavedo, and RNAi-tested in Ota Ponkan mandarin."
+          "reason": "CreOMT3 is cloned/tested from Red tangerine and Clementine, and functionally assayed by overexpression/RNAi in Guoqing No.1 satsuma mandarin and Ota Ponkan mandarin."
         },
-        "Promoters": {
-          "verdict": "UNCERTAIN",
-          "reason": "Overexpression constructs were used in callus and transient assays, but the exact promoter such as 35S is not explicitly named in the Results text provided."
-        },
-        "Expression_Pattern": {
+        "Origin_Species_Variety": {
           "verdict": "SUPPORTED",
-          "reason": "The paper explicitly states CreOMT3 is up-regulated in RT flavedo, highly correlated with total PMFs and six PMF monomers, and higher in wild/early-admixture than modern cultivated mandarins."
-        },
-        "Expression_Pattern_of_Origin_Species": {
-          "verdict": "SUPPORTED",
-          "reason": "In Red tangerine, expression during fruit development correlates with total PMF content, and RT flavedo is PMF-rich."
-        },
-        "Protein_Family_or_Domain": {
-          "verdict": "SUPPORTED",
-          "reason": "CreOMT3 is explicitly one of the functional O-methyltransferase genes; PF08100 is the hallmark domain for functional plant OMTs used to exclude pseudogenes in the same cluster region."
-        },
-        "Biosynthetic_Pathway": {
-          "verdict": "SUPPORTED",
-          "reason": "CreOMT3 is repeatedly identified as crucial for PMF biosynthesis/flavone O-methylation."
-        },
-        "Pathway_Branch_or_Subpathway": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper places CreOMT3 in terminal O-methylation of hydroxyflavones leading to PMFs."
-        },
-        "Enzyme_Name": {
-          "verdict": "SUPPORTED",
-          "reason": "CreOMT3 is functionally characterized as an O-methyltransferase acting on hydroxyflavones."
-        },
-        "EC_Number": {
-          "verdict": "UNSUPPORTED",
-          "reason": "No EC number, including the partial form 2.1.1.-, is provided in the paper."
-        },
-        "Catalyzed_Reaction_Description": {
-          "verdict": "SUPPORTED",
-          "reason": "Results show SAM-dependent methylation of hydroxyflavones, with efficient methylation especially at C6 and C4', plus C3' and C7 on specific substrates."
-        },
-        "Primary_Substrate": {
-          "verdict": "SUPPORTED",
-          "reason": "DMF1, 3'-DNOB, GEN, CIR, and LYS are explicitly tested substrates; hydroxyflavones broadly were tested. 'Other tested hydroxyflavones' is consistent."
-        },
-        "Primary_Product": {
-          "verdict": "UNCERTAIN",
-          "reason": "Callus overexpression produced NOB, SAL, TMF2, API-TMF, 8-OH-HXMF, and SIN, but assigning all listed PMFs as direct primary products of CreOMT3 alone is broader than the direct evidence."
-        },
-        "Metabolic_Step_Position": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper describes OMTs as terminal modifying enzymes and final steps of PMF biosynthesis."
-        },
-        "End_Product_Connection_Type": {
-          "verdict": "SUPPORTED",
-          "reason": "CreOMT3 directly O-methylates hydroxyflavones and contributes to fully O-methylated flavones in combined assays."
-        },
-        "Rate_Limiting_or_Key_Control_Step": {
-          "verdict": "SUPPORTED",
-          "reason": "The cautious phrasing is supported: CreOMT3 is a key terminal determinant, but the paper does not claim it alone is rate-limiting."
+          "reason": "The paper explicitly says they cloned CreOMT3 from RT (Red tangerine)."
         },
         "Terminal_Metabolite": {
           "verdict": "SUPPORTED",
-          "reason": "CreOMT3 is directly linked to PMF biosynthesis including NOB, TAN, SIN and related branches."
+          "reason": "CreOMT3 is directly tested as crucial for PMF biosynthesis."
         },
         "Terminal_Metabolite_Class": {
           "verdict": "SUPPORTED",
           "reason": "PMFs are flavonoids/flavones."
         },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Results directly test PMFs in fruit flavedo and mention F1 leaves; flowers are only mentioned generally in the Introduction, not as CreOMT3-specific validation."
+        },
         "Terminal_Metabolite_Function": {
           "verdict": "SUPPORTED",
-          "reason": "These PMF functions are described in the introduction."
+          "reason": "These PMF functions are stated in the paper, though they are not specific functional assays for CreOMT3."
         },
-        "Terminal_Metabolite_Accumulation_Site": {
+        "Biosynthetic_Pathway": {
           "verdict": "SUPPORTED",
-          "reason": "The paper shows PMF accumulation in fruit flavedo and leaves, including F1 analyses in both tissues."
+          "reason": "CreOMT3 is placed in the flavone/PMF biosynthetic pathway throughout Results and Discussion."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies CreOMT3 as part of the terminal O-methylation steps of hydroxyflavones leading to PMFs."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "CreOMT3 is described as an O-methyltransferase acting on flavones/hydroxyflavones."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number, including '2.1.1.-', is given in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show SAM-dependent methylation of hydroxyflavones by CreOMT3, with strong activity at C6 and C4' and activity at C3' and C7 on certain substrates, contributing collaboratively to fully methylated PMFs."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "DMF1, 3'-DNOB, GEN, CIR, and LYS are all explicitly tested substrates in Table 1 for CreOMT3."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Stable overexpression lines accumulated products including NOB, SAL, TMF2, API-TMF, 8-OH-HXMF, and SIN."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states OMTs are terminal modifying enzymes and responsible for final steps of PMF biosynthesis."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support that CreOMT3 directly methylates hydroxyflavone/intermediate substrates contributing to final PMFs."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper says terminal O-methylation enzymes contribute strongly to natural variation, but it does not explicitly designate CreOMT3 itself as rate-limiting."
         },
         "Core_Phenotypic_Effect": {
           "verdict": "SUPPORTED",
-          "reason": "Overexpression increased total PMFs and specific PMFs, while RNAi reduced them, consistent with multisite O-methylation promoting PMF accumulation."
+          "reason": "Overexpression increases total PMFs and specific PMFs in flavedo, while RNAi decreases them, supporting promotion of PMF accumulation."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "CreOMT3 is clearly a plant OMT, but PF08100 presence is not explicitly stated for CreOMT3 in the provided text."
         },
         "Core_Validation_Method": {
           "verdict": "SUPPORTED",
-          "reason": "All listed methods were used for CreOMT3 except that kinetics were from recombinant enzyme assays rather than specifically termed 'recombinant enzyme kinetics' in Results, which is still accurate."
+          "reason": "All listed methods are reported in the Results for CreOMT3."
+        },
+        "Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "pB121-based overexpression constructs are stated, and native promoters were comparatively surveyed for OMT genes, but no CreOMT3-specific promoter functional analysis is presented."
         },
         "Interacting_Proteins": {
-          "verdict": "SUPPORTED",
-          "reason": "CreOMT3, CreOMT4, and CreOMT5 were shown to act complementarily in combined reactions."
+          "verdict": "UNCERTAIN",
+          "reason": "CreOMT3 functionally complements CreOMT4/5 in mixed assays, but direct physical protein interaction is not shown."
         },
         "Environment_or_Treatment_Factor": {
           "verdict": "SUPPORTED",
-          "reason": "Tissue specificity, developmental stage, and domestication background are all explicit analytical contexts."
-        },
-        "Breeding_or_Engineering_Application_Value": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper proposes reconstructing PMF pathways for breeding and mentions pathway reconstruction for production of PMFs; CreOMT3 is one of the key cluster genes."
-        },
-        "Other_Important_Info": {
-          "verdict": "SUPPORTED",
-          "reason": "CreOMT3 efficiently methylates C6 and C4' sites, complements CreOMT4/5, and Discussion states OMT3 has median Ka/Ks <1 implying purifying selection."
+          "reason": "The paper evaluates CreOMT3 across tissue types, developmental stages, and domestication groups."
         },
         "Omics_Data": {
           "verdict": "SUPPORTED",
-          "reason": "All BioProject IDs listed appear in the paper."
+          "reason": "These accessions are listed in Data Availability and support the omics analyses used in the study."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state CreOMT3 is upregulated in RT flavedo and higher in wild/early-admixture mandarins than in modern cultivated mandarins and mandarin-derived cultivars."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "PMF biofortification is discussed generally, but the specific claim that CreOMT3 is especially promising for stacking is an inference rather than an explicit result statement."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that CreOMT3 is in the tandemly duplicated OMT cluster likely derived from OMT6 and complements CreOMT4/5 to fully O-methylate flavones."
         },
         "Summary_Key_Findings_of_Core_Gene": {
           "verdict": "SUPPORTED",
-          "reason": "The three summary points are supported by BSA/correlation, enzymatic regioselectivity, and overexpression/RNAi evidence."
+          "reason": "This summary matches mapping/correlation, catalytic specificity, and overexpression/RNAi evidence in Results."
         }
       },
       "corrections": [
@@ -237,13 +225,13 @@
           "field": "EC_Number",
           "old_value": "2.1.1.-",
           "new_value": "NA",
-          "reason": "No EC number, including the partial form 2.1.1.-, is provided in the paper."
+          "reason": "No EC number, including '2.1.1.-', is given in the paper."
         }
       ],
       "stats": {
-        "supported": 28,
+        "supported": 23,
         "unsupported": 1,
-        "uncertain": 3
+        "uncertain": 7
       }
     },
     {
@@ -252,135 +240,127 @@
       "verification": {
         "Species": {
           "verdict": "UNCERTAIN",
-          "reason": "CreOMT4 is clearly from C. reticulata, but the exact field value 'Citrus' is not explicitly given."
+          "reason": "CreOMT4 is from citrus/C. reticulata, but the exact generic label 'Citrus' is not a direct statement."
         },
         "Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "CreOMT4 is from Citrus reticulata."
+          "reason": "CreOMT4 is from C. reticulata."
         },
         "Origin_Species": {
           "verdict": "SUPPORTED",
-          "reason": "The gene is from mandarin/C. reticulata."
+          "reason": "C. reticulata is mandarin; CreOMT4 is a mandarin gene."
         },
         "Origin_Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "Explicitly C. reticulata."
-        },
-        "Origin_Species_Variety": {
-          "verdict": "SUPPORTED",
-          "reason": "CreOMT4 was successfully cloned from RT (Red tangerine)."
+          "reason": "The gene is discussed in C. reticulata accessions."
         },
         "Variety": {
           "verdict": "SUPPORTED",
-          "reason": "CreOMT4 is analyzed in Red tangerine, Clementine, Mangshan mandarin, Guoqing No.1 satsuma mandarin, and Ota Ponkan mandarin."
+          "reason": "CreOMT4 is studied in Red tangerine, Mangshan mandarin, Guoqing No.1 satsuma mandarin, Ota Ponkan mandarin, and Clementine."
         },
-        "Promoters": {
+        "Origin_Species_Variety": {
           "verdict": "SUPPORTED",
-          "reason": "The paper explicitly compares CreOMT4-Pro (738 bp) and CrmOMT4-P1 (1,779 bp) and describes the 1,041-bp MITE-containing fragment; transient overexpression constructs were also used."
-        },
-        "Expression_Pattern": {
-          "verdict": "SUPPORTED",
-          "reason": "CreOMT4 is up-regulated in PMF-rich flavedo, highly correlated with total PMFs, higher in wild/early-admixture mandarins, and promoter deletion is linked to lower expression."
-        },
-        "Expression_Pattern_of_Origin_Species": {
-          "verdict": "SUPPORTED",
-          "reason": "In mandarins including Red tangerine, expression during fruit development tracks PMF accumulation and is high in flavedo."
-        },
-        "Protein_Family_or_Domain": {
-          "verdict": "SUPPORTED",
-          "reason": "CreOMT4 is a functional O-methyltransferase gene in the plant OMT family."
-        },
-        "Biosynthetic_Pathway": {
-          "verdict": "SUPPORTED",
-          "reason": "CreOMT4 is central to PMF biosynthesis/flavone O-methylation."
-        },
-        "Pathway_Branch_or_Subpathway": {
-          "verdict": "SUPPORTED",
-          "reason": "It catalyzes terminal hydroxyflavone O-methylation steps toward PMFs."
-        },
-        "Enzyme_Name": {
-          "verdict": "SUPPORTED",
-          "reason": "CreOMT4 is characterized as a hydroxyflavone O-methyltransferase."
-        },
-        "EC_Number": {
-          "verdict": "UNSUPPORTED",
-          "reason": "No EC number is reported in the paper."
-        },
-        "Catalyzed_Reaction_Description": {
-          "verdict": "SUPPORTED",
-          "reason": "CreOMT4 methylates hydroxyflavones using SAM at multiple positions including C3, C5, C6, C7, and C3', as shown by assays and mutagenesis."
-        },
-        "Primary_Substrate": {
-          "verdict": "SUPPORTED",
-          "reason": "3HF, GAD, DMF1, LYS, 3'-DNOB, GEN, and CIR are all explicitly tested with CreOMT4."
-        },
-        "Primary_Product": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper shows the OMT cluster/overexpression lines produced these PMFs, but not every listed compound is established as a direct principal product of CreOMT4 alone in all contexts."
-        },
-        "Metabolic_Step_Position": {
-          "verdict": "SUPPORTED",
-          "reason": "OMTs are described as terminal modifying enzymes in PMF biosynthesis."
-        },
-        "End_Product_Connection_Type": {
-          "verdict": "SUPPORTED",
-          "reason": "CreOMT4 directly forms PMF products and specifically converts 5DNOB into NOB in vitro."
-        },
-        "Rate_Limiting_or_Key_Control_Step": {
-          "verdict": "UNCERTAIN",
-          "reason": "CreOMT4 is clearly a key determinant of natural PMF variation, especially via promoter polymorphism, but the label 'major terminal determinant' is somewhat interpretive rather than explicitly stated."
+          "reason": "CreOMT4 was cloned from RT and compared/promoter-tested using Mangshan mandarin material."
         },
         "Terminal_Metabolite": {
           "verdict": "SUPPORTED",
-          "reason": "CreOMT4 is directly tied to PMF biosynthesis."
+          "reason": "CreOMT4 is directly linked to PMF biosynthesis and accumulation."
         },
         "Terminal_Metabolite_Class": {
           "verdict": "SUPPORTED",
-          "reason": "PMFs are flavonoids/flavones."
+          "reason": "PMFs are flavonoids/flavones in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "Fruit flavedo is directly tested and leaves are used in segregating population phenotyping, but flowers are only mentioned generally, not for CreOMT4-specific validation."
         },
         "Terminal_Metabolite_Function": {
           "verdict": "SUPPORTED",
-          "reason": "These functions are explicitly given for PMFs."
+          "reason": "These are paper-stated PMF bioactivities/protective roles, though not specific assays for CreOMT4."
         },
-        "Terminal_Metabolite_Accumulation_Site": {
+        "Biosynthetic_Pathway": {
           "verdict": "SUPPORTED",
-          "reason": "PMFs accumulate in fruit flavedo and leaves per Results and introduction."
+          "reason": "CreOMT4 is a core gene in citrus flavone/PMF biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show CreOMT4 performs terminal O-methylation of hydroxyflavones in PMF biosynthesis."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "CreOMT4 is an O-methyltransferase acting on flavones/hydroxyflavones."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 and text show SAM-dependent methylation with preference for C7/C5 and activity at C3, C6, and C3', including conversion of 5DNOB toward NOB."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "3HF, GAD, DMF1, LYS, 3'-DNOB, GEN, and CIR are explicitly tested substrates for CreOMT4 in Table 1."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Callus overexpression generated NOB, SAL, TMF2, API-TMF, 8-OH-HXMF, and SIN."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "OMTs are described as terminal modifying enzymes/final biosynthetic steps."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CreOMT4 directly methylates pathway intermediates toward final PMFs; 5DNOB to NOB conversion is specifically supported."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "CreOMT4 is clearly important and promoter variation affects PMF levels, but 'rate-limiting' is not explicitly established."
         },
         "Core_Phenotypic_Effect": {
           "verdict": "SUPPORTED",
-          "reason": "CreOMT4 promotes PMF biosynthesis, and both promoter variation and catalytic neofunctionalization are shown to contribute to higher PMFs in wild mandarins."
+          "reason": "Overexpression increases PMFs, RNAi decreases PMFs, and promoter variation is linked to expression and PMF levels during domestication."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "CreOMT4 is a plant OMT, but PF08100-containing status is not directly stated for this gene in the text."
         },
         "Core_Validation_Method": {
           "verdict": "SUPPORTED",
-          "reason": "All listed methods are explicitly reported for CreOMT4."
+          "reason": "All listed methods are explicitly used for CreOMT4 in Results."
+        },
+        "Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The long vs short native OMT4 promoters with/without the 1,041-bp fragment are directly tested, and transient overexpression used pB121-based constructs."
         },
         "Interacting_Proteins": {
-          "verdict": "SUPPORTED",
-          "reason": "CreOMT4 functionally complements CreOMT3 and CreOMT5 in combined in vitro reactions."
+          "verdict": "UNCERTAIN",
+          "reason": "CreOMT4 is functionally complementary with CreOMT3/5, but no direct protein-protein interaction evidence is provided."
         },
         "Environment_or_Treatment_Factor": {
           "verdict": "SUPPORTED",
-          "reason": "Developmental stage, domestication status, and promoter structural variation are all directly examined."
-        },
-        "Potential_Tradeoffs": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper supports reduced PMF content in modern cultivated mandarins associated with the promoter allele, and no agronomic penalty is reported."
-        },
-        "Breeding_or_Engineering_Application_Value": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper explicitly mentions a molecular marker for the 1,041-bp fragment being useful for selecting high-PMF germplasm and frames pathway reconstruction/biofortification applications."
-        },
-        "Other_Important_Info": {
-          "verdict": "SUPPORTED",
-          "reason": "N17 essentiality, N17D loss-of-function, reciprocal D17N in OMT6, and ~3-fold LUC increase for long promoter versus short promoter are all stated."
+          "reason": "CreOMT4 is analyzed across tissue type, developmental stage, and domestication background."
         },
         "Omics_Data": {
           "verdict": "SUPPORTED",
-          "reason": "All listed BioProject IDs are present."
+          "reason": "These BioProjects are listed in the paper as supporting datasets."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "CreOMT4 is upregulated in RT flavedo, higher in wild/early-admixture mandarins, and lower in modern cultivated mandarins with the promoter deletion."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly suggests a molecular marker for the 1,041-bp fragment will be useful for selecting high-PMF germplasm, supporting breeding value; engineering relevance is also aligned with biofortification framing."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly support N17 essentiality for C3/C5/C6/C3' methylation and the role of the 1,041-bp promoter deletion in reduced activity/PMF accumulation."
         },
         "Summary_Key_Findings_of_Core_Gene": {
           "verdict": "SUPPORTED",
-          "reason": "All three summary points are strongly supported by Results."
+          "reason": "This is an accurate summary of the direct Results for CreOMT4."
         }
       },
       "corrections": [
@@ -388,13 +368,13 @@
           "field": "EC_Number",
           "old_value": "2.1.1.-",
           "new_value": "NA",
-          "reason": "No EC number is reported in the paper."
+          "reason": "No EC number is provided in the paper."
         }
       ],
       "stats": {
-        "supported": 29,
+        "supported": 25,
         "unsupported": 1,
-        "uncertain": 3
+        "uncertain": 5
       }
     },
     {
@@ -403,55 +383,55 @@
       "verification": {
         "Species": {
           "verdict": "UNCERTAIN",
-          "reason": "The paper indicates C. reticulata origin but does not explicitly use the generic field value 'Citrus'."
+          "reason": "CreOMT5 is from C. reticulata/citrus, but the exact generic label 'Citrus' is not directly stated as a field value."
         },
         "Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "CreOMT5 is a C. reticulata gene."
+          "reason": "CreOMT5 is identified from C. reticulata."
         },
         "Origin_Species": {
           "verdict": "SUPPORTED",
-          "reason": "It is a mandarin gene in this study."
+          "reason": "C. reticulata is mandarin; CreOMT5 is a mandarin gene."
         },
         "Origin_Species_Latin_Name": {
           "verdict": "SUPPORTED",
-          "reason": "Explicitly Citrus reticulata."
-        },
-        "Origin_Species_Variety": {
-          "verdict": "SUPPORTED",
-          "reason": "CreOMT5 was cloned from Red tangerine."
+          "reason": "The gene is cloned/tested from C. reticulata."
         },
         "Variety": {
           "verdict": "SUPPORTED",
-          "reason": "CreOMT5 is investigated in Red tangerine, Guoqing No.1 satsuma mandarin, and Ota Ponkan mandarin."
+          "reason": "CreOMT5 is cloned from Red tangerine/Clementine and functionally assayed in Guoqing No.1 satsuma mandarin and Ota Ponkan mandarin."
         },
-        "Promoters": {
+        "Origin_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states CreOMT5 was cloned from RT (Red tangerine)."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CreOMT5 is directly tested as crucial for PMF biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "PMFs are flavonoids/flavones."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
           "verdict": "UNCERTAIN",
-          "reason": "Overexpression constructs and comparative native promoter context are implied, but exact promoter details for CreOMT5 constructs are not explicitly given in the provided text."
+          "reason": "Fruit flavedo is directly validated and leaves are used in segregation analysis, but flowers are not tested specifically for CreOMT5 in Results."
         },
-        "Expression_Pattern": {
+        "Terminal_Metabolite_Function": {
           "verdict": "SUPPORTED",
-          "reason": "CreOMT5 is up-regulated in PMF-rich flavedo, highly correlated with total PMFs and six PMF monomers, and higher in wild/early-admixture mandarins than in modern cultivated mandarins."
-        },
-        "Expression_Pattern_of_Origin_Species": {
-          "verdict": "SUPPORTED",
-          "reason": "In mandarins such as Red tangerine, expression in flavedo/development is associated with PMF accumulation."
-        },
-        "Protein_Family_or_Domain": {
-          "verdict": "SUPPORTED",
-          "reason": "CreOMT5 is a functional plant O-methyltransferase."
+          "reason": "These PMF functions are stated in the paper, though not assayed specifically for CreOMT5."
         },
         "Biosynthetic_Pathway": {
           "verdict": "SUPPORTED",
-          "reason": "CreOMT5 is a key gene in PMF biosynthesis."
+          "reason": "CreOMT5 is placed in the flavone/PMF biosynthetic pathway."
         },
         "Pathway_Branch_or_Subpathway": {
           "verdict": "SUPPORTED",
-          "reason": "It acts in terminal hydroxyflavone O-methylation leading to major PMFs."
+          "reason": "Results place CreOMT5 in the terminal O-methylation module for hydroxyflavones."
         },
         "Enzyme_Name": {
           "verdict": "SUPPORTED",
-          "reason": "CreOMT5 is characterized as a hydroxyflavone O-methyltransferase."
+          "reason": "CreOMT5 is a flavone/hydroxyflavone O-methyltransferase."
         },
         "EC_Number": {
           "verdict": "UNSUPPORTED",
@@ -459,75 +439,71 @@
         },
         "Catalyzed_Reaction_Description": {
           "verdict": "SUPPORTED",
-          "reason": "CreOMT5 uses SAM to methylate hydroxyflavones at C3, C5, C6, C7, and especially C3' depending on substrate."
+          "reason": "Table 1/text show SAM-dependent methylation, preferentially at C7, C5, and C3', with activity at C3/C6 depending on substrate and involvement in 5DNOB to NOB conversion."
         },
         "Primary_Substrate": {
           "verdict": "SUPPORTED",
-          "reason": "3HF, GAD, DMF1, LYS, 3'-DNOB, and CIR are explicitly assayed; broader hydroxyflavones were also tested."
+          "reason": "3HF, GAD, DMF1, LYS, and 3'-DNOB are explicit substrates in Table 1 for CreOMT5."
         },
         "Primary_Product": {
-          "verdict": "UNCERTAIN",
-          "reason": "The paper shows multiple PMFs in overexpression lines and cluster function, but not all listed compounds are directly established as primary products of CreOMT5 alone."
+          "verdict": "SUPPORTED",
+          "reason": "Callus overexpression produced NOB, SAL, TMF2, API-TMF, 8-OH-HXMF, and SIN."
         },
         "Metabolic_Step_Position": {
           "verdict": "SUPPORTED",
-          "reason": "CreOMT5 acts in the downstream terminal modification step."
+          "reason": "The paper describes the OMT cluster as performing terminal/final O-methylation steps."
         },
         "End_Product_Connection_Type": {
           "verdict": "SUPPORTED",
-          "reason": "CreOMT5 directly forms PMF products and can convert intermediate PMFs such as 5DNOB into NOB; strong C3' methylation of 3'-DNOB is also shown."
+          "reason": "CreOMT5 directly converts pathway intermediates toward major PMFs."
         },
         "Rate_Limiting_or_Key_Control_Step": {
-          "verdict": "SUPPORTED",
-          "reason": "The cautious wording is consistent with the paper: key terminal determinant, but not explicitly sole bottleneck."
-        },
-        "Terminal_Metabolite": {
-          "verdict": "SUPPORTED",
-          "reason": "CreOMT5 is directly linked to PMFs."
-        },
-        "Terminal_Metabolite_Class": {
-          "verdict": "SUPPORTED",
-          "reason": "PMFs are flavonoids/flavones."
-        },
-        "Terminal_Metabolite_Function": {
-          "verdict": "SUPPORTED",
-          "reason": "These PMF functions are described in the paper."
-        },
-        "Terminal_Metabolite_Accumulation_Site": {
-          "verdict": "SUPPORTED",
-          "reason": "Fruit flavedo and leaves are explicitly analyzed as PMF accumulation sites."
+          "verdict": "UNCERTAIN",
+          "reason": "CreOMT5 is important, but 'rate-limiting' is not explicitly demonstrated."
         },
         "Core_Phenotypic_Effect": {
           "verdict": "SUPPORTED",
-          "reason": "CreOMT5 overexpression elevates PMFs and RNAi reduces PMFs, supporting its causal contribution."
+          "reason": "Overexpression elevates PMFs and RNAi reduces PMFs in flavedo; 5DNOB decreases under overexpression consistent with conversion to NOB."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "CreOMT5 is clearly a plant OMT, but PF08100 presence is not explicitly stated for CreOMT5 in the text."
         },
         "Core_Validation_Method": {
           "verdict": "SUPPORTED",
-          "reason": "All listed validation approaches are reported for CreOMT5."
+          "reason": "All listed approaches are directly reported for CreOMT5."
+        },
+        "Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "pB121-based overexpression constructs are stated and native promoters surveyed comparatively, but no CreOMT5-specific promoter functional study is shown."
         },
         "Interacting_Proteins": {
-          "verdict": "SUPPORTED",
-          "reason": "CreOMT5 acts complementarily with CreOMT3 and CreOMT4 in combined reactions."
+          "verdict": "UNCERTAIN",
+          "reason": "Functional complementarity with CreOMT3/4 is shown, but not direct physical interaction."
         },
         "Environment_or_Treatment_Factor": {
           "verdict": "SUPPORTED",
-          "reason": "Tissue specificity, developmental stage, and domestication background are all explicitly analyzed."
-        },
-        "Breeding_or_Engineering_Application_Value": {
-          "verdict": "SUPPORTED",
-          "reason": "The paper supports pathway reconstruction and biofortification applications for the OMT cluster, making this a reasonable evidence-based summary."
-        },
-        "Other_Important_Info": {
-          "verdict": "SUPPORTED",
-          "reason": "Strong C3' activity toward 3'-DNOB, broad C5/C7 activity, C3 activity relative to OMT6 in Discussion, and positive selection are all supported."
+          "reason": "CreOMT5 is analyzed across tissue types, developmental stage, and domestication status."
         },
         "Omics_Data": {
           "verdict": "SUPPORTED",
-          "reason": "All BioProject IDs appear in the paper."
+          "reason": "These datasets are listed in the paper and used in the study."
+        },
+        "Expression_Pattern": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows CreOMT5 upregulated in RT flavedo and higher in wild/early-admixture mandarins than in modern cultivated mandarins."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "General PMF biofortification relevance is supported, but the specific stacked-engineering wording is inferential rather than explicit."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support that CreOMT5 is part of the neofunctionalized OMT cluster and, together with CreOMT4 but unlike AbOMT6, possesses C3 methylation activity."
         },
         "Summary_Key_Findings_of_Core_Gene": {
           "verdict": "SUPPORTED",
-          "reason": "The summary accurately reflects expression correlation, enzymatic function including strong C3' activity, and overexpression/RNAi evidence."
+          "reason": "This summary accurately reflects Results on catalytic profile, 5DNOB/NOB relationship, and overexpression/RNAi phenotypes."
         }
       },
       "corrections": [
@@ -539,17 +515,17 @@
         }
       ],
       "stats": {
-        "supported": 28,
+        "supported": 23,
         "unsupported": 1,
-        "uncertain": 3
+        "uncertain": 7
       }
     }
   ],
   "summary": {
-    "total_fields": 118,
-    "supported": 103,
+    "total_fields": 112,
+    "supported": 86,
     "unsupported": 3,
-    "uncertain": 12,
+    "uncertain": 23,
     "total_corrections": 3
   }
 }

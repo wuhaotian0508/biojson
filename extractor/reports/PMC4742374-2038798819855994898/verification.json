@@ -1,0 +1,357 @@
+{
+  "file": "MinerU_markdown_PMC4742374_2038798819855994898",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC4742374_2038798819855994898.md",
+  "timestamp": "2026-03-31T22:11:01.147852",
+  "genes": [
+    {
+      "gene_name": "IRP2",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states 'IRP2 (also known as IREB2)' in the Introduction."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "IRP2 is studied in both mouse (Irp2 knockout mice) and human systems (human COPD lungs, Beas2B, HBE cells)."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Mouse and human are the species directly used; these correspond to Mus musculus and Homo sapiens."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Core in vivo functional testing was performed in mice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is mouse, i.e. Mus musculus."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state Irp2-/- and WT littermates were from a mixed 129S4/SvJae and C57Bl/6 background."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results repeatedly show Irp2 promotes 'mitochondrial iron loading' and measure mitochondrial non-heme/heme iron."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Iron is a mineral nutrient; the paper studies mitochondrial iron explicitly."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports lung mitochondrial iron loading and shows epithelial-cell mitochondrial dysfunction, but does not directly localize mitochondrial iron accumulation specifically to airway/alveolar epithelial cell mitochondria."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states mitochondria are major consumers of iron for heme and Fe-S cluster biosynthesis and argues excess mitochondrial iron promotes oxidative injury/inflammation/pathogenesis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly supported by Results: Irp2 promotes CS-induced mitochondrial iron loading, mitochondrial dysfunction, impaired MCC, inflammation, bronchitis-model injury, and emphysema; Irp2 deficiency is protective."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed approaches appear in the paper: Irp2-/- mice, RIP-Seq, mouse lung microarray, siRNA/shRNA in human airway epithelial cells, iron measurements, mitochondrial assays, and histology."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are directly supported by Results and Abstract."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper identifies IRP2 as an iron-responsive element binding protein regulating iron homeostasis via RNA binding to IREs."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "IRP2 is an RNA-binding regulator and this is biologically consistent, but the paper does not explicitly state 'cytosol' as IRP2 localization."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state Irp2 expression was higher in lung epithelial cells and infiltrating alveolar macrophages after CS exposure."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1/Results describe localization to type I and II alveolar, secretory, ciliated epithelial cells and increased expression with CS; CSE induction is shown in human airway epithelial cells."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "CS exposure, CSE treatment, and DFO stabilization in RIP-Seq are all explicitly described."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper identifies ferritin and transferrin receptor as known IRP2 target transcripts/mRNAs, not proteins interacting with IRP2. This field misstates the interaction type."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "GSE57073 and GSE57048 are accession codes in the paper; LGRC GSE47460 and ECLIPSE GSE54837 are also explicitly cited."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "IRP2 is clearly the focal gene and the paper supports its post-transcriptional role and a mitochondrial iron axis in COPD pathogenesis."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper notes Irp2 overexpression has been associated with embryonic lethality and presents elevated IRP2 as deleterious."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports therapeutic targeting of mitochondrial iron/IRP2 axis, but does not discuss breeding or engineering applications specifically."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "Ferritin mRNA; transferrin receptor mRNA",
+          "new_value": "NA",
+          "reason": "The paper identifies ferritin and transferrin receptor as known IRP2 target transcripts/mRNAs, not proteins interacting with IRP2. This field misstates the interaction type."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "SCO2",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper refers to 'synthesis of cytochrome c oxidase (Sco2)' and Sco2 mutant mice."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Sco2 was functionally tested in mouse models."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species used is mouse, i.e. Mus musculus."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Functional experiments were performed in mice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Mus musculus."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state Sco2ki/ki and Sco2ki/ko mice are C57BL/6."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show Sco2ki/ko mice were protected from CS-associated changes in mitochondrial non-heme iron."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Iron is the measured nutrient/metabolite class here."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper measures mitochondrial iron in lung fractions from WT and Sco2 mutant mouse lungs."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Sco2 is discussed in the context of cytochrome c oxidase assembly within the mitochondrial electron transport chain."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Sco2 is explicitly described as required for COX assembly, i.e. the Complex IV assembly module."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly expands SCO2 as 'synthesis of cytochrome c oxidase'."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "SCO2 is described as one of the ancillary factors required for COX assembly, i.e. a COX assembly factor."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The text supports that SCO2 is needed for proper COX assembly/activity; 'functional cytochrome c oxidase complex IV assembly' is a fair inference."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "As a COX assembly factor, SCO2 acts at the terminal respiratory complex (Complex IV)."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results directly connect impaired SCO2/COX to altered mitochondrial non-heme iron loading."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "SCO2 is functionally important in this study, but the paper does not explicitly call it a rate-limiting step or key control point."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show Sco2 mutant mice with impaired COX are protected from CS-induced MCC loss, inflammation, protein leak, and mitochondrial non-heme iron increase."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are directly used in the Sco2 experiments."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three points match the Results section describing Sco2ki/ko and Sco2ki/ki mice."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "SCO2 is treated as a COX assembly factor, which is mitochondrial in context; this is directly inferable from the paper's mitochondrial assembly discussion."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states prior SAGE data showed SCO2 is higher in lungs of COPD subjects, and functional testing was done in mutant mice."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Sco2 mutant mice were tested under cigarette smoke exposure."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states homozygous deletion of Sco2 is embryonic lethal and that more severe COX deficiency occurs in Sco2ki/ko mice."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper suggests mechanistic/therapeutic relevance of COX targeting, but not breeding or engineering applications specifically."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "SCO2 is used as mechanistic validation rather than the primary discovery gene, matching the Results narrative."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 24,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "FXN",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses the mouse symbol Fxn and discusses frataxin-deficient mice."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Fxn was functionally tested in mice."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Mus musculus."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The core validation for this gene was in mice."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Mus musculus."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state Fxnki/ko mice were C57/BL6 and describe the GAA230 expansion plus exon 4-deleted allele."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly show higher mitochondrial non-heme and heme iron in Fxnki/ko mice."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Iron is the nutrient/metabolite measured."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The measurements were made in mitochondrial fractions/lung mitochondria."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes frataxin as a mitochondrial Fe-S regulator and discusses heme/Fe-S biology, supporting a mitochondrial Fe-S/iron homeostasis pathway role."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Frataxin is explicitly called the 'mitochondrial Fe-S regulator' in the Results."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The protein is explicitly referred to as frataxin."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Describing frataxin as a mitochondrial iron homeostasis protein is consistent with the paper's wording about it as a mitochondrial Fe-S regulator."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places frataxin in mitochondrial iron handling/Fe-S regulation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The study directly uses Fxn deficiency to model increased mitochondrial iron overload status."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "Frataxin is presented as an important regulator, but the paper does not explicitly label it rate-limiting or a key control step."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show Fxnki/ko mice have higher mitochondrial iron, impaired baseline MCC, and higher baseline whole-lung IL-6."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed methods match the actual experiments performed for Fxnki/ko mice."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These three findings are directly reported in the Results and Figure 4g,h."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "Frataxin is described in a mitochondrial regulatory context and the paper discusses it as a mitochondrial Fe-S regulator."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state frataxin loss was associated with CS exposure in WT whole-lung homogenates and in CSE-treated human airway epithelial cells."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports reduced frataxin with CS/CSE and use of mutant mice, but the phrase 'reduced by cigarette smoke/CSE; mutant mice used to model increased mitochondrial iron loading' mixes observational expression change with the engineered genotype model rather than a single expression pattern."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "CS exposure and CSE treatment are both explicitly linked to frataxin changes."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports frataxin insufficiency as deleterious and linked to mitochondrial dysfunction/iron overload phenotypes."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Therapeutic or breeding/engineering applications for FXN are not directly proposed in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses Fxn as mechanistic support that mitochondrial iron overload is pathogenic, not as the main discovery target."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 75,
+    "supported": 66,
+    "unsupported": 1,
+    "uncertain": 8,
+    "total_corrections": 1
+  }
+}

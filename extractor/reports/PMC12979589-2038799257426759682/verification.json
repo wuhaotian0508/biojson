@@ -1,0 +1,826 @@
+{
+  "file": "MinerU_markdown_PMC12979589_2038799257426759682",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12979589_2038799257426759682.md",
+  "timestamp": "2026-03-31T22:06:00.797954",
+  "genes": [
+    {
+      "gene_name": "ras1",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ras1 is described in Pseudomonas soli 0617-T307 BGC9/ras1-6."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The strain is identified as Pseudomonas soli."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Genetic analyses were performed in P. soli 0617-T307 mutants/complemented strains."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is the same Pseudomonas soli strain."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "ras1 is stated to encode hydroxymethylglutaryl-CoA synthase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number 2.3.3.10 is given in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "Function as hydroxymethylglutaryl-CoA synthase is stated, but the exact phrase 'Hydroxymethylglutaryl-CoA synthase family' is not used."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ras1-6 are explicitly designated as RAA biosynthesis genes."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion/Fig. 4g indicate ras1 acts downstream of RAB formation in conversion toward RAA."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "RAB does not rescue Δras1 and text places Ras1 after RAB generation."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "Paper infers ras1 acts after RAB, but does not directly identify its exact substrate as RAB or a specific RAB-derived intermediate."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "No direct product of Ras1 is experimentally identified; only downstream role toward RAA is proposed."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states Ras1 likely facilitates structural modifications to the RAB scaffold during downstream steps."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Δras1 completely abolishes RAA production, showing direct requirement for target product formation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Essentiality is supported by complete loss of RAA in Δras1; no rate-limiting claim is made."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The pathway product studied is RejuAgro A (RAA)."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "RAA is described as an antimicrobial and a secondary metabolite/gene cluster product."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "RAA was isolated from culture supernatant extracts/fermentation broth extracts."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "RAA is shown to have broad-spectrum antimicrobial activity against fire blight pathogen and other plant pathogens."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The work used fermentation in YM/YME and deletion/complementation analyses."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutation of ras1 led to complete abolishment of RAA production."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by single-gene deletion, complementation, HPLC, LC-MS, and antimicrobial assay against E. amylovora."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The genes ras2-ras6 act in the same pathway, but direct physical/protein interactions are not shown."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strain identifier 0617-T307 is explicitly used."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The source strain is explicitly P. soli 0617-T307."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Fig. 3a marks a putative promoter region for biosynthesis genes, but no direct evidence ties experimental expression specifically to a 'native operon promoter' formulation."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Genome data were deposited as GenBank CP151184.1 and BioProject PRJNA1094439."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points are consistent with Results, including requirement in BGC9, loss of RAA/antimicrobial activity in Δras1, and restored production by complementation with downstream role inferred from RAB experiments."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states the biosynthetic mechanism is a working model based on deletion and bioinformatic predictions and lacks direct enzymatic characterization."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible application inference, but it is not explicitly stated or tested in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.3.3.10",
+          "new_value": "NA",
+          "reason": "No EC number 2.3.3.10 is given in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 23,
+        "unsupported": 1,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "ras2",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ras2 is part of the ras1-6 cluster in Pseudomonas soli 0617-T307."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The strain is identified as Pseudomonas soli."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ras2 deletion and complementation were tested in P. soli 0617-T307."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental strain is Pseudomonas soli."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "ras2 is stated to encode enoyl-CoA hydratase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "EC number 4.2.1.17 does not appear in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The encoded activity is given, but the exact 'enoyl-CoA hydratase family' wording is not explicitly used."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ras2 is one of the designated RAA biosynthesis genes."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Fig. 4g place Ras2 in the initial RAB-forming stage with Ras5."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "ras2 functions upstream of RAB/RAA because Δras2Δras5 abolishes RAB and RAA, and RAB feeding rescues partially."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The proposed mechanism states Ras2 and Ras5 catalyze modification of acyl-CoA substrates."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper proposes Ras2 and Ras5 generate RAB as an intermediate."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This paraphrases the proposed mechanism that Ras2 participates in initial acyl-CoA substrate modification to generate RAB."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "ras2 contributes to formation of the precursor/intermediate for RAA."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports contributory/redundant function with Ras5 and does not establish rate limitation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "RAA is the final product under study."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "RAA is an antimicrobial secondary metabolite."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "RAA was purified from culture supernatant/fermentation extracts."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "RAA is shown to have broad-spectrum antimicrobial activity against plant bacterial and fungal pathogens."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by fermentation in YM/YME, deletion analysis, double deletion, and RAB feeding."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Single Δras2 partially reduced RAA production; Δras2Δras5 abolished RAA and RAB."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by single/double deletion mutants, complementation, HPLC, LC-MS, and RAB feeding experiments."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "ras1/3/4/5/6 are pathway partners, but direct protein-protein interaction evidence is absent."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "0617-T307 is explicitly the tested strain."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "0617-T307 is explicitly the source strain."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "A putative promoter region is shown, but the exact promoter use for ras2 experimental expression is not directly demonstrated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "GenBank CP151184.1 and BioProject PRJNA1094439 are explicitly given."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All points match the Results: partial Δras2 effect, complete loss in Δras2Δras5, and partial rescue by RAB feeding indicating upstream role."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states Ras5 has the more dominant role compared with Ras2."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Engineering utility is plausible but not explicitly stated or tested."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "4.2.1.17",
+          "new_value": "NA",
+          "reason": "EC number 4.2.1.17 does not appear in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "ras3",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ras3 is part of the ras cluster in P. soli 0617-T307."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The organism is identified as Pseudomonas soli."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ras3 mutant/complementation analyses were performed in P. soli 0617-T307."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental species is Pseudomonas soli."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "ras3 is stated to encode asparagine synthase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact family/domain phrase is not explicitly given, only the enzyme annotation."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ras3 is explicitly one of the RAA biosynthesis genes."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "RAB feeding does not rescue Δras3, indicating a downstream role after RAB formation."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene functions downstream of RAB formation based on rescue logic."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "A specific RAB-derived intermediate is not directly identified experimentally."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "No amidated intermediate is directly detected in the study."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper proposes Ras3 may mediate additional nitrogen incorporation or structural rearrangements."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Δras3 abolishes RAA production, showing direct requirement for target product formation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Essentiality is supported; no rate-limiting claim is made."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "RAA is the terminal product studied."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "RAA is described as an antimicrobial secondary metabolite."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "RAA is obtained from culture supernatant/fermentation extracts."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Broad-spectrum antimicrobial activity of RAA is documented."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion/complementation and RAB feeding were tested under YM/YME fermentation conditions."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutation of ras3 completely abolished RAA production; RAB feeding did not restore it."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by deletion mutant, complementation, HPLC, LC-MS, and RAB feeding experiments."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pathway association with ras1/2/4/5/6 is shown, but direct protein interaction is not."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strain 0617-T307 is explicit."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The strain 0617-T307 is explicit."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Only a putative promoter region is shown; specific promoter usage is not functionally demonstrated."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Genome accessions CP151184.1 and PRJNA1094439 are reported."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements match the Results: essentiality, loss of RAA in Δras3, and no rescue by exogenous RAB."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes functional assignments are based on annotation/genetics, not direct enzyme biochemistry."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Useful engineering implication is not directly discussed in the paper."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "ras4",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ras4 is identified in the P. soli 0617-T307 ras1-6 cluster."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is Pseudomonas soli."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ras4 deletion/complementation was tested in P. soli 0617-T307."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Pseudomonas soli."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "ras4 is stated to encode an NAD(P)/FAD-dependent oxidoreductase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact family/domain label beyond the enzyme annotation is not directly provided."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ras4 is among the designated RAA biosynthesis genes."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places Ras4 downstream of RAB in proposed pathway progression."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "RAB cannot rescue Δras4, consistent with downstream role."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "A specific RAB-derived substrate is not experimentally characterized."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "No redox-modified intermediate is directly measured."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states Ras4 appears to catalyze redox reactions necessary for pathway progression."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Δras4 abolishes RAA production, indicating direct requirement for target product formation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Essentiality is demonstrated; no rate-limiting evidence is given."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "RAA is the final product under study."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "RAA is an antimicrobial secondary metabolite."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "RAA is isolated from culture/fermentation extracts."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Broad-spectrum antimicrobial activity of RAA is shown."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Deletion/complementation and RAB feeding analyses were done under fermentation conditions."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Δras4 completely abolished RAA production and RAB feeding did not restore it."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by deletion, complementation, HPLC, LC-MS, and RAB feeding data."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Same-pathway association exists, but direct physical interactions are not demonstrated."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "0617-T307 is explicit."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "0617-T307 is explicit."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "A putative promoter is shown, but direct promoter characterization is lacking."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Genome accessions CP151184.1 and PRJNA1094439 are explicitly reported."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed summary points align with the Results and proposed pathway logic."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states the specific redox chemistry remains unresolved/working model only."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Engineering application is not directly stated in the paper."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 23,
+        "unsupported": 0,
+        "uncertain": 6
+      }
+    },
+    {
+      "gene_name": "ras5",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ras5 belongs to the ras cluster in P. soli 0617-T307."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source organism is Pseudomonas soli."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ras5 was genetically tested in P. soli 0617-T307."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental species is Pseudomonas soli."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "ras5 is stated to encode acyl-CoA dehydrogenase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "EC number 1.3.8.- is not stated in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The exact 'acyl-CoA dehydrogenase family' wording is not explicitly given."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ras5 is one of the designated RAA biosynthesis genes."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/Fig. 4g place Ras5 in the initial RAB-forming step with Ras2."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Δras2Δras5 abolishes RAB and RAA; RAB feeding partially rescues, indicating upstream role."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The proposed pathway states Ras2 and Ras5 modify acyl-CoA substrates."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The proposed mechanism identifies RAB as the intermediate generated by Ras2/Ras5 action."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the proposed early acyl-CoA oxidation/modification role toward RAB formation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "ras5 contributes to precursor formation needed for RAA biosynthesis."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indicates Ras5 has a more dominant role than Ras2, but does not establish rate limitation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "RAA is the terminal metabolite studied."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "RAA is an antimicrobial secondary metabolite."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "RAA was isolated from culture supernatant/fermentation broth extract."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "RAA shows broad-spectrum antimicrobial activity against plant pathogens."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by fermentation, deletion, double deletion, complementation, and RAB feeding analyses."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Δras5 partially reduced RAA more strongly than Δras2, and Δras2Δras5 abolished RAA and RAB."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by single/double deletions, complementation, HPLC, LC-MS, and RAB feeding."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Other ras proteins are pathway partners, but direct protein-protein interactions are not shown."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "0617-T307 is explicitly the tested strain."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "0617-T307 is explicitly the source strain."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Putative promoter region is shown, but direct functional promoter assignment is not established."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper reports genome accessions CP151184.1 and PRJNA1094439."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements match the Results: early role, stronger Δras5 effect than Δras2, complete abolition in double mutant, and partial rescue by RAB."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes Ras5 is more dominant than Ras2 in overlapping function."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Optimization priority in engineering is not directly discussed in the paper."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.3.8.-",
+          "new_value": "NA",
+          "reason": "EC number 1.3.8.- is not stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 1,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "ras6",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ras6 is part of the ras1-6 cluster in P. soli 0617-T307."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is identified as Pseudomonas soli."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ras6 deletion/complementation analyses were done in P. soli 0617-T307."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The experimental species is Pseudomonas soli."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "ras6 is stated to encode a PaaI family thioesterase."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "EC number 3.1.2.- is not given in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly annotates ras6 as a PaaI family thioesterase."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "ras6 is explicitly one of the RAA biosynthesis genes."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The proposed mechanism/Fig. 4g places Ras6 in terminal processing/release."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "RAB feeding cannot rescue Δras6, and the model places Ras6 late/terminal in the pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "A late thioester-linked intermediate is predicted but not directly identified."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper predicts release of RAA or immediate precursor, but does not directly prove the product of Ras6."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper predicts Ras6 performs the final hydrolytic step to release RAA or its immediate precursor."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Δras6 abolishes RAA production, showing direct requirement for target product formation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Essentiality is supported; no rate-limiting evidence is presented."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "RAA is the final metabolite under study."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "RAA is an antimicrobial secondary metabolite."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "RAA is isolated from culture supernatant/fermentation extract."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "RAA has broad-spectrum antimicrobial activity against plant pathogens."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by fermentation, deletion/complementation, and RAB feeding analyses."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Mutation of ras6 completely abolished RAA production and was not rescued by RAB feeding."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by deletion mutant, complementation, HPLC, LC-MS, and RAB feeding."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Other ras genes act in same pathway, but direct protein interactions are not shown."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "0617-T307 is explicit."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "0617-T307 is explicit."
+        },
+        "Applied_Promoters": {
+          "verdict": "UNCERTAIN",
+          "reason": "Only a putative promoter region is depicted; direct promoter characterization is lacking."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Genome accessions CP151184.1 and PRJNA1094439 are given."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These summary statements align with the Results and proposed pathway model."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly notes terminal hydrolysis/release role is predicted rather than biochemically demonstrated."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Engineering inclusion is a reasonable inference but not directly stated/tested."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "3.1.2.-",
+          "new_value": "NA",
+          "reason": "EC number 3.1.2.- is not given in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 1,
+        "uncertain": 5
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 178,
+    "supported": 143,
+    "unsupported": 4,
+    "uncertain": 31,
+    "total_corrections": 4
+  }
+}

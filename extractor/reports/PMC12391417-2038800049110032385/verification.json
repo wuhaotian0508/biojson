@@ -1,0 +1,302 @@
+{
+  "file": "MinerU_markdown_PMC12391417_2038800049110032385",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12391417_2038800049110032385.md",
+  "timestamp": "2026-03-31T21:51:40.548174",
+  "genes": [
+    {
+      "gene_name": "FAH1",
+      "category": "Pathway",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states fah1-2 has defective ferulate 5-hydroxylase (F5H) and describes the gene product function; F5H is a cytochrome P450 monooxygenase by accepted identity, though 'cytochrome P450 monooxygenase' is not spelled out in the text. The ferulate 5-hydroxylase designation is explicit."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated as 'ferulate 5-hydroxylase (F5H)' in the Introduction/Results."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number appears in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "FAH1/F5H is discussed in the context of lignin biosynthesis/phenylpropanoid pathway and S-lignin formation."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says F5H hydroxylates G-lignin precursors to form S-monolignols, placing it in the S-lignin branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper describes FAH1 as converting G-precursors toward S-monolignols, but does not explicitly label this as a 'branch point'."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated: F5H 'hydroxylates coniferyl alcohol/coniferaldehyde' at C-5."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly inferable from the text: hydroxylation of coniferyl alcohol/coniferaldehyde at C-5 forms S-monolignol precursors."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Essentially quoted from the paper: F5H hydroxylates coniferyl alcohol/coniferaldehyde at the C-5 position to form S-monolignols."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by the described enzymatic role supplying precursors for S-lignin biosynthesis."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows FAH1 is important for S-lignin formation, but does not explicitly call it rate-limiting or a key control step."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show fah1 is depleted of S units, has reduced lignin-carbohydrate contacts, and slightly reduced tensile strength/modulus; the strengthening role is inferred from these data and discussion."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant directly affects S-lignin biosynthesis in the paper."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Lignin is clearly treated as a phenolic polymer in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states lignin enhances secondary wall mechanical strength and hydrophobicity; it further argues S-lignin stabilizes lignin-carbohydrate interfaces."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism is Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state 'Arabidopsis thaliana'."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify wild-type Columbia-0/Col-0 background."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant analyzed is Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify Arabidopsis thaliana."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods list 'fah1-2 mutant' in Columbia-0 background."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported in aggregate: solid-state NMR, solution NMR, Mäule staining, mechanical testing, and Zenodo deposition are all stated. 'Omics' is not a term used by the paper, but the listed data types are present."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The study explicitly examines stem maturation gradients, basal vs upper segments, under hydroponic growth conditions."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states low-S fah1 had weakest lignin-carbohydrate cross-peak intensities and slightly reduced tensile strength/modulus, without significant differences statistically."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses implications for engineering biomass composition and structure, but this specific application claim about increasing S-lignin proportion is extrapolative rather than directly stated/tested."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Mäule staining shows S-lignin in interfascicular fiber cells/secondary cell walls of inflorescence stem."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summarized points are consistent with Results: FAH1 required for S-lignin biosynthesis, fah1 lacks detectable S monomers and is G-dominant, and loss reduces contacts with slight mechanical weakening."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods were indeed used on fah1-2 in the Results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Accurately reflects the paper's approach: FAH1 function is inferred via mutant phenotype rather than direct enzymology in this study."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.-.-",
+          "new_value": "NA",
+          "reason": "No EC number appears in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "C4H/REF3",
+      "category": "Pathway",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies ref3-3 as carrying a mutation in cinnamate 4-hydroxylase (C4H); however 'cytochrome P450 monooxygenase' is not explicitly written in this paper. The core identity as C4H is supported."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated as cinnamate 4-hydroxylase (C4H)."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is given in the paper."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "C4H/ref3 is discussed as affecting lignin biosynthesis through the phenylpropanoid pathway."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It is consistent with the paper that C4H acts generally in lignin biosynthesis rather than the S-specific branch, though the exact phrase 'general monolignol biosynthetic entry step' is not used."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Directly inferable because C4H is presented as affecting overall lignin content upstream of downstream lignin composition differences."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper never states cinnamate as the substrate."
+        },
+        "Primary_Product": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper never states p-coumarate as the product."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper identifies the enzyme as C4H and the mutant phenotype, but does not describe the cinnamate-to-p-coumarate reaction."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported at a general level: ref3/C4H affects lignin precursor supply and overall lignin content."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The value given is 'Not established in this paper,' which accurately matches the paper since no such claim is made."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly show ref3-3 has reduced overall lignin content, increased S/G ratio, strong lignin-carbohydrate packing, and near-WT mechanical behavior."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The studied end product affected is lignin."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Lignin is treated as a phenolic polymer throughout."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states lignin provides wall strengthening, hydrophobicity, and structural properties."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The system studied is Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify Columbia-0/Col-0."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant is Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods specify Arabidopsis thaliana."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly mention ref3-3 mutant in Columbia-0 background."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported in aggregate: solid-state NMR, solution NMR, staining, mechanical testing, and Zenodo raw solid-state NMR deposition are all reported."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The study analyzes stem maturation/basal segments under standard hydroponic growth."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly reports strongly reduced lignin content in ref3 but no major mechanical penalty in tensile tests."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a plausible implication, but the specific optimization claim is an extrapolation beyond direct Results."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Mäule staining in ref3 shows G-lignin mainly in vessels and S-lignin more prominent in fibers within stem secondary cell walls."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points match the Results: upstream role inferred from C4H identity, mutation lowers lignin content, and strong packing/high S/G underlies near-WT mechanics."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods were used for ref3-3 in the Results."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Accurately summarizes how the paper uses ref3-3 to compare lignin amount versus S/G ratio effects on wall architecture."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "1.14.14.91",
+          "new_value": "NA",
+          "reason": "No EC number is given in the paper."
+        },
+        {
+          "field": "Primary_Substrate",
+          "old_value": "Cinnamate",
+          "new_value": "NA",
+          "reason": "The paper never states cinnamate as the substrate."
+        },
+        {
+          "field": "Primary_Product",
+          "old_value": "p-Coumarate",
+          "new_value": "NA",
+          "reason": "The paper never states p-coumarate as the product."
+        },
+        {
+          "field": "Catalyzed_Reaction_Description",
+          "old_value": "Hydroxylates cinnamate to p-coumarate in the early phenylpropanoid pathway, affecting total lignin production and monolignol composition",
+          "new_value": "NA",
+          "reason": "The paper identifies the enzyme as C4H and the mutant phenotype, but does not describe the cinnamate-to-p-coumarate reaction."
+        }
+      ],
+      "stats": {
+        "supported": 24,
+        "unsupported": 4,
+        "uncertain": 1
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 58,
+    "supported": 49,
+    "unsupported": 5,
+    "uncertain": 4,
+    "total_corrections": 5
+  }
+}

@@ -1,0 +1,360 @@
+{
+  "file": "MinerU_markdown_PMC12873522_2038799405867372555",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC12873522_2038799405867372555.md",
+  "timestamp": "2026-03-31T22:01:41.115964",
+  "genes": [
+    {
+      "gene_name": "ABA3",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Table 1 explicitly lists ABA3 as At1g16540."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper explicitly states ABA3 is a molybdenum cofactor sulfurase and mentions a NifS-like domain plus pyridoxal phosphate cofactor binding, but does not explicitly use the exact phrase 'pyridoxal phosphate-dependent sulfurase' as a family/domain label."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study is on Arabidopsis; plant material and all experiments use Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The plant material section explicitly states Arabidopsis thaliana (L.) Heynh."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experimental validation was performed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species throughout the experiments is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Col-0, Fue-2, Vis-0 are explicitly mentioned, but the JSON says 'Ace-0/Ace-3'; the text inconsistently mentions Ace-0 in Discussion and 'Ace-3' in Results. Because the exact combined value is not cleanly supported, this is uncertain."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 and Iberian natural accessions are explicitly used."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "ABA3 is explicitly described as essential for activation of aldehyde oxidases such as AAO3, which catalyzes the final step in abscisic acid biosynthesis; the study links ABA3 to ABA."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "ABA is explicitly treated as a plant hormone in the paper."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper shows ABA signaling in roots/seedlings and discusses elevated ABA levels from prior work, but does not directly measure ABA accumulation site here. 'Roots/seedlings' is plausible but not explicitly demonstrated for ABA accumulation in this study."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly discusses ABA as mediating abiotic stress responses, inhibiting primary root growth at higher concentrations, and promoting seed dormancy."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "qPCR in Fig. 3a shows ABA3 is induced by short-term IAM treatment in Col-0 seedlings; the study also centers on root/seedling responses."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 3a and 3c support IAM-induced ABA3 expression in Col-0 and weak/absent induction in IAM-insensitive accessions carrying the alternative ABA3 allele."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all directly used for ABA3: GWAS, allele/sequence analysis, qRT-PCR, structural modeling, aba3-1 mutant phenotyping, ABA signaling reporter assays in the study context, and root growth assays."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Exogenous IAM treatments of 10–20 µM and in vitro seedling assays are explicit; abiotic stress context is discussed and supported partly by supplementary/public transcriptomic context."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show aba3 mutant has strongly reduced IAM-triggered root growth inhibition and the paper concludes IAM-induced ABA biosynthesis/signaling contributes to the phenotype."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point is supported by Results: GWAS candidate identification, IAM induction of ABA3, aba3-1 reduced inhibition (~12% vs ~30%), and weak/absent induction in insensitive accessions."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses possible implications for seed dormancy and adaptation, but does not experimentally test tradeoffs caused by altered ABA3 regulation in this study."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is a forward-looking application statement and is not directly tested in the paper."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states ABA3 acts via activation of aldehyde oxidases such as AAO3, reports missense substitutions L102I/A150G/L267V with predicted reduced stability, and concludes altered transcriptional regulation is the more reasonable cause of IAM insensitivity."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "AAO3 is explicitly stated as an aldehyde oxidase activated by ABA3 and catalyzing the final step in ABA biosynthesis."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "GWAS uses 1001 Genomes, GWAPP, and easyGWAS; comparative transcriptomics with GEO GSE39384 is explicitly described."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 18,
+        "unsupported": 0,
+        "uncertain": 5
+      }
+    },
+    {
+      "gene_name": "ABI5",
+      "category": "Common",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state that ABI5 is a bZIP transcription factor."
+        },
+        "Regulator_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "ABI5 is treated as an ABA signaling mutant, but the paper does not explicitly classify ABI5 as a transcription factor."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ABI5 mutant used is in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Validation experiments were in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant background is Col-0."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "abi5-7 shares the Col-0 background."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is used in the context of ABA signaling, and ABA is the relevant final hormone product linked to the phenotype."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "ABA is explicitly a plant hormone."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The study does not directly measure ABA accumulation in roots/seedlings for ABI5."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "ABA function in abiotic stress signaling and growth regulation is described in the paper."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No nucleus localization for ABI5 is stated in the paper."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports ABI5 acting in ABA signaling, so 'ABA signaling-dependent' regulation of the phenotype is supported, though not mechanistically dissected."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "ABI5 is linked to ABA signaling output controlling IAM-related root growth inhibition in the Results."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "ABA is explicit, and IAM is linked indirectly through induction of ABA biosynthesis/signaling in the study."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "abi5-7 strongly reduces IAM-induced root growth inhibition, supporting that this ABA signaling component is required for the IAM-induced ABA response affecting the phenotype."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "abi5-7 knockout phenotyping with root growth assay is explicitly performed."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of ABI5 reduces IAM-triggered root growth inhibition in Fig. 3b."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements accurately summarize the direct Results for abi5-7."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pleiotropic ABA-related effects are plausible but not directly tested here."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is speculative and not experimentally supported by the paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Exogenous IAM treatment under in vitro conditions is exactly the experimental context."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed uses abi5-7 as reverse-genetic support for ABA signaling involvement and does not investigate direct ABI5 targets."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "bZIP transcription factor",
+          "new_value": "NA",
+          "reason": "The paper does not state that ABI5 is a bZIP transcription factor."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No nucleus localization for ABI5 is stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 18,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    },
+    {
+      "gene_name": "ABI5",
+      "category": "Regulation",
+      "verification": {
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not state that ABI5 is a bZIP transcription factor."
+        },
+        "Regulator_Type": {
+          "verdict": "UNCERTAIN",
+          "reason": "ABI5 is treated as an ABA signaling mutant, but the paper does not explicitly classify ABI5 as a transcription factor."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "ABI5 mutant used is in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Validation experiments were in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The mutant background is Col-0."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "abi5-7 shares the Col-0 background."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is used in the context of ABA signaling, and ABA is the relevant final hormone product linked to the phenotype."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "ABA is explicitly a plant hormone."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The study does not directly measure ABA accumulation in roots/seedlings for ABI5."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "ABA function in abiotic stress signaling and growth regulation is described in the paper."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No nucleus localization for ABI5 is stated in the paper."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports ABI5 acting in ABA signaling, so 'ABA signaling-dependent' regulation of the phenotype is supported, though not mechanistically dissected."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "ABI5 is linked to ABA signaling output controlling IAM-related root growth inhibition in the Results."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "ABA is explicit, and IAM is linked indirectly through induction of ABA biosynthesis/signaling in the study."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "abi5-7 strongly reduces IAM-induced root growth inhibition, supporting that this ABA signaling component is required for the IAM-induced ABA response affecting the phenotype."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "abi5-7 knockout phenotyping with root growth assay is explicitly performed."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss of ABI5 reduces IAM-triggered root growth inhibition in Fig. 3b."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These statements accurately summarize the direct Results for abi5-7."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "Pleiotropic ABA-related effects are plausible but not directly tested here."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "This is speculative and not experimentally supported by the paper."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Exogenous IAM treatment under in vitro conditions is exactly the experimental context."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper indeed uses abi5-7 as reverse-genetic support for ABA signaling involvement and does not investigate direct ABI5 targets."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "bZIP transcription factor",
+          "new_value": "NA",
+          "reason": "The paper does not state that ABI5 is a bZIP transcription factor."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No nucleus localization for ABI5 is stated in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 18,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 71,
+    "supported": 54,
+    "unsupported": 4,
+    "uncertain": 13,
+    "total_corrections": 4
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "file": "MinerU_markdown_PMC4283981_2038798937007104016",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC4283981_2038798937007104016.md",
+  "timestamp": "2026-03-31T22:08:27.119381",
+  "genes": [
+    {
+      "gene_name": "glgA",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states glycogen synthase glgA was amplified from genomic DNA of A. tumefaciens strain GV3101."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly given as Agrobacterium tumefaciens."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated as strain GV3101."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The transformed plants are Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study organism throughout is Arabidopsis thaliana, including the transformed ss3ss4 plants."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "The gene was introduced into ss3ss4 double mutant plants, but 'Col-0 derived' is not explicitly stated in the paper text, though likely inferable from mutant background references."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly describes glgA as glycogen synthase from A. tumefaciens."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "The construct included a chloroplast transit peptide and confocal microscopy confirmed targeting to chloroplasts."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The Results explicitly report increased starch and altered starch granule formation in GS-expressing lines."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Starch is a polysaccharide; this is directly inferable from the paper's focus on starch granules."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper concerns transitory starch in leaves, implying transient carbon storage, but this exact functional phrasing is not directly stated for glgA."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Starch granules were analyzed in leaves and specifically in plastids/chloroplasts."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show GS expression in ss3ss4 increased growth and starch, reduced ADPglucose, and only partially restored granule formation with abnormal distribution, size, and shape."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point is supported: chloroplast targeting and activity were confirmed; starch and growth increased; ADPglucose decreased strongly; granules remained abnormal and partial rescue only was concluded."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods appear in Results/Methods: transgenic chloroplast-targeted expression, confocal targeting, native PAGE activity staining, metabolite/starch assays, and microscopy."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper describes the binary vector used for glgA transfer but does not specify a promoter for this construct; the JSON correctly states it was not explicitly stated."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The transgene was expressed in leaves of ss3ss4 plants, as shown by YFP fluorescence and leaf extract activity assays."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant experiments were conducted under 12 h light/12 h dark conditions, explicitly stated for ss3ss4/GS plants."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Partial rescue of starch initiation defects is shown, but the explicit application claim as an engineering tool is an extrapolation beyond the paper's Results."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Incomplete complementation and abnormal granule morphology/distribution are directly shown and discussed."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses bacterial glycogen synthase to test whether extra glucan-synthesizing/self-priming capacity can bypass SS4 deficiency; this supports the statement that it serves as a bypass probe rather than a native plant factor."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 18,
+        "unsupported": 0,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "SS4",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The accession At4g18240 does not appear in the paper text provided."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SS4 is studied in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The species is explicitly Arabidopsis thaliana."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper uses multiple Arabidopsis backgrounds/alleles; Col-0 is associated with ss4-3 and some lines, but 'SS4 source variety = Col-0' is not explicitly established for the gene itself."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments were performed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Many experiments involve Col-derived material, but not all SS4 analyses are confined exclusively to Col-0 in the provided text."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "SS4 is explicitly the SS4 isoform of starch synthase; Discussion also states it alone possesses coiled-coil domains in the N-terminal noncatalytic part."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The title and text explicitly name it starch synthase 4."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number is provided in the paper text."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The entire paper places SS4 in leaf transitory starch synthesis/biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Discussion strongly support a role in starch granule initiation/formation; amylopectin-related glucan synthesis is discussed for granule formation."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports an essential granule-initiation-associated role, but the wording 'committed step' is not explicitly stated."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "ADPglucose is explicitly described as the starch synthase substrate and accumulates massively in ss4 mutants."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports formation of starch glucan chains/a primer leading to starch granules, though the exact molecular product remains partly inferred."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that SS4 is a starch synthase using ADPglucose and is required for formation of primer/new granules; transfer to alpha-1,4-glucan chains is the known starch synthase activity and is consistent with the text."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "SS4 is directly linked to starch granule formation and starch accumulation."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Starch is a polysaccharide."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links leaf starch to nighttime metabolism/growth and root cap starch to gravitropism; this supports the stated function."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Leaf chloroplasts and root cap plastids/columella cells are explicitly discussed as starch accumulation sites affected by ss4."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed effects are directly supported by Results: delayed/severely reduced granule initiation, low starch in immature leaves, rounded granules in mature leaves, and massive ADPglucose accumulation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each numbered point is directly supported by the Results and Discussion synthesis, including the RNAi and heterozygote findings."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed approaches are explicitly used in the paper: mutant analysis, 35S::SS4 complementation, inducible RNAi, metabolite profiling, microscopy, and genetic interactions with sex1 and arc mutants."
+        },
+        "Subcellular_Localization": {
+          "verdict": "SUPPORTED",
+          "reason": "SS4 function is analyzed in chloroplast starch granule formation, and chloroplast localization is directly implied by chloroplast granule phenotype throughout."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper concludes SS4 is essential for granule initiation/coordination but not limiting, supported by heterozygote and low-expression complementation analyses."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly links SS4 to formation of the primer/new starch granules leading to the terminal product starch."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "35S promoter is explicitly stated for SS4 cDNA complementation, and dexamethasone-inducible pOp-Off2(hyg) system is explicitly described for RNAi."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support that SS4 is specifically required during immature leaf expansion and also influences root cap starch formation."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Leaf developmental stage, dexamethasone treatment, and 12 h light/12 h dark growth conditions are all explicitly described."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Potential utility for engineering starch granule number/morphology is a reasonable extrapolation, but it is not directly tested or claimed as an application in the Results."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Reduced growth, reduced chlorophyll, altered starch turnover, impaired root gravitropism, high ADPglucose, and abnormal granules are all supported."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The Discussion explicitly proposes that SS4 may provide a primer or nucleation center and notes its distinctive coiled-coil domains; it also states the mechanism remains unresolved."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Gene_Accession_Number",
+          "old_value": "At4g18240",
+          "new_value": "NA",
+          "reason": "The accession At4g18240 does not appear in the paper text provided."
+        },
+        {
+          "field": "EC_Number",
+          "old_value": "2.4.1.21",
+          "new_value": "NA",
+          "reason": "No EC number is provided in the paper text."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 2,
+        "uncertain": 4
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 53,
+    "supported": 44,
+    "unsupported": 2,
+    "uncertain": 7,
+    "total_corrections": 2
+  }
+}

@@ -1,0 +1,580 @@
+{
+  "file": "MinerU_markdown_PMC6671987_2038795158920658949",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC6671987_2038795158920658949.md",
+  "timestamp": "2026-03-31T22:24:01.688058",
+  "genes": [
+    {
+      "gene_name": "EPCOT3",
+      "category": "Common",
+      "verification": {
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "EPCOT3 is described as an A. thaliana-specific upstream element/enhancer of CYP82C2; Arabidopsis is supported."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly states EPCOT3 is specific to Arabidopsis thaliana CYP82C2 upstream sequence."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "Most functional work uses A. thaliana Col-0 background, but EPCOT3 itself is discussed at species level; Col-0 is not explicitly assigned as the EPCOT3 variety in Results."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "EPCOT3 is identified in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "EPCOT3 is explicitly an A. thaliana-specific sequence upstream of CYP82C2."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "EPCOT3 is proposed to enable CYP82C2 activation, leading to synthesis of 4OH-ICN."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "4OH-ICN is presented as a tryptophan-derived specialized defense metabolite/phytoalexin-like defense metabolite."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links 4OH-ICN with pathogen defense and fitness-promoting antibacterial defense."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This summarizes the main conclusion: EPCOT3 acts as a CYP82C2 enhancer mediating WRKY33-dependent CYP82C2 expression and enabling 4OH-ICN biosynthesis and defense."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Results include comparative promoter analysis, ChIP-PCR, transactivation assays in N. benthamiana and Arabidopsis protoplasts, and epigenetic signature analysis."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "EPCOT3 is described as present upstream of CYP82C2 in A. thaliana and functioning in pathogen-responsive WRKY33-mediated activation."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "EPCOT3 is explicitly identified as a TE-derived LINE retrotransposon exapted as an enhancer."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "EPCOT3 is described as an A. thaliana-specific upstream element of CYP82C2."
+        },
+        "Source_Species_Variety": {
+          "verdict": "UNCERTAIN",
+          "reason": "As with applied variety, A. thaliana is supported, but explicit assignment of EPCOT3 to Col-0 variety is not clearly stated in Results."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Metabolite measurements for 4OH-ICN were performed in seedlings under pathogen challenge; defense assays were in leaves."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper does not experimentally test engineering application value; this is speculative extrapolation."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 5b and text state EPCOT3 is enriched for H3K4me2 and lacks H3K27me3, consistent with an active enhancer/open chromatin."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper tests the native CYP82C2 promoter containing EPCOT3 and shows this locus is sufficient for WRKY33 transactivation."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Comparative genomics/bioinformatics and published epigenomic datasets are explicitly used."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY33 binding to the EPCOT3-containing W4 region is directly tested by ChIP-PCR."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states EPCOT3 is an A. thaliana-specific TE exaptation encompassing W4 and that the A. thaliana CYP82C2 promoter is sufficient for WRKY33 transactivation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes the Results and Discussion conclusions about EPCOT3."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Could be used as a pathogen-inducible cis-regulatory module to engineer species-specific defense metabolite production by rewiring pathway genes into WRKY33 regulon",
+          "new_value": "NA",
+          "reason": "The paper does not experimentally test engineering application value; this is speculative extrapolation."
+        }
+      ],
+      "stats": {
+        "supported": 19,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "CYP82C2",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82C2 is described as a P450 monooxygenase in the text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82C2 function is studied in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "A. thaliana is the main species used for CYP82C2 analyses."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 is the principal A. thaliana accession/background used, alongside wrky33 derived from Col-0."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82C2 characterized here is from Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene analyzed is Arabidopsis thaliana CYP82C2."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The A. thaliana CYP82C2 locus used in assays corresponds to the Col-0 source/background."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82C2 is stated to catalyze the last step in 4OH-ICN biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "4OH-ICN is a specialized Trp-derived defense metabolite/phytoalexin-type metabolite."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "4OH-ICN is linked in the paper to antibacterial/pathogen defense and fitness promotion."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states pathogen-induced CYP82C2 expression correlates with 4OH-ICN production in A. thaliana, and cites cyp82C2 mutant susceptibility from prior work while comparing susceptibility here."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These methods are all present, though the mutant requirement for 4OH-ICN is partly from prior work cited rather than newly established here."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82C2 is a CYP82 family cytochrome P450."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "4OH-ICN and defense phenotypes are measured in seedlings and leaves under pathogen challenge."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Psta/ETI-like pathogen responses are the main elicitors used for CYP82C2 induction and 4OH-ICN production."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82C2 is explicitly placed in the tryptophan-derived 4OH-ICN pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states CYP82C2 hydroxylates ICN to form 4OH-ICN."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated as 4OH-ICN."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly says CYP82C2 hydroxylates ICN to form 4OH-ICN."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82C2 belongs to the 4OH-ICN branch of Trp-derived defense metabolism."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is the terminal determinant for 4OH-ICN formation, but the paper does not explicitly call it rate-limiting."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82C2 directly forms the target product from ICN."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly identifies it as catalyzing the last step in 4OH-ICN biosynthesis."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82C2 is upregulated by Psta in A. thaliana and unchanged under iron deficiency."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper compares A. thaliana and A. lyrata and states CYP82C2 is induced in A. thaliana but unchanged in A. lyrata."
+        },
+        "Gene_Accession_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The specific accession At4g31940 does not appear in the provided paper text."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "The native CYP82C2 promoter containing EPCOT3 is central to the study."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Comparative genomics/synteny and metabolite profiling are directly presented; co-expression/transcript data are referenced."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY33 directly binds upstream of CYP82C2."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports duplication from CYP82C4, purifying selection, and regulatory neofunctionalization rather than protein functional divergence."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Engineering value is not directly tested in the paper and is speculative."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This is an accurate summary of the Results for CYP82C2."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Gene_Accession_Number",
+          "old_value": "At4g31940",
+          "new_value": "NA",
+          "reason": "The specific accession At4g31940 does not appear in the provided paper text."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Useful target for engineering pathogen-inducible 4OH-ICN production, especially with cognate enhancer/regulator modules such as EPCOT3 and WRKY33",
+          "new_value": "NA",
+          "reason": "Engineering value is not directly tested in the paper and is speculative."
+        }
+      ],
+      "stats": {
+        "supported": 29,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "FOX1",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names FOX1/AtBBE3 as a flavin-dependent oxidase."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "FOX1 is studied in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The analyses are in Arabidopsis thaliana."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Main analyses are in Col-0 and derived lines."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "FOX1 discussed is from Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is Arabidopsis thaliana FOX1."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Context is Col-0-derived material."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "FOX1 is part of the 4OH-ICN pathway leading to 4OH-ICN."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "4OH-ICN is a specialized defense metabolite."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "4OH-ICN is linked to pathogen defense; FOX1 participates in its biosynthesis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows WRKY33 directly activates FOX1 expression during pathogen response by qPCR and ChIP-PCR."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "These are the exact methods used for FOX1 in Fig. 3."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "FOX1 is described as a flavin-dependent oxidase; AtBBE3 denotes a berberine bridge enzyme-like protein."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "4OH-ICN accumulation was measured in seedlings under pathogen challenge; defense assays were also in leaves, though FOX1 itself was not assayed there."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Psta infection/ETI-like response is the context for FOX1 induction."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "FOX1 is explicitly part of the tryptophan-derived 4OH-ICN pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "The introductory pathway description states FOX1 and CYP82C2 convert ICY to 4OH-ICN, supporting ICY as upstream substrate context."
+        },
+        "Primary_Product": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper groups FOX1 and CYP82C2 together in converting ICY to 4OH-ICN, but does not explicitly state FOX1 alone produces ICN in this text."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "FOX1 is placed in the conversion from ICY toward 4OH-ICN, though exact single-step chemistry is not fully detailed here; 'toward ICN' is a fair inference from pathway context."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "FOX1 is in the 4OH-ICN branch."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The value says 'not established,' which is consistent with the paper not claiming rate limitation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "FOX1 forms an immediate precursor or late intermediate in the 4OH-ICN pathway."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "FOX1 is a downstream/mid-to-late pathway component."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "FOX1 is downregulated in wrky33 and upregulated/restored in WRKY33-complemented lines after Psta."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "FOX1 is pathogen inducible in A. thaliana."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY33 binding was assayed on the native upstream FOX1 region."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Co-expression/transcript analysis and metabolite context are described or referenced."
+        },
+        "Interacting_Proteins": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY33 directly binds upstream of FOX1."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states WRKY33 binds strongly to a FOX1 upstream W-box region containing WRKY33-specific motifs (W2)."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Engineering application is not tested in the paper."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes the FOX1 findings."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "Candidate component for pathway stacking to enhance 4OH-ICN production",
+          "new_value": "NA",
+          "reason": "Engineering application is not tested in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 29,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "WRKY33",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The specific accession AT2G38470 does not appear in the provided text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY33 is studied in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the species used."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0, Di-G, and Ler-1 are explicitly discussed/accessioned in Results."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY33 characterized here is from Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana WRKY33 is the subject."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 and Di-G WRKY33 alleles/backgrounds are explicitly examined."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY33 is linked to pathogen-induced 4OH-ICN and camalexin biosynthesis."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are specialized defense metabolites/phytoalexins."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links these metabolites to pathogen defense and plant fitness."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly show WRKY33 is required to activate 4OH-ICN biosynthesis."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss-of-function and Di-G natural variation reduce 4OH-ICN/camalexin and increase susceptibility; complementation restores phenotypes."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY33 controls transcriptional activation of Trp-derived defense metabolism genes."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The stated effect—loss decreases metabolites and increases susceptibility—is directly supported, though it is more phenotype than tradeoff."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNSUPPORTED",
+          "reason": "Engineering utility and defense-growth balance are not experimentally addressed."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are present in the study."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY33 is explicitly a group I WRKY TF; schematic shows WRKY domains and C-terminal domain."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "CYP82C2, FOX1, CYP71A12, CYP71A13, and CYP71B15/PAD3 are all discussed as WRKY33-regulated/directly bound or expression-dependent targets."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "35 accession metabolite variation and resequencing comparison are described; transcript/co-expression analyses are referenced."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY33 is explicitly a transcription factor."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNCERTAIN",
+          "reason": "The schematic includes a nuclear localization signal, implying nuclear localization, but the paper does not directly report subcellular localization experiments here."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct transcriptional activation via W-box-containing promoter/enhancer regions is supported by qPCR and ChIP-PCR."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "UNCERTAIN",
+          "reason": "ETI elicitors Psta, Pst avrRps4, and Pst avrRpt2 are supported; high-concentration chitosan induces 4OH-ICN but WRKY33 as its mediator is not directly tested."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "WRKY33 acts during pathogen effector-triggered responses; induction/activity in this context is supported."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Same Arabidopsis source species context applies."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Direct activation of CYP82C2 and FOX1 is shown; expression activation of CYP71A12, CYP71A13, and CYP71B15 is also supported."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The listed value names DNA regions and tagged constructs rather than protein interactors; no protein-protein interactors are established here."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Di-G nonsense mutation, low camalexin/4OH-ICN with higher ICN, and partial impairment by myc tag are all described."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "Metabolites were measured in seedlings; bacterial susceptibility was measured in leaves under pathogen challenge."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes the WRKY33 results."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "DEX-inducible pTA7002 constructs for complementation and native target promoters/enhancers are described."
+        },
+        "Epigenetic_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports dependence of CYP82C2 activation on accessible chromatin at EPCOT3, though not epigenetic regulation of WRKY33 itself."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Psta and other ETI elicitors plus dex induction in complementation assays are explicitly used."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Gene_Accession_Number",
+          "old_value": "AT2G38470",
+          "new_value": "NA",
+          "reason": "The specific accession AT2G38470 does not appear in the provided text."
+        },
+        {
+          "field": "Breeding_or_Engineering_Application_Value",
+          "old_value": "High-value regulator for engineering inducible defense metabolite production, but deployment should preserve proper transactivation domain function and defense-growth balance",
+          "new_value": "NA",
+          "reason": "Engineering utility and defense-growth balance are not experimentally addressed."
+        },
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "DNA regions containing W-boxes and WRKY33-specific motifs; FLAG/myc-tagged WRKY33 constructs used experimentally",
+          "new_value": "NA",
+          "reason": "The listed value names DNA regions and tagged constructs rather than protein interactors; no protein-protein interactors are established here."
+        }
+      ],
+      "stats": {
+        "supported": 28,
+        "unsupported": 3,
+        "uncertain": 2
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 118,
+    "supported": 105,
+    "unsupported": 7,
+    "uncertain": 6,
+    "total_corrections": 7
+  }
+}

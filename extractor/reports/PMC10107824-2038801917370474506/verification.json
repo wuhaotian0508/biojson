@@ -1,0 +1,682 @@
+{
+  "file": "MinerU_markdown_PMC10107824_2038801917370474506",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC10107824_2038801917370474506.md",
+  "timestamp": "2026-03-31T21:28:29.973052",
+  "genes": [
+    {
+      "gene_name": "AbPyKS",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The Summary and Results explicitly refer to AbPyKS as 'pyrrolidine ketide synthase'."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 2/Methods describe PyKS as a root-expressed polyketide synthase; this supports classification as a type III polyketide synthase used previously for tropane biosynthesis."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AbPyKS is from Atropa belladonna throughout the paper."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The study species is Atropa belladonna."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AbPyKS was silenced in Atropa belladonna roots."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species for VIGS experiments is Atropa belladonna."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state a TRV2-based VIGS construct was used; 'virus-based silencing system' is supported. No specific promoter is named, so the TRV2 VIGS wording is the supported part."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly states AbPyKS functions in tropane alkaloid biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 2 and discussion place PyKS in the branch converting N-methyl-Δ1-pyrrolinium toward tropinone/tropane alkaloids."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "Silencing redirects upstream precursor away from tropanes, indicating an upstream/core pathway role."
+        },
+        "Primary_Substrate": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper supports involvement of N-methyl-Δ1-pyrrolinium and disruption of 3-oxoglutarate-derived chemistry, but this exact substrate wording for AbPyKS is not explicitly stated in this paper; it is adapted from prior work."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The discussion explicitly states 4-(1-methyl-2-pyrrolidinyl)-3-oxobutanoic acid is an intermediate in tropane alkaloid biosynthesis formed through the relevant Mannich-like condensation, and PyKS disruption prevents this route."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This is consistent with Fig. 2 and discussion: PyKS channels N-methyl-Δ1-pyrrolinium into tropane alkaloid biosynthesis via the polyketide intermediate leading to 4-(1-methyl-2-pyrrolidinyl)-3-oxobutanoic acid."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show silencing AbPyKS decreases tropane alkaloids and increases alternative pyrrolidines, i.e. flux redirection."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly links AbPyKS silencing to decreased tropane alkaloids and increased pyrrolidine alkaloids."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Both affected product groups are alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Summary states tropane alkaloids are pharmacologically important; discussion names hyoscyamine and scopolamine as medicinally important tropane alkaloids."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The metabolomics and silencing analyses were performed on roots, and the altered alkaloid metabolome is described for A. belladonna roots."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Summary and Results explicitly state AbPyKS silencing reduces tropane alkaloids, increases N-methyl-Δ1-pyrrolinium, and reveals many pyrrolidine alkaloids."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion calls AbPyKS 'a key enzyme in tropane alkaloid biosynthesis'."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 2 labels PyKS as 'a root-expressed polyketide synthase'."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments specifically analyze roots."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods and Results explicitly describe virus-induced gene silencing and root tissue metabolite analysis."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses VIGS in A. belladonna roots plus LC-MS discovery metabolomics, targeted metabolite profiling, and tandem MS."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results directly show reduced tropane alkaloids with strong accumulation of alternative pyrrolidines, supporting this tradeoff."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses LC-MS/LC-MS-MS metabolomics, and Data availability states data are available on request."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Summary states 'almost 40 pyrrolidine alkaloids' increase when AbPyKS activity is reduced."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each listed point matches Results/Discussion: central pathway role, decreased tropanes, increased pyrrolinium/pyrrolidines, and discovery of P1/P2 and P4/P5-related chemistry after AbPyKS silencing."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The idea of using AbPyKS as a lever to redirect flux is a reasonable inference from the study, but explicit breeding/engineering application language for AbPyKS itself is not directly stated in Results."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 27,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "AbPPAR",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods and Results explicitly identify AbPPAR as phenylpyruvic acid reductase (PPAR)."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "As named in the paper, it is a reductase; no more specific family is provided."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AbPPAR is from Atropa belladonna."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is from Atropa belladonna."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AbPPAR was silenced in Atropa belladonna and transiently expressed in Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Both Atropa belladonna and Nicotiana benthamiana are explicitly used."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state AbPPAR silencing used a TRV2-LIC VIGS vector in A. belladonna and full-length ORF was cloned into pEAQ-HT for transient expression in N. benthamiana; actual promoters are not specified, but these vector/system descriptions are supported."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results place AbPPAR in the PLA branch leading to scopolamine formation and supporting pyrrolidine alkaloid formation."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper directly links AbPPAR to PLA and 2-O-malonylphenyllactate relevant to pyrrolidines."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "AbPPAR is used as a precursor-supply enzyme upstream of PLA-derived metabolites."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state PPAR catalyzes conversion of phenylpyruvate to PLA."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "PLA is explicitly the product of the PPAR reaction."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately restates the Results and discussion: phenylpyruvate to PLA, supplying 2-O-malonylphenyllactate and downstream metabolites."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "Silencing reduces the precursor pool and downstream pyrrolidines, so precursor-supply wording is supported."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links AbPPAR to P1/P2 scaffold-derived pyrrolidines and to the aromatic tropane ester/scopolamine branch."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "The downstream products discussed are alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Medicinal tropane ester biosynthesis is explicitly discussed, and novel pyrrolidines are formed from PLA-derived chemistry."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "PPAR-silencing phenotypes were analyzed in A. belladonna roots, and transient assays in N. benthamiana leaves produced P1/P2."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly report reduced PLA, 2-O-malonylphenyllactate, P1, P2, and P6 upon AbPPAR silencing; coexpression in N. benthamiana produced P1/P2."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "It is clearly important for precursor supply, but the paper does not explicitly call AbPPAR rate-limiting or a key control step."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "In this study AbPPAR is analyzed in roots and transiently expressed in N. benthamiana leaves."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Both VIGS in A. belladonna and transient expression in N. benthamiana are explicitly described."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods/Results describe VIGS with qRT-PCR validation, targeted LC-MS metabolite analysis, and transient expression assays."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper uses AbArAT4 together with AbPPAR in pathway reconstruction, but does not show a protein-protein interaction."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Since AbPPAR supplies PLA for both scopolamine-pathway metabolites and novel pyrrolidines, reducing it lowers both branches; this is directly consistent with Results and pathway description."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Metabolomics and qRT-PCR are used; data availability says data are available on request."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states AbPPAR is ~10-fold less catalytically efficient with 4-hydroxyphenylpyruvate than phenylpyruvate, citing prior work and using it to discuss hydroxylated pyrrolidines."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All four points are directly supported by Results and Methods, including the 79% transcript decrease and heterologous production experiment."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Engineering relevance is a reasonable inference, but this application statement is not explicitly made for AbPPAR in the Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "AbArAT4",
+          "new_value": "NA",
+          "reason": "The paper uses AbArAT4 together with AbPPAR in pathway reconstruction, but does not show a protein-protein interaction."
+        }
+      ],
+      "stats": {
+        "supported": 26,
+        "unsupported": 1,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "AbArAT4",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 2 defines ArAT4 as phenylalanine:4-hydroxyphenylpyruvate aminotransferase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Its enzyme name directly identifies it as an aminotransferase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AbArAT4 is an Atropa belladonna gene."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Atropa belladonna."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "In this paper AbArAT4 was transiently expressed in Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Nicotiana benthamiana."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state the full-length ORF was cloned into the pEAQ-HT vector; no promoter is named, but the vector statement is supported."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Results/discussion place AbArAT4 in the PLA precursor branch connected to tropane and pyrrolidine alkaloid metabolism."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "It functions upstream of PLA in the phenylalanine-to-phenylpyruvate branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "AbArAT4 is used as an upstream precursor-supply enzyme in the reconstructed pathway."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion states AbArAT4 is most efficient when phenylalanine is used as amino donor substrate."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly mentions phenylpyruvate in the AbArAT4 reaction context, supporting its role in producing phenylpyruvate for PLA biosynthesis."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the discussion of AbArAT4 activity and its use to generate PLA precursor in N. benthamiana."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "The gene is used to supply aromatic precursor for P1/P2 production."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "Coexpression with other genes enabled P1/P2-type pyrrolidines in N. benthamiana."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "P1/P2-type products are alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports that PLA-derived aromatic precursor is used for pyrrolidine scaffold formation."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The relevant assay was transient expression in N. benthamiana leaves."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state transient expression of AbArAT4, AbPPAR, AbPMT2, and AbMPO2 produced P1 and P2; ArAT4+PPAR also produced PLA and 2-O-malonylphenyllactate."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The field says 'Not established,' which is consistent because the paper does not establish this."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Transient expression was performed in leaves."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Agrobacterium-mediated transient expression in N. benthamiana is explicitly described."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper used transient coexpression followed by LC-MS and MS/MS/co-retention analysis."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "AbArAT4 and AbPPAR act sequentially in pathway reconstruction, but no direct protein interaction is reported."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly discusses substrate promiscuity of AbArAT4 and possible derivation of hydroxylated products from tyrosine-related chemistry."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "LC-MS/LC-MS-MS metabolomics were used; data availability says available on request."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states AbArAT4 can use tyrosine in a side reaction and is ~250-fold less catalytically efficient than with phenylalanine as amino donor."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "The four points accurately summarize supported findings from transient assays and discussion of promiscuity."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The heterologous utility is inferable from the transient-expression experiment, but the explicit engineering recommendation wording is not stated in the Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "AbPPAR",
+          "new_value": "NA",
+          "reason": "AbArAT4 and AbPPAR act sequentially in pathway reconstruction, but no direct protein interaction is reported."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "AbPMT2",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 2 and Methods define PMT2 as putrescine methyltransferase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Its enzyme name identifies it as a methyltransferase."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AbPMT2 is from Atropa belladonna."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Atropa belladonna."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "In this paper AbPMT2 was used in transient assays in Nicotiana benthamiana."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Nicotiana benthamiana."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state the full-length ORF for AbPMT2 in pEAQ-DEST1 was used; no promoter is named, but the vector/system is supported."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "PMT2 is placed in the tropane alkaloid/pyrrolinium precursor pathway in Fig. 2 and discussion."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places PMT2 in the branch leading from putrescine toward N-methyl-Δ1-pyrrolinium."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It functions upstream in precursor formation."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "As putrescine methyltransferase, PMT2 acts on putrescine; this is directly inferable from the enzyme name and pathway."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The discussion describes oxidation of N-methylputrescine by methylputrescine oxidase, implying PMT2 produces N-methylputrescine upstream."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This matches the pathway described in Fig. 2 and discussion: PMT2 makes N-methylputrescine, which MPO2 converts onward to the pyrrolinium cation."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PMT2 supplies precursor for pyrrolinium-dependent tropane and pyrrolidine products."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links the produced pyrrolinium intermediate to both pyrrolidine alkaloids and tropane alkaloids."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These terminal metabolites are alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The N-methyl-Δ1-pyrrolinium precursor is described as central to both tropane and pyrrolidine scaffold formation."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The transient assays showing P1/P2 production were in N. benthamiana leaves."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state coexpression of AbArAT4, AbPPAR, AbPMT2, and AbMPO2 produced P1 and P2 in N. benthamiana; prior work cited showed PMT2+MPO2 produce the pyrrolinium cation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The field says 'Not established,' which matches the paper."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "It was transiently expressed in leaves."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Agrobacterium-mediated transient expression in N. benthamiana is described."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The evidence is transient coexpression with metabolite profiling in N. benthamiana."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "AbPMT2 and AbMPO2 act sequentially, but no direct protein interaction is demonstrated."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly notes electrophilicity/reactivity of the downstream N-methyl-Δ1-pyrrolinium cation can lead to unwanted byproducts and engineering challenges."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "Metabolomics via LC-MS/LC-MS-MS was used; data are available on request."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states previous work demonstrated that transient expression of AbPMT2 and AbMPO2 in N. benthamiana leads to N-methyl-Δ1-pyrrolinium formation."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These points match the pathway role and transient-expression evidence presented or cited in this paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Synthetic biology value is plausible and partly discussed generally for pyrrolinium engineering, but this explicit application statement for AbPMT2 is not directly demonstrated in Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "AbMPO2",
+          "new_value": "NA",
+          "reason": "AbPMT2 and AbMPO2 act sequentially, but no direct protein interaction is demonstrated."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "AbMPO2",
+      "category": "Pathway",
+      "verification": {
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 2 and Methods define MPO2 as methylputrescine oxidase."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Its enzyme name identifies it as an oxidase; the paper also discusses oxidation of N-methylputrescine."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AbMPO2 is from Atropa belladonna."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The source species is Atropa belladonna."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "AbMPO2 was used in Nicotiana benthamiana transient-expression assays."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The applied species is Nicotiana benthamiana."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state AbMPO2 ORF in pEAQ-DEST1 was used; no promoter is named, but the vector/system is supported."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "MPO2 is in the tropane alkaloid/pyrrolinium precursor pathway according to Fig. 2 and discussion."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper places MPO2 in the N-methylputrescine to N-methyl-Δ1-pyrrolinium branch."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "It is an upstream precursor-forming step."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states methylputrescine oxidase oxidizes N-methylputrescine."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states oxidation yields N-methylaminobutanal, which then spontaneously forms N-methyl-Δ1-pyrrolinium."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "This directly matches the discussion description."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "MPO2 supplies the pyrrolinium precursor pool for downstream alkaloids."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper links the pyrrolinium cation to both P1/P2-type pyrrolidines and tropane alkaloids."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "These are alkaloids."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "The cation is described as the electrophilic precursor for tropane and pyrrolidine alkaloid biosynthesis."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "SUPPORTED",
+          "reason": "The N. benthamiana transient assays producing pyrrolidines were in leaves."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show coexpression including AbMPO2 produced P1 and P2 in N. benthamiana, and prior work cited showed PMT2+MPO2 form the pyrrolinium cation."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The field says 'Not established,' which is consistent with the paper."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Transiently expressed in leaves."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Agrobacterium-mediated transient expression in N. benthamiana is explicitly described."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by transient coexpression and LC-MS/MS metabolite detection."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No direct protein-protein interaction with AbPMT2 is shown; they are pathway partners only."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly notes the high electrophilicity/reactivity of N-methyl-Δ1-pyrrolinium can cause off-target reactions and byproducts."
+        },
+        "Omics_Data": {
+          "verdict": "SUPPORTED",
+          "reason": "LC-MS/LC-MS-MS metabolomics were used; data available on request."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly states N-methylaminobutanal spontaneously condenses intramolecularly to form the N-methyl-Δ1-pyrrolinium cation, and emphasizes downstream nonenzymatic reactivity."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "These summary points are consistent with the pathway role and transient-expression evidence presented/cited in the paper."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses general synthetic biology implications of pyrrolinium engineering, but this specific application statement for AbMPO2 is not directly validated as such in Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Interacting_Proteins",
+          "old_value": "AbPMT2",
+          "new_value": "NA",
+          "reason": "No direct protein-protein interaction with AbPMT2 is shown; they are pathway partners only."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 1
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 145,
+    "supported": 134,
+    "unsupported": 4,
+    "uncertain": 7,
+    "total_corrections": 4
+  }
+}

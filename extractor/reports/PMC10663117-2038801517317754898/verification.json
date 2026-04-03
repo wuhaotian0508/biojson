@@ -1,0 +1,566 @@
+{
+  "file": "MinerU_markdown_PMC10663117_2038801517317754898",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC10663117_2038801517317754898.md",
+  "timestamp": "2026-03-31T21:31:29.450400",
+  "genes": [
+    {
+      "gene_name": "NRT2.1",
+      "category": "Common",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Accession numbers list NRT2.1 as At1g08090."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The study uses Arabidopsis and states Arabidopsis (A. thaliana) ecotype Columbia (Col-0) as WT."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicitly stated."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Materials and methods state ecotype Columbia (Col-0) was used as WT."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments were performed in Arabidopsis transgenic plants and mutants."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the experimental species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "WT background is Col-0."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "NRT2.1 is described as a nitrate transporter and nitrate is the nutrient studied."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Nitrate is treated throughout as a mineral nutrient / nitrogen source."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract says nitrate is 'the most important nitrogen (N) source for most terrestrial plants.'"
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper discusses nitrate uptake and NRT2.1 expression in roots, but does not explicitly state 'accumulation site' as 'root uptake system'."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract explicitly calls NRT2.1 a high-affinity NITRATE TRANSPORTER2.1; NRT2 family context is clear."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No subcellular localization such as 'cell membrane' is stated in this paper."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Results include promoter-LUC assays in planta, promoter mutagenesis of NIGT1-binding sites, RT-qPCR, analyses in nlp6 nlp7, nigtQ, and phr1 phl1 backgrounds, and ODE modeling."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show NRT2.1 is nitrate inducible; P availability affects expression; NIGT1.4 is root specific and strongly affects NRT2.1 in roots, supporting root expression context for NRT2.1."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Figures 1, 2, and text show nitrate inducibility, peak promoter activity at 80–100 min, and reduced amplitude under P deficiency in WT."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The experiments use nitrate supply after nitrate starvation and phosphate deficiency treatments."
+        },
+        "Applied_Promoters": {
+          "verdict": "SUPPORTED",
+          "reason": "WT and NIGT1-binding-site-mutated NRT2.1 promoters driving LUC are explicitly described."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper establishes regulatory relationships with NIGT1.1/1.2/1.3/1.4 and NLP6/7, but does not directly demonstrate physical protein-protein interactions; only transcriptional regulation/promoter binding is supported."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract and results state NRT2.1 plays a dominant role in nitrate uptake and that NIGT1 stabilizes NRT2.1 expression amplitude."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed points are directly supported by Results: rapid nitrate induction and 80–100 min peak, importance of two NIGT1-binding sites, buffering across nitrate concentrations, and P deficiency/PHR1-PHL1 effects."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "The first clause is supported by higher/more persistent promoter activity without NIGT1 repression; the second clause correctly notes direct growth tradeoffs were not reported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly proposes editing promoter cis-elements to engineer nitrate uptake dynamics and nutrient response behavior."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "NRT2.1 is indeed the central readout/target; Arabidopsis motif conservation and rice OsNRT2.1 putative motif conservation are shown in Results."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Terminal_Metabolite_Accumulation_Site",
+          "old_value": "root uptake system",
+          "new_value": "NA",
+          "reason": "The paper discusses nitrate uptake and NRT2.1 expression in roots, but does not explicitly state 'accumulation site' as 'root uptake system'."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Cell membrane",
+          "new_value": "NA",
+          "reason": "No subcellular localization such as 'cell membrane' is stated in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 2,
+        "uncertain": 1
+      }
+    },
+    {
+      "gene_name": "NIGT1.1; NIGT1.2; NIGT1.3; NIGT1.4",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Accession numbers list NIGT1.1 At1g25550, NIGT1.2 At1g68670, NIGT1.3 At3g25790, and NIGT1.4 At1g13300."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The NIGT1 genes studied are Arabidopsis genes."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the species used."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "WT is Col-0."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Genetic and reporter analyses were performed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 background was used."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "These regulators modulate expression of nitrate uptake gene NRT2.1; nitrate is the nutrient output context."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Nitrate is a mineral nutrient in the paper's context."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Nitrate is described as the most important nitrogen source for most terrestrial plants."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links NIGT1 to nitrate uptake and root expression, but not explicitly to 'root uptake system; whole plant nitrogen acquisition' as an accumulation site phrase."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "NIGT1 family members are described as transcriptional repressors / TFs."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract explicitly calls them NITRATE-INDUCIBLE GARP-TYPE TRANSCRIPTIONAL REPRESSOR1 family."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No nuclear localization is stated in this paper."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Results link NIGT1 regulation to nitrate uptake via transcriptional control of NRT2.1."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper supports repression of NRT2.1, NIGT1 autorepression, and placement downstream of NLP in an incoherent feedforward loop."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "NRT2.1 and NIGT1 family genes are explicitly modeled and discussed as NIGT1 targets."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "NIGT1 represses NRT2.1 and also represses NIGT1 expression via an auto-repressive pathway according to assays/modeling."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The NLP–NIGT1–NRT2.1 incoherent type I feedforward loop and NIGT1 autorepression are central claims of the paper."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "Nitrate via NLP and phosphorus deficiency via PHR1/PHL1 activation of NIGT1 genes are explicitly described."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods appear in Results/Methods: promoter-LUC assays, mutant promoter, nigtQ analysis, RT-qPCR, protoplast assays, ODE modeling and sensitivity analysis."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state NIGT1.4 is specifically expressed in roots and strongly influences NRT2.1 in roots; Supplemental Fig. S2 is cited for similar temporal patterns among NIGT1.1–1.4."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "NIGT1 genes are nitrate inducible, and PHR1/PHL1 activate NIGT1 genes under P deficiency."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses nitrate treatments from 0.2 to 10 mM after starvation and phosphate deficiency treatments."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "NLP6/7 and PHR1/PHL1 are upstream regulators, but direct protein-protein interactions with NIGT1 proteins are not shown."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and modeling show NIGT1 stabilizes amplitude/kinetics of NRT2.1 expression over nitrate concentrations."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "nigtQ and promoter-binding-site mutation both cause higher and less steeply declining NRT2.1 promoter activity."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each point is supported by Results and modeling, including direct repression via promoter sites, mutant phenotypes, buffering function, and P deficiency acting via PHR1/PHL1-induced NIGT1."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses that stronger repression could theoretically reduce uptake, but does not directly test this; the statement is plausible but not demonstrated."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Discussion explicitly suggests editing NIGT1 properties or cis-elements to tune nitrate response patterns."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "NIGT1.4 as representative member, strong conservation in Arabidopsis, and high conservation of putative rice motifs are all stated."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No nuclear localization is stated in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "NLP6; NLP7",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Accession numbers list NLP6 At1g64530 and NLP7 At4g24020."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "These genes are Arabidopsis genes studied in Arabidopsis."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "WT is Col-0."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Experiments use Arabidopsis nlp6 nlp7-1 mutants."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the experimental species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 background is used."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "NLP6/7 regulate nitrate-responsive NRT2.1 expression in the context of nitrate uptake."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Nitrate is a mineral nutrient in the study."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract states nitrate is the most important nitrogen source for most terrestrial plants."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses nitrate uptake and root relevance but does not explicitly define this as the accumulation site."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "NLP family members are described as transcriptional activators/TFs."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract explicitly refers to NIN-LIKE PROTEIN family transcriptional activators."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No nuclear localization is stated in this paper."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows NLP6/7 control nitrate-responsive activation of NRT2.1, affecting nitrate uptake regulation."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "NLPs are treated as transcriptional activators of NRT2.1 and NIGT1 genes."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "The abstract and network model state NLP activates NRT2.1 and NIGT1 genes."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "Text explicitly states nitrate-inducible expression of NRT2.1 is regulated by NLP activators and NIGT1 repressors; NIGT1 genes are induced downstream of NLP."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "The incoherent type I feedforward loop with NLP activating both NRT2.1 and NIGT1 is central to the paper."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "NLP activity is nitrate responsive throughout the study."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Results include analysis in nlp6 nlp7-1 with NRT2.1pro::LUC plus modeling."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states the NRT2.1 promoter is mainly under the control of NLP6 and NLP7."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The nlp6 nlp7-1 phenotype and authors' interpretation support nitrate activation and compensation by other NLPs at high nitrate."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Nitrate treatments of 0.2, 1, and 10 mM after nitrate starvation are described."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "NIGT1 genes are in the same regulatory network downstream of NLP6/7, but direct protein-protein interactions are not shown."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show low nitrate fails to fully activate NRT2.1 promoter in nlp6 nlp7-1, indicating major activator role especially at low nitrate."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This accurately summarizes Fig. 2A-B and related text."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are supported by Results and model interpretation."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Loss impairing activation under low nitrate is directly supported; no broader tradeoffs are reported."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper discusses engineering network parameters generally, but does not specifically propose modulating NLP activity together with NIGT1 as an applied strategy."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "Compensation by other NLPs at high nitrate and influence of active NLP decay in modeling/sensitivity analysis are supported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No nuclear localization is stated in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 27,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "PHR1; PHL1",
+      "category": "Regulation",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Accession numbers list PHR1 At4g28610 and PHL1 At5g29000."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "These are Arabidopsis genes."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is explicit."
+        },
+        "Source_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "WT background is Col-0."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "phr1 phl1 mutants were analyzed in Arabidopsis."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Arabidopsis thaliana is the applied species."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "Col-0 background was used."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "PHR1/PHL1 are linked indirectly to nitrate uptake gene regulation, with nitrate the nutrient output context."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Nitrate is the mineral nutrient studied."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Nitrate is described as a major nitrogen source."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper links these TFs to NRT2.1 regulation but does not explicitly state an accumulation site."
+        },
+        "Regulator_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "PHR1 is explicitly called a transcriptional activator; PHR family TFs are discussed."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNSUPPORTED",
+          "reason": "This paper refers to PHR family TFs and PHR1-LIKE, but does not specify the 'MYB-CC' domain/family."
+        },
+        "Subcellular_Localization": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No nuclear localization is stated in this paper."
+        },
+        "Metabolic_Process_Controlled": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support cross-regulation of nitrate uptake gene expression under phosphate deficiency via NIGT1 induction."
+        },
+        "Regulation_Mode": {
+          "verdict": "SUPPORTED",
+          "reason": "PHR1/PHL1 activate NIGT1 genes under P deficiency according to the paper."
+        },
+        "Primary_Regulatory_Targets": {
+          "verdict": "SUPPORTED",
+          "reason": "NIGT1 family genes are explicitly described as targets activated by PHR1 in P-deficient environments."
+        },
+        "Regulatory_Effect_on_Target_Genes": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper says PHR1 transcriptional activator promotes NIGT1 family gene expression, thereby affecting NRT2.1 indirectly."
+        },
+        "Feedback_or_Feedforward_Regulation": {
+          "verdict": "SUPPORTED",
+          "reason": "This is a fair summary of their role as cross-nutrient input into the NLP–NIGT1–NRT2.1 network."
+        },
+        "Upstream_Signals_or_Inputs": {
+          "verdict": "SUPPORTED",
+          "reason": "P deficiency posttranslationally activates PHR1, as stated in Results."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "The phr1 phl1 double mutant carrying NRT2.1pro::LUC was analyzed under varying phosphate conditions."
+        },
+        "Expression_Pattern_of_Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Results explicitly state PHR1 is activated posttranslationally under P deficiency."
+        },
+        "Expression_Pattern_of_Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper states phr1 phl1 absence does not affect temporal changes under P-sufficient conditions, consistent with inactivity then."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "Phosphate deficiency combined with nitrate treatment is exactly what was tested."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "NIGT1 genes are downstream targets, but direct protein-protein interactions are not shown."
+        },
+        "Decisive_Influence_on_Target_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Results support that PHR1/PHL1 connect phosphate status to NRT2.1 regulation via NIGT1."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Fig. 2E-F and text show P deficiency reduces NRT2.1 promoter amplitude in WT and this is largely absent in phr1 phl1."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points match the Results section."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper broadly suggests engineered nutrient response circuits, but does not specifically highlight PHR1/PHL1 for breeding/application."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The statement that PHR1/PHL1 are inactive under phosphate-sufficient conditions in this context and function upstream of NIGT1 is supported."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Protein_Family_or_Domain",
+          "old_value": "PHR family MYB-CC transcription factors",
+          "new_value": "NA",
+          "reason": "This paper refers to PHR family TFs and PHR1-LIKE, but does not specify the 'MYB-CC' domain/family."
+        },
+        {
+          "field": "Subcellular_Localization",
+          "old_value": "Nucleus",
+          "new_value": "NA",
+          "reason": "No nuclear localization is stated in this paper."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 2,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 116,
+    "supported": 100,
+    "unsupported": 6,
+    "uncertain": 10,
+    "total_corrections": 6
+  }
+}

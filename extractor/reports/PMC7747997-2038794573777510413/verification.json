@@ -1,0 +1,364 @@
+{
+  "file": "MinerU_markdown_PMC7747997_2038794573777510413",
+  "md_path": "/data/haotianwu/biojson/extractor/input/MinerU_markdown_PMC7747997_2038794573777510413.md",
+  "timestamp": "2026-03-31T22:31:12.294498",
+  "genes": [
+    {
+      "gene_name": "AtSUS3",
+      "category": "Common",
+      "verification": {
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods state 'AtSUS3 (A. thaliana sucrose synthase for UDPG regeneration)' and cDNA from A. thaliana was used as template."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly given as 'A. thaliana' in Methods, i.e. Arabidopsis thaliana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The engineered plasmids carrying AtSUS3 were transferred into Escherichia coli BL21(DE3)."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated as Escherichia coli BL21(DE3) in Methods."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The host strain is explicitly 'E. coli BL21(DE3)'."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly describe AtSUS3 as 'A. thaliana sucrose synthase for UDPG regeneration'."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "AtSUS3 is included in the system used for 'manufacture of RebM from RebA'; RebM is rebaudioside M."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Rebaudioside M is described in the paper as a steviol glycoside/natural sweetener; this class assignment is consistent with the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract describes steviol glycosides as 'a group of natural sweeteners with high-intensity sweetness'; RebM is one of these SGs."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "AtSUS3 was used in a heterologous E. coli bioconversion/fermentation system for RebM manufacture."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state AtSUS3 is included 'for UDPG regeneration,' supporting a helper role in supplying UDP-glucose for glycosylation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by pathway assembly in E. coli strains 651/830 and HPLC analysis of fermentation extracts in Figure 6F/Methods."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three points are supported at a general level: AtSUS3 was included for UDPG regeneration, in a two-step RebA-to-RebM system, and was not the paper's mechanistic focus."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "UNCERTAIN",
+          "reason": "Its use as a supportive regeneration module is shown, but the broader application claim to 'metabolic engineering platforms' is not directly evaluated in Results."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "AtSUS3 was co-expressed with EUGT11 and SrUGT76G1 in one construct, but no direct protein-protein interaction was tested."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper uses AtSUS3 only as a UDPG-regeneration support gene in heterologous production, not as a native Stevia structural gene."
+        }
+      },
+      "corrections": [],
+      "stats": {
+        "supported": 14,
+        "unsupported": 0,
+        "uncertain": 2
+      }
+    },
+    {
+      "gene_name": "SrUGT76G1",
+      "category": "Pathway",
+      "verification": {
+        "Gene_Accession_Number": {
+          "verdict": "SUPPORTED",
+          "reason": "Accessions 6KVI, 6KVJ, 6KVK, and 6KVL are explicitly listed in ACCESSION NUMBERS, though these are structure PDB codes rather than a gene accession."
+        },
+        "Source_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "SrUGT76G1 is repeatedly described as from Stevia rebaudiana."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated in title/abstract as Stevia rebaudiana."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme is studied in vitro and also expressed in Escherichia coli; Stevia is the source species and E. coli the expression/bioconversion host."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Stevia rebaudiana and Escherichia coli are both explicitly stated in the paper."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "BL21(DE3) is explicitly given for E. coli expression; 'NA' for Stevia variety is appropriate because no Stevia variety is specified."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Figure 1 and the text place SrUGT76G1 in steviol glycoside biosynthesis."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper repeatedly states SrUGT76G1 catalyzes 1,3-glucosylation/branch chain formation."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Described as glycosyltransferase UGT76G1/SrUGT76G1; as a plant UGT, 'UDP-glycosyltransferase 76G1' is consistent with the paper."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number appears anywhere in the paper; strict verification requires marking this unsupported."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "SUPPORTED",
+          "reason": "The structure is stated to display the canonical GT-B fold, and the enzyme is a plant UGT/family 1 UDP-glycosyltransferase."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Results state SrUGT76G1 acts on ent-kaurenoids bearing at least one glucosyl and tested substrates include Sm, Sb, Rub, RebA, RebD; abstract/introduction also mention RebE and RebG, and UDP-glucose is the donor in assays."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "The enzyme forms 1,3-glucosylated SGs; RebB and RebM are specifically discussed as products."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Results and Figure 1 support transfer of glucose from UDP-glucose to existing glucosyl moieties to form beta-1,3-O-glucosidic branches, including Sb to RebB and RebD to RebM."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper shows SrUGT76G1 acts in branch-forming glycosylation after prior glucosylation events."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "SrUGT76G1 directly forms branch-chain sweeteners and contributes directly to RebM formation."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper connects SrUGT76G1 to steviol glycosides, especially high-value rebaudioside M."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "Steviol glycosides are explicitly described as natural sweeteners; they are diterpene glycosides."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract states steviol glycosides are 'natural sweeteners with high-intensity sweetness'."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper is about Stevia and SG biosynthesis, but this specific statement that the metabolites accumulate in leaves is not explicitly stated in the provided text."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "SrUGT76G1 was analyzed by in vitro assays and heterologous E. coli bioconversion."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "This is the central result of the paper: SrUGT76G1 catalyzes key 1,3-glucosylation reactions with broad substrate promiscuity and is important for RebM formation."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "All listed methods are directly present: crystal structures, enzyme assays, kinetics, mutagenesis, E. coli production, HPLC."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "Each numbered claim is directly supported by Results/Abstract/Figure 1/6."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper calls SrUGT76G1 'key' for SG generation and RebM production, but does not directly establish a rate-limiting or control-step role experimentally."
+        },
+        "Potential_Tradeoffs": {
+          "verdict": "SUPPORTED",
+          "reason": "Results show wild-type SrUGT76G1 produces side product RebI during RebA-to-RebM conversion, and broad promiscuity/mixed products are discussed."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "Abstract and discussion explicitly emphasize structure-guided glycoengineering and improving RebM/diversifying diterpenoid glycosides."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "EUGT11 and AtSUS3 were used in the same engineered pathway, but direct physical or biochemical interaction with SrUGT76G1 was not tested."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "The listed residues are all discussed in Results as affecting catalysis/substrate recognition, and the paper also states SrUGT76G1 accepts many other small molecules beyond SGs."
+        }
+      },
+      "corrections": [
+        {
+          "field": "EC_Number",
+          "old_value": "2.4.1.-",
+          "new_value": "NA",
+          "reason": "No EC number appears anywhere in the paper; strict verification requires marking this unsupported."
+        }
+      ],
+      "stats": {
+        "supported": 25,
+        "unsupported": 1,
+        "uncertain": 3
+      }
+    },
+    {
+      "gene_name": "EUGT11",
+      "category": "Pathway",
+      "verification": {
+        "Source_Species": {
+          "verdict": "UNSUPPORTED",
+          "reason": "The paper names EUGT11 and its activity in the engineered pathway, but does not state its source species in the provided text."
+        },
+        "Source_Species_Latin_Name": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No explicit source species/Latin name for EUGT11 is given in the paper text."
+        },
+        "Applied_Species": {
+          "verdict": "SUPPORTED",
+          "reason": "EUGT11 was cloned into plasmids and used in Escherichia coli for RebM manufacture."
+        },
+        "Applied_Species_Latin_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly used in Escherichia coli BL21(DE3)."
+        },
+        "Applied_Species_Variety": {
+          "verdict": "SUPPORTED",
+          "reason": "The engineered strains are E. coli BL21(DE3)."
+        },
+        "Biosynthetic_Pathway": {
+          "verdict": "SUPPORTED",
+          "reason": "EUGT11 is described in the context of converting RebA to RebD in the steviol glycoside pathway used for RebM manufacture."
+        },
+        "Pathway_Branch_or_Subpathway": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly describe EUGT11 as a '1,2-glucosyltransferase, catalyzing RebA to RebD'."
+        },
+        "Enzyme_Name": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper explicitly names 'EUGT11 (1,2-glucosyltransferase, catalyzing RebA to RebD)'."
+        },
+        "EC_Number": {
+          "verdict": "UNSUPPORTED",
+          "reason": "No EC number for EUGT11 is provided in the paper."
+        },
+        "Protein_Family_or_Domain": {
+          "verdict": "UNCERTAIN",
+          "reason": "As a glucosyltransferase it is likely a UGT, but the paper does not explicitly classify EUGT11's family/domain here."
+        },
+        "Primary_Substrate": {
+          "verdict": "SUPPORTED",
+          "reason": "Methods explicitly state EUGT11 catalyzes RebA to RebD; UDP-glucose dependence is inferable because it is a glucosyltransferase and AtSUS3 is added for UDPG regeneration, but UDP-glucose is not explicitly named in the EUGT11 sentence. Still generally supported."
+        },
+        "Primary_Product": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly stated as RebD."
+        },
+        "Catalyzed_Reaction_Description": {
+          "verdict": "SUPPORTED",
+          "reason": "Explicitly described as '1,2-glucosyltransferase, catalyzing RebA to RebD'."
+        },
+        "Metabolic_Step_Position": {
+          "verdict": "SUPPORTED",
+          "reason": "The two-step system is described as EUGT11 converting RebA to RebD and SrUGT76G1 converting RebD to RebM, placing EUGT11 upstream."
+        },
+        "End_Product_Connection_Type": {
+          "verdict": "SUPPORTED",
+          "reason": "RebD is explicitly the intermediate immediately upstream of RebM in the engineered route."
+        },
+        "Terminal_Metabolite": {
+          "verdict": "SUPPORTED",
+          "reason": "EUGT11 is used in the manufacture of RebM from RebA."
+        },
+        "Terminal_Metabolite_Class": {
+          "verdict": "SUPPORTED",
+          "reason": "RebM is a steviol glycoside/natural sweetener in the paper."
+        },
+        "Terminal_Metabolite_Function": {
+          "verdict": "SUPPORTED",
+          "reason": "Steviol glycosides are described as high-intensity natural sweeteners."
+        },
+        "Terminal_Metabolite_Accumulation_Site": {
+          "verdict": "UNCERTAIN",
+          "reason": "The paper text does not explicitly state accumulation in Stevia leaves for EUGT11-related products."
+        },
+        "Environment_or_Treatment_Factor": {
+          "verdict": "SUPPORTED",
+          "reason": "EUGT11 is only discussed in the engineered heterologous E. coli bioconversion context."
+        },
+        "Core_Phenotypic_Effect": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by the described two-step pathway where EUGT11 provides RebD precursor for RebM production."
+        },
+        "Core_Validation_Method": {
+          "verdict": "SUPPORTED",
+          "reason": "Supported by heterologous pathway assembly in E. coli and HPLC analysis of fermentation products (Figure 6F, Methods)."
+        },
+        "Summary_Key_Findings_of_Core_Gene": {
+          "verdict": "SUPPORTED",
+          "reason": "All three summary points match the paper's description of EUGT11 in the engineered RebM route."
+        },
+        "Rate_Limiting_or_Key_Control_Step": {
+          "verdict": "SUPPORTED",
+          "reason": "The value is 'Not established,' which accurately reflects that the paper does not establish EUGT11 as rate-limiting."
+        },
+        "Breeding_or_Engineering_Application_Value": {
+          "verdict": "SUPPORTED",
+          "reason": "The paper demonstrates gene stacking of EUGT11 with SrUGT76G1 and AtSUS3 for RebM manufacture, supporting engineering value."
+        },
+        "Interacting_Proteins": {
+          "verdict": "UNCERTAIN",
+          "reason": "Co-expression with SrUGT76G1 and AtSUS3 is shown, but no direct protein interaction is tested."
+        },
+        "Other_Important_Info": {
+          "verdict": "SUPPORTED",
+          "reason": "EUGT11 is indeed included as part of the engineered dual UGT cassette for RebM manufacture and is not the paper's structural focus."
+        }
+      },
+      "corrections": [
+        {
+          "field": "Source_Species",
+          "old_value": "Stevia",
+          "new_value": "NA",
+          "reason": "The paper names EUGT11 and its activity in the engineered pathway, but does not state its source species in the provided text."
+        },
+        {
+          "field": "Source_Species_Latin_Name",
+          "old_value": "Stevia rebaudiana",
+          "new_value": "NA",
+          "reason": "No explicit source species/Latin name for EUGT11 is given in the paper text."
+        },
+        {
+          "field": "EC_Number",
+          "old_value": "2.4.1.-",
+          "new_value": "NA",
+          "reason": "No EC number for EUGT11 is provided in the paper."
+        }
+      ],
+      "stats": {
+        "supported": 21,
+        "unsupported": 3,
+        "uncertain": 3
+      }
+    }
+  ],
+  "summary": {
+    "total_fields": 72,
+    "supported": 60,
+    "unsupported": 4,
+    "uncertain": 8,
+    "total_corrections": 4
+  }
+}
