@@ -247,6 +247,25 @@ let hasStartedConversation = false;
 let isDeepSearch = false;
 let usePersonal = false;
 const assistantTurnState = new Map();
+let currentAbortController = null;  // 用于中断正在进行的 SSE 流
+let currentStreamMsgId = null;      // 正在流式生成的 assistant 消息 ID
+
+// 中断正在进行的 SSE 流，保存已有的部分回答
+function abortCurrentStream() {
+    if (!currentAbortController) return;
+    // 先保存部分回答到历史
+    if (currentStreamMsgId) {
+        const state = assistantTurnState.get(currentStreamMsgId);
+        if (state && state.answerText) {
+            saveToHistory(state.query, state.answerText, state.sources, state.genes, state.sops);
+        }
+    }
+    currentAbortController.abort();
+    currentAbortController = null;
+    currentStreamMsgId = null;
+    isQuerying = false;
+    sendBtn.disabled = false;
+}
 
 // DOM 元素
 const chatContainer = document.getElementById('chat-container');
@@ -530,6 +549,7 @@ async function renameFile(filename) {
 
 // 开始新对话
 function startNewChat() {
+    abortCurrentStream();
     chatContainer.innerHTML = '';
     hasStartedConversation = false;
     currentSessionId = null;
@@ -591,7 +611,11 @@ async function handleSend() {
         const state = getAssistantTurnState(assistantMsgId);
         saveToHistory(query, answerText, sources, state.genes, state.sops);
     } catch (error) {
-        updateMessage(assistantMsgId, `<p style="color: red;">${t('error.prefix')}: ${error.message}</p>`);
+        if (error.name === 'AbortError') {
+            // 用户切换了对话，部分回答已在 abortCurrentStream() 中保存
+        } else {
+            updateMessage(assistantMsgId, `<p style="color: red;">${t('error.prefix')}: ${error.message}</p>`);
+        }
     } finally {
         isQuerying = false;
         sendBtn.disabled = false;
@@ -634,6 +658,9 @@ function buildHistory() {
 // 流式查询
 async function streamQuery(query, messageId) {
     const history = buildHistory();
+    const abortController = new AbortController();
+    currentAbortController = abortController;
+    currentStreamMsgId = messageId;
     const response = await fetch('/api/query', {
         method: 'POST',
         headers: {
@@ -646,6 +673,7 @@ async function streamQuery(query, messageId) {
             use_depth: isDeepSearch,
             history,
         }),
+        signal: abortController.signal,
     });
 
     if (response.status === 401) {
@@ -779,6 +807,8 @@ async function streamQuery(query, messageId) {
         }
     }
 
+    currentAbortController = null;
+    currentStreamMsgId = null;
     return { answerText, sources };
 }
 
@@ -1378,6 +1408,7 @@ function loadHistory() {
 
 // 还原历史会话
 function restoreConversation(session) {
+    abortCurrentStream();
     hideWelcomeAndScene();
     hasStartedConversation = true;
     currentSessionId = session.id;
