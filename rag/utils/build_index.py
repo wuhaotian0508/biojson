@@ -5,7 +5,7 @@ import numpy as np
 import pickle
 from pathlib import Path
 from sklearn.feature_extraction.text import TfidfVectorizer
-from data_loader import DataLoader
+from utils.data_loader import DataLoader
 import config
 
 

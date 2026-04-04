@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import List, Tuple
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from data_loader import GeneChunk, DataLoader
+from utils.data_loader import GeneChunk, DataLoader
 import config
 
 

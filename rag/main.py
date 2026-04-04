@@ -7,8 +7,9 @@ from pathlib import Path
 # 添加当前目录到路径
 sys.path.insert(0, str(Path(__file__).parent))
 
-from retriever import JinaRetriever
-from generator import RAGGenerator
+from search.retriever import JinaRetriever
+from generation.generator import RAGGenerator
+from pipeline import RAGPipeline
 
 class GeneRAG:
     """基因信息RAG系统"""
@@ -29,13 +30,16 @@ class GeneRAG:
 
         # 检索
         print("\n[1/2] 检索相关基因信息...")
-        results = self.retriever.retrieve(question, use_rerank=use_rerank)
+        raw_results = self.retriever.retrieve(question, use_rerank=use_rerank)
 
         if show_sources:
-            print(f"\n检索到 {len(results)} 条相关记录:")
-            for i, (chunk, score) in enumerate(results[:5], 1):
+            print(f"\n检索到 {len(raw_results)} 条相关记录:")
+            for i, (chunk, score) in enumerate(raw_results[:5], 1):
                 print(f"  {i}. {chunk.gene_name} ({chunk.species}) - {score:.3f}")
                 print(f"     来源: {chunk.article_title[:50]}...")
+
+        # 转为统一 dict 格式
+        results = RAGPipeline._gene_chunks_to_dicts(raw_results)
 
         # 生成
         print(f"\n[2/2] 生成答案...\n")

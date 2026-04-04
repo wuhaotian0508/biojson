@@ -30,18 +30,5 @@
       "Bash(python - <<'PY'\nfrom pathlib import Path\nbase=Path\\('/data/haotianwu/biojson/rag/data'\\)\nfiles=sorted\\([p.name for p in base.glob\\('*_nutri_plant_verified.json'\\)]\\)\nprint\\('count', len\\(files\\)\\)\nprint\\('\\\\n'.join\\(files[:20]\\)\\)\nprint\\('...'\\)\nprint\\('\\\\n'.join\\(files[-20:]\\)\\)\nPY)"
     ]
   },
-  "hooks": {
-    "PostToolUse": [
-      {
-        "matcher": "Edit|Write|NotebookEdit",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "python3 /data/haotianwu/biojson/.claude/hooks/log_changes.py"
-          }
-        ]
-      }
-    ]
-  },
-  "dangerouslySkipPermissions": true
+"dangerouslySkipPermissions": true
 }

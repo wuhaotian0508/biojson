@@ -5,7 +5,7 @@ import numpy as np
 from pathlib import Path
 from typing import List, Tuple, Optional
 
-from data_loader import GeneChunk, DataLoader
+from utils.data_loader import GeneChunk, DataLoader
 from config import (
     JINA_API_KEY, JINA_EMBEDDING_URL, JINA_RERANK_URL,
     EMBEDDING_MODEL, RERANK_MODEL,

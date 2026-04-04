@@ -256,8 +256,8 @@ function abortCurrentStream() {
     // 先保存部分回答到历史
     if (currentStreamMsgId) {
         const state = assistantTurnState.get(currentStreamMsgId);
-        if (state && state.answerText) {
-            saveToHistory(state.query, state.answerText, state.sources, state.genes, state.sops);
+        if (state && (state.answerText || (state.genes && state.genes.length > 0))) {
+            saveToHistory(state.query, state.answerText || '', state.sources, state.genes, state.sops);
         }
     }
     currentAbortController.abort();
@@ -1052,7 +1052,7 @@ function getMessageRegions(messageId) {
 
 function renderExperimentButton(messageId) {
     const state = getAssistantTurnState(messageId);
-    if (!state.answerText || !state.genesAvailable || state.experimentRunning || state.experimentDone) return;
+    if (!state.genesAvailable || state.experimentRunning || state.experimentDone) return;
 
     const { answerEl, extrasEl } = getMessageRegions(messageId);
     if (!extrasEl) return;
@@ -1418,9 +1418,7 @@ function restoreConversation(session) {
     // 恢复该 session 内的所有多轮对话
     for (const turn of session.messages) {
         addMessage('user', turn.query);
-        const answerHtml = turn.answerText
-            ? formatAnswer(turn.answerText)
-            : `<p style="color: #999;">${t('history.oldRecord')}</p>`;
+        const answerHtml = turn.answerText ? formatAnswer(turn.answerText) : '';
         const msgId = addMessage('assistant', answerHtml);
 
         // 恢复来源、基因、SOP 到 extrasEl
@@ -1440,6 +1438,18 @@ function restoreConversation(session) {
             if (turn.sops && Object.keys(turn.sops).length > 0) {
                 renderSOPs(extrasEl, turn.sops);
             }
+        }
+
+        // 恢复基因编辑器 + SOP 按钮（有基因但还没有 SOP）
+        if (turn.genes && turn.genes.length > 0 && (!turn.sops || Object.keys(turn.sops).length === 0)) {
+            const state = getAssistantTurnState(msgId);
+            state.query = turn.query;
+            state.answerText = turn.answerText || '';
+            state.sources = turn.sources || [];
+            state.genes = [...turn.genes];
+            state.genesAvailable = true;
+            state.streamDone = true;
+            renderExperimentButton(msgId);
         }
     }
 
