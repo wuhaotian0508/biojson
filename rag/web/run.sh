@@ -7,6 +7,11 @@ if [ -n "$OLD_PIDS" ]; then
   kill -9 $OLD_PIDS
 fi
 
+if command -v conda >/dev/null 2>&1; then
+  eval "$(conda shell.bash hook)"
+  conda activate biojson
+fi
+
 echo "启动 RAG 基因问答系统 (开发模式)"
 echo "========================================"
 

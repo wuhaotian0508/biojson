@@ -21,6 +21,7 @@ import tempfile
 from pathlib import Path
 from typing import Generator
 
+import openai
 from openai import OpenAI
 
 # ---- 导入项目配置（API key、模型名等） ----
@@ -54,11 +55,21 @@ class ExperimentPipeline:
     def __init__(self):
         # ---- 创建临时工作目录，所有中间文件都存放于此 ----
         self.work_dir = Path(tempfile.mkdtemp(prefix="crispr_pipeline_"))
-        # ---- 初始化 LLM 客户端（用于基因提取） ----
+
+        # ---- 主 LLM 客户端（用于基因提取） ----
         self._llm = OpenAI(
             api_key=config.LLM_API_KEY,
             base_url=config.LLM_BASE_URL,
         )
+
+        # ---- Fallback LLM 客户端（主 API 内容过滤报 400 时切换） ----
+        # 仅在配置了 FALLBACK_API_KEY 时创建，否则为 None
+        self._fallback_llm = (
+            OpenAI(api_key=config.FALLBACK_API_KEY, base_url=config.FALLBACK_BASE_URL)
+            if config.FALLBACK_API_KEY else None
+        )
+        # _fallback_model：fallback 使用的模型名；未配置时退回主模型名
+        self._fallback_model = config.FALLBACK_MODEL or config.LLM_MODEL
 
     # ------------------------------------------------------------------
     # LLM 提取基因名 + 物种（从 LLM 回答文本中自动提取）
@@ -88,11 +99,27 @@ class ExperimentPipeline:
             "如果没有找到，返回空数组 []。\n\n"
             f"文本：\n{answer_text}"
         )
-        resp = self._llm.chat.completions.create(
-            model=config.LLM_MODEL,
-            messages=[{"role": "user", "content": prompt}],
-            temperature=0,
-        )
+        # messages: 发给 LLM 的消息列表（单轮对话）
+        messages = [{"role": "user", "content": prompt}]
+
+        # ---- 先尝试主 API，内容过滤报 400 时切换 fallback ----
+        try:
+            resp = self._llm.chat.completions.create(
+                model=config.LLM_MODEL,
+                messages=messages,
+                temperature=0,
+            )
+        except openai.BadRequestError:
+            # 主 API 内容审查拦截：切换 fallback；未配置 fallback 则向上抛出
+            if not self._fallback_llm:
+                raise
+            resp = self._fallback_llm.chat.completions.create(
+                model=self._fallback_model,
+                messages=messages,
+                temperature=0,
+            )
+
+        # raw: LLM 返回的原始文本，可能是 JSON 或 markdown 代码块包裹的 JSON
         raw = resp.choices[0].message.content.strip()
 
         # ---- 兼容 markdown code block 格式（```json ... ```） ----
@@ -128,7 +155,7 @@ class ExperimentPipeline:
         异常:
             ValueError: 当未能为任何基因解析到物种信息时抛出
         """
-        # ---- 构造 prompt：让 LLM 根据上下文为每个基因匹配物种 ----
+        # gene_list_str: 逗号拼接的基因名列表，嵌入 prompt 中
         gene_list_str = ", ".join(gene_names)
         prompt = (
             f"以下是用户选定的基因列表：{gene_list_str}\n\n"
@@ -139,11 +166,27 @@ class ExperimentPipeline:
             '返回 JSON 数组格式: [{"gene": "GmFAD2", "species": "Glycine max"}]\n\n'
             f"文本：\n{answer_text}"
         )
-        resp = self._llm.chat.completions.create(
-            model=config.LLM_MODEL,
-            messages=[{"role": "user", "content": prompt}],
-            temperature=0,
-        )
+        # messages: 发给 LLM 的消息列表（单轮对话）
+        messages = [{"role": "user", "content": prompt}]
+
+        # ---- 先尝试主 API，内容过滤报 400 时切换 fallback ----
+        try:
+            resp = self._llm.chat.completions.create(
+                model=config.LLM_MODEL,
+                messages=messages,
+                temperature=0,
+            )
+        except openai.BadRequestError:
+            # 主 API 内容审查拦截：切换 fallback；未配置 fallback 则向上抛出
+            if not self._fallback_llm:
+                raise
+            resp = self._fallback_llm.chat.completions.create(
+                model=self._fallback_model,
+                messages=messages,
+                temperature=0,
+            )
+
+        # raw: LLM 返回的原始文本，兼容 markdown 代码块包裹格式
         raw = resp.choices[0].message.content.strip()
 
         # ---- 兼容 markdown code block 格式 ----
@@ -202,10 +245,10 @@ class ExperimentPipeline:
             yield {"type": "progress", "step": 3, "total": 4,
                    "msg": "CRISPR 靶点设计完成"}
 
-            # ---- Step 4: 靶点 → SOP 实验方案 ----
+            # ---- Step 4: 靶点 → SOP 实验方案（按物种选择模板） ----
             yield {"type": "progress", "step": 4, "total": 4,
                    "msg": "正在生成实验方案 SOP..."}
-            sops = step4_design.run_experiment_design(targets, self.work_dir)
+            sops = step4_design.run_experiment_design(targets, self.work_dir, acc_file)
             yield {"type": "progress", "step": 4, "total": 4,
                    "msg": "实验方案生成完成"}
 

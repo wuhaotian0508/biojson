@@ -8,6 +8,7 @@ import sys
 import logging
 from pathlib import Path
 
+
 # 添加父目录到路径
 sys.path.insert(0, str(Path(__file__).parent.parent))
 # 添加项目根目录到路径（for admin blueprint）
@@ -30,6 +31,16 @@ import config
 from web.auth import login_required, user_profile_view, update_profile_view, delete_account_view
 from admin.app import admin_bp
 
+# ------------------------------------------------------------------
+# 日志初始化（必须在所有 import 之后、app 创建之前）
+# ------------------------------------------------------------------
+logging.basicConfig(
+    level=logging.INFO,
+    stream=sys.stdout,
+    force=True,
+    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
@@ -38,14 +49,17 @@ app.register_blueprint(admin_bp, url_prefix="/admin")
 # ------------------------------------------------------------------
 # 全局初始化
 # ------------------------------------------------------------------
-print("初始化检索器...")
+logger.info("开始初始化系统组件...")
+
+logger.info("初始化检索器...")
 retriever = Retriever()
 retriever.build_index()
+logger.info(f"检索器初始化完成，已加载 {len(retriever.chunks)} 个文档块")
 
-print("初始化联网搜索...")
+logger.info("初始化联网搜索...")
 online_searcher = OnlineSearcher()
 
-print("初始化生成器...")
+logger.info("初始化生成器...")
 generator = Generator()
 reranker = JinaReranker()
 skill_loader = SkillLoader()
@@ -71,7 +85,7 @@ pipeline = RAGPipeline(
     get_personal_lib=_get_personal_lib,
 )
 
-print("系统就绪！")
+logger.info("✅ 系统初始化完成，所有组件就绪！")
 
 
 # ------------------------------------------------------------------
@@ -103,7 +117,9 @@ def query():
     """处理查询请求 - SSE 流式输出"""
     data = request.get_json() or {}
     query_text = data.get('query', '').strip()
+    logger.info(f"[/api/query] 收到查询请求: {query_text[:100]}...")
     if not query_text:
+        logger.warning("[/api/query] 查询为空")
         return jsonify({'error': '查询不能为空'}), 400
 
     opts = QueryOptions(
@@ -114,8 +130,13 @@ def query():
     )
 
     def generate():
-        for event in pipeline.run(query_text, opts):
-            yield _sse(event)
+        try:
+            for event in pipeline.run(query_text, opts):
+                yield _sse(event)
+            logger.info(f"[/api/query] 查询完成: {query_text[:50]}...")
+        except Exception as e:
+            logger.exception(f"[/api/query] 查询异常: {query_text[:50]}...")
+            yield _sse({'type': 'error', 'data': str(e)})
 
     return Response(generate(), mimetype='text/event-stream')
 
@@ -134,8 +155,10 @@ def run_experiment():
     answer_text = data.get('answer_text', '').strip()
     query_text = data.get('query', '').strip()
     skill_name = data.get('skill', 'crispr-experiment').strip() or 'crispr-experiment'
+    logger.info(f"[/api/experiment/run] 收到实验方案请求: skill={skill_name}, genes={genes}")
 
     if not genes and not genes_selected and not answer_text and not query_text:
+        logger.warning("[/api/experiment/run] 缺少必要参数")
         return jsonify({'error': '缺少 genes、genes_selected、answer_text 或 query'}), 400
 
     try:
@@ -160,8 +183,9 @@ def run_experiment():
             for event in pipeline.run_experiment(tool_call):
                 yield _sse(event)
             yield _sse({'type': 'done'})
+            logger.info(f"[/api/experiment/run] 实验方案生成完成: {skill_name}")
         except Exception as e:
-            logger.exception("Experiment API error")
+            logger.exception(f"[/api/experiment/run] 实验方案生成异常: {skill_name}")
             yield _sse({'type': 'error', 'data': str(e)})
 
     return Response(generate(), mimetype='text/event-stream')
@@ -271,12 +295,16 @@ def frontend_config():
         'supabase_url': config.SUPABASE_URL,
         'supabase_anon_key': config.SUPABASE_ANON_KEY,
         'admin_port': config.ADMIN_PORT,
+        'site_url': config.SITE_URL,
     })
 
 
 if __name__ == '__main__':
+    logger.info(f"启动 Flask 服务: {config.WEB_HOST}:{config.WEB_PORT}, debug={config.DEBUG}")
     app.run(
         host=config.WEB_HOST,
         port=config.WEB_PORT,
-        debug=config.DEBUG
+        debug=config.DEBUG,
+        use_reloader=config.DEBUG,
+        exclude_patterns=["*.pyc", "*.tmp", "*.swp", "*.log", "*/__pycache__/*"],
     )

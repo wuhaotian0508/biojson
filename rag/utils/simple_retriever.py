@@ -1,5 +1,17 @@
 """
-简单检索器 - 使用 TF-IDF 替代 Jina API（适合演示和本地测试）
+简单检索器 — 基于 TF-IDF 的本地检索方案（无需 Jina API）
+
+适用场景：
+  - 本地开发/演示（无需 API key）
+  - 网络不可用时的降级方案
+  - 快速验证数据加载逻辑
+
+与 JinaRetriever 的区别：
+  - JinaRetriever: 调用 Jina Embedding API 获取语义向量，效果更好
+  - SimpleRetriever: 使用 sklearn TF-IDF 生成稀疏向量，纯本地运行
+
+注意：build_index.py 中的 build_simple_index() 与本类的 build_index()
+功能完全重复，建议统一使用本类。
 """
 import numpy as np
 import pickle
@@ -12,17 +24,29 @@ import config
 
 
 class SimpleRetriever:
-    """基于 TF-IDF 的简单检索器"""
+    """
+    基于 TF-IDF 的简单检索器。
+
+    索引文件（存储在 INDEX_DIR 下）：
+      - chunks.pkl      — 序列化的 GeneChunk 列表
+      - embeddings.npy  — TF-IDF 稀疏矩阵（已转为 dense）
+      - vectorizer.pkl  — 拟合后的 TfidfVectorizer（用于查询转换）
+    """
 
     def __init__(self):
-        self.top_k = config.TOP_K_RERANK
+        self.top_k = config.TOP_K_RERANK  # 返回的最大结果数
 
-        self.chunks: List[GeneChunk] = []
-        self.embeddings: np.ndarray = None
-        self.vectorizer: TfidfVectorizer = None
+        self.chunks: List[GeneChunk] = []          # 基因 chunk 列表
+        self.embeddings: np.ndarray = None          # TF-IDF 向量矩阵 (N, max_features)
+        self.vectorizer: TfidfVectorizer = None     # 拟合后的向量化器
 
     def build_index(self, force_rebuild: bool = False):
-        """构建索引"""
+        """
+        构建或加载 TF-IDF 索引。
+
+        参数:
+            force_rebuild: 是否强制重建（忽略已有索引文件）
+        """
         index_file = config.INDEX_DIR / "chunks.pkl"
         embeddings_file = config.INDEX_DIR / "embeddings.npy"
         vectorizer_file = config.INDEX_DIR / "vectorizer.pkl"
@@ -69,7 +93,15 @@ class SimpleRetriever:
         print(f"索引构建完成，保存到 {config.INDEX_DIR}")
 
     def retrieve(self, query: str) -> List[Tuple[GeneChunk, float]]:
-        """检索相关文档"""
+        """
+        使用 TF-IDF 余弦相似度检索最相关的基因 chunks。
+
+        参数:
+            query: 用户查询文本
+
+        返回:
+            [(GeneChunk, similarity_score), ...] 按分数降序，最多 top_k 条
+        """
         # 将查询转换为向量
         query_vec = self.vectorizer.transform([query]).toarray()[0]
 

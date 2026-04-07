@@ -5,6 +5,7 @@ let supabaseClient = null;   // Supabase JS 客户端实例
 let currentSession = null;   // 当前登录会话（含 access_token）
 let userProfile = null;      // 用户 profile（含 is_admin、nickname）
 let adminPort = 5501;        // 管理后台端口（从 /api/config 获取）
+let siteUrl = '';            // 部署地址（用于邮箱验证跳转）
 let signupAvatarDataUrl = null;  // 注册时选择的头像 base64
 
 // ===== 头像文件选择 → 缩略图 base64 =====
@@ -60,6 +61,7 @@ async function initAuth() {
         // 用 anon key 初始化客户端（公开的，安全）
         supabaseClient = supabase.createClient(cfg.supabase_url, cfg.supabase_anon_key);
         if (cfg.admin_port) adminPort = cfg.admin_port;
+        if (cfg.site_url) siteUrl = cfg.site_url;
 
         // 监听登录状态变化（刷新页面、token 过期等）
         supabaseClient.auth.onAuthStateChange((event, session) => {
@@ -115,6 +117,8 @@ async function loginWithEmail(email, password) {
 async function signUpWithEmail(email, password, metadata) {
     const options = {};
     if (metadata) options.data = metadata;
+    // 指定邮箱验证后的跳转地址（使用实际部署地址，而非 localhost）
+    if (siteUrl) options.emailRedirectTo = siteUrl;
 
     const { data, error } = await supabaseClient.auth.signUp({
         email: email,

@@ -1,5 +1,11 @@
 """
-构建索引脚本 - 使用简单的 TF-IDF 向量化替代 Jina API
+构建索引脚本 — 使用 TF-IDF 向量化（独立脚本入口）
+
+注意：此脚本的功能与 SimpleRetriever.build_index() 完全重复。
+建议直接使用 SimpleRetriever，此文件仅保留作为向后兼容的命令行入口。
+
+用法:
+    python -m utils.build_index
 """
 import numpy as np
 import pickle

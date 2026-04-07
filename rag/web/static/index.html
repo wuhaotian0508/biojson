@@ -26,7 +26,7 @@
                         <li data-i18n="auth.feature1">基因数据库语义检索</li>
                         <li data-i18n="auth.feature2">PubMed 文献联网搜索</li>
                         <li data-i18n="auth.feature3">个人知识库管理</li>
-                        <li data-i18n="auth.feature4">AI 深度调研报告</li>
+                        <li data-i18n="auth.feature4">AI 深度搜索报告</li>
                     </ul>
                 </div>
             </div>
@@ -155,8 +155,7 @@
                         ></textarea>
                         <div class="input-actions">
                             <button class="action-btn" id="personal-btn" data-i18n="input.personal">个人库</button>
-                            <button class="action-btn" id="depth-btn" data-i18n="input.depth">深度调研</button>
-                            <button class="attach-btn">📎</button>
+                            <button class="action-btn" id="depth-btn" data-i18n="input.depth">深度搜索</button>
                             <button class="send-btn" id="send-btn">➤</button>
                         </div>
                     </div>
@@ -164,24 +163,55 @@
 
                 <!-- 场景介绍 (底部) -->
                 <div id="scene-intro" class="scene-intro">
-                    <div class="scene-category">
-                        <h2 data-i18n="scene.category">场景介绍（类别）</h2>
-                    </div>
-                    <div class="scene-cards">
-                        <div class="scene-card"></div>
-                        <div class="scene-card"></div>
-                        <div class="scene-card"></div>
-                        <div class="scene-card"></div>
-                    </div>
-                    <div class="scene-detail">
-                        <h3 data-i18n="scene.detail">场景介绍（图片文字）</h3>
-                        <div class="detail-cards">
-                            <div class="detail-card"></div>
-                            <div class="detail-card"></div>
-                            <div class="detail-card"></div>
-                            <div class="detail-card"></div>
+                        <div class="scene-cards">
+                            <article class="scene-card scene-card-retrieval">
+                                <div class="scene-card-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 4.75H14.5L18 8.25V18.25C18 19.2165 17.2165 20 16.25 20H7.75C6.7835 20 6 19.2165 6 18.25V6.5C6 5.5335 6.7835 4.75 7.75 4.75H7Z" />
+                                        <path d="M14 4.75V8.25H17.5" />
+                                        <path d="M8.75 11H15.25" />
+                                        <path d="M8.75 14H15.25" />
+                                        <path d="M8.75 17H12.5" />
+                                    </svg>
+                                </div>
+                                <div class="scene-card-body">
+                                    <h3 class="scene-card-title" data-i18n="scene.retrieval.title">检索增强</h3>
+                                    <p class="scene-card-desc" data-i18n="scene.retrieval.desc">每一个回答基于真实文献信息，夯实营养代谢科研知识根基。</p>
+                                </div>
+                            </article>
+
+                            <article class="scene-card scene-card-deep">
+                                <div class="scene-card-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <circle cx="7" cy="8" r="2.25" />
+                                        <circle cx="16.5" cy="6.75" r="2" />
+                                        <circle cx="17" cy="15.5" r="2.5" />
+                                        <circle cx="8.5" cy="17" r="1.75" />
+                                        <path d="M8.8 8.5L14.3 7.2" />
+                                        <path d="M8.4 9.5L15.3 14.1" />
+                                        <path d="M9.4 16.2L15 15.7" />
+                                    </svg>
+                                </div>
+                                <div class="scene-card-body">
+                                    <h3 class="scene-card-title" data-i18n="scene.deep.title">深度搜索</h3>
+                                    <p class="scene-card-desc" data-i18n="scene.deep.desc">营养代谢产物合成途径与调控网络深度分析，探索营养合成的更多可能性。</p>
+                                </div>
+                            </article>
+
+                            <article class="scene-card scene-card-library">
+                                <div class="scene-card-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path d="M4.75 8.25C4.75 7.2835 5.5335 6.5 6.5 6.5H10L11.5 8H17.5C18.4665 8 19.25 8.7835 19.25 9.75V17.5C19.25 18.4665 18.4665 19.25 17.5 19.25H6.5C5.5335 19.25 4.75 18.4665 4.75 17.5V8.25Z" />
+                                        <path d="M8 11.25H16" />
+                                        <path d="M8 14.25H13.5" />
+                                    </svg>
+                                </div>
+                                <div class="scene-card-body">
+                                    <h3 class="scene-card-title" data-i18n="scene.library.title">个人知识库</h3>
+                                    <p class="scene-card-desc" data-i18n="scene.library.desc">支持个人文献上传功能，打造符合个人需求的定制化知识库。</p>
+                                </div>
+                            </article>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>

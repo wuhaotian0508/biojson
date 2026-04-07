@@ -31,6 +31,7 @@ class RAGPipeline:
         self.skill_loader = skill_loader
         self._get_personal_lib = get_personal_lib
 
+
     # ------------------------------------------------------------------
     # 主流程
     # ------------------------------------------------------------------

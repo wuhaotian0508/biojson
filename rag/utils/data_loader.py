@@ -1,5 +1,13 @@
 """
-数据加载器 - 从 JSON 文件加载基因数据并生成 chunk
+数据加载器 — 从验证后的 JSON 文件加载基因数据并生成 GeneChunk
+
+职责：
+  1. 扫描 DATA_DIR 下所有 *_nutri_plant_verified.json 文件
+  2. 解析三种基因类型：Pathway_Genes / Regulation_Genes / Common_Genes
+  3. 将每个基因的字段格式化为可检索的纯文本 chunk
+  4. 使用 translate.json 将英文字段名翻译为中文（可选）
+
+输出的 GeneChunk 列表用于构建向量索引（JinaRetriever / SimpleRetriever）。
 """
 import json
 from pathlib import Path
@@ -10,25 +18,46 @@ import config
 
 @dataclass
 class GeneChunk:
-    """基因信息块"""
-    gene_name: str          # 基因名称
-    paper_title: str        # 文章标题
-    journal: str            # 期刊
-    doi: str                # DOI
-    gene_type: str          # 基因类型 (Pathway_Genes/Regulation_Genes/Common_Genes)
-    content: str            # 格式化的基因信息文本
-    metadata: Dict[str, Any]  # 原始基因数据
+    """
+    基因信息块 — 向量检索的基本单元。
+
+    每个 GeneChunk 对应一篇论文中的一个基因，
+    content 字段包含该基因的所有结构化信息（已格式化为纯文本）。
+    """
+    gene_name: str              # 基因名称，如 "GmFAD2"
+    paper_title: str            # 来源论文标题
+    journal: str                # 来源期刊
+    doi: str                    # 论文 DOI
+    gene_type: str              # 基因类别 (Pathway_Genes/Regulation_Genes/Common_Genes)
+    content: str                # 格式化的纯文本（用于嵌入和检索）
+    metadata: Dict[str, Any]    # 原始基因 JSON 数据（保留所有字段）
 
 
 class DataLoader:
-    """数据加载器"""
+    """
+    基因数据加载器 — 从 JSON 文件批量读取基因信息并生成 GeneChunk。
+
+    数据来源：extractor 模块输出的 *_nutri_plant_verified.json 文件，
+    每个文件包含一篇论文中提取的所有基因数据。
+    """
 
     def __init__(self, data_dir: Path = config.DATA_DIR):
+        """
+        参数:
+            data_dir: 基因 JSON 数据目录（默认 config.DATA_DIR）
+        """
         self.data_dir = data_dir
-        self.translation = self._load_translation()
+        self.translation = self._load_translation()  # 字段名 英→中 翻译表
 
     def _load_translation(self) -> Dict[str, str]:
-        """加载字段翻译映射"""
+        """
+        加载字段名翻译映射（英文字段名 → 中文显示名）。
+
+        翻译文件 translate.json 位于 rag/ 目录下，格式：
+          {"Gene_Name": "基因名称", "Species": "物种", ...}
+
+        若文件不存在，返回空字典（字段名将以英文原名显示）。
+        """
         translate_file = config.PROJECT_ROOT / "translate.json"
         if translate_file.exists():
             with open(translate_file, 'r', encoding='utf-8') as f:
@@ -72,7 +101,25 @@ class DataLoader:
 
     def _create_gene_chunk(self, gene: Dict, paper_title: str,
                           journal: str, doi: str, gene_type: str) -> GeneChunk:
-        """创建基因信息块"""
+        """
+        将单个基因的 JSON 数据格式化为 GeneChunk。
+
+        格式化逻辑：
+          1. 头部固定字段：基因名、文章、期刊、DOI、基因类型
+          2. 遍历基因的所有字段，跳过 NA/空值
+          3. 字段名使用翻译表转换为中文
+          4. 列表类型的值用 "; " 连接
+
+        参数:
+            gene:        单个基因的 JSON 字典
+            paper_title: 来源论文标题
+            journal:     来源期刊名
+            doi:         论文 DOI
+            gene_type:   基因类别键名
+
+        返回:
+            GeneChunk 实例
+        """
         gene_name = gene.get("Gene_Name", "Unknown")
 
         # 格式化基因信息

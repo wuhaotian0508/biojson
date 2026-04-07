@@ -66,7 +66,7 @@ _GENE_NAME_RE = re.compile(r'\b[A-Z][a-z]{1,2}[A-Z][A-Za-z]{0,10}\d{0,3}[A-Za-z]
 # ---- CRISPR 工具/酶名称黑名单（这些不是植物基因名） ----
 _TOOL_NAME_BLACKLIST = {
     "SpCas9", "SaCas9", "FnCas12a", "LbCpf1", "AsCpf1",
-    "CasRx", "dCas9", "nCas9", "Cas12a", "Cas13a",
+    "CasRx", "dCas9", "nCas9", "Cas12a", "Cas13a",'PubMed'
 }
 
 # ---- 基因名后紧跟这些词表示泛指，不应视为具体基因 ----

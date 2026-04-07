@@ -1,5 +1,7 @@
 # Environment variables
 .env
+.env.*
+!.env.example
 
 # Python
 __pycache__/
@@ -24,6 +26,8 @@ env/
 .idea/
 *.swp
 *.swo
+.claude/
+.codex/
 
 # OS files
 .DS_Store
@@ -66,3 +70,24 @@ data/backup_*/
 /claude-changes
 /ragtry
 *.ipynb
+
+# Logs and caches
+*.log
+.pytest_cache/
+
+# Python caches
+**/__pycache__/
+
+# Runtime / generated assets
+extractor/input/processed/
+extractor/output/
+extractor/reports/token-usage/
+rag/data/
+rag/web.log
+
+# Local workspace artifacts
+rag/web/.codex/
+rag/web/docs/
+rag/web/dir_list.txt
+
+.

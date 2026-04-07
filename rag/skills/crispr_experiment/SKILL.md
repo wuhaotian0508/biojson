@@ -16,9 +16,9 @@ tags: [crispr, experiment, gene-editing, sop]
 ## 执行流程
 调用 run_crispr_pipeline 工具，传入基因列表。后端自动执行：
 
-1. gene2accession.py.py — 查询 NCBI 获取基因 accession
-2. accession2sequence.py.py — 下载 FASTA 基因序列
+1. gene2accession.py — 查询 NCBI 获取基因 accession
+2. accession2sequence.py — 下载 FASTA 基因序列
 3. crispr_target.py — 设计 CRISPR 靶点
 4. experiment_design.py — 基于模板生成实验方案 SOP
 
-所有脚本位于 rag/分析流程/ 目录。
+所有脚本位于 rag/skills/crispr_experiment/ 目录。

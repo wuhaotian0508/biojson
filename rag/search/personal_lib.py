@@ -1,4 +1,14 @@
-"""个人知识库模块 - PDF 上传、解析、向量索引、检索"""
+"""
+个人知识库模块 — 用户 PDF 上传、解析、向量索引、检索
+
+每个用户拥有独立的知识库（按 user_id 隔离），存储结构：
+  personal_lib/{user_id}/
+    pdfs/       — 上传的 PDF 原始文件
+    index/      — 持久化的向量索引
+      chunks.pkl       — 序列化的 chunk 列表（List[Dict]）
+      embeddings.npy   — 对应的嵌入矩阵 (N, dim)
+      manifest.json    — 文件元数据（页数、chunk 数、上传时间等）
+"""
 import json
 import logging
 import pickle
@@ -7,43 +17,46 @@ from pathlib import Path
 from typing import Dict, List, Optional
 
 import numpy as np
-import requests
 
 from config import (
-    JINA_API_KEY,
-    JINA_EMBEDDING_URL,
-    EMBEDDING_MODEL,
     PERSONAL_LIB_DIR,
     MAX_PDF_SIZE_MB,
     MAX_FILES_PER_USER,
     CHUNK_SIZE,
     CHUNK_OVERLAP,
 )
+from search.embedding_utils import get_embeddings, _build_headers
 
 logger = logging.getLogger(__name__)
 
 
 class PersonalLibrary:
-    """Per-user PDF knowledge base: upload → parse → embed → search."""
+    """
+    用户个人 PDF 知识库：上传 → 解析 → 切块 → 嵌入 → 检索。
+
+    每个实例绑定一个 user_id，对应一组独立的 PDF 文件和向量索引。
+    """
 
     def __init__(self, user_id: str):
+        """
+        参数:
+            user_id: 用户唯一标识（来自 Supabase auth）
+        """
         self.user_id = user_id
-        self.base_dir = PERSONAL_LIB_DIR / user_id
-        self.pdf_dir = self.base_dir / "pdfs"
-        self.index_dir = self.base_dir / "index"
+        self.base_dir = PERSONAL_LIB_DIR / user_id  # 用户根目录
+        self.pdf_dir = self.base_dir / "pdfs"        # PDF 存储目录
+        self.index_dir = self.base_dir / "index"     # 索引存储目录
 
         self.pdf_dir.mkdir(parents=True, exist_ok=True)
         self.index_dir.mkdir(parents=True, exist_ok=True)
 
-        self.jina_headers = {
-            "Authorization": f"Bearer {JINA_API_KEY}",
-            "Content-Type": "application/json",
-        }
+        # ---- 用于 Jina API 调用的请求头 ----
+        self._headers = _build_headers()
 
-        # 内存索引
-        self.chunks: List[Dict] = []
-        self.embeddings: Optional[np.ndarray] = None
-        self.manifest: Dict = {}
+        # ---- 内存中的索引数据 ----
+        self.chunks: List[Dict] = []                  # chunk 字典列表（含 content, metadata 等）
+        self.embeddings: Optional[np.ndarray] = None   # 嵌入矩阵 (N, dim)
+        self.manifest: Dict = {}                       # 文件元数据 {filename: {...}}
 
         self._load_index()
 
@@ -51,6 +64,7 @@ class PersonalLibrary:
     # 索引 I/O
     # ------------------------------------------------------------------
     def _load_index(self):
+        """从磁盘加载已有索引（chunks + embeddings + manifest）"""
         chunks_file = self.index_dir / "chunks.pkl"
         emb_file = self.index_dir / "embeddings.npy"
         manifest_file = self.index_dir / "manifest.json"
@@ -64,6 +78,7 @@ class PersonalLibrary:
                 self.manifest = json.load(f)
 
     def _save_index(self):
+        """将内存中的索引持久化到磁盘"""
         with open(self.index_dir / "chunks.pkl", "wb") as f:
             pickle.dump(self.chunks, f)
         if self.embeddings is not None:
@@ -139,7 +154,20 @@ class PersonalLibrary:
         return self.manifest[safe_name]
 
     def _chunk_pages(self, filename: str, pages_text: List[tuple]) -> List[Dict]:
-        """将 PDF 页面文本切分为 chunks"""
+        """
+        将 PDF 页面文本按固定窗口切分为 chunks。
+
+        采用滑动窗口策略：窗口大小 = CHUNK_SIZE，步进 = CHUNK_SIZE - CHUNK_OVERLAP。
+        相邻 chunk 之间有 CHUNK_OVERLAP 个字符重叠，确保跨窗口的句子不丢失。
+
+        参数:
+            filename:   PDF 文件名（作为 chunk 的 title 和 metadata）
+            pages_text: [(page_number, page_text), ...] 页面文本列表
+
+        返回:
+            统一格式的 chunk 字典列表，每个 chunk 包含:
+              source_type, title, content, url, score, metadata
+        """
         chunks = []
         for page_num, text in pages_text:
             start = 0
@@ -148,50 +176,48 @@ class PersonalLibrary:
                 chunk_text = text[start:end]
                 if chunk_text.strip():
                     chunks.append({
-                        "source_type": "personal",
+                        "source_type": "personal",   # 标记来源为个人库
                         "title": filename,
                         "content": chunk_text.strip(),
                         "url": "",
-                        "score": 0.0,
+                        "score": 0.0,                # 初始分数，检索时会更新
                         "metadata": {
                             "filename": filename,
                             "page": page_num,
                         },
                     })
-                step = CHUNK_SIZE - CHUNK_OVERLAP
+                step = CHUNK_SIZE - CHUNK_OVERLAP    # 滑动步进
                 start += max(step, 1)
         return chunks
 
     def _get_embeddings(self, texts: List[str], batch_size: int = 32) -> np.ndarray:
-        all_emb = []
-        for i in range(0, len(texts), batch_size):
-            batch = texts[i : i + batch_size]
-            payload = {
-                "model": EMBEDDING_MODEL,
-                "input": batch,
-                "task": "retrieval.passage",
-            }
-            resp = requests.post(
-                JINA_EMBEDDING_URL, json=payload, headers=self.jina_headers, timeout=60
-            )
-            resp.raise_for_status()
-            batch_emb = [item["embedding"] for item in resp.json()["data"]]
-            all_emb.extend(batch_emb)
-        return np.array(all_emb)
+        """调用共享 Jina Embedding 工具获取文本向量（委托给 embedding_utils）"""
+        return get_embeddings(texts, batch_size=batch_size, headers=self._headers)
 
     # ------------------------------------------------------------------
     # 文件管理
     # ------------------------------------------------------------------
     def delete_file(self, filename: str) -> bool:
+        """
+        删除指定 PDF 文件及其在索引中的所有 chunks。
+
+        同时更新 manifest 和持久化索引。
+
+        参数:
+            filename: PDF 文件名
+
+        返回:
+            True 删除成功，False 文件不存在
+        """
         if filename not in self.manifest:
             return False
 
-        # 删除 PDF 文件
+        # ---- 删除 PDF 原始文件 ----
         pdf_path = self.pdf_dir / filename
         if pdf_path.exists():
             pdf_path.unlink()
 
-        # 从索引中移除对应 chunks
+        # ---- 从索引中移除该文件对应的所有 chunks ----
         keep_idx = [
             i for i, c in enumerate(self.chunks) if c["metadata"].get("filename") != filename
         ]
@@ -199,6 +225,7 @@ class PersonalLibrary:
         if self.embeddings is not None and len(keep_idx) > 0:
             self.embeddings = self.embeddings[keep_idx]
         elif self.embeddings is not None:
+            # 所有 chunk 都被删除，保留空矩阵（维持维度信息）
             self.embeddings = np.empty((0, self.embeddings.shape[1]))
 
         del self.manifest[filename]

@@ -13,12 +13,19 @@ const I18N = {
         // 头部
         'header.newChat': '+ 新对话',
         // 输入区
-        'input.placeholder': '描述你的需求，例如：对衰老相关的Biomarker进行文献综述',
+        'input.placeholder': '描述你的需求，例如：如何通过基因编辑提高大豆类黄酮含量',
         'input.personal': '个人库',
-        'input.depth': '深度调研',
+        'input.depth': '深度搜索',
         // 场景
-        'scene.category': '场景介绍（类别）',
-        'scene.detail': '场景介绍（图片文字）',
+        'scene.eyebrow': '科研场景',
+        'scene.category': '场景介绍',
+        'scene.subtitle': '围绕文献证据、调控网络与个人积累，构建更贴合植物营养代谢研究流程的智能检索入口。',
+        'scene.retrieval.title': '检索增强',
+        'scene.retrieval.desc': '每一个回答基于真实文献信息，夯实营养代谢科研知识根基。',
+        'scene.deep.title': '深度搜索',
+        'scene.deep.desc': '营养代谢产物合成途径与调控网络深度分析，探索营养合成的更多可能性。',
+        'scene.library.title': '个人知识库',
+        'scene.library.desc': '支持个人文献上传功能，打造符合个人需求的定制化知识库。',
         // 知识库弹窗
         'kb.title': '我的知识库',
         'kb.uploadBtn': '+ 上传 PDF',
@@ -55,7 +62,7 @@ const I18N = {
         'auth.feature1': '基因数据库语义检索',
         'auth.feature2': 'PubMed 文献联网搜索',
         'auth.feature3': '个人知识库管理',
-        'auth.feature4': 'AI 深度调研报告',
+        'auth.feature4': 'AI 深度搜索报告',
         // 管理后台
         'header.admin': '管理后台',
         'auth.logout': '退出登录',
@@ -69,7 +76,7 @@ const I18N = {
         'profile.deleteFail': '删除失败',
         // 搜索进度
         'search.searching': '正在搜索...',
-        'search.deepSearching': '深度调研中，正在检索更多文献并生成综合报告...',
+        'search.deepSearching': '深度搜索中，正在检索更多文献并生成综合报告...',
         // 来源
         'source.title': '📚 参考来源',
         'source.gene_db': '基因库',
@@ -116,11 +123,18 @@ const I18N = {
         'sidebar.noHistory': 'No history yet',
         'sidebar.myLibrary': 'My Library',
         'header.newChat': '+ New Chat',
-        'input.placeholder': 'Describe your needs, e.g.: Literature review on aging-related biomarkers',
+        'input.placeholder': 'Describe your needs, e.g.: How to increase soybean flavonoid content via gene editing',
         'input.personal': 'Personal',
         'input.depth': 'Deep Research',
-        'scene.category': 'Scenarios (Categories)',
-        'scene.detail': 'Scenarios (Details)',
+        'scene.eyebrow': 'Research Modes',
+        'scene.category': 'Research Scenarios',
+        'scene.subtitle': 'Build a smarter entry point for plant nutrient metabolism research around literature evidence, regulatory networks, and your own curated knowledge.',
+        'scene.retrieval.title': 'Retrieval Augmentation',
+        'scene.retrieval.desc': 'Every answer is grounded in real literature, strengthening the research foundation for nutrient metabolism studies.',
+        'scene.deep.title': 'Deep Search',
+        'scene.deep.desc': 'Dive into biosynthetic pathways and regulatory networks of nutrient metabolites to uncover more possibilities for nutrient formation.',
+        'scene.library.title': 'Personal Library',
+        'scene.library.desc': 'Upload your own literature and build a customized knowledge base tailored to your research needs.',
         'kb.title': 'My Library',
         'kb.uploadBtn': '+ Upload PDF',
         'kb.uploading': 'Uploading...',
@@ -155,7 +169,7 @@ const I18N = {
         'auth.feature1': 'Semantic gene database retrieval',
         'auth.feature2': 'PubMed literature online search',
         'auth.feature3': 'Personal library management',
-        'auth.feature4': 'AI deep research reports',
+        'auth.feature4': 'AI deep search reports',
         'header.admin': 'Admin Panel',
         'auth.logout': 'Log out',
         'profile.changeAvatar': 'Change Avatar',
@@ -166,7 +180,7 @@ const I18N = {
         'profile.confirmDelete': 'Permanently delete your account? This cannot be undone!',
         'profile.deleteFail': 'Delete failed',
         'search.searching': 'Searching...',
-        'search.deepSearching': 'Deep research: retrieving more literature and generating a comprehensive report...',
+        'search.deepSearching': 'Deep search: retrieving more literature and generating a comprehensive report...',
         'source.title': '📚 References',
         'source.gene_db': 'Gene DB',
         'source.pubmed': 'PubMed',
@@ -333,7 +347,7 @@ function setupEventListeners() {
         queryInput.style.height = Math.min(queryInput.scrollHeight, 120) + 'px';
     });
 
-    // 深度调研按钮切换
+    // 深度搜索按钮切换
     const depthBtn = document.getElementById('depth-btn');
     if (depthBtn) {
         depthBtn.addEventListener('click', () => {
@@ -746,16 +760,10 @@ async function streamQuery(query, messageId) {
                         const state = getAssistantTurnState(messageId);
                         state.streamDone = true;
                         updateMessage(messageId, formatAnswer(answerText));
-                        // 将来源渲染到 extrasEl（不会被 updateMessage 覆盖）
+                        // 在回答末尾追加参考文献
                         const { extrasEl } = getMessageRegions(messageId);
-                        if (extrasEl && state.sources && state.sources.length > 0) {
-                            const sourcesHtml = renderSources(state.sources);
-                            if (sourcesHtml) {
-                                const sourcesDiv = document.createElement('div');
-                                sourcesDiv.className = 'sources-wrapper';
-                                sourcesDiv.innerHTML = sourcesHtml;
-                                extrasEl.appendChild(sourcesDiv);
-                            }
+                        if (extrasEl && sources && sources.length > 0) {
+                            extrasEl.insertAdjacentHTML('beforeend', renderReferences(sources));
                         }
                         renderExperimentButton(messageId);
                     } else if (data.type === 'error') {
@@ -785,15 +793,10 @@ async function streamQuery(query, messageId) {
                         const state = getAssistantTurnState(messageId);
                         state.streamDone = true;
                         updateMessage(messageId, formatAnswer(answerText));
+                        // 在回答末尾追加参考文献
                         const { extrasEl } = getMessageRegions(messageId);
-                        if (extrasEl && state.sources && state.sources.length > 0) {
-                            const sourcesHtml = renderSources(state.sources);
-                            if (sourcesHtml) {
-                                const sourcesDiv = document.createElement('div');
-                                sourcesDiv.className = 'sources-wrapper';
-                                sourcesDiv.innerHTML = sourcesHtml;
-                                extrasEl.appendChild(sourcesDiv);
-                            }
+                        if (extrasEl && sources && sources.length > 0) {
+                            extrasEl.insertAdjacentHTML('beforeend', renderReferences(sources));
                         }
                         renderExperimentButton(messageId);
                     }
@@ -926,7 +929,7 @@ function getSourceBadge(sourceType) {
     return { label: sourceType, cls: '' };
 }
 
-// 渲染来源列表
+// 渲染来源列表（旧版带分数 — 保留但不再使用）
 function renderSources(sources) {
     if (!sources || sources.length === 0) return '';
 
@@ -967,6 +970,57 @@ function renderSources(sources) {
         <div class="sources-section">
             <div class="sources-title">${t('source.title')} (${sources.length}):</div>
             <div class="sources-list">${items}</div>
+        </div>
+    `;
+}
+
+// 渲染参考文献列表（仅文献名+链接，无基因名、无分数）
+function renderReferences(sources) {
+    if (!sources || sources.length === 0) return '';
+
+    // 用 Set 按文献名去重
+    const seen = new Set();
+    const refs = [];
+
+    for (const s of sources) {
+        let literatureName = '';
+
+        if (s.source_type === 'gene_db') {
+            literatureName = s.paper_title || s.title || '';
+        } else if (s.source_type === 'pubmed') {
+            literatureName = s.paper_title || s.title || '';
+        } else if (s.source_type === 'jina_web') {
+            literatureName = s.title || '';
+        } else if (s.source_type === 'personal') {
+            literatureName = s.filename || s.title || '';
+        } else {
+            literatureName = s.title || s.paper_title || '';
+        }
+
+        if (!literatureName) continue;
+
+        if (seen.has(literatureName)) continue;
+        seen.add(literatureName);
+
+        refs.push({ literatureName, url: s.url || '', doi: s.doi || '', pmid: s.pmid || '' });
+    }
+
+    if (refs.length === 0) return '';
+
+    const items = refs.map((r, i) => {
+        const num = i + 1;
+        let litHtml = escapeHtml(r.literatureName);
+        const href = r.url || (r.doi ? `https://doi.org/${r.doi}` : (r.pmid ? `https://pubmed.ncbi.nlm.nih.gov/${r.pmid}/` : ''));
+        if (href) {
+            litHtml = `<a href="${href}" target="_blank" rel="noopener">${litHtml}</a>`;
+        }
+        return `<div class="ref-item">[${num}] ${litHtml}</div>`;
+    }).join('');
+
+    return `
+        <div class="references-section">
+            <div class="references-title">📖 参考文献</div>
+            <div class="references-list">${items}</div>
         </div>
     `;
 }
@@ -1424,15 +1478,9 @@ function restoreConversation(session) {
         // 恢复来源、基因、SOP 到 extrasEl
         const { extrasEl } = getMessageRegions(msgId);
         if (extrasEl) {
-            // 来源
+            // 在回答末尾追加参考文献
             if (turn.sources && turn.sources.length > 0) {
-                const sourcesHtml = renderSources(turn.sources);
-                if (sourcesHtml) {
-                    const sourcesDiv = document.createElement('div');
-                    sourcesDiv.className = 'sources-wrapper';
-                    sourcesDiv.innerHTML = sourcesHtml;
-                    extrasEl.appendChild(sourcesDiv);
-                }
+                extrasEl.insertAdjacentHTML('beforeend', renderReferences(turn.sources));
             }
             // SOP 结果
             if (turn.sops && Object.keys(turn.sops).length > 0) {
@@ -1561,16 +1609,37 @@ function renderSOPs(container, sops) {
 
         const headerEl = document.createElement('div');
         headerEl.className = 'experiment-sop-header';
+
+        // 生成下载文件名：基因名（accession）+ 登录账号
+        const userEmail = (typeof currentSession !== 'undefined' && currentSession?.user?.email)
+            ? currentSession.user.email.split('@')[0]
+            : 'user';
+        const safeAccession = accession.replace(/[^a-zA-Z0-9\-_]/g, '_');
+        const downloadFilename = `${safeAccession}_${userEmail}.doc`;
+
         headerEl.innerHTML =
             `<span class="experiment-sop-title">\uD83D\uDCCB 实验方案: ${escapeHtml(accession)}</span>` +
-            `<span class="experiment-sop-toggle">\u25BC</span>`;
+            `<span style="display:flex;align-items:center;gap:8px;">` +
+            `<button class="sop-download-btn" title="下载实验方案">⬇ 下载</button>` +
+            `<span class="experiment-sop-toggle">\u25BC</span>` +
+            `</span>`;
+
+        // 用 addEventListener 绑定下载，避免将大量 SOP 文本嵌入 onclick 属性导致 HTML 解析错误
+        headerEl.querySelector('.sop-download-btn').addEventListener('click', (e) => {
+            e.stopPropagation();
+            downloadSOP(downloadFilename, text);
+        });
 
         const bodyEl = document.createElement('div');
         bodyEl.className = 'experiment-sop-body';
 
         const contentDiv = document.createElement('div');
-        contentDiv.className = 'experiment-sop-content';
-        contentDiv.textContent = text;
+        contentDiv.className = 'experiment-sop-content markdown-body';
+        if (typeof marked !== 'undefined') {
+            contentDiv.innerHTML = marked.parse(text);
+        } else {
+            contentDiv.textContent = text;
+        }
 
         bodyEl.appendChild(contentDiv);
         sopEl.appendChild(headerEl);
@@ -1590,4 +1659,61 @@ function renderSOPs(container, sops) {
             bodyEl.classList.toggle('expanded');
         });
     }
+}
+
+// 下载 SOP 文件（转换为 Word .doc 格式）
+function downloadSOP(filename, text) {
+    // 确保文件后缀为 .doc
+    const docFilename = filename.replace(/\.(md|doc)$/i, '') + '.doc';
+
+    // 用 marked 将 markdown 转换为 HTML
+    let htmlContent = '';
+    if (typeof marked !== 'undefined') {
+        htmlContent = marked.parse(text);
+    } else {
+        // fallback：简单段落转换
+        htmlContent = text.split('\n').map(line => `<p>${line}</p>`).join('');
+    }
+
+    // 构造 Word 兼容的 HTML 文档
+    const wordDoc = `
+<!DOCTYPE html>
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+      xmlns:w="urn:schemas-microsoft-com:office:word"
+      xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="utf-8">
+<style>
+    body { font-family: "SimSun", "宋体", "Times New Roman", serif; font-size: 12pt; line-height: 1.8; color: #333; }
+    h1 { font-size: 18pt; font-weight: bold; margin: 16pt 0 8pt 0; }
+    h2 { font-size: 16pt; font-weight: bold; margin: 14pt 0 6pt 0; border-bottom: 1px solid #ccc; padding-bottom: 4pt; }
+    h3 { font-size: 14pt; font-weight: bold; margin: 12pt 0 4pt 0; }
+    h4 { font-size: 12pt; font-weight: bold; margin: 10pt 0 4pt 0; }
+    p { margin: 4pt 0; }
+    ul, ol { margin: 4pt 0 4pt 18pt; }
+    li { margin-bottom: 2pt; }
+    table { border-collapse: collapse; width: 100%; margin: 8pt 0; }
+    th, td { border: 1px solid #999; padding: 4pt 8pt; text-align: left; font-size: 11pt; }
+    th { background: #f0f0f0; font-weight: bold; }
+    blockquote { margin: 4pt 0; padding: 4pt 12pt; border-left: 3pt solid #ccc; color: #666; }
+    code { font-family: "Courier New", monospace; font-size: 10pt; background: #f5f5f5; padding: 1pt 3pt; }
+    pre { font-family: "Courier New", monospace; font-size: 10pt; background: #f5f5f5; padding: 8pt; margin: 6pt 0; white-space: pre-wrap; }
+    hr { border: none; border-top: 1pt solid #ccc; margin: 10pt 0; }
+    a { color: #2563eb; }
+</style>
+</head>
+<body>
+${htmlContent}
+</body>
+</html>`;
+
+    const blob = new Blob([wordDoc], { type: 'application/msword;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = docFilename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
 }
