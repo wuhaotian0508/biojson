@@ -64,15 +64,13 @@ async function initAuth() {
         if (cfg.site_url) siteUrl = cfg.site_url;
 
         // 监听登录状态变化（刷新页面、token 过期等）
+        // onAuthStateChange 会自动触发 INITIAL_SESSION 事件，无需再手动 getSession
         supabaseClient.auth.onAuthStateChange((event, session) => {
             currentSession = session;
-            handleAuthStateChange(session);
+            handleAuthStateChange(session).catch(err => {
+                console.error('处理登录状态变化失败:', err);
+            });
         });
-
-        // 检查是否已有登录会话
-        const { data } = await supabaseClient.auth.getSession();
-        currentSession = data.session;
-        handleAuthStateChange(data.session);
 
     } catch (err) {
         console.error('认证初始化失败:', err);
@@ -174,47 +172,54 @@ function updateUserButton(user) {
 
 // ===== 获取用户 profile（管理员状态等） =====
 async function fetchUserProfile() {
-    try {
-        // 确保使用最新的 session token
-        const { data: sessionData } = await supabaseClient.auth.getSession();
-        if (sessionData?.session) {
-            currentSession = sessionData.session;
-        }
+    const MAX_RETRIES = 3;
 
-        const token = getAccessToken();
-        if (!token) return;
+    for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+        try {
+            // 直接用 currentSession（已由 onAuthStateChange 回调设好）
+            // 不再调 getSession()，避免刚登录时 SDK 内部 session 还没持久化导致拿到空 token
+            const token = getAccessToken();
+            if (!token) {
+                console.warn('fetchUserProfile: token 为空，跳过');
+                return;
+            }
 
-        const resp = await fetch('/api/user/profile', {
-            headers: { 'Authorization': 'Bearer ' + token },
-        });
-        if (!resp.ok) {
-            console.warn('获取用户 profile 失败, status:', resp.status);
-            return;
-        }
-        userProfile = await resp.json();
+            const resp = await fetch('/api/user/profile', {
+                headers: { 'Authorization': 'Bearer ' + token },
+            });
+            if (!resp.ok) {
+                throw new Error(`status ${resp.status}`);
+            }
+            userProfile = await resp.json();
 
-        // 更新昵称显示
-        const nicknameEl = document.getElementById('user-nickname');
-        if (nicknameEl && userProfile.nickname) {
-            nicknameEl.textContent = userProfile.nickname;
-        }
+            // 更新昵称显示
+            const nicknameEl = document.getElementById('user-nickname');
+            if (nicknameEl && userProfile.nickname) {
+                nicknameEl.textContent = userProfile.nickname;
+            }
 
-        // 更新头像显示
-        const avatarEl = document.getElementById('user-avatar');
-        if (avatarEl && userProfile.avatar_url) {
-            avatarEl.textContent = '';
-            avatarEl.innerHTML = `<img src="${userProfile.avatar_url}" alt="avatar">`;
-        }
+            // 更新头像显示
+            const avatarEl = document.getElementById('user-avatar');
+            if (avatarEl && userProfile.avatar_url) {
+                avatarEl.textContent = '';
+                avatarEl.innerHTML = `<img src="${userProfile.avatar_url}" alt="avatar">`;
+            }
 
-        // 管理员 → 显示管理后台按钮
-        if (userProfile.is_admin) {
-            showAdminButton();
-        } else {
-            hideAdminButton();
+            // 管理员 → 显示管理后台按钮
+            if (userProfile.is_admin) {
+                showAdminButton();
+            } else {
+                hideAdminButton();
+            }
+            return; // 成功，退出重试循环
+        } catch (e) {
+            console.warn(`获取用户 profile 失败 (第${attempt}次):`, e);
+            if (attempt < MAX_RETRIES) {
+                await new Promise(r => setTimeout(r, 1000 * attempt)); // 1s, 2s 退避
+            }
         }
-    } catch (e) {
-        console.warn('获取用户 profile 失败:', e);
     }
+    console.error('获取用户 profile 最终失败，管理员状态可能不正确');
 }
 
 // ===== 管理后台按钮显示/隐藏 =====
@@ -242,17 +247,20 @@ function closeAdminPanel() {
 function switchAuthForm(mode) {
     const loginForm = document.getElementById('login-form');
     const signupForm = document.getElementById('signup-form');
+    const verifyForm = document.getElementById('verify-code-form');
     const loginTab = document.getElementById('tab-login');
     const signupTab = document.getElementById('tab-signup');
 
     if (mode === 'signup') {
         loginForm.style.display = 'none';
         signupForm.style.display = 'flex';
+        verifyForm.style.display = 'none';
         loginTab.classList.remove('active');
         signupTab.classList.add('active');
     } else {
         loginForm.style.display = 'flex';
         signupForm.style.display = 'none';
+        verifyForm.style.display = 'none';
         loginTab.classList.add('active');
         signupTab.classList.remove('active');
     }
@@ -307,6 +315,10 @@ async function handleLogin(e) {
 }
 
 // ===== 处理注册表单提交 =====
+let pendingSignupEmail = '';
+let pendingSignupPassword = '';
+let pendingSignupPasswordReusable = true;
+
 async function handleSignUp(e) {
     e.preventDefault();
     clearAuthError();
@@ -336,23 +348,146 @@ async function handleSignUp(e) {
     btn.textContent = '注册中...';
 
     try {
-        // 构建 user_metadata
-        const metadata = {};
-        if (nickname) metadata.nickname = nickname;
-        if (signupAvatarDataUrl) metadata.avatar_url = signupAvatarDataUrl;
+        // 调用后端注册接口
+        const payload = { email, password };
+        if (nickname) payload.nickname = nickname;
+        if (signupAvatarDataUrl) payload.avatar_url = signupAvatarDataUrl;
 
-        const data = await signUpWithEmail(email, password, metadata);
-        // Supabase 默认需要邮箱确认，如果开启了自动确认则直接登录
-        if (data.user && !data.session) {
-            showAuthError('注册成功！请查收邮箱确认链接后再登录。');
-            switchAuthForm('login');
+        const resp = await fetch('/api/auth/signup', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+        });
+
+        const data = await resp.json();
+
+        if (!resp.ok) {
+            showAuthError(data.error || data.message || '注册失败');
+            return;
         }
+
+        // 注册成功，保存邮箱和密码用于验证后自动登录
+        pendingSignupEmail = email;
+        pendingSignupPassword = password;
+        pendingSignupPasswordReusable = data.password_updated !== false;
+
+        // 隐藏注册表单，显示验证码输入界面
+        document.getElementById('signup-form').style.display = 'none';
+        document.getElementById('verify-code-form').style.display = 'flex';
+        document.getElementById('verify-email-display').textContent = email;
+
+        showAuthError(''); // 清除错误
     } catch (err) {
-        showAuthError(err.message || '注册失败');
+        showAuthError(err.message || '注册失败，请稍后再试');
     } finally {
         btn.disabled = false;
         btn.textContent = '注 册';
     }
+}
+
+// ===== 处理验证码提交 =====
+async function handleVerifyCode(e) {
+    e.preventDefault();
+    clearAuthError();
+
+    const code = document.getElementById('verify-code-input').value.trim();
+
+    if (!code || code.length !== 6) {
+        showAuthError('请输入 6 位验证码');
+        return;
+    }
+
+    const btn = document.getElementById('verify-code-btn');
+    btn.disabled = true;
+    btn.textContent = '验证中...';
+
+    try {
+        const resp = await fetch('/api/auth/verify', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                email: pendingSignupEmail,
+                code: code,
+            }),
+        });
+
+        const data = await resp.json();
+
+        if (!resp.ok) {
+            showAuthError(data.error || data.message || '验证失败');
+            return;
+        }
+
+        // 验证成功：仅在本次注册创建了新账号时自动登录。
+        if (pendingSignupPasswordReusable && pendingSignupPassword) {
+            try {
+                await loginWithEmail(pendingSignupEmail, pendingSignupPassword);
+                // 登录成功后会自动触发 handleAuthStateChange，隐藏登录界面
+                // 重置验证码表单
+                document.getElementById('verify-code-form').style.display = 'none';
+                document.getElementById('verify-code-input').value = '';
+                document.getElementById('signup-form').style.display = 'flex';
+                pendingSignupEmail = '';
+                pendingSignupPassword = '';
+                pendingSignupPasswordReusable = true;
+            } catch (loginErr) {
+                showAuthError('验证成功，但自动登录失败，请手动登录');
+                document.getElementById('verify-code-form').style.display = 'none';
+                document.getElementById('signup-form').style.display = 'none';
+                switchAuthForm('login');
+            }
+        } else {
+            showAuthError('验证成功，请使用原密码登录');
+            document.getElementById('verify-code-form').style.display = 'none';
+            document.getElementById('signup-form').style.display = 'none';
+            switchAuthForm('login');
+        }
+    } catch (err) {
+        showAuthError(err.message || '验证失败，请稍后再试');
+    } finally {
+        btn.disabled = false;
+        btn.textContent = '验 证';
+    }
+}
+
+// ===== 重新发送验证码 =====
+async function handleResendCode() {
+    clearAuthError();
+
+    const btn = document.getElementById('resend-code-btn');
+    btn.disabled = true;
+    btn.textContent = '发送中...';
+
+    try {
+        const resp = await fetch('/api/auth/resend', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: pendingSignupEmail }),
+        });
+
+        const data = await resp.json();
+
+        if (!resp.ok) {
+            showAuthError(data.error || data.message || '发送失败');
+            return;
+        }
+
+        showAuthError('新验证码已发送，请查收邮箱');
+    } catch (err) {
+        showAuthError(err.message || '发送失败，请稍后再试');
+    } finally {
+        btn.disabled = false;
+        btn.textContent = '重新发送';
+    }
+}
+
+// ===== 返回注册表单 =====
+function handleBackToSignup() {
+    document.getElementById('verify-code-form').style.display = 'none';
+    document.getElementById('signup-form').style.display = 'flex';
+    document.getElementById('verify-code-input').value = '';
+    pendingSignupPasswordReusable = true;
+    clearAuthError();
 }
 
 // ===== 点击用户区域 → 显示用户信息弹出框 =====
@@ -554,6 +689,24 @@ function setupAuthListeners() {
     // 注册头像选择
     const avatarFileInput = document.getElementById('avatar-file-input');
     if (avatarFileInput) avatarFileInput.addEventListener('change', handleAvatarFileChange);
+
+    // 验证码表单
+    const verifyForm = document.getElementById('verify-code-form');
+    if (verifyForm) verifyForm.addEventListener('submit', handleVerifyCode);
+
+    const resendBtn = document.getElementById('resend-code-btn');
+    if (resendBtn) resendBtn.addEventListener('click', handleResendCode);
+
+    const backToSignupBtn = document.getElementById('back-to-signup-btn');
+    if (backToSignupBtn) backToSignupBtn.addEventListener('click', handleBackToSignup);
+
+    // 验证码输入框：只允许数字
+    const verifyInput = document.getElementById('verify-code-input');
+    if (verifyInput) {
+        verifyInput.addEventListener('input', function() {
+            this.value = this.value.replace(/\D/g, '').slice(0, 6);
+        });
+    }
 
     // 管理后台按钮
     const adminBtn = document.getElementById('admin-btn');

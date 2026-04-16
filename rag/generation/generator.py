@@ -4,21 +4,13 @@ LLM 生成模块 — 基于多来源检索结果生成专业回答
 职责：
   1. 将统一格式的检索结果格式化为 LLM 上下文
   2. 根据模式选择 system prompt（普通/深度/追问）
-  3. 管理对话历史截断，防止 context 超限
-  4. 支持流式和非流式两种生成方式
+  3. 支持流式和非流式两种生成方式
 
-支持的来源类型（source_type）：
-  - gene_db   : 基因数据库检索结果
-  - pubmed    : PubMed 文献摘要
-  - jina_web  : 网页搜索结果
-  - personal  : 用户个人知识库
+LLM 客户端管理统一由 core.llm_client 负责（主/备切换、model_id 路由等）。
 """
 from typing import List, Dict
 
-import openai
-from openai import OpenAI
-
-from config import LLM_API_KEY, LLM_BASE_URL, LLM_MODEL, FALLBACK_API_KEY, FALLBACK_BASE_URL, FALLBACK_MODEL
+from core.llm_client import call_llm_sync, call_llm_stream
 
 SYSTEM_PROMPT = """你是一个专业的植物分子生物学专家，基于检索到的多来源信息回答用户问题。
 信息来源可能包括：基因数据库、PubMed 文献、用户个人知识库。
@@ -160,44 +152,9 @@ class RAGGenerator:
       - 深度调研模式：系统性分析报告 (max_tokens=8192)
       - 追问模式：不重复之前内容，聚焦新问题
       - 流式输出：SSE 事件逐 chunk 返回
+
+    LLM 客户端管理已统一到 core.llm_client。
     """
-
-    def __init__(self, client=None):
-        """
-        参数:
-            client: OpenAI 客户端实例（可注入自定义实例，用于测试）
-        """
-        # ---- 主 LLM 客户端（优先使用主 API） ----
-        self.client = client or OpenAI(
-            api_key=LLM_API_KEY,
-            base_url=LLM_BASE_URL
-        )
-        self.model = LLM_MODEL
-
-        # ---- Fallback LLM 客户端（主 API 内容过滤报 400 时自动切换） ----
-        # 仅在 .env 中配置了 FALLBACK_API_KEY 时才创建，否则为 None
-        self.fallback_client = (
-            OpenAI(api_key=FALLBACK_API_KEY, base_url=FALLBACK_BASE_URL)
-            if FALLBACK_API_KEY else None
-        )
-        # fallback_model：fallback 使用的模型名；未配置时退回主模型名
-        self.fallback_model = FALLBACK_MODEL or LLM_MODEL
-
-    @staticmethod
-    def _truncate_history(history: list, max_chars_per_msg: int = 800) -> list:
-        """截断历史消息，避免 context 过长。
-        每条 assistant 消息最多保留 max_chars_per_msg 字符，user 消息保留原文。
-        """
-        if not history:
-            return []
-        truncated = []
-        for msg in history:
-            if msg.get("role") == "assistant" and len(msg.get("content", "")) > max_chars_per_msg:
-                content = msg["content"][:max_chars_per_msg] + "\n...(之前回答已截断)"
-                truncated.append({"role": "assistant", "content": content})
-            else:
-                truncated.append(msg)
-        return truncated
 
     def _build_messages(self, query: str, results, use_depth: bool = False, history: list = None) -> tuple[list[dict], int]:
         """构造发送给 LLM 的消息列表。"""
@@ -205,13 +162,21 @@ class RAGGenerator:
         source_list = format_source_list(results)
 
         is_followup = bool(history and len(history) >= 2)
-        truncated_history = self._truncate_history(history) if history else []
+
+        # 截断历史消息，避免 context 过长
+        truncated_history = []
+        if history:
+            for msg in history:
+                if msg.get("role") == "assistant" and len(msg.get("content", "")) > 800:
+                    content = msg["content"][:800] + "\n...(之前回答已截断)"
+                    truncated_history.append({"role": "assistant", "content": content})
+                else:
+                    truncated_history.append(msg)
 
         if use_depth:
             n = len(results) if not isinstance(results, tuple) else len(results)
 
             if is_followup:
-                # 追问：用轻量 prompt，不强制完整报告结构
                 user_prompt = f"""## 用户追问
 {query}
 
@@ -250,7 +215,6 @@ class RAGGenerator:
             return messages, 8192
 
         if is_followup:
-            # 追问：用轻量 prompt，不强制固定结构
             user_prompt = f"""## 用户追问
 {query}
 
@@ -287,94 +251,16 @@ class RAGGenerator:
         return messages, 4096
 
     def generate(self, query: str, results,
-                 stream: bool = False) -> str:
-        """基于检索结果生成答案"""
-        messages, max_tokens = self._build_messages(query, results)
-
-        if stream:
-            return self._stream_generate(messages, max_tokens=max_tokens)
-        else:
-            # ---- 先尝试主 API，内容过滤报 400 时切换 fallback ----
-            try:
-                response = self.client.chat.completions.create(
-                    model=self.model,
-                    messages=messages,
-                    temperature=0.3,
-                    max_tokens=max_tokens
-                )
-            except openai.BadRequestError:
-                # BadRequestError (HTTP 400)：通常由主 API 的内容审查触发
-                # 若 fallback 未配置则向上重新抛出，不静默吞掉错误
-                if not self.fallback_client:
-                    raise
-                response = self.fallback_client.chat.completions.create(
-                    model=self.fallback_model,
-                    messages=messages,
-                    temperature=0.3,
-                    max_tokens=max_tokens
-                )
-            return response.choices[0].message.content
-
-    def _stream_generate(self, messages: List[Dict], max_tokens: int = 4096) -> str:
-        """流式生成（内部方法，由 generate(stream=True) 调用）"""
-        # ---- 先尝试主 API 建立流式连接，失败则切换 fallback ----
-        try:
-            response = self.client.chat.completions.create(
-                model=self.model,
-                messages=messages,
-                temperature=0.3,
-                max_tokens=max_tokens,
-                stream=True
-            )
-        except openai.BadRequestError:
-            # 内容过滤导致的 400：用 fallback 重建流（从头开始，不会截断）
-            if not self.fallback_client:
-                raise
-            response = self.fallback_client.chat.completions.create(
-                model=self.fallback_model,
-                messages=messages,
-                temperature=0.3,
-                max_tokens=max_tokens,
-                stream=True
-            )
-
-        full_response = ""   # full_response: 拼接所有 chunk 的完整回答文本
-        for chunk in response:
-            if chunk.choices and chunk.choices[0].delta.content:
-                content = chunk.choices[0].delta.content
-                print(content, end="", flush=True)
-                full_response += content
-        print()
-        return full_response
-
-    def generate_stream_with_tools(self, query: str, results, use_depth: bool = False, history: list = None):
-        """流式生成答案。始终先由 LLM 回答，SOP 按钮由前端根据 genes_available 信号决定。"""
+                 use_depth: bool = False, history: list = None) -> str:
+        """基于检索结果生成答案（同步，使用 core.llm_client）"""
         messages, max_tokens = self._build_messages(query, results, use_depth=use_depth, history=history)
+        msg = call_llm_sync(messages, temperature=0.3, max_tokens=max_tokens)
+        return msg.content
 
-        # ---- 先尝试主 API 建立 SSE 流，内容过滤 400 时切换 fallback ----
-        # 注意：openai.BadRequestError 在 .create() 调用时立即抛出（连接建立阶段），
-        # 而非流迭代中途，因此这里的 try/except 可以可靠地拦截内容过滤错误
-        try:
-            response = self.client.chat.completions.create(
-                model=self.model,
-                messages=messages,
-                temperature=0.3,
-                max_tokens=max_tokens,
-                stream=True
-            )
-        except openai.BadRequestError:
-            # 用 fallback 重新建立流，整条回答从头开始生成
-            if not self.fallback_client:
-                raise
-            response = self.fallback_client.chat.completions.create(
-                model=self.fallback_model,
-                messages=messages,
-                temperature=0.3,
-                max_tokens=max_tokens,
-                stream=True
-            )
-
-        # ---- 逐 chunk yield 给调用方（pipeline → SSE 事件流） ----
-        for chunk in response:
+    async def generate_stream_with_tools(self, query: str, results, use_depth: bool = False,
+                                         history: list = None, model_id: str = ""):
+        """异步流式生成答案（使用 core.llm_client）"""
+        messages, max_tokens = self._build_messages(query, results, use_depth=use_depth, history=history)
+        async for chunk in call_llm_stream(messages, model_id=model_id, temperature=0.3, max_tokens=max_tokens):
             if chunk.choices and chunk.choices[0].delta.content:
                 yield {"type": "text", "data": chunk.choices[0].delta.content}

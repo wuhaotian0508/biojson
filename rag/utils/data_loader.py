@@ -13,7 +13,7 @@ import json
 from pathlib import Path
 from typing import List, Dict, Any
 from dataclasses import dataclass
-import config
+import core.config as config
 
 
 @dataclass

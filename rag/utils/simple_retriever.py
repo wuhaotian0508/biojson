@@ -20,7 +20,7 @@ from typing import List, Tuple
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from utils.data_loader import GeneChunk, DataLoader
-import config
+import core.config as config
 
 
 class SimpleRetriever:

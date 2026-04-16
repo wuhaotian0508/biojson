@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/logo-icon.png" type="image/png">
     <title>nutriMaster - 基因问答系统</title>
     <link rel="stylesheet" href="/static/style.css">
     <!-- Markdown 渲染（本地托管，避免 CDN 阻塞） -->
     <script src="/static/marked.min.js"></script>
+    <!-- XSS 防护 -->
+    <script src="/static/purify.min.js"></script>
     <!-- ===== Supabase JS SDK（本地托管） ===== -->
     <script src="/static/supabase.min.js"></script>
 </head>
@@ -63,6 +66,20 @@
                         </div>
                         <button type="submit" id="signup-submit-btn" class="auth-submit-btn" data-i18n="auth.signupBtn">注 册</button>
                     </form>
+
+                    <!-- 验证码输入表单（默认隐藏） -->
+                    <form id="verify-code-form" class="auth-form" style="display: none;">
+                        <div class="verify-info">
+                            <p>验证码已发送至</p>
+                            <p class="verify-email" id="verify-email-display"></p>
+                        </div>
+                        <input type="text" id="verify-code-input" placeholder="请输入 6 位验证码" maxlength="6" required autocomplete="one-time-code" inputmode="numeric" pattern="\d{6}">
+                        <button type="submit" id="verify-code-btn" class="auth-submit-btn">验 证</button>
+                        <div class="verify-actions">
+                            <button type="button" id="resend-code-btn" class="verify-link-btn">重新发送</button>
+                            <button type="button" id="back-to-signup-btn" class="verify-link-btn">返回注册</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -91,6 +108,12 @@
                 <span data-i18n="sidebar.myLibrary">我的知识库</span>
                 <span class="kb-badge" id="kb-file-count" style="display:none;">0</span>
             </div>
+
+            <!-- Skills 管理入口 -->
+            <div class="knowledge-base skill-base" id="skill-toggle">
+                <div class="kb-icon">⚙️</div>
+                <span data-i18n="sidebar.skills">Skills 管理</span>
+            </div>
         </div>
 
         <!-- ===== 知识库模态窗口 ===== -->
@@ -116,6 +139,40 @@
             </div>
         </div>
 
+        <!-- ===== Skills 管理模态窗口 ===== -->
+        <div class="skill-modal-overlay" id="skill-modal-overlay" style="display:none;">
+            <div class="skill-modal">
+                <div class="skill-modal-header">
+                    <h3 data-i18n="skill.title">Skills 管理</h3>
+                    <button class="kb-modal-close" id="skill-modal-close">✕</button>
+                </div>
+                <div class="skill-modal-body">
+                    <div class="skill-list-panel">
+                        <div id="skill-list"></div>
+                        <button class="skill-create-btn" id="skill-create-btn" data-i18n="skill.create">+ 新建 Skill</button>
+                    </div>
+                    <div class="skill-editor-panel" id="skill-editor-panel" style="display:none;">
+                        <div class="skill-editor-header">
+                            <input type="text" id="skill-editor-name" placeholder="skill-name" class="skill-editor-name-input">
+                            <span class="skill-editor-badge" id="skill-editor-badge"></span>
+                        </div>
+                        <input type="text" id="skill-editor-desc" placeholder="Skill 描述" class="skill-editor-desc-input">
+                        <div class="skill-editor-tools" id="skill-editor-tools"></div>
+                        <textarea id="skill-editor-content" class="skill-editor-textarea"
+                            placeholder="Skill 的详细指令..."></textarea>
+                        <div class="skill-editor-actions">
+                            <button class="skill-save-btn" id="skill-save-btn" data-i18n="skill.save">保存</button>
+                            <button class="skill-delete-btn" id="skill-delete-btn" data-i18n="skill.delete">删除</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-tools-section">
+                    <h4 data-i18n="skill.availableTools">可用 Tools</h4>
+                    <div id="skill-tools-list" class="skill-tools-list"></div>
+                </div>
+            </div>
+        </div>
+
         <!-- 主内容区 -->
         <div class="main-content">
             <!-- 头部 -->
@@ -125,6 +182,7 @@
                     <button class="new-chat-btn" id="new-chat-btn" data-i18n="header.newChat">+ 新对话</button>
                 </div>
                 <div class="header-right">
+                    <select id="model-select" class="model-select" style="display:none;"></select>
                     <button class="lang-btn" id="lang-btn">简体中文</button>
                     <button class="admin-btn" id="admin-btn" style="display:none;" data-i18n="header.admin">管理后台</button>
                     <div class="user-area" id="user-area">
@@ -143,6 +201,8 @@
 
                 <!-- 聊天区域 -->
                 <div id="chat-container" class="chat-container"></div>
+                <!-- 回到底部按钮 -->
+                <button id="scroll-to-bottom-btn" class="scroll-to-bottom-btn" title="回到底部">↓</button>
 
                 <!-- 输入区域 -->
                 <div class="input-section">

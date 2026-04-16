@@ -17,7 +17,7 @@ from typing import List, Tuple, Optional
 
 from utils.data_loader import GeneChunk, DataLoader
 from search.embedding_utils import get_embeddings, get_query_embedding, _build_headers
-from config import (
+from core.config import (
     TOP_K_RETRIEVAL, DATA_DIR, INDEX_DIR,
 )
 

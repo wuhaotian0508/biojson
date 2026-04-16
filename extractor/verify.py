@@ -107,24 +107,15 @@ Call the verify_all_genes function with your verification results for ALL genes 
 # ─── Helper functions ────────────────────────────────────────────────────────
 
 def _extract_non_na_fields(gene_dict: dict) -> dict:
-    """提取基因 dict 中所有非 NA 的字段，用于验证。
+    """提取基因 dict 中所有字段，用于验证。
 
-    跳过 None 和 "NA" 字符串；对 list 类型只保留非 NA 元素。
-    例: {"Gene_Name": "CHS", "EC_Number": "NA", "Species": "tomato"}
-    → {"Gene_Name": "CHS", "Species": "tomato"}
+    不过滤任何值（包括 None、"NA" 字符串和列表中的 "NA" 元素）。
+    例: {"Gene_Name": "CHS", "EC_Number": "NA", "Species": None}
+    → {"Gene_Name": "CHS", "EC_Number": "NA", "Species": None}
     """
     fields = {}
     for key, value in gene_dict.items():
-        if value is None:
-            continue
-        if isinstance(value, str) and value.strip().upper() == "NA":
-            continue
-        if isinstance(value, list):
-            filtered = [v for v in value if not (isinstance(v, str) and v.strip().upper() == "NA")]
-            if filtered:
-                fields[key] = filtered
-        else:
-            fields[key] = value
+        fields[key] = value
     return fields
 
 

@@ -2,26 +2,6 @@
 
 `tmux` 是一个终端复用工具，可以让你在一个终端里管理多个会话、窗口和窗格，并且在断开 SSH 后继续保留运行状态。
 
-## 1. 安装 tmux
-
-常见安装方式：
-
-```bash
-# Ubuntu / Debian
-sudo apt install tmux
-
-# CentOS / RHEL
-sudo yum install tmux
-
-# macOS（Homebrew）
-brew install tmux
-```
-
-安装完成后，检查版本：
-
-```bash
-tmux -V
-```
 
 ## 2. 基本概念
 
@@ -246,3 +226,55 @@ tmux attach -t work
 - `Ctrl+b 方向键`
 
 掌握这些后，已经足够覆盖大部分日常使用场景。
+
+## 10. 注意事项
+
+### 嵌套 tmux 问题
+
+如果你已经在一个 tmux session 里，再用 `tmux new-session -d` 创建的 session 是独立的，无法用 `tmux attach` 直接找到（因为属于不同层）。
+
+解决方法：在已有 tmux 里用 `new-window` 代替 `new-session`：
+
+```bash
+tmux new-window -n biojson 'ssh ali "cd ~/code/biojson/rag/web && bash run.sh"'
+```
+
+### 在 ali 服务器上跑 biojson 服务的标准流程
+
+```bash
+# 1. 登录 ali
+ssh ali
+
+# 2. 新建 session
+tmux new -s biojson
+
+# 3. 启动服务（带日志）
+cd ~/code/biojson/rag/web
+bash run.sh 2>&1 | tee ~/biojson.log
+
+# 4. 离开但保持运行
+Ctrl+b d
+
+# 5. 查看日志
+tail -f ~/biojson.log
+
+# 6. 下次回来
+ssh ali
+tmux attach -t biojson
+```
+
+### 开启鼠标支持
+
+在 `~/.tmux.conf` 中加入：
+
+```
+set -g mouse on
+```
+
+然后执行：
+
+```bash
+tmux source ~/.tmux.conf
+```
+
+之后可以用鼠标滚轮查看历史输出，点击切换窗格。

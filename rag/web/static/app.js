@@ -66,6 +66,30 @@ const I18N = {
         // 管理后台
         'header.admin': '管理后台',
         'auth.logout': '退出登录',
+        // Skills 管理
+        'sidebar.skills': 'Skills 管理',
+        'skill.title': 'Skills 管理',
+        'skill.create': '+ 新建 Skill',
+        'skill.save': '保存',
+        'skill.delete': '删除',
+        'skill.shared': '共享',
+        'skill.private': '私有',
+        'skill.mode_must': '必选',
+        'skill.mode_auto': '自动',
+        'skill.mode_disabled': '禁用',
+        'skill.availableTools': '可用 Tools',
+        'skill.saveFail': '保存失败',
+        'skill.deleteFail': '删除失败',
+        'skill.confirmDelete': '确定删除 Skill "{0}" 吗？',
+        // 模型选择
+        'model.select': '选择模型',
+        // SOP NCBI 验证
+        'sop.extracting': '正在从对话中提取基因...',
+        'sop.ncbiVerifying': '正在 NCBI 确认基因信息...',
+        'sop.confirm': '确认执行',
+        'sop.cancel': '取消',
+        'sop.ncbiFound': '已确认',
+        'sop.ncbiNotFound': '未找到',
         // 个人资料
         'profile.changeAvatar': '更换头像',
         'profile.save': '保存',
@@ -74,6 +98,11 @@ const I18N = {
         'profile.deleteAccount': '注销账号',
         'profile.confirmDelete': '确定要永久删除账号吗？此操作不可恢复！',
         'profile.deleteFail': '删除失败',
+        // 工具调用
+        'tool.calling': '正在调用 {0}...',
+        'tool.used': '使用了',
+        'tool.skill': '技能',
+        'tool.details': '详情',
         // 搜索进度
         'search.searching': '正在搜索...',
         'search.deepSearching': '深度搜索中，正在检索更多文献并生成综合报告...',
@@ -83,6 +112,9 @@ const I18N = {
         'source.pubmed': 'PubMed',
         'source.jina_web': '网页',
         'source.personal': '个人库',
+        // 生成控制
+        'generation.stopped': '已停止生成',
+        'scroll.toBottom': '回到底部',
         // 其他
         'error.prefix': '错误',
         'history.oldRecord': '（旧记录，无回答内容）',
@@ -95,21 +127,21 @@ const I18N = {
         // 欢迎标语
         'slogans': [
             "今天你想知道点什么？",
-            "探索植物基因的奥秘",
-            "有什么关于营养代谢的问题吗？",
+            "探索植物代谢的奥秘",
+            "有什么关于营养合成的问题吗？",
             "让我帮你找到答案",
             "开始你的科研探索之旅",
-            "基因的秘密，等你来发现",
-            "想了解哪些基因的功能？",
-            "营养代谢，从这里开始",
+            "营养代谢的秘密，等你来发现",
+            "想了解哪些营养代谢基因的功能？",
+            "营养合成，从这里开始",
             "科学问答，随时为你服务",
-            "深入了解植物营养基因",
+            "深入了解植物营养代谢调控",
             "你的科研助手已就绪",
-            "问我关于基因的任何问题",
+            "问我关于营养合成的任何问题",
             "发现植物代谢的精彩世界",
             "让数据为你揭示真相",
-            "基因调控，一问便知",
-            "今天想研究什么代谢通路？",
+            "营养合成，一问便知",
+            "今天想研究什么营养代谢通路？",
             "文献中的答案，触手可及",
             "从问题到洞察，只需一步",
             "你的问题，我的使命",
@@ -172,6 +204,30 @@ const I18N = {
         'auth.feature4': 'AI deep search reports',
         'header.admin': 'Admin Panel',
         'auth.logout': 'Log out',
+        // Skills
+        'sidebar.skills': 'Skills',
+        'skill.title': 'Skills Management',
+        'skill.create': '+ New Skill',
+        'skill.save': 'Save',
+        'skill.delete': 'Delete',
+        'skill.shared': 'Shared',
+        'skill.private': 'Private',
+        'skill.mode_must': 'Required',
+        'skill.mode_auto': 'Auto',
+        'skill.mode_disabled': 'Disabled',
+        'skill.availableTools': 'Available Tools',
+        'skill.saveFail': 'Save failed',
+        'skill.deleteFail': 'Delete failed',
+        'skill.confirmDelete': 'Delete skill "{0}"?',
+        // Model
+        'model.select': 'Select Model',
+        // SOP
+        'sop.extracting': 'Extracting genes from conversation...',
+        'sop.ncbiVerifying': 'Verifying genes on NCBI...',
+        'sop.confirm': 'Confirm & Run',
+        'sop.cancel': 'Cancel',
+        'sop.ncbiFound': 'Confirmed',
+        'sop.ncbiNotFound': 'Not found',
         'profile.changeAvatar': 'Change Avatar',
         'profile.save': 'Save',
         'profile.saving': 'Saving...',
@@ -179,6 +235,11 @@ const I18N = {
         'profile.deleteAccount': 'Delete Account',
         'profile.confirmDelete': 'Permanently delete your account? This cannot be undone!',
         'profile.deleteFail': 'Delete failed',
+        // Tool calls
+        'tool.calling': 'Calling {0}...',
+        'tool.used': 'Used',
+        'tool.skill': 'Skill',
+        'tool.details': 'Details',
         'search.searching': 'Searching...',
         'search.deepSearching': 'Deep search: retrieving more literature and generating a comprehensive report...',
         'source.title': '📚 References',
@@ -186,6 +247,8 @@ const I18N = {
         'source.pubmed': 'PubMed',
         'source.jina_web': 'Web',
         'source.personal': 'Personal',
+        'generation.stopped': 'Generation stopped',
+        'scroll.toBottom': 'Scroll to bottom',
         'error.prefix': 'Error',
         'history.oldRecord': '(Old record, no answer)',
         'confirm.clearHistory': 'Clear all history?',
@@ -195,26 +258,26 @@ const I18N = {
         'gene.inputPlaceholder': 'Gene name',
         'gene.removeTitle': 'Remove this gene',
         'slogans': [
-            "What would you like to know today?",
-            "Explore the secrets of plant genes",
-            "Any questions about nutrient metabolism?",
-            "Let me help you find the answer",
-            "Start your research journey",
-            "Gene secrets, waiting to be discovered",
-            "Which gene functions interest you?",
-            "Nutrient metabolism starts here",
-            "Scientific Q&A, at your service",
-            "Dive deep into plant nutrient genes",
-            "Your research assistant is ready",
-            "Ask me anything about genes",
-            "Discover the world of plant metabolism",
-            "Let data reveal the truth",
-            "Gene regulation, one question away",
-            "Which metabolic pathway today?",
-            "Answers from literature, at your fingertips",
-            "From questions to insights, one step",
-            "Your questions, my mission",
-            "On the research journey, together"
+            "What would you like to discover today?",
+            "Unlock the secrets of plant metabolism.",
+            "Have a question about nutritional biosynthesis?",
+            "I'll help you find the answer.",
+            "Start your research journey now.",
+            "Discover the hidden logic of nutrient metabolism.",
+            "Which nutrient-metabolism genes would you like to explore?",
+            "Start with nutritional biosynthesis.",
+            "Scientific answers, on demand.",
+            "Explore how plant nutrient metabolism is regulated.",
+            "Your AI research assistant is ready.",
+            "Ask me anything about nutritional biosynthesis.",
+            "Discover the world of plant metabolism.",
+            "Let data uncover the truth.",
+            "Nutritional biosynthesis, made easy.",
+            "Which nutrient-metabolism pathway would you like to study today?",
+            "Literature-backed answers, at your fingertips.",
+            "From question to insight, in one step.",
+            "Your question, my purpose.",
+            "Your research partner, every step of the way."
         ],
     },
 };
@@ -263,22 +326,50 @@ let usePersonal = false;
 const assistantTurnState = new Map();
 let currentAbortController = null;  // 用于中断正在进行的 SSE 流
 let currentStreamMsgId = null;      // 正在流式生成的 assistant 消息 ID
+let userHasScrolled = false;        // 用户是否手动向上滚动（禁止自动跟随）
+
+// ===== Skills / Tools / Model 偏好（localStorage 持久化）=====
+let skillPrefs = JSON.parse(localStorage.getItem('skillPrefs') || '{}');
+let toolOverrides = JSON.parse(localStorage.getItem('toolOverrides') || '{}');
+let selectedModelId = localStorage.getItem('selectedModelId') || '';
 
 // 中断正在进行的 SSE 流，保存已有的部分回答
 function abortCurrentStream() {
     if (!currentAbortController) return;
+    const msgId = currentStreamMsgId;
     // 先保存部分回答到历史
-    if (currentStreamMsgId) {
-        const state = assistantTurnState.get(currentStreamMsgId);
+    if (msgId) {
+        const state = assistantTurnState.get(msgId);
         if (state && (state.answerText || (state.genes && state.genes.length > 0))) {
             saveToHistory(state.query, state.answerText || '', state.sources, state.genes, state.sops);
+        }
+        // 清理 loading spinner，添加"已停止生成"提示
+        const regions = getMessageRegions(msgId);
+        if (regions.answerEl) {
+            // 移除所有正在转圈的 search-progress
+            regions.answerEl.querySelectorAll('.search-progress').forEach(el => el.remove());
+            // 如果有部分回答，在末尾追加停止提示
+            if (state && state.answerText) {
+                regions.answerEl.innerHTML = formatAnswer(state.answerText);
+            }
+            // 追加停止提示
+            const stopHint = document.createElement('div');
+            stopHint.className = 'generation-stopped';
+            stopHint.textContent = t('generation.stopped');
+            regions.answerEl.appendChild(stopHint);
+        }
+        // 折叠工具调用 UI
+        finalizeToolCallsUI(msgId);
+        // 追加已有的参考文献
+        if (state && state.sources && state.sources.length > 0 && regions.extrasEl) {
+            regions.extrasEl.insertAdjacentHTML('beforeend', renderReferences(state.sources));
         }
     }
     currentAbortController.abort();
     currentAbortController = null;
     currentStreamMsgId = null;
     isQuerying = false;
-    sendBtn.disabled = false;
+    setSendBtnToSend();
 }
 
 // DOM 元素
@@ -290,6 +381,43 @@ const sceneIntro = document.getElementById('scene-intro');
 const welcomeSection = document.getElementById('welcome-section');
 const welcomeSlogan = document.getElementById('welcome-slogan');
 
+// ===== 智能滚动：仅在用户未手动上滚时自动跟随 =====
+function smartScroll() {
+    if (!userHasScrolled) {
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+}
+
+// 监听滚动事件：判断用户是否手动向上滚动，并控制"回到底部"按钮
+chatContainer.addEventListener('scroll', () => {
+    const threshold = 80; // 距离底部 80px 以内视为"在底部"
+    const atBottom = chatContainer.scrollHeight - chatContainer.scrollTop - chatContainer.clientHeight < threshold;
+    userHasScrolled = !atBottom;
+    // 显示/隐藏"回到底部"按钮
+    const scrollBtn = document.getElementById('scroll-to-bottom-btn');
+    if (scrollBtn) {
+        scrollBtn.classList.toggle('visible', userHasScrolled && isQuerying);
+    }
+});
+
+// ===== 发送/停止按钮状态切换 =====
+function setSendBtnToStop() {
+    sendBtn.disabled = false;
+    sendBtn.textContent = '■';
+    sendBtn.classList.add('stop-mode');
+    sendBtn.title = '停止生成';
+}
+
+function setSendBtnToSend() {
+    sendBtn.disabled = false;
+    sendBtn.textContent = '➤';
+    sendBtn.classList.remove('stop-mode');
+    sendBtn.title = '';
+    // 隐藏"回到底部"按钮
+    const scrollBtn = document.getElementById('scroll-to-bottom-btn');
+    if (scrollBtn) scrollBtn.classList.remove('visible');
+}
+
 // 初始化
 document.addEventListener('DOMContentLoaded', () => {
     try {
@@ -297,7 +425,9 @@ document.addEventListener('DOMContentLoaded', () => {
         setupEventListeners();
         setRandomSlogan();
         setupKBModal();
+        setupSkillModal();
         applyLanguage();
+        initModelSelect();
 
         // ===== 登录功能初始化 =====
         setupAuthListeners();
@@ -329,6 +459,16 @@ function setupEventListeners() {
     }
 
     sendBtn.addEventListener('click', handleSend);
+
+    // "回到底部"按钮
+    const scrollToBottomBtn = document.getElementById('scroll-to-bottom-btn');
+    if (scrollToBottomBtn) {
+        scrollToBottomBtn.addEventListener('click', () => {
+            userHasScrolled = false;
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+            scrollToBottomBtn.classList.remove('visible');
+        });
+    }
 
     const newChatBtn = document.getElementById('new-chat-btn');
     if (newChatBtn) {
@@ -590,8 +730,14 @@ function startNewChat() {
 
 // 处理发送
 async function handleSend() {
+    // 如果正在生成中，点击按钮 = 停止生成
+    if (isQuerying) {
+        abortCurrentStream();
+        return;
+    }
+
     const query = queryInput.value.trim();
-    if (!query || isQuerying) return;
+    if (!query) return;
 
     if (!hasStartedConversation) {
         hideWelcomeAndScene();
@@ -604,7 +750,8 @@ async function handleSend() {
     queryInput.style.height = 'auto';
 
     isQuerying = true;
-    sendBtn.disabled = true;
+    setSendBtnToStop();
+    userHasScrolled = false; // 新查询开始时重置滚动状态
 
     const loadingText = isDeepSearch ? t('search.deepSearching') : t('search.searching');
     const loadingHtml = `<div class="search-progress"><span class="search-spinner"></span>${escapeHtml(loadingText)}</div>`;
@@ -613,6 +760,8 @@ async function handleSend() {
         query,
         answerText: '',
         sources: [],
+        toolCalls: [],          // 工具调用记录
+        selectedSkill: null,    // 命中的 skill
         experimentRunning: false,
         experimentDone: false,
         genesAvailable: false,
@@ -632,7 +781,7 @@ async function handleSend() {
         }
     } finally {
         isQuerying = false;
-        sendBtn.disabled = false;
+        setSendBtnToSend();
     }
 }
 
@@ -686,6 +835,9 @@ async function streamQuery(query, messageId) {
             use_personal: usePersonal,
             use_depth: isDeepSearch,
             history,
+            skill_prefs: skillPrefs,
+            tool_overrides: toolOverrides,
+            model_id: selectedModelId,
         }),
         signal: abortController.signal,
     });
@@ -718,7 +870,23 @@ async function streamQuery(query, messageId) {
                 try {
                     const data = JSON.parse(line.slice(6));
 
-                    if (data.type === 'searching') {
+                    if (data.type === 'tools_enabled') {
+                        const state = getAssistantTurnState(messageId);
+                        state.enabledTools = data.tools;
+                    } else if (data.type === 'skill_selected') {
+                        const state = getAssistantTurnState(messageId);
+                        state.selectedSkill = data.data;
+                        updateToolCallsUI(messageId);
+                    } else if (data.type === 'tool_call') {
+                        const state = getAssistantTurnState(messageId);
+                        state.toolCalls.push({ tool: data.tool, args: data.args, done: false });
+                        updateToolCallsUI(messageId);
+                    } else if (data.type === 'tool_result') {
+                        const state = getAssistantTurnState(messageId);
+                        const tc = state.toolCalls.find(c => c.tool === data.tool && !c.done);
+                        if (tc) tc.done = true;
+                        updateToolCallsUI(messageId);
+                    } else if (data.type === 'searching') {
                         updateMessage(messageId,
                             `<div class="search-progress"><span class="search-spinner"></span>${escapeHtml(data.data)}</div>`);
                     } else if (data.type === 'sources') {
@@ -748,6 +916,20 @@ async function streamQuery(query, messageId) {
                             const regions = getMessageRegions(messageId);
                             if (regions.extrasEl) renderSOPs(regions.extrasEl, data.sops);
                         }
+                    } else if (data.type === 'sop_extracting') {
+                        // SOP 快捷路径：显示提取进度
+                        updateMessage(messageId, `<div class="search-progress"><span class="search-spinner"></span>${escapeHtml(data.data)}</div>`);
+                    } else if (data.type === 'sop_genes_extracted') {
+                        // SOP 快捷路径：基因已提取，等待 NCBI 验证
+                    } else if (data.type === 'sop_ncbi_verifying') {
+                        // SOP 快捷路径：NCBI 验证中
+                        updateMessage(messageId, `<div class="search-progress"><span class="search-spinner"></span>${escapeHtml(data.data)}</div>`);
+                    } else if (data.type === 'sop_ncbi_verified') {
+                        // SOP 快捷路径：NCBI 验证完成，直接展示确认界面
+                        const state = getAssistantTurnState(messageId);
+                        state.sopShortcut = true;
+                        state.sopVerifiedGenes = data.genes;
+                        updateMessage(messageId, '');  // 清空加载提示
                     } else if (data.type === 'genes_available') {
                         // 后端检测到回答中包含具体基因名，携带基因名列表
                         const state = getAssistantTurnState(messageId);
@@ -759,13 +941,71 @@ async function streamQuery(query, messageId) {
                     } else if (data.type === 'done') {
                         const state = getAssistantTurnState(messageId);
                         state.streamDone = true;
-                        updateMessage(messageId, formatAnswer(answerText));
-                        // 在回答末尾追加参考文献
-                        const { extrasEl } = getMessageRegions(messageId);
-                        if (extrasEl && sources && sources.length > 0) {
-                            extrasEl.insertAdjacentHTML('beforeend', renderReferences(sources));
+                        finalizeToolCallsUI(messageId);
+
+                        // SOP 快捷路径：done 时直接展示 NCBI 验证确认界面
+                        if (state.sopShortcut && state.sopVerifiedGenes) {
+                            updateMessage(messageId, '');
+                            const { extrasEl } = getMessageRegions(messageId);
+                            if (extrasEl) {
+                                const confirmed = await showNCBIVerification(messageId, state.sopVerifiedGenes, extrasEl);
+                                if (confirmed) {
+                                    state.experimentRunning = true;
+                                    state.experimentDone = false;
+                                    appendExperimentProgress(messageId, confirmed.map(g => g.gene));
+                                    // 直接调用 SOP run
+                                    try {
+                                        const runResp = await fetch('/api/sop/run', {
+                                            method: 'POST',
+                                            headers: {
+                                                'Content-Type': 'application/json',
+                                                'Authorization': 'Bearer ' + getAccessToken(),
+                                            },
+                                            body: JSON.stringify({ genes: confirmed }),
+                                        });
+                                        if (!runResp.ok) throw new Error('SOP pipeline 请求失败');
+                                        const runReader = runResp.body.getReader();
+                                        const runDecoder = new TextDecoder();
+                                        let runBuffer = '';
+                                        while (true) {
+                                            const { done: runDone, value: runValue } = await runReader.read();
+                                            runBuffer += runDecoder.decode(runValue || new Uint8Array(), { stream: !runDone });
+                                            const runLines = runBuffer.split('\n');
+                                            runBuffer = runDone ? '' : (runLines.pop() || '');
+                                            for (const rl of runLines) {
+                                                if (!rl.startsWith('data: ')) continue;
+                                                try {
+                                                    const rd = JSON.parse(rl.slice(6));
+                                                    if (rd.type === 'progress') {
+                                                        updateExperimentProgress(messageId, rd);
+                                                    } else if (rd.type === 'result' && rd.sops) {
+                                                        state.experimentDone = true;
+                                                        state.experimentRunning = false;
+                                                        state.sops = rd.sops;
+                                                        const regions = getMessageRegions(messageId);
+                                                        if (regions.extrasEl) renderSOPs(regions.extrasEl, rd.sops);
+                                                        updateLastTurnSops(state.sops, state.genes);
+                                                    } else if (rd.type === 'error') {
+                                                        handleExperimentError(messageId, rd.data || rd.msg);
+                                                    }
+                                                } catch (_e) {}
+                                            }
+                                            if (runDone) break;
+                                        }
+                                    } catch (runErr) {
+                                        handleExperimentError(messageId, runErr.message);
+                                    }
+                                }
+                            }
+                        } else {
+                            updateMessage(messageId, formatAnswer(answerText));
+                            // 在回答末尾追加参考文献
+                            const { extrasEl } = getMessageRegions(messageId);
+                            if (extrasEl && sources && sources.length > 0) {
+                                extrasEl.insertAdjacentHTML('beforeend', renderReferences(sources));
+                            }
+                            renderExperimentButton(messageId);
                         }
-                        renderExperimentButton(messageId);
                     } else if (data.type === 'error') {
                         const state = getAssistantTurnState(messageId);
                         state.experimentRunning = false;
@@ -792,6 +1032,7 @@ async function streamQuery(query, messageId) {
                     if (data.type === 'done') {
                         const state = getAssistantTurnState(messageId);
                         state.streamDone = true;
+                        finalizeToolCallsUI(messageId);
                         updateMessage(messageId, formatAnswer(answerText));
                         // 在回答末尾追加参考文献
                         const { extrasEl } = getMessageRegions(messageId);
@@ -817,58 +1058,121 @@ async function streamQuery(query, messageId) {
 
 async function streamExperiment(messageId) {
     const state = getAssistantTurnState(messageId);
-    // 构建请求体：包含用户在基因编辑器中选定的基因名列表
-    const requestBody = {
-        query: state.query,
-        answer_text: state.answerText,
-        skill: 'crispr-experiment',
-    };
-    // 如果有用户编辑过的基因列表，以 genes_selected 传给后端
-    // 后端会调用 LLM 为这些基因名解析物种信息
-    if (state.genes && state.genes.length > 0) {
-        requestBody.genes_selected = state.genes;
-    }
 
-    const response = await fetch('/api/experiment/run', {
+    // ---- Phase A+B: 提取基因 + NCBI 验证 ----
+    const extractResp = await fetch('/api/sop/extract', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             'Authorization': 'Bearer ' + getAccessToken(),
         },
-        body: JSON.stringify(requestBody),
+        body: JSON.stringify({
+            query: state.query,
+            answer_text: state.answerText,
+        }),
     });
 
-    if (response.status === 401) {
+    if (extractResp.status === 401) {
         showLoginOverlay();
         throw new Error(t('auth.expired'));
     }
-
-    if (!response.ok) {
-        const err = await response.json().catch(() => ({}));
-        throw new Error(err.error || t('auth.networkFail'));
+    if (!extractResp.ok) {
+        const err = await extractResp.json().catch(() => ({}));
+        throw new Error(err.detail || t('auth.networkFail'));
     }
 
-    const reader = response.body.getReader();
-    const decoder = new TextDecoder();
-    let buffer = '';
+    // 读取 SSE 流
+    const extractReader = extractResp.body.getReader();
+    const extractDecoder = new TextDecoder();
+    let extractBuffer = '';
+    let verifiedGenes = null;
+
+    // 显示提取中进度
+    const { extrasEl } = getMessageRegions(messageId);
+    removeExperimentButton(messageId);
+
+    const sopProgressEl = document.createElement('div');
+    sopProgressEl.className = 'sop-extract-progress';
+    sopProgressEl.innerHTML = `<div class="search-progress"><span class="search-spinner"></span>${t('sop.extracting')}</div>`;
+    if (extrasEl) extrasEl.appendChild(sopProgressEl);
 
     while (true) {
-        const { done, value } = await reader.read();
-        buffer += decoder.decode(value || new Uint8Array(), { stream: !done });
-
-        const lines = buffer.split('\n');
-        buffer = done ? '' : (lines.pop() || '');
+        const { done, value } = await extractReader.read();
+        extractBuffer += extractDecoder.decode(value || new Uint8Array(), { stream: !done });
+        const lines = extractBuffer.split('\n');
+        extractBuffer = done ? '' : (lines.pop() || '');
 
         for (const line of lines) {
             if (!line.startsWith('data: ')) continue;
+            try {
+                const data = JSON.parse(line.slice(6));
+                if (data.type === 'sop_extracting') {
+                    sopProgressEl.innerHTML = `<div class="search-progress"><span class="search-spinner"></span>${escapeHtml(data.data)}</div>`;
+                } else if (data.type === 'sop_genes_extracted') {
+                    // 基因已提取，等待 NCBI 验证
+                } else if (data.type === 'sop_ncbi_verifying') {
+                    sopProgressEl.innerHTML = `<div class="search-progress"><span class="search-spinner"></span>${escapeHtml(data.data)}</div>`;
+                } else if (data.type === 'sop_ncbi_verified') {
+                    verifiedGenes = data.genes;
+                    sopProgressEl.remove();
+                } else if (data.type === 'error') {
+                    sopProgressEl.remove();
+                    throw new Error(data.data);
+                }
+            } catch (e) {
+                if (e.message && !e.message.startsWith('Unexpected')) throw e;
+            }
+        }
+        if (done) break;
+    }
 
+    if (!verifiedGenes || verifiedGenes.length === 0) {
+        renderExperimentButton(messageId);
+        return;
+    }
+
+    // ---- 展示 NCBI 验证结果，等待用户确认 ----
+    const confirmed = await showNCBIVerification(messageId, verifiedGenes, extrasEl);
+    if (!confirmed) {
+        renderExperimentButton(messageId);
+        return;
+    }
+
+    // ---- Phase C: 用户确认后执行 SOP pipeline ----
+    state.experimentRunning = true;
+    state.experimentDone = false;
+    appendExperimentProgress(messageId, confirmed.map(g => g.gene));
+
+    const runResp = await fetch('/api/sop/run', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + getAccessToken(),
+        },
+        body: JSON.stringify({ genes: confirmed }),
+    });
+
+    if (!runResp.ok) {
+        const err = await runResp.json().catch(() => ({}));
+        throw new Error(err.detail || t('auth.networkFail'));
+    }
+
+    const runReader = runResp.body.getReader();
+    const runDecoder = new TextDecoder();
+    let runBuffer = '';
+
+    while (true) {
+        const { done, value } = await runReader.read();
+        runBuffer += runDecoder.decode(value || new Uint8Array(), { stream: !done });
+        const lines = runBuffer.split('\n');
+        runBuffer = done ? '' : (lines.pop() || '');
+
+        for (const line of lines) {
+            if (!line.startsWith('data: ')) continue;
             try {
                 const data = JSON.parse(line.slice(6));
                 if (data.type === 'experiment_start') {
-                    state.experimentRunning = true;
-                    state.experimentDone = false;
-                    removeExperimentButton(messageId);
-                    appendExperimentProgress(messageId, data.genes);
+                    // Already showing progress
                 } else if (data.type === 'progress') {
                     updateExperimentProgress(messageId, data);
                 } else if (data.type === 'result' && data.sops) {
@@ -877,25 +1181,66 @@ async function streamExperiment(messageId) {
                     state.sops = data.sops;
                     const regions = getMessageRegions(messageId);
                     if (regions.extrasEl) renderSOPs(regions.extrasEl, data.sops);
-                    // 将 SOP 结果更新到已保存的历史记录中
                     updateLastTurnSops(state.sops, state.genes);
                 } else if (data.type === 'error') {
                     state.experimentRunning = false;
-                    const msg = data.msg || data.data || t('auth.networkFail');
-                    handleExperimentError(messageId, msg);
+                    handleExperimentError(messageId, data.msg || data.data || t('auth.networkFail'));
                     renderExperimentButton(messageId);
                 }
-            } catch (parseErr) {
-                if (parseErr.message && !parseErr.message.startsWith('Unexpected')) {
-                    throw parseErr;
-                }
+            } catch (e) {
+                if (e.message && !e.message.startsWith('Unexpected')) throw e;
             }
         }
-
-        if (done) {
-            break;
-        }
+        if (done) break;
     }
+}
+
+/**
+ * 展示 NCBI 验证结果表格，返回 Promise<gene[]|null>
+ * 用户点"确认执行"resolve 为基因列表，点"取消"resolve 为 null
+ */
+function showNCBIVerification(messageId, genes, container) {
+    return new Promise((resolve) => {
+        const verifyEl = document.createElement('div');
+        verifyEl.className = 'ncbi-verify-section';
+
+        const rows = genes.map(g => {
+            const statusCls = g.ncbi_found ? 'ncbi-found' : 'ncbi-not-found';
+            const statusText = g.ncbi_found ? t('sop.ncbiFound') : t('sop.ncbiNotFound');
+            const icon = g.ncbi_found ? '✓' : '✗';
+            return `<tr class="${statusCls}">
+                <td>${escapeHtml(g.gene)}</td>
+                <td>${escapeHtml(g.species)}</td>
+                <td><span class="ncbi-status-icon">${icon}</span> ${statusText}</td>
+            </tr>`;
+        }).join('');
+
+        verifyEl.innerHTML = `
+            <div class="ncbi-verify-title">🧬 NCBI 基因验证结果</div>
+            <table class="ncbi-verify-table">
+                <thead><tr><th>基因名</th><th>物种</th><th>NCBI</th></tr></thead>
+                <tbody>${rows}</tbody>
+            </table>
+            <div class="ncbi-verify-actions">
+                <button class="ncbi-confirm-btn">${t('sop.confirm')}</button>
+                <button class="ncbi-cancel-btn">${t('sop.cancel')}</button>
+            </div>
+        `;
+
+        if (container) container.appendChild(verifyEl);
+
+        verifyEl.querySelector('.ncbi-confirm-btn').addEventListener('click', () => {
+            verifyEl.remove();
+            resolve(genes.filter(g => g.ncbi_found));
+        });
+
+        verifyEl.querySelector('.ncbi-cancel-btn').addEventListener('click', () => {
+            verifyEl.remove();
+            resolve(null);
+        });
+
+        smartScroll();
+    });
 }
 
 // 格式化答案（使用 marked.js 渲染 Markdown）
@@ -905,7 +1250,7 @@ function formatAnswer(text) {
             breaks: true,
             gfm: true,
         });
-        return '<div class="markdown-body">' + marked.parse(text) + '</div>';
+        return '<div class="markdown-body">' + DOMPurify.sanitize(marked.parse(text)) + '</div>';
     }
     // fallback: 无 marked 时用简单段落
     const formatted = text.replace(
@@ -913,7 +1258,8 @@ function formatAnswer(text) {
         '<span class="source-tag">$1 | $2</span>'
     );
     const paragraphs = formatted.split('\n\n').filter(p => p.trim());
-    return paragraphs.map(p => `<p>${p}</p>`).join('');
+    const html = paragraphs.map(p => `<p>${p}</p>`).join('');
+    return typeof DOMPurify !== 'undefined' ? DOMPurify.sanitize(html) : html;
 }
 
 // 来源类型标签（动态取翻译）
@@ -1042,6 +1388,7 @@ function addMessage(role, content) {
             <div class="message-avatar">🧬</div>
             <div class="message-body">
                 <div class="message-content">
+                    <div class="tool-calls-summary" style="display:none"></div>
                     <div class="assistant-answer">${content}</div>
                     <div class="assistant-extras"></div>
                 </div>
@@ -1050,7 +1397,13 @@ function addMessage(role, content) {
     }
 
     chatContainer.appendChild(messageDiv);
-    chatContainer.scrollTop = chatContainer.scrollHeight;
+    // 用户发送的消息始终滚动到底部；助手消息使用智能滚动
+    if (role === 'user') {
+        userHasScrolled = false;
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+    } else {
+        smartScroll();
+    }
 
     return messageId;
 }
@@ -1062,7 +1415,7 @@ function updateMessage(messageId, content) {
         const regions = getMessageRegions(messageId);
         if (regions.answerEl) {
             regions.answerEl.innerHTML = content;
-            chatContainer.scrollTop = chatContainer.scrollHeight;
+            smartScroll();
         }
     }
 }
@@ -1073,6 +1426,8 @@ function getAssistantTurnState(messageId) {
             query: '',
             answerText: '',
             sources: [],
+            toolCalls: [],        // [{tool, args, done}]
+            selectedSkill: null,   // skill name string
             experimentRunning: false,
             experimentDone: false,
             genesAvailable: false,
@@ -1081,6 +1436,87 @@ function getAssistantTurnState(messageId) {
         });
     }
     return assistantTurnState.get(messageId);
+}
+
+// ===== 工具调用 UI 辅助 =====
+
+/** 实时更新工具调用状态（streaming 阶段） */
+function updateToolCallsUI(messageId) {
+    const msgEl = document.getElementById(messageId);
+    if (!msgEl) return;
+    const summaryEl = msgEl.querySelector('.tool-calls-summary');
+    if (!summaryEl) return;
+
+    const state = getAssistantTurnState(messageId);
+    const { toolCalls, selectedSkill } = state;
+    if (toolCalls.length === 0 && !selectedSkill) return;
+
+    summaryEl.style.display = '';
+
+    // Build real-time status lines
+    let html = '<div class="tool-calls-live">';
+    if (selectedSkill) {
+        html += `<div class="tool-call-line"><span class="tool-badge tool-badge-skill">${t('tool.skill')}</span> ${escapeHtml(selectedSkill)}</div>`;
+    }
+    for (const tc of toolCalls) {
+        if (tc.done) {
+            html += `<div class="tool-call-line"><span class="tool-badge">✓ ${escapeHtml(tc.tool)}</span></div>`;
+        } else {
+            html += `<div class="tool-call-line"><span class="tool-badge tool-badge-active"><span class="search-spinner"></span> ${escapeHtml(tc.tool)}</span></div>`;
+        }
+    }
+    html += '</div>';
+    summaryEl.innerHTML = html;
+}
+
+/** 流结束后，把工具调用折叠成一行摘要 */
+function finalizeToolCallsUI(messageId) {
+    const msgEl = document.getElementById(messageId);
+    if (!msgEl) return;
+    const summaryEl = msgEl.querySelector('.tool-calls-summary');
+    if (!summaryEl) return;
+
+    const state = getAssistantTurnState(messageId);
+    const { toolCalls, selectedSkill } = state;
+
+    // No tool calls → hide the summary area
+    if (toolCalls.length === 0 && !selectedSkill) {
+        summaryEl.style.display = 'none';
+        return;
+    }
+
+    summaryEl.style.display = '';
+
+    // Deduplicate tool names for header
+    const toolNames = [...new Set(toolCalls.map(tc => tc.tool))];
+    let headerParts = [];
+    if (toolNames.length > 0) {
+        headerParts.push(`${t('tool.used')} ${toolNames.join(', ')}`);
+    }
+    if (selectedSkill) {
+        headerParts.push(`${t('tool.skill')}: ${selectedSkill}`);
+    }
+    const headerText = headerParts.join(' | ');
+
+    // Build detail section
+    let detailHtml = '';
+    for (const tc of toolCalls) {
+        const argsStr = tc.args ? JSON.stringify(tc.args, null, 0) : '';
+        const truncArgs = argsStr.length > 120 ? argsStr.slice(0, 120) + '...' : argsStr;
+        detailHtml += `<div class="tool-call-item"><span class="tool-call-name">${escapeHtml(tc.tool)}</span>`;
+        if (truncArgs) {
+            detailHtml += ` <span class="tool-call-args">${escapeHtml(truncArgs)}</span>`;
+        }
+        detailHtml += `</div>`;
+    }
+
+    summaryEl.innerHTML = `
+        <div class="tool-calls-header" onclick="this.parentElement.classList.toggle('expanded')">
+            <span class="tool-calls-header-text">${escapeHtml(headerText)}</span>
+            <span class="tool-calls-toggle">▸</span>
+        </div>
+        ${detailHtml ? `<div class="tool-calls-detail">${detailHtml}</div>` : ''}
+    `;
 }
 
 function getMessageRegions(messageId) {
@@ -1542,7 +1978,7 @@ function appendExperimentProgress(messageId, genes) {
             `</div>`
         ).join('');
     extrasEl.appendChild(progressEl);
-    chatContainer.scrollTop = chatContainer.scrollHeight;
+    smartScroll();
 }
 
 function updateExperimentProgress(messageId, data) {
@@ -1562,7 +1998,7 @@ function updateExperimentProgress(messageId, data) {
         curEl.classList.add('active');
         curEl.querySelector('.step-label').textContent = data.msg;
     }
-    chatContainer.scrollTop = chatContainer.scrollHeight;
+    smartScroll();
 }
 
 function handleExperimentError(messageId, msg) {
@@ -1588,7 +2024,7 @@ function handleExperimentError(messageId, msg) {
         targetEl.querySelector('.step-icon').textContent = '\u2717';
         targetEl.querySelector('.step-label').textContent = msg;
     }
-    chatContainer.scrollTop = chatContainer.scrollHeight;
+    smartScroll();
 }
 
 function renderSOPs(container, sops) {
@@ -1636,7 +2072,7 @@ function renderSOPs(container, sops) {
         const contentDiv = document.createElement('div');
         contentDiv.className = 'experiment-sop-content markdown-body';
         if (typeof marked !== 'undefined') {
-            contentDiv.innerHTML = marked.parse(text);
+            contentDiv.innerHTML = DOMPurify.sanitize(marked.parse(text));
         } else {
             contentDiv.textContent = text;
         }
@@ -1669,10 +2105,11 @@ function downloadSOP(filename, text) {
     // 用 marked 将 markdown 转换为 HTML
     let htmlContent = '';
     if (typeof marked !== 'undefined') {
-        htmlContent = marked.parse(text);
+        htmlContent = DOMPurify.sanitize(marked.parse(text));
     } else {
         // fallback：简单段落转换
-        htmlContent = text.split('\n').map(line => `<p>${line}</p>`).join('');
+        const raw = text.split('\n').map(line => `<p>${line}</p>`).join('');
+        htmlContent = typeof DOMPurify !== 'undefined' ? DOMPurify.sanitize(raw) : raw;
     }
 
     // 构造 Word 兼容的 HTML 文档
@@ -1716,4 +2153,342 @@ ${htmlContent}
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
+}
+
+
+// ===== Skills 管理 =====
+let _cachedSkills = [];
+let _cachedTools = [];
+let _currentEditingSkill = null;
+
+function setupSkillModal() {
+    const toggle = document.getElementById('skill-toggle');
+    const overlay = document.getElementById('skill-modal-overlay');
+    const closeBtn = document.getElementById('skill-modal-close');
+    const createBtn = document.getElementById('skill-create-btn');
+    const saveBtn = document.getElementById('skill-save-btn');
+    const deleteBtn = document.getElementById('skill-delete-btn');
+
+    if (!toggle || !overlay) return;
+
+    toggle.addEventListener('click', () => {
+        overlay.style.display = 'flex';
+        loadSkills();
+        loadTools();
+    });
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            overlay.style.display = 'none';
+        });
+    }
+
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) overlay.style.display = 'none';
+    });
+
+    if (createBtn) createBtn.addEventListener('click', createNewSkill);
+    if (saveBtn) saveBtn.addEventListener('click', saveCurrentSkill);
+    if (deleteBtn) deleteBtn.addEventListener('click', deleteCurrentSkill);
+}
+
+async function loadSkills() {
+    try {
+        const resp = await fetch('/api/skills', {
+            headers: { 'Authorization': 'Bearer ' + getAccessToken() },
+        });
+        if (!resp.ok) return;
+        const data = await resp.json();
+        _cachedSkills = data.skills || [];
+        renderSkillList(_cachedSkills);
+    } catch (e) {
+        console.error('加载 Skills 失败:', e);
+    }
+}
+
+async function loadTools() {
+    try {
+        const resp = await fetch('/api/tools', {
+            headers: { 'Authorization': 'Bearer ' + getAccessToken() },
+        });
+        if (!resp.ok) return;
+        const data = await resp.json();
+        _cachedTools = data.tools || [];
+        renderToolsList(_cachedTools);
+    } catch (e) {
+        console.error('加载 Tools 失败:', e);
+    }
+}
+
+function renderSkillList(skills) {
+    const listEl = document.getElementById('skill-list');
+    if (!listEl) return;
+
+    listEl.innerHTML = skills.map(s => {
+        const badgeText = s.is_shared ? t('skill.shared') : t('skill.private');
+        const badgeCls = s.is_shared ? 'skill-badge-shared' : 'skill-badge-private';
+        const pref = skillPrefs[s.name] || 'auto';
+        return `
+            <div class="skill-item ${_currentEditingSkill === s.name ? 'active' : ''}" data-skill="${escapeHtml(s.name)}">
+                <div class="skill-item-header">
+                    <span class="skill-item-name">${escapeHtml(s.name)}</span>
+                    <span class="skill-badge ${badgeCls}">${badgeText}</span>
+                </div>
+                <div class="skill-item-desc">${escapeHtml(s.description || '')}</div>
+                <div class="skill-item-controls">
+                    <select class="skill-mode-select" data-skill="${escapeHtml(s.name)}">
+                        <option value="auto" ${pref === 'auto' ? 'selected' : ''}>${t('skill.mode_auto')}</option>
+                        <option value="must_use" ${pref === 'must_use' ? 'selected' : ''}>${t('skill.mode_must')}</option>
+                        <option value="disabled" ${pref === 'disabled' ? 'selected' : ''}>${t('skill.mode_disabled')}</option>
+                    </select>
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    // Click to open editor
+    listEl.querySelectorAll('.skill-item').forEach(el => {
+        el.addEventListener('click', (e) => {
+            if (e.target.closest('.skill-mode-select')) return;
+            openSkillEditor(el.dataset.skill);
+        });
+    });
+
+    // Preference change
+    listEl.querySelectorAll('.skill-mode-select').forEach(sel => {
+        sel.addEventListener('change', () => {
+            const name = sel.dataset.skill;
+            if (sel.value === 'auto') {
+                delete skillPrefs[name];
+            } else {
+                skillPrefs[name] = sel.value;
+            }
+            saveSkillPrefs();
+        });
+    });
+}
+
+function renderToolsList(tools) {
+    const listEl = document.getElementById('skill-tools-list');
+    if (!listEl) return;
+
+    listEl.innerHTML = tools.map(tool => `
+        <div class="skill-tool-item">
+            <span class="skill-tool-name">${escapeHtml(tool.name)}</span>
+            <span class="skill-tool-desc">${escapeHtml(tool.description || '')}</span>
+        </div>
+    `).join('');
+}
+
+function renderEditorTools(selectedTools, disabled) {
+    const container = document.getElementById('skill-editor-tools');
+    if (!container) return;
+    const selected = new Set(selectedTools || []);
+    container.innerHTML = '<div class="skill-editor-tools-label">Tools:</div>' +
+        _cachedTools.map(t => `<label class="skill-editor-tool-item">
+            <input type="checkbox" value="${escapeHtml(t.name)}"
+                ${selected.has(t.name) ? 'checked' : ''} ${disabled ? 'disabled' : ''}>
+            <span>${escapeHtml(t.name)}</span>
+        </label>`).join('');
+}
+
+function getEditorTools() {
+    return [...document.querySelectorAll('#skill-editor-tools input:checked')].map(cb => cb.value);
+}
+
+function openSkillEditor(name) {
+    const skill = _cachedSkills.find(s => s.name === name);
+    if (!skill) return;
+
+    _currentEditingSkill = name;
+    const isShared = skill.is_shared;
+
+    const editorPanel = document.getElementById('skill-editor-panel');
+    if (editorPanel) editorPanel.style.display = 'block';
+
+    const nameInput = document.getElementById('skill-editor-name');
+    if (nameInput) { nameInput.value = skill.name; nameInput.disabled = isShared; }
+
+    const descInput = document.getElementById('skill-editor-desc');
+    if (descInput) { descInput.value = skill.description || ''; descInput.disabled = isShared; }
+
+    renderEditorTools(skill.tools || [], isShared);
+
+    const contentArea = document.getElementById('skill-editor-content');
+    if (contentArea) { contentArea.value = skill.content || ''; contentArea.disabled = isShared; }
+
+    const badge = document.getElementById('skill-editor-badge');
+    if (badge) {
+        badge.textContent = isShared ? t('skill.shared') : t('skill.private');
+        badge.className = 'skill-editor-badge ' + (isShared ? 'skill-badge-shared' : 'skill-badge-private');
+    }
+
+    // 共享 skill 隐藏保存/删除按钮
+    const saveBtn = document.getElementById('skill-save-btn');
+    const deleteBtn = document.getElementById('skill-delete-btn');
+    if (saveBtn) saveBtn.style.display = isShared ? 'none' : 'inline-block';
+    if (deleteBtn) deleteBtn.style.display = isShared ? 'none' : 'inline-block';
+
+    // 列表高亮
+    document.querySelectorAll('.skill-item').forEach(el => {
+        el.classList.toggle('active', el.dataset.skill === name);
+    });
+}
+
+async function createNewSkill() {
+    // 弹出输入框让用户描述需求
+    const prompt = window.prompt(currentLang === 'zh' ? '描述你想要的 Skill：' : 'Describe the Skill you want:', '');
+    if (!prompt || !prompt.trim()) return;
+
+    const editorPanel = document.getElementById('skill-editor-panel');
+    if (editorPanel) editorPanel.style.display = 'block';
+
+    // 显示 loading 状态
+    _currentEditingSkill = null;
+    const nameInput = document.getElementById('skill-editor-name');
+    const descInput = document.getElementById('skill-editor-desc');
+    const contentArea = document.getElementById('skill-editor-content');
+    if (nameInput) { nameInput.value = ''; nameInput.disabled = false; }
+    if (descInput) { descInput.value = currentLang === 'zh' ? '生成中...' : 'Generating...'; descInput.disabled = true; }
+    if (contentArea) { contentArea.value = ''; contentArea.disabled = true; }
+    renderEditorTools([], true);
+
+    const badge = document.getElementById('skill-editor-badge');
+    if (badge) { badge.textContent = t('skill.private'); badge.className = 'skill-editor-badge skill-badge-private'; }
+    const saveBtn = document.getElementById('skill-save-btn');
+    const deleteBtn = document.getElementById('skill-delete-btn');
+    if (saveBtn) saveBtn.style.display = 'inline-block';
+    if (deleteBtn) deleteBtn.style.display = 'none';
+
+    try {
+        const resp = await fetch('/api/skills/generate', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + getAccessToken() },
+            body: JSON.stringify({ prompt: prompt.trim() }),
+        });
+        if (!resp.ok) throw new Error('生成失败');
+        const draft = await resp.json();
+
+        // 填入编辑器
+        if (nameInput) { nameInput.value = draft.name || ''; nameInput.disabled = false; }
+        if (descInput) { descInput.value = draft.description || ''; descInput.disabled = false; }
+        renderEditorTools(draft.tools || [], false);
+        if (contentArea) { contentArea.value = draft.content || ''; contentArea.disabled = false; }
+    } catch (e) {
+        if (descInput) { descInput.value = ''; descInput.disabled = false; }
+        if (contentArea) contentArea.disabled = false;
+        renderEditorTools([], false);
+        alert('Skill 生成失败: ' + e.message);
+    }
+
+    document.querySelectorAll('.skill-item.active').forEach(el => el.classList.remove('active'));
+}
+
+async function saveCurrentSkill() {
+    const nameInput = document.getElementById('skill-editor-name');
+    const descInput = document.getElementById('skill-editor-desc');
+    const contentArea = document.getElementById('skill-editor-content');
+    const name = (nameInput?.value || '').trim();
+    const description = (descInput?.value || '').trim();
+    const tools = getEditorTools();
+    const content = (contentArea?.value || '').trim();
+
+    if (!name) return;
+
+    try {
+        const isUpdate = _currentEditingSkill && _cachedSkills.some(s => s.name === _currentEditingSkill && !s.is_shared);
+        const url = isUpdate ? `/api/skills/${encodeURIComponent(_currentEditingSkill)}` : '/api/skills';
+        const method = isUpdate ? 'PUT' : 'POST';
+
+        const resp = await fetch(url, {
+            method,
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + getAccessToken(),
+            },
+            body: JSON.stringify({ name, description, tools, content }),
+        });
+
+        if (!resp.ok) {
+            const err = await resp.json().catch(() => ({}));
+            alert(err.detail || t('skill.saveFail'));
+            return;
+        }
+
+        _currentEditingSkill = name;
+        await loadSkills();
+        openSkillEditor(name);
+    } catch (e) {
+        alert(t('skill.saveFail'));
+    }
+}
+
+async function deleteCurrentSkill() {
+    if (!_currentEditingSkill) return;
+    if (!confirm(t('skill.confirmDelete', _currentEditingSkill))) return;
+
+    const skillName = _currentEditingSkill;
+    try {
+        const resp = await fetch(`/api/skills/${encodeURIComponent(skillName)}`, {
+            method: 'DELETE',
+            headers: { 'Authorization': 'Bearer ' + getAccessToken() },
+        });
+
+        if (!resp.ok) {
+            const err = await resp.json().catch(() => ({}));
+            alert(err.detail || t('skill.deleteFail'));
+            return;
+        }
+
+        _currentEditingSkill = null;
+        const editorPanel = document.getElementById('skill-editor-panel');
+        if (editorPanel) editorPanel.style.display = 'none';
+        delete skillPrefs[skillName];
+        saveSkillPrefs();
+        await loadSkills();
+    } catch (e) {
+        alert(t('skill.deleteFail'));
+    }
+}
+
+function saveSkillPrefs() {
+    localStorage.setItem('skillPrefs', JSON.stringify(skillPrefs));
+}
+
+// ===== 模型选择 =====
+
+async function initModelSelect() {
+    const selectEl = document.getElementById('model-select');
+    if (!selectEl) return;
+
+    try {
+        const resp = await fetch('/api/config');
+        if (!resp.ok) return;
+        const data = await resp.json();
+        const models = data.models || [];
+
+        if (models.length <= 1) {
+            selectEl.style.display = 'none';
+            if (models.length === 1) selectedModelId = models[0].id;
+            return;
+        }
+
+        selectEl.innerHTML = models.map(m =>
+            `<option value="${escapeHtml(m.id)}" ${m.id === selectedModelId ? 'selected' : ''}>${escapeHtml(m.name)}</option>`
+        ).join('');
+        selectEl.style.display = 'inline-block';
+
+        // If stored selection not in options, default to first
+        if (!models.some(m => m.id === selectedModelId)) {
+            selectedModelId = models[0].id;
+            localStorage.setItem('selectedModelId', selectedModelId);
+        }
+
+        selectEl.addEventListener('change', () => {
+            selectedModelId = selectEl.value;
+            localStorage.setItem('selectedModelId', selectedModelId);
+        });
+    } catch (e) {
+        console.error('加载模型列表失败:', e);
+    }
 }

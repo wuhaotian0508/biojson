@@ -21,13 +21,10 @@ import tempfile
 from pathlib import Path
 from typing import Generator
 
-import openai
-from openai import OpenAI
-
-# ---- 导入项目配置（API key、模型名等） ----
 import sys
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-import config
+
+from core.llm_client import call_llm_sync
 
 # ---- 导入 4 个 pipeline 步骤模块 ----
 from . import gene2accession as step1_gene2acc
@@ -55,21 +52,6 @@ class ExperimentPipeline:
     def __init__(self):
         # ---- 创建临时工作目录，所有中间文件都存放于此 ----
         self.work_dir = Path(tempfile.mkdtemp(prefix="crispr_pipeline_"))
-
-        # ---- 主 LLM 客户端（用于基因提取） ----
-        self._llm = OpenAI(
-            api_key=config.LLM_API_KEY,
-            base_url=config.LLM_BASE_URL,
-        )
-
-        # ---- Fallback LLM 客户端（主 API 内容过滤报 400 时切换） ----
-        # 仅在配置了 FALLBACK_API_KEY 时创建，否则为 None
-        self._fallback_llm = (
-            OpenAI(api_key=config.FALLBACK_API_KEY, base_url=config.FALLBACK_BASE_URL)
-            if config.FALLBACK_API_KEY else None
-        )
-        # _fallback_model：fallback 使用的模型名；未配置时退回主模型名
-        self._fallback_model = config.FALLBACK_MODEL or config.LLM_MODEL
 
     # ------------------------------------------------------------------
     # LLM 提取基因名 + 物种（从 LLM 回答文本中自动提取）
@@ -102,25 +84,10 @@ class ExperimentPipeline:
         # messages: 发给 LLM 的消息列表（单轮对话）
         messages = [{"role": "user", "content": prompt}]
 
-        # ---- 先尝试主 API，内容过滤报 400 时切换 fallback ----
-        try:
-            resp = self._llm.chat.completions.create(
-                model=config.LLM_MODEL,
-                messages=messages,
-                temperature=0,
-            )
-        except openai.BadRequestError:
-            # 主 API 内容审查拦截：切换 fallback；未配置 fallback 则向上抛出
-            if not self._fallback_llm:
-                raise
-            resp = self._fallback_llm.chat.completions.create(
-                model=self._fallback_model,
-                messages=messages,
-                temperature=0,
-            )
+        resp = call_llm_sync(messages, temperature=0)
 
         # raw: LLM 返回的原始文本，可能是 JSON 或 markdown 代码块包裹的 JSON
-        raw = resp.choices[0].message.content.strip()
+        raw = resp.content.strip()
 
         # ---- 兼容 markdown code block 格式（```json ... ```） ----
         if "```" in raw:
@@ -169,25 +136,10 @@ class ExperimentPipeline:
         # messages: 发给 LLM 的消息列表（单轮对话）
         messages = [{"role": "user", "content": prompt}]
 
-        # ---- 先尝试主 API，内容过滤报 400 时切换 fallback ----
-        try:
-            resp = self._llm.chat.completions.create(
-                model=config.LLM_MODEL,
-                messages=messages,
-                temperature=0,
-            )
-        except openai.BadRequestError:
-            # 主 API 内容审查拦截：切换 fallback；未配置 fallback 则向上抛出
-            if not self._fallback_llm:
-                raise
-            resp = self._fallback_llm.chat.completions.create(
-                model=self._fallback_model,
-                messages=messages,
-                temperature=0,
-            )
+        resp = call_llm_sync(messages, temperature=0)
 
         # raw: LLM 返回的原始文本，兼容 markdown 代码块包裹格式
-        raw = resp.choices[0].message.content.strip()
+        raw = resp.content.strip()
 
         # ---- 兼容 markdown code block 格式 ----
         if "```" in raw:

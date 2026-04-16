@@ -12,7 +12,7 @@ import numpy as np
 import requests
 from typing import List
 
-from config import (
+from core.config import (
     JINA_API_KEY,
     JINA_EMBEDDING_URL,
     EMBEDDING_MODEL,

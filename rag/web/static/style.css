@@ -176,6 +176,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    position: relative;
 }
 
 /* 头部 */
@@ -801,6 +802,69 @@ body {
     transform: none;
 }
 
+/* 停止生成按钮样式 */
+.send-btn.stop-mode {
+    background: #e74c3c;
+    font-size: 14px;
+    animation: stop-pulse 1.5s ease-in-out infinite;
+}
+
+.send-btn.stop-mode:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+}
+
+@keyframes stop-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4); }
+    50% { box-shadow: 0 0 0 6px rgba(231, 76, 60, 0); }
+}
+
+/* "已停止生成"提示 */
+.generation-stopped {
+    color: var(--text-light, #999);
+    font-size: 12px;
+    margin-top: 10px;
+    padding: 4px 0;
+    border-top: 1px dashed var(--border-color, #e0e0e0);
+    opacity: 0.8;
+}
+
+/* "回到底部"悬浮按钮 */
+.scroll-to-bottom-btn {
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color, #e0e0e0);
+    background: var(--bg-color, #fff);
+    color: var(--text-color, #333);
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s, transform 0.25s;
+    z-index: 10;
+}
+
+.scroll-to-bottom-btn.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.scroll-to-bottom-btn:hover {
+    background: var(--primary-color, #5B8DEF);
+    color: #fff;
+    border-color: var(--primary-color, #5B8DEF);
+}
+
 /* 加载动画 */
 .loading-dots {
     display: inline-block;
@@ -1049,6 +1113,113 @@ body {
     border-radius: 50%;
     animation: deep-spin 0.8s linear infinite;
     flex-shrink: 0;
+}
+
+/* ===== 工具调用摘要 ===== */
+.tool-calls-summary {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+/* 实时状态（streaming 阶段） */
+.tool-calls-live .tool-call-line {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 2px 0;
+}
+
+.tool-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--bg-secondary, #F0F4F8);
+    color: var(--text-light);
+}
+
+.tool-badge-skill {
+    background: #EDE9FE;
+    color: #7C3AED;
+}
+
+.tool-badge-active {
+    background: #EEF2FF;
+    color: var(--primary-color);
+}
+
+.tool-badge-active .search-spinner {
+    width: 10px;
+    height: 10px;
+    border-width: 1.5px;
+}
+
+/* 完成后的可折叠摘要 */
+.tool-calls-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: var(--bg-secondary, #F0F4F8);
+    user-select: none;
+    transition: background 0.15s;
+}
+
+.tool-calls-header:hover {
+    background: var(--border-color, #E5E9F0);
+}
+
+.tool-calls-header-text {
+    flex: 1;
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+.tool-calls-toggle {
+    font-size: 10px;
+    color: var(--text-light);
+    transition: transform 0.2s;
+}
+
+.tool-calls-summary.expanded .tool-calls-toggle {
+    transform: rotate(90deg);
+}
+
+.tool-calls-detail {
+    display: none;
+    padding: 6px 8px 4px;
+    font-size: 11px;
+    color: var(--text-light);
+}
+
+.tool-calls-summary.expanded .tool-calls-detail {
+    display: block;
+}
+
+.tool-call-item {
+    padding: 2px 0;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.tool-call-name {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.tool-call-args {
+    font-family: monospace;
+    font-size: 10px;
+    color: #94A3B8;
+    word-break: break-all;
 }
 
 /* ===== 来源类型标签 ===== */
@@ -1311,6 +1482,61 @@ body {
 .auth-submit-btn:disabled {
     background: var(--text-light);
     cursor: not-allowed;
+}
+
+/* 验证码表单 */
+.verify-info {
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.verify-info p {
+    color: var(--text-light);
+    font-size: 14px;
+    margin: 0;
+}
+
+.verify-info .verify-email {
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 4px;
+    word-break: break-all;
+}
+
+#verify-code-input {
+    text-align: center;
+    font-size: 24px !important;
+    letter-spacing: 8px;
+    font-family: 'Courier New', monospace !important;
+    padding: 14px 16px !important;
+}
+
+.verify-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 4px;
+}
+
+.verify-link-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 13px;
+    cursor: pointer;
+    padding: 4px 0;
+    font-family: inherit;
+}
+
+.verify-link-btn:hover {
+    text-decoration: underline;
+}
+
+.verify-link-btn:disabled {
+    color: var(--text-light);
+    cursor: not-allowed;
+    text-decoration: none;
 }
 
 /* 用户信息弹出框 */
@@ -2088,4 +2314,507 @@ body {
     .scene-card-desc {
         font-size: 13px;
     }
+}
+
+/* ===== Skills 管理侧边栏按钮间距 ===== */
+.skill-base {
+    margin-top: 8px;
+}
+
+/* ===== Skills 管理模态窗口 ===== */
+.skill-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(44, 62, 80, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 900;
+}
+
+.skill-modal {
+    background: white;
+    border-radius: 16px;
+    width: 800px;
+    max-width: 95vw;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.2s ease-out;
+}
+
+.skill-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.skill-modal-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.skill-modal-body {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    min-height: 0;
+}
+
+/* 左侧 Skill 列表面板 */
+.skill-list-panel {
+    width: 260px;
+    border-right: 1px solid var(--border-color);
+    overflow-y: auto;
+    padding: 16px;
+    flex-shrink: 0;
+}
+
+.skill-item {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.skill-item:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(91, 141, 238, 0.08);
+}
+
+.skill-item.active {
+    border-color: var(--primary-color);
+    background: rgba(91, 141, 238, 0.04);
+}
+
+.skill-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.skill-item-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-family: 'Menlo', 'Consolas', monospace;
+}
+
+.skill-item-desc {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.skill-item-controls {
+    display: flex;
+    align-items: center;
+}
+
+.skill-mode-select {
+    padding: 3px 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 12px;
+    color: var(--text-dark);
+    background: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.skill-mode-select:focus {
+    border-color: var(--primary-color);
+}
+
+.skill-badge {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 1px 8px;
+    border-radius: 10px;
+}
+
+.skill-badge-shared {
+    background: rgba(46, 204, 113, 0.12);
+    color: #27AE60;
+}
+
+.skill-badge-private {
+    background: rgba(155, 89, 182, 0.12);
+    color: #8E44AD;
+}
+
+.skill-create-btn {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: 1px dashed var(--border-color);
+    border-radius: 8px;
+    font-size: 13px;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.skill-create-btn:hover {
+    border-color: var(--primary-color);
+    background: rgba(91, 141, 238, 0.04);
+}
+
+/* 右侧 Skill 编辑器面板 */
+.skill-editor-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    overflow-y: auto;
+    min-width: 0;
+}
+
+.skill-editor-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.skill-editor-name-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1.5px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'Menlo', 'Consolas', monospace;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.skill-editor-name-input:focus {
+    border-color: var(--primary-color);
+}
+
+.skill-editor-name-input:disabled {
+    background: var(--bg-light);
+    color: var(--text-light);
+}
+
+.skill-editor-badge {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 2px 10px;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+.skill-editor-textarea {
+    flex: 1;
+    min-height: 200px;
+    padding: 14px;
+    border: 1.5px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: 'Menlo', 'Consolas', 'Courier New', monospace;
+    line-height: 1.6;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.skill-editor-textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.skill-editor-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.skill-save-btn {
+    padding: 8px 20px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: inherit;
+}
+
+.skill-save-btn:hover {
+    background: #4A7DD7;
+}
+
+.skill-delete-btn {
+    padding: 8px 20px;
+    background: none;
+    border: 1px solid #E74C3C;
+    color: #E74C3C;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.skill-delete-btn:hover {
+    background: #E74C3C;
+    color: white;
+}
+
+/* Tools 列表区域 */
+.skill-tools-section {
+    padding: 12px 24px 16px;
+    border-top: 1px solid var(--border-color);
+}
+
+.skill-tools-section h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.skill-tools-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tool-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    font-size: 12px;
+}
+
+.skill-tool-name {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-family: 'Menlo', 'Consolas', monospace;
+}
+
+.skill-tool-desc {
+    color: var(--text-light);
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ===== 模型选择下拉框 ===== */
+.model-select {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: inherit;
+    color: var(--text-dark);
+    background: white;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s;
+    max-width: 180px;
+}
+
+.model-select:hover {
+    border-color: var(--primary-color);
+}
+
+.model-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(91, 141, 238, 0.1);
+}
+
+/* ===== NCBI 验证结果 ===== */
+.ncbi-verify-section {
+    margin-top: 16px;
+    padding: 16px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 10px;
+}
+
+.ncbi-verify-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.ncbi-verify-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.ncbi-verify-table th,
+.ncbi-verify-table td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #d1fae5;
+}
+
+.ncbi-verify-table th {
+    font-weight: 600;
+    color: var(--text-dark);
+    background: rgba(34, 197, 94, 0.06);
+}
+
+.ncbi-verify-table .ncbi-found td {
+    color: var(--text-dark);
+}
+
+.ncbi-verify-table .ncbi-not-found td {
+    color: #dc2626;
+}
+
+.ncbi-status-icon {
+    font-weight: 700;
+    margin-right: 4px;
+}
+
+.ncbi-verify-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.ncbi-confirm-btn {
+    padding: 8px 20px;
+    background: #16a34a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: inherit;
+}
+
+.ncbi-confirm-btn:hover {
+    background: #15803d;
+}
+
+.ncbi-cancel-btn {
+    padding: 8px 20px;
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-light);
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.ncbi-cancel-btn:hover {
+    border-color: #dc2626;
+    color: #dc2626;
+}
+
+/* ===== SOP 提取进度 ===== */
+.sop-extract-progress {
+    margin-top: 12px;
+}
+
+/* ===== Skill 编辑器：描述输入框 ===== */
+.skill-editor-desc-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1.5px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+    margin-bottom: 12px;
+}
+
+.skill-editor-desc-input:focus {
+    border-color: var(--primary-color);
+}
+
+.skill-editor-desc-input:disabled {
+    background: var(--bg-light);
+    color: var(--text-light);
+}
+
+/* ===== Skill 编辑器：Tools 勾选区 ===== */
+.skill-editor-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 10px 12px;
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.skill-editor-tools-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-right: 4px;
+}
+
+.skill-editor-tool-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 10px;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    font-size: 12px;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: all 0.15s;
+    user-select: none;
+}
+
+.skill-editor-tool-item:hover {
+    border-color: var(--primary-color);
+}
+
+.skill-editor-tool-item input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+
+.skill-editor-tool-item input[type="checkbox"]:disabled {
+    cursor: not-allowed;
+}
+
+.skill-editor-tool-item span {
+    font-family: 'Menlo', 'Consolas', monospace;
+    font-size: 12px;
 }

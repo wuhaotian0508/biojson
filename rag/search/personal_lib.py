@@ -12,13 +12,14 @@
 import json
 import logging
 import pickle
+import re
 import time
 from pathlib import Path
 from typing import Dict, List, Optional
 
 import numpy as np
 
-from config import (
+from core.config import (
     PERSONAL_LIB_DIR,
     MAX_PDF_SIZE_MB,
     MAX_FILES_PER_USER,
@@ -28,6 +29,23 @@ from config import (
 from search.embedding_utils import get_embeddings, _build_headers
 
 logger = logging.getLogger(__name__)
+
+# 只保留安全字符：字母、数字、中文、下划线、连字符、点、空格
+_SAFE_FILENAME_RE = re.compile(r'[^\w\u4e00-\u9fff\-. ]', re.UNICODE)
+
+
+def _sanitize_filename(name: str) -> str:
+    """清理文件名：去除路径分隔符、特殊字符、路径遍历，确保安全"""
+    # 1. 只取 basename（防止路径遍历）
+    name = Path(name).name
+    # 2. 移除不安全字符
+    name = _SAFE_FILENAME_RE.sub('_', name)
+    # 3. 折叠连续下划线/空格
+    name = re.sub(r'[_ ]{2,}', '_', name).strip('_. ')
+    # 4. 防止空文件名
+    if not name:
+        name = f"upload_{int(time.time())}.pdf"
+    return name
 
 
 class PersonalLibrary:
@@ -96,7 +114,7 @@ class PersonalLibrary:
             raise ValueError(f"最多上传 {MAX_FILES_PER_USER} 个文件")
 
         # 保存文件
-        safe_name = filename.replace("/", "_").replace("\\", "_")
+        safe_name = _sanitize_filename(filename)
         pdf_path = self.pdf_dir / safe_name
         file_storage.save(str(pdf_path))
 
@@ -235,7 +253,7 @@ class PersonalLibrary:
     def rename_file(self, old_name: str, new_name: str) -> bool:
         if old_name not in self.manifest:
             return False
-        safe_new = new_name.replace("/", "_").replace("\\", "_")
+        safe_new = _sanitize_filename(new_name)
 
         # 重命名 PDF
         old_path = self.pdf_dir / old_name

@@ -12,7 +12,7 @@ import pickle
 from pathlib import Path
 from sklearn.feature_extraction.text import TfidfVectorizer
 from utils.data_loader import DataLoader
-import config
+import core.config as config
 
 
 def build_simple_index():

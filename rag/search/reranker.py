@@ -17,7 +17,7 @@ from typing import List, Dict
 
 import requests
 
-from config import JINA_API_KEY, JINA_RERANK_URL, RERANK_MODEL
+from core.config import JINA_API_KEY, JINA_RERANK_URL, RERANK_MODEL
 
 logger = logging.getLogger(__name__)
 

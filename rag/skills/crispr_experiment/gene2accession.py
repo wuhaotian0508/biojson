@@ -44,6 +44,42 @@ _GENUS_MAP = {
     "T.": "Triticum",
 }
 
+# 基因名常见的物种缩写前缀 → 对应物种拉丁名
+# 论文中常写 GmIFS2，但 NCBI Gene 数据库中注册名为 IFS2
+_GENE_PREFIX_TO_SPECIES = {
+    "Gm":  "Glycine max",
+    "At":  "Arabidopsis thaliana",
+    "Os":  "Oryza sativa",
+    "Zm":  "Zea mays",
+    "Nt":  "Nicotiana tabacum",
+    "Nb":  "Nicotiana benthamiana",
+    "Ta":  "Triticum aestivum",
+    "Sl":  "Solanum lycopersicum",
+    "St":  "Solanum tuberosum",
+    "Md":  "Malus domestica",
+    "Vv":  "Vitis vinifera",
+    "Br":  "Brassica rapa",
+    "Bn":  "Brassica napus",
+    "Cs":  "Cucumis sativus",
+    "Gh":  "Gossypium hirsutum",
+    "Pv":  "Phaseolus vulgaris",
+    "Lj":  "Lotus japonicus",
+    "Mt":  "Medicago truncatula",
+}
+
+
+def _strip_species_prefix(gene_name: str) -> Optional[str]:
+    """
+    去除基因名中的物种缩写前缀，返回去掉前缀后的基因名。
+
+    例如: "GmIFS2" → "IFS2", "AtMYB4" → "MYB4"
+    如果基因名不以已知前缀开头或去掉后为空，则返回 None。
+    """
+    for prefix in sorted(_GENE_PREFIX_TO_SPECIES, key=len, reverse=True):
+        if gene_name.startswith(prefix) and len(gene_name) > len(prefix):
+            return gene_name[len(prefix):]
+    return None
+
 
 def _normalize_species_name(species: str) -> str:
     """
@@ -83,31 +119,57 @@ def _normalize_species_name(species: str) -> str:
     return s   # 无法识别时原样返回
 
 
+def _esearch_gene(gene_name: str, species: str, retmax: int = 10) -> List[str]:
+    """
+    执行单次 NCBI Gene esearch 查询，返回 Gene ID 列表。
+    """
+    query = f'"{gene_name}"[Gene Name]'
+    if species:
+        query += f' AND "{species}"[Organism]'
+
+    with Entrez.esearch(db="gene", term=query, retmax=retmax) as handle:
+        record = Entrez.read(handle)
+
+    return record.get("IdList", [])
+
+
 def _search_gene_ids(gene_name: str, species: str, retmax: int = 10) -> List[str]:
     """
     在 NCBI Gene 数据库中按基因名和物种搜索，返回 Gene ID 列表。
 
-    使用 Entrez esearch 接口，构造形如：
-        "GmFAD2"[Gene Name] AND "Glycine max"[Organism]
-    的查询语句。
+    搜索策略（依次尝试，有结果即返回）：
+    1. 原始基因名精确搜索，如 "GmIFS2"[Gene Name] AND "Glycine max"[Organism]
+    2. 去掉物种缩写前缀后搜索，如 "IFS2"[Gene Name] AND "Glycine max"[Organism]
+       （NCBI Gene 中大多数植物基因不含物种前缀）
+    3. 原始基因名作为自由文本搜索（不限定 [Gene Name] 字段）
 
     参数:
-        gene_name: 基因名，如 "GmFAD2"
+        gene_name: 基因名，如 "GmIFS2"
         species:   物种拉丁名，如 "Glycine max"；为空时仅按基因名搜索
         retmax:    最多返回的 Gene ID 数量，默认 10
 
     返回:
         NCBI Gene ID 字符串列表，如 ["733567", "100101456"]；无结果时为空列表
     """
-    # query: 构造的 Entrez 查询字符串
-    query = f'"{gene_name}"[Gene Name]'
+    # ---- 策略1：原始基因名精确搜索 ----
+    ids = _esearch_gene(gene_name, species, retmax)
+    if ids:
+        return ids
+
+    # ---- 策略2：去掉物种缩写前缀后搜索 ----
+    short_name = _strip_species_prefix(gene_name)
+    if short_name:
+        ids = _esearch_gene(short_name, species, retmax)
+        if ids:
+            return ids
+
+    # ---- 策略3：原始基因名自由文本搜索 ----
+    query = f'"{gene_name}"'
     if species:
         query += f' AND "{species}"[Organism]'
-
     with Entrez.esearch(db="gene", term=query, retmax=retmax) as handle:
-        record = Entrez.read(handle)   # record: Entrez esearch 返回的结果字典
-
-    return record.get("IdList", [])   # IdList: Gene ID 字符串列表
+        record = Entrez.read(handle)
+    return record.get("IdList", [])
 
 
 def _link_gene_to_nuccore(gene_id: str) -> List[str]:
