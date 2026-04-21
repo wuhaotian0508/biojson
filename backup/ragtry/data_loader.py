@@ -120,7 +120,7 @@ def process_all_data(data_dir: Path) -> List[GeneChunk]:
     return all_chunks
 
 if __name__ == "__main__":
-    from config import DATA_DIR
+    from backup.ragtry.config import DATA_DIR
     chunks = process_all_data(DATA_DIR)
     print(f"\nSample chunk:")
     print(f"  Gene: {chunks[0].gene_name}")

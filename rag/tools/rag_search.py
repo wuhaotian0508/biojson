@@ -7,10 +7,12 @@ Agent 调用此工具获取排序后的检索结果，再自行生成回答。
 import asyncio
 import logging
 
+from tools.base import BaseTool
+
 logger = logging.getLogger(__name__)
 
 
-class RAGSearchTool:
+class RAGSearchTool(BaseTool):
     name = "rag_search"
     description = "综合搜索 PubMed 文献、基因数据库和个人知识库，返回重排后的最相关结果"
 
@@ -29,9 +31,6 @@ class RAGSearchTool:
         self._reranker = reranker
         self._get_personal_lib = get_personal_lib
         self._get_query_embedding = get_query_embedding
-
-    # 运行时由 app.py 注入当前请求的 user_id
-    _current_user_id: str | None = None
 
     @property
     def schema(self) -> dict:
@@ -62,6 +61,10 @@ class RAGSearchTool:
                         "top_n": {
                             "type": "integer",
                             "description": "返回重排后的结果数量，默认 10",
+                        },
+                        "user_id": {
+                            "type": "string",
+                            "description": "用户 ID（由系统自动注入，不要手动填写）",
                         },
                     },
                     "required": ["query"],
@@ -106,9 +109,8 @@ class RAGSearchTool:
             })
         return results
 
-    async def _search_personal_lib(self, query: str, top_k: int = 10) -> list[dict]:
+    async def _search_personal_lib(self, query: str, user_id: str | None = None, top_k: int = 10) -> list[dict]:
         """通过 PersonalLibrary.search 获取个人库结果"""
-        user_id = self._current_user_id
         if not user_id or not self._get_personal_lib or not self._get_query_embedding:
             return []
 
@@ -125,7 +127,7 @@ class RAGSearchTool:
     # ------------------------------------------------------------------
 
     async def execute(self, query: str, sources: list[str] | None = None,
-                      top_n: int = 10, **_) -> str:
+                      top_n: int = 10, user_id: str | None = None, **_) -> str:
         """综合搜索 + 重排，返回格式化的可读文本"""
         sources = sources or ["pubmed"]
 
@@ -139,7 +141,7 @@ class RAGSearchTool:
             tasks.append(self._search_gene_db(query))
             source_names.append("基因数据库")
         if "personal_lib" in sources:
-            tasks.append(self._search_personal_lib(query))
+            tasks.append(self._search_personal_lib(query, user_id=user_id))
             source_names.append("个人知识库")
 
         if not tasks:
@@ -214,3 +216,75 @@ class RAGSearchTool:
             lines.append("")
 
         return "\n".join(lines)
+
+
+if __name__ == "__main__":
+    import asyncio
+    from tools.pubmed_search import PubmedSearchTool
+
+    # 创建简单的 mock 对象用于测试
+    class MockRetriever:
+        def search(self, query: str, top_k: int = 20):
+            # 模拟基因库检索结果（同步方法，和真实 JinaRetriever 一致）
+            class MockChunk:
+                def __init__(self, title, gene):
+                    self.paper_title = title
+                    self.content = f"Mock gene content about {gene} in vitamin biosynthesis pathway."
+                    self.doi = "10.1234/mock.doi"
+                    self.gene_name = gene
+                    self.gene_type = "enzyme"
+                    self.journal = "Nature Biotechnology"
+
+            return [
+                (MockChunk("Vitamin C pathway in rice", "VitC1"), 0.85),
+                (MockChunk("Carotenoid synthesis genes", "PSY1"), 0.75),
+            ]
+
+    class MockReranker:
+        def rerank(self, query: str, documents: list[dict], top_n: int = 10):
+            # 简单按原始 score 排序（同步方法，和真实 JinaReranker 一致）
+            sorted_docs = sorted(documents, key=lambda x: x.get("score", 0), reverse=True)
+            return sorted_docs[:top_n]
+
+    # 初始化工具
+    pubmed_tool = PubmedSearchTool()
+    retriever = MockRetriever()
+    reranker = MockReranker()
+
+    rag_tool = RAGSearchTool(
+        pubmed_tool=pubmed_tool,
+        retriever=retriever,
+        reranker=reranker,
+        get_personal_lib=None,
+        get_query_embedding=None
+    )
+
+    # 测试搜索
+    print("=" * 60)
+    print("测试 RAG 综合搜索工具")
+    print("=" * 60)
+
+    # 测试 1: 仅 PubMed
+    print("\n[测试 1] 仅搜索 PubMed:")
+    result1 = asyncio.run(rag_tool.execute(
+        query="vitamin C biosynthesis rice",
+        sources=["pubmed"],
+        top_n=3
+    ))
+    print(result1)
+
+    # 测试 2: PubMed + 基因库
+    print("\n" + "=" * 60)
+    print("[测试 2] 搜索 PubMed + 基因数据库:")
+    result2 = asyncio.run(rag_tool.execute(
+        query="carotenoid biosynthesis maize",
+        sources=["pubmed", "gene_db"],
+        top_n=5
+    ))
+    print(result2)
+
+    # 测试 3: 查看 schema
+    print("\n" + "=" * 60)
+    print("[测试 3] Tool Schema:")
+    import json
+    print(json.dumps(rag_tool.schema, indent=2, ensure_ascii=False))

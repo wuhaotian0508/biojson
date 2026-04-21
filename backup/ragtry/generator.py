@@ -2,8 +2,8 @@
 from typing import List, Tuple, Dict, Any
 from openai import OpenAI
 
-from data_loader import GeneChunk
-from config import LLM_API_KEY, LLM_BASE_URL, LLM_MODEL
+from backup.ragtry.data_loader import GeneChunk
+from backup.ragtry.config import LLM_API_KEY, LLM_BASE_URL, LLM_MODEL
 
 SYSTEM_PROMPT = """你是一个专业的植物分子生物学专家，基于检索到的基因数据库信息回答用户问题。
 
@@ -155,7 +155,7 @@ class RAGGenerator:
 
 
 if __name__ == "__main__":
-    from retriever import JinaRetriever
+    from backup.ragtry.retriever import JinaRetriever
 
     # 加载索引
     retriever = JinaRetriever()

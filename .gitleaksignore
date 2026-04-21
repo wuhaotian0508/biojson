@@ -1,0 +1,15 @@
+# Ignore biological data files that trigger false positives
+# Gene accession numbers and DNA/RNA sequences are not secrets
+
+# All extraction JSON files contain gene accession numbers
+extractor/reports/**/*.json
+
+# All processed markdown files contain DNA/RNA sequences
+extractor/input/processed/**/*.md
+
+# Original input files may also contain sequences
+extractor/input/**/*.md
+
+# Any other biological data files
+**/*_nutri_plant.json
+**/extraction.json

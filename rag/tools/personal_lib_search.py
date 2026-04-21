@@ -7,10 +7,12 @@
 import asyncio
 import logging
 
+from tools.base import BaseTool
+
 logger = logging.getLogger(__name__)
 
 
-class PersonalLibSearchTool:
+class PersonalLibSearchTool(BaseTool):
     name = "personal_lib_search"
     description = "检索用户的个人知识库（上传的 PDF 文档）"
 
@@ -41,18 +43,18 @@ class PersonalLibSearchTool:
                             "type": "integer",
                             "description": "返回结果数量，默认 10",
                         },
+                        "user_id": {
+                            "type": "string",
+                            "description": "用户 ID（由系统自动注入，不要手动填写）",
+                        },
                     },
                     "required": ["query"],
                 },
             },
         }
 
-    # 运行时由 app.py 注入当前请求的 user_id
-    _current_user_id: str | None = None
-
-    async def execute(self, query: str, top_k: int = 10, **_) -> str:
+    async def execute(self, query: str, top_k: int = 10, user_id: str | None = None, **_) -> str:
         """检索个人知识库，返回格式化文本"""
-        user_id = self._current_user_id
         if not user_id or not self._get_lib or not self._get_embedding:
             return "个人知识库未配置或用户未登录。"
 

@@ -8,10 +8,12 @@ CRISPR 实验方案设计工具 — 包装 skills/crispr_experiment/pipeline.py
 import asyncio
 import logging
 
+from tools.base import BaseTool
+
 logger = logging.getLogger(__name__)
 
 
-class CrisprTool:
+class CrisprTool(BaseTool):
     name = "design_crispr_experiment"
     description = "为指定基因设计完整的 CRISPR/SpCas9 基因编辑实验方案(SOP)"
 

@@ -5,8 +5,10 @@ execute 返回可读文本（供 agent 直接阅读），而非结构化 dict。
 """
 import asyncio
 
+from tools.base import BaseTool
 
-class GeneDBSearchTool:
+
+class GeneDBSearchTool(BaseTool):
     name = "gene_db_search"
     description = "检索本地基因数据库，基于向量相似度返回相关基因文献片段"
 

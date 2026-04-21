@@ -230,9 +230,7 @@ async def query(request: Request, user=Depends(get_current_user)):
     if not query_text:
         raise HTTPException(status_code=400, detail="查询不能为空")
 
-    # 为当前请求设置 personal_lib_search 和 rag_search 的 user_id 上下文
-    personal_tool._current_user_id = user.id
-    rag_search_tool._current_user_id = user.id
+    # 为当前请求启动 Agent（user_id 通过 execute 参数传递，无需注入类属性）
 
     async def generate():
         try:

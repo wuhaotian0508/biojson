@@ -7,8 +7,8 @@ from pathlib import Path
 from typing import List, Dict, Tuple, Optional
 from dataclasses import asdict
 
-from data_loader import GeneChunk, process_all_data
-from config import (
+from backup.ragtry.data_loader import GeneChunk, process_all_data
+from backup.ragtry.config import (
     JINA_API_KEY, JINA_EMBEDDING_URL, JINA_RERANK_URL,
     EMBEDDING_MODEL, RERANK_MODEL,
     TOP_K_RETRIEVAL, TOP_K_RERANK, DATA_DIR, INDEX_DIR

@@ -1321,10 +1321,11 @@ function renderSources(sources) {
 }
 
 // 渲染参考文献列表（仅文献名+链接，无基因名、无分数）
+// sources 已经由后端按正文引用顺序过滤和排序
 function renderReferences(sources) {
     if (!sources || sources.length === 0) return '';
 
-    // 用 Set 按文献名去重
+    // 用 Set 按文献名去重（保持顺序）
     const seen = new Set();
     const refs = [];
 
@@ -1348,13 +1349,14 @@ function renderReferences(sources) {
         if (seen.has(literatureName)) continue;
         seen.add(literatureName);
 
-        refs.push({ literatureName, url: s.url || '', doi: s.doi || '', pmid: s.pmid || '' });
+        refs.push({ literatureName, url: s.url || '', doi: s.doi || '', pmid: s.pmid || '', toolIndex: s.tool_index || 0 });
     }
 
     if (refs.length === 0) return '';
 
     const items = refs.map((r, i) => {
-        const num = i + 1;
+        // 使用后端传来的 tool_index（与正文角标一致），fallback 到顺序编号
+        const num = r.toolIndex || (i + 1);
         let litHtml = escapeHtml(r.literatureName);
         const href = r.url || (r.doi ? `https://doi.org/${r.doi}` : (r.pmid ? `https://pubmed.ncbi.nlm.nih.gov/${r.pmid}/` : ''));
         if (href) {

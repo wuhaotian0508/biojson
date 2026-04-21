@@ -8,8 +8,8 @@ from pathlib import Path
 
 # 导入父目录的 RAG 组件（web/ → rag/）
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from retriever import JinaRetriever
-from generator import RAGGenerator
+from backup.ragtry.retriever import JinaRetriever
+from backup.ragtry.generator import RAGGenerator
 
 app = Flask(__name__, static_folder='static', static_url_path='')
 CORS(app)

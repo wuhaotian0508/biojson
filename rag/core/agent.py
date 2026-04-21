@@ -28,6 +28,7 @@ import logging
 import re
 from pathlib import Path
 
+from core.context import ContextManager
 from utils.gene_detection import extract_gene_names
 
 logger = logging.getLogger(__name__)
@@ -37,6 +38,11 @@ MAX_STEPS = 20
 # SOP 快捷路径关键词正则（匹配用户输入中包含 SOP/实验方案 相关意图的查询）
 _SOP_SHORTCUT_RE = re.compile(
     r"(?i)\bsop\b|实验方案|crispr.*方案|基因编辑.*方案|生成.*方案|设计.*实验"
+)
+
+# 检测模型把 function call 写进 content 文本的正则（用于过滤流式输出）
+_FUNC_CALL_LEAK_RE = re.compile(
+    r'^\s*\{?\s*"(?:name|function|tool_calls?|arguments)"', re.MULTILINE
 )
 
 
@@ -55,6 +61,7 @@ class Agent:
         self.loader = skill_loader
         self.call_llm = call_llm
         self.call_llm_stream = call_llm_stream
+        self.context_mgr = ContextManager(call_llm_for_summary=call_llm)
 
     # ------------------------------------------------------------------
     # 工具/技能过滤
@@ -233,6 +240,8 @@ class Agent:
 
         解析 pubmed_search 返回的格式化文本，提取 title/PMID/journal/url。
         解析 gene_db_search 返回的格式化文本，提取 title/DOI。
+
+        返回格式：每个 source 包含 tool_index 字段，表示在工具输出中的原始编号
         """
         sources = []
 
@@ -249,6 +258,7 @@ class Agent:
                 blocks = re.split(r'\n\[(\d+)\]\s+', content)
                 # blocks[0] = header, then alternating: number, block_text
                 for i in range(1, len(blocks), 2):
+                    tool_index = blocks[i]  # 原始编号
                     block = blocks[i + 1] if i + 1 < len(blocks) else ""
                     title_line = block.split('\n')[0].strip()
                     pmid_match = re.search(r'PMID:\s*(\d+)', block)
@@ -262,6 +272,7 @@ class Agent:
                         "url": url_match.group(1) if url_match else "",
                         "journal": journal_match.group(1).strip() if journal_match else "",
                         "doi": "",
+                        "tool_index": int(tool_index),  # 保存原始编号
                     })
 
             elif tool_name == "gene_db_search":
@@ -269,6 +280,7 @@ class Agent:
                 # [1] GeneName (type) | Journal | DOI: xxx
                 blocks = re.split(r'\n\[(\d+)\]\s+', content)
                 for i in range(1, len(blocks), 2):
+                    tool_index = blocks[i]
                     block = blocks[i + 1] if i + 1 < len(blocks) else ""
                     first_line = block.split('\n')[0].strip()
                     doi_match = re.search(r'DOI:\s*(\S+)', block)
@@ -279,12 +291,14 @@ class Agent:
                         "doi": doi_match.group(1) if doi_match else "",
                         "url": f"https://doi.org/{doi_match.group(1)}" if doi_match else "",
                         "pmid": "",
+                        "tool_index": int(tool_index),
                     })
 
             elif tool_name == "personal_lib_search":
                 # 解析 personal_lib_search 格式化输出
                 blocks = re.split(r'\n\[(\d+)\]\s+', content)
                 for i in range(1, len(blocks), 2):
+                    tool_index = blocks[i]
                     block = blocks[i + 1] if i + 1 < len(blocks) else ""
                     first_line = block.split('\n')[0].strip()
                     sources.append({
@@ -294,9 +308,125 @@ class Agent:
                         "url": "",
                         "doi": "",
                         "pmid": "",
+                        "tool_index": int(tool_index),
                     })
 
+            elif tool_name == "rag_search":
+                # 解析 rag_search 综合搜索输出
+                # [1] Title
+                #     来源: PubMed/基因数据库/个人知识库
+                #     期刊/PMID/DOI 等元数据
+                blocks = re.split(r'\n\[(\d+)\]\s+', content)
+                for i in range(1, len(blocks), 2):
+                    tool_index = blocks[i]
+                    block = blocks[i + 1] if i + 1 < len(blocks) else ""
+                    lines = block.split('\n')
+                    title_line = lines[0].strip()
+
+                    # 检测来源类型
+                    source_type = "unknown"
+                    if "来源: PubMed" in block:
+                        source_type = "pubmed"
+                    elif "来源: 基因数据库" in block:
+                        source_type = "gene_db"
+                    elif "来源: 个人知识库" in block:
+                        source_type = "personal"
+
+                    # 提取元数据
+                    pmid_match = re.search(r'PMID:\s*(\d+)', block)
+                    doi_match = re.search(r'DOI:\s*(\S+)', block)
+                    url_match = re.search(r'链接:\s*(https?://\S+)', block)
+                    journal_match = re.search(r'期刊:\s*(.+)', block)
+
+                    source_dict = {
+                        "source_type": source_type,
+                        "title": title_line,
+                        "paper_title": title_line,
+                        "pmid": pmid_match.group(1) if pmid_match else "",
+                        "doi": doi_match.group(1) if doi_match else "",
+                        "url": url_match.group(1) if url_match else "",
+                        "journal": journal_match.group(1).strip() if journal_match else "",
+                        "tool_index": int(tool_index),
+                    }
+
+                    # 如果是个人知识库，提取文件名
+                    if source_type == "personal":
+                        source_dict["filename"] = title_line
+
+                    sources.append(source_dict)
+
         return sources
+
+    @staticmethod
+    def _filter_cited_sources(answer_text: str, all_sources: list[dict]) -> list[dict]:
+        """从回答文本中提取实际引用的编号，过滤并重排 sources 列表。
+
+        Args:
+            answer_text: LLM 生成的回答文本，包含 [1], [2] 等引用标记
+            all_sources: 从工具结果提取的所有来源，每个包含 tool_index 字段
+
+        Returns:
+            按引用顺序排列的 sources 列表，只包含实际被引用的文献
+        """
+        # 提取回答中所有的引用编号 [N]
+        cited_numbers = set()
+        for match in re.finditer(r'\[(\d+)\]', answer_text):
+            cited_numbers.add(int(match.group(1)))
+
+        if not cited_numbers:
+            # 如果没有引用，返回空列表（不显示参考文献）
+            return []
+
+        # 按 tool_index 匹配，保留被引用的文献
+        cited_sources = []
+        for num in sorted(cited_numbers):
+            for source in all_sources:
+                if source.get("tool_index") == num:
+                    cited_sources.append(source)
+                    break
+
+        return cited_sources
+
+    # ------------------------------------------------------------------
+    # 消息序列化（处理 DeepSeek reasoner 的 reasoning_content）
+    # ------------------------------------------------------------------
+    @staticmethod
+    def _msg_to_dict(msg, model_id: str = "") -> dict:
+        """将 LLM 返回的 message 对象转为 dict，追加到 messages 列表。
+
+        DeepSeek reasoner 在同一轮工具调用循环内，必须回传 reasoning_content，
+        否则 API 会返回 400 错误。
+        """
+        # openai SDK 的 message 对象可以直接 model_dump
+        if hasattr(msg, "model_dump"):
+            d = msg.model_dump(exclude_none=True)
+        else:
+            d = dict(msg) if not isinstance(msg, dict) else msg
+
+        # 确保基本字段存在
+        d.setdefault("role", "assistant")
+        return d
+
+    def _is_reasoner_model(self, model_id: str) -> bool:
+        """判断当前 model_id 解析出的模型是否为 DeepSeek reasoner。"""
+        _, model_name = _resolve_async_client(model_id)
+        return is_deepseek_reasoner(model_name)
+
+    @staticmethod
+    def _strip_reasoning_for_new_turn(messages: list[dict]) -> list[dict]:
+        """新一轮用户提问前，移除旧 assistant 消息中的 reasoning_content。
+
+        DeepSeek 文档建议：新问题开始时移除旧 reasoning_content，
+        API 即使收到也会忽略，但移除可以节省 token。
+        """
+        result = []
+        for msg in messages:
+            if msg.get("role") == "assistant" and "reasoning_content" in msg:
+                cleaned = {k: v for k, v in msg.items() if k != "reasoning_content"}
+                result.append(cleaned)
+            else:
+                result.append(msg)
+        return result
 
     # ------------------------------------------------------------------
     # 历史消息截断
@@ -439,9 +569,12 @@ class Agent:
             )
             messages = [{"role": "system", "content": system_prompt}]
 
-            # 注入截断的历史
+            # 注入截断的历史（新一轮对话，清理旧 reasoning_content 以节省 token）
             if history:
-                messages.extend(self._truncate_history(history))
+                truncated = self._truncate_history(history)
+                if self._is_reasoner_model(model_id):
+                    truncated = self._strip_reasoning_for_new_turn(truncated)
+                messages.extend(truncated)
 
             messages.append({"role": "user", "content": user_input})
 
@@ -455,28 +588,127 @@ class Agent:
             while step < MAX_STEPS:
                 step += 1
 
-                msg = await self.call_llm(
-                    messages,
-                    tools=tool_definitions if tool_definitions else None,
-                    model_id=model_id,
-                    temperature=0.3,
-                )
-                messages.append(msg)
+                # ---- 上下文管理: 每次 LLM 调用前检查并压缩 ----
+                messages = await self.context_mgr.prepare(messages, tool_definitions)
+
+                try:
+                    msg = await self.call_llm(
+                        messages,
+                        tools=tool_definitions if tool_definitions else None,
+                        model_id=model_id,
+                        temperature=0.3,
+                    )
+                except Exception as exc:
+                    # L3: 检测 context overflow，紧急截断后重试
+                    if self.context_mgr.is_overflow_error(exc):
+                        logger.warning("检测到 context overflow，执行 L3 紧急截断")
+                        messages = self.context_mgr.emergency_truncate(messages)
+                        try:
+                            msg = await self.call_llm(
+                                messages,
+                                tools=tool_definitions if tool_definitions else None,
+                                model_id=model_id,
+                                temperature=0.3,
+                            )
+                        except Exception as retry_exc:
+                            logger.exception("L3 重试仍然失败")
+                            yield {"type": "error", "data": str(retry_exc)}
+                            return
+                    else:
+                        raise
+
+                # ---- 记录 API 返回的 usage（如果有） ----
+                if hasattr(msg, '_raw_response'):
+                    try:
+                        usage = msg._raw_response.get("usage", {})
+                        if usage:
+                            self.context_mgr.update_usage(usage, len(messages))
+                    except Exception:
+                        pass
+
+                # ---- 将 assistant message 转为 dict 追加 ----
+                # DeepSeek reasoner: 需要保留 reasoning_content 供同一轮工具调用循环使用
+                messages.append(self._msg_to_dict(msg, model_id))
 
                 # 没有工具调用 → 流式生成最终回答
                 if not msg.tool_calls:
                     # 移除非流式拿到的完整回答，用流式重新生成实现逐字输出
                     messages.pop()
+
+                    # 收集前几个 chunk 检测是否为泄露的 function call JSON
+                    buffer = ""
+                    buffer_chunks = []
+                    flushed = False
+
                     async for chunk in self.call_llm_stream(
                         messages, model_id=model_id, temperature=0.3,
                     ):
-                        if chunk.choices and chunk.choices[0].delta.content:
-                            text_piece = chunk.choices[0].delta.content
+                        if not chunk.choices:
+                            continue
+                        delta = chunk.choices[0].delta
+                        # 跳过 reasoning_content（DeepSeek 思考过程，不应展示给用户）
+                        if not delta.content:
+                            continue
+                        text_piece = delta.content
+
+                        if not flushed:
+                            # 缓冲前 200 字符，检测是否为泄露的 function call
+                            buffer += text_piece
+                            buffer_chunks.append(text_piece)
+                            if len(buffer) < 200:
+                                continue
+                            # 检查缓冲区是否包含 function call JSON 泄露
+                            if _FUNC_CALL_LEAK_RE.search(buffer):
+                                logger.warning(
+                                    "检测到流式输出中泄露了 function call JSON，"
+                                    "丢弃并重新生成纯文本回答"
+                                )
+                                # 追加提示让模型用自然语言回答
+                                messages.append({
+                                    "role": "user",
+                                    "content": (
+                                        "请直接用自然语言回答上述问题，"
+                                        "不要输出 JSON 或 function call 格式。"
+                                    ),
+                                })
+                                buffer = ""
+                                buffer_chunks = []
+                                # 重新流式请求
+                                async for retry_chunk in self.call_llm_stream(
+                                    messages, model_id=model_id, temperature=0.3,
+                                ):
+                                    if retry_chunk.choices and retry_chunk.choices[0].delta.content:
+                                        t = retry_chunk.choices[0].delta.content
+                                        answer_text += t
+                                        yield {"type": "text", "data": t}
+                                flushed = True
+                                break
+                            else:
+                                # 缓冲区正常，一次性 flush
+                                for buffered_piece in buffer_chunks:
+                                    answer_text += buffered_piece
+                                    yield {"type": "text", "data": buffered_piece}
+                                flushed = True
+                        else:
                             answer_text += text_piece
                             yield {"type": "text", "data": text_piece}
 
-                    # 发送参考文献来源
-                    sources = self._extract_sources_from_tool_results(collected_tool_results)
+                    # flush 剩余缓冲（内容少于 200 字符的短回答）
+                    if not flushed and buffer_chunks:
+                        if not _FUNC_CALL_LEAK_RE.search(buffer):
+                            for buffered_piece in buffer_chunks:
+                                answer_text += buffered_piece
+                                yield {"type": "text", "data": buffered_piece}
+                        else:
+                            logger.warning("短回答中检测到 function call 泄露，已过滤")
+                            yield {
+                                "type": "text",
+                                "data": "抱歉，模型返回了异常格式，请重新提问。",
+                            }
+
+                    # 发送参考文献来源（只保留正文中实际引用的文献）
+                    all_sources = self._extract_sources_from_tool_results(collected_tool_results)
+                    sources = self._filter_cited_sources(answer_text, all_sources)
                     if sources:
                         yield {"type": "sources", "data": sources}
 
@@ -512,13 +744,16 @@ class Agent:
                         "args": args,
                     }
 
-                    # 执行工具
+                    # 执行工具（注入 user_id 供需要的工具使用）
                     try:
-                        result = await self.registry.execute(tool_name, **args)
+                        result = await self.registry.execute(tool_name, user_id=user_id, **args)
                         result_str = str(result) if result is not None else ""
                     except Exception as e:
                         logger.warning("工具 %s 执行失败: %s", tool_name, e)
                         result_str = f"工具执行失败: {e}"
+
+                    # 截断过长的工具输出（防止单次结果撑爆上下文）
+                    result_str = ContextManager.cap_tool_output(result_str)
 
                     # 发送 tool_result 事件（摘要）
                     summary = result_str[:200] + "..." if len(result_str) > 200 else result_str

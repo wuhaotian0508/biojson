@@ -5,12 +5,13 @@ import xml.etree.ElementTree as ET
 
 import httpx
 
+from tools.base import BaseTool
 
 PUBMED_ESEARCH_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
 PUBMED_EFETCH_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
 
 
-class PubmedSearchTool:
+class PubmedSearchTool(BaseTool):
     name = "pubmed_search"
     description = "搜索 PubMed 生物医学文献数据库，返回相关论文的标题、摘要、期刊和链接"
 
@@ -132,7 +133,7 @@ class PubmedSearchTool:
             })
         return results
 
-    async def execute(self, query: str, max_results: int = 5) -> str:
+    async def execute(self, query: str, max_results: int = 5, **_) -> str:
         """调用 PubMed esearch + efetch，返回格式化的文献列表"""
         articles = await self.search_raw(query, max_results)
 
