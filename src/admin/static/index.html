@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioJSON Admin</title>
+    <link rel="stylesheet" href="/admin/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===== Auth Overlay ===== -->
+<div id="auth-overlay" class="auth-overlay">
+    <div class="auth-card">
+        <div class="auth-brand">
+            <div class="brand-icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <rect x="2" y="2" width="28" height="28" rx="6" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="11" cy="11" r="3" fill="currentColor"/>
+                    <circle cx="21" cy="11" r="3" fill="currentColor"/>
+                    <circle cx="16" cy="21" r="3" fill="currentColor"/>
+                    <line x1="11" y1="14" x2="16" y2="18" stroke="currentColor" stroke-width="1.5"/>
+                    <line x1="21" y1="14" x2="16" y2="18" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+            </div>
+            <h1>BioJSON Admin</h1>
+            <p class="auth-subtitle">Pipeline Management Console</p>
+        </div>
+
+        <div class="auth-tabs">
+            <button id="tab-login" class="auth-tab active" onclick="switchAuthForm('login')">Login</button>
+            <button id="tab-signup" class="auth-tab" onclick="switchAuthForm('signup')">Sign Up</button>
+        </div>
+
+        <div id="auth-error" class="auth-error" style="display:none"></div>
+
+        <form id="login-form">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="login-email" placeholder="admin@example.com" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="login-password" placeholder="********" required>
+            </div>
+            <button type="submit" id="login-submit-btn" class="btn-primary btn-full">Login</button>
+        </form>
+
+        <form id="signup-form" style="display:none">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="signup-email" placeholder="user@example.com" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="signup-password" placeholder="Min 6 chars" required>
+            </div>
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" id="signup-confirm-password" placeholder="Repeat password" required>
+            </div>
+            <button type="submit" id="signup-submit-btn" class="btn-primary btn-full">Sign Up</button>
+        </form>
+    </div>
+</div>
+
+<!-- ===== Main App Shell ===== -->
+<div id="app" class="app-shell" style="display:none">
+
+    <!-- Top bar -->
+    <header class="topbar">
+        <div class="topbar-left">
+            <div class="topbar-brand">
+                <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
+                    <rect x="2" y="2" width="28" height="28" rx="6" stroke="currentColor" stroke-width="2.5"/>
+                    <circle cx="11" cy="11" r="3" fill="currentColor"/>
+                    <circle cx="21" cy="11" r="3" fill="currentColor"/>
+                    <circle cx="16" cy="21" r="3" fill="currentColor"/>
+                    <line x1="11" y1="14" x2="16" y2="18" stroke="currentColor" stroke-width="1.5"/>
+                    <line x1="21" y1="14" x2="16" y2="18" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <span>BioJSON</span>
+            </div>
+        </div>
+        <nav class="topbar-tabs">
+            <button class="tab-btn active" data-tab="dashboard">Dashboard</button>
+            <button class="tab-btn" data-tab="upload">Upload</button>
+            <button class="tab-btn" data-tab="pipeline">Pipeline</button>
+            <button class="tab-btn" data-tab="papers">Papers</button>
+            <button class="tab-btn" data-tab="editor">Prompt / Schema</button>
+        </nav>
+        <div class="topbar-right">
+            <button class="user-btn" title="User"></button>
+        </div>
+    </header>
+
+    <!-- Tab panels -->
+    <main class="content">
+
+        <!-- Dashboard -->
+        <section id="panel-dashboard" class="panel active">
+            <div class="panel-header">
+                <h2>Dashboard</h2>
+                <button class="btn-ghost" onclick="refreshDashboard()">Refresh</button>
+            </div>
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-label">Input Queue</div>
+                    <div class="stat-value" id="stat-input">--</div>
+                    <div class="stat-desc">Papers awaiting processing</div>
+                </div>
+                <div class="stat-card accent">
+                    <div class="stat-label">Processed</div>
+                    <div class="stat-value" id="stat-processed">--</div>
+                    <div class="stat-desc">Verified JSONs in data/</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Archive</div>
+                    <div class="stat-value" id="stat-waitlist">--</div>
+                    <div class="stat-desc">Processed .md in archive</div>
+                </div>
+            </div>
+            <div id="pipeline-status-banner" class="status-banner" style="display:none">
+                <span class="pulse"></span>
+                <span id="pipeline-status-text">Pipeline running...</span>
+            </div>
+        </section>
+
+        <!-- Upload -->
+        <section id="panel-upload" class="panel">
+            <div class="panel-header">
+                <h2>Upload Papers</h2>
+            </div>
+            <div id="drop-zone" class="drop-zone">
+                <div class="drop-zone-inner">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M8 32l8-8 6 6 12-12 6 6"/>
+                        <rect x="4" y="4" width="40" height="40" rx="8"/>
+                        <path d="M24 16v12m-4-4l4 4 4-4"/>
+                    </svg>
+                    <p>Drop <code>.zip</code> file here or <label class="link" for="file-input">browse</label></p>
+                    <p class="hint">ZIP containing .md files (MinerU format)</p>
+                    <input type="file" id="file-input" accept=".zip" style="display:none">
+                </div>
+            </div>
+            <div id="upload-progress" class="upload-progress" style="display:none">
+                <div class="spinner-sm"></div>
+                <span>Uploading...</span>
+            </div>
+            <div id="upload-result" class="upload-result" style="display:none"></div>
+        </section>
+
+        <!-- Pipeline -->
+        <section id="panel-pipeline" class="panel">
+            <div class="panel-header">
+                <h2>Pipeline</h2>
+                <span id="pipeline-file-count" class="badge">0 files</span>
+            </div>
+
+            <!-- Settings 面板：可调参数 -->
+            <div class="settings-bar">
+                <div class="setting-item">
+                    <label for="set-temperature">Temperature</label>
+                    <input type="number" id="set-temperature" value="0.7" min="0" max="1" step="0.1">
+                </div>
+                <div class="setting-item">
+                    <label for="set-batch">Genes/Batch</label>
+                    <input type="number" id="set-batch" value="12" min="1" max="50" step="1">
+                </div>
+                <div class="setting-item">
+                    <label for="set-workers">Workers</label>
+                    <input type="number" id="set-workers" value="32" min="1" max="64" step="1">
+                </div>
+            </div>
+
+            <!-- Idle state：操作按钮 -->
+            <div id="pipe-idle" class="pipe-section">
+                <div class="pipe-actions">
+                    <button class="btn-primary" id="btn-preview" onclick="startPreview()">Preview First Paper</button>
+                    <button class="btn-accent" id="btn-run-all" onclick="startRun()">Run All</button>
+                </div>
+                <p class="pipe-hint">Preview 是可选的，也可以直接 Run All</p>
+            </div>
+
+            <!-- Preview result -->
+            <div id="pipe-preview" class="pipe-section" style="display:none">
+                <div class="pipe-preview-header">
+                    <h3>Preview Result</h3>
+                    <button class="btn-accent" onclick="startRun()">Run Remaining</button>
+                </div>
+                <div id="preview-status" class="preview-status"></div>
+                <pre id="preview-json" class="json-viewer"></pre>
+            </div>
+
+            <!-- Running state -->
+            <div id="pipe-running" class="pipe-section" style="display:none">
+                <div class="progress-header">
+                    <span id="progress-text">Processing...</span>
+                    <button class="btn-danger-sm" onclick="stopPipeline()">Stop</button>
+                </div>
+                <div class="progress-bar-track">
+                    <div class="progress-bar-fill" id="progress-bar" style="width:0%"></div>
+                </div>
+                <div id="progress-current" class="progress-current"></div>
+                <div id="token-live" class="token-live"></div>
+                <div id="pipeline-log" class="pipeline-log"></div>
+            </div>
+
+            <!-- Complete state -->
+            <div id="pipe-complete" class="pipe-section" style="display:none">
+                <div class="complete-banner">
+                    <span class="complete-icon">&#10003;</span>
+                    <span id="complete-text">Pipeline complete</span>
+                </div>
+                <div id="complete-log" class="pipeline-log"></div>
+            </div>
+
+            <!-- Output viewer (always visible when there's output) -->
+            <div id="pipe-output" class="pipe-section" style="display:none">
+                <div class="output-header">
+                    <h3>Console Output</h3>
+                    <button class="btn-ghost" onclick="refreshOutput()">Refresh</button>
+                </div>
+                <pre id="output-viewer" class="output-viewer"></pre>
+            </div>
+        </section>
+
+        <!-- Papers -->
+        <section id="panel-papers" class="panel">
+            <div class="panel-header">
+                <h2>Processed Papers</h2>
+                <button class="btn-ghost" onclick="loadPapers()">Refresh</button>
+            </div>
+            <div id="papers-table-wrap" class="table-wrap">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Filename</th>
+                            <th>Modified</th>
+                        </tr>
+                    </thead>
+                    <tbody id="papers-tbody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Prompt / Schema Editor -->
+        <section id="panel-editor" class="panel">
+            <div class="panel-header">
+                <h2>Prompt / Schema Editor</h2>
+            </div>
+            <div class="editor-tabs">
+                <button class="editor-tab active" data-target="prompt" onclick="switchEditor('prompt')">Prompt</button>
+                <button class="editor-tab" data-target="schema" onclick="switchEditor('schema')">Schema</button>
+            </div>
+            <div id="editor-prompt" class="editor-pane active">
+                <div class="editor-toolbar">
+                    <span class="editor-path" id="prompt-path"></span>
+                    <button class="btn-primary btn-sm" onclick="savePrompt()">Save</button>
+                </div>
+                <textarea id="prompt-textarea" class="code-editor" spellcheck="false"></textarea>
+            </div>
+            <div id="editor-schema" class="editor-pane">
+                <div class="editor-toolbar">
+                    <span class="editor-path" id="schema-path"></span>
+                    <button class="btn-primary btn-sm" onclick="saveSchema()">Save</button>
+                </div>
+                <textarea id="schema-textarea" class="code-editor" spellcheck="false"></textarea>
+            </div>
+            <div id="editor-status" class="editor-status" style="display:none"></div>
+        </section>
+
+    </main>
+</div>
+
+<script src="/admin/static/admin.js"></script>
+</body>
+</html>

@@ -33,7 +33,7 @@ fi
 
 # ─── Directory config ────────────────────────────────────
 export MD_DIR="${MD_DIR:-${EXTRACTOR_DIR}/input}"
-export JSON_DIR="${JSON_DIR:-${BASE_DIR}/rag/data}"
+export JSON_DIR="${JSON_DIR:-${BASE_DIR}/data}"
 export REPORTS_DIR="${REPORTS_DIR:-${EXTRACTOR_DIR}/reports}"
 export TOKEN_USAGE_DIR="${TOKEN_USAGE_DIR:-${EXTRACTOR_DIR}/reports/token-usage}"
 export PROCESSED_DIR="${PROCESSED_DIR:-${MD_DIR}/processed}"
