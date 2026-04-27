@@ -1,13 +1,32 @@
 import tomllib
+import os
+import subprocess
+import sys
 from pathlib import Path
 
 
-def test_project_name_is_biojson_and_top_level_packages_are_importable():
+def test_project_name_is_nutrimaster_and_top_level_packages_are_importable():
     package = __import__("cli")
     pyproject = tomllib.loads(Path("pyproject.toml").read_text(encoding="utf-8"))
 
     assert package.__name__ == "cli"
-    assert pyproject["project"]["name"] == "biojson"
+    assert pyproject["project"]["name"] == "nutrimaster"
+
+
+def test_extractor_is_importable_outside_source_working_directory(tmp_path):
+    env = os.environ.copy()
+    env.pop("PYTHONPATH", None)
+
+    result = subprocess.run(
+        [sys.executable, "-c", "import extractor; print(extractor.__file__)"],
+        cwd=tmp_path,
+        env=env,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+
+    assert result.returncode == 0, result.stderr
 
 
 def test_settings_report_required_real_service_keys():

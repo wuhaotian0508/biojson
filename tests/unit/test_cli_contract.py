@@ -44,6 +44,29 @@ def test_serve_check_config_succeeds_when_real_service_keys_exist(capsys):
     assert exit_code == 0
     assert json.loads(captured.out) == {
         "status": "ok",
-        "service": "biojson",
+        "service": "nutrimaster",
         "mode": "serve",
+    }
+
+
+def test_check_config_command_succeeds_when_real_service_keys_exist(capsys):
+    from cli.main import main
+
+    env = {
+        "OPENAI_API_KEY": "test-key",
+        "OPENAI_BASE_URL": "https://example.test/v1",
+        "MODEL": "test-model",
+        "JINA_API_KEY": "test-jina",
+        "SUPABASE_URL": "https://example.supabase.co",
+        "SUPABASE_SERVICE_ROLE_KEY": "test-service-role",
+    }
+
+    exit_code = main(["check-config"], env=env)
+    captured = capsys.readouterr()
+
+    assert exit_code == 0
+    assert json.loads(captured.out) == {
+        "status": "ok",
+        "service": "nutrimaster",
+        "mode": "check-config",
     }

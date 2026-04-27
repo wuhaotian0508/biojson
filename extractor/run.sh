@@ -1,6 +1,6 @@
 #!/bin/bash
 # ═══════════════════════════════════════════════════════════
-# BioJSON Extractor Pipeline — Entry Script
+# NutriMaster Extractor Pipeline — Entry Script
 # ═══════════════════════════════════════════════════════════
 #
 # Usage:
@@ -33,7 +33,7 @@ fi
 
 # ─── Directory config ────────────────────────────────────
 export MD_DIR="${MD_DIR:-${EXTRACTOR_DIR}/input}"
-export JSON_DIR="${JSON_DIR:-${BASE_DIR}/data}"
+export JSON_DIR="${JSON_DIR:-${BASE_DIR}/data/corpus}"
 export REPORTS_DIR="${REPORTS_DIR:-${EXTRACTOR_DIR}/reports}"
 export TOKEN_USAGE_DIR="${TOKEN_USAGE_DIR:-${EXTRACTOR_DIR}/reports/token-usage}"
 export PROCESSED_DIR="${PROCESSED_DIR:-${MD_DIR}/processed}"
@@ -59,7 +59,7 @@ MODE="${1:-pipeline}"
 TEST_INDEX="${2:-1}"
 
 echo "═══════════════════════════════════════════════════════"
-echo "🚀 BioJSON Extractor Pipeline v4"
+echo "🚀 NutriMaster Extractor Pipeline v4"
 echo "   Mode:     ${MODE}"
 echo "   Model:    ${MODEL}"
 echo "   Input:    ${MD_DIR}"

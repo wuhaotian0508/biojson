@@ -276,7 +276,7 @@ async def sop_extract_genes(request: Request, user=Depends(get_current_user)):
 
             # Phase B: NCBI 验证每个基因
             yield _sse({"type": "sop_ncbi_verifying", "data": "正在 NCBI 确认基因信息..."})
-            Entrez.email = "biojson_rag@example.com"
+            Entrez.email = "nutrimaster_rag@example.com"
             verified = []
             for g in genes:
                 species = await asyncio.to_thread(_normalize_species_name, g.get("species", ""))

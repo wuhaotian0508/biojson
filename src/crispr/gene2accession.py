@@ -9,7 +9,7 @@ from Bio import Entrez
 
 logger = logging.getLogger(__name__)
 
-_ENTREZ_EMAIL = "biojson_rag@example.com"
+_ENTREZ_EMAIL = "nutrimaster_rag@example.com"
 _SPECIES_ABBREV_MAP = {
     "G. max": "Glycine max",
     "A. thaliana": "Arabidopsis thaliana",

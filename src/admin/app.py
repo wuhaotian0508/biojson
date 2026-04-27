@@ -1,5 +1,5 @@
 """
-admin.app — BioJSON Admin Panel 后端（Flask, 默认端口 5501）
+admin.app — NutriMaster Admin Panel 后端（Flask, 默认端口 5501）
 
 功能概述：
   1. ZIP 上传 → 递归解压 .md 到 extractor/input/，自动去重

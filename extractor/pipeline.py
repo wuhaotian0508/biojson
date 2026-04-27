@@ -275,7 +275,7 @@ def run_pipeline_batch(
 
 def main():
     """Pipeline 主函数：解析参数 → 发现文件 → 顺序/并行处理 → 汇总输出。[PR 改动] 拆出 collect_paper_result/_print_paper_result"""
-    parser = argparse.ArgumentParser(description="BioJSON Extraction Pipeline")
+    parser = argparse.ArgumentParser(description="NutriMaster Extraction Pipeline")
     parser.add_argument("--test", type=str, default=None,
                         help="Test mode: file index (1-based) or filename pattern")
     parser.add_argument("--workers", type=int, default=MAX_WORKERS,
@@ -286,7 +286,7 @@ def main():
 
     # ── Pipeline mode ─────────────────────────────────────────────────────────
     print("═" * 60)
-    print("🚀 BioJSON Pipeline v4 — Parallel")
+    print("🚀 NutriMaster Pipeline")
     print(f"   Model:     {MODEL}")
     print(f"   Input:     {INPUT_DIR}")
     print(f"   Workers:   {args.workers}")

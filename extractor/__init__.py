@@ -1,1 +1,1 @@
-"""extractor — BioJSON extraction pipeline package."""
+"""extractor — NutriMaster extraction pipeline package."""

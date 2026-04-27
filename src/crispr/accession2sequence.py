@@ -10,7 +10,7 @@ import requests
 logger = logging.getLogger(__name__)
 
 _ENTREZ_EFETCH_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
-_ENTREZ_EMAIL = "biojson_rag@example.com"
+_ENTREZ_EMAIL = "nutrimaster_rag@example.com"
 _MAX_RETRIES = 3
 
 
@@ -26,7 +26,7 @@ def _build_session(use_env_proxy: bool) -> requests.Session:
     session.trust_env = use_env_proxy
     session.headers.update(
         {
-            "User-Agent": "biojson_rag/1.0",
+            "User-Agent": "nutrimaster_rag/1.0",
             "Accept-Encoding": "identity",
             "Connection": "close",
         }
@@ -82,7 +82,7 @@ def run_accession2sequence(accession_file: Path, work_dir: Path) -> Path:
                 "rettype": "fasta",
                 "retmode": "text",
                 "email": _ENTREZ_EMAIL,
-                "tool": "biojson_rag",
+                "tool": "nutrimaster_rag",
             }
             try:
                 text = _fetch_fasta_text(accession, params)

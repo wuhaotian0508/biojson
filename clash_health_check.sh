@@ -2,7 +2,7 @@
 # Clash 节点自动健康检查 & 切换
 # 检测当前节点是否可用，不可用则自动切换到最快的节点
 # 用法: crontab 每 3 分钟跑一次
-#   */3 * * * * /root/code/biojson/scripts/clash_health_check.sh >> /root/clash/health_check.log 2>&1
+#   */3 * * * * /root/code/nutrimaster/scripts/clash_health_check.sh >> /root/clash/health_check.log 2>&1
 
 CLASH_API="http://127.0.0.1:9090"
 SELECTOR="%F0%9F%94%B0%20%E9%80%89%E6%8B%A9%E8%8A%82%E7%82%B9"  # 🔰 选择节点 (URL encoded)
