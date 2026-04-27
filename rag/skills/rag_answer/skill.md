@@ -2,11 +2,18 @@
 name: rag-answer
 description: >
   默认的 RAG 问答技能。搜索 PubMed 文献和基因数据库，
-  由 LLM 生成专业回答。普通模式搜索 PubMed，深度模式额外检索基因库。
+  由 LLM 生成专业回答。系统会自动提取关键术语并翻译成英文。
+  普通模式搜索 PubMed，深度模式额外检索基因库。
 tools: [rag_search, pubmed_search, gene_db_search, personal_lib_search, design_crispr_experiment]
 ---
 
 RAG 问答流程：
+
+## 查询处理
+
+系统会自动使用 LLM 提取查询中的关键生物学术语并翻译成英文，无需手动翻译。
+
+## 推荐使用方式
 
 推荐使用 `rag_search` 工具进行综合搜索+重排：
 - 普通模式：`rag_search(query, sources=["pubmed"])`

@@ -3,6 +3,35 @@ Toolregistry — 工具注册中心
 
 管理所有 RAG 搜索工具的注册、查找和执行分发。
 支持 BaseTool 类型校验和自动发现。
+
+核心功能：
+  1. register()      — 注册单个 BaseTool 实例（名称去重，后者覆盖前者）
+  2. get() / list_all() — 按名称查找 / 列出所有已注册工具
+  3. get_definitions  — 返回所有工具的 OpenAI function calling schema
+  4. execute()       — 按名称分发异步执行
+  5. auto_discover() — 扫描 tools/ 目录，自动注册无参构造的 BaseTool 子类
+
+工具注册策略：
+  - 无参构造的工具（PubMedSearchTool 等）：通过 auto_discover() 自动注册
+  - 需要构造参数的工具（GeneDBSearchTool、PersonalLibSearchTool 等）：
+    手动实例化后调用 register()（因为需要传入 retriever、get_lib_fn 等依赖）
+  - _SKIP_MODULES 列表中的模块：不参与自动发现（base, registry, reranker 等）
+
+auto_discover() 自动发现逻辑：
+  1. 扫描 tools/ 目录下所有 *.py 文件
+  2. 跳过 _SKIP_MODULES 中的模块
+  3. 对每个模块，检查所有类：
+     - 必须是 BaseTool 子类（非 BaseTool 本身）
+     - 必须定义在当前模块中（排除导入的类）
+     - 检查 __init__ 签名，除 self 外是否都有默认值
+     - 满足条件则无参实例化并注册
+  4. 不满足无参条件的类（打印 debug 日志）由调用方手动注册
+
+与 Agent 的关系：
+  - Agent 持有 Toolregistry 实例
+  - Agent._resolve_enabled_tools() 过滤可用工具集合
+  - Agent._filter_tool_definitions() 从 registry 取 schema 子集
+  - Agent.run() 循环中通过 registry.execute() 执行工具
 """
 from __future__ import annotations
 
@@ -75,7 +104,36 @@ class Toolregistry:
         需要构造器参数的工具（GeneDBSearchTool 等）不会被自动注册，
         应手动实例化后调用 register()。
 
-        返回成功自动注册的工具名列表。
+        参数:
+            tools_dir: 工具模块目录（默认 tools/ 当前目录）
+            skip:      跳过的模块名集合（默认 _SKIP_MODULES）
+
+        返回:
+            成功自动注册的工具名列表
+
+        工作流程:
+            1. 扫描 tools_dir 下所有 *.py 文件（按文件名排序，保证确定性）
+            2. 跳过 skip 集合中的模块
+            3. 对每个模块执行 importlib.import_module()
+            4. 遍历模块中所有类（inspect.getmembers）
+            5. 筛选条件：
+               a. 是 BaseTool 子类（非 BaseTool 本身）
+               b. 定义在当前模块中（cls.__module__ == module.__name__）
+               c. 尚未注册（避免重复）
+               d. __init__ 除 self 外所有参数都有默认值（无参可构造）
+            6. 满足条件则 cls() 实例化 → register() 注册
+
+        无参构造检测细节:
+            - 检查 inspect.signature(cls.__init__) 的参数列表
+            - 排除 self 和 *args/**kwargs 类型的参数
+            - 只要有一个参数没有默认值 (default is Parameter.empty)，就跳过
+            - 例如 GeneDBSearchTool(retriever) 需要 retriever 参数，被跳过
+            - 例如 PubMedSearchTool() 无必需参数，可自动注册
+
+        异常处理:
+            - import 失败：记录 warning，继续下一个模块
+            - 实例化失败：记录 warning，继续下一个类
+            - 不会因单个模块/类的异常中断整个发现流程
         """
         if tools_dir is None:
             tools_dir = Path(__file__).parent

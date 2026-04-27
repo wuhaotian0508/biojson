@@ -19,6 +19,34 @@ Agent — LLM 驱动的工具调用循环（替代 pipeline.py + generator.py）
   - text            : 流式回答文本 chunk
   - done            : 完成
   - error           : 错误
+
+与旧架构的对比：
+  - 旧: RAGPipeline.search() → RAGGenerator.generate_stream()
+  - 新: Agent.run() 统一处理工具调用 + 流式生成
+  - 优势: LLM 自主决策工具调用顺序，支持多轮交互，更灵活
+
+工具调用流程：
+  1. _resolve_enabled_tools() 根据模式/偏好过滤可用工具集合
+  2. _filter_tool_definitions() 从 registry 取对应的 OpenAI schema
+  3. _build_system_prompt() 构建系统提示（技能列表 + 工具描述 + 行为指令）
+  4. call_llm() 调用 LLM，返回 tool_calls（可能多个）
+  5. 并发执行所有 tool_calls（asyncio.gather）
+  6. 将结果注入 messages，继续下一轮
+  7. 最终 LLM 返回纯文本（无 tool_calls）时，流式输出给前端
+
+上下文管理：
+  - ContextManager.prepare() 在每次 call_llm 前执行
+  - 三层防御：L1 裁剪旧工具输出 → L2 LLM 摘要 → L3 紧急截断
+  - 防止多轮工具调用导致上下文溢出
+
+DeepSeek V4 特殊处理：
+  - 工具调用阶段：is_agent_call=True → reasoning_effort="max"
+  - 最终回答阶段：is_agent_call=False → reasoning_effort="high"
+  - reasoning_content 需要在同一轮工具调用循环内回传（保留在 assistant message 中）
+
+SOP 快捷路径：
+  - 检测用户输入包含 "SOP/实验方案/CRISPR方案" 等关键词
+  - 自动触发 crispr_sop_skill（跳过 LLM 技能选择，直接执行 SOP 流程）
 """
 from __future__ import annotations
 
@@ -29,6 +57,8 @@ import re
 from pathlib import Path
 
 from core.context import ContextManager
+from core.hooks import log_tool_call, log_tool_result
+from core.llm_client import _resolve_async_client, is_deepseek_reasoner
 from utils.gene_detection import extract_gene_names
 
 logger = logging.getLogger(__name__)
@@ -52,10 +82,19 @@ class Agent:
     def __init__(self, registry, skill_loader, call_llm, call_llm_stream):
         """
         参数:
-            registry:        Toolregistry 实例
-            skill_loader:    Skill_loader 实例
-            call_llm:        async def call_llm(messages, tools, model_id, **kw) -> message
-            call_llm_stream: async generator call_llm_stream(messages, model_id, **kw) -> chunks
+            registry:        Toolregistry 实例（管理所有可用工具）
+            skill_loader:    Skill_loader 实例（加载系统/用户技能定义）
+            call_llm:        异步 LLM 调用函数
+                             签名: async def call_llm(messages, tools, model_id, **kw) -> message
+                             返回: OpenAI message 对象（含 content / tool_calls）
+            call_llm_stream: 异步流式 LLM 调用函数
+                             签名: async def call_llm_stream(messages, model_id, **kw) -> AsyncGenerator[chunk]
+                             yield: OpenAI SSE chunk 对象
+
+        内部组件:
+            self.context_mgr: ContextManager 实例，管理对话上下文窗口
+                              - 用 call_llm 作为 L2 摘要的后端
+                              - 每次 call_llm 前调用 prepare() 检查并压缩
         """
         self.registry = registry
         self.loader = skill_loader
@@ -76,13 +115,46 @@ class Agent:
     ) -> set[str]:
         """根据模式、skill_prefs、tool_overrides 确定本次启用的工具集合。
 
-        规则：
-        - 遍历用户可见的 skills，收集其 tools 列表
-        - skill_prefs: skill_name -> "must_use" / "disabled" / "auto"
-        - tool_overrides: tool_name -> "enabled" / "disabled" / "auto"
-        - use_personal=False → 移除 personal_lib_search
-        - use_depth=False → 移除 gene_db_search（普通模式不深度检索基因库）
-        - read_tool / write_tool / execute_shell 始终可用（供 skill-creator 等使用）
+        参数:
+            user_id:         用户 ID（用于加载用户自定义技能）
+            use_depth:       是否启用深度模式（影响 gene_db_search 可见性）
+            use_personal:    是否启用个人库（影响 personal_lib_search 可见性）
+            skill_prefs:     技能偏好设置 {skill_name: "must_use" | "disabled" | "auto"}
+            tool_overrides:  工具覆盖设置 {tool_name: "enabled" | "disabled" | "auto"}
+
+        返回:
+            启用的工具名称集合
+
+        规则优先级（从高到低）:
+            1. tool_overrides "disabled" → 强制禁用该工具
+            2. tool_overrides "enabled" → 强制启用该工具（可覆盖模式限制）
+            3. skill_prefs "disabled" → 禁用该技能声明的所有工具
+            4. skill_prefs "must_use" → 启用该技能声明的所有工具
+            5. 模式限制:
+               - use_personal=False → 禁用 personal_lib_search
+               - use_depth=False → 禁用 gene_db_search
+            6. 基础工具始终可用: read_tool, write_tool, execute_shell
+
+        工作流程:
+            1. 加载用户可见的所有技能（系统技能 + 用户技能）
+            2. 遍历每个技能:
+               a. 检查 skill_prefs，跳过 "disabled" 技能
+               b. 收集技能声明的工具列表（tools=None 表示 "all"）
+               c. 对每个工具检查 tool_overrides
+            3. 添加基础工具（read_tool 等）
+            4. 应用模式限制（use_personal / use_depth）
+
+        示例:
+            # 普通模式，不使用个人库
+            enabled = _resolve_enabled_tools(
+                user_id="user123",
+                use_depth=False,
+                use_personal=False,
+                skill_prefs={"rag_answer": "must_use"},
+                tool_overrides={"pubmed_search": "disabled"},
+            )
+            # 结果: {"rag_search", "read_tool", "write_tool", ...}
+            # 不包含: gene_db_search (depth=False), personal_lib_search (personal=False), pubmed_search (override)
         """
         skill_prefs = skill_prefs or {}
         tool_overrides = tool_overrides or {}
@@ -183,13 +255,11 @@ class Agent:
         depth_instruction = ""
         if use_depth:
             depth_instruction = (
-                "\n\n## 深度调研模式\n"
-                "用户开启了深度调研模式，请：\n"
-                "1. 同时使用 pubmed_search 和 gene_db_search 工具，检索更全面的信息\n"
-                "2. 撰写系统性的综合分析报告，包括：概述、关键基因分析、代谢通路、调控网络、总结\n"
-                "3. 使用表格汇总和对比基因信息\n"
-                "4. 分析基因间的关联和调控关系\n"
-                "5. 可以多次搜索不同关键词以获取更全面的信息\n"
+                "\n\n## 深度搜索模式\n"
+                "用户开启了深度搜索模式，请：\n"
+                "1. 同时使用 pubmed_search 和 gene_db_search 工具，检索更复杂的信息\n"
+                "2. 注意基因间的关联和调控关系\n"
+                "3. 回答始终聚焦问题核心，不偏题不发散"
             )
 
         personal_instruction = ""
@@ -201,7 +271,7 @@ class Agent:
             )
 
         return f"""\
-你是一个专业的植物分子生物学研究助手，拥有搜索工具和技能系统。
+你是一个专业的植物营养代谢生物学研究助手，拥有搜索工具和技能系统。
 
 ## 工具使用原则（严格遵守）
 
@@ -215,6 +285,13 @@ class Agent:
 
 其他所有情况（问候、闲聊、感谢、解释概念、通用问答等），**直接回答，不调用任何工具。**
 
+## 搜索工具去重（严格遵守）
+
+**rag_search 已包含 PubMed 搜索**。请遵守：
+- 如果调用了 rag_search（默认含 pubmed 来源），**不要再单独调用 pubmed_search**，否则会产生重复结果
+- 只有在需要**仅搜索 PubMed**（不需要基因库等其他来源）时，才单独使用 pubmed_search
+- 同理，如果 rag_search 已包含 gene_db，不要再单独调用 gene_db_search
+
 {skill_xml}
 
 当用户请求与某个技能匹配、且确实需要执行该技能的完整工作流时，
@@ -224,10 +301,10 @@ class Agent:
 {tool_desc}
 
 ## 回答要求（仅在使用搜索工具后适用）
-1. **准确性**: 只使用工具检索到的信息，不要编造
-2. **结构化**: 使用 Markdown 格式，包括标题、列表、表格、加粗等
-3. **来源标注**: 在正文中用 [1] [2] 等标注信息来源
-4. **专业性**: 使用准确的专业术语
+1. **准确性**: 只使用工具检索到的信息，不要编造，聚焦问题核心回答
+2. **专业性**: 使用生物学领域准确的专业术语
+3. **结构化**: 使用 Markdown 格式，包括标题、列表、表格、加粗等
+4. **来源标注**: 在正文中用 [1] [2] 等标注信息来源
 5. **不要在末尾列参考文献**: 系统会自动附上参考文献列表
 6. **不要加免责声明**: 不要加入"检索结果不足"之类的声明{depth_instruction}{personal_instruction}"""
 
@@ -236,12 +313,44 @@ class Agent:
     # ------------------------------------------------------------------
     @staticmethod
     def _extract_sources_from_tool_results(tool_results: list[dict]) -> list[dict]:
-        """从工具调用结果中提取参考文献来源（PubMed、gene_db 等）。
+        """从工具调用结果中提取参考文献来源（PubMed、gene_db、personal_lib、rag_search）。
 
-        解析 pubmed_search 返回的格式化文本，提取 title/PMID/journal/url。
-        解析 gene_db_search 返回的格式化文本，提取 title/DOI。
+        参数:
+            tool_results: 工具调用结果列表 [{"tool": "...", "content": "..."}, ...]
 
-        返回格式：每个 source 包含 tool_index 字段，表示在工具输出中的原始编号
+        返回:
+            参考文献列表 [{"source_type": "...", "title": "...", "tool_index": 1, ...}, ...]
+            - source_type: "pubmed" | "gene_db" | "personal" | "unknown"
+            - tool_index: 工具输出中的原始编号（用于映射正文中的 [1][2] 引用）
+            - 其他字段: title, pmid, doi, url, journal, filename 等（根据来源类型不同）
+
+        解析策略:
+            1. pubmed_search: 解析 "[1] Title\n期刊: ...\nPMID: ...\n链接: ..." 格式
+            2. gene_db_search: 解析 "[1] Gene Name\n来源: Paper Title\nDOI: ..." 格式
+            3. personal_lib_search: 解析 "[1] Filename\n相关度: ..." 格式
+            4. rag_search: 解析综合搜索输出，根据 "来源: PubMed/基因数据库/个人知识库" 判断类型
+
+        工作流程:
+            1. 遍历所有工具结果
+            2. 根据 tool_name 选择解析策略
+            3. 用正则表达式分割 "[数字]" 标记的条目
+            4. 对每个条目提取元数据（PMID/DOI/URL/期刊等）
+            5. 构造统一格式的 source dict
+            6. 保留 tool_index 字段（用于前端引用映射）
+
+        为什么需要 tool_index:
+            - LLM 在正文中引用 [1][2][3]，这些编号对应工具输出中的原始编号
+            - 前端需要将正文中的 [1] 映射到参考文献列表中的具体条目
+            - tool_index 保留了这个映射关系
+
+        示例:
+            输入:
+                [{"tool": "pubmed_search", "content": "[1] Title A\nPMID: 123\n[2] Title B\nPMID: 456"}]
+            输出:
+                [
+                    {"source_type": "pubmed", "title": "Title A", "pmid": "123", "tool_index": 1},
+                    {"source_type": "pubmed", "title": "Title B", "pmid": "456", "tool_index": 2},
+                ]
         """
         sources = []
 
@@ -317,11 +426,13 @@ class Agent:
                 #     来源: PubMed/基因数据库/个人知识库
                 #     期刊/PMID/DOI 等元数据
                 blocks = re.split(r'\n\[(\d+)\]\s+', content)
+                logger.debug(f"rag_search 解析: 分割出 {len(blocks)} 个块")
                 for i in range(1, len(blocks), 2):
                     tool_index = blocks[i]
                     block = blocks[i + 1] if i + 1 < len(blocks) else ""
                     lines = block.split('\n')
                     title_line = lines[0].strip()
+                    logger.debug(f"解析 rag_search 条目 [{tool_index}]: {title_line[:50]}...")
 
                     # 检测来源类型
                     source_type = "unknown"
@@ -528,10 +639,46 @@ class Agent:
         skill_prefs: dict | None = None,
         tool_overrides: dict | None = None,
     ):
-        """异步生成器，yield SSE 兼容事件 dict。
+        """异步生成器，yield SSE 兼容事件 dict。Agent 的主运行入口。
 
-        事件类型：
-          skill_selected, tool_call, tool_result, text, done, error
+        参数:
+            user_input:      用户输入文本
+            user_id:         用户 ID（影响技能可见性和个人库隔离）
+            model_id:        模型路由 ID（"" = primary, "fallback", "model_2" 等）
+            history:         对话历史 [{role, content}, ...]（最近几轮，已由前端截断）
+            use_personal:    是否启用个人知识库搜索
+            use_depth:       是否启用深度搜索模式
+            skill_prefs:     技能偏好 {skill_name: "must_use"/"disabled"/"auto"}
+            tool_overrides:  工具覆盖 {tool_name: "enabled"/"disabled"/"auto"}
+
+        Yields:
+            SSE 兼容事件 dict，类型如下：
+            - {"type": "tools_enabled", "tools": [...]}       — 本次启用的工具列表
+            - {"type": "skill_selected", "data": "skill_name"} — Agent 选择了某个技能
+            - {"type": "tool_call", "tool": "...", "args": {...}} — 工具调用开始
+            - {"type": "tool_result", "tool": "...", "summary": "..."} — 工具结果摘要
+            - {"type": "text", "data": "..."}                  — 流式回答文本 chunk
+            - {"type": "sources", "data": [...]}               — 参考文献来源列表
+            - {"type": "genes_available", "genes": [...]}      — 检测到的基因名（触发前端基因编辑器）
+            - {"type": "done"}                                 — 回答完成
+            - {"type": "error", "data": "..."}                 — 错误信息
+
+        主循环工作流程:
+            1. SOP 快捷路径: 检测 SOP 关键词 → 直接执行 CRISPR 实验方案流程（跳过正常循环）
+            2. 解析启用的工具集合（_resolve_enabled_tools）
+            3. 构建系统提示（_build_system_prompt）
+            4. 注入历史消息（截断 + 清理旧 reasoning_content）
+            5. 工具调用循环（最多 MAX_STEPS=20 轮）：
+               a. ContextManager.prepare() — 上下文压缩（L1/L2）
+               b. call_llm() — LLM 决策（返回 tool_calls 或纯文本）
+               c. 如果有 tool_calls → 逐个执行 → 结果注入 → 继续循环
+               d. 如果是纯文本 → 模拟流式输出 → 提取参考文献 → 检测基因名 → done
+            6. 异常处理：context overflow 触发 L3 紧急截断后重试
+
+        引用一致性保证:
+            - 最终回答由单次 call_llm() 生成（非第二次流式调用）
+            - 模拟流式输出: 将完整文本分块 yield（每块 ~20 字符）
+            - 确保正文中的 [1][2] 与参考文献列表中的编号一一对应
         """
         try:
             # ---- SOP 快捷路径：检测到 SOP 关键词，跳过工具调用循环 ----
@@ -597,6 +744,7 @@ class Agent:
                         tools=tool_definitions if tool_definitions else None,
                         model_id=model_id,
                         temperature=0.3,
+                        is_agent_call=True,  # Agent 多轮工具调用，DeepSeek V4 自动使用 max effort
                     )
                 except Exception as exc:
                     # L3: 检测 context overflow，紧急截断后重试
@@ -609,6 +757,7 @@ class Agent:
                                 tools=tool_definitions if tool_definitions else None,
                                 model_id=model_id,
                                 temperature=0.3,
+                                is_agent_call=True,  # L3 重试仍然是 Agent 调用
                             )
                         except Exception as retry_exc:
                             logger.exception("L3 重试仍然失败")
@@ -630,83 +779,41 @@ class Agent:
                 # DeepSeek reasoner: 需要保留 reasoning_content 供同一轮工具调用循环使用
                 messages.append(self._msg_to_dict(msg, model_id))
 
-                # 没有工具调用 → 流式生成最终回答
+                # 没有工具调用 → 输出最终回答
                 if not msg.tool_calls:
-                    # 移除非流式拿到的完整回答，用流式重新生成实现逐字输出
-                    messages.pop()
+                    answer_text = msg.content or ""
 
-                    # 收集前几个 chunk 检测是否为泄露的 function call JSON
-                    buffer = ""
-                    buffer_chunks = []
-                    flushed = False
-
-                    async for chunk in self.call_llm_stream(
-                        messages, model_id=model_id, temperature=0.3,
-                    ):
-                        if not chunk.choices:
-                            continue
-                        delta = chunk.choices[0].delta
-                        # 跳过 reasoning_content（DeepSeek 思考过程，不应展示给用户）
-                        if not delta.content:
-                            continue
-                        text_piece = delta.content
-
-                        if not flushed:
-                            # 缓冲前 200 字符，检测是否为泄露的 function call
-                            buffer += text_piece
-                            buffer_chunks.append(text_piece)
-                            if len(buffer) < 200:
-                                continue
-                            # 检查缓冲区是否包含 function call JSON 泄露
-                            if _FUNC_CALL_LEAK_RE.search(buffer):
-                                logger.warning(
-                                    "检测到流式输出中泄露了 function call JSON，"
-                                    "丢弃并重新生成纯文本回答"
-                                )
-                                # 追加提示让模型用自然语言回答
-                                messages.append({
-                                    "role": "user",
-                                    "content": (
-                                        "请直接用自然语言回答上述问题，"
-                                        "不要输出 JSON 或 function call 格式。"
-                                    ),
-                                })
-                                buffer = ""
-                                buffer_chunks = []
-                                # 重新流式请求
-                                async for retry_chunk in self.call_llm_stream(
-                                    messages, model_id=model_id, temperature=0.3,
-                                ):
-                                    if retry_chunk.choices and retry_chunk.choices[0].delta.content:
-                                        t = retry_chunk.choices[0].delta.content
-                                        answer_text += t
-                                        yield {"type": "text", "data": t}
-                                flushed = True
-                                break
-                            else:
-                                # 缓冲区正常，一次性 flush
-                                for buffered_piece in buffer_chunks:
-                                    answer_text += buffered_piece
-                                    yield {"type": "text", "data": buffered_piece}
-                                flushed = True
+                    # 模拟流式输出：将已有完整文本分块 yield
+                    # （无需第二次 LLM 调用，保证引用编号与参考文献一致）
+                    if answer_text:
+                        # 检测是否为泄露的 function call JSON
+                        if _FUNC_CALL_LEAK_RE.search(answer_text[:200]):
+                            logger.warning(
+                                "检测到回答中泄露了 function call JSON，重新生成"
+                            )
+                            messages.pop()
+                            messages.append({
+                                "role": "user",
+                                "content": (
+                                    "请直接用自然语言回答上述问题，"
+                                    "不要输出 JSON 或 function call 格式。"
+                                ),
+                            })
+                            answer_text = ""
+                            async for retry_chunk in self.call_llm_stream(
+                                messages, model_id=model_id, temperature=0.3, is_agent_call=True,
+                            ):
+                                if retry_chunk.choices and retry_chunk.choices[0].delta.content:
+                                    t = retry_chunk.choices[0].delta.content
+                                    answer_text += t
+                                    yield {"type": "text", "data": t}
                         else:
-                            answer_text += text_piece
-                            yield {"type": "text", "data": text_piece}
+                            # 正常回答：分块输出（每块约 20 字符，兼顾流畅感和效率）
+                            chunk_size = 20
+                            for i in range(0, len(answer_text), chunk_size):
+                                yield {"type": "text", "data": answer_text[i:i + chunk_size]}
 
-                    # flush 剩余缓冲（内容少于 200 字符的短回答）
-                    if not flushed and buffer_chunks:
-                        if not _FUNC_CALL_LEAK_RE.search(buffer):
-                            for buffered_piece in buffer_chunks:
-                                answer_text += buffered_piece
-                                yield {"type": "text", "data": buffered_piece}
-                        else:
-                            logger.warning("短回答中检测到 function call 泄露，已过滤")
-                            yield {
-                                "type": "text",
-                                "data": "抱歉，模型返回了异常格式，请重新提问。",
-                            }
-
-                    # 发送参考文献来源（只保留正文中实际引用的文献）
+                    # 发送参考文献来源
                     all_sources = self._extract_sources_from_tool_results(collected_tool_results)
                     sources = self._filter_cited_sources(answer_text, all_sources)
                     if sources:
@@ -744,13 +851,21 @@ class Agent:
                         "args": args,
                     }
 
+                    # 记录工具调用到日志文件
+                    log_tool_call(tool_name, args, user_id)
+
                     # 执行工具（注入 user_id 供需要的工具使用）
                     try:
                         result = await self.registry.execute(tool_name, user_id=user_id, **args)
                         result_str = str(result) if result is not None else ""
+                        print(result_str)
+                        # 记录成功结果
+                        log_tool_result(tool_name, result_str, success=True, user_id=user_id)
                     except Exception as e:
                         logger.warning("工具 %s 执行失败: %s", tool_name, e)
                         result_str = f"工具执行失败: {e}"
+                        # 记录失败结果
+                        log_tool_result(tool_name, None, success=False, error=str(e), user_id=user_id)
 
                     # 截断过长的工具输出（防止单次结果撑爆上下文）
                     result_str = ContextManager.cap_tool_output(result_str)

@@ -33,7 +33,7 @@ from .text_utils import preprocess_md_for_llm
 from .token_tracker import TokenTracker
 from .utils import (
     GENE_ARRAY_KEYS, ensure_list, get_gene_name,
-    safe_parse_json, stem_to_dirname,
+    safe_parse_json, stem_to_dirname, prepare_deepseek_params,
 )
 
 
@@ -200,6 +200,8 @@ def _call_extract_api(
     print(f"    🔵 API Call: extract_all_genes ({model})...")
 
     try:
+        # 为 DeepSeek V4 准备参数（移除不兼容参数，添加 thinking 配置）
+        api_kwargs = prepare_deepseek_params(model, api_kwargs)
         response = api_client.chat.completions.create(
             model=model,
             messages=messages,

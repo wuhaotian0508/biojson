@@ -12,6 +12,8 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from tools.rag_search import RAGSearchTool
 from tools.pubmed_search import PubmedSearchTool
+from tools.gene_db_search import GeneDBSearchTool
+from tools.personal_lib_search import PersonalLibSearchTool
 from search.retriever import JinaRetriever
 from search.reranker import JinaReranker
 
@@ -33,13 +35,18 @@ async def test_rag_search():
     print("3. 初始化 Jina Reranker...")
     reranker = JinaReranker()
 
-    print("4. 创建 RAG 搜索工具...")
+    print("4. 创建基因数据库 / 个人库工具壳...")
+    gene_db_tool = GeneDBSearchTool(retriever=retriever)
+    personal_lib_tool = PersonalLibSearchTool()  # 无 callback，search_raw 返回 []
+
+    print("5. 创建 RAG 搜索工具...")
     rag_tool = RAGSearchTool(
-        pubmed_tool=pubmed_tool,
-        retriever=retriever,
+        sources={
+            "pubmed": pubmed_tool,
+            "gene_db": gene_db_tool,
+            "personal_lib": personal_lib_tool,
+        },
         reranker=reranker,
-        get_personal_lib=None,  # 不使用个人知识库
-        get_query_embedding=retriever.get_query_embedding
     )
 
     # 测试查询
@@ -49,7 +56,7 @@ async def test_rag_search():
 
     test_cases = [
         {
-            "query": "DREB transcription factor drought stress",
+            "query": "番茄和马铃薯主要积累25S构型的生物碱（如α-番茄碱），而茄子则主要积累25R构型的生物碱（如α-澳洲茄胺），这两种生物碱的生物学功能分别是什么？由什么基因决定其不同构型形式。",
             "sources": ["gene_db"],
             "top_n": 3,
             "description": "仅搜索基因数据库"

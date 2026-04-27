@@ -3,16 +3,54 @@ ContextManager — 上下文窗口管理（三层防御）
 
 参照 EvoMaster 的 ContextManager，但适配本项目 dict-based messages 格式。
 
-三层防御策略:
-  L1 轻量裁剪: tokens >= 80% → 清理旧 tool 输出
-  L2 摘要压缩: tokens >= 95% → LLM 生成对话摘要，替换旧消息
-  L3 紧急截断: API 报 context overflow → 保留 system + 最近 N 条消息
+三层防御策略（渐进式压缩）：
+  L1 轻量裁剪（80% 阈值）：
+    - 清理旧 tool 输出（保留最近 2 个 user turn）
+    - 截断过长的 tool 输出（保留首尾各 7500 字符）
+    - 快速、无损、无 API 调用
+
+  L2 摘要压缩（95% 阈值）：
+    - 用 LLM 生成对话摘要，替换旧消息
+    - 保留关键信息：用户目标、已完成工作、关键发现、当前状态
+    - 有损压缩，但保留语义
+    - 断路器机制：连续失败 3 次后禁用 5 分钟
+
+  L3 紧急截断（API 报 context overflow）：
+    - 保留 system + 最近 N 条消息
+    - 最后的防线，确保 API 调用不会失败
+    - 丢失历史上下文，但保证服务可用
+
+使用方式：
+    ctx = ContextManager(call_llm_for_summary=call_llm)
+
+    # 每次 call_llm 前：
+    messages = ctx.prepare(messages, tool_specs)
+
+    # call_llm 成功后（如果有 usage 信息）：
+    ctx.update_usage(usage_dict, msg_count=len(messages))
+
+    # call_llm 异常时检测是否 overflow：
+    if ctx.is_overflow_error(error):
+        messages = ctx.emergency_truncate(messages)
+
+设计原则：
+  - 渐进式：先轻量裁剪，再摘要压缩，最后紧急截断
+  - 保护最近上下文：最近 2 个 user turn 不被裁剪
+  - 工具配对完整性：assistant tool_calls 和 tool result 必须成对
+  - 增量估算：利用上次 API 返回的实际 token 数提高估算精度
+  - 断路器：摘要失败时自动降级，避免死循环
+
+Token 估算策略：
+  - 字符估算：~4 字符/token（简单快速，误差 ±20%）
+  - 增量估算：基于上次 API 返回的实际值，计算新增消息的 token
+  - 安全系数：估算值 × 1.05（+5% 缓冲）
 """
 from __future__ import annotations
 
 import json
 import logging
 import re
+import time
 from typing import Callable, Awaitable
 
 logger = logging.getLogger(__name__)
@@ -30,6 +68,9 @@ PRUNE_MINIMUM_TOKENS = 5_000     # 至少可释放这么多才执行裁剪
 
 TOOL_OUTPUT_CAP = 15_000         # 单个工具输出最大字符数
 SAFETY_MARGIN = 1.05             # token 估算安全系数（+5%）
+
+SUMMARY_FAIL_CIRCUIT_BREAKER = 3  # L2 摘要连续失败 N 次后触发断路器
+CIRCUIT_BREAKER_RESET_SECONDS = 300  # 断路器自动恢复时间（5分钟）
 
 # L2 摘要的系统提示
 _SUMMARY_SYSTEM_PROMPT = """\
@@ -88,6 +129,10 @@ class ContextManager:
         # 上次 API 返回的实际 token 使用量
         self._last_prompt_tokens: int = 0
         self._last_msg_count: int = 0
+
+        # L2 摘要断路器（熔断机制）
+        self._summary_fail_count: int = 0
+        self._circuit_breaker_open_time: float = 0.0  # 断路器打开时间戳
 
     # ------------------------------------------------------------------
     # Token 估算
@@ -203,9 +248,27 @@ class ContextManager:
 
         如果 LLM 摘要失败，降级为 L1 裁剪。
         """
+        # 检查断路器状态
+        if self._circuit_breaker_open_time > 0:
+            # 断路器已打开，检查是否可以恢复
+            elapsed = time.time() - self._circuit_breaker_open_time
+            if elapsed < CIRCUIT_BREAKER_RESET_SECONDS:
+                logger.warning(
+                    "L2 断路器已熔断（还需 %.0f 秒恢复），跳过摘要，直接 L3 截断",
+                    CIRCUIT_BREAKER_RESET_SECONDS - elapsed,
+                )
+                return self.emergency_truncate(messages)
+            else:
+                # 自动恢复
+                logger.info("L2 断路器自动恢复，重新尝试摘要")
+                self._circuit_breaker_open_time = 0.0
+                self._summary_fail_count = 0
+
         if not self._call_llm_for_summary:
-            logger.warning("L2 摘要: 未配置 call_llm_for_summary，降级为 L1")
-            return self._prune_old_tool_outputs(messages)
+            logger.warning("L2 摘要: 未配置 call_llm_for_summary，直接 L3 截断")
+            self._summary_fail_count += 1
+            self._check_and_open_circuit_breaker()
+            return self.emergency_truncate(messages)
 
         # 分离: system_msgs / old_msgs / recent_msgs
         system_msgs = []
@@ -265,6 +328,10 @@ class ContextManager:
             logger.info("L2 摘要: 压缩了 %d 条旧消息为摘要（%d chars）",
                         len(old_msgs), len(summary_text))
 
+            # 成功，重置失败计数器和断路器
+            self._summary_fail_count = 0
+            self._circuit_breaker_open_time = 0.0
+
             # 用摘要替换旧消息
             return (
                 system_msgs
@@ -276,31 +343,111 @@ class ContextManager:
             )
 
         except Exception as e:
-            logger.warning("L2 摘要失败，降级为 L1: %s", e)
-            return self._prune_old_tool_outputs(messages)
+            self._summary_fail_count += 1
+            logger.warning("L2 摘要失败（第 %d 次），直接 L3 截断: %s",
+                          self._summary_fail_count, e)
+            self._check_and_open_circuit_breaker()
+
+            # L2 失败说明已经很危险（95%），L1 清理不够，直接 L3
+            return self.emergency_truncate(messages)
+
+    def _check_and_open_circuit_breaker(self):
+        """检查失败次数，达到阈值则打开断路器。"""
+        if self._summary_fail_count >= SUMMARY_FAIL_CIRCUIT_BREAKER:
+            self._circuit_breaker_open_time = time.time()
+            logger.error(
+                "L2 摘要功能已熔断（连续失败 %d 次），后续 %d 秒内直接跳过 L2",
+                self._summary_fail_count,
+                CIRCUIT_BREAKER_RESET_SECONDS,
+            )
 
     # ------------------------------------------------------------------
     # L3: 紧急截断
     # ------------------------------------------------------------------
     @staticmethod
     def emergency_truncate(messages: list[dict], keep_recent: int = 5) -> list[dict]:
-        """保留 system 消息 + 最近 keep_recent 条消息。"""
+        """保留 system 消息 + 最近 keep_recent 条消息（自动修复 tool_calls 配对）。"""
         system_msgs = [m for m in messages if m.get("role") == "system"]
         non_system = [m for m in messages if m.get("role") != "system"]
 
-        # 保留最近的消息，但确保不从 tool 消息开始（需要配对的 assistant）
-        kept = non_system[-keep_recent:] if len(non_system) > keep_recent else non_system
-        # 调整: 如果第一条是 tool 消息，向前找到配对的 assistant
-        while kept and kept[0].get("role") == "tool":
-            idx = non_system.index(kept[0])
-            if idx > 0:
-                kept.insert(0, non_system[idx - 1])
-            else:
-                break
+        if len(non_system) <= keep_recent:
+            kept = list(non_system)
+        else:
+            start = len(non_system) - keep_recent
+            # 起点若是 tool 消息，向前回退把父 assistant 及所有兄弟 tool 响应都纳入
+            while start > 0 and non_system[start].get("role") == "tool":
+                start -= 1
+            kept = list(non_system[start:])
+
+        # 修复 tool_calls <-> tool 响应配对，避免孤儿
+        kept = ContextManager._repair_tool_pairing(kept)
 
         result = system_msgs + kept
         logger.warning("L3 紧急截断: 从 %d 条消息截断到 %d 条",
                        len(messages), len(result))
+        return result
+
+    # ------------------------------------------------------------------
+    # 孤儿 tool 消息修复
+    # ------------------------------------------------------------------
+    @staticmethod
+    def _repair_tool_pairing(messages: list[dict]) -> list[dict]:
+        """修复消息序列中的 tool_calls / tool 配对:
+
+        - 丢弃没有父 assistant 的孤儿 tool 消息
+        - 丢弃 tool_calls 响应不完整的 assistant 消息（连同其部分 tool 响应）
+        - 保留的 assistant(tool_calls) 后按 tool_calls 顺序紧跟全部匹配的 tool 响应
+        """
+        result: list[dict] = []
+        i = 0
+        n = len(messages)
+        dropped_orphan_tools = 0
+        dropped_unmatched_assistants = 0
+
+        while i < n:
+            msg = messages[i]
+            role = msg.get("role")
+
+            # 孤儿 tool（没有紧邻在前的 assistant(tool_calls) 收留它）→ 丢弃
+            if role == "tool":
+                dropped_orphan_tools += 1
+                i += 1
+                continue
+
+            if role == "assistant" and msg.get("tool_calls"):
+                tool_calls = msg.get("tool_calls") or []
+                expected_ids = [tc.get("id") for tc in tool_calls if tc.get("id")]
+
+                # 扫描紧随其后的 tool 消息，建立 id -> response 映射
+                j = i + 1
+                id_to_resp: dict[str, dict] = {}
+                while j < n and messages[j].get("role") == "tool":
+                    tid = messages[j].get("tool_call_id")
+                    if tid is not None and tid not in id_to_resp:
+                        id_to_resp[tid] = messages[j]
+                    j += 1
+
+                if expected_ids and all(tid in id_to_resp for tid in expected_ids):
+                    # 响应齐全 → 保留 assistant + 按 tool_calls 顺序追加 tool 响应
+                    result.append(msg)
+                    for tid in expected_ids:
+                        result.append(id_to_resp[tid])
+                else:
+                    # 响应不完整 → 丢弃 assistant 和这段不完整的 tool 响应
+                    dropped_unmatched_assistants += 1
+                i = j
+                continue
+
+            # 普通消息（system / user / assistant 无 tool_calls）
+            result.append(msg)
+            i += 1
+
+        if dropped_orphan_tools or dropped_unmatched_assistants:
+            logger.info(
+                "tool 配对修复: 丢弃 %d 条孤儿 tool、%d 条响应不完整的 assistant",
+                dropped_orphan_tools, dropped_unmatched_assistants,
+            )
+
         return result
 
     # ------------------------------------------------------------------
@@ -313,7 +460,30 @@ class ContextManager:
     ) -> list[dict]:
         """主入口: 估算 token，按需执行 L1/L2 压缩。
 
-        返回（可能被压缩的）消息列表。
+        参数:
+            messages:   对话消息列表（system + user + assistant + tool）
+            tool_specs: 工具定义列表（可选，用于 token 估算）
+
+        返回:
+            （可能被压缩的）消息列表，保证 tool_calls <-> tool 配对合法
+
+        工作流程:
+            1. 估算当前上下文的 token 数（messages + tool_specs）
+            2. 计算使用率 ratio = tokens / usable
+            3. 根据阈值选择压缩策略：
+               - ratio < 80%: 不压缩
+               - 80% ≤ ratio < 95%: L1 轻量裁剪（清理旧 tool 输出）
+               - ratio ≥ 95%: L2 摘要压缩（LLM 生成对话摘要）
+            4. 统一出口兜底：修复 tool_calls <-> tool 配对（避免孤儿消息）
+
+        三层防御策略:
+            - L1 (80%): 快速、无损、无 API 调用
+            - L2 (95%): 有损但保留语义，需 LLM API 调用
+            - L3 (API overflow): 紧急截断（由 emergency_truncate() 处理）
+
+        断路器机制:
+            - L2 摘要连续失败 3 次后自动熔断 5 分钟
+            - 熔断期间直接跳过 L2，执行 L3 截断
         """
         tokens = self.estimate_total_tokens(messages, tool_specs)
         ratio = tokens / self.usable if self.usable > 0 else 0
@@ -327,12 +497,13 @@ class ContextManager:
                         ratio * 100, SUMMARY_THRESHOLD * 100)
             messages = await self._summarize_old_context(messages)
         elif ratio >= PRUNE_THRESHOLD:
-            # L1: 轻量裁剪
+            # L1: 轻量裁剪（只改 content，不改结构）
             logger.info("触发 L1 轻量裁剪 (%.0f%% >= %.0f%%)",
                         ratio * 100, PRUNE_THRESHOLD * 100)
             messages = self._prune_old_tool_outputs(messages)
 
-        return messages
+        # 统一出口兜底: 无论走哪条路径，都保证进入 call_llm 的消息 tool 配对合法
+        return self._repair_tool_pairing(messages)
 
     # ------------------------------------------------------------------
     # 工具

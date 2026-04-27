@@ -33,6 +33,7 @@ from .text_utils import preprocess_md_for_llm
 from .token_tracker import TokenTracker
 from .utils import (
     GENE_ARRAY_KEYS, ensure_list, safe_parse_json, stem_to_dirname,
+    prepare_deepseek_params,
 )
 
 # ─── 可配置参数 ────────────────────────────────────────────────────────────
@@ -217,14 +218,17 @@ def _call_verify_api(api_client, model_name: str, user_prompt: str,
 
     print(f"    🔵 API Call: verify_all_genes...")
     try:
-        response = api_client.chat.completions.create(
-            model=model_name,
-            messages=messages,
-            tools=[VERIFY_SCHEMA],
-            tool_choice={"type": "function", "function": {"name": "verify_all_genes"}},
-            temperature=0,
-            max_tokens=16384,
-        )
+        # 为 DeepSeek V4 准备参数
+        verify_params = {
+            "model": model_name,
+            "messages": messages,
+            "tools": [VERIFY_SCHEMA],
+            "tool_choice": {"type": "function", "function": {"name": "verify_all_genes"}},
+            "temperature": 0,
+            "max_tokens": 16384,
+        }
+        verify_params = prepare_deepseek_params(model_name, verify_params)
+        response = api_client.chat.completions.create(**verify_params)
     except Exception as e:
         print(f"    ❌ [{model_name}] API error (verify): {e}")
         return [], False

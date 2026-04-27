@@ -23,8 +23,16 @@ load_dotenv(Path(__file__).resolve().parent.parent.parent / ".env", override=Tru
 # ===== 路径配置 =====
 BASE_DIR = Path(__file__).resolve().parent.parent.parent    # 项目根目录 (biojson/)
 PROJECT_ROOT = Path(__file__).resolve().parent.parent       # rag/ 目录本身
-DATA_DIR = BASE_DIR / "data"               # 基因 JSON 数据目录
-INDEX_DIR = BASE_DIR / "rag" / "index"     # 向量索引存储目录
+
+# DATA_DIR 选择策略：
+#   1. 环境变量 RAG_DATA_DIR 优先（允许运维覆盖）
+#   2. 默认使用 rag/data（存放已验证的 *_nutri_plant_verified.json，数量 6000+）
+#   3. 旧路径 biojson/data 仅 13 个文件，作为 legacy 兼容
+_default_data_dir = PROJECT_ROOT / "data"
+if not _default_data_dir.exists() or not any(_default_data_dir.glob("*_nutri_plant_verified.json")):
+    _default_data_dir = BASE_DIR / "rag"/"data"
+DATA_DIR = Path(os.getenv("RAG_DATA_DIR", str(_default_data_dir)))
+INDEX_DIR = Path(os.getenv("RAG_INDEX_DIR", str(BASE_DIR / "rag" / "index")))
 
 # ===== Jina API 配置（嵌入向量 + 重排序） =====
 JINA_API_KEY = os.getenv("JINA_API_KEY", "")

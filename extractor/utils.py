@@ -115,3 +115,50 @@ def stem_to_dirname(stem: str) -> str:
     stem = stem.replace("_(1)", "")
     stem = stem.replace("_", "-")
     return stem
+
+
+# ─── DeepSeek V4 compatibility ───────────────────────────────────────────────
+
+def is_deepseek_model(model_name: str) -> bool:
+    """判断是否为 DeepSeek 系列模型（V3.2/V4/R1）。"""
+    name = model_name.lower()
+    return any(m in name for m in ("deepseek-reasoner", "deepseek-r1", "deepseek-v4"))
+
+
+def prepare_deepseek_params(model_name: str, params: dict) -> dict:
+    """为 DeepSeek V4 准备 API 参数。
+
+    DeepSeek V4 thinking 模式下：
+    1. 移除 temperature/top_p/presence_penalty/frequency_penalty（会被忽略）
+    2. 移除 logprobs/top_logprobs（会报 400 错误）
+    3. 通过 extra_body 传递 thinking 和 reasoning_effort 配置
+
+    Args:
+        model_name: 模型名称
+        params: 原始 API 参数字典
+
+    Returns:
+        处理后的参数字典（原地修改 + 返回）
+    """
+    if not is_deepseek_model(model_name):
+        return params
+
+    # 移除不兼容参数
+    ignored = {"temperature", "top_p", "presence_penalty", "frequency_penalty"}
+    forbidden = {"logprobs", "top_logprobs"}
+    for key in ignored | forbidden:
+        params.pop(key, None)
+
+    # 配置 thinking 模式（通过 extra_body）
+    extra_body = params.get("extra_body", {})
+    if "thinking" not in extra_body:
+        extra_body["thinking"] = {"type": "enabled"}
+    if "reasoning_effort" not in extra_body:
+        # extractor 是单次提取，使用 high 即可（不需要 max）
+        extra_body["reasoning_effort"] = "high"
+
+    if extra_body:
+        params["extra_body"] = extra_body
+
+    return params
+

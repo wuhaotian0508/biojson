@@ -1069,6 +1069,7 @@ async function streamExperiment(messageId) {
         body: JSON.stringify({
             query: state.query,
             answer_text: state.answerText,
+            user_genes: state.genes || [],  // 传递用户编辑后的基因列表
         }),
     });
 
