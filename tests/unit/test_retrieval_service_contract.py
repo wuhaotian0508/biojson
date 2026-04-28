@@ -2,7 +2,7 @@ from __future__ import annotations
 
 
 def test_retrieval_service_delegates_index_build_and_exposes_chunk_count():
-    from retrieval.search_service import RetrievalService
+    from nutrimaster.rag.search_service import RetrievalService
 
     class FakeRetriever:
         def __init__(self):
@@ -22,7 +22,7 @@ def test_retrieval_service_delegates_index_build_and_exposes_chunk_count():
 
 
 def test_retrieval_service_uses_hybrid_search_by_default():
-    from retrieval.search_service import RetrievalService
+    from nutrimaster.rag.search_service import RetrievalService
 
     class FakeRetriever:
         chunks = ["a"]
@@ -38,7 +38,7 @@ def test_retrieval_service_uses_hybrid_search_by_default():
 
 
 def test_retrieval_service_can_fallback_to_dense_search():
-    from retrieval.search_service import RetrievalService
+    from nutrimaster.rag.search_service import RetrievalService
 
     class FakeRetriever:
         chunks = ["a"]

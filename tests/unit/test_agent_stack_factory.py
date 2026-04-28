@@ -33,7 +33,7 @@ class FakeAgent:
 
 
 def test_agent_stack_defaults_do_not_depend_on_legacy_core_config_or_sys_path():
-    import agent.stack as stack_module
+    import nutrimaster.agent.stack as stack_module
 
     source = inspect.getsource(stack_module)
 
@@ -42,11 +42,11 @@ def test_agent_stack_defaults_do_not_depend_on_legacy_core_config_or_sys_path():
     assert "Settings.from_env" in source
 
 
-def test_legacy_agent_stack_factory_registers_default_user_tools():
-    from agent.stack import build_legacy_agent_stack
-    from agent.tool_policy import ToolPolicy
+def test_agent_stack_factory_registers_default_user_tools():
+    from nutrimaster.agent.stack import build_agent_stack
+    from nutrimaster.agent.tool_policy import ToolPolicy
 
-    stack = build_legacy_agent_stack(
+    stack = build_agent_stack(
         retriever=object(),
         registry_factory=FakeRegistry,
         skill_loader_factory=lambda: object(),
@@ -78,11 +78,11 @@ def test_legacy_agent_stack_factory_registers_default_user_tools():
     }
 
 
-def test_legacy_agent_stack_factory_respects_disabled_policy():
-    from agent.stack import build_legacy_agent_stack
-    from agent.tool_policy import ToolPolicy
+def test_agent_stack_factory_respects_disabled_policy():
+    from nutrimaster.agent.stack import build_agent_stack
+    from nutrimaster.agent.tool_policy import ToolPolicy
 
-    stack = build_legacy_agent_stack(
+    stack = build_agent_stack(
         retriever=object(),
         registry_factory=FakeRegistry,
         skill_loader_factory=lambda: object(),
@@ -106,12 +106,12 @@ def test_legacy_agent_stack_factory_respects_disabled_policy():
     assert "read_tool" in stack.tool_names
 
 
-def test_legacy_agent_stack_factory_configures_query_helpers():
-    from agent.stack import build_legacy_agent_stack
+def test_agent_stack_factory_configures_query_helpers():
+    from nutrimaster.agent.stack import build_agent_stack
 
     calls = []
 
-    build_legacy_agent_stack(
+    build_agent_stack(
         retriever=object(),
         registry_factory=FakeRegistry,
         skill_loader_factory=lambda: object(),

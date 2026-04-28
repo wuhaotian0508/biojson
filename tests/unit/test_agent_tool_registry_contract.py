@@ -4,7 +4,7 @@ import asyncio
 
 
 def test_tool_registry_registers_lists_definitions_and_executes():
-    from agent.tools import BaseTool, ToolRegistry
+    from nutrimaster.agent.tools import BaseTool, ToolRegistry
 
     class EchoTool(BaseTool):
         name = "echo"
@@ -37,7 +37,7 @@ def test_tool_registry_registers_lists_definitions_and_executes():
 
 
 def test_tool_registry_rejects_invalid_tools_and_unknown_execution():
-    from agent.tools import ToolRegistry
+    from nutrimaster.agent.tools import ToolRegistry
 
     registry = ToolRegistry()
 

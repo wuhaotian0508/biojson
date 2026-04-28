@@ -2,7 +2,7 @@ from __future__ import annotations
 
 
 def test_llm_gateway_sanitizes_deepseek_agent_params():
-    from shared.llm import sanitize_params_for_model
+    from nutrimaster.config.llm import sanitize_params_for_model
 
     params = sanitize_params_for_model(
         "deepseek-v4",
@@ -26,7 +26,7 @@ def test_llm_gateway_falls_back_after_selected_client_failure():
     import asyncio
     from types import SimpleNamespace
 
-    from shared.llm import LLMGateway, LLMRoute
+    from nutrimaster.config.llm import LLMGateway, LLMRoute
 
     class FakeCompletions:
         def __init__(self, response=None, exc=None):

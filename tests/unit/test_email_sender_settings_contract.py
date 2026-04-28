@@ -4,7 +4,7 @@ import inspect
 
 
 def test_email_sender_uses_nutrimaster_settings_not_legacy_core_config():
-    import server.email_sender as email_sender
+    import nutrimaster.auth.email as email_sender
 
     source = inspect.getsource(email_sender)
 

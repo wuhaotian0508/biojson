@@ -8,9 +8,9 @@ import numpy as np
 def test_personal_library_chunks_and_searches_without_legacy_imports(tmp_path: Path):
     import inspect
 
-    from retrieval.personal_library import PersonalLibrary
-    import retrieval.personal_library as personal_module
-    from shared.settings import RagSettings
+    from nutrimaster.rag.personal_library import PersonalLibrary
+    import nutrimaster.rag.personal_library as personal_module
+    from nutrimaster.config.settings import RagSettings
 
     assert "core.config" not in inspect.getsource(personal_module)
     assert "search.embedding_utils" not in inspect.getsource(personal_module)
@@ -44,7 +44,7 @@ def test_personal_library_chunks_and_searches_without_legacy_imports(tmp_path: P
 def test_legacy_personal_library_facade_is_removed():
     root = Path(__file__).resolve().parents[2]
 
-    from retrieval.personal_library import PersonalLibrary
+    from nutrimaster.rag.personal_library import PersonalLibrary
 
     assert PersonalLibrary is not None
     assert not (root / "rag" / "search" / "personal_lib.py").exists()

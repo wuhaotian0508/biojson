@@ -1,5 +1,5 @@
 def test_error_response_uses_standard_envelope_without_secret_details():
-    from server.responses import error_response
+    from nutrimaster.web.responses import error_response
 
     response = error_response(
         code="missing_api_key",

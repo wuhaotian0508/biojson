@@ -5,8 +5,8 @@ def test_crispr_tool_preview_and_confirmed_execution():
     import asyncio
     import inspect
 
-    from agent.tools.crispr import CrisprTool
-    import agent.tools.crispr as crispr_module
+    from nutrimaster.agent.tools.crispr import CrisprTool
+    import nutrimaster.agent.tools.crispr as crispr_module
 
     assert "from skills" not in inspect.getsource(crispr_module)
     assert "import skills" not in inspect.getsource(crispr_module)

@@ -1,10 +1,10 @@
 from __future__ import annotations
 
 
-def test_agent_runtime_delegates_to_legacy_agent_run():
-    from agent.runtime import AgentRuntime
+def test_agent_runtime_delegates_to_agent_run():
+    from nutrimaster.agent.runtime import AgentRuntime
 
-    class FakeLegacyAgent:
+    class FakeAgent:
         def __init__(self):
             self.calls = []
 
@@ -12,8 +12,8 @@ def test_agent_runtime_delegates_to_legacy_agent_run():
             self.calls.append(kwargs)
             yield {"type": "text", "data": "ok"}
 
-    legacy = FakeLegacyAgent()
-    runtime = AgentRuntime(legacy)
+    agent = FakeAgent()
+    runtime = AgentRuntime(agent)
 
     async def collect():
         return [
@@ -32,9 +32,9 @@ def test_agent_runtime_delegates_to_legacy_agent_run():
 
     import asyncio
 
-    assert runtime.legacy_agent is legacy
+    assert runtime.agent is agent
     assert asyncio.run(collect()) == [{"type": "text", "data": "ok"}]
-    assert legacy.calls == [
+    assert agent.calls == [
         {
             "user_input": "query",
             "user_id": "user-1",

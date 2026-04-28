@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 def test_embedding_utils_live_in_canonical_retrieval_package():
-    import retrieval.embedding_utils as embedding_utils
+    import nutrimaster.rag.embedding_utils as embedding_utils
 
     source = inspect.getsource(embedding_utils)
 
@@ -18,7 +18,7 @@ def test_embedding_utils_live_in_canonical_retrieval_package():
 def test_legacy_embedding_utils_facade_is_removed():
     root = Path(__file__).resolve().parents[2]
 
-    import retrieval.embedding_utils as canonical
+    import nutrimaster.rag.embedding_utils as canonical
 
     assert canonical.get_embeddings is not None
     assert canonical.get_query_embedding is not None

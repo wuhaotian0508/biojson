@@ -2,7 +2,7 @@ import json
 
 
 def test_serve_check_config_reports_missing_real_service_keys(capsys):
-    from cli.main import main
+    from nutrimaster.cli import main
 
     exit_code = main(["serve", "--check-config"], env={})
     captured = capsys.readouterr()
@@ -27,7 +27,7 @@ def test_serve_check_config_reports_missing_real_service_keys(capsys):
 
 
 def test_serve_check_config_succeeds_when_real_service_keys_exist(capsys):
-    from cli.main import main
+    from nutrimaster.cli import main
 
     env = {
         "OPENAI_API_KEY": "test-key",
@@ -50,7 +50,7 @@ def test_serve_check_config_succeeds_when_real_service_keys_exist(capsys):
 
 
 def test_check_config_command_succeeds_when_real_service_keys_exist(capsys):
-    from cli.main import main
+    from nutrimaster.cli import main
 
     env = {
         "OPENAI_API_KEY": "test-key",

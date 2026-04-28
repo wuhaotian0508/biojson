@@ -5,7 +5,7 @@ from types import SimpleNamespace
 
 
 def test_canonical_agent_does_not_delegate_to_legacy_core_agent():
-    import agent.agent as agent_module
+    import nutrimaster.agent.agent as agent_module
 
     source = inspect.getsource(agent_module)
 
@@ -16,7 +16,7 @@ def test_canonical_agent_does_not_delegate_to_legacy_core_agent():
 def test_canonical_agent_streams_direct_llm_answer_without_tool_call():
     import asyncio
 
-    from agent.agent import Agent
+    from nutrimaster.agent.agent import Agent
 
     class FakeRegistry:
         tool_names = {"read_tool"}

@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 def test_crispr_tool_loads_canonical_pipeline_namespace():
-    import agent.tools.crispr as crispr_tool_module
+    import nutrimaster.agent.tools.crispr as crispr_tool_module
 
     source = inspect.getsource(crispr_tool_module)
 

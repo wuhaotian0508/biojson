@@ -2,7 +2,7 @@ from __future__ import annotations
 
 
 def test_skill_loader_parses_shared_and_user_skills(tmp_path):
-    from agent.skills import SkillLoader
+    from nutrimaster.agent.skills import SkillLoader
 
     skills_dir = tmp_path / "skills"
     user_skills_dir = tmp_path / "user_skills"
@@ -40,7 +40,7 @@ Custom content.
 
 
 def test_skill_loader_builds_crispr_sop_tool_call():
-    from agent.skills import SkillLoader
+    from nutrimaster.agent.skills import SkillLoader
 
     loader = SkillLoader(skills_dir=None, user_skills_dir=None)
 
@@ -54,7 +54,7 @@ def test_skill_loader_builds_crispr_sop_tool_call():
 
 
 def test_gene_name_detection_is_local_to_nutrimaster():
-    from agent.skills import extract_gene_names
+    from nutrimaster.agent.skills import extract_gene_names
 
     assert extract_gene_names("编辑 GmFAD2 和 AtMYB4，GmFAD2 是靶点") == [
         "GmFAD2",

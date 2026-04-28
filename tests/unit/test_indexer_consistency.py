@@ -9,8 +9,8 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
 
-from indexing.chunking import CHUNKER_VERSION, GeneChunk
-from indexing.incremental_indexer import IncrementalIndexer, sha256_of
+from nutrimaster.rag.chunking import CHUNKER_VERSION, GeneChunk
+from nutrimaster.rag.incremental_indexer import IncrementalIndexer, sha256_of
 
 
 def _write_manifest(index_dir: Path, filename: str, sha: str, n_chunks: int) -> None:

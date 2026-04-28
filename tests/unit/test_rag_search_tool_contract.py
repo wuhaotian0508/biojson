@@ -16,8 +16,8 @@ def test_rag_search_tool_aggregates_sources_and_reranks():
     import asyncio
     import inspect
 
-    from retrieval.tools.rag_search import RAGSearchTool
-    import retrieval.tools.rag_search as rag_search_module
+    from nutrimaster.agent.tools.retrieval.rag_search import RAGSearchTool
+    import nutrimaster.agent.tools.retrieval.rag_search as rag_search_module
 
     assert "rag.tools" not in inspect.getsource(rag_search_module)
 
@@ -69,7 +69,7 @@ def test_rag_search_tool_aggregates_sources_and_reranks():
 def test_rag_search_tool_passes_user_id_only_to_personal_source():
     import asyncio
 
-    from retrieval.tools.rag_search import RAGSearchTool
+    from nutrimaster.agent.tools.retrieval.rag_search import RAGSearchTool
 
     personal = FakeSource("personal", [])
     gene_db = FakeSource("gene_db", [])

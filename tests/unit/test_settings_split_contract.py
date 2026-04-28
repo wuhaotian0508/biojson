@@ -2,7 +2,7 @@ from __future__ import annotations
 
 
 def test_settings_exposes_focused_config_objects_while_preserving_flat_aliases(tmp_path):
-    from shared.settings import Settings
+    from nutrimaster.config.settings import Settings
 
     settings = Settings.from_env(
         {

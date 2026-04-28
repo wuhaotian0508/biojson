@@ -13,16 +13,16 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def test_index_service_uses_canonical_incremental_indexer():
-    import indexing.index_service as index_service_module
+    import nutrimaster.rag.index_service as index_service_module
 
     source = inspect.getsource(index_service_module)
 
     assert "utils.indexer" not in source
-    assert "indexing.incremental_indexer" in source
+    assert "nutrimaster.rag.incremental_indexer" in source
 
 
 def test_legacy_indexer_facade_is_removed():
-    from indexing.incremental_indexer import IncrementalIndexer, sha256_of
+    from nutrimaster.rag.incremental_indexer import IncrementalIndexer, sha256_of
 
     assert IncrementalIndexer is not None
     assert sha256_of is not None
@@ -30,8 +30,8 @@ def test_legacy_indexer_facade_is_removed():
 
 
 def test_canonical_incremental_indexer_builds_with_nutrimaster_chunks(tmp_path: Path):
-    from indexing.chunking import CHUNKER_VERSION, GeneChunk
-    from indexing.incremental_indexer import IncrementalIndexer, sha256_of
+    from nutrimaster.rag.chunking import CHUNKER_VERSION, GeneChunk
+    from nutrimaster.rag.incremental_indexer import IncrementalIndexer, sha256_of
 
     data_dir = tmp_path / "data"
     index_dir = tmp_path / "index"
@@ -72,9 +72,44 @@ def test_canonical_incremental_indexer_builds_with_nutrimaster_chunks(tmp_path: 
     assert manifest["files"][json_file.name]["sha"] == sha256_of(json_file)
 
 
+def test_incremental_indexer_reads_plain_json_corpus_files(tmp_path: Path):
+    from nutrimaster.rag.chunking import GeneChunk
+    from nutrimaster.rag.incremental_indexer import IncrementalIndexer
+
+    data_dir = tmp_path / "data"
+    index_dir = tmp_path / "index"
+    data_dir.mkdir()
+    index_dir.mkdir()
+    json_file = data_dir / "example.json"
+    json_file.write_text("{}", encoding="utf-8")
+
+    def load_paper(path: Path) -> list[GeneChunk]:
+        assert path == json_file
+        return [
+            GeneChunk(
+                gene_name="EXAMPLE1",
+                paper_title="Example paper",
+                journal="Example",
+                doi="10.0000/example",
+                gene_type="Pathway_Genes",
+                content="EXAMPLE1 is included in the plain json corpus fixture.",
+                metadata={},
+            )
+        ]
+
+    chunks, embeddings = IncrementalIndexer(
+        index_dir=index_dir,
+        data_dir=data_dir,
+        embed_fn=lambda texts: np.ones((len(texts), 3), dtype=np.float32),
+    ).build_incremental(load_paper_fn=load_paper)
+
+    assert [chunk.gene_name for chunk in chunks] == ["EXAMPLE1"]
+    assert embeddings is not None
+
+
 def test_legacy_chunk_conversion_preserves_existing_fields():
-    from indexing.chunking import GeneChunk
-    from indexing.legacy_migration import convert_legacy_chunk
+    from nutrimaster.rag.chunking import GeneChunk
+    from nutrimaster.rag.legacy_migration import convert_legacy_chunk
 
     legacy_chunk = SimpleNamespace(
         gene_name="SIG6",
@@ -97,8 +132,8 @@ def test_legacy_chunk_conversion_preserves_existing_fields():
 
 
 def test_legacy_chunk_conversion_supplies_defaults_for_old_minimal_chunks():
-    from indexing.chunking import GeneChunk
-    from indexing.legacy_migration import convert_legacy_chunk
+    from nutrimaster.rag.chunking import GeneChunk
+    from nutrimaster.rag.legacy_migration import convert_legacy_chunk
 
     legacy_chunk = SimpleNamespace(
         gene_name="PSY1",
@@ -119,8 +154,8 @@ def test_legacy_chunk_conversion_supplies_defaults_for_old_minimal_chunks():
 
 
 def test_migrate_legacy_index_writes_canonical_chunks_and_reuses_embeddings(tmp_path: Path):
-    from indexing.chunking import GeneChunk
-    from indexing.legacy_migration import migrate_legacy_index
+    from nutrimaster.rag.chunking import GeneChunk
+    from nutrimaster.rag.legacy_migration import migrate_legacy_index
 
     source_index = tmp_path / "legacy-index"
     target_index = tmp_path / "new-index"

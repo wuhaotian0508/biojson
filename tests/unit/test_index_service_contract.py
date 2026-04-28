@@ -7,7 +7,7 @@ import numpy as np
 
 
 def test_index_service_builds_with_injected_legacy_dependencies(tmp_path: Path):
-    from indexing.index_service import IndexBuildResult, IndexService
+    from nutrimaster.rag.index_service import IndexBuildResult, IndexService
 
     calls = []
 
@@ -41,7 +41,7 @@ def test_index_service_builds_with_injected_legacy_dependencies(tmp_path: Path):
 
 
 def test_index_service_can_use_real_legacy_indexer_with_fake_embedding(tmp_path: Path):
-    from indexing.index_service import IndexService
+    from nutrimaster.rag.index_service import IndexService
 
     data_dir = tmp_path / "data"
     index_dir = tmp_path / "index"
@@ -77,9 +77,9 @@ def test_index_service_can_use_real_legacy_indexer_with_fake_embedding(tmp_path:
 
 
 def test_index_service_default_loader_uses_nutrimaster_chunking(tmp_path: Path):
-    from indexing import GeneChunk
-    from indexing.index_service import IndexService
-    import indexing.index_service as index_service_module
+    from nutrimaster.rag import GeneChunk
+    from nutrimaster.rag.index_service import IndexService
+    import nutrimaster.rag.index_service as index_service_module
     import inspect
 
     assert "utils.data_loader" not in inspect.getsource(index_service_module)

@@ -43,8 +43,8 @@ def test_pubmed_search_tool_uses_injected_optimizer_and_client():
     import asyncio
     import inspect
 
-    from retrieval.tools import PubmedSearchTool
-    import retrieval.tools.pubmed as pubmed_module
+    from nutrimaster.agent.tools.retrieval import PubmedSearchTool
+    import nutrimaster.agent.tools.retrieval.pubmed as pubmed_module
 
     assert "rag.tools" not in inspect.getsource(pubmed_module)
 

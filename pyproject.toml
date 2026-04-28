@@ -31,7 +31,7 @@ dependencies = [
 ]
 
 [project.scripts]
-nutrimaster = "cli.main:main"
+nutrimaster = "nutrimaster.cli:main"
 
 [project.optional-dependencies]
 # 个人知识库 PDF 解析
@@ -53,34 +53,41 @@ dev = [
 ]
 
 [tool.setuptools]
-package-dir = {"" = "src", "extractor" = "extractor"}
+package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src", "."]
 namespaces = false
 
 [tool.setuptools.package-data]
-admin = [
+"nutrimaster.web.admin" = [
     "static/*",
 ]
-server = [
+"nutrimaster.web" = [
     "static/*",
     "static/**/*",
 ]
-skills = [
+"nutrimaster.agent.skills" = [
     "*/skill.md",
     "*/SKILL.md",
+    "shared/*/skill.md",
+    "shared/*/SKILL.md",
+    "shared/*/scripts/*.py",
 ]
-crispr = [
+"nutrimaster.crispr" = [
     "templates/*.txt",
 ]
-indexing = [
+"nutrimaster.rag" = [
     "resources/*.json",
+]
+"nutrimaster.extraction" = [
+    "prompts/*.txt",
+    "prompts/*.json",
 ]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
-testpaths = ["tests", "extractor/tests"]
+testpaths = ["tests", "src/nutrimaster/extraction/tests"]
 markers = [
     "integration: tests that call real external services and require configured API keys",
     "e2e: browser end-to-end tests that exercise full user flows",

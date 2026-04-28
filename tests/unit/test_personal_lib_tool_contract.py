@@ -5,8 +5,8 @@ def test_personal_lib_search_tool_uses_callbacks_and_formats_results():
     import asyncio
     import inspect
 
-    from retrieval.tools import PersonalLibSearchTool
-    import retrieval.tools.personal_lib as personal_module
+    from nutrimaster.agent.tools.retrieval import PersonalLibSearchTool
+    import nutrimaster.agent.tools.retrieval.personal_lib as personal_module
 
     assert "rag.tools" not in inspect.getsource(personal_module)
 
@@ -40,7 +40,7 @@ def test_personal_lib_search_tool_uses_callbacks_and_formats_results():
 def test_personal_lib_search_tool_degrades_without_user_context():
     import asyncio
 
-    from retrieval.tools import PersonalLibSearchTool
+    from nutrimaster.agent.tools.retrieval import PersonalLibSearchTool
 
     tool = PersonalLibSearchTool()
 

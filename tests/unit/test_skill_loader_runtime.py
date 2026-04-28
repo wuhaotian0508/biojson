@@ -8,7 +8,7 @@ skill_loader 单元测试
 """
 from pathlib import Path
 
-from agent.skills import SkillLoader
+from nutrimaster.agent.skills import SkillLoader
 
 ROOT = Path(__file__).resolve().parents[2]
 SKILLS_DIR = ROOT / "src" / "skills"

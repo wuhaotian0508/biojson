@@ -23,7 +23,7 @@ def test_cli_package_is_executable_with_python_m():
     }
 
     result = subprocess.run(
-        [sys.executable, "-m", "cli", "serve", "--check-config"],
+        [sys.executable, "-m", "nutrimaster", "serve", "--check-config"],
         cwd=ROOT,
         env=env,
         check=False,
@@ -59,7 +59,7 @@ def test_cli_check_config_loads_dotenv_from_working_directory(tmp_path: Path):
     }
 
     result = subprocess.run(
-        [sys.executable, "-m", "cli", "serve", "--check-config"],
+        [sys.executable, "-m", "nutrimaster", "serve", "--check-config"],
         cwd=tmp_path,
         env=env,
         check=False,
@@ -88,7 +88,7 @@ def test_cli_check_config_command_is_executable_with_python_m():
     }
 
     result = subprocess.run(
-        [sys.executable, "-m", "cli", "check-config"],
+        [sys.executable, "-m", "nutrimaster", "check-config"],
         cwd=ROOT,
         env=env,
         check=False,

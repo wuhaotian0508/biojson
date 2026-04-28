@@ -2,7 +2,7 @@ from __future__ import annotations
 
 
 def test_personal_library_service_delegates_file_operations():
-    from retrieval.personal_library_service import PersonalLibraryService
+    from nutrimaster.rag.personal_library_service import PersonalLibraryService
 
     class FakeLibrary:
         def __init__(self):
@@ -40,7 +40,7 @@ def test_personal_library_service_delegates_file_operations():
 
 
 def test_personal_library_service_delegates_search():
-    from retrieval.personal_library_service import PersonalLibraryService
+    from nutrimaster.rag.personal_library_service import PersonalLibraryService
 
     class FakeLibrary:
         def search(self, query_embedding, top_k=5):

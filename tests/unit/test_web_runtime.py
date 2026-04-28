@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from shared.settings import Settings
+from nutrimaster.config.settings import Settings
 
 
 ROOT = Path(__file__).resolve().parents[2]

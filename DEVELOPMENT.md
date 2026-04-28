@@ -36,33 +36,33 @@ git switch -c refactor/retrieval-settings
 
 ## 模块边界
 
-### `extractor/`
+### `src/nutrimaster/extraction/`
 
 负责从 Markdown 论文生成 verified JSON。
 
 主要文件：
 
-- `extractor/config.py`：读取环境变量并确定输入、输出、prompt、schema、报告目录。
-- `extractor/extract.py`：调用 LLM 完成初始抽取。
-- `extractor/verify.py`：基于原文验证和修正字段。
-- `extractor/pipeline.py`：编排单篇和批量处理。
-- `extractor/run.sh`：推荐的 shell 入口，默认输出到 `data/corpus/`。
+- `src/nutrimaster/extraction/config.py`：读取环境变量并确定输入、输出、prompt、schema、报告目录。
+- `src/nutrimaster/extraction/extract.py`：调用 LLM 完成初始抽取。
+- `src/nutrimaster/extraction/verify.py`：基于原文验证和修正字段。
+- `src/nutrimaster/extraction/pipeline.py`：编排单篇和批量处理。
+- `src/nutrimaster/extraction/run.sh`：推荐的 shell 入口，默认输出到 `data/corpus/`。
 
 维护规则：
 
 - 新 verified JSON 必须写入 `data/corpus/`。
 - 修改 schema 后，要同步检查 prompt、验证逻辑、chunking 逻辑和相关测试。
-- `extractor/config.py` 在 import 时读取环境变量，涉及路径的设置必须发生在 import 之前。
+- `src/nutrimaster/extraction/config.py` 在 import 时读取环境变量，涉及路径的设置必须发生在 import 之前。
 - 大批量抽取会消耗 LLM token，运行前确认 `MODEL`、`OPENAI_BASE_URL`、`MAX_WORKERS` 和 `JSON_DIR`。
 
-### `src/shared/`
+### `src/nutrimaster/config/`
 
 负责统一配置。
 
 主要入口：
 
-- `shared.settings.Settings.from_env()`
-- `shared.settings.RagSettings`
+- `nutrimaster.config.settings.Settings.from_env()`
+- `nutrimaster.config.settings.RagSettings`
 
 维护规则：
 
@@ -98,34 +98,29 @@ git switch -c refactor/retrieval-settings
 - 个人库索引与全局索引分开，不要混写到 `data/index/`。
 - 检索结果格式会影响 agent tools 和前端展示，改动时要检查工具契约测试。
 
-### `src/server/`
+### `src/nutrimaster/web/`
 
-负责 Web、Headless API、认证和前端静态资源。
+负责 Web、认证、Admin 挂载和前端静态资源。
 
 主要入口：
 
 - `uv run nutrimaster web`
-- `uv run nutrimaster api`
-
 维护规则：
 
-- `server.web` 是完整 Web 应用，会挂载 Admin 到 `/admin`。
-- `server.headless` 只保留核心 RAG API，适合测试和服务集成。
-- 修改 API 响应格式时，优先添加或更新 `tests/unit/test_server_*`。
+- `nutrimaster.web.app` 是完整 Web 应用，会挂载 Admin 到 `/admin`。
+- 不再维护 Headless API；自动化测试直接打主 Web app。
+- 修改 API 响应格式时，优先添加或更新行为测试。
 - 认证和用户信息依赖 Supabase，相关测试要区分单元测试和真实服务集成测试。
 
-### `src/admin/`
+### `src/nutrimaster/web/admin/`
 
 负责管理后台。
 
-主要入口：
-
-- `uv run nutrimaster admin`
-- Web 应用中的 `/admin`
+主要入口：Web 应用中的 `/admin`
 
 维护规则：
 
-- Admin 会在 import extractor 前设置 `JSON_DIR`、`PROMPT_PATH` 和 `SCHEMA_PATH`，不要随意改变这个顺序。
+- Admin 会在 import nutrimaster.extraction 前设置 `JSON_DIR`、`PROMPT_PATH` 和 `SCHEMA_PATH`，不要随意改变这个顺序。
 - 上传和已处理列表应只关注 `*_nutri_plant_verified.json`。
 - 重建索引前确认 `DATA_DIR` 指向 `data/corpus/`。
 - 管理员权限由 `ADMIN_EMAIL` 白名单控制。
@@ -214,9 +209,9 @@ data/user_skills/
 
 ### 修改抽取 schema
 
-1. 修改 `extractor/prompts/nutri_gene_schema_v5.json`。
-2. 同步检查 `extractor/prompts/nutri_gene_prompt_v5.txt`。
-3. 检查 `extractor/verify.py` 是否依赖字段名。
+1. 修改 `src/nutrimaster/extraction/prompts/nutri_gene_schema_v5.json`。
+2. 同步检查 `src/nutrimaster/extraction/prompts/nutri_gene_prompt_v5.txt`。
+3. 检查 `src/nutrimaster/extraction/verify.py` 是否依赖字段名。
 4. 检查 `src/indexing/chunking.py` 是否需要消费新字段。
 5. 添加或更新 schema/验证/chunking 测试。
 6. 用 1 篇论文跑 `pipeline-test`。
@@ -225,7 +220,7 @@ data/user_skills/
 推荐验证：
 
 ```bash
-uv run pytest extractor/tests -q
+uv run pytest src/nutrimaster/extraction/tests -q
 uv run pytest tests/unit/test_chunking_contract.py -q
 uv run nutrimaster extract --test 1
 ```
@@ -247,20 +242,20 @@ uv run pytest tests/unit/test_index_service_contract.py tests/unit/test_indexer_
 
 ### 修改 Web API
 
-1. 明确是完整 Web app 还是 headless API。
-2. 更新对应 `server` 模块。
-3. 更新 `tests/unit/test_server_app_factory.py`、`test_server_api_factory.py` 或相关契约测试。
-4. 如果前端静态文件依赖响应字段，同步检查 `src/server/static/`。
+1. 明确主 Web app 的接口行为。
+2. 更新 `nutrimaster.web` 下对应模块。
+3. 更新相关行为测试。
+4. 如果前端静态文件依赖响应字段，同步检查 `src/nutrimaster/web/static/`。
 
 推荐验证：
 
 ```bash
-uv run pytest tests/unit/test_server_app_factory.py tests/unit/test_server_api_factory.py -q
+uv run pytest tests/unit -q
 ```
 
 ### 修改 Admin 行为
 
-1. 保持路径设置在 import extractor 之前。
+1. 保持路径设置在 import nutrimaster.extraction 之前。
 2. 上传、列表、去重逻辑只使用 `*_nutri_plant_verified.json`。
 3. 涉及 pipeline 运行时，检查 SSE event 名称和前端 `admin.js` 是否匹配。
 4. 涉及索引重建时，确认 `DATA_DIR` 为 `data/corpus/`。
@@ -269,12 +264,12 @@ uv run pytest tests/unit/test_server_app_factory.py tests/unit/test_server_api_f
 
 ```bash
 uv run pytest tests/unit -q
-uv run nutrimaster admin
+uv run nutrimaster web
 ```
 
 ### 修改配置
 
-1. 修改 `src/shared/settings.py`。
+1. 修改 `src/nutrimaster/config/settings.py`。
 2. 更新 `.env.example`，不要写真实密钥。
 3. 更新 README 和本文档中对应配置说明。
 4. 更新 `tests/unit/test_rag_settings_contract.py` 或新增配置测试。
@@ -299,7 +294,7 @@ uv run pytest tests/unit -q
 Extractor 测试：
 
 ```bash
-uv run pytest extractor/tests -q
+uv run pytest src/nutrimaster/extraction/tests -q
 ```
 
 跳过外部服务：
@@ -323,7 +318,7 @@ uv run pytest -m e2e
 脚本语法检查：
 
 ```bash
-bash -n extractor/run.sh
+bash -n src/nutrimaster/extraction/run.sh
 ```
 
 ## 提交前检查清单
@@ -349,7 +344,7 @@ uv run pytest -m "not integration and not e2e"
 如果只是文档改动，至少运行：
 
 ```bash
-bash -n extractor/run.sh
+bash -n src/nutrimaster/extraction/run.sh
 uv run pytest tests/unit/test_rag_settings_contract.py -q
 ```
 
@@ -362,7 +357,7 @@ uv run pytest tests/unit/test_rag_settings_contract.py -q
 ```bash
 echo "$JSON_DIR"
 python - <<'PY'
-from extractor.config import OUTPUT_DIR
+from nutrimaster.extraction.config import OUTPUT_DIR
 print(OUTPUT_DIR)
 PY
 ```
@@ -385,7 +380,7 @@ PY
 
 - `ADMIN_EMAIL` 是否包含当前登录邮箱
 - Supabase service role key 是否配置
-- Web 中访问 `/admin` 还是 standalone `ADMIN_PORT`
+- Web 中访问 `/admin` 是否命中主服务挂载的 Admin
 
 ### 外部服务测试失败
 
@@ -415,7 +410,6 @@ PY
 - 个人库：`data/personal_lib/`
 - 用户技能：`data/user_skills/`
 - Web 入口：`uv run nutrimaster web`
-- Admin 入口：`uv run nutrimaster admin`
-- Headless API：`uv run nutrimaster api`
+- Admin 入口：`/admin`
 - Extractor 入口：`uv run nutrimaster extract`
-- 配置入口：`shared.settings.Settings.from_env()`
+- 配置入口：`nutrimaster.config.settings.Settings.from_env()`

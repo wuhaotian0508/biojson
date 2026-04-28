@@ -4,7 +4,7 @@ from __future__ import annotations
 def test_query_translator_enhances_terms_with_injected_llm():
     import asyncio
 
-    from retrieval.query_translation import QueryTranslator
+    from nutrimaster.rag.query_translation import QueryTranslator
 
     async def call_llm(prompt):
         assert "番茄果实" in prompt
@@ -20,6 +20,6 @@ def test_query_translator_enhances_terms_with_injected_llm():
 def test_query_translator_returns_original_query_without_llm():
     import asyncio
 
-    from retrieval.query_translation import QueryTranslator
+    from nutrimaster.rag.query_translation import QueryTranslator
 
     assert asyncio.run(QueryTranslator(call_llm=None).translate_query_terms("lycopene")) == "lycopene"

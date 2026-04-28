@@ -7,8 +7,8 @@ def test_gene_db_search_tool_uses_retrieval_service_and_formats_results():
     import asyncio
     import inspect
 
-    from retrieval.tools import GeneDBSearchTool
-    import retrieval.tools.gene_db as gene_db_module
+    from nutrimaster.agent.tools.retrieval import GeneDBSearchTool
+    import nutrimaster.agent.tools.retrieval.gene_db as gene_db_module
 
     assert "rag.tools" not in inspect.getsource(gene_db_module)
 
@@ -57,7 +57,7 @@ def test_gene_db_search_tool_uses_retrieval_service_and_formats_results():
 def test_gene_db_search_tool_accepts_positional_retriever_for_stack_wiring():
     import asyncio
 
-    from retrieval.tools import GeneDBSearchTool
+    from nutrimaster.agent.tools.retrieval import GeneDBSearchTool
 
     chunk = SimpleNamespace(
         paper_title="SIG6 greening paper",

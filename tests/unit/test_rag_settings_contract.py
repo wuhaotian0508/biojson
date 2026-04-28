@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 def test_rag_settings_default_paths_are_project_relative(tmp_path: Path):
-    from shared.settings import Settings
+    from nutrimaster.config.settings import Settings
 
     settings = Settings.from_env({"NUTRIMASTER_ROOT": str(tmp_path)})
 
@@ -15,7 +15,7 @@ def test_rag_settings_default_paths_are_project_relative(tmp_path: Path):
 
 
 def test_rag_settings_honor_env_overrides(tmp_path: Path):
-    from shared.settings import Settings
+    from nutrimaster.config.settings import Settings
 
     env = {
         "NUTRIMASTER_ROOT": str(tmp_path),

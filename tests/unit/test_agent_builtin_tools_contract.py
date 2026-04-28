@@ -4,7 +4,7 @@ import asyncio
 
 
 def test_read_and_write_tools_use_explicit_file_policy(tmp_path):
-    from agent.tools.builtin import FileAccessPolicy, ReadTool, WriteTool
+    from nutrimaster.agent.tools.builtin import FileAccessPolicy, ReadTool, WriteTool
 
     skills_dir = tmp_path / "skills"
     user_skills_dir = tmp_path / "user_skills"
@@ -26,7 +26,7 @@ def test_read_and_write_tools_use_explicit_file_policy(tmp_path):
 
 
 def test_file_policy_rejects_paths_outside_allowed_roots(tmp_path):
-    from agent.tools.builtin import FileAccessPolicy, ReadTool
+    from nutrimaster.agent.tools.builtin import FileAccessPolicy, ReadTool
 
     policy = FileAccessPolicy(
         skills_dir=tmp_path / "skills",
@@ -42,7 +42,7 @@ def test_file_policy_rejects_paths_outside_allowed_roots(tmp_path):
 
 
 def test_shell_tool_rejects_parent_directory_escape():
-    from agent.tools.builtin import ShellTool
+    from nutrimaster.agent.tools.builtin import ShellTool
 
     try:
         asyncio.run(ShellTool().execute(command="ls .."))
