@@ -5,7 +5,7 @@ import shutil
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from nutrimaster.agent.skills.gene_detection import extract_gene_names, has_gene_names
+from nutrimaster.experiment.gene_validation import extract_gene_names, has_gene_names
 
 logger = logging.getLogger(__name__)
 
@@ -48,6 +48,8 @@ class SkillLoader:
         if not self.skills_dir.exists():
             return {}
         for skill_file in sorted(self.skills_dir.glob("*/skill.md")):
+            if skill_file.parent.name == "skill-creator":
+                continue
             try:
                 skill = self._load_skill_file(skill_file, is_shared=True)
                 self._skills[skill.name] = skill
@@ -62,16 +64,6 @@ class SkillLoader:
         return list(skills.values())
 
     def get_skill(self, name: str, user_id: str | None = None) -> Skill | None:
-        if name == "crispr-experiment":
-            return Skill(
-                name="crispr-experiment",
-                description="Generate plant CRISPR experiment SOPs from gene queries.",
-                content="",
-                tools=["run_crispr_pipeline"],
-                path=self.skills_dir / "crispr_experiment" / "SKILL.md",
-                is_shared=True,
-                tags=["crispr", "sop", "experiment"],
-            )
         if name in self._skills:
             return self._skills[name]
         if user_id:
@@ -99,16 +91,7 @@ class SkillLoader:
         return True
 
     def build_tool_call(self, query: str, trigger_source: str = "query") -> dict | None:
-        if trigger_source != "query":
-            return None
-        if "sop" not in query.lower():
-            return None
-        return {
-            "type": "tool_call",
-            "tool": "run_crispr_pipeline",
-            "skill": "crispr-experiment",
-            "args": {"query": query},
-        }
+        return None
 
     @staticmethod
     def has_gene_names(text: str) -> bool:

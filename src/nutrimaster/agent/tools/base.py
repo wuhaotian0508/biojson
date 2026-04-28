@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
-from typing import ClassVar
+from typing import Any, ClassVar
 
 
 class ToolError(Exception):
@@ -18,8 +18,8 @@ class BaseTool(ABC):
         """OpenAI-compatible function calling schema."""
 
     @abstractmethod
-    async def execute(self, **kwargs) -> str:
-        """Execute the tool and return text content."""
+    async def execute(self, **kwargs) -> Any:
+        """Execute the tool and return structured or text content."""
 
     def __repr__(self) -> str:
         return f"<{self.__class__.__name__} name={self.name!r}>"

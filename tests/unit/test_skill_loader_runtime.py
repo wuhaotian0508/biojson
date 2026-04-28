@@ -14,15 +14,13 @@ ROOT = Path(__file__).resolve().parents[2]
 SKILLS_DIR = ROOT / "src" / "skills"
 
 
-def test_skill_loader_registers_crispr_skill():
-    """测试 SkillLoader 能正确扫描并注册 crispr-experiment 技能"""
+def test_skill_loader_no_longer_registers_legacy_crispr_skill():
+    """SOP/CRISPR now lives behind experiment_design, not a legacy skill shortcut."""
     loader = SkillLoader(SKILLS_DIR)
 
     skill = loader.get_skill("crispr-experiment")
 
-    assert skill.name == "crispr-experiment"
-    assert "crispr" in skill.tags
-    assert skill.path.name == "SKILL.md"
+    assert skill is None
 
 
 def test_skill_loader_builds_tool_call_for_direct_query():
@@ -32,16 +30,11 @@ def test_skill_loader_builds_tool_call_for_direct_query():
     """
     loader = SkillLoader(SKILLS_DIR)
 
-    # ---- 包含 "SOP" + CRISPR + 具体基因名 → 应触发 ----
     tool_call = loader.build_tool_call(
         query="请直接给我 Glycine max 的 GmMYB4 CRISPR 实验方案 SOP",
         trigger_source="query",
     )
-    assert tool_call is not None
-    assert tool_call["type"] == "tool_call"
-    assert tool_call["tool"] == "run_crispr_pipeline"
-    assert tool_call["skill"] == "crispr-experiment"
-    assert tool_call["args"]["query"].startswith("请直接给我")
+    assert tool_call is None
 
 
 def test_query_trigger_requires_sop_keyword():
@@ -58,33 +51,32 @@ def test_query_trigger_requires_sop_keyword():
     )
     assert tool_call is None
 
-    # ---- 加上 "SOP" 后应触发 ----
     tool_call = loader.build_tool_call(
         query="请帮我设计 GmFAD2 的 CRISPR 敲除 SOP",
         trigger_source="query",
     )
-    assert tool_call is not None
+    assert tool_call is None
 
     # ---- 小写 "sop" 也应触发 ----
     tool_call = loader.build_tool_call(
         query="请帮我设计 GmFAD2 的 CRISPR 敲除 sop",
         trigger_source="query",
     )
-    assert tool_call is not None
+    assert tool_call is None
 
     # ---- 混合大小写 "Sop" 也应触发 ----
     tool_call = loader.build_tool_call(
         query="请帮我设计 GmFAD2 的 CRISPR 敲除 Sop",
         trigger_source="query",
     )
-    assert tool_call is not None
+    assert tool_call is None
 
     # ---- 中文紧邻 sop（如"的sop"）也应触发 ----
     tool_call = loader.build_tool_call(
         query="给我玉米Shrunken-2和Opaque-2的sop",
         trigger_source="query",
     )
-    assert tool_call is not None
+    assert tool_call is None
 
 
 def test_extract_gene_names():

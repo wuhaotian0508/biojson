@@ -21,7 +21,7 @@ def test_rag_config_has_no_embedded_default_key(monkeypatch):
 def test_retriever_requires_jina_api_key(monkeypatch):
     monkeypatch.delenv("JINA_API_KEY", raising=False)
 
-    from nutrimaster.rag.jina_retriever import JinaRetriever
+    from nutrimaster.rag.jina import JinaRetriever
     from nutrimaster.config.settings import Settings
 
     retriever = JinaRetriever(

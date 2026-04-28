@@ -9,8 +9,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
 
-from nutrimaster.rag.chunking import CHUNKER_VERSION, GeneChunk
-from nutrimaster.rag.incremental_indexer import IncrementalIndexer, sha256_of
+from nutrimaster.rag.gene_index import CHUNKER_VERSION, GeneChunk, IncrementalIndexer, sha256_of
 
 
 def _write_manifest(index_dir: Path, filename: str, sha: str, n_chunks: int) -> None:
@@ -176,7 +175,7 @@ def test_incremental_indexer_writes_canonical_chunk_module(tmp_path: Path):
     with (index_dir / "chunks.pkl").open("rb") as f:
         saved_chunks = pickle.load(f)
 
-    assert saved_chunks[0].__class__.__module__ == "nutrimaster.rag.chunking"
+    assert saved_chunks[0].__class__.__module__ == "nutrimaster.rag.gene_index"
 
 
 def test_incremental_indexer_removes_stale_embeddings_for_empty_corpus(tmp_path: Path):

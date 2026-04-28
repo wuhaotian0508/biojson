@@ -10,7 +10,7 @@ def test_admin_uses_canonical_retriever_without_sys_path_hack():
     assert not (root / "admin").exists()
     assert "_sys.path.insert" not in source
     assert "from retriever import JinaRetriever" not in source
-    assert "from nutrimaster.rag.jina_retriever import JinaRetriever" in source
+    assert "from nutrimaster.rag.jina import JinaRetriever" in source
 
 
 def test_admin_pipeline_uses_incremental_index_refresh_hook():

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import importlib
-import inspect
 import pickle
 from pathlib import Path
 from unittest.mock import patch
@@ -12,17 +11,17 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[2]
 
 
-def test_stack_defaults_use_canonical_jina_retriever():
-    import nutrimaster.agent.stack as stack_module
+def test_web_services_use_canonical_jina_retriever():
+    import nutrimaster.web.deps as deps_module
 
-    source = inspect.getsource(stack_module._defaults)
+    source = Path(deps_module.__file__).read_text(encoding="utf-8")
 
     assert "search.retriever" not in source
-    assert "nutrimaster.rag.jina_retriever" in source
+    assert "nutrimaster.rag.jina" in source
 
 
 def test_legacy_search_retriever_facade_is_removed():
-    canonical_retriever = importlib.import_module("nutrimaster.rag.jina_retriever")
+    canonical_retriever = importlib.import_module("nutrimaster.rag.jina")
 
     assert hasattr(canonical_retriever, "JinaRetriever")
     assert not (ROOT / "rag" / "search" / "retriever.py").exists()
@@ -30,8 +29,8 @@ def test_legacy_search_retriever_facade_is_removed():
 
 def test_jina_retriever_loads_existing_index_on_initialization(tmp_path: Path):
     from nutrimaster.config.settings import RagSettings, Settings
-    from nutrimaster.rag.chunking import GeneChunk
-    from nutrimaster.rag.jina_retriever import JinaRetriever
+    from nutrimaster.rag.gene_index import GeneChunk
+    from nutrimaster.rag.jina import JinaRetriever
 
     data_dir = tmp_path / "data"
     index_dir = tmp_path / "index"
@@ -70,7 +69,7 @@ def test_jina_retriever_loads_existing_index_on_initialization(tmp_path: Path):
 
 def test_jina_retriever_reports_unreadable_index_without_crashing(tmp_path: Path):
     from nutrimaster.config.settings import RagSettings, Settings
-    from nutrimaster.rag.jina_retriever import JinaRetriever
+    from nutrimaster.rag.jina import JinaRetriever
 
     data_dir = tmp_path / "data"
     index_dir = tmp_path / "index"
@@ -89,7 +88,7 @@ def test_jina_retriever_reports_unreadable_index_without_crashing(tmp_path: Path
         ),
     )
 
-    with patch("nutrimaster.rag.jina_retriever.pickle.load") as load:
+    with patch("nutrimaster.rag.jina.pickle.load") as load:
         load.side_effect = ModuleNotFoundError("No module named 'indexing.chunking'")
         retriever = JinaRetriever(settings=settings)
 

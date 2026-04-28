@@ -2,7 +2,7 @@ from __future__ import annotations
 
 
 def test_jina_reranker_uses_injected_post_and_updates_scores():
-    from nutrimaster.rag.reranking import JinaReranker
+    from nutrimaster.rag.jina import JinaReranker
 
     calls = []
 

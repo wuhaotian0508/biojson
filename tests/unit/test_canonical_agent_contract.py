@@ -19,11 +19,11 @@ def test_canonical_agent_streams_direct_llm_answer_without_tool_call():
     from nutrimaster.agent.agent import Agent
 
     class FakeRegistry:
-        tool_names = {"read_tool"}
+        tool_names = {"rag_search"}
         get_definitions = [
             {
                 "type": "function",
-                "function": {"name": "read_tool", "description": "read"},
+                "function": {"name": "rag_search", "description": "rag"},
             }
         ]
 
@@ -41,7 +41,6 @@ def test_canonical_agent_streams_direct_llm_answer_without_tool_call():
         registry=FakeRegistry(),
         skill_loader=FakeSkillLoader(),
         call_llm=call_llm,
-        call_llm_stream=call_llm_stream,
     )
 
     events = asyncio.run(

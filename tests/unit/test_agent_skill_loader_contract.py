@@ -12,7 +12,7 @@ def test_skill_loader_parses_shared_and_user_skills(tmp_path):
 name: rag-answer
 description: >
   Answer questions with RAG.
-tools: [rag_search, read_tool]
+tools: [rag_search, experiment_design]
 ---
 Use RAG.
 """,
@@ -33,7 +33,7 @@ Custom content.
     loader = SkillLoader(skills_dir=skills_dir, user_skills_dir=user_skills_dir)
 
     skills = {skill.name: skill for skill in loader.list_dir("user-1")}
-    assert skills["rag-answer"].tools == ["rag_search", "read_tool"]
+    assert skills["rag-answer"].tools == ["rag_search", "experiment_design"]
     assert skills["custom"].tools is None
     assert skills["custom"].content == "Custom content."
     assert skills["custom"].is_shared is False
@@ -44,12 +44,7 @@ def test_skill_loader_builds_crispr_sop_tool_call():
 
     loader = SkillLoader(skills_dir=None, user_skills_dir=None)
 
-    assert loader.build_tool_call("请给我 GmFAD2 的 CRISPR SOP") == {
-        "type": "tool_call",
-        "tool": "run_crispr_pipeline",
-        "skill": "crispr-experiment",
-        "args": {"query": "请给我 GmFAD2 的 CRISPR SOP"},
-    }
+    assert loader.build_tool_call("请给我 GmFAD2 的 CRISPR SOP") is None
     assert loader.build_tool_call("请给我 GmFAD2 的 CRISPR 实验方案") is None
 
 

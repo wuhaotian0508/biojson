@@ -1,13 +1,45 @@
-from nutrimaster.rag.chunking import GeneChunk, chunk_paper
-from nutrimaster.rag.incremental_indexer import IncrementalIndexer, sha256_of
-from nutrimaster.rag.index_service import IndexBuildResult, IndexService
-from nutrimaster.rag.jina_retriever import JinaRetriever
-from nutrimaster.rag.personal_library import PersonalLibrary
-from nutrimaster.rag.personal_library_service import PersonalLibraryService
-from nutrimaster.rag.reranking import JinaReranker
-from nutrimaster.rag.search_service import RetrievalService
+from nutrimaster.rag.evidence import (
+    EvidenceFusion,
+    EvidenceItem,
+    EvidencePacket,
+    SourceCollector,
+    clean_text,
+    evidence_key,
+    normalize_doi,
+    normalize_pmid,
+    normalize_url,
+    title_key,
+)
+from nutrimaster.rag.gene_index import (
+    GeneChunk,
+    IncrementalIndexer,
+    IndexBuildResult,
+    IndexService,
+    RetrievalService,
+    chunk_paper,
+    sha256_of,
+)
+from nutrimaster.rag.jina import JinaReranker, JinaRetriever
+from nutrimaster.rag.personal_library import PersonalLibrary, PersonalLibraryService
+from nutrimaster.rag.service import (
+    GeneDbSource,
+    PersonalLibrarySource,
+    PubMedQueryOptimizer,
+    PubMedSource,
+    QueryTranslator,
+    RAGSearchContext,
+    RAGSearchService,
+    configure_llm,
+    translate_query_terms,
+)
 
 __all__ = [
+    "EvidenceFusion",
+    "EvidenceItem",
+    "EvidencePacket",
+    "GeneDbSource",
+    "clean_text",
+    "evidence_key",
     "GeneChunk",
     "IncrementalIndexer",
     "IndexBuildResult",
@@ -16,8 +48,21 @@ __all__ = [
     "JinaRetriever",
     "PersonalLibrary",
     "PersonalLibraryService",
+    "PersonalLibrarySource",
+    "PubMedQueryOptimizer",
+    "PubMedSource",
+    "QueryTranslator",
+    "RAGSearchContext",
+    "RAGSearchService",
     "RetrievalService",
+    "SourceCollector",
     "chunk_paper",
+    "normalize_doi",
+    "normalize_pmid",
+    "normalize_url",
     "sha256_of",
+    "title_key",
+    "configure_llm",
+    "translate_query_terms",
 ]
 

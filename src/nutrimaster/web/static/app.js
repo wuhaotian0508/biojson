@@ -328,9 +328,9 @@ let currentAbortController = null;  // 用于中断正在进行的 SSE 流
 let currentStreamMsgId = null;      // 正在流式生成的 assistant 消息 ID
 let userHasScrolled = false;        // 用户是否手动向上滚动（禁止自动跟随）
 
-// ===== Skills / Tools / Model 偏好（localStorage 持久化）=====
-let skillPrefs = JSON.parse(localStorage.getItem('skillPrefs') || '{}');
-let toolOverrides = JSON.parse(localStorage.getItem('toolOverrides') || '{}');
+// ===== Agent / Model 偏好（Skills 由后台文件夹维护，不再前端编辑）=====
+let skillPrefs = {};
+let toolOverrides = {};
 let selectedModelId = localStorage.getItem('selectedModelId') || '';
 
 // 中断正在进行的 SSE 流，保存已有的部分回答
@@ -350,7 +350,7 @@ function abortCurrentStream() {
             regions.answerEl.querySelectorAll('.search-progress').forEach(el => el.remove());
             // 如果有部分回答，在末尾追加停止提示
             if (state && state.answerText) {
-                regions.answerEl.innerHTML = formatAnswer(state.answerText);
+                regions.answerEl.innerHTML = formatAnswer(state.answerText, state.sources || [], msgId);
             }
             // 追加停止提示
             const stopHint = document.createElement('div');
@@ -362,7 +362,7 @@ function abortCurrentStream() {
         finalizeToolCallsUI(msgId);
         // 追加已有的参考文献
         if (state && state.sources && state.sources.length > 0 && regions.extrasEl) {
-            regions.extrasEl.insertAdjacentHTML('beforeend', renderReferences(state.sources));
+            regions.extrasEl.insertAdjacentHTML('beforeend', renderReferences(state.sources, msgId));
         }
     }
     currentAbortController.abort();
@@ -425,7 +425,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setupEventListeners();
         setRandomSlogan();
         setupKBModal();
-        setupSkillModal();
         applyLanguage();
         initModelSelect();
 
@@ -884,11 +883,19 @@ async function streamQuery(query, messageId) {
                     } else if (data.type === 'tool_result') {
                         const state = getAssistantTurnState(messageId);
                         const tc = state.toolCalls.find(c => c.tool === data.tool && !c.done);
-                        if (tc) tc.done = true;
+                        if (tc) {
+                            tc.done = true;
+                            tc.summary = data.summary || '';
+                            tc.result = data.content || data.summary || '';
+                        }
                         updateToolCallsUI(messageId);
                     } else if (data.type === 'searching') {
                         updateMessage(messageId,
                             `<div class="search-progress"><span class="search-spinner"></span>${escapeHtml(data.data)}</div>`);
+                    } else if (data.type === 'citations') {
+                        sources = data.data;
+                        const state = getAssistantTurnState(messageId);
+                        state.sources = sources;
                     } else if (data.type === 'sources') {
                         sources = data.data;
                         const state = getAssistantTurnState(messageId);
@@ -916,20 +923,6 @@ async function streamQuery(query, messageId) {
                             const regions = getMessageRegions(messageId);
                             if (regions.extrasEl) renderSOPs(regions.extrasEl, data.sops);
                         }
-                    } else if (data.type === 'sop_extracting') {
-                        // SOP 快捷路径：显示提取进度
-                        updateMessage(messageId, `<div class="search-progress"><span class="search-spinner"></span>${escapeHtml(data.data)}</div>`);
-                    } else if (data.type === 'sop_genes_extracted') {
-                        // SOP 快捷路径：基因已提取，等待 NCBI 验证
-                    } else if (data.type === 'sop_ncbi_verifying') {
-                        // SOP 快捷路径：NCBI 验证中
-                        updateMessage(messageId, `<div class="search-progress"><span class="search-spinner"></span>${escapeHtml(data.data)}</div>`);
-                    } else if (data.type === 'sop_ncbi_verified') {
-                        // SOP 快捷路径：NCBI 验证完成，直接展示确认界面
-                        const state = getAssistantTurnState(messageId);
-                        state.sopShortcut = true;
-                        state.sopVerifiedGenes = data.genes;
-                        updateMessage(messageId, '');  // 清空加载提示
                     } else if (data.type === 'genes_available') {
                         // 后端检测到回答中包含具体基因名，携带基因名列表
                         const state = getAssistantTurnState(messageId);
@@ -943,69 +936,12 @@ async function streamQuery(query, messageId) {
                         state.streamDone = true;
                         finalizeToolCallsUI(messageId);
 
-                        // SOP 快捷路径：done 时直接展示 NCBI 验证确认界面
-                        if (state.sopShortcut && state.sopVerifiedGenes) {
-                            updateMessage(messageId, '');
-                            const { extrasEl } = getMessageRegions(messageId);
-                            if (extrasEl) {
-                                const confirmed = await showNCBIVerification(messageId, state.sopVerifiedGenes, extrasEl);
-                                if (confirmed) {
-                                    state.experimentRunning = true;
-                                    state.experimentDone = false;
-                                    appendExperimentProgress(messageId, confirmed.map(g => g.gene));
-                                    // 直接调用 SOP run
-                                    try {
-                                        const runResp = await fetch('/api/sop/run', {
-                                            method: 'POST',
-                                            headers: {
-                                                'Content-Type': 'application/json',
-                                                'Authorization': 'Bearer ' + getAccessToken(),
-                                            },
-                                            body: JSON.stringify({ genes: confirmed }),
-                                        });
-                                        if (!runResp.ok) throw new Error('SOP pipeline 请求失败');
-                                        const runReader = runResp.body.getReader();
-                                        const runDecoder = new TextDecoder();
-                                        let runBuffer = '';
-                                        while (true) {
-                                            const { done: runDone, value: runValue } = await runReader.read();
-                                            runBuffer += runDecoder.decode(runValue || new Uint8Array(), { stream: !runDone });
-                                            const runLines = runBuffer.split('\n');
-                                            runBuffer = runDone ? '' : (runLines.pop() || '');
-                                            for (const rl of runLines) {
-                                                if (!rl.startsWith('data: ')) continue;
-                                                try {
-                                                    const rd = JSON.parse(rl.slice(6));
-                                                    if (rd.type === 'progress') {
-                                                        updateExperimentProgress(messageId, rd);
-                                                    } else if (rd.type === 'result' && rd.sops) {
-                                                        state.experimentDone = true;
-                                                        state.experimentRunning = false;
-                                                        state.sops = rd.sops;
-                                                        const regions = getMessageRegions(messageId);
-                                                        if (regions.extrasEl) renderSOPs(regions.extrasEl, rd.sops);
-                                                        updateLastTurnSops(state.sops, state.genes);
-                                                    } else if (rd.type === 'error') {
-                                                        handleExperimentError(messageId, rd.data || rd.msg);
-                                                    }
-                                                } catch (_e) {}
-                                            }
-                                            if (runDone) break;
-                                        }
-                                    } catch (runErr) {
-                                        handleExperimentError(messageId, runErr.message);
-                                    }
-                                }
-                            }
-                        } else {
-                            updateMessage(messageId, formatAnswer(answerText));
-                            // 在回答末尾追加参考文献
-                            const { extrasEl } = getMessageRegions(messageId);
-                            if (extrasEl && sources && sources.length > 0) {
-                                extrasEl.insertAdjacentHTML('beforeend', renderReferences(sources));
-                            }
-                            renderExperimentButton(messageId);
+                        updateMessage(messageId, formatAnswer(answerText, sources, messageId));
+                        const { extrasEl } = getMessageRegions(messageId);
+                        if (extrasEl && sources && sources.length > 0) {
+                            extrasEl.insertAdjacentHTML('beforeend', renderReferences(sources, messageId));
                         }
+                        renderExperimentButton(messageId);
                     } else if (data.type === 'error') {
                         const state = getAssistantTurnState(messageId);
                         state.experimentRunning = false;
@@ -1033,11 +969,11 @@ async function streamQuery(query, messageId) {
                         const state = getAssistantTurnState(messageId);
                         state.streamDone = true;
                         finalizeToolCallsUI(messageId);
-                        updateMessage(messageId, formatAnswer(answerText));
+                        updateMessage(messageId, formatAnswer(answerText, sources, messageId));
                         // 在回答末尾追加参考文献
                         const { extrasEl } = getMessageRegions(messageId);
                         if (extrasEl && sources && sources.length > 0) {
-                            extrasEl.insertAdjacentHTML('beforeend', renderReferences(sources));
+                            extrasEl.insertAdjacentHTML('beforeend', renderReferences(sources, messageId));
                         }
                         renderExperimentButton(messageId);
                     }
@@ -1060,16 +996,15 @@ async function streamExperiment(messageId) {
     const state = getAssistantTurnState(messageId);
 
     // ---- Phase A+B: 提取基因 + NCBI 验证 ----
-    const extractResp = await fetch('/api/sop/extract', {
+    const extractResp = await fetch('/api/experiment/preview', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             'Authorization': 'Bearer ' + getAccessToken(),
         },
         body: JSON.stringify({
-            query: state.query,
-            answer_text: state.answerText,
-            user_genes: state.genes || [],  // 传递用户编辑后的基因列表
+            goal: `${state.query || ''}\n${state.answerText || ''}`.trim(),
+            selected_gene_names: state.genes || [],
         }),
     });
 
@@ -1082,12 +1017,6 @@ async function streamExperiment(messageId) {
         throw new Error(err.detail || t('auth.networkFail'));
     }
 
-    // 读取 SSE 流
-    const extractReader = extractResp.body.getReader();
-    const extractDecoder = new TextDecoder();
-    let extractBuffer = '';
-    let verifiedGenes = null;
-
     // 显示提取中进度
     const { extrasEl } = getMessageRegions(messageId);
     removeExperimentButton(messageId);
@@ -1097,35 +1026,9 @@ async function streamExperiment(messageId) {
     sopProgressEl.innerHTML = `<div class="search-progress"><span class="search-spinner"></span>${t('sop.extracting')}</div>`;
     if (extrasEl) extrasEl.appendChild(sopProgressEl);
 
-    while (true) {
-        const { done, value } = await extractReader.read();
-        extractBuffer += extractDecoder.decode(value || new Uint8Array(), { stream: !done });
-        const lines = extractBuffer.split('\n');
-        extractBuffer = done ? '' : (lines.pop() || '');
-
-        for (const line of lines) {
-            if (!line.startsWith('data: ')) continue;
-            try {
-                const data = JSON.parse(line.slice(6));
-                if (data.type === 'sop_extracting') {
-                    sopProgressEl.innerHTML = `<div class="search-progress"><span class="search-spinner"></span>${escapeHtml(data.data)}</div>`;
-                } else if (data.type === 'sop_genes_extracted') {
-                    // 基因已提取，等待 NCBI 验证
-                } else if (data.type === 'sop_ncbi_verifying') {
-                    sopProgressEl.innerHTML = `<div class="search-progress"><span class="search-spinner"></span>${escapeHtml(data.data)}</div>`;
-                } else if (data.type === 'sop_ncbi_verified') {
-                    verifiedGenes = data.genes;
-                    sopProgressEl.remove();
-                } else if (data.type === 'error') {
-                    sopProgressEl.remove();
-                    throw new Error(data.data);
-                }
-            } catch (e) {
-                if (e.message && !e.message.startsWith('Unexpected')) throw e;
-            }
-        }
-        if (done) break;
-    }
+    const preview = await extractResp.json();
+    const verifiedGenes = preview.genes || [];
+    sopProgressEl.remove();
 
     if (!verifiedGenes || verifiedGenes.length === 0) {
         renderExperimentButton(messageId);
@@ -1144,7 +1047,7 @@ async function streamExperiment(messageId) {
     state.experimentDone = false;
     appendExperimentProgress(messageId, confirmed.map(g => g.gene));
 
-    const runResp = await fetch('/api/sop/run', {
+    const runResp = await fetch('/api/experiment/run', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -1245,13 +1148,31 @@ function showNCBIVerification(messageId, genes, container) {
 }
 
 // 格式化答案（使用 marked.js 渲染 Markdown）
-function formatAnswer(text) {
+function formatAnswer(text, citations = [], citationScope = '') {
+    const citationLinks = new Map();
+    for (const citation of citations || []) {
+        const num = Number(citation.tool_index || citation.source_id);
+        if (!num) continue;
+        const href = citationHref(citation);
+        if (href) citationLinks.set(num, href);
+    }
+    const linkInlineCitations = (html) => {
+        if (!citationLinks.size) return html;
+        return html.replace(/\[(\d+)\]/g, (match, rawNum) => {
+            const num = Number(rawNum);
+            const href = citationLinks.get(num);
+            if (!href) return match;
+            return `<a class="citation-link" href="${escapeHtml(href)}" target="_blank" rel="noopener" title="打开参考文献 [${num}]">[${num}]</a>`;
+        });
+    };
+
     if (typeof marked !== 'undefined') {
         marked.setOptions({
             breaks: true,
             gfm: true,
         });
-        return '<div class="markdown-body">' + DOMPurify.sanitize(marked.parse(text)) + '</div>';
+        const sanitized = DOMPurify.sanitize(marked.parse(text));
+        return '<div class="markdown-body">' + linkInlineCitations(sanitized) + '</div>';
     }
     // fallback: 无 marked 时用简单段落
     const formatted = text.replace(
@@ -1260,7 +1181,17 @@ function formatAnswer(text) {
     );
     const paragraphs = formatted.split('\n\n').filter(p => p.trim());
     const html = paragraphs.map(p => `<p>${p}</p>`).join('');
-    return typeof DOMPurify !== 'undefined' ? DOMPurify.sanitize(html) : html;
+    const safeHtml = typeof DOMPurify !== 'undefined' ? DOMPurify.sanitize(html) : html;
+    return linkInlineCitations(safeHtml);
+}
+
+function citationHref(citation) {
+    const raw = citation.url || (
+        citation.doi ? `https://doi.org/${String(citation.doi).trim()}` :
+        (citation.pmid ? `https://pubmed.ncbi.nlm.nih.gov/${String(citation.pmid).trim()}/` : '')
+    );
+    const href = String(raw || '').trim();
+    return /^https?:\/\//i.test(href) ? href : '';
 }
 
 // 来源类型标签（动态取翻译）
@@ -1323,7 +1254,7 @@ function renderSources(sources) {
 
 // 渲染参考文献列表（仅文献名+链接，无基因名、无分数）
 // sources 已经由后端按正文引用顺序过滤和排序
-function renderReferences(sources) {
+function renderReferences(sources, citationScope = '') {
     if (!sources || sources.length === 0) return '';
 
     // 用 Set 按文献名去重（保持顺序）
@@ -1355,6 +1286,7 @@ function renderReferences(sources) {
 
     if (refs.length === 0) return '';
 
+    const scopePrefix = citationScope ? `${citationScope}-` : '';
     const items = refs.map((r, i) => {
         // 使用后端传来的 tool_index（与正文角标一致），fallback 到顺序编号
         const num = r.toolIndex || (i + 1);
@@ -1363,7 +1295,7 @@ function renderReferences(sources) {
         if (href) {
             litHtml = `<a href="${href}" target="_blank" rel="noopener">${litHtml}</a>`;
         }
-        return `<div class="ref-item">[${num}] ${litHtml}</div>`;
+        return `<div class="ref-item" id="${scopePrefix}ref-${num}" data-citation="${num}">[${num}] ${litHtml}</div>`;
     }).join('');
 
     return `
@@ -1429,7 +1361,7 @@ function getAssistantTurnState(messageId) {
             query: '',
             answerText: '',
             sources: [],
-            toolCalls: [],        // [{tool, args, done}]
+            toolCalls: [],        // [{tool, args, done, summary, result}]
             selectedSkill: null,   // skill name string
             experimentRunning: false,
             experimentDone: false,
@@ -1504,11 +1436,19 @@ function finalizeToolCallsUI(messageId) {
     // Build detail section
     let detailHtml = '';
     for (const tc of toolCalls) {
-        const argsStr = tc.args ? JSON.stringify(tc.args, null, 0) : '';
+        const argsStr = tc.args ? JSON.stringify(tc.args, null, 2) : '';
         const truncArgs = argsStr.length > 120 ? argsStr.slice(0, 120) + '...' : argsStr;
         detailHtml += `<div class="tool-call-item"><span class="tool-call-name">${escapeHtml(tc.tool)}</span>`;
         if (truncArgs) {
             detailHtml += ` <span class="tool-call-args">${escapeHtml(truncArgs)}</span>`;
+        }
+        if (tc.result) {
+            detailHtml += `
+                <details class="tool-call-result">
+                    <summary>查看完整工具返回</summary>
+                    <pre>${escapeHtml(tc.result)}</pre>
+                </details>
+            `;
         }
         detailHtml += `</div>`;
     }
@@ -1911,15 +1851,19 @@ function restoreConversation(session) {
     // 恢复该 session 内的所有多轮对话
     for (const turn of session.messages) {
         addMessage('user', turn.query);
-        const answerHtml = turn.answerText ? formatAnswer(turn.answerText) : '';
+        const answerHtml = turn.answerText ? formatAnswer(turn.answerText, turn.sources || []) : '';
         const msgId = addMessage('assistant', answerHtml);
+        if (turn.answerText && turn.sources && turn.sources.length > 0) {
+            const { answerEl } = getMessageRegions(msgId);
+            if (answerEl) answerEl.innerHTML = formatAnswer(turn.answerText, turn.sources, msgId);
+        }
 
         // 恢复来源、基因、SOP 到 extrasEl
         const { extrasEl } = getMessageRegions(msgId);
         if (extrasEl) {
             // 在回答末尾追加参考文献
             if (turn.sources && turn.sources.length > 0) {
-                extrasEl.insertAdjacentHTML('beforeend', renderReferences(turn.sources));
+                extrasEl.insertAdjacentHTML('beforeend', renderReferences(turn.sources, msgId));
             }
             // SOP 结果
             if (turn.sops && Object.keys(turn.sops).length > 0) {

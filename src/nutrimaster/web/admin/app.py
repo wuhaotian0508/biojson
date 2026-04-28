@@ -148,7 +148,7 @@ def _refresh_index(data_dir: Path, *, force: bool = False) -> None:
         _index_refresh_handler(Path(data_dir), force)
         return
 
-    from nutrimaster.rag.jina_retriever import JinaRetriever
+    from nutrimaster.rag.jina import JinaRetriever
 
     fallback_retriever = JinaRetriever()
     fallback_retriever.build_index(data_dir=data_dir, incremental=True, force=force)

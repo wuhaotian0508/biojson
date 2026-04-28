@@ -3,7 +3,6 @@ from __future__ import annotations
 import argparse
 import json
 import os
-import sys
 from collections.abc import Sequence
 from typing import Mapping
 
@@ -69,22 +68,26 @@ def _run_web(args: argparse.Namespace) -> int:
 
 
 def _run_extract(args: argparse.Namespace) -> int:
-    from nutrimaster.extraction.pipeline import main as pipeline_main
+    from nutrimaster.extraction.service import ExtractionService
 
     if args.rerun:
         os.environ["FORCE_RERUN"] = "1"
-    forwarded = ["nutrimaster extract"]
-    if args.test is not None:
-        forwarded.extend(["--test", args.test])
-    if args.workers is not None:
-        forwarded.extend(["--workers", str(args.workers)])
-
-    old_argv = sys.argv
-    sys.argv = forwarded
-    try:
-        pipeline_main()
-    finally:
-        sys.argv = old_argv
+    result = ExtractionService().run(
+        test=args.test,
+        workers=args.workers,
+        report_prefix="cli-extract",
+    )
+    _print_json(
+        {
+            "status": "ok",
+            "files": result.files,
+            "processed": result.processed,
+            "failed": result.failed,
+            "skipped": result.skipped,
+            "stopped": result.stopped,
+            "token_report": result.token_report,
+        }
+    )
     return 0
 
 

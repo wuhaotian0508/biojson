@@ -4,12 +4,12 @@ description: >
   搜索 PubMed 生物医学文献数据库，支持高级检索语法、MeSH 术语、
   字段限定搜索和系统性文献综述。当用户询问基因功能、代谢通路、
   作物育种相关文献时自动触发。系统会自动提取关键术语并翻译成英文。
-tools: [pubmed_search]
+tools: [rag_search]
 ---
 
 # PubMed 文献搜索技能
 
-使用 `pubmed_search` 工具搜索 NCBI PubMed 数据库，获取生物医学文献的标题、摘要、期刊和链接。
+使用 `rag_search` 工具搜索文献证据。该工具会同时检索 PubMed 摘要和本地基因库，避免只看在线摘要而遗漏结构化基因证据。
 
 ## 使用时机
 
@@ -48,7 +48,7 @@ tools: [pubmed_search]
 | 综述文献 | `关键词 + review` | `selenium metabolism plant review` 或 `硒代谢 植物 综述` |
 | 特定作者 | `作者名 + 研究方向` | `Zhang H CRISPR rice nutrition` |
 
-### 2. 使用 PubMed 高级语法（传入 pubmed_search 的 query 参数）
+### 2. 使用 PubMed 高级语法（放入 rag_search 的 query 参数）
 
 - **MeSH 术语**: `vitamin C[MeSH]` — 使用 MeSH 受控词汇，自动包含下位词
 - **字段限定**: `CRISPR[Title]` — 限定标题搜索；`Zhang[Author]`

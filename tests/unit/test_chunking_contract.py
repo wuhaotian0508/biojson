@@ -4,8 +4,8 @@ import inspect
 
 
 def test_chunk_paper_routes_mixed_gene_paper_without_legacy_utils_imports():
-    from nutrimaster.rag.chunking import GeneChunk, chunk_paper
-    import nutrimaster.rag.chunking as chunking
+    from nutrimaster.rag.gene_index import GeneChunk, chunk_paper
+    import nutrimaster.rag.gene_index as chunking
 
     source = inspect.getsource(chunking)
     assert "utils.chunk" not in source
@@ -54,7 +54,7 @@ def test_chunk_paper_routes_mixed_gene_paper_without_legacy_utils_imports():
 
 
 def test_chunk_paper_generic_fallback_emits_gene_chunk():
-    from nutrimaster.rag.chunking import chunk_paper
+    from nutrimaster.rag.gene_index import chunk_paper
 
     chunks = chunk_paper(
         {
