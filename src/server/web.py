@@ -760,9 +760,17 @@ async def frontend_config():
 # Admin Blueprint 挂载（通过 WSGIMiddleware 零修改集成）
 # ------------------------------------------------------------------
 from flask import Flask as FlaskApp
-from admin.app import admin_bp
+from admin.app import admin_bp, configure_index_refresh
+
+
+def _refresh_admin_index(data_dir: Path, force: bool = False) -> None:
+    retriever.build_index(data_dir=data_dir, incremental=True, force=force)
+    if hasattr(retriever, "_bm25"):
+        retriever._bm25 = None
+
 
 _admin_flask = FlaskApp(__name__, static_folder=None)
+configure_index_refresh(_refresh_admin_index)
 _admin_flask.register_blueprint(admin_bp)
 app.mount("/admin", WSGIMiddleware(_admin_flask))
 

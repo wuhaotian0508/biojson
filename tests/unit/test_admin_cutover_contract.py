@@ -11,3 +11,12 @@ def test_admin_uses_canonical_retriever_without_sys_path_hack():
     assert "_sys.path.insert" not in source
     assert "from retriever import JinaRetriever" not in source
     assert "from retrieval.jina_retriever import JinaRetriever" in source
+
+
+def test_admin_pipeline_uses_incremental_index_refresh_hook():
+    root = Path(__file__).resolve().parents[2]
+    source = (root / "src" / "admin" / "app.py").read_text(encoding="utf-8")
+
+    assert "def configure_index_refresh(" in source
+    assert "_refresh_index(DATA_DIR, force=False)" in source
+    assert "retriever.build_index(data_dir=DATA_DIR, force=True)" not in source

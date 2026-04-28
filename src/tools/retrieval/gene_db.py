@@ -13,6 +13,9 @@ class GeneDBSearchTool(BaseTool):
     source_type: ClassVar[str] = "gene_db"
 
     def __init__(self, retrieval_service=None, retriever=None):
+        if retriever is None and retrieval_service is not None and not hasattr(retrieval_service, "search_gene_chunks"):
+            retriever = retrieval_service
+            retrieval_service = None
         self._retrieval_service = retrieval_service
         self._retriever = retriever
 

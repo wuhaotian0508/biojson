@@ -18,3 +18,11 @@ def test_web_app_uses_canonical_stack_instead_of_manual_legacy_tool_wiring():
     assert "from core.agent import Agent" not in source
     assert "from skills.skill_loader" not in source
     assert "from search.reranker" not in source
+
+
+def test_web_app_injects_global_retriever_into_admin_index_refresh():
+    root = Path(__file__).resolve().parents[2]
+    source = (root / "src" / "server" / "web.py").read_text(encoding="utf-8")
+
+    assert "configure_index_refresh(_refresh_admin_index)" in source
+    assert "retriever.build_index(data_dir=data_dir, incremental=True, force=force)" in source

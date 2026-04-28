@@ -52,3 +52,32 @@ def test_gene_db_search_tool_uses_retrieval_service_and_formats_results():
     rendered = asyncio.run(tool.execute("lycopene", top_k=2))
     assert "基因数据库检索结果" in rendered
     assert "PSY1" in rendered
+
+
+def test_gene_db_search_tool_accepts_positional_retriever_for_stack_wiring():
+    import asyncio
+
+    from retrieval.tools import GeneDBSearchTool
+
+    chunk = SimpleNamespace(
+        paper_title="SIG6 greening paper",
+        content="SIG6 is involved in the block of greening response.",
+        doi="10.example/sig6",
+        gene_name="SIG6",
+        gene_type="Regulation_Genes",
+        journal="American Journal of Botany",
+    )
+
+    class FakeRetriever:
+        async def hybrid_search(self, query, *, top_k, rerank, rerank_top_n):
+            assert query == "SIG6"
+            assert top_k == 3
+            assert rerank is True
+            assert rerank_top_n == 50
+            return [(chunk, 0.8)]
+
+    tool = GeneDBSearchTool(FakeRetriever())
+
+    raw = asyncio.run(tool.search_raw("SIG6", top_k=3))
+
+    assert raw[0]["metadata"]["gene_name"] == "SIG6"

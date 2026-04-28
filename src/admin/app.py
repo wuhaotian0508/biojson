@@ -18,6 +18,7 @@ import os
 import queue
 import threading
 import zipfile
+from collections.abc import Callable
 from datetime import datetime
 from functools import wraps
 from io import BytesIO
@@ -130,6 +131,30 @@ pipeline_state = {
     "_tee": None,              # 运行中的 _TeeWriter 实例（用于实时读取输出）
     "tracker": None,           # 当前运行的 TokenTracker 实例（供实时查询）
 }
+
+_index_refresh_handler: Callable[[Path, bool], None] | None = None
+
+
+def configure_index_refresh(handler: Callable[[Path, bool], None] | None) -> None:
+    """Inject the host app's retriever refresh function.
+
+    Standalone admin falls back to constructing its own retriever, while the
+    integrated FastAPI app passes its live retriever so new corpus files are
+    visible to the current query process after indexing.
+    """
+    global _index_refresh_handler
+    _index_refresh_handler = handler
+
+
+def _refresh_index(data_dir: Path, *, force: bool = False) -> None:
+    if _index_refresh_handler is not None:
+        _index_refresh_handler(Path(data_dir), force)
+        return
+
+    from retrieval.jina_retriever import JinaRetriever
+
+    fallback_retriever = JinaRetriever()
+    fallback_retriever.build_index(data_dir=data_dir, incremental=True, force=force)
 
 
 # ╔══════════════════════════════════════════════════════════════════════════╗
@@ -589,9 +614,7 @@ def api_pipeline_run():
             if not stopped:
                 eq.put(("rebuilding_index", {}))
                 try:
-                    from retrieval.jina_retriever import JinaRetriever
-                    retriever = JinaRetriever()
-                    retriever.build_index(data_dir=DATA_DIR, force=True)
+                    _refresh_index(DATA_DIR, force=False)
                     eq.put(("index_rebuilt", {}))
                 except Exception as e:
                     eq.put(("index_error", {"error": str(e)}))
