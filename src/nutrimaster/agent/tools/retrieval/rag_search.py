@@ -102,6 +102,14 @@ class RAGSearchTool(BaseTool):
             return "未指定有效的搜索数据源。"
 
         results_by_source = await asyncio.gather(*tasks)
+        source_results_by_key = {
+            source_key: source_results
+            for source_key, source_results in zip(sources, results_by_source)
+        }
+        source_counts = {
+            _SOURCE_LABELS.get(source_key, source_key): len(source_results)
+            for source_key, source_results in source_results_by_key.items()
+        }
         candidates = [item for source_results in results_by_source for item in source_results]
         if not candidates:
             return f"在 {', '.join(source_names)} 中未找到与 '{query}' 相关的结果。"
@@ -114,11 +122,64 @@ class RAGSearchTool(BaseTool):
                 ranked = candidates[:top_n]
         else:
             ranked = candidates[:top_n]
-        return self._format_results(ranked, source_names)
+        ranked = self._preserve_requested_sources(ranked, source_results_by_key, top_n)
+        return self._format_results(ranked, source_names, source_counts)
 
     @staticmethod
-    def _format_results(ranked: list[dict], source_names: list[str]) -> str:
+    def _source_key_for_item(item: dict) -> str:
+        source_type = item.get("source_type", "unknown")
+        if source_type == "personal":
+            return "personal_lib"
+        return source_type
+
+    @classmethod
+    def _preserve_requested_sources(
+        cls,
+        ranked: list[dict],
+        source_results_by_key: dict[str, list[dict]],
+        top_n: int,
+    ) -> list[dict]:
+        nonempty_sources = {
+            source_key: results
+            for source_key, results in source_results_by_key.items()
+            if results
+        }
+        if top_n < len(nonempty_sources):
+            return ranked[:top_n]
+
+        output = list(ranked[:top_n])
+        for source_key, source_results in nonempty_sources.items():
+            if any(cls._source_key_for_item(item) == source_key for item in output):
+                continue
+            if len(output) >= top_n:
+                source_key_counts = {}
+                for item in output:
+                    item_source_key = cls._source_key_for_item(item)
+                    source_key_counts[item_source_key] = source_key_counts.get(item_source_key, 0) + 1
+                remove_index = len(output) - 1
+                for index in range(len(output) - 1, -1, -1):
+                    item_source_key = cls._source_key_for_item(output[index])
+                    if source_key_counts.get(item_source_key, 0) > 1:
+                        remove_index = index
+                        break
+                output.pop(remove_index)
+            output.append(source_results[0])
+        return output[:top_n]
+
+    @staticmethod
+    def _format_results(
+        ranked: list[dict],
+        source_names: list[str],
+        source_counts: dict[str, int] | None = None,
+    ) -> str:
         lines = [f"综合搜索结果（来源: {', '.join(source_names)}，共 {len(ranked)} 条）：\n"]
+        if source_counts:
+            count_text = "；".join(f"{name} {count} 条" for name, count in source_counts.items())
+            lines.append(f"来源统计: {count_text}")
+            empty_sources = [name for name, count in source_counts.items() if count == 0]
+            if empty_sources:
+                lines.append(f"注意: {', '.join(empty_sources)} 未返回结果，请检查索引状态或调整查询词。")
+            lines.append("")
         references = []
         for index, item in enumerate(ranked, 1):
             source_type = item.get("source_type", "unknown")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import pickle
 from pathlib import Path
 from typing import Optional
@@ -29,6 +30,8 @@ class JinaRetriever:
         self.index_path.mkdir(parents=True, exist_ok=True)
         self.chunks: list[GeneChunk] = []
         self.embeddings: np.ndarray | None = None
+        self.load_error: str | None = None
+        self._load_index()
 
     def build_index(self, data_dir: Path = None, force: bool = False, incremental: bool = True):
         if data_dir is not None:
@@ -45,13 +48,54 @@ class JinaRetriever:
     def _load_index(self):
         chunks_file = self.index_path / "chunks.pkl"
         embeddings_file = self.index_path / "embeddings.npy"
+        self.load_error = None
         if chunks_file.exists() and embeddings_file.exists():
-            with chunks_file.open("rb") as file:
-                self.chunks = pickle.load(file)
-            self.embeddings = np.load(embeddings_file)
+            try:
+                with chunks_file.open("rb") as file:
+                    chunks = pickle.load(file)
+                embeddings = np.load(embeddings_file)
+            except Exception as exc:
+                self.chunks = []
+                self.embeddings = None
+                self.load_error = f"{type(exc).__name__}: {exc}"
+                return
+            if len(chunks) != embeddings.shape[0]:
+                self.chunks = []
+                self.embeddings = None
+                self.load_error = (
+                    f"Index shape mismatch: chunks={len(chunks)} embeddings={embeddings.shape[0]}"
+                )
+                return
+            self.chunks = chunks
+            self.embeddings = embeddings
         else:
             self.chunks = []
             self.embeddings = None
+
+    def index_status(self) -> dict:
+        chunks_file = self.index_path / "chunks.pkl"
+        embeddings_file = self.index_path / "embeddings.npy"
+        manifest_file = self.index_path / "manifest.json"
+        corpus_files = list(self.data_dir.glob("*.json")) if self.data_dir.exists() else []
+        manifest_files = None
+        if manifest_file.exists():
+            try:
+                manifest = json.loads(manifest_file.read_text(encoding="utf-8"))
+                manifest_files = len(manifest.get("files", {}))
+            except Exception:
+                manifest_files = None
+        return {
+            "data_dir": str(self.data_dir),
+            "index_dir": str(self.index_path),
+            "corpus_files": len(corpus_files),
+            "manifest_files": manifest_files,
+            "chunks_loaded": len(self.chunks),
+            "embeddings_loaded": 0 if self.embeddings is None else int(self.embeddings.shape[0]),
+            "chunks_file_exists": chunks_file.exists(),
+            "embeddings_file_exists": embeddings_file.exists(),
+            "manifest_file_exists": manifest_file.exists(),
+            "load_error": self.load_error,
+        }
 
     def search(
         self,

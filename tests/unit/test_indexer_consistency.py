@@ -104,3 +104,99 @@ def test_rebuilds_when_manifest_ranges_cannot_be_satisfied_by_old_index(tmp_path
     assert len(chunks) == 1
     assert embeddings is not None
     assert embeddings.shape == (1, 3)
+
+
+def test_incremental_indexer_adds_updates_and_removes_corpus_files(tmp_path: Path):
+    data_dir = tmp_path / "data"
+    index_dir = tmp_path / "index"
+    data_dir.mkdir()
+    index_dir.mkdir()
+
+    first = data_dir / "first.json"
+    second = data_dir / "second.json"
+    first.write_text('{"gene": "PSY1"}', encoding="utf-8")
+    second.write_text('{"gene": "SIG6"}', encoding="utf-8")
+
+    load_calls: list[str] = []
+
+    def load_paper(path: Path) -> list[GeneChunk]:
+        load_calls.append(path.name)
+        gene = json.loads(path.read_text(encoding="utf-8"))["gene"]
+        return [
+            GeneChunk(
+                gene_name=gene,
+                paper_title=f"{gene} paper",
+                journal="Plant Test",
+                doi=f"10.0000/{gene.lower()}",
+                gene_type="Pathway_Genes",
+                content=f"{gene} controls a tested pathway.",
+                metadata={},
+                chunk_type="gene",
+                chunker_version=CHUNKER_VERSION,
+                source_fields=["gene"],
+                relations={},
+            )
+        ]
+
+    def embed(texts: list[str]) -> np.ndarray:
+        return np.ones((len(texts), 3), dtype=np.float32)
+
+    indexer = IncrementalIndexer(index_dir, data_dir, embed)
+    chunks, embeddings = indexer.build_incremental(load_paper_fn=load_paper)
+
+    assert load_calls == ["first.json", "second.json"]
+    assert [chunk.gene_name for chunk in chunks] == ["PSY1", "SIG6"]
+    assert embeddings is not None
+    assert embeddings.shape == (2, 3)
+
+    load_calls.clear()
+    first.write_text('{"gene": "PSY2"}', encoding="utf-8")
+    second.unlink()
+    chunks, embeddings = indexer.build_incremental(load_paper_fn=load_paper)
+
+    assert load_calls == ["first.json"]
+    assert [chunk.gene_name for chunk in chunks] == ["PSY2"]
+    assert embeddings is not None
+    assert embeddings.shape == (1, 3)
+    manifest = json.loads((index_dir / "manifest.json").read_text(encoding="utf-8"))
+    assert sorted(manifest["files"]) == ["first.json"]
+
+
+def test_incremental_indexer_writes_canonical_chunk_module(tmp_path: Path):
+    data_dir = tmp_path / "data"
+    index_dir = tmp_path / "index"
+    data_dir.mkdir()
+    index_dir.mkdir()
+    json_file = data_dir / "paper.json"
+    json_file.write_text("{}", encoding="utf-8")
+
+    indexer = IncrementalIndexer(index_dir, data_dir, lambda texts: np.ones((len(texts), 3), dtype=np.float32))
+    indexer.build_incremental(load_paper_fn=lambda path: [_sample_chunk()])
+
+    with (index_dir / "chunks.pkl").open("rb") as f:
+        saved_chunks = pickle.load(f)
+
+    assert saved_chunks[0].__class__.__module__ == "nutrimaster.rag.chunking"
+
+
+def test_incremental_indexer_removes_stale_embeddings_for_empty_corpus(tmp_path: Path):
+    data_dir = tmp_path / "data"
+    index_dir = tmp_path / "index"
+    data_dir.mkdir()
+    index_dir.mkdir()
+
+    json_file = data_dir / "paper.json"
+    json_file.write_text("{}", encoding="utf-8")
+
+    indexer = IncrementalIndexer(index_dir, data_dir, lambda texts: np.ones((len(texts), 3), dtype=np.float32))
+    chunks, embeddings = indexer.build_incremental(load_paper_fn=lambda path: [_sample_chunk()])
+    assert len(chunks) == 1
+    assert embeddings is not None
+    assert (index_dir / "embeddings.npy").exists()
+
+    json_file.unlink()
+    chunks, embeddings = indexer.build_incremental(load_paper_fn=lambda path: [_sample_chunk()])
+
+    assert chunks == []
+    assert embeddings is None
+    assert not (index_dir / "embeddings.npy").exists()

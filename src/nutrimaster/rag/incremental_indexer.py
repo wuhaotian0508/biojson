@@ -172,6 +172,8 @@ class IncrementalIndexer:
             pickle.dump(chunks, file)
         if embeddings is not None:
             np.save(self.embeds_path, embeddings)
+        elif self.embeds_path.exists():
+            self.embeds_path.unlink()
         self.manifest_path.write_text(
             json.dumps(
                 {"chunker_version": CHUNKER_VERSION, "files": manifest_files},

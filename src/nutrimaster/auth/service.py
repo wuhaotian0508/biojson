@@ -10,6 +10,7 @@ import threading
 import hashlib
 import hmac
 from datetime import datetime, timedelta
+from types import SimpleNamespace
 
 from fastapi import HTTPException, Request
 from fastapi.responses import JSONResponse
@@ -39,8 +40,26 @@ ADMIN_EMAILS = set(
 logger.info("ADMIN_EMAILS loaded: %d entries", len(ADMIN_EMAILS))
 
 
+def _as_bool_env(name: str) -> bool:
+    return os.getenv(name, "").strip().lower() in {"1", "true", "yes", "on"}
+
+
+def _dev_auth_user():
+    email = os.getenv("NUTRIMASTER_DEV_AUTH_EMAIL", "dev@example.com")
+    nickname = os.getenv("NUTRIMASTER_DEV_AUTH_NICKNAME") or email.split("@")[0] or "dev"
+    return SimpleNamespace(
+        id=os.getenv("NUTRIMASTER_DEV_AUTH_USER_ID", "dev-user"),
+        email=email,
+        user_metadata={"nickname": nickname, "avatar_url": None},
+    )
+
+
 async def get_current_user(request: Request):
     """FastAPI 依赖：从 Authorization header 提取并验证 Supabase token"""
+    if _as_bool_env("NUTRIMASTER_DEV_AUTH_BYPASS"):
+        logger.warning("NUTRIMASTER_DEV_AUTH_BYPASS is enabled; Supabase auth is bypassed")
+        return _dev_auth_user()
+
     auth_header = request.headers.get("Authorization", "")
     token = auth_header.removeprefix("Bearer ").strip() if auth_header.startswith("Bearer ") else ""
 

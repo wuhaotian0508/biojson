@@ -738,9 +738,11 @@ async def user_account_delete(user=Depends(get_current_user)):
 @app.get("/api/health")
 async def health():
     """健康检查"""
+    index_status = retriever.index_status() if hasattr(retriever, "index_status") else {}
     return JSONResponse({
         "status": "ok",
         "total_chunks": len(retriever.chunks),
+        "index": index_status,
     })
 
 
