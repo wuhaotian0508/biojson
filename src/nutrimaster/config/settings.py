@@ -11,7 +11,7 @@ from dotenv import dotenv_values
 REQUIRED_REAL_SERVICE_KEYS = (
     "OPENAI_API_KEY",
     "OPENAI_BASE_URL",
-    "MODEL",
+    "MAIN_MODEL",
     "JINA_API_KEY",
     "SUPABASE_URL",
     "SUPABASE_SERVICE_ROLE_KEY",
@@ -112,9 +112,6 @@ class LlmSettings:
     api_key: str = ""
     base_url: str = ""
     model: str = ""
-    fallback_api_key: str = ""
-    fallback_base_url: str = ""
-    fallback_model: str = ""
 
 
 @dataclass(frozen=True)
@@ -147,9 +144,6 @@ class Settings:
     supabase_service_role_key: str = ""
     supabase_anon_key: str = ""
     site_url: str = ""
-    fallback_api_key: str = ""
-    fallback_base_url: str = ""
-    fallback_model: str = ""
     smtp_user: str = "nutrimaster@163.com"
     smtp_password: str = ""
     smtp_host: str = "smtp.163.com"
@@ -172,10 +166,7 @@ class Settings:
         llm = LlmSettings(
             api_key=source.get("OPENAI_API_KEY", ""),
             base_url=source.get("OPENAI_BASE_URL", ""),
-            model=source.get("MODEL", ""),
-            fallback_api_key=source.get("FALLBACK_API_KEY", ""),
-            fallback_base_url=source.get("FALLBACK_BASE_URL", ""),
-            fallback_model=source.get("FALLBACK_MODEL", ""),
+            model=source.get("MAIN_MODEL", ""),
         )
         auth = AuthSettings(
             supabase_url=source.get("SUPABASE_URL", ""),
@@ -200,9 +191,6 @@ class Settings:
             supabase_service_role_key=auth.supabase_service_role_key,
             supabase_anon_key=auth.supabase_anon_key,
             site_url=auth.site_url,
-            fallback_api_key=llm.fallback_api_key,
-            fallback_base_url=llm.fallback_base_url,
-            fallback_model=llm.fallback_model,
             smtp_user=email.smtp_user,
             smtp_password=email.smtp_password,
             smtp_host=email.smtp_host,
@@ -218,7 +206,7 @@ class Settings:
         values = {
             "OPENAI_API_KEY": self.openai_api_key,
             "OPENAI_BASE_URL": self.openai_base_url,
-            "MODEL": self.model,
+            "MAIN_MODEL": self.model,
             "JINA_API_KEY": self.jina_api_key,
             "SUPABASE_URL": self.supabase_url,
             "SUPABASE_SERVICE_ROLE_KEY": self.supabase_service_role_key,

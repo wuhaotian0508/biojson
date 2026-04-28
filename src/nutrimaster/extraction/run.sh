@@ -43,13 +43,8 @@ export PROMPT_PATH="${PROMPT_PATH:-${EXTRACTOR_DIR}/prompts/nutri_gene_prompt_v5
 export SCHEMA_PATH="${SCHEMA_PATH:-${EXTRACTOR_DIR}/prompts/nutri_gene_schema_v5.json}"
 
 # ─── Model ───────────────────────────────────────────────
-export MODEL="${MODEL:-Vendor2/Claude-4.6-opus}"
+export EXTRACTOR_MODEL="${EXTRACTOR_MODEL:-gpt-5.5}"
 export TEMPERATURE="${TEMPERATURE:-0.7}"
-
-# ─── Fallback ────────────────────────────────────────────
-export FALLBACK_API_KEY="${FALLBACK_API_KEY:-}"
-export FALLBACK_BASE_URL="${FALLBACK_BASE_URL:-}"
-export FALLBACK_MODEL="${FALLBACK_MODEL:-}"
 
 # ─── Concurrency ─────────────────────────────────────────
 export MAX_WORKERS="${MAX_WORKERS:-20}"
@@ -61,7 +56,7 @@ TEST_INDEX="${2:-1}"
 echo "═══════════════════════════════════════════════════════"
 echo "🚀 NutriMaster Extractor Pipeline v4"
 echo "   Mode:     ${MODE}"
-echo "   Model:    ${MODEL}"
+echo "   Model:    ${EXTRACTOR_MODEL}"
 echo "   Input:    ${MD_DIR}"
 echo "   Output:   ${JSON_DIR}"
 echo "   Workers:  ${MAX_WORKERS}"

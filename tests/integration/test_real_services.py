@@ -11,7 +11,7 @@ load_dotenv()
 REQUIRED_REAL_SERVICE_ENV = [
     "OPENAI_API_KEY",
     "OPENAI_BASE_URL",
-    "MODEL",
+    "MAIN_MODEL",
     "JINA_API_KEY",
 ]
 
@@ -24,14 +24,14 @@ def _require_env(keys: list[str]) -> dict[str, str]:
 
 @pytest.mark.integration
 def test_real_llm_chat_completion_returns_text():
-    env = _require_env(["OPENAI_API_KEY", "OPENAI_BASE_URL", "MODEL"])
+    env = _require_env(["OPENAI_API_KEY", "OPENAI_BASE_URL", "MAIN_MODEL"])
     client = OpenAI(
         api_key=env["OPENAI_API_KEY"],
         base_url=env["OPENAI_BASE_URL"],
     )
 
     response = client.chat.completions.create(
-        model=env["MODEL"],
+        model=env["MAIN_MODEL"],
         messages=[
             {
                 "role": "user",

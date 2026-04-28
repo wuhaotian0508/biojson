@@ -1,10 +1,10 @@
 from __future__ import annotations
 
-import os
 from dataclasses import dataclass
 from pathlib import Path
 
 from nutrimaster.extraction.config import INPUT_DIR, MAX_WORKERS, ensure_dirs
+from nutrimaster.extraction.config import EXTRACTOR_MODEL
 from nutrimaster.extraction.pipeline import (
     resolve_test_files,
     run_pipeline_batch,
@@ -48,7 +48,7 @@ class ExtractionService:
         files = self.list_inputs()
         if test:
             files = resolve_test_files(files, test)
-        tracker = TokenTracker(model=os.getenv("MODEL", "unknown"))
+        tracker = TokenTracker(model=EXTRACTOR_MODEL or "unknown")
         result = run_pipeline_batch(
             files,
             input_dir=self.input_dir,

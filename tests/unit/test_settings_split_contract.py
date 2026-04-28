@@ -9,7 +9,7 @@ def test_settings_exposes_focused_config_objects_while_preserving_flat_aliases(t
             "NUTRIMASTER_ROOT": str(tmp_path),
             "OPENAI_API_KEY": "openai",
             "OPENAI_BASE_URL": "https://llm.example/v1",
-            "MODEL": "model",
+            "MAIN_MODEL": "model",
             "JINA_API_KEY": "jina",
             "SUPABASE_URL": "https://supabase.example",
             "SUPABASE_SERVICE_ROLE_KEY": "service-role",

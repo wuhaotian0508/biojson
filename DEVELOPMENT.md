@@ -53,7 +53,7 @@ git switch -c refactor/retrieval-settings
 - 新 verified JSON 必须写入 `data/corpus/`。
 - 修改 schema 后，要同步检查 prompt、验证逻辑、chunking 逻辑和相关测试。
 - `src/nutrimaster/extraction/config.py` 在 import 时读取环境变量，涉及路径的设置必须发生在 import 之前。
-- 大批量抽取会消耗 LLM token，运行前确认 `MODEL`、`OPENAI_BASE_URL`、`MAX_WORKERS` 和 `JSON_DIR`。
+- 大批量抽取会消耗 LLM token，运行前确认 `EXTRACTOR_MODEL`、`OPENAI_BASE_URL`、`MAX_WORKERS` 和 `JSON_DIR`。
 
 ### `src/nutrimaster/config/`
 

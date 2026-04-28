@@ -105,10 +105,8 @@ LLM 配置：
 ```bash
 OPENAI_API_KEY=...
 OPENAI_BASE_URL=...
-MODEL=...
-FALLBACK_API_KEY=...
-FALLBACK_BASE_URL=...
-FALLBACK_MODEL=...
+MAIN_MODEL=deepseek-v4-flash
+EXTRACTOR_MODEL=gpt-5.5
 ```
 
 检索配置：
@@ -157,6 +155,7 @@ TOKEN_USAGE_DIR=./src/nutrimaster/extraction/reports/token-usage
 PROCESSED_DIR=./src/nutrimaster/extraction/input/processed
 PROMPT_PATH=./src/nutrimaster/extraction/prompts/nutri_gene_prompt_v5.txt
 SCHEMA_PATH=./src/nutrimaster/extraction/prompts/nutri_gene_schema_v5.json
+EXTRACTOR_MODEL=gpt-5.5
 TEMPERATURE=0.7
 MAX_WORKERS=20
 ```
@@ -167,7 +166,7 @@ MAX_WORKERS=20
 uv run nutrimaster check-config
 ```
 
-该命令会检查 `OPENAI_API_KEY`、`OPENAI_BASE_URL`、`MODEL`、`JINA_API_KEY`、`SUPABASE_URL` 和 `SUPABASE_SERVICE_ROLE_KEY`。
+该命令会检查 `OPENAI_API_KEY`、`OPENAI_BASE_URL`、`MAIN_MODEL`、`JINA_API_KEY`、`SUPABASE_URL` 和 `SUPABASE_SERVICE_ROLE_KEY`。
 
 ## 启动 Web 应用
 

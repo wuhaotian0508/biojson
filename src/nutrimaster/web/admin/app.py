@@ -454,7 +454,7 @@ def api_pipeline_preview():
     filename = files[0]
     md_path = Path(INPUT_DIR) / filename
     stem = Path(filename).stem
-    tracker = TokenTracker(model=os.getenv("MODEL", "unknown"))
+    tracker = TokenTracker(model=os.getenv("EXTRACTOR_MODEL", "unknown"))
 
     ensure_dirs()
 
@@ -556,7 +556,7 @@ def api_pipeline_run():
 
         try:
             eq = pipeline_state["events"]
-            tracker = TokenTracker(model=os.getenv("MODEL", "unknown"))
+            tracker = TokenTracker(model=os.getenv("EXTRACTOR_MODEL", "unknown"))
             pipeline_state["tracker"] = tracker
             ensure_dirs()
 

@@ -129,7 +129,7 @@ def _classify_headings_with_llm(headings, tracker=None):
     """调用 LLM 判断哪些 section 标题应该被移除。
 
     给 LLM 发一个编号标题列表，让它返回要移除的编号（JSON 数组）。
-    会尝试主 API，失败则切备用 API。
+    调用 extraction API；失败时返回 None，由上层使用原文继续处理。
 
     [PR 改动] 新增 tracker 参数，支持追踪 section 分类这一步的 token 用量。
 
@@ -140,7 +140,7 @@ def _classify_headings_with_llm(headings, tracker=None):
     Returns:
         set[int]: 要移除的标题索引集合，LLM 调用失败返回 None
     """
-    from .config import get_openai_client, get_fallback_client, MODEL, FALLBACK_MODEL
+    from .config import get_openai_client, EXTRACTOR_MODEL
 
     heading_list = "\n".join(f"{i}: {h}" for i, h in enumerate(headings))
 
@@ -189,17 +189,9 @@ If nothing should be removed, return: []"""
         return None
 
     try:
-        return _try_call(get_openai_client(), MODEL)
+        return _try_call(get_openai_client(), EXTRACTOR_MODEL)
     except Exception as e:
-        print(f"    ⚠️  [text_utils] Primary LLM section 分类失败: {e}")
-
-    fallback_client = get_fallback_client()
-    if fallback_client and FALLBACK_MODEL:
-        try:
-            print(f"    🔄 [text_utils] Switching to Fallback ({FALLBACK_MODEL})...")
-            return _try_call(fallback_client, FALLBACK_MODEL)
-        except Exception as e:
-            print(f"    ❌ [text_utils] Fallback LLM section 分类也失败: {e}")
+        print(f"    ⚠️  [text_utils] LLM section 分类失败: {e}")
 
     return None
 

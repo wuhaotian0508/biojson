@@ -22,9 +22,11 @@ def test_llm_gateway_sanitizes_deepseek_agent_params():
     assert params["extra_body"]["reasoning_effort"] == "max"
 
 
-def test_llm_gateway_falls_back_after_selected_client_failure():
+def test_llm_gateway_does_not_fallback_after_selected_client_failure():
     import asyncio
     from types import SimpleNamespace
+
+    import pytest
 
     from nutrimaster.config.llm import LLMGateway, LLMRoute
 
@@ -58,9 +60,7 @@ def test_llm_gateway_falls_back_after_selected_client_failure():
                 model="fallback-model",
             ),
         },
-        fallback_route_id="fallback",
     )
 
-    result = asyncio.run(gateway.call_llm([{"role": "user", "content": "hi"}]))
-
-    assert result is message
+    with pytest.raises(RuntimeError, match="boom"):
+        asyncio.run(gateway.call_llm([{"role": "user", "content": "hi"}]))

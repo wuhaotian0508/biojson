@@ -25,9 +25,9 @@ from pathlib import Path
 from typing import Optional, Tuple
 
 from .config import (
-    MODEL, TEMPERATURE, FALLBACK_MODEL,
+    EXTRACTOR_MODEL, TEMPERATURE,
     PROMPT_PATH, SCHEMA_PATH, REPORTS_DIR,
-    get_openai_client, get_fallback_client,
+    get_openai_client,
 )
 from .text_utils import preprocess_md_for_llm
 from .token_tracker import TokenTracker
@@ -256,7 +256,7 @@ def extract_paper(
     完整流程：
     1. 增量跳过：如果 extraction.json 已存在，直接读取返回
     2. 读取 Markdown → preprocess_md_for_llm() 预处理（去图片/URL + LLM 过滤 section）
-    3. 调用主 API 提取，失败则切备用 API
+    3. 调用 extraction API 提取
     4. 保存 extraction.json + gene_dict.json 到 reports 目录
 
     Args:
@@ -300,28 +300,19 @@ def extract_paper(
     # Load schema
     extract_all_schema = _load_extract_all_schema()
 
-    # Try primary API
     client = get_openai_client()
-    fallback_client = get_fallback_client()
 
-    print(f"  🔵 Using primary API ({MODEL})...")
+    print(f"  🔵 Using extraction API ({EXTRACTOR_MODEL})...")
     extraction, gene_dict, success = _call_extract_api(
-        client, MODEL, content, name, extract_all_schema, tracker,
+        client, EXTRACTOR_MODEL, content, name, extract_all_schema, tracker,
     )
 
-    # Fallback
-    if not success and fallback_client and FALLBACK_MODEL:
-        print(f"  🔄 Primary failed, switching to Fallback ({FALLBACK_MODEL})...")
-        extraction, gene_dict, success = _call_extract_api(
-            fallback_client, FALLBACK_MODEL, content, name, extract_all_schema, tracker,
-        )
-
     if not success or extraction is None:
-        print(f"  ⚠️  All APIs failed: {name}")
+        print(f"  ⚠️  Extraction API failed: {name}")
         paper_dir.mkdir(parents=True, exist_ok=True)
         error_report = {
             "file": name,
-            "error": "All APIs failed",
+            "error": "Extraction API failed",
             "timestamp": datetime.now().isoformat(),
         }
         with open(paper_dir / "extraction-error.json", "w", encoding="utf-8") as f:

@@ -16,7 +16,7 @@ def test_serve_check_config_reports_missing_real_service_keys(capsys):
                 "missing": [
                     "OPENAI_API_KEY",
                     "OPENAI_BASE_URL",
-                    "MODEL",
+                    "MAIN_MODEL",
                     "JINA_API_KEY",
                     "SUPABASE_URL",
                     "SUPABASE_SERVICE_ROLE_KEY",
@@ -32,7 +32,7 @@ def test_serve_check_config_succeeds_when_real_service_keys_exist(capsys):
     env = {
         "OPENAI_API_KEY": "test-key",
         "OPENAI_BASE_URL": "https://example.test/v1",
-        "MODEL": "test-model",
+        "MAIN_MODEL": "test-model",
         "JINA_API_KEY": "test-jina",
         "SUPABASE_URL": "https://example.supabase.co",
         "SUPABASE_SERVICE_ROLE_KEY": "test-service-role",
@@ -55,7 +55,7 @@ def test_check_config_command_succeeds_when_real_service_keys_exist(capsys):
     env = {
         "OPENAI_API_KEY": "test-key",
         "OPENAI_BASE_URL": "https://example.test/v1",
-        "MODEL": "test-model",
+        "MAIN_MODEL": "test-model",
         "JINA_API_KEY": "test-jina",
         "SUPABASE_URL": "https://example.supabase.co",
         "SUPABASE_SERVICE_ROLE_KEY": "test-service-role",

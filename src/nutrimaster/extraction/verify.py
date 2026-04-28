@@ -6,16 +6,7 @@ Dynamic batching strategy (per 10 genes):
     10-19 genes → 2 batches
     20-29 genes → 3 batches
 
-[PR 改动 by 学长 muskliu - 2026-03-29]
-- 导入改为使用 utils.py 中的共享工具函数（GENE_ARRAY_KEYS, ensure_list, safe_parse_json, stem_to_dirname）
-  原来是从 extract.py 导入 stem_to_dirname, _safe_parse_json, _message_to_dict（跨模块耦合）
-- preprocess_md → preprocess_md_for_llm（text_utils 中重命名）
-- 拆分 verify_paper() 为 4 个子函数，逻辑更清晰：
-  _collect_genes_for_verification() — 收集所有 gene 信息
-  _run_batch_verification() — 执行分批 API 调用
-  _build_verification_report() — 构建验证报告 + 应用修正
-  _save_verification_results() — 保存文件
-- 删除冗余的 docstring 注释
+
 """
 
 import json
@@ -26,8 +17,8 @@ from pathlib import Path
 from typing import Optional, List, Tuple
 
 from .config import (
-    MODEL, FALLBACK_MODEL, OUTPUT_DIR, REPORTS_DIR, PROCESSED_DIR,
-    get_openai_client, get_fallback_client,
+    EXTRACTOR_MODEL, OUTPUT_DIR, REPORTS_DIR, PROCESSED_DIR,
+    get_openai_client,
 )
 from .text_utils import preprocess_md_for_llm
 from .token_tracker import TokenTracker
@@ -285,14 +276,13 @@ def _run_batch_verification(
     """执行分批验证 API 调用，返回所有批次的 gene_verdicts 汇总。
 
     [PR 新增函数] 原来在 verify_paper() 中内联写，现在提取出来。
-    按 _compute_batches() 分批 → 每批调主 API → 失败切备用 → 汇总结果。
+    按 _compute_batches() 分批 → 每批调 extraction API → 汇总结果。
     """
     total_genes = len(all_genes_with_info)
     batches = _compute_batches(total_genes)
     print(f"  🧬 Genes to verify: {total_genes}, batches: {len(batches)}")
 
     client = get_openai_client()
-    fallback_client = get_fallback_client()
     all_gene_verdicts = []
     batch_failed = False
 
@@ -309,14 +299,10 @@ def _run_batch_verification(
             f"Please verify each field of each gene. Give SUPPORTED/UNSUPPORTED/UNCERTAIN verdict with reason."
         )
 
-        batch_verdicts, success = _call_verify_api(client, MODEL, user_prompt, f"{stem}_batch{batch_idx + 1}", tracker)
-
-        if not success and fallback_client and FALLBACK_MODEL:
-            print(f"    🔄 Primary failed, switching to Fallback ({FALLBACK_MODEL})...")
-            batch_verdicts, success = _call_verify_api(fallback_client, FALLBACK_MODEL, user_prompt, f"{stem}_batch{batch_idx + 1}", tracker)
+        batch_verdicts, success = _call_verify_api(client, EXTRACTOR_MODEL, user_prompt, f"{stem}_batch{batch_idx + 1}", tracker)
 
         if not success:
-            print(f"    ⚠️  Batch {batch_idx + 1} all APIs failed, skipping")
+            print(f"    ⚠️  Batch {batch_idx + 1} extraction API failed, skipping")
             batch_failed = True
             continue
 

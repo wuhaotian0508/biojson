@@ -29,7 +29,7 @@ from pathlib import Path
 from typing import Callable, Optional
 
 from .config import (
-    MODEL, INPUT_DIR, TOKEN_USAGE_DIR, MAX_WORKERS,
+    EXTRACTOR_MODEL, INPUT_DIR, TOKEN_USAGE_DIR, MAX_WORKERS,
     ensure_dirs,
 )
 from .extract import extract_paper
@@ -202,7 +202,7 @@ def run_pipeline_batch(
     the actual paper-processing loop and token-report inputs.
     """
     input_dir = Path(input_dir or INPUT_DIR)
-    tracker = tracker or TokenTracker(model=MODEL)
+    tracker = tracker or TokenTracker(model=EXTRACTOR_MODEL)
     total = len(files)
     all_reports = []
     failed_files = []
@@ -287,7 +287,7 @@ def main():
     # ── Pipeline mode ─────────────────────────────────────────────────────────
     print("═" * 60)
     print("🚀 NutriMaster Pipeline")
-    print(f"   Model:     {MODEL}")
+    print(f"   Model:     {EXTRACTOR_MODEL}")
     print(f"   Input:     {INPUT_DIR}")
     print(f"   Workers:   {args.workers}")
     print("═" * 60)
@@ -313,7 +313,7 @@ def main():
 
     workers = args.workers
     is_parallel = len(files) > 1 and workers > 1
-    tracker = TokenTracker(model=MODEL)
+    tracker = TokenTracker(model=EXTRACTOR_MODEL)
 
     def _on_paper_start(filename: str, index: int, total: int, parallel: bool):
         # CLI 只在顺序模式下打印单篇头部，避免并行日志互相打乱。

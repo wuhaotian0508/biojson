@@ -37,7 +37,7 @@ def test_settings_report_required_real_service_keys():
     assert settings.missing_real_service_keys() == [
         "OPENAI_API_KEY",
         "OPENAI_BASE_URL",
-        "MODEL",
+        "MAIN_MODEL",
         "JINA_API_KEY",
         "SUPABASE_URL",
         "SUPABASE_SERVICE_ROLE_KEY",
