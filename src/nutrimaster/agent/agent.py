@@ -6,7 +6,7 @@ import re
 
 from nutrimaster.agent.prompts import PromptBuilder
 from nutrimaster.experiment import extract_gene_names
-from nutrimaster.rag.evidence import EvidencePacket
+from nutrimaster.rag.evidence import CitationRegistry, EvidencePacket, evidence_key
 
 logger = logging.getLogger(__name__)
 
@@ -60,7 +60,11 @@ class Agent:
 
     @staticmethod
     def _filter_citations(answer_text: str, evidence_packets: list[EvidencePacket]) -> list[dict]:
-        citations = [citation for packet in evidence_packets for citation in packet.citations]
+        citations = Agent._unique_citations(
+            citation
+            for packet in evidence_packets
+            for citation in packet.citations
+        )
         if not citations:
             return []
         cited_numbers = {
@@ -75,6 +79,25 @@ class Agent:
             if citation.get("tool_index") in cited_numbers
         ]
         return filtered or citations
+
+    @staticmethod
+    def _unique_citations(citations) -> list[dict]:
+        output = []
+        seen: set[tuple[str, str]] = set()
+        for citation in citations:
+            key = evidence_key(
+                title=citation.get("title", ""),
+                doi=citation.get("doi", ""),
+                pmid=citation.get("pmid", ""),
+                url=citation.get("url", ""),
+            )
+            if key == ("title", ""):
+                key = ("source_id", str(citation.get("tool_index") or citation.get("source_id") or len(output) + 1))
+            if key in seen:
+                continue
+            seen.add(key)
+            output.append(citation)
+        return output
 
     @staticmethod
     def _get_value(obj, key: str, default=None):
@@ -109,6 +132,7 @@ class Agent:
             messages.append({"role": "user", "content": user_input})
             messages = self._strip_reasoning_for_new_turn(messages)
 
+            citation_registry = CitationRegistry()
             evidence_packets: list[EvidencePacket] = []
             answer_text = ""
             for _step in range(MAX_STEPS):
@@ -142,8 +166,9 @@ class Agent:
                     except Exception as exc:
                         result = f"工具执行失败: {exc}"
                     if isinstance(result, EvidencePacket):
-                        evidence_packets.append(result)
-                        tool_content = result.to_tool_text()
+                        global_packet = citation_registry.assign_packet(result)
+                        evidence_packets.append(global_packet)
+                        tool_content = global_packet.to_tool_text()
                     elif hasattr(result, "to_tool_text"):
                         tool_content = result.to_tool_text()
                     else:

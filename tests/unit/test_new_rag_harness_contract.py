@@ -101,3 +101,49 @@ def test_source_collector_dedupes_same_paper_across_sources_and_punctuation():
 
     assert len(numbered) == 1
     assert numbered[0].source_id == "1"
+
+
+def test_citation_registry_assigns_global_ids_across_packets_and_reuses_duplicates():
+    from nutrimaster.rag.evidence import CitationRegistry, EvidenceItem, EvidencePacket
+
+    registry = CitationRegistry()
+    first = registry.assign_packet(
+        EvidencePacket(
+            query="first",
+            mode="normal",
+            items=[
+                EvidenceItem(
+                    source_id="1",
+                    source_type="gene_db",
+                    title="GS1 paper",
+                    content="first evidence",
+                    doi="10.1000/gs1",
+                )
+            ],
+        )
+    )
+    second = registry.assign_packet(
+        EvidencePacket(
+            query="second",
+            mode="normal",
+            items=[
+                EvidenceItem(
+                    source_id="1",
+                    source_type="pubmed",
+                    title="GS1 paper duplicate",
+                    content="duplicate evidence",
+                    doi="10.1000/gs1",
+                ),
+                EvidenceItem(
+                    source_id="2",
+                    source_type="gene_db",
+                    title="GS2 paper",
+                    content="second evidence",
+                    doi="10.1000/gs2",
+                ),
+            ],
+        )
+    )
+
+    assert [item.source_id for item in first.items] == ["1"]
+    assert [item.source_id for item in second.items] == ["1", "2"]

@@ -1,4 +1,5 @@
 from nutrimaster.rag.evidence import (
+    CitationRegistry,
     EvidenceFusion,
     EvidenceItem,
     EvidencePacket,
@@ -34,6 +35,7 @@ from nutrimaster.rag.service import (
 )
 
 __all__ = [
+    "CitationRegistry",
     "EvidenceFusion",
     "EvidenceItem",
     "EvidencePacket",

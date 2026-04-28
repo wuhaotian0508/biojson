@@ -235,3 +235,44 @@ class SourceCollector:
                 )
             )
         return output
+
+
+class CitationRegistry:
+    """Assign citation numbers across one Agent.run lifecycle.
+
+    Each RAG search packet is numbered locally by SourceCollector. The agent can
+    call rag_search multiple times, so this registry maps repeated evidence to
+    stable request-local numbers and gives new evidence the next global number.
+    """
+
+    def __init__(self) -> None:
+        self._ids_by_key: dict[tuple[str, str], str] = {}
+
+    def assign_packet(self, packet: EvidencePacket) -> EvidencePacket:
+        return EvidencePacket(
+            query=packet.query,
+            mode=packet.mode,
+            items=[self._assign_item(item) for item in packet.items],
+            source_counts=packet.source_counts,
+            warnings=packet.warnings,
+        )
+
+    def _assign_item(self, item: EvidenceItem) -> EvidenceItem:
+        key = evidence_key(title=item.title, doi=item.doi, pmid=item.pmid, url=item.url)
+        if key == ("title", ""):
+            source_id = item.source_id
+        else:
+            source_id = self._ids_by_key.setdefault(key, str(len(self._ids_by_key) + 1))
+        return EvidenceItem(
+            source_id=source_id,
+            source_type=item.source_type,
+            title=item.title,
+            content=item.content,
+            url=item.url,
+            doi=item.doi,
+            pmid=item.pmid,
+            journal=item.journal,
+            gene_name=item.gene_name,
+            score=item.score,
+            metadata=item.metadata,
+        )
