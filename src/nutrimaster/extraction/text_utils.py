@@ -1,22 +1,5 @@
 """
 text_utils.py — Text preprocessing for the extractor pipeline.
-
-Removes images, URLs, and irrelevant sections from paper Markdown
-to reduce token consumption before LLM calls.
-
-Public API:
-    preprocess_md()         — local-only text cleaning (no LLM calls)
-    preprocess_md_for_llm() — cleaning + LLM-based section filtering
-
-[PR 改动 by 学长 muskliu - 2026-03-29]
-- 拆分入口函数为两层：preprocess_md()（纯本地清洗）和 preprocess_md_for_llm()（含 LLM section 过滤）
-  原来 preprocess_md() 里直接调了 extract_relevant_sections（会发 LLM 请求），
-  现在拆开后方便测试和复用本地清洗逻辑
-- 删除 strip_references() 和 strip_acknowledgments() 函数（~100 行）
-  这两个功能已被 LLM section 过滤取代，不再需要正则匹配
-- 删除未使用的 import os
-- docstring 从中文改为英文
-- extract_relevant_sections() 新增 tracker 参数，支持 token 用量追踪
 """
 
 import re

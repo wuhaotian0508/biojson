@@ -12,13 +12,6 @@ Usage:
     python -m extractor.pipeline --test 1      # test: first file
     python -m extractor.pipeline --test name   # test: match filename
     python -m extractor.pipeline --workers 5   # custom parallelism
-
-[PR 改动 by 学长 muskliu - 2026-03-29]
-- 提取 collect_paper_result() 函数：将结果按 processed/skipped/failed 分桶，减少 main() 中的重复逻辑
-- 提取 _print_paper_result() 函数：顺序和并行模式共用打印逻辑
-- 删除未使用的 import sys
-- 从 utils.py 导入 GENE_ARRAY_KEY_NAMES 替代硬编码
-- main() 中使用新提取的函数，代码更简洁
 """
 
 import argparse

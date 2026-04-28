@@ -3,11 +3,6 @@ token_tracker.py — Thread-safe API token usage tracker.
 
 Simplified version: only prints total input/output/total tokens + call count.
 Thread-safe for parallel paper processing.
-
-[PR 改动 by 学长 muskliu - 2026-03-29]
-- threading.Lock() → threading.RLock()（可重入锁）
-  避免 save_report() 中 self._lock 嵌套调用 get_summary()（也用了 self._lock）导致死锁
-- save_report() 中先复制 self.calls 再构建 report，避免锁内长时间操作
 """
 
 import json
