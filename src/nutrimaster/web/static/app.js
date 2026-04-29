@@ -115,6 +115,11 @@ const I18N = {
         // 生成控制
         'generation.stopped': '已停止生成',
         'scroll.toBottom': '回到底部',
+        'feedback.prompt': '这个回答对你有帮助吗？',
+        'feedback.up': '有帮助',
+        'feedback.down': '需改进',
+        'feedback.thanks': '感谢反馈',
+        'feedback.failed': '反馈提交失败',
         // 其他
         'error.prefix': '错误',
         'history.oldRecord': '（旧记录，无回答内容）',
@@ -249,6 +254,11 @@ const I18N = {
         'source.personal': 'Personal',
         'generation.stopped': 'Generation stopped',
         'scroll.toBottom': 'Scroll to bottom',
+        'feedback.prompt': 'Was this answer helpful?',
+        'feedback.up': 'Helpful',
+        'feedback.down': 'Needs work',
+        'feedback.thanks': 'Thanks for the feedback',
+        'feedback.failed': 'Failed to submit feedback',
         'error.prefix': 'Error',
         'history.oldRecord': '(Old record, no answer)',
         'confirm.clearHistory': 'Clear all history?',
@@ -333,6 +343,10 @@ let skillPrefs = {};
 let toolOverrides = {};
 let selectedModelId = localStorage.getItem('selectedModelId') || '';
 
+function createSessionId() {
+    return `session-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+}
+
 // 中断正在进行的 SSE 流，保存已有的部分回答
 function abortCurrentStream() {
     if (!currentAbortController) return;
@@ -341,7 +355,7 @@ function abortCurrentStream() {
     if (msgId) {
         const state = assistantTurnState.get(msgId);
         if (state && (state.answerText || (state.genes && state.genes.length > 0))) {
-            saveToHistory(state.query, state.answerText || '', state.sources, state.genes, state.sops);
+            saveToHistory(state.query, state.answerText || '', state.sources, state.genes, state.sops, state.interactionId, state.turnId, state.feedbackSubmitted);
         }
         // 清理 loading spinner，添加"已停止生成"提示
         const regions = getMessageRegions(msgId);
@@ -742,6 +756,9 @@ async function handleSend() {
         hideWelcomeAndScene();
         hasStartedConversation = true;
     }
+    if (!currentSessionId) {
+        currentSessionId = createSessionId();
+    }
 
     addMessage('user', query);
 
@@ -766,12 +783,15 @@ async function handleSend() {
         genesAvailable: false,
         genes: [],  // 检测到的基因名列表（由后端 genes_available 事件填充）
         streamDone: false, // 标记流式传输是否完成，防止后续 updateMessage 覆盖按钮
+        interactionId: '',
+        turnId: '',
+        feedbackSubmitted: '',
     });
 
     try {
         const { answerText, sources } = await streamQuery(query, assistantMsgId);
         const state = getAssistantTurnState(assistantMsgId);
-        saveToHistory(query, answerText, sources, state.genes, state.sops);
+        saveToHistory(query, answerText, sources, state.genes, state.sops, state.interactionId, state.turnId, state.feedbackSubmitted);
     } catch (error) {
         if (error.name === 'AbortError') {
             // 用户切换了对话，部分回答已在 abortCurrentStream() 中保存
@@ -837,6 +857,9 @@ async function streamQuery(query, messageId) {
             skill_prefs: skillPrefs,
             tool_overrides: toolOverrides,
             model_id: selectedModelId,
+            session_id: currentSessionId || '',
+            client_turn_id: messageId,
+            capture_consent: true,
         }),
         signal: abortController.signal,
     });
@@ -869,7 +892,12 @@ async function streamQuery(query, messageId) {
                 try {
                     const data = JSON.parse(line.slice(6));
 
-                    if (data.type === 'tools_enabled') {
+                    if (data.type === 'capture') {
+                        const state = getAssistantTurnState(messageId);
+                        state.captureEnabled = !!data.enabled;
+                        state.interactionId = data.interaction_id || '';
+                        state.turnId = data.turn_id || '';
+                    } else if (data.type === 'tools_enabled') {
                         const state = getAssistantTurnState(messageId);
                         state.enabledTools = data.tools;
                     } else if (data.type === 'skill_selected') {
@@ -942,6 +970,7 @@ async function streamQuery(query, messageId) {
                             extrasEl.insertAdjacentHTML('beforeend', renderReferences(sources, messageId));
                         }
                         renderExperimentButton(messageId);
+                        renderFeedbackControls(messageId);
                     } else if (data.type === 'error') {
                         const state = getAssistantTurnState(messageId);
                         state.experimentRunning = false;
@@ -976,6 +1005,7 @@ async function streamQuery(query, messageId) {
                             extrasEl.insertAdjacentHTML('beforeend', renderReferences(sources, messageId));
                         }
                         renderExperimentButton(messageId);
+                        renderFeedbackControls(messageId);
                     }
                 } catch (parseErr) {
                     if (parseErr.message && !parseErr.message.startsWith('Unexpected')) {
@@ -1368,6 +1398,9 @@ function getAssistantTurnState(messageId) {
             genesAvailable: false,
             genes: [],
             streamDone: false,
+            interactionId: '',
+            turnId: '',
+            feedbackSubmitted: '',
         });
     }
     return assistantTurnState.get(messageId);
@@ -1481,6 +1514,59 @@ function getMessageRegions(messageId) {
     }
 
     return { messageEl, answerEl, extrasEl };
+}
+
+function renderFeedbackControls(messageId) {
+    const state = getAssistantTurnState(messageId);
+    if (!state.interactionId || state.feedbackSubmitted) return;
+    const { extrasEl } = getMessageRegions(messageId);
+    if (!extrasEl || extrasEl.querySelector('.feedback-controls')) return;
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'feedback-controls';
+    wrapper.innerHTML = `
+        <span class="feedback-prompt">${escapeHtml(t('feedback.prompt'))}</span>
+        <button class="feedback-btn" data-rating="up">${escapeHtml(t('feedback.up'))}</button>
+        <button class="feedback-btn" data-rating="down">${escapeHtml(t('feedback.down'))}</button>
+    `;
+    wrapper.querySelectorAll('.feedback-btn').forEach(btn => {
+        btn.addEventListener('click', () => submitFeedback(messageId, btn.dataset.rating));
+    });
+    extrasEl.appendChild(wrapper);
+}
+
+async function submitFeedback(messageId, rating) {
+    const state = getAssistantTurnState(messageId);
+    if (!state.interactionId || !rating || state.feedbackSubmitted) return;
+    const { extrasEl } = getMessageRegions(messageId);
+    try {
+        const resp = await fetch('/api/feedback', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + getAccessToken(),
+            },
+            body: JSON.stringify({
+                interaction_id: state.interactionId,
+                session_id: currentSessionId || '',
+                turn_id: state.turnId || messageId,
+                rating,
+            }),
+        });
+        if (!resp.ok) throw new Error(t('feedback.failed'));
+        state.feedbackSubmitted = rating;
+        updateLastTurnFeedback(state.interactionId, rating);
+        const controls = extrasEl?.querySelector('.feedback-controls');
+        if (controls) {
+            controls.innerHTML = `<span class="feedback-thanks">${escapeHtml(t('feedback.thanks'))}</span>`;
+        }
+    } catch (err) {
+        const controls = extrasEl?.querySelector('.feedback-controls');
+        if (controls) {
+            controls.classList.add('feedback-error');
+            controls.title = err.message || t('feedback.failed');
+        }
+    }
 }
 
 function renderExperimentButton(messageId) {
@@ -1720,15 +1806,27 @@ function persistConversationHistory() {
 }
 
 // 保存到历史
-function saveToHistory(query, answerText, sources, genes, sops) {
+function saveToHistory(query, answerText, sources, genes, sops, interactionId, turnId, feedbackSubmitted) {
     const turn = { query, answerText, sources, timestamp: Date.now() };
     // 保存基因列表和 SOP 结果（用于切换对话后重新渲染，不会发给 LLM）
     if (genes && genes.length > 0) turn.genes = genes;
     if (sops && Object.keys(sops).length > 0) turn.sops = sops;
+    if (interactionId) turn.interactionId = interactionId;
+    if (turnId) turn.turnId = turnId;
+    if (feedbackSubmitted) turn.feedback = feedbackSubmitted;
 
     if (currentSessionId) {
         // 追问：追加到当前 session
-        const session = conversationHistory.find(s => s.id === currentSessionId);
+        let session = conversationHistory.find(s => s.id === currentSessionId);
+        if (!session) {
+            session = {
+                id: currentSessionId,
+                title: query.slice(0, 50),
+                messages: [],
+                timestamp: Date.now(),
+            };
+            conversationHistory.unshift(session);
+        }
         if (session) {
             session.messages.push(turn);
             session.timestamp = Date.now();
@@ -1741,7 +1839,7 @@ function saveToHistory(query, answerText, sources, genes, sops) {
         }
     } else {
         // 新对话：创建新 session
-        currentSessionId = `session-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+        currentSessionId = createSessionId();
         conversationHistory.unshift({
             id: currentSessionId,
             title: query.slice(0, 50),
@@ -1766,6 +1864,16 @@ function updateLastTurnSops(sops, genes) {
     const lastTurn = session.messages[session.messages.length - 1];
     if (sops && Object.keys(sops).length > 0) lastTurn.sops = sops;
     if (genes && genes.length > 0) lastTurn.genes = genes;
+    persistConversationHistory();
+}
+
+function updateLastTurnFeedback(interactionId, rating) {
+    if (!currentSessionId || !interactionId) return;
+    const session = conversationHistory.find(s => s.id === currentSessionId);
+    if (!session || !session.messages.length) return;
+    const turn = [...session.messages].reverse().find(item => item.interactionId === interactionId);
+    if (!turn) return;
+    turn.feedback = rating;
     persistConversationHistory();
 }
 
@@ -1853,6 +1961,15 @@ function restoreConversation(session) {
         addMessage('user', turn.query);
         const answerHtml = turn.answerText ? formatAnswer(turn.answerText, turn.sources || []) : '';
         const msgId = addMessage('assistant', answerHtml);
+        const state = getAssistantTurnState(msgId);
+        state.query = turn.query;
+        state.answerText = turn.answerText || '';
+        state.sources = turn.sources || [];
+        state.genes = turn.genes ? [...turn.genes] : [];
+        state.interactionId = turn.interactionId || '';
+        state.turnId = turn.turnId || '';
+        state.feedbackSubmitted = turn.feedback || '';
+        state.streamDone = true;
         if (turn.answerText && turn.sources && turn.sources.length > 0) {
             const { answerEl } = getMessageRegions(msgId);
             if (answerEl) answerEl.innerHTML = formatAnswer(turn.answerText, turn.sources, msgId);
@@ -1869,17 +1986,14 @@ function restoreConversation(session) {
             if (turn.sops && Object.keys(turn.sops).length > 0) {
                 renderSOPs(extrasEl, turn.sops);
             }
+            if (turn.interactionId && !turn.feedback) {
+                renderFeedbackControls(msgId);
+            }
         }
 
         // 恢复基因编辑器 + SOP 按钮（有基因但还没有 SOP）
         if (turn.genes && turn.genes.length > 0 && (!turn.sops || Object.keys(turn.sops).length === 0)) {
-            const state = getAssistantTurnState(msgId);
-            state.query = turn.query;
-            state.answerText = turn.answerText || '';
-            state.sources = turn.sources || [];
-            state.genes = [...turn.genes];
             state.genesAvailable = true;
-            state.streamDone = true;
             renderExperimentButton(msgId);
         }
     }

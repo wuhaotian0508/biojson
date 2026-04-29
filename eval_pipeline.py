@@ -50,7 +50,7 @@ AGENT_CONCURRENCY = int(os.getenv("AGENT_CONCURRENCY", "3"))
 JUDGE_CONCURRENCY = int(os.getenv("JUDGE_CONCURRENCY", "3"))
 NOTION_CONCURRENCY = int(os.getenv("NOTION_CONCURRENCY", "3"))
 
-NOTION_TEXT_CHUNK = 2000
+NOTION_TEXT_CHUNK = 1800
 NOTION_MAX_RICH_TEXT_BLOCKS = 100
 
 
@@ -519,7 +519,8 @@ def chunks(text: Any) -> list[dict[str, Any]]:
     pieces = [value[i : i + NOTION_TEXT_CHUNK] for i in range(0, len(value), NOTION_TEXT_CHUNK)]
     if len(pieces) > NOTION_MAX_RICH_TEXT_BLOCKS:
         pieces = pieces[:NOTION_MAX_RICH_TEXT_BLOCKS]
-        pieces[-1] = pieces[-1][:1900] + "\n\n[TRUNCATED]"
+        pieces[-1] = pieces[-1][:1700] + "\n\n[TRUNCATED]"
+    pieces = [piece[:2000] for piece in pieces]
     return [{"text": {"content": piece}} for piece in pieces]
 
 

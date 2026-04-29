@@ -33,5 +33,6 @@ async def frontend_config(services: WebServices = Depends(get_services)):
             "admin_port": rag.admin_port if rag else 5501,
             "site_url": settings.site_url,
             "models": [],
+            "interaction_capture": services.interaction_recorder.policy.public_config(),
         }
     )

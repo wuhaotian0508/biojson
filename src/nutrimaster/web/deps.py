@@ -10,9 +10,11 @@ from cachetools import TTLCache
 from fastapi import Request
 
 from nutrimaster.agent.agent import Agent
+from nutrimaster.agent.interaction_recording import InteractionRecorder
 from nutrimaster.agent.skills import SkillLoader
 from nutrimaster.agent.tools import ExperimentDesignTool, RagSearchTool, ToolRegistry
 from nutrimaster.config.llm import call_llm
+from nutrimaster.config.settings import Settings
 from nutrimaster.experiment import ExperimentDesignService
 from nutrimaster.rag.jina import JinaRetriever
 from nutrimaster.rag.personal_library import PersonalLibrary
@@ -22,7 +24,6 @@ from nutrimaster.rag.service import (
     PubMedSource,
     RAGSearchService,
 )
-from nutrimaster.config.settings import Settings
 
 
 @dataclass
@@ -41,6 +42,7 @@ class WebServices:
     registry: Any
     skill_loader: Any
     agent: Agent
+    interaction_recorder: InteractionRecorder
     experiment_service: ExperimentDesignService
     personal_libs: TTLCache = field(default_factory=lambda: TTLCache(maxsize=200, ttl=3600))
     personal_libs_lock: threading.Lock = field(default_factory=threading.Lock)
@@ -96,6 +98,7 @@ def create_services(settings: Settings | None = None) -> WebServices:
         registry=registry,
         skill_loader=skill_loader,
         agent=Agent(registry=registry, skill_loader=skill_loader, call_llm=call_llm),
+        interaction_recorder=InteractionRecorder.from_settings(settings),
         experiment_service=experiment_service,
     )
     holder["services"] = services
