@@ -1,13 +1,11 @@
 from __future__ import annotations
 
 import asyncio
-import json
 import logging
-import re
 import xml.etree.ElementTree as ET
-from collections.abc import Awaitable
+from collections.abc import Callable
 from dataclasses import dataclass
-from typing import Any, Callable
+from typing import Any
 
 import httpx
 
@@ -25,6 +23,8 @@ class RAGSearchContext:
     mode: str = "normal"
     focus: str = "general"
     top_k: int = 10
+    pubmed_query: str = ""
+    gene_db_query: str = ""
 
 
 class RAGSearchService:
@@ -48,9 +48,11 @@ class RAGSearchService:
     async def search(self, query: str, context: RAGSearchContext | None = None) -> EvidencePacket:
         context = context or RAGSearchContext()
         source_budget = self._source_budget(context)
+        pubmed_query = (context.pubmed_query or query).strip()
+        gene_db_query = (context.gene_db_query or query).strip()
         tasks = {
-            "pubmed": self._safe_search(self.pubmed_source, query, top_k=source_budget["pubmed"], context=context),
-            "gene_db": self._safe_search(self.gene_db_source, query, top_k=source_budget["gene_db"], context=context),
+            "pubmed": self._safe_search(self.pubmed_source, pubmed_query, top_k=source_budget["pubmed"], context=context),
+            "gene_db": self._safe_search(self.gene_db_source, gene_db_query, top_k=source_budget["gene_db"], context=context),
         }
         if context.include_personal and self.personal_source is not None:
             tasks["personal"] = self._safe_search(
@@ -64,11 +66,7 @@ class RAGSearchService:
         results = await asyncio.gather(*tasks.values())
         results_by_source = dict(zip(keys, results))
         source_counts = {key: len(items) for key, items in results_by_source.items()}
-        warnings = [
-            f"{key} 未返回结果"
-            for key, count in source_counts.items()
-            if key in {"pubmed", "gene_db"} and count == 0
-        ]
+        warnings = self._empty_source_warnings(source_counts)
 
         fused = self.fusion.fuse(results_by_source, top_k=context.top_k)
         numbered = self.source_collector.assign(fused)
@@ -87,6 +85,15 @@ class RAGSearchService:
         return {"pubmed": 6, "gene_db": 12, "personal": 8}
 
     @staticmethod
+    def _empty_source_warnings(source_counts: dict[str, int]) -> list[str]:
+        warnings = []
+        if source_counts.get("pubmed") == 0:
+            warnings.append("PubMed 未返回结果；如需重试，请重新调用 rag_search 并提供英文 pubmed_query。")
+        if source_counts.get("gene_db") == 0:
+            warnings.append("本地基因库未返回结果；如需重试，请重新调用 rag_search 并优化 query 或 gene_db_query。")
+        return warnings
+
+    @staticmethod
     async def _safe_search(source: Any, query: str, *, top_k: int, context: RAGSearchContext) -> list[EvidenceItem]:
         try:
             return await source.search(
@@ -97,60 +104,15 @@ class RAGSearchService:
                 focus=context.focus,
             )
         except Exception as exc:
-            logger.warning("%s search failed: %s", source.__class__.__name__, exc)
+            logger.warning("%s search failed: %s: %r", source.__class__.__name__, type(exc).__name__, exc)
             return []
-
-
-class PubMedQueryOptimizer:
-    def __init__(self, *, api_key: str = "", base_url: str = "", model: str = "gpt-4o-mini"):
-        self.api_key = api_key
-        self.base_url = base_url.rstrip("/")
-        self.model = model
-
-    async def __call__(self, user_query: str) -> str:
-        if not self.api_key or not self.base_url:
-            return user_query
-        if len(user_query.split()) <= 8 and any(op in user_query.upper() for op in ["AND", "OR", "NOT"]):
-            return user_query
-        prompt = f"""将以下生物学查询转换为 PubMed 搜索关键词。
-
-用户查询: {user_query}
-
-要求:
-1. 提取 2-5 个核心关键词（基因名、化合物名、物种名、生物学过程）
-2. 使用英文
-3. 用 AND 连接必需词，OR 连接同义词
-4. 总词数不超过 10 个
-5. 只返回关键词组合，不要解释"""
-        try:
-            async with httpx.AsyncClient(timeout=8) as client:
-                response = await client.post(
-                    f"{self.base_url}/chat/completions",
-                    headers={
-                        "Authorization": f"Bearer {self.api_key}",
-                        "Content-Type": "application/json",
-                    },
-                    json={
-                        "model": self.model,
-                        "messages": [{"role": "user", "content": prompt}],
-                        "temperature": 0.1,
-                        "max_tokens": 200,
-                    },
-                )
-                response.raise_for_status()
-                optimized = response.json()["choices"][0]["message"]["content"].strip()
-                return re.sub(r"^```.*?\n|```$", "", optimized, flags=re.MULTILINE).strip()
-        except Exception as exc:
-            logger.warning("PubMed query optimization failed: %s", exc)
-            return user_query
 
 
 class PubMedSource:
     source_type = "pubmed"
 
-    def __init__(self, *, http_client_factory=None, query_optimizer=None):
+    def __init__(self, *, http_client_factory=None):
         self._http_client_factory = http_client_factory or (lambda: httpx.AsyncClient(timeout=20))
-        self._query_optimizer = query_optimizer or (lambda query: query)
 
     async def search(self, query: str, *, top_k: int = 8, **_: Any) -> list[EvidenceItem]:
         articles = await self._search_raw(query, max_results=top_k)
@@ -169,14 +131,7 @@ class PubMedSource:
             for article in articles
         ]
 
-    async def _optimize(self, query: str) -> str:
-        result = self._query_optimizer(query)
-        if hasattr(result, "__await__"):
-            return await result
-        return result
-
     async def _search_raw(self, query: str, max_results: int) -> list[dict[str, Any]]:
-        search_query = await self._optimize(query)
         client = self._http_client_factory()
         close = getattr(client, "aclose", None)
         try:
@@ -184,7 +139,7 @@ class PubMedSource:
                 PUBMED_ESEARCH_URL,
                 params={
                     "db": "pubmed",
-                    "term": search_query,
+                    "term": query,
                     "retmax": max_results,
                     "retmode": "json",
                     "sort": "relevance",
@@ -326,89 +281,3 @@ class PersonalLibrarySource:
                 )
             )
         return output
-
-
-class QueryTranslator:
-    def __init__(self, call_llm: Callable[[str], Awaitable[str]] | None):
-        self._call_llm = call_llm
-
-    @classmethod
-    def from_openai_compatible(
-        cls,
-        *,
-        api_key: str,
-        base_url: str,
-        model: str = "gpt-4o-mini",
-    ) -> "QueryTranslator":
-        async def call_llm(prompt: str) -> str:
-            if not api_key or not base_url:
-                return "{}"
-            async with httpx.AsyncClient(timeout=10) as client:
-                response = await client.post(
-                    f"{base_url.rstrip('/')}/chat/completions",
-                    headers={
-                        "Authorization": f"Bearer {api_key}",
-                        "Content-Type": "application/json",
-                    },
-                    json={
-                        "model": model,
-                        "messages": [{"role": "user", "content": prompt}],
-                        "temperature": 0.1,
-                        "max_tokens": 500,
-                    },
-                )
-                response.raise_for_status()
-                return response.json()["choices"][0]["message"]["content"].strip()
-
-        return cls(call_llm=call_llm)
-
-    async def translate_query_terms(self, query: str) -> str:
-        if self._call_llm is None:
-            return query
-        prompt = _build_translation_prompt(query)
-        try:
-            content = await self._call_llm(prompt)
-            match = re.search(r"\{.*\}", content, re.DOTALL)
-            translations = json.loads(match.group(0)) if match else {}
-        except Exception as exc:
-            logger.warning("LLM term translation failed: %s", exc)
-            return query
-        if not translations:
-            return query
-        enhanced = query
-        for term, english in translations.items():
-            if str(english).lower() in enhanced.lower():
-                continue
-            if term in enhanced:
-                enhanced = enhanced.replace(term, f"{term} {english} ", 1)
-        return enhanced.strip()
-
-
-def _build_translation_prompt(query: str) -> str:
-    return f"""从以下生物学查询中提取关键术语（基因名、化合物名、通路名、生物学过程、物种名等），并翻译成对应的英文术语。
-
-查询: {query}
-
-要求:
-1. 提取所有专业术语，忽略"的"、"在"、"中"、"如何"等虚词
-2. 中文术语翻译成英文，英文术语保持原样
-3. 返回 JSON 格式: {{"术语": "English term", ...}}
-4. 如果查询已经是纯英文，返回空对象 {{}}
-
-现在处理上面的查询，只返回 JSON，不要其他内容:"""
-
-
-_TRANSLATOR = QueryTranslator(call_llm=None)
-
-
-def configure_llm(api_key: str, base_url: str, model: str = "gpt-4o-mini"):
-    global _TRANSLATOR
-    _TRANSLATOR = QueryTranslator.from_openai_compatible(
-        api_key=api_key,
-        base_url=base_url,
-        model=model,
-    )
-
-
-async def translate_query_terms(query: str) -> str:
-    return await _TRANSLATOR.translate_query_terms(query)

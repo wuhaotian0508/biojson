@@ -25,13 +25,9 @@ from nutrimaster.rag.personal_library import PersonalLibrary, PersonalLibrarySer
 from nutrimaster.rag.service import (
     GeneDbSource,
     PersonalLibrarySource,
-    PubMedQueryOptimizer,
     PubMedSource,
-    QueryTranslator,
     RAGSearchContext,
     RAGSearchService,
-    configure_llm,
-    translate_query_terms,
 )
 
 __all__ = [
@@ -51,9 +47,7 @@ __all__ = [
     "PersonalLibrary",
     "PersonalLibraryService",
     "PersonalLibrarySource",
-    "PubMedQueryOptimizer",
     "PubMedSource",
-    "QueryTranslator",
     "RAGSearchContext",
     "RAGSearchService",
     "RetrievalService",
@@ -64,7 +58,5 @@ __all__ = [
     "normalize_url",
     "sha256_of",
     "title_key",
-    "configure_llm",
-    "translate_query_terms",
 ]
 

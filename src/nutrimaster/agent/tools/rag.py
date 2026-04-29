@@ -7,7 +7,7 @@ from nutrimaster.rag.service import RAGSearchContext, RAGSearchService
 
 class RagSearchTool(BaseTool):
     name = "rag_search"
-    description = "复合 RAG 检索：自动检索 PubMed 摘要和本地基因库，必要时加入个人库，并返回带编号证据"
+    description = "复合 RAG 检索：检索 PubMed 摘要和本地基因库，必要时加入个人库，并返回带编号证据"
 
     def __init__(self, service: RAGSearchService):
         self.service = service
@@ -24,7 +24,15 @@ class RagSearchTool(BaseTool):
                     "properties": {
                         "query": {
                             "type": "string",
-                            "description": "检索词。建议提炼为英文或中英混合的关键生物学术语。",
+                            "description": "本地基因库的语义检索词。保留关键基因、通路、物种、代谢物，可用中英混合。",
+                        },
+                        "pubmed_query": {
+                            "type": "string",
+                            "description": "可选。Agent 自行生成的英文 PubMed 检索式/关键词，如 HY5 AND alkaloid AND photoreceptor。",
+                        },
+                        "gene_db_query": {
+                            "type": "string",
+                            "description": "可选。本地基因库专用检索词；不填时使用 query。",
                         },
                         "mode": {
                             "type": "string",
@@ -52,6 +60,8 @@ class RagSearchTool(BaseTool):
     async def execute(
         self,
         query: str,
+        pubmed_query: str = "",
+        gene_db_query: str = "",
         mode: str = "normal",
         include_personal: bool = False,
         focus: str = "general",
@@ -67,5 +77,7 @@ class RagSearchTool(BaseTool):
                 mode=mode,
                 focus=focus,
                 top_k=top_k,
+                pubmed_query=pubmed_query,
+                gene_db_query=gene_db_query,
             ),
         )

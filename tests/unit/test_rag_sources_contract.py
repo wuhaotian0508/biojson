@@ -38,3 +38,15 @@ def test_agent_tools_package_no_longer_contains_retrieval_adapters():
     assert not hasattr(tools, "PubmedSearchTool")
     assert not hasattr(tools, "GeneDBSearchTool")
     assert not hasattr(tools, "PersonalLibSearchTool")
+
+
+def test_pubmed_source_no_longer_performs_internal_llm_query_optimization():
+    import inspect
+
+    from nutrimaster.rag import service
+
+    source = inspect.getsource(service)
+
+    assert "PubMedQueryOptimizer" not in source
+    assert "PubMed query optimization failed" not in source
+    assert "/chat/completions" not in inspect.getsource(service.PubMedSource)

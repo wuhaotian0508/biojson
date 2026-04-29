@@ -10,7 +10,10 @@ RAG 问答流程：
 
 ## 查询处理
 
-系统会自动使用 LLM 提取查询中的关键生物学术语并翻译成英文，无需手动翻译。
+由 Agent 在调用 `rag_search` 时显式生成检索词：
+- `query` / `gene_db_query`：用于本地基因库，可保留基因名、物种、通路、代谢物等中英混合关键词。
+- `pubmed_query`：用于 PubMed，必须是英文关键词或 Boolean 检索式，例如 `HY5 AND alkaloid AND photoreceptor`。
+- 工具检索结果不足时，agent可调整参数后再次调用 `rag_search`。
 
 ## 推荐使用方式
 

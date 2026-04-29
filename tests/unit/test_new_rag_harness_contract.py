@@ -42,6 +42,29 @@ def test_rag_service_always_searches_pubmed_and_gene_db():
     assert [item.source_id for item in packet.items] == ["1", "2"]
 
 
+def test_rag_service_uses_agent_supplied_source_specific_queries():
+    import asyncio
+
+    from nutrimaster.rag.service import RAGSearchContext, RAGSearchService
+
+    pubmed = FakeSource("pubmed", "PubMed GLN paper")
+    gene_db = FakeSource("gene_db", "Local GS paper")
+    service = RAGSearchService(pubmed_source=pubmed, gene_db_source=gene_db)
+
+    asyncio.run(
+        service.search(
+            "谷氨酰胺合成酶 GS 家族",
+            RAGSearchContext(
+                pubmed_query="glutamine synthetase AND plant AND GLN1",
+                gene_db_query="GS GLN1 GLN2 谷氨酰胺合成酶",
+            ),
+        )
+    )
+
+    assert pubmed.calls[0]["query"] == "glutamine synthetase AND plant AND GLN1"
+    assert gene_db.calls[0]["query"] == "GS GLN1 GLN2 谷氨酰胺合成酶"
+
+
 def test_evidence_packet_exports_stable_citations():
     from nutrimaster.rag.evidence import EvidenceItem, EvidencePacket
 

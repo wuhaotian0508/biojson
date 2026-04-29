@@ -58,6 +58,8 @@ async def rag_search_debug(
         raise HTTPException(status_code=500, detail="rag_search 未注册")
     packet = await rag_tool.execute(
         query=query_text,
+        pubmed_query=data.get("pubmed_query") or "",
+        gene_db_query=data.get("gene_db_query") or "",
         mode=data.get("mode") or ("deep" if data.get("use_depth") else "normal"),
         include_personal=bool(data.get("include_personal") or data.get("use_personal")),
         focus=data.get("focus") or "general",

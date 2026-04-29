@@ -19,7 +19,6 @@ from nutrimaster.rag.personal_library import PersonalLibrary
 from nutrimaster.rag.service import (
     GeneDbSource,
     PersonalLibrarySource,
-    PubMedQueryOptimizer,
     PubMedSource,
     RAGSearchService,
 )
@@ -80,13 +79,7 @@ def create_services(settings: Settings | None = None) -> WebServices:
     registry = ToolRegistry()
     experiment_service = ExperimentDesignService()
     rag_service = RAGSearchService(
-        pubmed_source=PubMedSource(
-            query_optimizer=PubMedQueryOptimizer(
-                api_key=settings.openai_api_key,
-                base_url=settings.openai_base_url,
-                model=settings.model or "gpt-4o-mini",
-            )
-        ),
+        pubmed_source=PubMedSource(),
         gene_db_source=GeneDbSource(retriever),
         personal_source=PersonalLibrarySource(
             get_personal_lib=get_personal_lib,

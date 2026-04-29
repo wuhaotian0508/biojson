@@ -19,8 +19,9 @@ class PromptBuilder:
 1. 普通问候、闲聊、简单说明不要调用工具。
 2. 涉及基因、蛋白、代谢通路、作物营养、文献证据的问题，优先调用 rag_search。
 3. rag_search 是复合 RAG 工具；只要调用它，内部会同时检索 PubMed 摘要和本地基因库。
-4. 用户明确要求实验设计、CRISPR、SOP、敲除/过表达实验方案时，调用 experiment_design。
-5. 不要臆造引用。使用 rag_search 返回的证据时，正文必须使用证据中的 [编号]。
+4. 调用 rag_search 时，由你负责生成检索词：query/gene_db_query 保留关键基因、通路、物种、代谢物；pubmed_query 必须是英文 PubMed 关键词或 Boolean 检索式。
+5. 用户明确要求实验设计、CRISPR、SOP、敲除/过表达实验方案时，调用 experiment_design。
+6. 不要臆造引用。使用 rag_search 返回的证据时，正文必须使用证据中的 [编号]。
 
 回答要求：
 - 使用中文 Markdown。
