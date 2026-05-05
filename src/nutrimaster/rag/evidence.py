@@ -238,33 +238,79 @@ class SourceCollector:
 
 
 class CitationRegistry:
-    """Assign citation numbers across one Agent.run lifecycle.
+    """全局引用编号注册表：在一次 Agent.run 生命周期内统一管理文献引用编号。
 
-    Each RAG search packet is numbered locally by SourceCollector. The agent can
-    call rag_search multiple times, so this registry maps repeated evidence to
-    stable request-local numbers and gives new evidence the next global number.
+    问题背景：
+    - Agent 在一次对话中可能多次调用 rag_search 工具
+    - 每次 RAG 搜索返回的 EvidencePacket 都有自己的局部编号（如 [1], [2], [3]...）
+    - 如果不统一编号，同一篇文献在不同搜索中会被分配不同编号，导致引用混乱
+
+    解决方案：
+    - 使用 CitationRegistry 维护一个全局的文献→编号映射表
+    - 相同文献（通过 DOI/PMID/URL/标题识别）始终使用相同编号
+    - 新文献按出现顺序分配递增编号
+
+    示例：
+        第一次搜索返回: [1] Paper A, [2] Paper B
+        第二次搜索返回: [1] Paper B, [2] Paper C
+        经过 Registry 处理后:
+            第一次: [1] Paper A, [2] Paper B
+            第二次: [2] Paper B, [3] Paper C  # Paper B 复用编号 2，Paper C 获得新编号 3
     """
 
     def __init__(self) -> None:
+        # 核心数据结构：文献唯一标识 -> 全局编号
+        # key: (标识类型, 标识值)，如 ("doi", "10.1038/xxx") 或 ("title", "normalized title")
+        # value: 全局编号字符串，如 "1", "2", "3"...
         self._ids_by_key: dict[tuple[str, str], str] = {}
 
     def assign_packet(self, packet: EvidencePacket) -> EvidencePacket:
+        """为整个证据包重新分配全局编号。
+
+        Args:
+            packet: 来自 RAG 搜索的原始证据包（带局部编号）
+
+        Returns:
+            新的证据包，其中所有 EvidenceItem 的 source_id 已替换为全局编号
+        """
         return EvidencePacket(
             query=packet.query,
             mode=packet.mode,
-            items=[self._assign_item(item) for item in packet.items],
+            items=[self._assign_item(item) for item in packet.items],  # 逐个处理每条证据
             source_counts=packet.source_counts,
             warnings=packet.warnings,
         )
 
     def _assign_item(self, item: EvidenceItem) -> EvidenceItem:
+        """为单条证据分配全局编号。
+
+        工作流程：
+        1. 根据 DOI/PMID/URL/标题生成唯一标识 key
+        2. 如果 key 已存在于映射表，复用旧编号
+        3. 如果 key 是新的，分配下一个可用编号（当前表大小 + 1）
+        4. 创建新的 EvidenceItem，只替换 source_id，其他字段保持不变
+
+        Args:
+            item: 原始证据条目（带局部编号）
+
+        Returns:
+            新的证据条目（带全局编号）
+        """
+        # 生成文献唯一标识（优先级：DOI > PMID > URL > 标题）
         key = evidence_key(title=item.title, doi=item.doi, pmid=item.pmid, url=item.url)
+
+        # 特殊情况：如果连标题都无法提取（空标题），保留原编号
         if key == ("title", ""):
             source_id = item.source_id
         else:
+            # 核心逻辑：查找或创建全局编号
+            # setdefault: 如果 key 存在返回旧值，否则插入新值并返回
+            # 新值 = str(len(self._ids_by_key) + 1)，即下一个可用编号
             source_id = self._ids_by_key.setdefault(key, str(len(self._ids_by_key) + 1))
+
+        # 创建新的 EvidenceItem，只替换 source_id
         return EvidenceItem(
-            source_id=source_id,
+            source_id=source_id,  # 唯一改变的字段
             source_type=item.source_type,
             title=item.title,
             content=item.content,

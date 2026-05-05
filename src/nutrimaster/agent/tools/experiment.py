@@ -2,7 +2,21 @@ from __future__ import annotations
 
 from typing import Any
 
+# 基础工具类定义: src/nutrimaster/agent/tools/base.py (第11-26行)
 from nutrimaster.agent.tools.base import BaseTool
+# 实验设计服务实现: src/nutrimaster/experiment/service.py
+# ExperimentDesignService.tool_call() 方法 (第47-63行):
+#   async def tool_call(self, *, goal: str, genes: list[dict[str, Any]] | None = None,
+#                       output: str = "advice", confirmed: bool = False) -> str:
+#       preview_genes = await self.preview(goal=goal, genes=genes)
+#       if output != "full_sop" or not confirmed:
+#           lines = ["实验设计预览：", ""]
+#           for gene in preview_genes:
+#               lines.append(f"- {gene.get('gene', '')} ({gene.get('species', '')})")
+#           lines.append("")
+#           lines.append("如需完整 CRISPR/SOP，请明确要求生成完整实验方案。")
+#           return "\n".join(lines)
+#       return format_sops(await self.run(genes=preview_genes))
 from nutrimaster.experiment import ExperimentDesignService
 
 

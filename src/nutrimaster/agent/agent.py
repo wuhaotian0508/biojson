@@ -134,6 +134,7 @@ class Agent:
 
             citation_registry = CitationRegistry()
             evidence_packets: list[EvidencePacket] = []
+            all_answer_parts:list[str]=[]
             answer_text = ""
             for _step in range(MAX_STEPS):
                 response = await self.call_llm(
@@ -143,11 +144,20 @@ class Agent:
                     is_agent_call=True,
                 )
                 assistant_message = self._msg_to_dict(response, model_id=model_id)
-                messages.append(assistant_message)
+                reasoning_content=getattr(response,'reasoning_content',None) or assistant_message.get('reasoning_content')
+                if reasoning_content:
+                    yield{'type':'thinking','data':reasoning_content}
+                
+                assistant_message_for_context={k:v for k,v in assistant_message.items() if k!='reasoning_content'}
+                messages.append(assistant_message_for_context)
 
                 tool_calls = getattr(response, "tool_calls", None) or assistant_message.get("tool_calls") or []
+                
                 if not tool_calls:
-                    answer_text = response.content if hasattr(response, "content") else assistant_message.get("content", "")
+                    step_content = response.content if hasattr(response, "content") else assistant_message.get("content", "")
+                    if step_content:
+                        all_answer_parts.append(step_content)
+                        yield {"type": "text", "data": step_content}
                     break
 
                 for tool_call in tool_calls:
@@ -188,8 +198,7 @@ class Agent:
                         }
                     )
 
-            if answer_text:
-                yield {"type": "text", "data": answer_text}
+            answer_text=''.join(all_answer_parts)
             citations = self._filter_citations(answer_text, evidence_packets)
             if citations:
                 yield {"type": "citations", "data": citations}

@@ -1,7 +1,49 @@
 from __future__ import annotations
 
+# 基础工具类定义: src/nutrimaster/agent/tools/base.py (第11-26行)
 from nutrimaster.agent.tools.base import BaseTool
+# 证据包数据结构: src/nutrimaster/rag/evidence.py (第134-167行)
+# EvidencePacket 数据类定义：
+#   @dataclass(frozen=True)
+#   class EvidencePacket:
+#       query: str
+#       mode: str
+#       items: list[EvidenceItem]
+#       source_counts: dict[str, int] = field(default_factory=dict)
+#       warnings: list[str] = field(default_factory=list)
 from nutrimaster.rag.evidence import EvidencePacket
+# RAG 检索服务实现: src/nutrimaster/rag/service.py
+# RAGSearchContext 数据类 (第19-28行):
+#   @dataclass(frozen=True)
+#   class RAGSearchContext:
+#       user_id: str | None = None
+#       include_personal: bool = False
+#       mode: str = "normal"
+#       focus: str = "general"
+#       top_k: int = 10
+#       pubmed_query: str = ""
+#       gene_db_query: str = ""
+# RAGSearchService.search() 方法 (第48-79行):
+#   async def search(self, query: str, context: RAGSearchContext | None = None) -> EvidencePacket:
+#       context = context or RAGSearchContext()
+#       source_budget = self._source_budget(context)
+#       pubmed_query = (context.pubmed_query or query).strip()
+#       gene_db_query = (context.gene_db_query or query).strip()
+#       tasks = {
+#           "pubmed": self._safe_search(self.pubmed_source, pubmed_query, top_k=source_budget["pubmed"], context=context),
+#           "gene_db": self._safe_search(self.gene_db_source, gene_db_query, top_k=source_budget["gene_db"], context=context),
+#       }
+#       if context.include_personal and self.personal_source is not None:
+#           tasks["personal"] = self._safe_search(self.personal_source, query, top_k=source_budget["personal"], context=context)
+#       keys = list(tasks)
+#       results = await asyncio.gather(*tasks.values())
+#       results_by_source = dict(zip(keys, results))
+#       source_counts = {key: len(items) for key, items in results_by_source.items()}
+#       warnings = self._empty_source_warnings(source_counts)
+#       fused = self.fusion.fuse(results_by_source, top_k=context.top_k)
+#       numbered = self.source_collector.assign(fused)
+#       return EvidencePacket(query=query, mode=context.mode, items=numbered,
+#                             source_counts=source_counts, warnings=warnings)
 from nutrimaster.rag.service import RAGSearchContext, RAGSearchService
 
 
